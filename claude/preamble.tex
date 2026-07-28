@@ -1,0 +1,117 @@
+% ===================== PM Research Watch - shared preamble =====================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{tgpagella}
+\usepackage{tgheros}
+\renewcommand{\sfdefault}{qhv}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{microtype}
+\usepackage[english]{babel}
+
+\usepackage[a4paper,top=17mm,bottom=17mm,left=17mm,right=17mm,
+            headsep=6mm,footskip=10mm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+
+% ------------------------------------------------------------------ palette
+\definecolor{Ink}    {HTML}{14262E}
+\definecolor{Deep}   {HTML}{0F4C5C}
+\definecolor{Teal}   {HTML}{1F7A8C}
+\definecolor{Sky}    {HTML}{4FA3C4}
+\definecolor{Sage}   {HTML}{6FA287}
+\definecolor{Amber}  {HTML}{E3A008}
+\definecolor{Clay}   {HTML}{B5643C}
+\definecolor{Coral}  {HTML}{D1495B}
+\definecolor{Violet} {HTML}{6A5B9E}
+\definecolor{Slate}  {HTML}{4A6572}
+\definecolor{Paper}  {HTML}{FBF9F5}
+\definecolor{Mist}   {HTML}{EEEAE2}
+\definecolor{Rule}   {HTML}{D9D3C9}
+
+\pagecolor{Paper}
+\color{Ink}
+
+\hypersetup{colorlinks=true, linkcolor=Deep, urlcolor=Teal, citecolor=Teal,
+            pdftitle={PM Research Watch}, pdfauthor={Automated daily digest}}
+
+% ------------------------------------------------------------------ headings
+\titleformat{\section}
+  {\sffamily\bfseries\large\color{Deep}}{}{0pt}
+  {}[{\vspace{1.2mm}\color{Amber}\titlerule[1.1pt]}]
+\titlespacing*{\section}{0pt}{5.5mm}{2.8mm}
+
+\titleformat{\subsection}
+  {\sffamily\bfseries\normalsize\color{Teal}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{3.6mm}{1.4mm}
+
+\setlist[itemize]{leftmargin=4.2mm, itemsep=1.1mm, topsep=1.3mm, parsep=0pt,
+                  label=\textcolor{Teal}{\footnotesize$\blacktriangleright$}}
+
+% ------------------------------------------------------------------ header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\sffamily\scriptsize\color{Slate}PM RESEARCH WATCH\;\textcolor{Rule}{\textbar}\;\DIGESTDATE}
+\fancyhead[R]{\sffamily\scriptsize\color{Slate}Particulate matter monitoring \& health effects}
+\fancyfoot[C]{\sffamily\scriptsize\color{Slate}\thepage}
+
+% ------------------------------------------------------------------ components
+% metric tile
+\newcommand{\metric}[3]{%
+  \begin{tcolorbox}[enhanced, colback=white, colframe=Rule, boxrule=0.5pt,
+    arc=1.6mm, left=2.2mm, right=2.2mm, top=1.8mm, bottom=1.8mm,
+    borderline west={1.7mm}{0pt}{#3}, nobeforeafter, valign=center,
+    height=17mm, width=\linewidth]
+    \RaggedRight
+    {\sffamily\bfseries\fontsize{17}{17}\selectfont\color{#3}#1}\\[0.5mm]
+    {\sffamily\fontsize{6.5}{7.4}\selectfont\color{Slate}#2}
+  \end{tcolorbox}}
+
+% pull-quote / key insight box
+\newtcolorbox{keybox}[1][]{enhanced, colback=Mist, colframe=Mist,
+  arc=1.6mm, left=3.2mm, right=3.2mm, top=2.4mm, bottom=2.4mm,
+  borderline west={1.7mm}{0pt}{Amber}, #1}
+
+% subtopic band
+\newcommand{\band}[2]{%
+  \vspace{3.2mm}\noindent
+  \begin{tcolorbox}[enhanced, colback=#2, colframe=#2, arc=1.2mm,
+    left=2.6mm, right=2.6mm, top=1.1mm, bottom=1.1mm, boxrule=0pt,
+    width=\linewidth, nobeforeafter]
+    {\sffamily\bfseries\small\color{white}#1}
+  \end{tcolorbox}\vspace{1.6mm}}
+
+% one paper entry: {short cite}{title}{journal}{doi}{body}
+\newcommand{\paperentry}[5]{%
+  \par\vspace{1.9mm}\noindent
+  {\sffamily\bfseries\footnotesize\color{Ink}#1}\;%
+  {\sffamily\fontsize{7}{8}\selectfont\color{Slate}#3}\\[0.4mm]
+  {\footnotesize\itshape\color{Deep}#2}\\[0.6mm]
+  {\footnotesize #4}\\[0.3mm]
+  {\fontsize{6.6}{7.6}\selectfont\color{Slate}\texttt{doi:}\,\href{https://doi.org/#5}{\texttt{#5}}}
+  \par}
+
+% caption style
+\newcommand{\figcap}[1]{\par\vspace{1.0mm}
+  {\fontsize{7.2}{8.6}\selectfont\color{Slate}\textsf{\textbf{Fig.}}\; #1\par}\vspace{1.5mm}}
+
+\providecommand{\permil}{\textperthousand}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.18}
