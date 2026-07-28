@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-2c210e92-a2d1-49ea-8dbf-b08ca1805801/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<script src="_ds/nocturne-2c210e92-a2d1-49ea-8dbf-b08ca1805801/_ds_bundle.js"></script>
+<style>
+  html { background: var(--color-bg); }
+  body { min-height: 100vh; background-image: radial-gradient(110% 70% at 8% -14%, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 62%); background-attachment: fixed; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-300); }
+  button { font: inherit; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: var(--color-neutral-800); border-radius: 8px; }
+  @media (max-width: 940px) {
+    [data-grid] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-rail] { position: static !important; }
+    [data-pad] { padding-left: 16px !important; padding-right: 16px !important; }
+  }
+  @media (max-width: 620px) {
+    [data-week] { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  }
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;font-family:var(--font-body);color:var(--color-text)">
+
+  <header data-pad style="display:flex;align-items:center;gap:16.8px;padding:16.8px 32px 8.4px;position:sticky;top:0;z-index:20;background:linear-gradient(var(--color-bg) 62%, transparent)">
+    <a href="./" title="MINTS home" style="display:flex;align-items:center;gap:11.2px;text-decoration:none;color:inherit;border-radius:8px;padding:4px 6px;margin-left:-6px" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">
+      <img src="assets/mints-logo.png" alt="MINTS" style="height:38px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))">
+      <span style="display:flex;flex-direction:column;line-height:1.1">
+        <span style="font-family:var(--font-heading);font-weight:500;font-size:18px;letter-spacing:-0.01em">MINTS</span>
+        <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 52%, transparent)">Background Research</span>
+      </span>
+    </a>
+    <nav style="margin-left:auto;display:flex;align-items:center;gap:16.8px">
+      <span style="font-size:12px;color:color-mix(in srgb, var(--color-text) 45%, transparent)">{{ countLabel }}</span>
+      <a href="https://github.com/mi3nts/Background_Research_Reports" target="_blank" rel="noopener" style="font-size:13px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;color:color-mix(in srgb, var(--color-text) 72%, transparent)" style-hover="color:var(--color-accent)"><i class="ph ph-git-branch"></i>Repository</a>
+    </nav>
+  </header>
+
+  <main data-pad style="flex:1;display:flex;flex-direction:column;gap:16.8px;padding:16.8px 32px 44px;max-width:1560px;width:100%">
+
+    <div style="display:flex;align-items:flex-end;gap:22.4px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:2.8px">
+        <span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent)">Report calendar</span>
+        <h1 style="font-size:38px;margin:0;letter-spacing:-0.02em">{{ periodLabel }}</h1>
+      </div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8.4px;flex-wrap:wrap">
+        <button type="button" class="btn btn-primary" onClick="{{ openLatest }}" style="{{ latestBtnStyle }}"><i class="ph ph-file-pdf"></i>Latest report</button>
+        <div style="display:flex;align-items:center;gap:2.8px;border:1px solid var(--color-divider);border-radius:8px;padding:2px">
+          <button type="button" class="btn btn-icon" aria-label="Previous" onClick="{{ prev }}" style="color:var(--color-text);border-radius:50%" style-hover="background:color-mix(in srgb, var(--color-text) 8%, transparent)"><i class="ph ph-caret-left"></i></button>
+          <button type="button" class="btn" onClick="{{ goToday }}" style="padding:0 10px">Today</button>
+          <button type="button" class="btn btn-icon" aria-label="Next" onClick="{{ next }}" style="color:var(--color-text);border-radius:50%" style-hover="background:color-mix(in srgb, var(--color-text) 8%, transparent)"><i class="ph ph-caret-right"></i></button>
+        </div>
+        <div class="seg" role="tablist">
+          <label class="seg-opt"><input type="radio" name="view" checked="{{ isWeek }}" onChange="{{ setWeek }}">Week</label>
+          <label class="seg-opt"><input type="radio" name="view" checked="{{ isMonth }}" onChange="{{ setMonth }}">Month</label>
+          <label class="seg-opt"><input type="radio" name="view" checked="{{ isYear }}" onChange="{{ setYear }}">Year</label>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr" style="margin:0">
+
+    <div data-grid style="display:grid;grid-template-columns:minmax(0,1fr) 272px;gap:22.4px;align-items:start">
+
+      <div style="display:flex;flex-direction:column;gap:8.4px;min-width:0">
+
+        <sc-if value="{{ isWeek }}" hint-placeholder-val="{{ true }}">
+          <div data-week style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:16.8px 8.4px;padding-top:8.4px">
+            <sc-for list="{{ weekCells }}" as="d" hint-placeholder-count="7">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8.4px;min-width:0">
+                <span style="font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 42%, transparent)">{{ d.weekday }}</span>
+                <button type="button" aria-label="{{ d.aria }}" onClick="{{ d.onClick }}" style="{{ d.circle }}" style-hover="{{ d.hover }}">
+                  <span style="font-family:var(--font-heading);font-weight:500;font-size:31px;line-height:1;letter-spacing:-0.025em">{{ d.num }}</span>
+                  <span style="font-size:9px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.55">{{ d.month }}</span>
+                </button>
+                <span style="{{ d.todayStyle }}">Today</span>
+                <button type="button" onClick="{{ d.onClick }}" style="{{ d.titleBtn }}" style-hover="background:color-mix(in srgb, var(--color-accent) 12%, transparent)">
+                  <span class="tag tag-accent" style="{{ d.tagStyle }}">{{ d.cadence }}</span>
+                  <span style="font-family:var(--font-heading);font-weight:500;font-size:13px;line-height:1.32;color:var(--color-accent-200)">{{ d.title }}</span>
+                  <span style="{{ d.moreStyle }}">{{ d.more }}</span>
+                </button>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isMonth }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:8.4px">
+            <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8.4px">
+              <sc-for list="{{ weekdayHeads }}" as="w" hint-placeholder-count="7">
+                <span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;text-align:center;color:color-mix(in srgb, var(--color-text) 42%, transparent)">{{ w }}</span>
+              </sc-for>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8.4px">
+              <sc-for list="{{ monthCells }}" as="d" hint-placeholder-count="35">
+                <button type="button" aria-label="{{ d.aria }}" onClick="{{ d.onClick }}" style="{{ d.monthCell }}" style-hover="{{ d.monthHover }}">
+                  <span style="{{ d.circle }}">{{ d.num }}</span>
+                  <span style="{{ d.mTitle }}">{{ d.title }}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isYear }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(186px,224px));justify-content:start;gap:22.4px">
+            <sc-for list="{{ yearMonths }}" as="m" hint-placeholder-count="12">
+              <div style="display:flex;flex-direction:column;gap:8.4px">
+                <button type="button" onClick="{{ m.onClick }}" style="display:flex;align-items:center;gap:6px;background:transparent;border:0;padding:0;cursor:pointer;color:var(--color-text);text-align:left" style-hover="color:var(--color-accent)">
+                  <span style="font-family:var(--font-heading);font-weight:500;font-size:15px">{{ m.name }}</span>
+                  <span style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent)">{{ m.badge }}</span>
+                </button>
+                <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;justify-items:center">
+                  <sc-for list="{{ m.heads }}" as="w" hint-placeholder-count="7">
+                    <span style="font-size:9px;text-align:center;color:color-mix(in srgb, var(--color-text) 34%, transparent)">{{ w }}</span>
+                  </sc-for>
+                  <sc-for list="{{ m.days }}" as="d" hint-placeholder-count="35">
+                    <button type="button" aria-label="{{ d.aria }}" onClick="{{ d.onClick }}" style="{{ d.style }}" style-hover="{{ d.hover }}">{{ d.num }}</button>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+      </div>
+
+      <aside data-rail style="display:flex;flex-direction:column;gap:8.4px;position:sticky;top:96px">
+        <span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 48%, transparent)">In this {{ scopeWord }}</span>
+        <sc-for list="{{ railReports }}" as="r" hint-placeholder-count="1">
+          <button type="button" class="card elev-sm" onClick="{{ r.onClick }}" style="align-items:stretch;text-align:left;border:1px solid var(--color-divider);cursor:pointer;color:var(--color-text);gap:5.6px" style-hover="border-color:var(--color-accent);background:color-mix(in srgb, var(--color-accent) 8%, var(--color-surface))">
+            <span style="display:flex;align-items:center;gap:8.4px">
+              <span class="card-kicker">{{ r.dateLabel }}</span>
+              <span class="tag tag-neutral" style="margin-left:auto;font-size:9.5px;padding:2px 8px">{{ r.cadence }}</span>
+            </span>
+            <span class="card-title">{{ r.title }}</span>
+            <span class="card-meta"><i class="ph ph-file-pdf"></i>{{ r.folder }}</span>
+          </button>
+        </sc-for>
+        <p style="{{ railEmptyStyle }}">No reports published in this {{ scopeWord }}.</p>
+        <hr class="hr" style="margin:8.4px 0">
+        <span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:color-mix(in srgb, var(--color-text) 48%, transparent)">Most recent</span>
+        <sc-for list="{{ recentReports }}" as="r" hint-placeholder-count="3">
+          <button type="button" onClick="{{ r.onClick }}" style="display:flex;align-items:center;gap:8.4px;background:transparent;border:0;border-radius:8px;padding:5.6px;cursor:pointer;color:var(--color-text);text-align:left" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent)">
+            <span style="font-family:var(--font-heading);font-size:11px;letter-spacing:0.06em;color:var(--color-accent-400);flex:none;width:52px">{{ r.shortDate }}</span>
+            <span style="font-size:12.5px;line-height:1.35;color:color-mix(in srgb, var(--color-text) 82%, transparent)">{{ r.title }}</span>
+          </button>
+        </sc-for>
+      </aside>
+    </div>
+  </main>
+
+  <div style="{{ readerStyle }}">
+    <div style="display:flex;align-items:center;gap:16.8px;padding:11.2px 22.4px;border-bottom:1px solid var(--color-divider);flex:none">
+      <button type="button" class="btn btn-secondary" onClick="{{ closeReader }}"><i class="ph ph-arrow-left"></i>Calendar</button>
+      <div style="display:flex;flex-direction:column;line-height:1.2;min-width:0">
+        <span style="font-family:var(--font-heading);font-weight:500;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ readerTitle }}</span>
+        <span style="font-size:11px;color:color-mix(in srgb, var(--color-text) 52%, transparent)">{{ readerDate }}</span>
+      </div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8.4px">
+        <a class="btn btn-secondary" href="{{ readerSrc }}" target="_blank" rel="noopener"><i class="ph ph-arrow-square-out"></i>New tab</a>
+        <a class="btn btn-primary" href="{{ readerSrc }}" download=""><i class="ph ph-download-simple"></i>Download</a>
+      </div>
+    </div>
+    <iframe title="{{ readerTitle }}" src="{{ readerEmbed }}" style="flex:1;width:100%;border:0;background:var(--color-neutral-900)"></iframe>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;week&quot;,&quot;month&quot;,&quot;year&quot;],&quot;default&quot;:&quot;week&quot;,&quot;tsType&quot;:&quot;'week'|'month'|'year'&quot;,&quot;section&quot;:&quot;Calendar&quot;},&quot;weekStartsOn&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Sunday&quot;,&quot;Monday&quot;],&quot;default&quot;:&quot;Sunday&quot;,&quot;tsType&quot;:&quot;'Sunday'|'Monday'&quot;,&quot;section&quot;:&quot;Calendar&quot;}}">
+const MANIFEST = 'Reports/reports.json';
+const FOLDERS = ['daily', 'weekly', 'monthly', 'yearly'];
+const FALLBACK = { daily: ['PM-Research-Watch_2026-07-27.pdf'] };
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const DS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const DS1 = ['S','M','T','W','T','F','S'];
+const CAD = { daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', yearly: 'Yearly' };
+
+class Component extends DCLogic {
+  state = { view: null, anchor: null, list: [], map: {}, open: null };
+
+  componentDidMount() {
+    const h = decodeURIComponent(String(location.hash || '').replace('#', ''));
+    this.pending = /^\d{4}-\d{2}-\d{2}$/.test(h) ? h : null;
+    window.addEventListener('keydown', this.onKey);
+    fetch(MANIFEST)
+      .then(r => (r.ok ? r.json() : Promise.reject()))
+      .then(j => this.ingest(j))
+      .catch(() => this.ingest(FALLBACK));
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); }
+
+  onKey = e => {
+    if (e.key === 'Escape' && this.state.open) return this.closeReader();
+    if (this.state.open) return;
+    if (e.key === 'ArrowLeft') this.step(-1);
+    if (e.key === 'ArrowRight') this.step(1);
+  };
+
+  ingest(json) {
+    const entries = [];
+    if (Array.isArray(json)) {
+      json.forEach(x => entries.push(this.parse(x, 'daily')));
+    } else if (json && typeof json === 'object') {
+      const keys = FOLDERS.concat(Object.keys(json).filter(k => FOLDERS.indexOf(k) < 0));
+      keys.forEach(k => {
+        const arr = json[k];
+        if (Array.isArray(arr)) arr.forEach(x => entries.push(this.parse(x, k)));
+      });
+    }
+    const list = entries.filter(Boolean);
+    const rank = r => FOLDERS.indexOf(r.folder) < 0 ? 9 : FOLDERS.indexOf(r.folder);
+    list.sort((a, b) => (a.iso === b.iso ? rank(a) - rank(b) : (a.iso < b.iso ? 1 : -1)));
+    const map = {};
+    list.forEach(r => { (map[r.iso] = map[r.iso] || []).push(r); });
+    const next = { list, map };
+    if (this.pending && map[this.pending]) { next.open = map[this.pending][0]; next.anchor = this.day(this.pending); }
+    this.setState(next);
+  }
+
+  parse(x, folder) {
+    const file = typeof x === 'string' ? x : x && (x.file || x.path || x.name);
+    if (!file) return null;
+    const m = String(file).match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (!m) return null;
+    const iso = m[1] + '-' + m[2] + '-' + m[3];
+    let title = (x && x.title) || String(file).replace(/\.pdf$/i, '').replace(m[0], '')
+      .replace(/[\s_-]+$/, '').replace(/_+/g, ' ').replace(/-/g, ' ').trim();
+    if (!title) title = (CAD[folder] || 'Summary') + ' report';
+    const clean = String(file).replace(/^\/+/, '');
+    const rel = clean.indexOf('/') >= 0 ? clean : folder + '/' + clean;
+    return {
+      iso, file: clean, folder, title,
+      cadence: CAD[folder] || folder,
+      src: new URL('Reports/' + rel, location.href).href,
+      date: this.day(iso)
+    };
+  }
+
+  day(iso) { const p = iso.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  iso(d) { const p = n => (n < 10 ? '0' : '') + n; return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()); }
+  today() { const t = new Date(); return new Date(t.getFullYear(), t.getMonth(), t.getDate()); }
+  get view() { return this.state.view || this.props.defaultView || 'week'; }
+  get anchor() { return this.state.anchor || this.today(); }
+  get wk() { return this.props.weekStartsOn === 'Monday' ? 1 : 0; }
+  weekStart(d) { const s = new Date(d); s.setDate(s.getDate() - ((s.getDay() - this.wk + 7) % 7)); return s; }
+  add(d, n) { const s = new Date(d); s.setDate(s.getDate() + n); return s; }
+  fmt(d, y) { return MS[d.getMonth()] + ' ' + d.getDate() + (y ? ', ' + d.getFullYear() : ''); }
+
+  step(dir) {
+    const a = new Date(this.anchor);
+    if (this.view === 'week') a.setDate(a.getDate() + 7 * dir);
+    else if (this.view === 'month') a.setMonth(a.getMonth() + dir, 1);
+    else a.setFullYear(a.getFullYear() + dir, a.getMonth(), 1);
+    this.setState({ anchor: a });
+  }
+
+  openReport = r => {
+    if (!r) return;
+    this.setState({ open: r, anchor: r.date });
+    if (history.replaceState) history.replaceState(null, '', '#' + r.iso);
+  };
+  closeReader = () => {
+    this.setState({ open: null });
+    if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+  };
+
+  circleStyle(rep, size, font) {
+    const s = {
+      width: size === 'fluid' ? '100%' : size, height: size === 'fluid' ? 'auto' : size,
+      maxWidth: size === 'fluid' ? '112px' : size, flex: 'none', padding: 0,
+      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2px',
+      borderRadius: '50%', border: '1px solid', font: 'inherit', fontSize: font,
+      transition: 'background .16s ease, border-color .16s ease, color .16s ease',
+      background: rep
+        ? 'radial-gradient(120% 120% at 30% 10%, color-mix(in srgb, var(--color-accent) 30%, var(--color-surface)), var(--color-surface))'
+        : 'color-mix(in srgb, var(--color-text) 3.5%, transparent)',
+      borderColor: rep ? 'color-mix(in srgb, var(--color-accent) 55%, transparent)' : 'var(--color-divider)',
+      color: rep ? 'var(--color-accent-100)' : 'color-mix(in srgb, var(--color-text) 74%, transparent)',
+      cursor: rep ? 'pointer' : 'default'
+    };
+    if (size === 'fluid') s.aspectRatio = '1';
+    return s;
+  }
+
+  cell(d, opts) {
+    const iso = this.iso(d);
+    const reps = this.state.map[iso] || [];
+    const rep = reps[0];
+    const isToday = iso === this.iso(this.today());
+    const circle = this.circleStyle(rep, opts.size, opts.font);
+    if (isToday) circle.boxShadow = 'inset 0 0 0 1px var(--color-accent), 0 0 0 4px color-mix(in srgb, var(--color-accent) 16%, transparent)';
+    if (opts.dim) circle.opacity = 0.4;
+    return {
+      key: iso, num: d.getDate(), weekday: DS[d.getDay()], month: MS[d.getMonth()],
+      aria: rep ? 'Open ' + rep.title + ', ' + this.fmt(d, true) : this.fmt(d, true) + ' — no report',
+      title: rep ? rep.title : '',
+      cadence: rep ? rep.cadence : '',
+      more: reps.length > 1 ? '+' + (reps.length - 1) + ' more' : '',
+      circle,
+      hover: rep ? { filter: 'brightness(1.22)' } : { background: 'color-mix(in srgb, var(--color-text) 7%, transparent)' },
+      todayStyle: {
+        display: isToday ? 'block' : 'none', fontSize: '9px', letterSpacing: '0.16em',
+        textTransform: 'uppercase', color: 'var(--color-accent)', marginTop: '-2.8px'
+      },
+      titleBtn: {
+        display: rep ? 'flex' : 'none', flexDirection: 'column', alignItems: 'center', gap: '5.6px',
+        background: 'transparent', border: 0, borderRadius: '8px', padding: '5.6px 4px',
+        cursor: 'pointer', textAlign: 'center', width: '100%'
+      },
+      tagStyle: { display: rep ? 'inline-flex' : 'none', fontSize: '9.5px', padding: '2px 8px' },
+      moreStyle: {
+        display: reps.length > 1 ? 'block' : 'none', fontSize: '10px',
+        color: 'color-mix(in srgb, var(--color-text) 50%, transparent)'
+      },
+      monthCell: {
+        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5.6px',
+        background: 'transparent', border: 0, padding: '5.6px 2px', borderRadius: '8px',
+        minHeight: '86px', font: 'inherit', color: 'var(--color-text)',
+        cursor: rep ? 'pointer' : 'default', overflow: 'hidden'
+      },
+      monthHover: rep ? { background: 'color-mix(in srgb, var(--color-accent) 10%, transparent)' } : {},
+      mTitle: {
+        display: rep ? '-webkit-box' : 'none', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+        overflow: 'hidden', fontFamily: 'var(--font-heading)', fontWeight: 500, fontSize: '11px',
+        lineHeight: 1.25, textAlign: 'center', color: 'var(--color-accent-200)',
+        opacity: opts.dim ? 0.5 : 1
+      },
+      onClick: rep ? () => this.openReport(rep) : () => {}
+    };
+  }
+
+  renderVals() {
+    const view = this.view, a = this.anchor, list = this.state.list;
+    const ws = this.weekStart(a);
+    const we = this.add(ws, 6);
+    let periodLabel, from, to, scopeWord;
+    if (view === 'week') {
+      periodLabel = this.fmt(ws, ws.getFullYear() !== we.getFullYear()) + ' – ' + this.fmt(we, true);
+      from = ws; to = we; scopeWord = 'week';
+    } else if (view === 'month') {
+      periodLabel = MONTHS[a.getMonth()] + ' ' + a.getFullYear();
+      from = new Date(a.getFullYear(), a.getMonth(), 1);
+      to = new Date(a.getFullYear(), a.getMonth() + 1, 0);
+      scopeWord = 'month';
+    } else {
+      periodLabel = String(a.getFullYear());
+      from = new Date(a.getFullYear(), 0, 1); to = new Date(a.getFullYear(), 11, 31);
+      scopeWord = 'year';
+    }
+    const fi = this.iso(from), ti = this.iso(to);
+
+    const weekCells = [];
+    for (let i = 0; i < 7; i++) weekCells.push(this.cell(this.add(ws, i), { size: 'fluid', font: '31px' }));
+
+    const mFirst = new Date(a.getFullYear(), a.getMonth(), 1);
+    const mStart = this.weekStart(mFirst);
+    const mLast = new Date(a.getFullYear(), a.getMonth() + 1, 0);
+    const monthCells = [];
+    for (let d = new Date(mStart); d <= mLast || monthCells.length % 7 !== 0; d = this.add(d, 1)) {
+      monthCells.push(this.cell(d, { size: '42px', font: '15px', dim: d.getMonth() !== a.getMonth() }));
+      if (monthCells.length > 41) break;
+    }
+
+    const yearMonths = [];
+    for (let m = 0; m < 12; m++) {
+      const first = new Date(a.getFullYear(), m, 1);
+      const last = new Date(a.getFullYear(), m + 1, 0);
+      const lead = (first.getDay() - this.wk + 7) % 7;
+      const days = [];
+      for (let i = 0; i < lead; i++) days.push({ key: 'b' + m + i, num: '', aria: '', style: { visibility: 'hidden', border: 0, background: 'transparent', height: '23px', width: '23px', padding: 0 }, hover: {}, onClick: () => {} });
+      let count = 0;
+      for (let n = 1; n <= last.getDate(); n++) {
+        const d = new Date(a.getFullYear(), m, n);
+        const iso = this.iso(d), reps = this.state.map[iso] || [], rep = reps[0];
+        const isToday = iso === this.iso(this.today());
+        if (rep) count += reps.length;
+        days.push({
+          key: iso, num: n,
+          aria: rep ? 'Open ' + rep.title + ', ' + this.fmt(d, true) : '',
+          style: {
+            height: '23px', width: '23px', display: 'grid', placeItems: 'center', font: 'inherit',
+            fontSize: '10.5px', borderRadius: '50%', padding: 0,
+            border: '1px solid ' + (rep ? 'color-mix(in srgb, var(--color-accent) 55%, transparent)' : 'transparent'),
+            background: rep ? 'color-mix(in srgb, var(--color-accent) 26%, transparent)' : 'transparent',
+            color: rep ? 'var(--color-accent-100)' : isToday ? 'var(--color-accent)' : 'color-mix(in srgb, var(--color-text) 56%, transparent)',
+            fontWeight: rep || isToday ? 500 : 400,
+            boxShadow: isToday ? 'inset 0 0 0 1px var(--color-accent)' : 'none',
+            cursor: rep ? 'pointer' : 'default'
+          },
+          hover: rep ? { filter: 'brightness(1.3)' } : { background: 'color-mix(in srgb, var(--color-text) 9%, transparent)' },
+          onClick: rep ? () => this.openReport(rep) : () => {}
+        });
+      }
+      yearMonths.push({
+        key: 'm' + m, name: MONTHS[m], badge: count ? count + (count > 1 ? ' reports' : ' report') : '',
+        heads: DS1.slice(this.wk).concat(DS1.slice(0, this.wk)),
+        days,
+        onClick: () => this.setState({ view: 'month', anchor: new Date(a.getFullYear(), m, 1) })
+      });
+    }
+
+    const inRange = list.filter(r => r.iso >= fi && r.iso <= ti);
+    const railReports = inRange.map(r => ({
+      key: r.folder + r.iso, title: r.title, cadence: r.cadence, folder: 'Reports/' + r.folder,
+      dateLabel: DS[r.date.getDay()] + ' · ' + this.fmt(r.date, true),
+      onClick: () => this.openReport(r)
+    }));
+    const recentReports = list.slice(0, 5).map(r => ({
+      key: 'r' + r.folder + r.iso, title: r.title, shortDate: this.fmt(r.date, false),
+      onClick: () => this.openReport(r)
+    }));
+
+    const open = this.state.open;
+    return {
+      periodLabel, scopeWord,
+      countLabel: list.length ? list.length + (list.length > 1 ? ' reports archived' : ' report archived') : '',
+      isWeek: view === 'week', isMonth: view === 'month', isYear: view === 'year',
+      setWeek: () => this.setState({ view: 'week' }),
+      setMonth: () => this.setState({ view: 'month' }),
+      setYear: () => this.setState({ view: 'year' }),
+      prev: () => this.step(-1), next: () => this.step(1),
+      goToday: () => this.setState({ anchor: this.today() }),
+      openLatest: () => this.openReport(list[0]),
+      latestBtnStyle: { display: list.length ? 'inline-flex' : 'none' },
+      weekdayHeads: DS.slice(this.wk).concat(DS.slice(0, this.wk)),
+      weekCells, monthCells, yearMonths, railReports, recentReports,
+      railEmptyStyle: {
+        display: railReports.length ? 'none' : 'block', margin: 0, fontSize: '12.5px',
+        color: 'color-mix(in srgb, var(--color-text) 45%, transparent)'
+      },
+      readerStyle: {
+        display: open ? 'flex' : 'none', flexDirection: 'column', position: 'fixed', inset: 0, zIndex: 60,
+        background: 'var(--color-bg)'
+      },
+      readerTitle: open ? open.title : '',
+      readerDate: open ? open.cadence + ' · ' + DS[open.date.getDay()] + ', ' + MONTHS[open.date.getMonth()] + ' ' + open.date.getDate() + ', ' + open.date.getFullYear() : '',
+      readerSrc: open ? open.src : '',
+      readerEmbed: open ? open.src + '#view=FitH' : '',
+      closeReader: this.closeReader
+    };
+  }
+}
+</script>
+</body>
+</html>
