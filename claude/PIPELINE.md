@@ -115,3 +115,9 @@ skip if the output file already exists.
   `design_group` / `geo_group` lookups.
 - Broke: OpenAlex created-date filter (now paid); arXiv date-range query (empty body).
   Both documented above; neither blocked the issue.
+- **Push failed**: the scheduled-run sandbox has no GitHub credentials (HTTPS remote,
+  no helper, no `~/.ssh`, no `GH_TOKEN`). Commit `8259319` is on `main`, rebased onto
+  an up-to-date `origin/main`, and needs a manual `git push origin main` from a local
+  checkout. Details in `state/last_error.log`. Also note the repo mount is
+  **delete-restricted** (`rm` → EPERM, `mv` works), so git's `index.lock` must be
+  renamed away between operations; stray `.git/lk.*` files are leftovers of that.

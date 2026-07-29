@@ -1,0 +1,29 @@
+2026-07-28 — PUSH FAILED (commit is intact locally; nothing was force-pushed)
+
+  $ git push origin main
+  fatal: could not read Username for 'https://github.com': No such device or address
+
+Cause: the scheduled-run sandbox has no GitHub credentials. `origin` is an HTTPS
+remote (https://github.com/mi3nts/Background_Research_Reports.git), no credential
+helper is configured, no ~/.ssh, no gh CLI, and neither GH_TOKEN nor GITHUB_TOKEN
+is set in the environment.
+
+State of the tree: commit 8259319 "PM Research Watch 2026-07-28 — 19 new records"
+is committed on main and rebased onto origin/main (which was already up to date).
+`git status` is clean apart from gitignored working dirs. The manifest validates
+and Reports/daily/PM-Research-Watch_2026-07-28.pdf exists.
+
+To ship it, run from a local checkout:
+  git push origin main
+
+Fix for future runs — one of:
+  * switch the remote to SSH and mount a deploy key:
+      git remote set-url origin git@github.com:mi3nts/Background_Research_Reports.git
+  * or configure a token-backed credential helper / set GH_TOKEN in the task env.
+
+Secondary sandbox issues seen on this run (worked around, not fatal):
+  * the repo mount is delete-restricted — `rm` returns EPERM, `mv` works. Git's
+    index.lock therefore has to be renamed away between operations, and the
+    pre-migration proofing debris could only be untracked (git rm --cached) and
+    gitignored, not deleted. Stray .git/lk.* and .git/index.lock.*.bak files are
+    harmless leftovers of that workaround; delete them on a local checkout.
