@@ -1,0 +1,368 @@
+{
+ "date": "2026-07-28",
+ "entry_window": "2026/07/28 (PubMed EDAT); Europe PMC creation 2026/07/26-28",
+ "PAPERS": [
+  {
+   "pmid": "42519034",
+   "short": "Zhou 2026",
+   "title": "Air pollution and hypertension: umbrella review of systematic reviews and meta-analyses",
+   "journal": "iScience",
+   "doi": "10.1016/j.isci.2026.116811",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Umbrella review / meta-analysis",
+   "pm": "PM2.5 / PM10",
+   "geo": "Global",
+   "endpoint": "Cardiovascular",
+   "n": "11 meta-analyses",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Ghana AIRCLARE 2026",
+   "title": "Short-term ambient PM2.5/PM10 and acute respiratory morbidity in Ghana: time-stratified case-crossover pilot",
+   "journal": "Research Square (preprint)",
+   "doi": "10.21203/rs.3.rs-10441248/v1",
+   "sub": "Respiratory & allergic",
+   "design": "Case-crossover",
+   "pm": "PM2.5 / PM10",
+   "geo": "Ghana",
+   "endpoint": "Respiratory",
+   "n": "9,511 presentations",
+   "tier": "A"
+  },
+  {
+   "pmid": "42515172",
+   "short": "He 2026",
+   "title": "PM2.5-bound chlorinated paraffins and sleep disorders in youth, with body weight as mediator",
+   "journal": "Toxics",
+   "doi": "10.3390/toxics14070607",
+   "sub": "Other clinical endpoints",
+   "design": "Cross-sectional (multistage)",
+   "pm": "PM2.5 components",
+   "geo": "China",
+   "endpoint": "Sleep",
+   "n": "122,965 children",
+   "tier": "A"
+  },
+  {
+   "pmid": "42508559",
+   "short": "Lu 2026b",
+   "title": "Subchronic PM2.5 exposure exacerbates chronic stress-induced depression-like pathology in mice",
+   "journal": "Environ Res",
+   "doi": "10.1016/j.envres.2026.125327",
+   "sub": "Neuro / mental health",
+   "design": "Murine inhalation exposure",
+   "pm": "PM2.5",
+   "geo": "China",
+   "endpoint": "Neuro / behaviour",
+   "n": "Murine, multi-arm",
+   "tier": "B"
+  },
+  {
+   "pmid": "42515640",
+   "short": "Wang 2026",
+   "title": "Joint monitoring and early warning of SARS-CoV-2 in outdoor PM2.5 and wastewater",
+   "journal": "Viruses",
+   "doi": "10.3390/v18070788",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Environmental surveillance campaign",
+   "pm": "PM2.5 (bioaerosol)",
+   "geo": "China",
+   "endpoint": "Infectious surveillance",
+   "n": "12 months, 2 media",
+   "tier": "B"
+  },
+  {
+   "pmid": "42515107",
+   "short": "Ainembabazi 2026",
+   "title": "Trends in atmospheric pollution research in Uganda, 1990-2025: a scoping review",
+   "journal": "Toxics",
+   "doi": "10.3390/toxics14070542",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Scoping review",
+   "pm": "PM2.5 / PM10",
+   "geo": "Uganda",
+   "endpoint": "Monitoring capacity",
+   "n": "1990-2025 corpus",
+   "tier": "B"
+  },
+  {
+   "pmid": "42515109",
+   "short": "Fakfum 2026",
+   "title": "Seasonal PM2.5 exposure and plasma metabolome changes related to metabolic syndrome",
+   "journal": "Toxics",
+   "doi": "10.3390/toxics14070544",
+   "sub": "Mechanistic toxicology",
+   "design": "Repeated-measures biomarker",
+   "pm": "PM2.5",
+   "geo": "Thailand",
+   "endpoint": "Metabolic",
+   "n": "25 adults",
+   "tier": "B"
+  },
+  {
+   "pmid": "42515208",
+   "short": "Komonnithiphong 2026",
+   "title": "PM2.5-bound PAHs and carcinogenic risk in charcoal barbecue (Moo Kratha) restaurants",
+   "journal": "Toxics",
+   "doi": "10.3390/toxics14070643",
+   "sub": "Occupational & indoor",
+   "design": "Field measurement",
+   "pm": "PM2.5 components",
+   "geo": "Thailand",
+   "endpoint": "Carcinogenic risk",
+   "n": "10 restaurants",
+   "tier": "B"
+  },
+  {
+   "pmid": "42498349",
+   "short": "Subway PSD 2026",
+   "title": "Characterisation and source apportionment of PM and CO2 in subway stations with differing platform door forms",
+   "journal": "J Environ Sci (China)",
+   "doi": "10.1016/j.jes.2025.12.027",
+   "sub": "Occupational & indoor",
+   "design": "Field measurement",
+   "pm": "PM2.5 / PM10",
+   "geo": "China",
+   "endpoint": "Microenvironment",
+   "n": "7 stations",
+   "tier": "B"
+  },
+  {
+   "pmid": "42515108",
+   "short": "Pajak 2026",
+   "title": "Toxicological legacy of PAHs from an urban tire fire: soil contamination and cancer risk",
+   "journal": "Toxics",
+   "doi": "10.3390/toxics14070543",
+   "sub": "Exposure assessment & modelling",
+   "design": "Dispersion model + soil sampling",
+   "pm": "PM10 / PAH",
+   "geo": "Poland",
+   "endpoint": "Carcinogenic risk",
+   "n": "Fireground + allotments",
+   "tier": "B"
+  },
+  {
+   "pmid": "42498381",
+   "short": "Chengdu NO3 2026",
+   "title": "Gas-phase reactions accelerate nitrate formation in spring and early summer in a Sichuan Basin megacity",
+   "journal": "J Environ Sci (China)",
+   "doi": "10.1016/j.jes.2026.02.002",
+   "sub": "Exposure assessment & modelling",
+   "design": "Supersite observation",
+   "pm": "PM2.5 components",
+   "geo": "China",
+   "endpoint": "Aerosol chemistry",
+   "n": "4 seasons, 2018-2021",
+   "tier": "B"
+  },
+  {
+   "pmid": "42518582",
+   "short": "Hu 2026",
+   "title": "Older-adult life expectancy in China: Bayesian mortality estimation and spatially heterogeneous determinants",
+   "journal": "Front Public Health",
+   "doi": "10.3389/fpubh.2026.1851714",
+   "sub": "Burden, policy & mitigation",
+   "design": "Bayesian + geospatial regression",
+   "pm": "PM10",
+   "geo": "China",
+   "endpoint": "Mortality / longevity",
+   "n": "31 provinces",
+   "tier": "B"
+  },
+  {
+   "pmid": "42512086",
+   "short": "Ion-Andrei 2026",
+   "title": "Chronic air pollution exposure and the immunomolecular profile of lung cancer",
+   "journal": "Biomedicines",
+   "doi": "10.3390/biomedicines14071615",
+   "sub": "Other clinical endpoints",
+   "design": "Retrospective cohort",
+   "pm": "PM10 (with NO2/NOx)",
+   "geo": "Romania",
+   "endpoint": "Oncologic",
+   "n": "Regional case series",
+   "tier": "B"
+  },
+  {
+   "pmid": "42511626",
+   "short": "Chaiwong 2026",
+   "title": "PM2.5 and systemic inflammatory biomarkers in elderly COPD patients versus healthy elderly",
+   "journal": "Int J Mol Sci",
+   "doi": "10.3390/ijms27146283",
+   "sub": "Respiratory & allergic",
+   "design": "Panel study",
+   "pm": "PM2.5",
+   "geo": "Thailand",
+   "endpoint": "Respiratory",
+   "n": "38 COPD / 20 controls",
+   "tier": "C"
+  },
+  {
+   "pmid": "42515162",
+   "short": "Lu 2026",
+   "title": "Toxicity of PM2.5 from incomplete solid-fuel burning in Caenorhabditis elegans",
+   "journal": "Toxics",
+   "doi": "10.3390/toxics14070597",
+   "sub": "Mechanistic toxicology",
+   "design": "Controlled exposure (ecotox)",
+   "pm": "PM2.5 (biomass)",
+   "geo": "China",
+   "endpoint": "Developmental / oxidative",
+   "n": "6 fuel types",
+   "tier": "C"
+  },
+  {
+   "pmid": "42511775",
+   "short": "Liu 2026",
+   "title": "Deoxynivalenol, cytokines and particulate matter in human trophoblast cell models",
+   "journal": "Int J Mol Sci",
+   "doi": "10.3390/ijms27146434",
+   "sub": "Reproductive & developmental",
+   "design": "In vitro (cell lines)",
+   "pm": "PM2.5",
+   "geo": "Netherlands",
+   "endpoint": "Placental",
+   "n": "2 cell lines",
+   "tier": "C"
+  },
+  {
+   "pmid": "42513601",
+   "short": "Dogan Karatas 2026",
+   "title": "Air pollution and sudden sensorineural hearing loss: nine-year retrospective study",
+   "journal": "J Clin Med",
+   "doi": "10.3390/jcm15145687",
+   "sub": "Other clinical endpoints",
+   "design": "Retrospective clinical series",
+   "pm": "PM10 / PM2.5",
+   "geo": "Turkiye",
+   "endpoint": "Auditory",
+   "n": "223 patients",
+   "tier": "C"
+  },
+  {
+   "pmid": "42515153",
+   "short": "Zhou 2026b",
+   "title": "Sources of ultrafine particles during severe haze periods: a spatial Durbin analysis",
+   "journal": "Toxics",
+   "doi": "10.3390/toxics14070588",
+   "sub": "Burden, policy & mitigation",
+   "design": "Spatial econometric model",
+   "pm": "Ultrafine particles",
+   "geo": "China",
+   "endpoint": "Emissions / policy",
+   "n": "28 cities",
+   "tier": "C"
+  },
+  {
+   "pmid": "42509466",
+   "short": "Sun 2026",
+   "title": "Clarifying causal and translational inference in studies of ambient PM2.5 and lung cancer",
+   "journal": "Br J Cancer",
+   "doi": "10.1016/j.lanwpc.2024.101106",
+   "sub": "Burden, policy & mitigation",
+   "design": "Commentary / methods letter",
+   "pm": "PM2.5",
+   "geo": "Global",
+   "endpoint": "Oncologic",
+   "n": "-",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "URI outpatient presentation (primary)",
+   "exposure": "per IQR PM2.5 = 14.70 ug/m3",
+   "est": 1.038,
+   "lo": 1.01,
+   "hi": 1.068,
+   "metric": "OR",
+   "src": "Ghana 2026"
+  },
+  {
+   "label": "URI outpatient presentation (primary)",
+   "exposure": "per IQR PM10 = 51.49 ug/m3",
+   "est": 1.03,
+   "lo": 1.008,
+   "hi": 1.052,
+   "metric": "OR",
+   "src": "Ghana 2026"
+  },
+  {
+   "label": "URI presentation, lag 1 d",
+   "exposure": "per IQR PM2.5",
+   "est": 1.07,
+   "lo": 1.07,
+   "hi": 1.07,
+   "metric": "OR",
+   "src": "Ghana 2026"
+  },
+  {
+   "label": "URI presentation, lag 1 d",
+   "exposure": "per IQR PM10",
+   "est": 1.06,
+   "lo": 1.06,
+   "hi": 1.06,
+   "metric": "OR",
+   "src": "Ghana 2026"
+  },
+  {
+   "label": "URI presentation, cumulative lag 0-7 d",
+   "exposure": "per IQR PM2.5",
+   "est": 1.09,
+   "lo": 1.09,
+   "hi": 1.09,
+   "metric": "OR",
+   "src": "Ghana 2026"
+  },
+  {
+   "label": "URI presentation, cumulative lag 0-7 d",
+   "exposure": "per IQR PM10",
+   "est": 1.06,
+   "lo": 1.06,
+   "hi": 1.06,
+   "metric": "OR",
+   "src": "Ghana 2026"
+  },
+  {
+   "label": "Sleep disorder in children (range across models)",
+   "exposure": "per IQR PM2.5-bound sum-CPs",
+   "est": 1.08,
+   "lo": 1.08,
+   "hi": 1.08,
+   "metric": "OR",
+   "src": "He 2026"
+  },
+  {
+   "label": "Lung-cancer PD-L1 positivity",
+   "exposure": "per unit chronic NO2 (PM10 same direction)",
+   "est": 1.035,
+   "lo": 1.035,
+   "hi": 1.035,
+   "metric": "OR",
+   "src": "Ion-Andrei 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "trophoblast barrier &\ncytokine response"
+  },
+  {
+   "n": 2,
+   "note": "child diner ILCR,\npaediatric soil PAH"
+  },
+  {
+   "n": 2,
+   "note": "sleep disorders,\nCP mixture mediation"
+  },
+  {
+   "n": 8,
+   "note": "URI clinic cohort,\nrestaurant & subway\nmicroenvironments"
+  },
+  {
+   "n": 4,
+   "note": "COPD inflammation,\nlung-cancer profile,\nSSHL, life expectancy"
+  }
+ ]
+}

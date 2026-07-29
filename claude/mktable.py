@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os, re
 from corpus import PAPERS
+OUTDIR = os.environ.get("PMRW_BUILD") or os.path.dirname(os.path.abspath(__file__))
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -68,7 +69,7 @@ HEAD = r"""{\fontsize{6.7}{8.4}\selectfont
 """
 TAIL = "\\bottomrule\n\\end{longtable}}\n"
 
-with open(os.path.join(HERE, "table_rows.tex"), "w") as f:
+with open(os.path.join(OUTDIR, "table_rows.tex"), "w") as f:
     f.write(HEAD + "\n".join(rows) + "\n" + TAIL)
 
 print("rows written:", len([r for r in rows if r.endswith(r"\\") and "multicolumn" not in r]))

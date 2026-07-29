@@ -6,8 +6,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Rectangle
 from corpus import PAPERS, EFFECTS
+try:
+    from corpus import LIFECOURSE
+except ImportError:
+    LIFECOURSE = None
 
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fig")
+OUT = os.environ.get("PMRW_FIGDIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "fig")
 os.makedirs(OUT, exist_ok=True)
 
 # ---------------------------------------------------------------- palette
@@ -26,6 +30,21 @@ SKY    = "#4FA3C4"
 MUSK   = "#8A7E72"
 
 SEQ = [DEEP, TEAL, SKY, SAGE, AMBER, CLAY, CORAL, VIOLET, MUSK, SLATE]
+
+# fixed subtopic -> colour map, identical to BANDCOL in mktable.py so a given
+# subtopic keeps its colour across every issue
+SUBCOL = {
+    "Neuro / mental health": DEEP,
+    "Cardiovascular & metabolic": TEAL,
+    "Reproductive & developmental": SKY,
+    "Respiratory & allergic": SAGE,
+    "Mechanistic toxicology": VIOLET,
+    "Occupational & indoor": CLAY,
+    "Sensing, forecasting & instrumentation": AMBER,
+    "Exposure assessment & modelling": MUSK,
+    "Burden, policy & mitigation": CORAL,
+    "Other clinical endpoints": SLATE,
+}
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans",
@@ -58,7 +77,7 @@ counts = collections.Counter(p["sub"] for p in PAPERS)
 items = counts.most_common()
 labels = [k for k, _ in items][::-1]
 vals   = [v for _, v in items][::-1]
-cols   = SEQ[:len(labels)][::-1]
+cols   = [SUBCOL.get(k, SLATE) for k in labels]
 
 fig, ax = plt.subplots(figsize=(7.4, 3.5))
 y = np.arange(len(labels))
@@ -103,8 +122,21 @@ design_group = {
     "Real-time sensor campaign": "Measurement campaign",
     "Observational exposure study": "Measurement campaign",
     "Repeated-measures biomarker": "Measurement campaign",
+    "Scoping review": "Review / synthesis",
+    "Commentary / methods letter": "Review / synthesis",
+    "Retrospective clinical series": "Observational - cross-sectional",
+    "Retrospective cohort": "Observational - cohort",
+    "In vitro (cell lines)": "Experimental / toxicology",
+    "Murine inhalation exposure": "Experimental / toxicology",
+    "Supersite observation": "Measurement campaign",
+    "Environmental surveillance campaign": "Measurement campaign",
+    "Dispersion model + soil sampling": "Modelling / inventory",
+    "Spatial econometric model": "Modelling / inventory",
+    "Bayesian + geospatial regression": "Modelling / inventory",
 }
-dg = collections.Counter(design_group[p["design"]] for p in PAPERS)
+def dgrp(d):
+    return design_group.get(d, "Other / mixed")
+dg = collections.Counter(dgrp(p["design"]) for p in PAPERS)
 dg_items = dg.most_common()
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.0, 4.3),
@@ -155,8 +187,13 @@ geo_group = {
     "MENA": "Middle East & N. Africa", "South Korea": "East Asia (ex-China)",
     "Japan": "East Asia (ex-China)", "Colombia": "Latin America",
     "Brazil": "Latin America", "Australia": "Oceania",
+    "Thailand": "Southeast Asia", "Vietnam": "Southeast Asia",
+    "Ghana": "Sub-Saharan Africa", "Uganda": "Sub-Saharan Africa",
+    "Nigeria": "Sub-Saharan Africa", "Kenya": "Sub-Saharan Africa",
+    "Poland": "Europe", "Romania": "Europe", "Netherlands": "Europe",
+    "Turkiye": "Middle East & N. Africa", "India": "South Asia",
 }
-geo = collections.Counter(geo_group[p["geo"]] for p in PAPERS)
+geo = collections.Counter(geo_group.get(p["geo"], "Global / multi-region") for p in PAPERS)
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8.6, 3.3))
 pi = sorted(pmc.items(), key=lambda kv: kv[1])
@@ -189,7 +226,7 @@ subs = [k for k, _ in counts.most_common()]
 dgs  = [k for k, _ in dg.most_common()]
 M = np.zeros((len(subs), len(dgs)))
 for p in PAPERS:
-    M[subs.index(p["sub"]), dgs.index(design_group[p["design"]])] += 1
+    M[subs.index(p["sub"]), dgs.index(dgrp(p["design"]))] += 1
 
 from matplotlib.colors import LinearSegmentedColormap
 cmap = LinearSegmentedColormap.from_list("pm", [PAPER, "#BFD8DD", SKY, TEAL, DEEP])
@@ -217,22 +254,34 @@ save(fig, "f4_heatmap.png")
 E = sorted(EFFECTS, key=lambda d: d["est"])
 fig, ax = plt.subplots(figsize=(8.0, 4.6))
 y = np.arange(len(E))
-colmap = {"HR": TEAL, "OR": CLAY, "IRR": VIOLET, "RR-equiv": SAGE}
+colmap = collections.defaultdict(lambda: SLATE, {"HR": TEAL, "OR": CLAY, "IRR": VIOLET,
+          "RR-equiv": SAGE, "RR": SAGE, "beta": SKY, "%": AMBER, "r": DEEP})
 for i, e in enumerate(E):
     c = colmap[e["metric"]]
-    ax.plot([e["lo"], e["hi"]], [i, i], color=c, lw=2.0, solid_capstyle="round", zorder=3)
-    ax.plot([e["lo"], e["lo"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
-    ax.plot([e["hi"], e["hi"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
+    if e["hi"] > e["lo"]:
+        ax.plot([e["lo"], e["hi"]], [i, i], color=c, lw=2.0, solid_capstyle="round", zorder=3)
+        ax.plot([e["lo"], e["lo"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
+        ax.plot([e["hi"], e["hi"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
     ax.scatter([e["est"]], [i], s=46, color=c, zorder=4,
                edgecolor=PAPER, linewidth=1.0)
-    ax.text(1.025, i, f"{e['est']:.3g} ({e['lo']:.3g}–{e['hi']:.3g})",
+    _lbl = (f"{e['est']:.4g} ({e['lo']:.4g}–{e['hi']:.4g})" if e["hi"] > e["lo"]
+            else f"{e['est']:.4g} (no CI reported)")
+    ax.text(1.025, i, _lbl,
             transform=ax.get_yaxis_transform(which="grid"),
             fontsize=7.6, va="center", ha="left", color=SLATE, family="monospace")
 ax.axvline(1.0, color=CORAL, lw=1.1, ls="--", zorder=2)
 ax.set_xscale("log")
-ax.set_xlim(0.97, 10.0)
-ax.set_xticks([1, 1.25, 1.5, 2, 3, 5, 9])
-ax.set_xticklabels(["1.0", "1.25", "1.5", "2", "3", "5", "9"])
+_lo = min([e["lo"] for e in E] + [1.0]); _hi = max([e["hi"] for e in E] + [1.0])
+_pad = (_hi / _lo) ** 0.10
+ax.set_xlim(_lo / _pad, _hi * _pad)
+_cand = [0.5, 0.8, 0.9, 0.95, 1.0, 1.02, 1.04, 1.05, 1.06, 1.08, 1.1, 1.15,
+         1.25, 1.5, 2, 3, 5, 9]
+_tk = [t for t in _cand if _lo / _pad <= t <= _hi * _pad]
+if len(_tk) > 9:
+    _tk = [t for t in _tk if t in (1.0, 1.05, 1.1, 1.25, 1.5, 2, 3, 5, 9)]
+ax.set_xticks(_tk)
+ax.set_xticklabels([("%g" % t) for t in _tk])
+ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
 ax.set_yticks(y)
 ax.set_yticklabels([f"{e['label']}\n{e['exposure']} - {e['src']}" for e in E], fontsize=7.4)
 ax.set_xlabel("Effect estimate (log scale); dashed line = null")
@@ -240,8 +289,9 @@ ax.set_ylim(-0.7, len(E) - 0.3)
 ax.set_title("Quantitative associations reported in today's corpus", pad=10)
 ax.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax.set_axisbelow(True)
 despine(ax, keep=("bottom",)); ax.tick_params(axis="y", length=0)
-handles = [plt.Line2D([], [], color=v, lw=2.4, label=k) for k, v in colmap.items()]
-ax.legend(handles=handles, loc="lower right", fontsize=7.6, ncol=4,
+_used = [m for m in dict.fromkeys(e["metric"] for e in E)]
+handles = [plt.Line2D([], [], color=colmap[m], lw=2.4, label=m) for m in _used]
+ax.legend(handles=handles, loc="lower right", fontsize=7.6, ncol=max(1, len(handles)),
           bbox_to_anchor=(1.0, -0.22))
 save(fig, "f5_forest.png")
 
@@ -254,6 +304,9 @@ stage_note = ["fetal growth, brain\nstructure, IQ",
               "pubertal timing,\nPAH endocrine axis",
               "occupational RCS,\nfirefighter biomarkers",
               "AF events, cognition,\ncare-home filtration"]
+if LIFECOURSE:
+    stage_hits = [d["n"] for d in LIFECOURSE]
+    stage_note = [d["note"] for d in LIFECOURSE]
 fig, ax = plt.subplots(figsize=(8.4, 2.55))
 xs = np.arange(len(stages))
 ax.plot(xs, [0] * len(xs), color=GRID, lw=3, zorder=1, solid_capstyle="round")
