@@ -121,3 +121,46 @@ skip if the output file already exists.
   checkout. Details in `state/last_error.log`. Also note the repo mount is
   **delete-restricted** (`rm` → EPERM, `mv` works), so git's `index.lock` must be
   renamed away between operations; stray `.git/lk.*` files are leftovers of that.
+
+### 2026-07-29
+- Window: PubMed `[EDAT]` 2026/07/29 (health axis 18, sensing axis 1 — the sole sensing hit
+  was an off-topic Li-ion battery paper); Europe PMC `CREATION_DATE` 2026-07-29 → 1, already
+  in the PubMed set. OpenAlex created-date filter now **429 then 403** — still broken.
+  arXiv relevance query returned 60 entries, **none submitted on/after 2026-07-20**, so it
+  contributed nothing; its date-range parameter remains unusable. 8 instrumentation/modelling
+  records added from a **Consensus** sweep (no entry-date filter exists there, so they are
+  dated by DOI registration 2025-11…2026-06 and are flagged as a *backfill* in the issue);
+  DOIs resolved via Crossref bibliographic query. **25 included, 3 rejected** (battery
+  ultrasonics; workshop proceedings; one IoT paper with no retrievable abstract).
+- Fixed the documented `metrics.csv` defect: now written by `csv.writer`, existing rows
+  rewritten from the corpus store, and a new `update_state.py` owns seen/metrics/last_run
+  so step 8 is deterministic rather than hand-done.
+- Correctness fixes, no redesign: `plots.py` forest plot crashed on `lo`/`hi` = None (first
+  record without a reported CI) — guarded; f3 panel spacing widened (right panel's y-labels
+  were overprinting the left panel's value labels); `geo_group` gained South Africa and
+  Mexico, which were silently counted as "Global / multi-region". `preamble.tex`
+  `\paperentry` now `\detokenize`s the DOI it displays — two DOIs today contain underscores
+  and broke the build. `run_all.py` now always repoints `build/fig`; the stale symlink was
+  compiling the 28 Jul figures into the 29 Jul PDF. `build_manifest.py` mkdir -p's the
+  rollup folders and `.gitkeep` files were added.
+- Rollup groundwork done ahead of the first Sunday: `templates/weekly.tex` derived from
+  `daily.tex` (trend/inflection, emerging vs. fading, pooled forest with heterogeneity
+  stated, author clusters, most-cited, trial watch, gaps, direction) plus `plots_weekly.py`
+  for `w1_subtopic_trend` from `metrics.csv`. Test compile clean, 10 pages — **2026-08-02 is
+  unblocked**.
+- Trial watch: 1 registration updated in 2026-07-23…29 — NCT05874479, 440-participant
+  sham-controlled portable-air-cleaner BP trial (NYU Langone). Logged to `state/trials.json`.
+- Proofed all 11 pages as rasters: 0 LaTeX errors, 0 overfull boxes. Two defects found and
+  fixed on the second pass — an f2 caption that said 8 records had no health endpoint when
+  the figure showed 9, and the f4 caption orphaned onto the next page away from its figure.
+- **Push succeeded** this run (`bd81530..aba4871`); the remote now carries a PAT, so the
+  28 Jul credential failure is resolved and that commit went up too. Verified: `origin/main`
+  == HEAD, live `reports.json` and all three daily PDFs return 200, and the 29 Jul entry was
+  traced through `index.dc.html`'s own `parse()` to iso 2026-07-29 with a resolvable `src`.
+  Chrome extension was not connected, so the calendar check was contract-level, not visual.
+- Two PubMed records carry wrong DOIs upstream (PMID 42521969 → a 2019 *Sci Rep* DOI;
+  PMID 42524698 → an *Environ Sci Technol* DOI). Reproduced as indexed and flagged in the
+  issue; those two links misresolve.
+- Sandbox debris for manual cleanup on a local checkout: `.git/lk.*` (6) and
+  ~68 `.git/objects/*/tmp_obj_*`, all left by the delete-restricted mount (`rm` → EPERM).
+  Harmless to git, but they accumulate every run.
