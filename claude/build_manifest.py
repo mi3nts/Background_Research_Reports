@@ -32,6 +32,9 @@ def build():
     man, problems = {}, []
     for cad in CADENCES:
         folder = os.path.join(ROOT, "Reports", cad)
+        # git does not track empty directories, so a fresh clone has no
+        # weekly/monthly/yearly folders at all. Create them before scanning.
+        os.makedirs(folder, exist_ok=True)
         entries = []
         if os.path.isdir(folder):
             for fn in sorted(os.listdir(folder)):

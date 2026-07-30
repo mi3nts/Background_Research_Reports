@@ -1,0 +1,232 @@
+%% ===========================================================================
+%% PM Research Watch - WEEKLY ROLLUP TEMPLATE
+%% Derived from templates/daily.tex on 2026-07-29 for the first Sunday, 2026-08-02.
+%%
+%% Contract
+%%   * Compile with PMRW_START / PMRW_END set, so corpus.py exposes PAPERS and
+%%     EFFECTS pooled over the week and each record carries `_date`.
+%%   * \FIGDIR points at claude/fig/<period-end>/ ; \DIGESTDATE is the period-end
+%%     Sunday. Output: Reports/weekly/PM-Research-Watch-Weekly_<Sunday>.pdf
+%%   * preamble.tex is shared and unmodified. Do not redesign it here.
+%%   * A rollup NEVER re-queries an API. Every number below comes from
+%%     state/corpus/*.json, state/metrics.csv and state/trials.json.
+%%
+%% What a weekly must add beyond seven dailies (all sections are mandatory;
+%% write "nothing this week" rather than deleting a heading):
+%%   1. Subtopic trend and inflection vs. the preceding week
+%%   2. Emerging vs. fading themes
+%%   3. Pooled forest plot with heterogeneity noted explicitly
+%%   4. Recurring author / group clusters
+%%   5. Most-cited work of the period
+%%   6. Trial-registry watch (state/trials.json, first_seen inside the window)
+%%   7. Open gaps
+%%   8. A short read on where the field is heading
+%% ===========================================================================
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\providecommand{\DIGESTDATE}{2 August 2026}
+\providecommand{\PERIODSTART}{27 July 2026}
+\providecommand{\PERIODEND}{2 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Teal] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ WEEKLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Week in Review\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Week ending \DIGESTDATE\;\;\textcolor{Teal}{\textbar}\;\;\PERIODSTART{} to \PERIODEND\;\;%
+ \textcolor{Teal}{\textbar}\;\;<N> records pooled from <D> daily issues\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{<N>}{RECORDS POOLED\\THIS WEEK}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{<X>}{vs.\ PRECEDING\\WEEK}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{<S>}{SUBTOPICS\\ACTIVE}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{<E>}{POOLED EFFECT\\ESTIMATES}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{<T>}{TRIAL REGISTRATIONS\\IN WINDOW}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- week in one box
+\section*{\sffamily\bfseries\color{Deep}The week in one paragraph}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}<The single defensible through-line of the week.>}\\[1.4mm]
+\footnotesize
+<Name the two or three papers that carry it, with effect sizes and units. State what
+would have to be true for the through-line to be wrong. A week is long enough to see a
+pattern and short enough that the pattern is usually noise --- say which this is.>
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- trend & inflection
+\section*{\sffamily\bfseries\color{Deep}Subtopic trend and inflection}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}.
+<Call out any inflection and immediately give the denominator --- a jump from 2 to 6 in a
+10-record day is not a trend. Distinguish changes in the literature from changes in this
+pipeline's own coverage, e.g.\ a Consensus backfill inflating the sensing cluster.>}
+
+\footnotesize
+\textbf{Emerging this week.} <Themes with no presence in the preceding week. Cite records.>
+
+\textbf{Fading.} <Themes that dominated the preceding week and are absent now. Distinguish
+genuine decline from journal-issue timing.>
+
+\textbf{Flat but load-bearing.} <Steady clusters that carry the field regardless of weekly noise.>
+
+\clearpage
+
+% -------------------------------------------------------------- pooled analytics
+\section*{\sffamily\bfseries\color{Deep}Pooled analytics}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Pooled subtopic distribution, \PERIODSTART{} to \PERIODEND.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Pooled study architecture and health endpoint.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{\textbf{Pooled effect estimates for the week --- read as a caterpillar plot, not a
+meta-analysis.} No summary diamond is drawn and none should be: exposure contrasts differ
+(per 1\,$\mu$g\,m$^{-3}$, per IQR, threshold, per ppb), outcomes differ, and several
+estimates come from overlapping cohorts. <State the heterogeneity explicitly: which
+estimates share an exposure contrast and are therefore comparable, and which are not.
+If any subset is genuinely poolable, say so and give $I^2$; otherwise say that pooling is
+not defensible and why.>}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Pooled subtopic $\times$ study-architecture cross-tabulation. <Empty cells that stay
+empty week after week are the finding --- name them.>}
+
+\clearpage
+
+% -------------------------------------------------------------- groups & citations
+\section*{\sffamily\bfseries\color{Deep}Groups, venues and most-cited work}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Recurring author and group clusters.} <Authors or institutions appearing more than
+once in the pooled corpus, with the records. Note where repeat appearances mean a
+programmatic output stream rather than independent replication --- overlapping cohorts
+inflate apparent consistency.>
+
+\vspace{2mm}
+\textbf{Venue concentration.} <Journals contributing more than one record. Flag single-journal
+clusters, which usually indicate a themed issue rather than a research surge.>
+
+\vspace{2mm}
+\textbf{Most-cited work of the period.} <Highest-citation records in the pooled corpus, with
+counts and the source of the count. For a week-old corpus, citation counts are near zero
+and carry no information --- say so plainly rather than ranking noise.>
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- trial watch
+\section*{\sffamily\bfseries\color{Deep}Trial registry watch}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}From \texttt{state/trials.json}: registrations
+created or updated inside the window. Daily issues accumulate; the rollup is where they
+surface.\par}
+
+\vspace{1.5mm}
+\footnotesize
+<Per trial: NCT ID, title, sponsor, status, phase or N/A, enrolment, intervention,
+primary and secondary endpoints from \texttt{analyze\_endpoints}, and primary completion
+date. Then the assessment: is the endpoint capable of detecting the effect the exposure
+contrast implies? Purifier trials are chronically underpowered for hard outcomes and
+usually run on surrogate endpoints --- say which.>
+
+\vspace{2mm}
+\textbf{Standing watch list.} <Previously logged trials with completion dates approaching,
+so results are not missed when they post.>
+
+\clearpage
+
+% -------------------------------------------------------------- gaps & direction
+\section*{\sffamily\bfseries\color{Deep}Open gaps}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Measurement--epidemiology coupling.} <Whether any record this week validated an
+instrument against a health endpoint, or whether the two literatures stayed separate.>
+\item \textbf{Ultrafine and speciated metrics.} <UFP and composition-resolved records vs.\
+total-mass records; the deposition-physics mismatch.>
+\item \textbf{Geographic coverage vs.\ attributable burden.} <South Asia and sub-Saharan
+Africa representation against their share of global PM burden.>
+\item \textbf{Calibration transferability.} <Whether new LCS work reported held-out
+deployment performance or only co-located fit.>
+\item \textbf{Negative and null results.} <Nulls published this week; a corpus with no nulls
+is a reporting-bias signal, not a clean literature.>
+\end{itemize}
+
+\vspace{3mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Where this is heading}\\[1.2mm]
+\footnotesize
+<Two or three paragraphs of judgement, clearly marked as judgement. What methodological
+demand is the field converging on? What would change the picture? What should a
+distributed low-cost PM sensing programme do differently next week as a result? State
+confidence and be willing to say the week was uninformative.>
+\end{keybox}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+This rollup is an \textbf{aggregation only}. It pools \texttt{state/corpus/*.json},
+\texttt{state/metrics.csv} and \texttt{state/trials.json} over
+\PERIODSTART{}--\PERIODEND{} via \texttt{PMRW\_START}/\texttt{PMRW\_END} and
+\textbf{re-queries no API}, so every record was screened and deduplicated in the daily
+issue that first carried it. Per-record provenance, source-query windows, exclusions and
+known metadata defects are documented in those daily issues and are not restated here.
+Daily issues covered: <list>. Any gap in that list is a missed run and is stated here
+rather than hidden. Effect estimates are transcribed from abstracts and use heterogeneous
+exposure contrasts --- see the forest-plot caption; no meta-analytic summary is computed.
+Trend and inflection statements are judgements over a seven-day window and are not
+statistical tests. Content derived from publisher metadata; abstracts remain the
+copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

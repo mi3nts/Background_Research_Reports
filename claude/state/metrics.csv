@@ -1,5 +1,5 @@
 date,subtopic,n
-2026-07-27,Burden, policy & mitigation,3
+2026-07-27,"Burden, policy & mitigation",3
 2026-07-27,Cardiovascular & metabolic,4
 2026-07-27,Exposure assessment & modelling,1
 2026-07-27,Mechanistic toxicology,3
@@ -8,8 +8,8 @@ date,subtopic,n
 2026-07-27,Other clinical endpoints,3
 2026-07-27,Reproductive & developmental,4
 2026-07-27,Respiratory & allergic,4
-2026-07-27,Sensing, forecasting & instrumentation,2
-2026-07-28,Burden, policy & mitigation,3
+2026-07-27,"Sensing, forecasting & instrumentation",2
+2026-07-28,"Burden, policy & mitigation",3
 2026-07-28,Cardiovascular & metabolic,1
 2026-07-28,Exposure assessment & modelling,2
 2026-07-28,Mechanistic toxicology,2
@@ -18,4 +18,13 @@ date,subtopic,n
 2026-07-28,Other clinical endpoints,3
 2026-07-28,Reproductive & developmental,1
 2026-07-28,Respiratory & allergic,2
-2026-07-28,Sensing, forecasting & instrumentation,2
+2026-07-28,"Sensing, forecasting & instrumentation",2
+2026-07-29,"Burden, policy & mitigation",1
+2026-07-29,Cardiovascular & metabolic,4
+2026-07-29,Exposure assessment & modelling,4
+2026-07-29,Mechanistic toxicology,2
+2026-07-29,Neuro / mental health,2
+2026-07-29,Occupational & indoor,2
+2026-07-29,Reproductive & developmental,1
+2026-07-29,Respiratory & allergic,3
+2026-07-29,"Sensing, forecasting & instrumentation",6

@@ -1,0 +1,21 @@
+{
+ "NCT05874479": {
+  "first_seen": "2026-07-29",
+  "title": "Reducing AIR Pollution Exposure to Lower Blood PRESSURE Among New York City Public Housing Residents",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "NYU Langone Health",
+  "enrollment": 440,
+  "interventions": [
+   "Active portable air cleaner",
+   "Sham portable air cleaner"
+  ],
+  "conditions": [
+   "Blood Pressure"
+  ],
+  "start_date": "2023-12-20",
+  "primary_completion_date": "2027-09",
+  "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
+ }
+}

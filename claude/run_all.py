@@ -42,9 +42,19 @@ def post(date):
     run(["python3", "mktable.py"], env)
     if not os.path.exists(os.path.join(build, "preamble.tex")):
         run(["cp", os.path.join(HERE, "preamble.tex"), build])
+    # Always repoint the symlink: a stale link from a previous issue silently
+    # compiles yesterday's figures into today's PDF.
     link = os.path.join(build, "fig")
-    if not os.path.exists(link):
-        os.symlink(figdir, link)
+    if os.path.islink(link) or os.path.exists(link):
+        try:
+            os.unlink(link)
+        except OSError:
+            # repo mount is delete-restricted; rename it out of the way instead
+            os.makedirs(os.path.join(build, "trash"), exist_ok=True)
+            os.rename(link, os.path.join(build, "trash",
+                                         "fig.stale.%s" % datetime.datetime.now()
+                                         .strftime("%Y%m%d%H%M%S")))
+    os.symlink(figdir, link)
     for _ in range(2):
         run(["pdflatex", "-interaction=nonstopmode", "digest.tex"], cwd=build)
     out = os.path.join(ROOT, "Reports", "daily", "PM-Research-Watch_%s.pdf" % date)

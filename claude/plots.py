@@ -192,10 +192,12 @@ geo_group = {
     "Nigeria": "Sub-Saharan Africa", "Kenya": "Sub-Saharan Africa",
     "Poland": "Europe", "Romania": "Europe", "Netherlands": "Europe",
     "Turkiye": "Middle East & N. Africa", "India": "South Asia",
+    "South Africa": "Sub-Saharan Africa", "Mexico": "Latin America",
 }
 geo = collections.Counter(geo_group.get(p["geo"], "Global / multi-region") for p in PAPERS)
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8.6, 3.3))
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.4, 3.3),
+                               gridspec_kw={"wspace": 0.46})
 pi = sorted(pmc.items(), key=lambda kv: kv[1])
 ax1.barh([k for k, _ in pi], [v for _, v in pi],
          color=[TEAL, SKY, SAGE, AMBER, CLAY, VIOLET, DEEP][:len(pi)][::-1],
@@ -256,22 +258,28 @@ fig, ax = plt.subplots(figsize=(8.0, 4.6))
 y = np.arange(len(E))
 colmap = collections.defaultdict(lambda: SLATE, {"HR": TEAL, "OR": CLAY, "IRR": VIOLET,
           "RR-equiv": SAGE, "RR": SAGE, "beta": SKY, "%": AMBER, "r": DEEP})
+def _hasci(e):
+    return e.get("lo") is not None and e.get("hi") is not None and e["hi"] > e["lo"]
+
 for i, e in enumerate(E):
     c = colmap[e["metric"]]
-    if e["hi"] > e["lo"]:
+    if _hasci(e):
         ax.plot([e["lo"], e["hi"]], [i, i], color=c, lw=2.0, solid_capstyle="round", zorder=3)
         ax.plot([e["lo"], e["lo"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
         ax.plot([e["hi"], e["hi"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
     ax.scatter([e["est"]], [i], s=46, color=c, zorder=4,
                edgecolor=PAPER, linewidth=1.0)
-    _lbl = (f"{e['est']:.4g} ({e['lo']:.4g}–{e['hi']:.4g})" if e["hi"] > e["lo"]
+    _lbl = (f"{e['est']:.4g} ({e['lo']:.4g}–{e['hi']:.4g})" if _hasci(e)
             else f"{e['est']:.4g} (no CI reported)")
     ax.text(1.025, i, _lbl,
             transform=ax.get_yaxis_transform(which="grid"),
             fontsize=7.6, va="center", ha="left", color=SLATE, family="monospace")
 ax.axvline(1.0, color=CORAL, lw=1.1, ls="--", zorder=2)
 ax.set_xscale("log")
-_lo = min([e["lo"] for e in E] + [1.0]); _hi = max([e["hi"] for e in E] + [1.0])
+_lo = min([e["lo"] for e in E if e.get("lo") is not None]
+          + [e["est"] for e in E] + [1.0])
+_hi = max([e["hi"] for e in E if e.get("hi") is not None]
+          + [e["est"] for e in E] + [1.0])
 _pad = (_hi / _lo) ** 0.10
 ax.set_xlim(_lo / _pad, _hi * _pad)
 _cand = [0.5, 0.8, 0.9, 0.95, 1.0, 1.02, 1.04, 1.05, 1.06, 1.08, 1.1, 1.15,
