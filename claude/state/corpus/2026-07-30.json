@@ -1,0 +1,372 @@
+{
+ "date": "2026-07-30",
+ "entry_window": "2026-07-30 (PubMed [EDAT]); Europe PMC CREATION_DATE 2026-07-30; Consensus (no entry-date filter)",
+ "PAPERS": [
+  {
+   "pmid": "42530934",
+   "short": "Calderon-Garcidueñas 2026",
+   "doi": "10.1177/13872877261471048",
+   "title": "Abnormal eye movements reflect early cortical and volumetric brain changes in PM2.5-exposed urban youth",
+   "journal": "J Alzheimers Dis",
+   "sub": "Neuro / mental health",
+   "design": "Cross-sectional imaging",
+   "pm": "PM2.5",
+   "geo": "Mexico",
+   "endpoint": "Neuro / cognitive",
+   "n": "80 adults (45 with MRI)",
+   "tier": "A"
+  },
+  {
+   "pmid": "42528541",
+   "short": "Cattarinussi 2026",
+   "doi": "10.64898/2026.07.12.26357864",
+   "title": "Independent and joint effects of outdoor air pollution and genetic risk on adolescent mental health trajectories",
+   "journal": "medRxiv",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort",
+   "pm": "PM2.5",
+   "geo": "USA",
+   "endpoint": "Neuro / cognitive",
+   "n": "10,620 (ABCD)",
+   "tier": "A"
+  },
+  {
+   "pmid": "42529026",
+   "short": "Luo 2026",
+   "doi": "10.3389/fpubh.2026.1878398",
+   "title": "Short-term ambient air pollution and cardiovascular mortality: an 11-year time-series in Nanning",
+   "journal": "Front Public Health",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Time-series",
+   "pm": "PM2.5 + PM10",
+   "geo": "China",
+   "endpoint": "Cardiovascular",
+   "n": "87,913 CVD deaths",
+   "tier": "A"
+  },
+  {
+   "pmid": "42531459",
+   "short": "Chrysohoou 2026",
+   "doi": "10.1093/eurjpc/zwag387",
+   "title": "Preventing cardiovascular disease within the built and living environment: an expert opinion",
+   "journal": "Eur J Prev Cardiol",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Narrative review",
+   "pm": "PM (unspeciated)",
+   "geo": "EU-27",
+   "endpoint": "Cardiovascular",
+   "n": "n/a (expert opinion)",
+   "tier": "C"
+  },
+  {
+   "pmid": "42529083",
+   "short": "Wang 2026",
+   "doi": "10.3389/fmed.2026.1872723",
+   "title": "Environmental and socioeconomic influences on childhood asthma and pneumonia burden",
+   "journal": "Front Med",
+   "sub": "Respiratory & allergic",
+   "design": "Retrospective cohort",
+   "pm": "PM2.5",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "936 children (1-14 y)",
+   "tier": "C"
+  },
+  {
+   "pmid": "42526220",
+   "short": "Li 2026",
+   "doi": "10.1016/j.ecoenv.2026.120581",
+   "title": "Ambient air pollutant exposure and semen quality: a refined multi-window panel study",
+   "journal": "Ecotoxicol Environ Saf",
+   "sub": "Reproductive & developmental",
+   "design": "Panel study",
+   "pm": "PM2.5 + PM10",
+   "geo": "China",
+   "endpoint": "Reproductive",
+   "n": "32 men, 4 quarterly visits",
+   "tier": "B"
+  },
+  {
+   "pmid": "42528337",
+   "short": "Gwak 2026",
+   "doi": "10.1111/risa.70318",
+   "title": "Size-resolved modelling of airborne viral RNA copies in indoor environments",
+   "journal": "Risk Anal",
+   "sub": "Occupational & indoor",
+   "design": "Physical exposure model",
+   "pm": "Bioaerosol / coarse",
+   "geo": "Global",
+   "endpoint": "Respiratory",
+   "n": "1-2000 um size range, model",
+   "tier": "B"
+  },
+  {
+   "pmid": "42530833",
+   "short": "Aher 2026",
+   "doi": "10.1007/s11356-026-38087-y",
+   "title": "Comment on advancing air pollution forecasting: operational challenges beyond predictive accuracy",
+   "journal": "Environ Sci Pollut Res",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Commentary / methods letter",
+   "pm": "PM (unspeciated)",
+   "geo": "India",
+   "endpoint": "None (monitoring)",
+   "n": "n/a (letter)",
+   "tier": "C"
+  },
+  {
+   "pmid": "42526240",
+   "short": "Chen 2026",
+   "doi": "10.1016/j.jhazmat.2026.143129",
+   "title": "Dual-isotope evidence for shipping contributions to atmospheric nitrate in coastal Chinese cities",
+   "journal": "J Hazard Mater",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "PM2.5",
+   "geo": "China",
+   "endpoint": "None (monitoring)",
+   "n": "615 daily PM2.5 samples, 5 cities",
+   "tier": "A"
+  },
+  {
+   "pmid": "42528658",
+   "short": "Zhang 2026",
+   "doi": "10.1038/s41612-026-01371-2",
+   "title": "High-resolution aerosol liquid water content across the contiguous US using machine learning",
+   "journal": "npj Clim Atmos Sci",
+   "sub": "Exposure assessment & modelling",
+   "design": "Machine-learning model",
+   "pm": "PM2.5",
+   "geo": "USA",
+   "endpoint": "None (monitoring)",
+   "n": "1 km daily, 2000-2019",
+   "tier": "A"
+  },
+  {
+   "pmid": "PPR1288389",
+   "short": "Patwary 2026",
+   "doi": "10.21203/rs.3.rs-10519411/v1",
+   "title": "Spatio-temporal assessment of PM10 and meteorological correlates in Cumilla, Bangladesh",
+   "journal": "Res Sq (preprint)",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "PM10",
+   "geo": "Bangladesh",
+   "endpoint": "None (monitoring)",
+   "n": "1 station, Jan-Apr 2026",
+   "tier": "C"
+  },
+  {
+   "pmid": "PPR1288488",
+   "short": "Raj 2026",
+   "doi": "10.21203/rs.3.rs-10492149/v1",
+   "title": "Spatiotemporal ambient air quality across urban, tourist and industrial Himachal Pradesh",
+   "journal": "Res Sq (preprint)",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "PM2.5 + PM10",
+   "geo": "India",
+   "endpoint": "None (monitoring)",
+   "n": "5 towns, 150 site-days",
+   "tier": "C"
+  },
+  {
+   "pmid": "42531044",
+   "short": "Li 2026b",
+   "doi": "10.47102/annals-acadmedsg.2026146",
+   "title": "Burden trends of Alzheimer disease and other dementias in China, 1990-2023",
+   "journal": "Ann Acad Med Singap",
+   "sub": "Burden, policy & mitigation",
+   "design": "GBD secondary analysis",
+   "pm": "PM (unspeciated)",
+   "geo": "China",
+   "endpoint": "Neuro / cognitive",
+   "n": "586,002 deaths (2023)",
+   "tier": "B"
+  },
+  {
+   "pmid": "42528369",
+   "short": "Abi Nader 2026",
+   "doi": "10.1017/dmp.2026.10412",
+   "title": "Short-term respiratory and skin disease risks from air pollution during the 2024 Beirut conflict",
+   "journal": "Disaster Med Public Health Prep",
+   "sub": "Burden, policy & mitigation",
+   "design": "Environmental surveillance campaign",
+   "pm": "PM2.5",
+   "geo": "Lebanon",
+   "endpoint": "Multi-system",
+   "n": "5 ground sites + satellite",
+   "tier": "B"
+  },
+  {
+   "pmid": "42529043",
+   "short": "Vellaiyan 2026",
+   "doi": "10.1007/s40201-026-00995-z",
+   "title": "Diesel NOx emissions and public health: source-pathway-receptor synthesis",
+   "journal": "J Environ Health Sci Eng",
+   "sub": "Burden, policy & mitigation",
+   "design": "Narrative review",
+   "pm": "PM (unspeciated)",
+   "geo": "Global",
+   "endpoint": "Multi-system",
+   "n": "n/a (review)",
+   "tier": "C"
+  },
+  {
+   "pmid": "42530832",
+   "short": "Makkar 2026",
+   "doi": "10.1007/s11356-026-38029-8",
+   "title": "Fungal biotechnology for air-pollution mitigation: mechanisms and engineered systems",
+   "journal": "Environ Sci Pollut Res",
+   "sub": "Burden, policy & mitigation",
+   "design": "Critical review",
+   "pm": "PM2.5",
+   "geo": "India",
+   "endpoint": "Multi-system",
+   "n": "n/a (review)",
+   "tier": "C"
+  },
+  {
+   "pmid": "42526235",
+   "short": "Ouyang 2026",
+   "doi": "10.1016/j.jhazmat.2026.143124",
+   "title": "Independent and joint effects of short-term air pollutant exposure on eczema in two Chinese cities",
+   "journal": "J Hazard Mater",
+   "sub": "Other clinical endpoints",
+   "design": "Time-series",
+   "pm": "PM2.5 + PM10",
+   "geo": "China",
+   "endpoint": "Dermatological",
+   "n": "879,356 outpatient records",
+   "tier": "A"
+  },
+  {
+   "pmid": "42527378",
+   "short": "Zurita 2026",
+   "doi": "10.1002/1545-5017.70482",
+   "title": "Childhood leukaemia and proximity to benzene emission sources in the Mexico City area",
+   "journal": "Pediatr Blood Cancer",
+   "sub": "Other clinical endpoints",
+   "design": "Ecological panel",
+   "pm": "PM (unspeciated)",
+   "geo": "Mexico",
+   "endpoint": "Oncological",
+   "n": "ALL cases 2010-2021",
+   "tier": "B"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "CVD mortality, PM2.5 lag0",
+   "exposure": "per 10 ug/m3",
+   "est": 1.014,
+   "lo": 1.008,
+   "hi": 1.02,
+   "metric": "RR",
+   "src": "Luo 2026 (Front Public Health)"
+  },
+  {
+   "label": "CVD mortality, PM10 lag0",
+   "exposure": "per 10 ug/m3",
+   "est": 1.009,
+   "lo": 1.006,
+   "hi": 1.013,
+   "metric": "RR",
+   "src": "Luo 2026 (Front Public Health)"
+  },
+  {
+   "label": "CVD mortality, NO2 lag0",
+   "exposure": "per 10 ug/m3",
+   "est": 1.018,
+   "lo": 1.011,
+   "hi": 1.026,
+   "metric": "RR",
+   "src": "Luo 2026 (Front Public Health)"
+  },
+  {
+   "label": "CVD mortality, SO2 lag1",
+   "exposure": "per 10 ug/m3",
+   "est": 1.044,
+   "lo": 1.018,
+   "hi": 1.069,
+   "metric": "RR",
+   "src": "Luo 2026 (Front Public Health)"
+  },
+  {
+   "label": "Sperm concentration, full-cycle O3",
+   "exposure": "per IQR",
+   "est": 0.846,
+   "lo": 0.79,
+   "hi": 0.904,
+   "metric": "Ratio",
+   "src": "Li 2026 (Ecotoxicol Environ Saf)"
+  },
+  {
+   "label": "Sperm concentration, O3 d31-45",
+   "exposure": "per IQR",
+   "est": 0.867,
+   "lo": 0.819,
+   "hi": 0.918,
+   "metric": "Ratio",
+   "src": "Li 2026 (Ecotoxicol Environ Saf)"
+  },
+  {
+   "label": "Eczema visits, SO2",
+   "exposure": "per 10 ug/m3",
+   "est": 1.226,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "Ouyang 2026 (J Hazard Mater)"
+  },
+  {
+   "label": "Eczema visits, PM10-based mixture",
+   "exposure": "per quartile",
+   "est": 1.041,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "Ouyang 2026 (J Hazard Mater)"
+  },
+  {
+   "label": "Respiratory admissions, wartime",
+   "exposure": "war vs. pre-war",
+   "est": 1.011,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "Abi Nader 2026 (Disaster Med)"
+  },
+  {
+   "label": "Skin disease admissions, wartime",
+   "exposure": "war vs. pre-war",
+   "est": 1.032,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "Abi Nader 2026 (Disaster Med)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "no in-utero or\npreconception record\nthis window"
+  },
+  {
+   "n": 2,
+   "note": "childhood:\nasthma/pneumonia,\nleukaemia proximity"
+  },
+  {
+   "n": 1,
+   "note": "adolescence:\nPM x polygenic risk,\nmental health"
+  },
+  {
+   "n": 2,
+   "note": "working age:\nsemen quality,\noculomotor + MRI"
+  },
+  {
+   "n": 2,
+   "note": "older adults:\nCVD mortality,\ndementia burden"
+  }
+ ]
+}

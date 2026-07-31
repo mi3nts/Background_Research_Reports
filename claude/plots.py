@@ -133,6 +133,13 @@ design_group = {
     "Dispersion model + soil sampling": "Modelling / inventory",
     "Spatial econometric model": "Modelling / inventory",
     "Bayesian + geospatial regression": "Modelling / inventory",
+    "Cross-sectional imaging": "Observational - cross-sectional",
+    "Time-series": "Observational - acute",
+    "Physical exposure model": "Modelling / inventory",
+    "Machine-learning model": "Modelling / inventory",
+    "Source apportionment": "Measurement campaign",
+    "Sensor co-location": "Measurement campaign",
+    "Chamber sensor evaluation": "Measurement campaign",
 }
 def dgrp(d):
     return design_group.get(d, "Other / mixed")
@@ -193,6 +200,9 @@ geo_group = {
     "Poland": "Europe", "Romania": "Europe", "Netherlands": "Europe",
     "Turkiye": "Middle East & N. Africa", "India": "South Asia",
     "South Africa": "Sub-Saharan Africa", "Mexico": "Latin America",
+    "Lebanon": "Middle East & N. Africa", "Bangladesh": "South Asia",
+    "Kazakhstan": "Central Asia", "Greece": "Europe", "Bulgaria": "Europe",
+    "Norway": "Europe",
 }
 geo = collections.Counter(geo_group.get(p["geo"], "Global / multi-region") for p in PAPERS)
 

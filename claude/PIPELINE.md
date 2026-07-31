@@ -164,3 +164,31 @@ skip if the output file already exists.
 - Sandbox debris for manual cleanup on a local checkout: `.git/lk.*` (6) and
   ~68 `.git/objects/*/tmp_obj_*`, all left by the delete-restricted mount (`rm` → EPERM).
   Harmless to git, but they accumulate every run.
+
+### 2026-07-30
+- Window 2026-07-30 (contiguous with 29 Jul). Hits: PubMed health 16, PubMed instrumentation 66,
+  Europe PMC 5 (3 dupes, 2 new preprints), arXiv 60 (none in window), OpenAlex HTTP **429**,
+  ClinicalTrials.gov 0. **18 included, 11 rejection groups logged.** Rollups: none (Thursday).
+- **Consensus cannot supply a windowed record and this is now a known defect, not a workaround.**
+  It has no entry-date filter: all 8 low-cost-sensor hits resolved via Crossref `created` to
+  20 Jan–6 Jul 2026, and `10.1080/02786826.2026.2676293` (Ginsburg) was already in the 29 Jul
+  issue. All 8 rejected. **The pipeline has no date-windowed channel into AMT/ACP.** Fix next
+  run: a Crossref `/journals/{issn}/works?filter=from-created-date` feed for AMT (1867-8548) and
+  ACP (1680-7324) — per-journal `created` windowing works even though the global `from-index-date`
+  does not (see Source notes). Until then the SENS subtopic will keep under-counting.
+- Rule adopted: **never mint a DOI.** Consensus returns no DOI field, so every non-PubMed record
+  must be resolved through `api.crossref.org/works?query.bibliographic=` before it is written to
+  the corpus. Drafting this issue produced 8 plausible-looking fabricated DOIs before that check
+  caught them.
+- Correctness fixes, no redesign: `plots.py` `design_group` gained Cross-sectional imaging,
+  Time-series, Physical exposure model, Machine-learning model, Source apportionment,
+  Sensor co-location, Chamber sensor evaluation; `geo_group` gained Lebanon, Bangladesh,
+  Kazakhstan, Greece, Bulgaria, Norway (previously silently "Global / multi-region").
+- Proofed all pages as rasters over three passes; final 9 pages, 0 LaTeX errors, 0 overfull boxes.
+  Three defects found and fixed: f2 caption claimed 7 endpoint-free records against 5 in the
+  figure; `LIFECOURSE` notes were misaligned with the figure's five fixed stage headers (an
+  adolescence note sat under "Preconception / in utero"); and the Burden band spilled two lines
+  onto an otherwise blank page — resolved by dropping the `\clearpage` before the Neuro band,
+  which trimming the entries above it did not fix.
+- Note for the 2026-08-02 weekly: `metrics.csv` now has 38 rows across 27–30 Jul and the
+  quoting defect stays fixed (`update_state.py` rewrites the whole file via `csv.writer`).
