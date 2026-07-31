@@ -74,15 +74,23 @@ if __name__ == "__main__":
     bad = validate(man)
     if os.path.isdir(MIRROR):
         mrep = os.path.join(MIRROR, "Reports")
+        copied = 0
         for cad in CADENCES:
             os.makedirs(os.path.join(mrep, cad), exist_ok=True)
             for it in man[cad]:
                 src = os.path.join(ROOT, "Reports", cad, it["file"])
                 dst = os.path.join(mrep, cad, it["file"])
-                if not os.path.exists(dst):
+                # Copy when missing OR when the bytes differ. The previous
+                # `if not exists` guard meant a *reissued* PDF never propagated,
+                # so the mirror silently drifted: on 31 Jul it still held the
+                # pre-correction 28/29 Jul issues and an unproofed 30 Jul build.
+                if (not os.path.exists(dst)
+                        or os.path.getsize(dst) != os.path.getsize(src)
+                        or open(dst, "rb").read() != open(src, "rb").read()):
                     shutil.copy2(src, dst)
+                    copied += 1
         json.dump(man, open(os.path.join(mrep, "reports.json"), "w"), indent=2)
-        print("mirrored to", mrep)
+        print("mirrored to %s (%d PDF(s) refreshed)" % (mrep, copied))
     print(json.dumps({k: len(v) for k, v in man.items()}))
     if problems:
         print("PROBLEMS:", problems)

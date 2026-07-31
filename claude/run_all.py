@@ -34,6 +34,12 @@ def harvest(date):
 
 
 def post(date):
+    # Gate: a wrong DOI is invisible in the PDF but ships a dead link. Four such
+    # records went out in the 28-29 Jul issues before this check existed.
+    rc = subprocess.run(["python3", "check_dois.py", date], cwd=HERE).returncode
+    if rc:
+        sys.exit("check_dois.py failed for %s - fix the DOIs before building" % date)
+
     figdir = os.path.join(HERE, "fig", date)
     build = os.path.join(HERE, "build")
     os.makedirs(figdir, exist_ok=True); os.makedirs(build, exist_ok=True)
@@ -59,6 +65,13 @@ def post(date):
         run(["pdflatex", "-interaction=nonstopmode", "digest.tex"], cwd=build)
     out = os.path.join(ROOT, "Reports", "daily", "PM-Research-Watch_%s.pdf" % date)
     run(["cp", os.path.join(build, "digest.pdf"), out])
+    # Archive the issue source. build/ is gitignored, so without this the .tex is
+    # lost on the next run and an issue cannot be corrected without re-authoring
+    # it from the PDF (which is what 29 Jul required).
+    issues = os.path.join(HERE, "issues")
+    os.makedirs(issues, exist_ok=True)
+    run(["cp", os.path.join(build, "digest.tex"),
+         os.path.join(issues, "digest_%s.tex" % date)])
     run(["python3", "build_manifest.py"])
     print("wrote", out)
 

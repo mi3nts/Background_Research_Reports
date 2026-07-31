@@ -8,6 +8,10 @@ __pycache__/
 claude/cache/
 claude/build/
 claude/fig/
+claude/rebuild/
+# claude/issues/ is deliberately NOT ignored: it is the archive of each issue's
+# .tex source. build/ is scratch and gets overwritten every run, so without the
+# archive a published issue cannot be corrected without re-authoring it.
 
 # proofing debris from the pre-migration snapshot (delete manually on a local
 # checkout; the automation sandbox mount is delete-restricted)

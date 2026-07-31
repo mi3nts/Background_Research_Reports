@@ -44,7 +44,9 @@ so they land on a real calendar cell.
 | `preamble.tex` | Shared design system — palette (Deep/Teal/Sky/Sage/Amber/Clay/Coral/Violet on Paper `#FBF9F5`), `\metric`, `\keybox`, `\band`, `\paperentry`, `\figcap`, `\DIGESTDATE`. **Do not redesign.** |
 | `templates/daily.tex` | Daily template (was `digest.tex`). Uses `\FIGDIR`. |
 | `build_manifest.py` | Rebuilds `Reports/reports.json` by **scanning** the tree, validates every entry resolves, mirrors to the MINTS site copy. |
-| `build/` , `cache/` , `fig/` | Untracked working dirs (`.gitignore`). |
+| `check_dois.py` | **DOI gate**, run automatically by `run_all.py --post`. FAIL (blocks build): no DOI, DOI disagrees with the PMID's own PubMed record, DOI does not resolve. warn (advisory): low title overlap, or not in Crossref but live at doi.org. |
+| `issues/digest_YYYY-MM-DD.tex` | **Tracked archive** of each published issue's source, written by `--post`. `build/` is scratch and is overwritten every run. |
+| `build/` , `cache/` , `fig/` , `rebuild/` | Untracked working dirs (`.gitignore`). |
 
 ---
 
@@ -192,3 +194,34 @@ skip if the output file already exists.
   which trimming the entries above it did not fix.
 - Note for the 2026-08-02 weekly: `metrics.csv` now has 38 rows across 27–30 Jul and the
   quoting defect stays fixed (`update_state.py` rewrites the whole file via `csv.writer`).
+
+### 2026-07-31 — corrections release (no new harvest)
+- Audited all 95 DOIs across the four published issues two ways: PMID→DOI against NCBI, and
+  DOI→title against Crossref. **Four broken links found, not the two logged on 29 Jul.**
+  PubMed had indexed a wrong DOI at entry time for each; all four have since been corrected
+  upstream. Title, journal and author were correct in every case — the link alone was wrong.
+
+  | Issue | Record | Was | Now |
+  |---|---|---|---|
+  | 28 Jul | Sun (PMID 42509466) | `10.1016/j.lanwpc.2024.101106` | `10.1038/s41416-026-03555-2` |
+  | 29 Jul | Patton (42521969) | `10.1038/s41598-019-44409-3` (dead) | `10.1007/s11356-026-38083-2` |
+  | 29 Jul | Rusconi (42524698) | `10.1021/acs.est.2c06752` | `10.1029/2025GH001636` |
+  | 29 Jul | Mokoena (42524488) | `10.3390/ijerph23020182` | `10.1002/puh2.70325` |
+
+  Mokoena was **not** in the 29 Jul run log — that issue's provenance box claimed two bad
+  DOIs when there were three.
+- The two `10.3760/cma.*` DOIs flagged by Crossref are **not** errors: CMA journals are not
+  Crossref-registered but resolve 200 at doi.org. Three low-title-overlap flags are
+  paraphrase, not error. Hence FAIL/warn severity split in `check_dois.py`.
+- **The 29 Jul `.tex` had been lost** — `build/` is gitignored and gets overwritten each run,
+  so the only surviving copy of a published issue was the PDF. Reconstructed the source from
+  `pdftotext` output, then verified by word-level `difflib` against the original PDF: the only
+  differences are the 3 DOIs and the rewritten correction paragraph. All 25 summaries and every
+  caption are word-identical. 28 Jul rebuilt from its `.bak` (5-line diff, all intended).
+- Both issues reissued at 11 pages, 0 overfull boxes. Hyperlink **annotations** verified by
+  `qpdf --qdf`: 19 and 25 links, 0 stale, corrected targets present. A correction note was
+  added to each provenance box rather than silently swapping the links.
+- Hardening so this cannot recur: (1) `check_dois.py` now gates `run_all.py --post`;
+  (2) `--post` archives `build/digest.tex` to tracked `claude/issues/`; (3) all four existing
+  issues back-filled into `issues/`. Current state: **0 FAIL, 5 advisory warns** across
+  27–30 Jul.
