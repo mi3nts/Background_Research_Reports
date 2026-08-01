@@ -126,6 +126,7 @@ def rollup(cadence, end):
     run(["python3", "plots.py"], env)           # pooled f1-f6 over the range
     run(["python3", "plots_weekly.py"], env)    # w1 trend panel from metrics.csv
     run(["python3", "mktable.py"], env)
+    run(["python3", "mkdigest.py"], env)        # per-paper digest body for the rollup
     if not os.path.exists(os.path.join(build, "preamble.tex")):
         run(["cp", os.path.join(HERE, "preamble.tex"), build])
     link = os.path.join(build, "fig")

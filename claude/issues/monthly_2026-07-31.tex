@@ -3,6 +3,27 @@
 \newcommand{\DIGESTDATE}{31 July 2026}
 \input{preamble}
 
+% Local to the monthly: a compact entry for records recovered by the month-wide harvest,
+% and a tier label inside a band. Deliberately lighter than \paperentry so a reader can
+% tell an assessed summary from an extractive precis at a glance.
+\newcommand{\subsectionnote}[1]{%
+  \vspace{0.6mm}\noindent{\sffamily\fontsize{7.4}{9}\selectfont\color{Slate}\textsc{#1}}\par
+  \vspace{1.0mm}}
+% Wrapped in a minipage so an entry never splits across a page break - without it a
+% single DOI line was left stranded on an otherwise empty page.
+\newcommand{\precisentry}[6]{%
+  \vspace{1.1mm}\noindent
+  \begin{minipage}{\linewidth}
+  \raggedright
+  {\sffamily\bfseries\fontsize{8.0}{9.6}\selectfont\color{Deep}#1}\;\;%
+  {\sffamily\fontsize{7.2}{9}\selectfont\color{Slate}#3}\par
+  {\fontsize{7.6}{9.2}\selectfont\itshape\color{Ink}#2\par}
+  {\fontsize{7.4}{9.0}\selectfont\color{Ink}#4\par}
+  {\fontsize{6.6}{8}\selectfont\color{Slate}%
+   \texttt{doi:\,\href{https://doi.org/#5}{#6}}\par}
+  \end{minipage}
+  \vspace{0.4mm}}
+
 \begin{document}
 
 % ==================================================================== MASTHEAD
@@ -30,16 +51,16 @@
 \vspace{5.0mm}
 {\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
  July 2026\;\;\textcolor{Coral}{\textbar}\;\;Entry window 1--31 July 2026\;\;%
- \textcolor{Coral}{\textbar}\;\;157 records pooled\par}
+ \textcolor{Coral}{\textbar}\;\;270 records pooled\par}
 \vspace{18mm}
 
 % -------------------------------------------------------------- metric strip
 \noindent
-\begin{minipage}[t]{0.190\linewidth}\metric{157}{RECORDS POOLED\\(10 SUBTOPICS)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{270}{RECORDS POOLED\\(10 SUBTOPICS)}{Deep}\end{minipage}\hfill
 \begin{minipage}[t]{0.190\linewidth}\metric{62}{EFFECT ESTIMATES\\EXTRACTED}{Teal}\end{minipage}\hfill
-\begin{minipage}[t]{0.190\linewidth}\metric{23}{SENSING /\\INSTRUMENTATION}{Sky}\end{minipage}\hfill
-\begin{minipage}[t]{0.190\linewidth}\metric{49}{RECORDS FROM CHINA\\(31\% OF CORPUS)}{Amber}\end{minipage}\hfill
-\begin{minipage}[t]{0.190\linewidth}\metric{8}{ULTRAFINE /\\NANOSCALE}{Clay}\end{minipage}
+\begin{minipage}[t]{0.190\linewidth}\metric{34}{SENSING /\\INSTRUMENTATION}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{92}{RECORDS FROM CHINA\\(34\% OF CORPUS)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{17}{ULTRAFINE /\\NANOSCALE}{Clay}\end{minipage}
 
 \vspace{6mm}
 
@@ -82,7 +103,7 @@ for a growing fraction of the health signal.}
 
 \footnotesize
 \begin{itemize}
-\item \textbf{Sensing was the single largest subtopic of the month (23/157, 15\%), and
+\item \textbf{Sensing was the single largest subtopic of the month (34/270, 13\%), and
 that inverts the picture the daily issues gave.} Across the five published daily issues
 of July the sensing count read \textbf{2, 2, 6, 1 and 0} (27--31 July), 11 records in
 total; the last two issues flagged the low counts as a suspected harvest defect. The month confirms
@@ -143,67 +164,82 @@ exposure-response function is flat.
 \section*{\sffamily\bfseries\color{Deep}Corpus analytics --- July 2026}
 \vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
 
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
-\figcap{Subtopic distribution across all 157 pooled records. All ten subtopics are
-populated --- no daily issue in July achieved that. Sensing, forecasting \&
-instrumentation leads at 23 records against 11 across all five published daily issues
-combined (2, 2, 6, 1, 0 on 27--31 July). Assignment is single-label by dominant
+\noindent\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic distribution across all 270 pooled records --- every PM-relevant record
+entering PubMed in July, not a sample. Exposure assessment \& modelling (39) and Sensing,
+forecasting \& instrumentation (34) are the two largest subtopics, together 27\% of the
+month. Against that, the five published daily issues recovered \textbf{11} sensing records
+in total (2, 2, 6, 1, 0 on 27--31 July). Assignment is single-label by dominant
 contribution.}
 
-\vspace{3mm}
+\clearpage
 
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
-\figcap{Records per issue date by subtopic. \textbf{Read this as a harvest diagnostic,
-not as a time series.} The 26 July bar is the retrospective backfill for 1--26 July
-harvested in a single batch on 1 August; it is not a day's output. Only the 27--31 July
-bars are genuine daily windows. The panel is included because the contrast is the
-point: five narrow daily windows recovered 106 records while one month-wide query
-recovered 51 more that the dailies never saw.}
+\noindent\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{What the five daily issues of July recovered, against what only the month-wide
+harvest found, by subtopic. \textbf{Every subtopic except Neuro and Occupational was
+under-recovered by the daily cadence}, and the two most under-recovered are the two most
+relevant here: Exposure assessment (13 caught, 26 missed) and Sensing (11 caught, 23
+missed). Across all ten subtopics the dailies caught 106 records and missed 164 ---
+\textbf{61\% of the month's literature was invisible to the daily windows}. A stacked
+per-day panel was tried first and discarded: with one 164-record backfill batch alongside
+11--33-record days, every segment collapsed to an unreadable stripe.}
 
 \clearpage
 
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
-\figcap{Left --- study architecture over the month. Measurement campaigns are the
-largest class (32), ahead of observational cohorts (25), modelling/inventory (23) and
-reviews (23). Only one trial or intervention record appeared in the entire month, which
-is the standing weakness of this evidence base: almost nothing here is experimental in
-humans. Right --- health endpoint distribution.}
-
-\vspace{3mm}
-
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
-\figcap{Left --- particle metric. PM$_{2.5}$ alone in 79 records and PM$_{2.5}$ with
-PM$_{10}$ in 35; \textbf{ultrafine or nanoscale metrics appear in only 8 records (5\%)}
-despite carrying the month's largest single mortality estimate. That mismatch between
-where the burden is claimed and where the measurement effort goes is the clearest
-instrumentation gap in this corpus. Right --- geography. China supplies 49 records
-(31\%), Europe 23, North America 21; sub-Saharan Africa supplies 5 and Latin America 5.}
+\noindent\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture over the month. Measurement campaigns dominate at 83
+of 270 (31\%), ahead of observational cohorts (41), modelling/inventory (32), reviews (31)
+and acute designs (30). \textbf{Exactly one trial or intervention record appeared in the
+whole month}, which is the standing weakness of this evidence base: almost nothing here is
+experimental in humans. Right --- health endpoint. Endpoint labels were canonicalised
+before counting (Cognitive / Neurological / Neuro-cognitive had drifted apart across
+issues); \emph{No health endpoint} at 40 records is the instrumentation and
+atmospheric-chemistry literature, and \emph{Non-human / ecotox} at 19 covers plant, insect
+and veterinary work that a health-only reading would discard.}
 
 \clearpage
 
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\noindent\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. PM$_{2.5}$ alone in 117 records and PM$_{2.5}$ with
+PM$_{10}$ in 70; \textbf{ultrafine or nanoscale metrics appear in 17 records (6\%)} despite
+carrying the month's largest single mortality estimate. That mismatch between where the
+burden is claimed and where the measurement effort goes is the clearest instrumentation gap
+in this corpus, and the complete listing sharpens rather than softens it. Right ---
+geography. China supplies 92 records (34\%), North America 43, Europe 37, and 37 are global
+or multi-region; sub-Saharan Africa supplies 6 and Latin America 8.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{\FIGDIR/f4_heatmap.png}
 \figcap{Subtopic $\times$ study-architecture cross-tabulation over the month. The dense
 Sensing/measurement-campaign and Burden/modelling cells are expected. The informative
 absence is the near-empty trial column across every health subtopic.}
 
-\vspace{3mm}
+\clearpage
 
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
-\figcap{All 62 quantitative effect estimates extracted across July on a common ratio
-axis. \textbf{This is not a meta-analysis and no pooled summary is drawn.} Exposure
-contrasts are not commensurable --- per-IQR, per-5, per-10\,$\mu$g/m$^3$, quartile and
-quintile contrasts, and mixture indices all appear --- and the outcome scale mixes RR,
-OR, aOR and HR across different diseases. \textbf{Heterogeneity is therefore not
-estimable and none is reported}; the one place a pooled figure would be legitimate is
-Tien-Smith et al.'s within-paper neurodegenerative meta-analysis, which is reproduced
-here as three separate points rather than absorbed. The visible structure is that
-per-10\,$\mu$g/m$^3$ PM$_{2.5}$ estimates cluster tightly just above unity (1.02--1.16)
-while the large ratios belong to per-IQR contrasts, mixture indices and gaseous
-co-pollutants.}
+\noindent\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{\FIGDIR/f5_forest.png}
+\figcap{Panel 1 of 2 --- the 32 smallest of the 62 quantitative effect estimates extracted
+across July, on a ratio axis shared with panel 2. \textbf{This is not a meta-analysis and
+no pooled summary is drawn.} Exposure contrasts are not commensurable: per-IQR, per-5 and
+per-10\,$\mu$g/m$^3$ increments, quartile and quintile contrasts and mixture indices all
+appear, and the outcome scale mixes RR, OR, aOR and HR across different diseases.
+\textbf{Heterogeneity is therefore not estimable and none is reported.} The estimates are
+split across two pages because 62 rows on one page is illegible at any font size the page
+allows.}
 
 \clearpage
 
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\noindent\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{\FIGDIR/f5_forest_2.png}
+\figcap{Panel 2 of 2 --- the 30 largest estimates, same axis. The structure worth reading
+across both panels: \textbf{per-10\,$\mu$g/m$^3$ PM$_{2.5}$ estimates cluster tightly just
+above unity} (roughly 1.02--1.16), while every large ratio belongs to a per-IQR contrast, a
+mixture index or a gaseous co-pollutant. The one place a pooled figure would have been
+legitimate is Tien-Smith et al.'s within-paper neurodegenerative meta-analysis, which is
+reproduced here as three separate points rather than absorbed.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth,height=0.70\textheight,keepaspectratio]{\FIGDIR/f6_lifecourse.png}
 \figcap{Life-course windows addressed across the month. Counts are non-exclusive and
 cover only records with an identifiable human life-course window; \textit{in vitro},
 ex-vivo, animal and pure-instrumentation records are excluded. Adolescence remains the
@@ -294,13 +330,13 @@ for personal and household PM reduction remains thin, and July did not thicken i
 ultrafine metric; one of them attributes two million annual deaths to it. There is no
 low-cost particle-number instrument in this corpus with a published field-calibration
 comparable to what Gharibzadeh et al.\ did for PM$_{2.5}$ mass.
-\textbf{(ii) Almost no human intervention studies.} One trial-class record in 157.
+\textbf{(ii) Almost no human intervention studies.} One trial-class record in 270.
 Every causal claim in this month's corpus rests on observational designs with
 modelled exposure.
 \textbf{(iii) Sub-0.3\,$\mu$m is invisible to the deployed sensor base.} Ali et al.\
 state this directly for the two most widely deployed OPC modules; it is also where the
 ultrafine burden lives.
-\textbf{(iv) Geographic imbalance is severe.} 49 records from China against 5 from
+\textbf{(iv) Geographic imbalance is severe.} 92 records from China against 6 from
 sub-Saharan Africa, in a month whose most methodologically important exposure paper
 (Nyoni et al.) is precisely about African settings where the standard proxies fail.
 \end{keybox}
@@ -319,8 +355,8 @@ biomedically-indexed journal, so the pure atmospheric-measurement literature is
 feed keyed on \texttt{created} for AMT (1867-8548) and ACP (1680-7324).
 \textbf{(ii) Narrow daily windows systematically under-recover.} Demonstrated
 quantitatively this month: the sensing subtopic read 2, 2, 6, 1 and 0 across the five
-published daily issues of July (27--31 July) --- 11 records in total --- against 23 for
-the month, and the month's figure is itself a floor.
+published daily issues of July (27--31 July) --- 11 records in total --- against
+\textbf{34} for the month. The dailies recovered under a third of the sensing literature.
 \textbf{(iii) The 1--26 July backfill is classification-depth only.} Effect estimates
 were extracted for that batch only where the abstract reported an interval; a genuine
 daily cadence would have captured more.
@@ -346,7 +382,30 @@ right inference is that the bottleneck is hardware cost rather than research att
 \clearpage
 
 % ==================================================================== TABLE
-\section*{\sffamily\bfseries\color{Deep}Pooled corpus register --- July 2026}
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- every record, July 2026}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+Every one of the 270 records is listed below, grouped by subtopic. Within each subtopic the
+records divide into two tiers, and the difference matters when you read them.
+\textbf{Records carried from the daily issues (106)} keep the full critical summary written
+when they were first screened --- design, effect size with interval, the limitation that
+threatens the inference, and the line on relevance to distributed sensing. Those summaries
+are reproduced \emph{verbatim}; nothing was re-written for this rollup.
+\textbf{Records recovered by the month-wide harvest (164)} carry an \emph{extractive
+precis}: the single most quantitative sentence of the published abstract, copied as
+written. A precis is not an assessment. It has not been checked against the paper, no
+limitation has been identified, and the absence of criticism in a precis entry should not
+be read as approval. Five records had no abstract in PubMed at entry and are listed on
+metadata alone.
+
+\vspace{3mm}
+
+\input{digest_body}
+
+\clearpage
+
+\section*{\sffamily\bfseries\color{Deep}Complete corpus register --- July 2026}
 \vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
 
 \input{table_rows}
@@ -359,28 +418,33 @@ citing any count above}\\[1.2mm]
 \textbf{This issue breaks the standing rollup contract, deliberately and on request.}
 Rollups in this series normally aggregate previously published daily issues and never
 re-query an API. Daily coverage of July exists only for 27--31 July, so the 1--26 July
-portion of this corpus was \textbf{harvested independently on 1 August 2026} and had
-never appeared in any daily issue. Sources for that backfill: \textbf{PubMed}
-E-utilities on the \texttt{[Date - Entry]} field, 2026/07/01--2026/07/26, along two
-independent axes --- health (352 records) and instrumentation (53) --- giving 368 unique
-records after merge, of which 22 were already in \texttt{state/seen.json} from the daily
-issues and were dropped, 166 passed a PM-relevance title screen, and \textbf{51 were
-selected for full classification} on the basis of journal standing, methodological
-weight and subtopic coverage. Those 51 are written to
-\texttt{state/corpus/2026-07-26.json} with \texttt{backfill: true} and an
-\texttt{entry\_window} recording the retrospective harvest.
+portion was \textbf{harvested independently on 1 August 2026} and had never appeared in
+any daily issue. Sources: \textbf{PubMed} E-utilities on the \texttt{[Date - Entry]}
+field, 2026/07/01--2026/07/26, along two independent axes --- health (352 records) and
+instrumentation (53) --- giving \textbf{368 unique records} after merge. Of those, 22
+were already in \texttt{state/seen.json} from the daily issues and were dropped;
+\textbf{166 passed a PM-relevance title screen}; 2 were rejected on reading as water-phase
+chemistry rather than airborne particulate (stream-sediment geochemistry; sorption of
+antibiotics to dissolved black carbon), logged with reasons to
+\texttt{state/rejected.jsonl}; and \textbf{all 164 remaining records were classified and
+are listed in this issue}.
 \\[1.0mm]
-\textbf{The consequence for every count in this issue, stated plainly:} the month's 157
-records are \textbf{not} a complete census of July. They are 106 records from five
-exhaustively-screened daily windows plus 51 selected from 166 eligible records across
-the remaining 26 days. \textbf{The 1--26 July portion is therefore a curated sample, not
-a census, and subtopic proportions for that period are biased toward what was selected.}
-Specifically, sensing and exposure work was preferentially retained because it is the
-reader's primary field. The 23-record sensing count is a \emph{floor}, not an estimate,
-and the correct reading of the headline finding is that sensing output in July was
-\emph{at least} 23 records and certainly more --- which strengthens rather than weakens
-the conclusion that the daily windows were under-recovering. No proportion in this issue
-should be quoted as a July prevalence.
+\textbf{What this issue is, and what it is not.} It \emph{is} a complete listing of every
+record in the July entry window that passed the PM-relevance title screen --- 270 records,
+none omitted for space or interest. It is \emph{not} a systematic review: the title screen
+is itself a filter, and the 202 records that did not pass it were excluded on title alone,
+so a paper about particulate matter whose title never says so would have been missed.
+Recall was not measured against any external gold standard.
+\\[1.0mm]
+\textbf{Two classification tiers, and the weaker one is the larger.} 157 records were
+classified by hand --- the 106 from daily issues plus 51 selected on 1 August. The
+remaining \textbf{113 were classified by rule} from MeSH terms, author keywords, title and
+abstract, then reviewed record by record; \textbf{43 of the 113 auto-assignments were
+corrected} on that review, which is a 38\% correction rate and the honest measure of how
+far a keyword classifier gets you here. Auto-classified records carry
+\texttt{auto: true} in \texttt{state/corpus/2026-07-26.json} and are all tier C. Their
+subtopic and design labels should be treated as indicative; their titles, journals and
+DOIs are exact.
 \\[1.0mm]
 The daily-trend panel is labelled a harvest diagnostic for the same reason: the 26 July
 bar is one batch, not one day. Records were deduplicated against

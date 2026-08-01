@@ -23,3 +23,5 @@
 {"date": "2026-08-01", "pmid": "42533651", "doi": "10.3760/cma.j.cn121094-20250408-00135", "title": "Push-pull ventilation control of nitrogen tetroxide", "reason": "gaseous contaminant control engineering; no particulate endpoint"}
 {"date": "2026-08-01", "pmid": "42536910", "doi": "10.21149/18196", "title": "Tobacco cessation indicators, Encodat 2025, Mexico", "reason": "smoking-behaviour survey; secondhand smoke only, out of scope"}
 {"date": "2026-08-01", "pmid": "42533045", "doi": "10.1007/s00109-026-02699-1", "title": "E-cigarette vaping and pro-fibrotic gene expression in kidney and liver", "reason": "engineered propylene-glycol aerosol, not ambient or combustion PM; out of corpus scope"}
+{"date": "2026-07-26", "pmid": "42470540", "reason": "stream sediment / suspended solids geochemistry; water phase, not airborne PM"}
+{"date": "2026-07-26", "pmid": "42470992", "reason": "sorption of antibiotics to dissolved black carbon in water; water phase, not airborne PM"}

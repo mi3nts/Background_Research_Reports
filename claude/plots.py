@@ -9,6 +9,13 @@ from corpus import PAPERS, EFFECTS
 _S, _E = os.environ.get("PMRW_START"), os.environ.get("PMRW_END")
 PERIODWORD = ("this period" if (_S and _E) else "today")
 PERIODWORD_OF = ("the period" if (_S and _E) else "today")
+# Rollups pool an order of magnitude more records than a daily issue. Figures sized for
+# 11-18 records collapse into unreadable label soup at 270, so every canvas and every
+# font scales up when a date range is set.
+BIG = bool(_S and _E)
+FS  = (lambda x: round(x * 1.35, 1)) if BIG else (lambda x: x)
+SZ  = (lambda w, h: (w * 1.30, h * 1.55)) if BIG else (lambda w, h: (w, h))
+
 
 try:
     from corpus import LIFECOURSE
@@ -52,11 +59,11 @@ SUBCOL = {
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans",
-    "font.size": 9,
+    "font.size": 9 * (1.3 if BIG else 1.0),
     "axes.edgecolor": SLATE,
     "axes.labelcolor": INK,
     "axes.titlecolor": INK,
-    "axes.titlesize": 10.5,
+    "axes.titlesize": 10.5 * (1.3 if BIG else 1.0),
     "axes.titleweight": "bold",
     "axes.linewidth": 0.8,
     "xtick.color": SLATE,
@@ -65,6 +72,7 @@ plt.rcParams.update({
     "figure.facecolor": PAPER,
     "axes.facecolor": PAPER,
     "savefig.facecolor": PAPER,
+    "savefig.dpi": 240 if BIG else 200,
     "legend.frameon": False,
 })
 
@@ -83,13 +91,13 @@ labels = [k for k, _ in items][::-1]
 vals   = [v for _, v in items][::-1]
 cols   = [SUBCOL.get(k, SLATE) for k in labels]
 
-fig, ax = plt.subplots(figsize=(7.4, 3.5))
+fig, ax = plt.subplots(figsize=SZ(7.4, 3.5))
 y = np.arange(len(labels))
 ax.barh(y, vals, color=cols, height=0.66, zorder=3)
 for yi, v in zip(y, vals):
-    ax.text(v + 0.13, yi, str(v), va="center", ha="left", fontsize=9,
+    ax.text(v + 0.13, yi, str(v), va="center", ha="left", fontsize=FS(9),
             fontweight="bold", color=INK)
-ax.set_yticks(y); ax.set_yticklabels(labels, fontsize=8.6)
+ax.set_yticks(y); ax.set_yticklabels(labels, fontsize=FS(8.6))
 ax.set_xlim(0, max(vals) + 1.1)
 ax.set_xlabel("Number of records")
 ax.set_title("Subtopic distribution of %s corpus" % ("the period's" if (_S and _E) else "today's"))
@@ -156,33 +164,60 @@ def dgrp(d):
 dg = collections.Counter(dgrp(p["design"]) for p in PAPERS)
 dg_items = dg.most_common()
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.0, 4.3),
+# Endpoint labels drifted across issues (Cognitive / Neurological / Neuro-cognitive were
+# all in use). Canonicalise before counting, otherwise a rollup splits one endpoint across
+# three bars and the tail becomes unreadable. This is label normalisation only - no record
+# changes subtopic.
+ENDPOINT_CANON = {
+    "Cognitive": "Neuro / cognitive", "Neurological": "Neuro / cognitive",
+    "Mental health": "Neuro / mental health", "Neuro / behaviour": "Neuro / mental health",
+    "Respiratory / allergic": "Respiratory", "Respiratory infection": "Respiratory",
+    "Allergy": "Respiratory",
+    "Oncological": "Oncologic", "Carcinogenic risk": "Oncologic",
+    "None (monitoring)": "No health endpoint", "Not applicable": "No health endpoint",
+    "Monitoring capacity": "No health endpoint", "Aerosol chemistry": "No health endpoint",
+    "Source / policy": "No health endpoint", "Emissions / policy": "No health endpoint",
+    "Hepatic / metabolic": "Metabolic",
+    "Renal": "Other clinical", "Gastrointestinal": "Other clinical",
+    "Ocular": "Other clinical", "Auditory": "Other clinical", "Sleep": "Other clinical",
+    "Oral health": "Other clinical", "Surgical / mortality": "Other clinical",
+    "Developmental / oxidative": "Reproductive", "Placental": "Reproductive",
+    "Endocrine / puberty": "Reproductive",
+    "Infectious surveillance": "Other clinical",
+}
+def canon_ep(e):
+    return ENDPOINT_CANON.get(e, e)
+
+ep = collections.Counter(canon_ep(p["endpoint"]) for p in PAPERS)
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=SZ(9.0, max(4.3, 0.30 * len(ep) + 1.6)),
                                gridspec_kw={"width_ratios": [1.0, 1.0], "wspace": 0.42})
 w = [v for _, v in dg_items]
 lab = [k for k, _ in dg_items]
 wedges, _ = ax1.pie(w, colors=SEQ[:len(w)], startangle=90, radius=0.86,
                     wedgeprops=dict(width=0.36, edgecolor=PAPER, linewidth=1.6))
-ax1.text(0, 0.08, str(sum(w)), ha="center", va="center", fontsize=20,
+ax1.text(0, 0.08, str(sum(w)), ha="center", va="center", fontsize=FS(20),
          fontweight="bold", color=DEEP)
-ax1.text(0, -0.14, "records", ha="center", va="center", fontsize=8.0, color=SLATE)
+ax1.text(0, -0.14, "records", ha="center", va="center", fontsize=FS(8.0), color=SLATE)
 ax1.legend(wedges, [f"{l}  ({v})" for l, v in zip(lab, w)],
-           loc="upper center", bbox_to_anchor=(0.5, -0.02), fontsize=7.0, ncol=2,
+           loc="upper center", bbox_to_anchor=(0.5, -0.02), fontsize=FS(7.0), ncol=2,
            handlelength=1.0, handletextpad=0.5, columnspacing=1.2)
 ax1.set_title("Study architecture", pad=2)
 
-ep = collections.Counter(p["endpoint"] for p in PAPERS)
+
 ep_items = sorted(ep.items(), key=lambda kv: kv[1])
 ax2.barh([k for k, _ in ep_items], [v for _, v in ep_items],
          color=[SEQ[i % len(SEQ)] for i in range(len(ep_items))][::-1],
          height=0.62, zorder=3)
 for i, (_, v) in enumerate(ep_items):
-    ax2.text(v + 0.1, i, str(v), va="center", fontsize=8.4, fontweight="bold", color=INK)
+    ax2.text(v + max(ep.values()) * 0.018, i, str(v), va="center", fontsize=FS(8.4),
+             fontweight="bold", color=INK)
 ax2.set_xlim(0, max(ep.values()) + 1)
 ax2.set_xlabel("Records")
 ax2.set_title("Health endpoint / organ system", pad=2)
 ax2.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax2.set_axisbelow(True)
 despine(ax2, keep=("bottom",)); ax2.tick_params(axis="y", length=0)
-ax2.tick_params(axis="y", labelsize=8.2)
+ax2.tick_params(axis="y", labelsize=FS(8.2))
 save(fig, "f2_design_endpoint.png")
 
 # ---------------------------------------------------------------- 3. PM metric + geography
@@ -219,31 +254,31 @@ geo_group = {
 }
 geo = collections.Counter(geo_group.get(p["geo"], "Global / multi-region") for p in PAPERS)
 
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.4, 3.3),
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=SZ(9.4, 3.9),
                                gridspec_kw={"wspace": 0.46})
 pi = sorted(pmc.items(), key=lambda kv: kv[1])
 ax1.barh([k for k, _ in pi], [v for _, v in pi],
          color=[TEAL, SKY, SAGE, AMBER, CLAY, VIOLET, DEEP][:len(pi)][::-1],
          height=0.6, zorder=3)
 for i, (_, v) in enumerate(pi):
-    ax1.text(v + 0.12, i, str(v), va="center", fontsize=8.4, fontweight="bold")
+    ax1.text(v + max(pmc.values()) * 0.018, i, str(v), va="center", fontsize=FS(8.4), fontweight="bold")
 ax1.set_xlim(0, max(pmc.values()) + 1.2)
 ax1.set_title("Particle metric under study", pad=8)
 ax1.set_xlabel("Records")
 ax1.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax1.set_axisbelow(True)
-despine(ax1, keep=("bottom",)); ax1.tick_params(axis="y", length=0, labelsize=8.2)
+despine(ax1, keep=("bottom",)); ax1.tick_params(axis="y", length=0, labelsize=FS(8.2))
 
 gi = sorted(geo.items(), key=lambda kv: kv[1])
 ax2.barh([k for k, _ in gi], [v for _, v in gi],
          color=[DEEP, TEAL, SKY, SAGE, AMBER, CLAY, CORAL, VIOLET][:len(gi)][::-1],
          height=0.6, zorder=3)
 for i, (_, v) in enumerate(gi):
-    ax2.text(v + 0.12, i, str(v), va="center", fontsize=8.4, fontweight="bold")
+    ax2.text(v + max(geo.values()) * 0.018, i, str(v), va="center", fontsize=FS(8.4), fontweight="bold")
 ax2.set_xlim(0, max(geo.values()) + 1.2)
 ax2.set_title("Geographic provenance of evidence", pad=8)
 ax2.set_xlabel("Records")
 ax2.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax2.set_axisbelow(True)
-despine(ax2, keep=("bottom",)); ax2.tick_params(axis="y", length=0, labelsize=8.2)
+despine(ax2, keep=("bottom",)); ax2.tick_params(axis="y", length=0, labelsize=FS(8.2))
 save(fig, "f3_metric_geography.png")
 
 # ---------------------------------------------------------------- 4. subtopic x design heatmap
@@ -256,14 +291,14 @@ for p in PAPERS:
 from matplotlib.colors import LinearSegmentedColormap
 cmap = LinearSegmentedColormap.from_list("pm", [PAPER, "#BFD8DD", SKY, TEAL, DEEP])
 
-fig, ax = plt.subplots(figsize=(7.8, 4.2))
+fig, ax = plt.subplots(figsize=SZ(7.8, 4.6))
 im = ax.imshow(M, cmap=cmap, aspect="auto", vmin=0, vmax=max(3, M.max()))
-ax.set_xticks(range(len(dgs))); ax.set_xticklabels(dgs, rotation=32, ha="right", fontsize=7.8)
-ax.set_yticks(range(len(subs))); ax.set_yticklabels(subs, fontsize=8.2)
+ax.set_xticks(range(len(dgs))); ax.set_xticklabels(dgs, rotation=32, ha="right", fontsize=FS(7.8))
+ax.set_yticks(range(len(subs))); ax.set_yticklabels(subs, fontsize=FS(8.2))
 for i in range(len(subs)):
     for j in range(len(dgs)):
         if M[i, j] > 0:
-            ax.text(j, i, int(M[i, j]), ha="center", va="center", fontsize=8.6,
+            ax.text(j, i, int(M[i, j]), ha="center", va="center", fontsize=FS(8.6),
                     fontweight="bold", color=PAPER if M[i, j] >= 2 else INK)
 ax.set_xticks(np.arange(-.5, len(dgs), 1), minor=True)
 ax.set_yticks(np.arange(-.5, len(subs), 1), minor=True)
@@ -272,64 +307,76 @@ ax.tick_params(which="minor", length=0); ax.tick_params(length=0)
 for s in ax.spines.values(): s.set_visible(False)
 ax.set_title("Where the work is happening: subtopic x study architecture", pad=10)
 cb = fig.colorbar(im, ax=ax, fraction=0.024, pad=0.02)
-cb.outline.set_visible(False); cb.ax.tick_params(length=0, labelsize=7.5)
+cb.outline.set_visible(False); cb.ax.tick_params(length=0, labelsize=FS(7.5))
 save(fig, "f4_heatmap.png")
 
 # ---------------------------------------------------------------- 5. forest plot
-E = sorted(EFFECTS, key=lambda d: d["est"])
-# Height must scale with the number of estimates: at 54 pooled estimates a fixed
-# 4.6in canvas collapsed every y-label into an unreadable smear (caught proofing
-# the July monthly). ~0.26in per row keeps two-line labels legible.
-_fh = 4.6 if len(E) <= 14 else min(4.6 + 0.26 * (len(E) - 14), 15.5)
-_fs = 7.4 if len(E) <= 20 else 6.2
-fig, ax = plt.subplots(figsize=(8.0, _fh))
-y = np.arange(len(E))
+# At 62 pooled estimates a single panel is unreadable however tall it gets, because the
+# page caps its height. Split into equal panels of <=32 rows, each rendered on its own
+# page by the document. Daily issues (few estimates) still get exactly one panel.
+_ALL = sorted(EFFECTS, key=lambda d: d["est"])
+_MAXROWS = 32 if (_S and _E) else 999
+_CHUNKS = [_ALL[i:i + _MAXROWS] for i in range(0, len(_ALL), _MAXROWS)] or [[]]
+
 colmap = collections.defaultdict(lambda: SLATE, {"HR": TEAL, "OR": CLAY, "IRR": VIOLET,
           "RR-equiv": SAGE, "RR": SAGE, "beta": SKY, "%": AMBER, "r": DEEP})
 def _hasci(e):
     return e.get("lo") is not None and e.get("hi") is not None and e["hi"] > e["lo"]
 
-for i, e in enumerate(E):
-    c = colmap[e["metric"]]
-    if _hasci(e):
-        ax.plot([e["lo"], e["hi"]], [i, i], color=c, lw=2.0, solid_capstyle="round", zorder=3)
-        ax.plot([e["lo"], e["lo"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
-        ax.plot([e["hi"], e["hi"]], [i - .16, i + .16], color=c, lw=1.4, zorder=3)
-    ax.scatter([e["est"]], [i], s=46, color=c, zorder=4,
-               edgecolor=PAPER, linewidth=1.0)
-    _lbl = (f"{e['est']:.4g} ({e['lo']:.4g}–{e['hi']:.4g})" if _hasci(e)
-            else f"{e['est']:.4g} (no CI reported)")
-    ax.text(1.025, i, _lbl,
-            transform=ax.get_yaxis_transform(which="grid"),
-            fontsize=_fs, va="center", ha="left", color=SLATE, family="monospace")
-ax.axvline(1.0, color=CORAL, lw=1.1, ls="--", zorder=2)
-ax.set_xscale("log")
-_lo = min([e["lo"] for e in E if e.get("lo") is not None]
-          + [e["est"] for e in E] + [1.0])
-_hi = max([e["hi"] for e in E if e.get("hi") is not None]
-          + [e["est"] for e in E] + [1.0])
-_pad = (_hi / _lo) ** 0.10
-ax.set_xlim(_lo / _pad, _hi * _pad)
-_cand = [0.5, 0.8, 0.9, 0.95, 1.0, 1.02, 1.04, 1.05, 1.06, 1.08, 1.1, 1.15,
-         1.25, 1.5, 2, 3, 5, 9]
-_tk = [t for t in _cand if _lo / _pad <= t <= _hi * _pad]
-if len(_tk) > 9:
-    _tk = [t for t in _tk if t in (1.0, 1.05, 1.1, 1.25, 1.5, 2, 3, 5, 9)]
-ax.set_xticks(_tk)
-ax.set_xticklabels([("%g" % t) for t in _tk])
-ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
-ax.set_yticks(y)
-ax.set_yticklabels([f"{e['label']}\n{e['exposure']} - {e['src']}" for e in E], fontsize=_fs)
-ax.set_xlabel("Effect estimate (log scale); dashed line = null")
-ax.set_ylim(-0.7, len(E) - 0.3)
-ax.set_title("Quantitative associations reported in %s corpus" % ("the period's" if (_S and _E) else "today's"), pad=10)
-ax.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax.set_axisbelow(True)
-despine(ax, keep=("bottom",)); ax.tick_params(axis="y", length=0)
-_used = [m for m in dict.fromkeys(e["metric"] for e in E)]
-handles = [plt.Line2D([], [], color=colmap[m], lw=2.4, label=m) for m in _used]
-ax.legend(handles=handles, loc="lower right", fontsize=7.6, ncol=max(1, len(handles)),
-          bbox_to_anchor=(1.0, -0.22 * (4.6 / _fh)))
-save(fig, "f5_forest.png")
+# a common x-range across panels so the eye can compare them
+_glo = min([e["lo"] for e in _ALL if e.get("lo") is not None] + [e["est"] for e in _ALL] + [1.0])
+_ghi = max([e["hi"] for e in _ALL if e.get("hi") is not None] + [e["est"] for e in _ALL] + [1.0])
+
+for _ci, E in enumerate(_CHUNKS):
+    if not E:
+        continue
+    _fs = (8.6 if (_S and _E) else (7.4 if len(E) <= 20 else 6.6))
+    # Row pitch has to beat the label height AFTER the page scales the panel to
+    # \linewidth. 0.30in/row rendered at ~11pt of page space for an 8.6pt two-line
+    # label; 0.55 gives ~17pt and is legible.
+    _fh = max(4.6, (0.55 if (_S and _E) else 0.30) * len(E) + 1.9)
+    fig, ax = plt.subplots(figsize=((10.2 if (_S and _E) else 8.0), _fh))
+    y = np.arange(len(E))
+    for i, e in enumerate(E):
+        c = colmap[e["metric"]]
+        if _hasci(e):
+            ax.plot([e["lo"], e["hi"]], [i, i], color=c, lw=2.2, solid_capstyle="round", zorder=3)
+            ax.plot([e["lo"], e["lo"]], [i - .16, i + .16], color=c, lw=1.5, zorder=3)
+            ax.plot([e["hi"], e["hi"]], [i - .16, i + .16], color=c, lw=1.5, zorder=3)
+        ax.scatter([e["est"]], [i], s=52, color=c, zorder=4, edgecolor=PAPER, linewidth=1.0)
+        _lbl = (f"{e['est']:.4g} ({e['lo']:.4g}-{e['hi']:.4g})" if _hasci(e)
+                else f"{e['est']:.4g} (no CI reported)")
+        ax.text(1.025, i, _lbl, transform=ax.get_yaxis_transform(which="grid"),
+                fontsize=_fs, va="center", ha="left", color=SLATE, family="monospace")
+    ax.axvline(1.0, color=CORAL, lw=1.1, ls="--", zorder=2)
+    ax.set_xscale("log")
+    _pad = (_ghi / _glo) ** 0.10
+    ax.set_xlim(_glo / _pad, _ghi * _pad)
+    _cand = [0.5, 0.8, 0.9, 1.0, 1.1, 1.25, 1.5, 2, 3, 5, 9]
+    _tk = [t for t in _cand if _glo / _pad <= t <= _ghi * _pad]
+    ax.set_xticks(_tk); ax.set_xticklabels([("%g" % t) for t in _tk])
+    ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
+    ax.set_yticks(y)
+    def _clip(x, n):
+        x = str(x)
+        return x if len(x) <= n else x[:n - 1].rstrip(" ,;-") + "\u2026"
+    # Long y-labels blow up the figure width under bbox_inches="tight", which then forces
+    # the whole panel to be scaled down to \linewidth and undoes the extra height.
+    ax.set_yticklabels([f"{_clip(e['label'], 46)}\n{_clip(e['exposure'], 26)}  |  "
+                        f"{_clip(e['src'].split(' (')[0], 24)}" for e in E], fontsize=_fs)
+    ax.set_xlabel("Effect estimate (log scale); dashed line = null")
+    ax.set_ylim(-0.7, len(E) - 0.3)
+    _ttl = "Quantitative associations reported in %s corpus" % ("the period's" if (_S and _E) else "today's")
+    if len(_CHUNKS) > 1:
+        _ttl += "  (%d of %d)" % (_ci + 1, len(_CHUNKS))
+    ax.set_title(_ttl, pad=10)
+    ax.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax.set_axisbelow(True)
+    despine(ax, keep=("bottom",)); ax.tick_params(axis="y", length=0)
+    _used = [m for m in dict.fromkeys(e["metric"] for e in E)]
+    handles = [plt.Line2D([], [], color=colmap[m], lw=2.4, label=m) for m in _used]
+    ax.legend(handles=handles, loc="lower right", fontsize=_fs, ncol=max(1, len(handles)),
+              bbox_to_anchor=(1.0, -0.22 * (4.6 / _fh)))
+    save(fig, "f5_forest.png" if _ci == 0 else "f5_forest_%d.png" % (_ci + 1))
 
 # ---------------------------------------------------------------- 6. life-course window strip
 stages = ["Preconception /\nin utero", "Infancy &\nearly childhood", "Puberty &\nadolescence",
@@ -343,7 +390,7 @@ stage_note = ["fetal growth, brain\nstructure, IQ",
 if LIFECOURSE:
     stage_hits = [d["n"] for d in LIFECOURSE]
     stage_note = [d["note"] for d in LIFECOURSE]
-fig, ax = plt.subplots(figsize=(8.4, 2.55))
+fig, ax = plt.subplots(figsize=SZ(8.4, 2.75))
 xs = np.arange(len(stages))
 ax.plot(xs, [0] * len(xs), color=GRID, lw=3, zorder=1, solid_capstyle="round")
 for i, (s, n, note) in enumerate(zip(stages, stage_hits, stage_note)):
@@ -351,13 +398,13 @@ for i, (s, n, note) in enumerate(zip(stages, stage_hits, stage_note)):
     ax.scatter([i], [0], s=120 + 95 * n, color=c, zorder=3,
                edgecolor=PAPER, linewidth=2.0, alpha=0.92)
     ax.text(i, 0, str(n), ha="center", va="center", color=PAPER,
-            fontsize=10, fontweight="bold", zorder=4)
-    ax.text(i, 0.62, s, ha="center", va="bottom", fontsize=8.4, fontweight="bold", color=INK)
-    ax.text(i, -0.62, note, ha="center", va="top", fontsize=7.2, color=SLATE)
+            fontsize=FS(10), fontweight="bold", zorder=4)
+    ax.text(i, 0.62, s, ha="center", va="bottom", fontsize=FS(8.4), fontweight="bold", color=INK)
+    ax.text(i, -0.62, note, ha="center", va="top", fontsize=FS(7.2), color=SLATE)
 ax.set_xlim(-0.55, len(stages) - 0.45); ax.set_ylim(-1.5, 1.35)
 ax.axis("off")
 ax.set_title("Life-course windows addressed %s (records may span several stages)" % PERIODWORD,
-             pad=6, fontsize=10)
+             pad=6, fontsize=FS(10))
 save(fig, "f6_lifecourse.png")
 
 print("figures:", sorted(os.listdir(OUT)))

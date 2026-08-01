@@ -315,3 +315,32 @@ skip if the output file already exists.
   "today" for a 23:00 run means *that day's* entries only. Never publish an issue dated
   later than its newest entry date, and never let a two-day window silently absorb the
   next run's material.
+
+### 2026-08-01d — July monthly expanded to a complete listing, figures rebuilt
+- **The register is now every PM-relevant July record, not a curated sample.** The 1--26 Jul
+  backfill went from 51 selected to **all 164**: abstracts fetched for the remaining 115,
+  rule-classified, then **every one reviewed by hand — 43 of 113 auto-assignments (38%) were
+  corrected**, and 2 were rejected on reading as water-phase chemistry (stream sediment;
+  antibiotic sorption to dissolved black carbon). **July total: 270 records, 62 estimates.**
+  The classifier's own bugs are worth recording: `trial` matched inside *indus**trial***,
+  and atmospheric-chemistry and plant/insect work fell through to "Other clinical endpoints".
+- **Paper-level digest added** (`mkdigest.py`, wired into `--rollup`). Two tiers, visually
+  distinct: 106 records keep their **verbatim** daily summary lifted from the archived
+  issue `.tex`; 164 get an **extractive precis** — the single most quantitative sentence of
+  the abstract, copied, never paraphrased — and 5 with no abstract are listed on metadata.
+  The distinction is stated in the section header, not buried.
+- **Figures rebuilt for legibility at rollup scale** (`BIG`/`FS`/`SZ` in `plots.py`):
+  canvas +30/55%, fonts +35%, dpi 240. Specific fixes: endpoint labels **canonicalised**
+  (Cognitive / Neurological / Neuro-cognitive had drifted into three bars), f2 height now
+  scales with category count, the **forest split across two pages** at 32 rows each with
+  row pitch raised 0.30→0.55 in/row and y-labels clipped (long labels were inflating figure
+  width under `bbox_inches="tight"`, which then scaled the whole panel back down), and each
+  analytics figure gets its own page capped at 0.70--0.78 `\textheight`.
+- **`w1` replaced.** A stacked per-issue bar is meaningless when one "issue" is a 164-record
+  batch and the rest are 11--33-record days — every segment became a stripe. It now plots
+  *what the daily cadence missed*, per subtopic: dailies caught 106, missed 164 (**61%**).
+- Escaping bugs fixed in `mkdigest.esc`: HTML entities were being LaTeX-escaped *before*
+  decoding (`&#x2264;` → `\&\#x2264;`), `<`/`>` were set as raw text, and sub/superscript
+  unicode from PubMed crashed the build with 20 errors. Also made DOIs breakable
+  (`\allowbreak`) and `\precisentry` unbreakable (a minipage) after a stranded DOI page.
+- Final: **46 pp, 0 LaTeX errors, 0 overfull boxes, 0 sparse pages, all 270 DOIs present.**
