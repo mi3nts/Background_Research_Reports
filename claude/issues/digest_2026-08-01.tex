@@ -494,8 +494,10 @@ instrumentation (9 hits, 2 of them not already on the health axis); \textbf{Euro
 \texttt{CREATION\_DATE:[2026-07-31 TO 2026-08-01]} (2 hits, both new); \textbf{arXiv}
 relevance query with a local recency screen (146\,kB of entries, none in window);
 \textbf{OpenAlex} returned HTTP 429 and remains unusable for date-windowed harvesting;
-\textbf{ClinicalTrials.gov} returned no PM or air-pollution registrations or updates in
-the window. \textbf{24 candidates screened, 15 in scope, 9 rejected}, each logged with a
+\textbf{ClinicalTrials.gov} returned one record updated in the window --- NCT05160948,
+personal-monitor result feedback as a behavioural intervention, observational, so no
+endpoint analysis was run --- accumulated to \texttt{state/trials.json} and surfaced in
+the weekly rollup rather than here. \textbf{24 candidates screened, 15 in scope, 9 rejected}, each logged with a
 reason to \texttt{state/rejected.jsonl}. No duplicates against \texttt{state/seen.json}
 (86 PMIDs, 99 DOIs, 95 title signatures at entry).
 \\[1.0mm]

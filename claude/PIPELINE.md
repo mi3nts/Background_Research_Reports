@@ -225,3 +225,32 @@ skip if the output file already exists.
   (2) `--post` archives `build/digest.tex` to tracked `claude/issues/`; (3) all four existing
   issues back-filled into `issues/`. Current state: **0 FAIL, 5 advisory warns** across
   27–30 Jul.
+
+### 2026-08-01
+- Window **2026-07-31 -> 2026-08-01** (two days: 31 Jul was the corrections release and
+  carried no harvest). Hits: PubMed health 13, PubMed instrumentation 9 (2 new),
+  Europe PMC 2 (both new), arXiv 146 kB none in window, OpenAlex HTTP **429** again,
+  ClinicalTrials.gov **1** update. **24 screened, 15 included, 9 rejected**, 0 dupes.
+- Rejections were mostly query recall noise, and are named in the issue rather than
+  hidden: 4 non-particulate occupational/clinical, 3 air-pollution-as-a-mention documents,
+  1 heat-mortality paper with PM as covariate, 1 e-cigarette aerosol study excluded as
+  engineered rather than ambient/combustion PM (**a scope boundary, flagged for review**).
+- **Sensing = 0 for the second consecutive window.** Still the AMT/ACP channel defect
+  logged on 30 Jul, not a real absence. Crossref by-journal `created` feed remains the fix.
+- **`templates/weekly.tex` already existed** (written 29-30 Jul, git-tracked, all 8 rollup
+  sections) — the task-file warning was stale. The real gap was that `run_all.py` had **no
+  rollup path at all**. Added `--rollup {weekly,monthly,yearly}`: idempotent on the output
+  PDF, `mkdir -p`s the cadence dir, derives the period start from the period-end date,
+  runs `plots.py` + `plots_weekly.py` + `mktable.py` under `PMRW_START`/`PMRW_END`, two
+  pdflatex passes, archives to `issues/`, rebuilds the manifest. Never queries an API.
+  Smoke-tested the whole pooled path over 27 Jul–2 Aug: 110 rows, w1 trend figure written,
+  5 issues aggregated. It correctly refuses until `build/weekly.tex` is authored.
+- `plots.py` correctness only: +4 design labels (Proxy validation vs personal exposure,
+  Exposome-wide association, Case-control, Ex vivo perfused organ) and +3 geographies
+  (Taiwan, Czech Republic, Gambia/Kenya/Mozambique) that were silently falling through.
+- `state/trials.json` seeded with its first record (NCT05160948) for the weekly watch.
+  `metrics.csv` rewritten by `update_state.py` — 46 rows, quoting still correct.
+- Proofed all 9 pages as rasters. 0 LaTeX errors, 0 overfull boxes. Two defects caught and
+  fixed before shipping: the f2 caption claimed two "no health endpoint" records against
+  one in the figure (Park is labelled *Microenvironment*), and the provenance box claimed
+  ClinicalTrials.gov returned nothing when it had returned NCT05160948. Reissued.
