@@ -1,0 +1,398 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{31 July 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Coral] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Coral}%
+ MONTHLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ July 2026\;\;\textcolor{Coral}{\textbar}\;\;Entry window 1--31 July 2026\;\;%
+ \textcolor{Coral}{\textbar}\;\;146 records pooled\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{146}{RECORDS POOLED\\(10 SUBTOPICS)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{54}{EFFECT ESTIMATES\\EXTRACTED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{23}{SENSING /\\INSTRUMENTATION}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{44}{RECORDS FROM CHINA\\(30\% OF CORPUS)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{ULTRAFINE /\\NANOSCALE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% ------------------------------------------------------------ signal of month
+\section*{\sffamily\bfseries\color{Deep}Signal of the month}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}July was the month the field stopped treating
+PM$_{2.5}$ mass as the exposure of record. Three independent literatures ---
+ultrafine number, chemical constituents, and unmodelled condensable mass --- each
+put a number on what bulk mass misses.}\\[1.4mm]
+\footnotesize
+Lelieveld et al.\ (\textit{Cardiovasc Res}) built a 1\,km global ultrafine-particle field
+from Earth observation and machine learning, found urban annual means of
+\textbf{10{,}000--30{,}000 particles\,cm$^{-3}$}, and paired it with a pooled cohort
+hazard ratio to estimate \textbf{1.99 (0.81--3.89) million excess deaths per year} ---
+roughly 5\% of non-communicable-disease mortality, about half cardiovascular, with
+\textbf{91\% occurring in urban and suburban environments}. They put an annual limit of
+5{,}000\,cm$^{-3}$ at a \textbf{45\% reduction} in that excess. UFPs are regulated
+almost nowhere and measured by no mass monitor. Su et al.\ (\textit{Environ Sci Technol})
+supplied the second number: industrial \emph{condensable} PM, absent from every
+operational source-apportionment model, contributes a median \textbf{3.6\% (95\% CI
+0.9--14.5\%)} of urban PM$_{2.5}$ in four Chinese cities and \textbf{9.5\% in winter},
+and its omission inflates apparent secondary inorganic aerosol by \textbf{5.6--16.6\%}.
+Easton et al.\ (\textit{Environ Int}) supplied the mechanism: cruise-ship ultrafine PM,
+enriched in vanadium, nickel and cobalt, was markedly more pro-inflammatory than
+same-port PM of other origin \emph{and} suppressed the innate antiviral response,
+increasing epithelial permissiveness to rhinovirus-16 and SARS-CoV-2 --- an effect
+reproduced by vanadium alone. Read together with Zhu et al.\ (29 Jul issue), where
+PM$_{2.5}$ was the \emph{null} term in its own six-pollutant time-series, the month's
+verdict is unambiguous: \textbf{a mass-only monitor is now measuring the wrong quantity
+for a growing fraction of the health signal.}
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed in July}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Sensing was the single largest subtopic of the month (23/146, 16\%), and
+that inverts the picture the daily issues gave.} The 30 July and 1 August issues each
+recorded \emph{zero} sensing records and flagged it as a suspected harvest defect. The
+month proves the defect: instrumentation work was being published throughout July and
+the narrow daily windows simply missed it. No conclusion about the sensing literature
+should be drawn from any single daily issue in this series.
+
+\item \textbf{Low-cost sensors were validated in July with unusual honesty about where
+they fail.} Gharibzadeh et al.\ needed \emph{seasonal} multivariable calibration
+(humidity, temperature, PM$_1$) to reach R$^2$ 0.62--0.93 in Tehran, and reported
+persistent underestimation before it. Ali et al.\ found accuracy collapsing with particle
+size --- \textbf{R$^2$ $\approx$ 0.90--0.95 for PM$_1$ but 0.28--0.68 for PM$_{10}$} ---
+and, critically, that neither the PMS7003 nor the SPS30 captured the dominant
+sub-0.30\,$\mu$m fraction at all. Coefficient of variation exceeded 43\% in the coarse
+bins. The message for network design is that proprietary size-bin conversions should not
+be trusted above 1\,$\mu$m.
+
+\item \textbf{Sensor-plus-satellite fusion produced the month's most striking
+performance number, and it deserves scepticism.} Jung et al.\ reported a 10-fold CV
+\textbf{R$^2$ of 0.98 (RMSE 1.23\,$\mu$g/m$^3$)} for a 250\,m daily PM$_{2.5}$ field over
+Taiwan built from 16{,}795 low-cost sensors plus MAIAC AOD. That is far above the
+0.82 (Singh et al., North-East India) and 0.41--0.80 (Yu et al., Shenzhen sidewalks)
+obtained elsewhere in the same month. With 16{,}795 sensors as both predictor and
+validation target, random 10-fold splits leak spatially; the rolling-origin and spatial
+folds are the numbers to read, not the headline.
+
+\item \textbf{Exposure misclassification moved from caveat to quantified bias.} Zhang
+et al.\ (\textit{Environ Int}) showed nearest-monitor assignment is \emph{systematically
+higher} than both scaled-matched estimates and true personal exposure from outdoor
+sources, for every pollutant tested. Nyoni et al.\ (1 Aug issue) showed road-geometry
+proxies inverting in sign between African countries. Kos Sinhala et al.\ showed in-home
+black carbon driven by open fireplaces and wood stoves rather than ambient concentration.
+Three independent designs, one conclusion: the exposure variable in most published
+epidemiology is not the exposure that occurred.
+
+\item \textbf{Reproductive and developmental evidence consolidated around
+vulnerability, not average effect.} Sieber et al.\ found PM$_{2.5}$ associated with
+\textbf{6\% (95\% CI 0--11\%) higher odds of term low birth weight per 10\,$\mu$g/m$^3$}
+across 1.4 million Spanish births, but maternal education dominated it --- primary versus
+tertiary education carried \textbf{OR 1.76 (1.71--1.82)}. Meeting the WHO 5\,$\mu$g/m$^3$
+guideline would have prevented 2{,}032 (95\% CI $-$74 to 3{,}900) cases over nine years;
+universal tertiary education would have prevented far more. That comparison is the
+uncomfortable and important finding.
+
+\item \textbf{Two well-powered nulls are worth as much as the positives.} Sun et al.\
+found \textbf{no} adverse association between PM$_{2.5}$ and FEV$_1$ decline in US adults
+with cystic fibrosis (+0.002 z-score per 3\,$\mu$g/m$^3$; 95\% CI $-$0.001, 0.005) at a
+mean exposure of 9.1\,$\mu$g/m$^3$. Tien-Smith et al.\ found no clear evidence for
+PM$_{2.5}$ and multiple sclerosis (1.01; 0.77--1.32) or motor neuron disease (1.07;
+0.86--1.33), while confirming Parkinson's disease risk in Asia (1.19; 1.01--1.41).
+Neither is a negative result about air pollution; both are results about where the
+exposure-response function is flat.
+\end{itemize}
+
+\vspace{3mm}
+
+% ==================================================================== FIGURES
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics --- July 2026}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic distribution across all 146 pooled records. All ten subtopics are
+populated --- no daily issue in July achieved that. Sensing, forecasting \&
+instrumentation leads at 23 records, which is the direct refutation of the zero counts
+reported in the 30 July and 1 August daily issues. Assignment is single-label by
+dominant contribution.}
+
+\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Records per issue date by subtopic. \textbf{Read this as a harvest diagnostic,
+not as a time series.} The 26 July bar is the retrospective backfill for 1--26 July
+harvested in a single batch on 1 August; it is not a day's output. Only the 27--30 July
+bars are genuine daily windows. The panel is included because the contrast is the
+point: four narrow daily windows recovered 95 records while one month-wide query
+recovered 51 more that the dailies never saw.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture over the month. Measurement campaigns are the
+largest class (30), ahead of observational cohorts (25), modelling/inventory (22) and
+reviews (22). Only one trial or intervention record appeared in the entire month, which
+is the standing weakness of this evidence base: almost nothing here is experimental in
+humans. Right --- health endpoint distribution.}
+
+\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. PM$_{2.5}$ alone in 75 records and PM$_{2.5}$ with
+PM$_{10}$ in 32; \textbf{ultrafine or nanoscale metrics appear in only 8 records (5\%)}
+despite carrying the month's largest single mortality estimate. That mismatch between
+where the burden is claimed and where the measurement effort goes is the clearest
+instrumentation gap in this corpus. Right --- geography. China supplies 44 records
+(30\%), Europe 22, North America 20; sub-Saharan Africa supplies 4 and Latin America 5.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation over the month. The dense
+Sensing/measurement-campaign and Burden/modelling cells are expected. The informative
+absence is the near-empty trial column across every health subtopic.}
+
+\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{All 54 quantitative effect estimates extracted across July on a common ratio
+axis. \textbf{This is not a meta-analysis and no pooled summary is drawn.} Exposure
+contrasts are not commensurable --- per-IQR, per-5, per-10\,$\mu$g/m$^3$, quartile and
+quintile contrasts, and mixture indices all appear --- and the outcome scale mixes RR,
+OR, aOR and HR across different diseases. \textbf{Heterogeneity is therefore not
+estimable and none is reported}; the one place a pooled figure would be legitimate is
+Tien-Smith et al.'s within-paper neurodegenerative meta-analysis, which is reproduced
+here as three separate points rather than absorbed. The visible structure is that
+per-10\,$\mu$g/m$^3$ PM$_{2.5}$ estimates cluster tightly just above unity (1.02--1.16)
+while the large ratios belong to per-IQR contrasts, mixture indices and gaseous
+co-pollutants.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed across the month. Counts are non-exclusive and
+cover only records with an identifiable human life-course window; \textit{in vitro},
+ex-vivo, animal and pure-instrumentation records are excluded. Adolescence remains the
+thinnest window in the corpus, as it was in every individual daily issue.}
+
+\vspace{4mm}
+
+\section*{\sffamily\bfseries\color{Deep}Emerging, fading, and recurring}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Emerging.} Three themes appeared or firmed up materially this month.
+\textbf{(i) Ultrafine particles as a regulatory object} --- Lelieveld et al.\ and a
+paired \textit{Cardiovasc Res} commentary, Easton et al.'s ship-source toxicology,
+Williams et al.'s hepatic xanthine-oxidoreductase mechanism, Zeng et al.'s microglial
+circRNA work, and Olivares Lopez et al.'s finding that particle-number simulations are
+strongly sensitive to emission-inventory choice all converge in a single month, driven by
+the new EU Ambient Air Quality Directive's particle-number monitoring requirement.
+\textbf{(ii) Compound exposures} --- PM$_{2.5}$ with heat is now a design rather than a
+sensitivity analysis (Yang et al., 610{,}613 OHCAs; Zhang et al., 5.07 million adults).
+\textbf{(iii) Omics as the mediation layer} --- proteomic signatures for type 2 diabetes
+(49{,}134 UK Biobank participants), gut-microbiome mediation of cognition, cord-blood
+extracellular-vesicle miRNA, and placental mtDNA copy number and telomere length.
+
+\vspace{2mm}
+\textbf{Fading.} Nothing can honestly be called fading on one month of data, and the
+backfill/daily imbalance described in the provenance box would manufacture false
+declines if pressed. The single defensible observation is that \textbf{single-pollutant,
+single-endpoint time-series studies now read as the low-information tail} of this corpus:
+several appeared, most were single-city and single-hospital, and the ones that reported a
+PM term alongside gases generally found PM the weakest term in its own model.
+
+\vspace{2mm}
+\textbf{Recurring groups and venues.} No author cluster recurs meaningfully at
+first-author level --- the apparent repeats (Li 5, Zhang 4, Wang 4, Chen 4) are surname
+frequency, not the same investigators, and should not be reported as a cluster. At
+institutional level, Chinese public-health schools (Zhengzhou, Sichuan, Fudan, CUHK) and
+the Barcelona/BiSC and Danish/Nordic cohort infrastructures each contribute repeatedly.
+Venue concentration is modest: \textit{Toxics} (7), \textit{J Environ Sci (China)} (6),
+\textit{Environ Pollut} (5), \textit{Ecotoxicol Environ Saf} (5), \textit{Environ Sci
+Technol} (4), \textit{J Hazard Mater} (4). The month's highest-standing placements were
+\textit{Eur Heart J}, \textit{J Am Coll Cardiol}, \textit{Cardiovasc Res},
+\textit{Environ Health Perspect} (3 records), \textit{Environ Int} (3) and
+\textit{Int J Epidemiol} (2). Citation counts on records days to weeks old are
+uninformative and were not used to rank anything here.
+
+\clearpage
+
+% ------------------------------------------------------------------ trial watch
+\section*{\sffamily\bfseries\color{Deep}Trial registry watch}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+ClinicalTrials.gov returned \textbf{one} PM or air-pollution record registered or
+updated inside the monitored portion of the window: \textbf{NCT05160948}, ``Assessing
+Changes in Knowledge, Behavior, and Attitude Regarding Air Pollution After Receiving
+Personal Air Monitoring Results'' (Cincinnati Children's Hospital Medical Center;
+observational; $n = 105$; completed). No endpoint analysis was run because the study is
+observational rather than interventional. It is nonetheless the single most
+on-topic registry item this watch has seen: it tests whether \emph{returning personal
+monitor data to the participant} changes behaviour, which is the assumption every
+citizen-science and personal-sensing deployment rests on and almost none evaluates.
+
+\vspace{1.5mm}
+Two records in the peer-reviewed corpus function as the interventional evidence the
+registry did not supply. Gonz\'alez-Colom et al.\ (\textit{BMJ Open Respir Res},
+NCT06421402) monitored household air quality with low-cost sensors in 205 adults with
+COPD, asthma or bronchiectasis for two months: \textbf{51.7\% of homes had at least one
+pollutant in an at-risk category, and the burden was overwhelmingly PM$_{2.5}$-driven
+(40.1\% of dwellings at risk)}, with active or passive smoking strongly associated
+($p < 0.001$). \textbf{No relationship was found with hospitalisations or ED visits} ---
+the honest null that a two-month screening window cannot overturn. Bolden et al.\
+reviewed indoor wildfire-smoke mitigation and concluded that portable-air-cleaner
+efficacy is real but too dependent on building envelope and occupant behaviour to
+generalise across the national housing stock. \textbf{The interventional evidence base
+for personal and household PM reduction remains thin, and July did not thicken it.}
+
+\vspace{4mm}
+
+% -------------------------------------------------------------------- open gaps
+\section*{\sffamily\bfseries\color{Deep}Open gaps and read on direction}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Gaps in the literature}\\[1.2mm]
+\footnotesize
+\textbf{(i) Ultrafine measurement does not exist at network scale.} Eight records used an
+ultrafine metric; one of them attributes two million annual deaths to it. There is no
+low-cost particle-number instrument in this corpus with a published field-calibration
+comparable to what Gharibzadeh et al.\ did for PM$_{2.5}$ mass.
+\textbf{(ii) Almost no human intervention studies.} One trial-class record in 146.
+Every causal claim in this month's corpus rests on observational designs with
+modelled exposure.
+\textbf{(iii) Sub-0.3\,$\mu$m is invisible to the deployed sensor base.} Ali et al.\
+state this directly for the two most widely deployed OPC modules; it is also where the
+ultrafine burden lives.
+\textbf{(iv) Geographic imbalance is severe.} 44 records from China against 4 from
+sub-Saharan Africa, in a month whose most methodologically important exposure paper
+(Nyoni et al.) is precisely about African settings where the standard proxies fail.
+\end{keybox}
+
+\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Gaps this pipeline creates}\\[1.2mm]
+\footnotesize
+\textbf{(i) No date-windowed channel into \textit{Atmos.\ Meas.\ Tech.} or
+\textit{Atmos.\ Chem.\ Phys.}} PubMed does not index them, the Consensus connector has
+no entry-date filter, and OpenAlex date filtering now returns 403/429. Every
+instrumentation record in this issue reached the corpus through a
+biomedically-indexed journal, so the pure atmospheric-measurement literature is
+\emph{still} absent even at 23 sensing records. The fix remains a Crossref by-journal
+feed keyed on \texttt{created} for AMT (1867-8548) and ACP (1680-7324).
+\textbf{(ii) Narrow daily windows systematically under-recover.} Demonstrated
+quantitatively this month: the sensing subtopic read 0, 0, 1 and 6 across four
+consecutive daily issues, against 23 for the month.
+\textbf{(iii) The 1--26 July backfill is classification-depth only.} Effect estimates
+were extracted for that batch only where the abstract reported an interval; a genuine
+daily cadence would have captured more.
+\end{keybox}
+
+\vspace{3mm}
+
+\footnotesize
+\textbf{Read on direction.} The field is moving from \emph{mass} to \emph{composition and
+number}, and the instrumentation base has not moved with it. July produced a
+two-million-death annual estimate for a pollutant metric that no regulatory network
+measures and no validated low-cost sensor reports; simultaneously it produced careful
+evidence that the deployed optical sensor base cannot see below 0.3\,$\mu$m and degrades
+badly above 1\,$\mu$m. That gap is the most fundable problem visible in this corpus, and
+it is an instrumentation problem before it is an epidemiological one. \textbf{The
+falsifiable prediction: within the next two monthly issues, expect at least one
+field-calibration study of a low-cost particle-number or black-carbon sensor against a
+CPC or aethalometer reference, framed explicitly against the new EU particle-number
+monitoring requirement.} If that does not appear by the September issue, the
+measurement community is lagging the epidemiology by more than the usual cycle, and the
+right inference is that the bottleneck is hardware cost rather than research attention.
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register --- July 2026}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method --- read this before
+citing any count above}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+\textbf{This issue breaks the standing rollup contract, deliberately and on request.}
+Rollups in this series normally aggregate previously published daily issues and never
+re-query an API. Daily coverage of July exists only for 27--30 July, so the 1--26 July
+portion of this corpus was \textbf{harvested independently on 1 August 2026} and had
+never appeared in any daily issue. Sources for that backfill: \textbf{PubMed}
+E-utilities on the \texttt{[Date - Entry]} field, 2026/07/01--2026/07/26, along two
+independent axes --- health (352 records) and instrumentation (53) --- giving 368 unique
+records after merge, of which 22 were already in \texttt{state/seen.json} from the daily
+issues and were dropped, 166 passed a PM-relevance title screen, and \textbf{51 were
+selected for full classification} on the basis of journal standing, methodological
+weight and subtopic coverage. Those 51 are written to
+\texttt{state/corpus/2026-07-26.json} with \texttt{backfill: true} and an
+\texttt{entry\_window} recording the retrospective harvest.
+\\[1.0mm]
+\textbf{The consequence for every count in this issue, stated plainly:} the month's 146
+records are \textbf{not} a complete census of July. They are 95 records from four
+exhaustively-screened daily windows plus 51 selected from 166 eligible records across
+the remaining 26 days. \textbf{The 1--26 July portion is therefore a curated sample, not
+a census, and subtopic proportions for that period are biased toward what was selected.}
+Specifically, sensing and exposure work was preferentially retained because it is the
+reader's primary field. The 23-record sensing count is a \emph{floor}, not an estimate,
+and the correct reading of the headline finding is that sensing output in July was
+\emph{at least} 23 records and certainly more --- which strengthens rather than weakens
+the conclusion that the daily windows were under-recovering. No proportion in this issue
+should be quoted as a July prevalence.
+\\[1.0mm]
+The daily-trend panel is labelled a harvest diagnostic for the same reason: the 26 July
+bar is one batch, not one day. Records were deduplicated against
+\texttt{state/seen.json} on PMID, lowercased DOI and title signature before any
+summarisation, so no record appears twice across the daily issues and the backfill.
+Effect estimates were transcribed verbatim from abstracts and only where an interval was
+reported; 54 qualified. Subtopic, design, particle-metric and geography labels are
+single-label judgements from title, abstract, keywords and MeSH terms, not a controlled
+vocabulary. Two records fetched without abstracts (\textit{Am J Epidemiol} PMID 42429684;
+\textit{J Am Coll Cardiol} PMID 42455106) were \textbf{excluded rather than summarised
+from their titles}, despite the JACC piece being directly on this issue's theme. DOIs
+carry through from PubMed's own record. Content derived from PubMed, Europe PMC and
+ClinicalTrials.gov metadata; abstracts remain the copyright of their respective
+publishers.\par}
+\end{keybox}
+
+\end{document}

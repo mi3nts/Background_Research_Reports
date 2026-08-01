@@ -254,3 +254,30 @@ skip if the output file already exists.
   fixed before shipping: the f2 caption claimed two "no health endpoint" records against
   one in the figure (Park is labelled *Microenvironment*), and the provenance box claimed
   ClinicalTrials.gov returned nothing when it had returned NCT05160948. Reissued.
+
+### 2026-08-01b — July monthly (user-requested; breaks the rollup contract deliberately)
+- Daily coverage of July existed only for 27--30 Jul, so **1--26 Jul was harvested fresh**
+  rather than aggregated: PubMed `[EDAT]` 2026/07/01--07/26, health 352 + instrumentation 53
+  = 368 unique, 22 already in `seen.json`, **166 passed a PM-relevance title screen, 51
+  selected** for full classification into `state/corpus/2026-07-26.json` (`backfill: true`).
+  Pooled month = **146 records, 54 effect estimates, all 10 subtopics**.
+  Output: `Reports/monthly/PM-Research-Watch-Monthly_2026-07-31.pdf` (14 pp), dated to the
+  31st per request rather than the last-Sunday convention.
+- **The month refutes the daily Sensing=0 finding.** Sensing is the *largest* subtopic at
+  23/146 against 0, 0, 1 and 6 in four consecutive daily issues. The narrow daily windows
+  were under-recovering; this is now measured, not suspected. The 23 is a floor, not a
+  prevalence — the backfill was a curated sample and preferentially retained sensing work,
+  which is stated in the issue's provenance box.
+- `update_state.py 2026-07-26` **regressed `last_entry_date` to 2026-07-26**; restored to
+  2026-08-01 by hand. Any future backfill must restore the frontier or the next harvest
+  will re-scan a month. Worth a guard in `update_state.py`.
+- Three correctness fixes, no redesign. (1) `corpus.py` now **pools `LIFECOURSE` over a
+  date range** (`_lifecourse_range`) — previously a rollup silently fell back to one
+  issue's annotations, so the July f6 was showing 27 Jul's life-course data under a caption
+  claiming the month. (2) `plots.py` figure titles are period-aware ("the period's" vs
+  "today's") instead of hardcoding "today". (3) **`f5` forest height now scales with N** —
+  at 54 estimates the fixed 4.6in canvas collapsed every label into an unreadable smear;
+  now ~0.26in/row to a 15.5in cap with a smaller font above 20 estimates.
+- Also fixed while proofing: an orphan page where the exec brief spilled two lines before a
+  `\clearpage` (same defect class as 30 Jul). Proofed all 14 pages; 0 errors, 0 overfull.
+- `templates/monthly.tex` created from the shipped July issue as the exemplar.

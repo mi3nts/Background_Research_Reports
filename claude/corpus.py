@@ -87,4 +87,46 @@ def _lifecourse(date=None):
         return None
     return json.load(open(p)).get("LIFECOURSE")
 
-LIFECOURSE = None if (_start and _end) else _lifecourse(_date)
+def _lifecourse_range(start, end):
+    """Pooled life-course counts over a date range. Sums the per-stage n and merges
+    the per-stage notes, so a rollup figure describes the period rather than
+    silently reusing one issue's annotations. Notes from issues that contributed
+    no records to a stage are dropped, and wrapping is on word boundaries."""
+    stages, notes = None, None
+    for ds in available_dates():
+        if not (start <= ds <= end):
+            continue
+        lc = _lifecourse(ds)
+        if not lc:
+            continue
+        if stages is None:
+            stages = [0] * len(lc); notes = [[] for _ in lc]
+        for i, cell in enumerate(lc[:len(stages)]):
+            n = cell.get("n", 0)
+            stages[i] += n
+            if not n:                     # an empty stage has nothing to describe
+                continue
+            head = (cell.get("note") or "").split(":")[-1].replace("\n", " ")
+            head = " ".join(head.split()).strip(" ;,")
+            for part in (x.strip() for x in head.split(",")):
+                if part and part not in notes[i] and len(notes[i]) < 5:
+                    notes[i].append(part)
+
+    def wrap(txt, width=26):
+        out, line = [], ""
+        for w in txt.split():
+            if len(line) + len(w) + 1 > width:
+                out.append(line); line = w
+            else:
+                line = (line + " " + w).strip()
+        if line:
+            out.append(line)
+        return "\n".join(out[:4])
+
+    if stages is None:
+        return None
+    return [{"n": n, "note": wrap(", ".join(ns)) if ns else "no record\nthis period"}
+            for n, ns in zip(stages, notes)]
+
+
+LIFECOURSE = _lifecourse_range(_start, _end) if (_start and _end) else _lifecourse(_date)

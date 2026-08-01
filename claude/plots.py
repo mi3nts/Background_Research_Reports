@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Rectangle
 from corpus import PAPERS, EFFECTS
+_S, _E = os.environ.get("PMRW_START"), os.environ.get("PMRW_END")
+PERIODWORD = ("this period" if (_S and _E) else "today")
+PERIODWORD_OF = ("the period" if (_S and _E) else "today")
+
 try:
     from corpus import LIFECOURSE
 except ImportError:
@@ -88,7 +92,7 @@ for yi, v in zip(y, vals):
 ax.set_yticks(y); ax.set_yticklabels(labels, fontsize=8.6)
 ax.set_xlim(0, max(vals) + 1.1)
 ax.set_xlabel("Number of records")
-ax.set_title("Subtopic distribution of today's corpus")
+ax.set_title("Subtopic distribution of %s corpus" % ("the period's" if (_S and _E) else "today's"))
 ax.xaxis.grid(True, color=GRID, lw=0.7, zorder=0)
 ax.set_axisbelow(True)
 despine(ax, keep=("bottom",))
@@ -144,6 +148,8 @@ design_group = {
     "Exposome-wide association": "Observational - cross-sectional",
     "Case-control": "Observational - cross-sectional",
     "Ex vivo perfused organ": "Experimental / toxicology",
+    "Satellite retrieval evaluation": "Modelling / inventory",
+    "Chemical transport model": "Modelling / inventory",
 }
 def dgrp(d):
     return design_group.get(d, "Other / mixed")
@@ -208,6 +214,8 @@ geo_group = {
     "Kazakhstan": "Central Asia", "Greece": "Europe", "Bulgaria": "Europe",
     "Norway": "Europe", "Taiwan": "East Asia (ex-China)",
     "Czech Republic": "Europe", "The Gambia / Kenya / Mozambique": "Sub-Saharan Africa",
+    "Iran": "Middle East & N. Africa", "France": "Europe", "Italy": "Europe",
+    "Denmark": "Europe", "Europe": "Europe", "Kenya": "Sub-Saharan Africa",
 }
 geo = collections.Counter(geo_group.get(p["geo"], "Global / multi-region") for p in PAPERS)
 
@@ -269,7 +277,12 @@ save(fig, "f4_heatmap.png")
 
 # ---------------------------------------------------------------- 5. forest plot
 E = sorted(EFFECTS, key=lambda d: d["est"])
-fig, ax = plt.subplots(figsize=(8.0, 4.6))
+# Height must scale with the number of estimates: at 54 pooled estimates a fixed
+# 4.6in canvas collapsed every y-label into an unreadable smear (caught proofing
+# the July monthly). ~0.26in per row keeps two-line labels legible.
+_fh = 4.6 if len(E) <= 14 else min(4.6 + 0.26 * (len(E) - 14), 15.5)
+_fs = 7.4 if len(E) <= 20 else 6.2
+fig, ax = plt.subplots(figsize=(8.0, _fh))
 y = np.arange(len(E))
 colmap = collections.defaultdict(lambda: SLATE, {"HR": TEAL, "OR": CLAY, "IRR": VIOLET,
           "RR-equiv": SAGE, "RR": SAGE, "beta": SKY, "%": AMBER, "r": DEEP})
@@ -288,7 +301,7 @@ for i, e in enumerate(E):
             else f"{e['est']:.4g} (no CI reported)")
     ax.text(1.025, i, _lbl,
             transform=ax.get_yaxis_transform(which="grid"),
-            fontsize=7.6, va="center", ha="left", color=SLATE, family="monospace")
+            fontsize=_fs, va="center", ha="left", color=SLATE, family="monospace")
 ax.axvline(1.0, color=CORAL, lw=1.1, ls="--", zorder=2)
 ax.set_xscale("log")
 _lo = min([e["lo"] for e in E if e.get("lo") is not None]
@@ -306,16 +319,16 @@ ax.set_xticks(_tk)
 ax.set_xticklabels([("%g" % t) for t in _tk])
 ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
 ax.set_yticks(y)
-ax.set_yticklabels([f"{e['label']}\n{e['exposure']} - {e['src']}" for e in E], fontsize=7.4)
+ax.set_yticklabels([f"{e['label']}\n{e['exposure']} - {e['src']}" for e in E], fontsize=_fs)
 ax.set_xlabel("Effect estimate (log scale); dashed line = null")
 ax.set_ylim(-0.7, len(E) - 0.3)
-ax.set_title("Quantitative associations reported in today's corpus", pad=10)
+ax.set_title("Quantitative associations reported in %s corpus" % ("the period's" if (_S and _E) else "today's"), pad=10)
 ax.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax.set_axisbelow(True)
 despine(ax, keep=("bottom",)); ax.tick_params(axis="y", length=0)
 _used = [m for m in dict.fromkeys(e["metric"] for e in E)]
 handles = [plt.Line2D([], [], color=colmap[m], lw=2.4, label=m) for m in _used]
 ax.legend(handles=handles, loc="lower right", fontsize=7.6, ncol=max(1, len(handles)),
-          bbox_to_anchor=(1.0, -0.22))
+          bbox_to_anchor=(1.0, -0.22 * (4.6 / _fh)))
 save(fig, "f5_forest.png")
 
 # ---------------------------------------------------------------- 6. life-course window strip
@@ -343,7 +356,7 @@ for i, (s, n, note) in enumerate(zip(stages, stage_hits, stage_note)):
     ax.text(i, -0.62, note, ha="center", va="top", fontsize=7.2, color=SLATE)
 ax.set_xlim(-0.55, len(stages) - 0.45); ax.set_ylim(-1.5, 1.35)
 ax.axis("off")
-ax.set_title("Life-course windows addressed today (records may span several stages)",
+ax.set_title("Life-course windows addressed %s (records may span several stages)" % PERIODWORD,
              pad=6, fontsize=10)
 save(fig, "f6_lifecourse.png")
 
