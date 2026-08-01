@@ -288,3 +288,30 @@ skip if the output file already exists.
   against `metrics.csv` and the issue reissued before the run closed. Lesson worth keeping:
   **derive any cross-issue count from `metrics.csv`, never from memory of the prose** ---
   the headline (23 for the month vs 11 across the dailies) survives and is still decisive.
+
+### 2026-08-01c — scheduling correction: the daily is re-cut as the **31 July** issue
+- **Defect.** The 1 Aug run harvested a two-day window (31 Jul--1 Aug) because 31 Jul had
+  been a corrections release, and published the result as the **1 August** issue. Wrong on
+  both counts: papers entering PubMed on 1 Aug belong to the 1 Aug 23:00 run, and 31 July
+  was left with no report at all.
+- **Fix.** Every record's PubMed `entrez` entry date was fetched and the window re-cut:
+  **9 records EDAT 2026-07-31**, **4 records EDAT 2026-08-01**, 2 Europe PMC records with
+  earlier PubMed EDATs (Knapova 8 Jul, Balu 21 Jul) that only the EPMC `CREATION_DATE`
+  window surfaced. The 2 EPMC records are dated to the 31 Jul issue and the non-uniform
+  window is stated in the issue rather than hidden. Result: **11-record 31 July issue**,
+  8 effect estimates, 8 pp, 0 overfull. Every retained summary is byte-identical to its
+  original text --- entries were extracted verbatim from `issues/digest_2026-08-01.tex`,
+  not re-authored.
+- The 4 deferred records were **removed from `state/seen.json`** (12 keys) so tonight's run
+  re-finds them, and stashed to `state/deferred_2026-08-01.json` for reconciliation.
+  `last_entry_date` is back to **2026-07-31**, so the 23:00 window is 2026-08-01 alone.
+- `Reports/daily/PM-Research-Watch_2026-08-01.pdf` withdrawn (moved to `build/trash/`),
+  manifest rebuilt: dailies now 27--31 July, contiguous, no 1 Aug entry.
+- **The July monthly was rebuilt** because it now contains the 31 July issue:
+  146 -> **157 records**, 54 -> **62 effect estimates**, China 44 -> 49, and the sensing
+  series is now wholly inside July (2, 2, 6, 1, 0 on 27--31 July, 11 total against 23 for
+  the month). All dependent counts in the monthly prose and captions were updated.
+- **Rule to carry forward:** a daily issue's window is `last_entry_date + 1 -> today`, but
+  "today" for a 23:00 run means *that day's* entries only. Never publish an issue dated
+  later than its newest entry date, and never let a two-day window silently absorb the
+  next run's material.

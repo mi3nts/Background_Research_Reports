@@ -1,6 +1,6 @@
 {
- "date": "2026-08-01",
- "entry_window": "2026-07-31 -> 2026-08-01 (PubMed [EDAT]); Europe PMC CREATION_DATE 2026-07-31..08-01",
+ "date": "2026-07-31",
+ "entry_window": "2026-07-31 (PubMed [EDAT]); Europe PMC CREATION_DATE 2026-07-31. Records with PubMed entry date 2026-08-01 are held for the 1 August issue.",
  "PAPERS": [
   {
    "pmid": "42534776",
@@ -42,62 +42,6 @@
    "geo": "China",
    "endpoint": "Mortality / longevity",
    "n": "1 km daily grid, 2015-2024, national",
-   "tier": "A"
-  },
-  {
-   "pmid": "42537809",
-   "short": "Zhang et al. 2026",
-   "doi": "10.1016/j.neuro.2026.103539",
-   "title": "Association of PM2.5 and its components with cognitive dysfunction among rural older adults",
-   "journal": "Neurotoxicology",
-   "sub": "Neuro / mental health",
-   "design": "Cross-sectional (multistage)",
-   "pm": "PM2.5 components (BC, OM, NH4, SO4, NO3)",
-   "geo": "China",
-   "endpoint": "Neuro / cognitive",
-   "n": "14,379 adults aged 60+ (Henan Rural Cohort)",
-   "tier": "A"
-  },
-  {
-   "pmid": "42538457",
-   "short": "Daoud et al. 2026",
-   "doi": "10.1007/s11356-026-38089-w",
-   "title": "Air pollution and suicide mortality in the UK: implications for environmental and mental health policy",
-   "journal": "Environ Sci Pollut Res Int",
-   "sub": "Neuro / mental health",
-   "design": "Ecological panel",
-   "pm": "PM2.5",
-   "geo": "UK",
-   "endpoint": "Neuro / mental health",
-   "n": ">2,200 local authority-year observations, 2015-2023",
-   "tier": "C"
-  },
-  {
-   "pmid": "42537557",
-   "short": "Bello et al. 2026",
-   "doi": "10.1016/j.ehb.2026.101631",
-   "title": "Prenatal exposure to PM2.5 and infant health: evidence from Quebec",
-   "journal": "Econ Hum Biol",
-   "sub": "Reproductive & developmental",
-   "design": "Registry cohort + geospatial",
-   "pm": "PM2.5",
-   "geo": "Canada",
-   "endpoint": "Neurodevelopment",
-   "n": "Administrative birth records, Quebec 2008-2015",
-   "tier": "A"
-  },
-  {
-   "pmid": "42538170",
-   "short": "Pai et al. 2026",
-   "doi": "10.1016/j.pedneo.2026.06.003",
-   "title": "Household incense burning and small for gestational age risk in newborn infants",
-   "journal": "Pediatr Neonatol",
-   "sub": "Reproductive & developmental",
-   "design": "Prospective cohort",
-   "pm": "Incense PM (indoor, unspeciated)",
-   "geo": "Taiwan",
-   "endpoint": "Reproductive",
-   "n": "18,666 mother-infant pairs (Taiwan Birth Cohort)",
    "tier": "A"
   },
   {
@@ -269,24 +213,6 @@
    "src": "Yue 2026 (Front Public Health)"
   },
   {
-   "label": "SGA at term, daily incense",
-   "exposure": "vs no exposure",
-   "est": 1.25,
-   "lo": 1.1,
-   "hi": 1.41,
-   "metric": "aOR",
-   "src": "Pai 2026 (Pediatr Neonatol)"
-  },
-  {
-   "label": "SGA at term, occasional incense",
-   "exposure": "vs no exposure",
-   "est": 1.16,
-   "lo": 1.0,
-   "hi": 1.33,
-   "metric": "aOR",
-   "src": "Pai 2026 (Pediatr Neonatol)"
-  },
-  {
    "label": "Localised prostate cancer, SO2 Q4",
    "exposure": "vs Q1, 5 y mean",
    "est": 1.65,
@@ -307,8 +233,8 @@
  ],
  "LIFECOURSE": [
   {
-   "n": 3,
-   "note": "preconception /\nin utero: cleft lip,\nbirth weight, SGA"
+   "n": 1,
+   "note": "preconception /\nin utero:\ncleft lip / palate"
   },
   {
    "n": 2,
@@ -323,8 +249,8 @@
    "note": "working age:\npersonal PM proxies,\nstep counts, indoor air"
   },
   {
-   "n": 3,
-   "note": "older adults:\ncognition, prostate\ncancer, aging burden"
+   "n": 2,
+   "note": "older adults:\nprostate cancer,\naging burden"
   }
  ]
 }
