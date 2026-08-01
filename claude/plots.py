@@ -140,6 +140,10 @@ design_group = {
     "Source apportionment": "Measurement campaign",
     "Sensor co-location": "Measurement campaign",
     "Chamber sensor evaluation": "Measurement campaign",
+    "Proxy validation vs personal exposure": "Measurement campaign",
+    "Exposome-wide association": "Observational - cross-sectional",
+    "Case-control": "Observational - cross-sectional",
+    "Ex vivo perfused organ": "Experimental / toxicology",
 }
 def dgrp(d):
     return design_group.get(d, "Other / mixed")
@@ -202,7 +206,8 @@ geo_group = {
     "South Africa": "Sub-Saharan Africa", "Mexico": "Latin America",
     "Lebanon": "Middle East & N. Africa", "Bangladesh": "South Asia",
     "Kazakhstan": "Central Asia", "Greece": "Europe", "Bulgaria": "Europe",
-    "Norway": "Europe",
+    "Norway": "Europe", "Taiwan": "East Asia (ex-China)",
+    "Czech Republic": "Europe", "The Gambia / Kenya / Mozambique": "Sub-Saharan Africa",
 }
 geo = collections.Counter(geo_group.get(p["geo"], "Global / multi-region") for p in PAPERS)
 

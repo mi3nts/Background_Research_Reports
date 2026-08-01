@@ -17,5 +17,33 @@
   "start_date": "2023-12-20",
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
- }
+ },
+ "trials": [
+  {
+   "nct_id": "NCT05160948",
+   "title": "Assessing Changes in Knowledge, Behavior, and Attitude Regarding Air Pollution After Receiving Personal Air Monitoring Results",
+   "status": "COMPLETED",
+   "study_type": "OBSERVATIONAL",
+   "phase": null,
+   "conditions": [
+    "Environmental Exposure"
+   ],
+   "interventions": [
+    "Informational Report"
+   ],
+   "sponsor": "Children's Hospital Medical Center, Cincinnati",
+   "enrollment": 105,
+   "start_date": "2021-11-10",
+   "primary_completion_date": "2022-11-10",
+   "seen_window": "2026-07-31..2026-08-01",
+   "note": "Personal-monitor result feedback as a behavioural intervention. Directly relevant to the distributed-sensing use case: does returning personal PM data change behaviour. Observational, so analyze_endpoints not run."
+  }
+ ],
+ "windows": [
+  {
+   "window": "2026-07-31..2026-08-01",
+   "registrations_or_updates": 1,
+   "new_to_state": 1
+  }
+ ]
 }

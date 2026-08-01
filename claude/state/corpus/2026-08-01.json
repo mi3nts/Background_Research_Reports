@@ -1,0 +1,330 @@
+{
+ "date": "2026-08-01",
+ "entry_window": "2026-07-31 -> 2026-08-01 (PubMed [EDAT]); Europe PMC CREATION_DATE 2026-07-31..08-01",
+ "PAPERS": [
+  {
+   "pmid": "42534776",
+   "short": "Nyoni et al. 2026",
+   "doi": "10.1007/s11869-026-02060-y",
+   "title": "Performance of road-traffic-based exposure proxies against personal PM2.5 measurements in three Sub-Saharan African countries",
+   "journal": "Air Qual Atmos Health",
+   "sub": "Exposure assessment & modelling",
+   "design": "Proxy validation vs personal exposure",
+   "pm": "PM2.5 (personal, filtered)",
+   "geo": "The Gambia / Kenya / Mozambique",
+   "endpoint": "No health endpoint",
+   "n": "343 postpartum participants, 1 y",
+   "tier": "A"
+  },
+  {
+   "pmid": "42531931",
+   "short": "Chen et al. 2026",
+   "doi": "10.1016/j.jhazmat.2026.143083",
+   "title": "Geospatial-based neighborhood hazards and asthma in adults: interaction with social vulnerability",
+   "journal": "J Hazard Mater",
+   "sub": "Exposure assessment & modelling",
+   "design": "Exposome-wide association",
+   "pm": "PM2.5 constituents + VOCs",
+   "geo": "USA",
+   "endpoint": "Respiratory / allergic",
+   "n": "7,092 adults (North Carolina, 2013-2022)",
+   "tier": "A"
+  },
+  {
+   "pmid": "42537299",
+   "short": "Qian et al. 2026",
+   "doi": "10.1016/j.jhazmat.2026.143101",
+   "title": "Stronger actions are needed to advance PM2.5 mitigation and its health benefits under population aging in China",
+   "journal": "J Hazard Mater",
+   "sub": "Burden, policy & mitigation",
+   "design": "Machine-learning model",
+   "pm": "PM2.5",
+   "geo": "China",
+   "endpoint": "Mortality / longevity",
+   "n": "1 km daily grid, 2015-2024, national",
+   "tier": "A"
+  },
+  {
+   "pmid": "42537809",
+   "short": "Zhang et al. 2026",
+   "doi": "10.1016/j.neuro.2026.103539",
+   "title": "Association of PM2.5 and its components with cognitive dysfunction among rural older adults",
+   "journal": "Neurotoxicology",
+   "sub": "Neuro / mental health",
+   "design": "Cross-sectional (multistage)",
+   "pm": "PM2.5 components (BC, OM, NH4, SO4, NO3)",
+   "geo": "China",
+   "endpoint": "Neuro / cognitive",
+   "n": "14,379 adults aged 60+ (Henan Rural Cohort)",
+   "tier": "A"
+  },
+  {
+   "pmid": "42538457",
+   "short": "Daoud et al. 2026",
+   "doi": "10.1007/s11356-026-38089-w",
+   "title": "Air pollution and suicide mortality in the UK: implications for environmental and mental health policy",
+   "journal": "Environ Sci Pollut Res Int",
+   "sub": "Neuro / mental health",
+   "design": "Ecological panel",
+   "pm": "PM2.5",
+   "geo": "UK",
+   "endpoint": "Neuro / mental health",
+   "n": ">2,200 local authority-year observations, 2015-2023",
+   "tier": "C"
+  },
+  {
+   "pmid": "42537557",
+   "short": "Bello et al. 2026",
+   "doi": "10.1016/j.ehb.2026.101631",
+   "title": "Prenatal exposure to PM2.5 and infant health: evidence from Quebec",
+   "journal": "Econ Hum Biol",
+   "sub": "Reproductive & developmental",
+   "design": "Registry cohort + geospatial",
+   "pm": "PM2.5",
+   "geo": "Canada",
+   "endpoint": "Neurodevelopment",
+   "n": "Administrative birth records, Quebec 2008-2015",
+   "tier": "A"
+  },
+  {
+   "pmid": "42538170",
+   "short": "Pai et al. 2026",
+   "doi": "10.1016/j.pedneo.2026.06.003",
+   "title": "Household incense burning and small for gestational age risk in newborn infants",
+   "journal": "Pediatr Neonatol",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective cohort",
+   "pm": "Incense PM (indoor, unspeciated)",
+   "geo": "Taiwan",
+   "endpoint": "Reproductive",
+   "n": "18,666 mother-infant pairs (Taiwan Birth Cohort)",
+   "tier": "A"
+  },
+  {
+   "pmid": "42535747",
+   "short": "Sezer et al. 2026",
+   "doi": "10.1002/bdr2.70102",
+   "title": "Preconception and early pregnancy exposure to ambient air pollution and risk of cleft lip and/or palate",
+   "journal": "Birth Defects Res",
+   "sub": "Reproductive & developmental",
+   "design": "Case-control",
+   "pm": "PM2.5 + PM10 + O3",
+   "geo": "Turkiye",
+   "endpoint": "Reproductive",
+   "n": "127 CLP cases / 271 controls",
+   "tier": "C"
+  },
+  {
+   "pmid": "42536555",
+   "short": "Zhu et al. 2026",
+   "doi": "10.1097/MD.0000000000049962",
+   "title": "Air pollution and pneumonia hospitalization in Qingyang, China: a time-series analysis",
+   "journal": "Medicine (Baltimore)",
+   "sub": "Respiratory & allergic",
+   "design": "Time-series",
+   "pm": "PM2.5 + PM10 + 4 gases",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "Daily admissions, 2015-2019",
+   "tier": "B"
+  },
+  {
+   "pmid": "42535006",
+   "short": "Yue et al. 2026",
+   "doi": "10.3389/fpubh.2026.1885590",
+   "title": "Short-term traffic-related gaseous pollutant exposure and childhood bronchopneumonia hospitalization in Guangzhou",
+   "journal": "Front Public Health",
+   "sub": "Respiratory & allergic",
+   "design": "Time-series",
+   "pm": "Traffic gases (NO2, SO2)",
+   "geo": "China",
+   "endpoint": "Respiratory infection",
+   "n": "20,623 paediatric admissions, 2014-2023",
+   "tier": "B"
+  },
+  {
+   "pmid": "42534823",
+   "short": "Pan et al. 2026",
+   "doi": "10.3389/fphar.2026.1870023",
+   "title": "Effects of air pollution exposure on nasal mucosal immune-inflammatory markers in animal models of allergic rhinitis",
+   "journal": "Front Pharmacol",
+   "sub": "Mechanistic toxicology",
+   "design": "Umbrella review / meta-analysis",
+   "pm": "PM2.5 / PM10 / DEP (animal)",
+   "geo": "Global",
+   "endpoint": "Allergy",
+   "n": "18 rodent studies pooled",
+   "tier": "B"
+  },
+  {
+   "pmid": "42478908",
+   "short": "Balu et al. 2026",
+   "doi": "10.1002/jbt.71038",
+   "title": "SRM 1650b administration to isolated rat heart aggravates ischemia-reperfusion injury via mitochondrial dysfunction",
+   "journal": "J Biochem Mol Toxicol",
+   "sub": "Mechanistic toxicology",
+   "design": "Ex vivo perfused organ",
+   "pm": "Diesel PM (SRM 1650b)",
+   "geo": "India",
+   "endpoint": "Cardiovascular",
+   "n": "Isolated Wistar rat hearts, 3 dose levels",
+   "tier": "B"
+  },
+  {
+   "pmid": "42531735",
+   "short": "Park et al. 2026",
+   "doi": "10.1016/j.scitotenv.2026.182065",
+   "title": "Environmental evaluation of wood-based remodeling in aging buildings: indoor air quality and life-cycle carbon",
+   "journal": "Sci Total Environ",
+   "sub": "Occupational & indoor",
+   "design": "Field measurement",
+   "pm": "PM (indoor, unspeciated)",
+   "geo": "South Korea",
+   "endpoint": "Microenvironment",
+   "n": "2 buildings + mock-up chamber",
+   "tier": "C"
+  },
+  {
+   "pmid": "42532568",
+   "short": "Zhou et al. 2026",
+   "doi": "10.1136/bmjopen-2025-110957",
+   "title": "Environmental exposome study for prostate cancer in elderly men from Western China (WeEndPd cohort)",
+   "journal": "BMJ Open",
+   "sub": "Other clinical endpoints",
+   "design": "Case-control",
+   "pm": "PM2.5 + SO2",
+   "geo": "China",
+   "endpoint": "Oncologic",
+   "n": "580 cases / 1,160 matched controls",
+   "tier": "B"
+  },
+  {
+   "pmid": "42415238",
+   "short": "Knapova et al. 2026",
+   "doi": "10.1111/aphw.70186",
+   "title": "Daily relationship between air pollution and physical activity in an industrial region",
+   "journal": "Appl Psychol Health Well Being",
+   "sub": "Other clinical endpoints",
+   "design": "Panel study",
+   "pm": "PM10",
+   "geo": "Czech Republic",
+   "endpoint": "Neuro / behaviour",
+   "n": "693 adults, 9,702 person-days",
+   "tier": "B"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Asthma, 29-hazard mixture (high-SVI)",
+   "exposure": "per quintile increase",
+   "est": 1.35,
+   "lo": 1.06,
+   "hi": 1.73,
+   "metric": "OR",
+   "src": "Chen 2026 (J Hazard Mater)"
+  },
+  {
+   "label": "Pneumonia admission, PM2.5",
+   "exposure": "per 10 ug/m3",
+   "est": 1.004,
+   "lo": 0.991,
+   "hi": 1.017,
+   "metric": "RR",
+   "src": "Zhu 2026 (Medicine)"
+  },
+  {
+   "label": "Pneumonia admission, PM10",
+   "exposure": "per 10 ug/m3",
+   "est": 1.004,
+   "lo": 0.999,
+   "hi": 1.01,
+   "metric": "RR",
+   "src": "Zhu 2026 (Medicine)"
+  },
+  {
+   "label": "Pneumonia admission, NO2 lag0-7",
+   "exposure": "per 10 ug/m3",
+   "est": 1.221,
+   "lo": 1.174,
+   "hi": 1.271,
+   "metric": "RR",
+   "src": "Zhu 2026 (Medicine)"
+  },
+  {
+   "label": "Child bronchopneumonia, NO2 lag0-7",
+   "exposure": "per 5 ug/m3",
+   "est": 1.068,
+   "lo": 1.049,
+   "hi": 1.088,
+   "metric": "RR",
+   "src": "Yue 2026 (Front Public Health)"
+  },
+  {
+   "label": "Child bronchopneumonia, SO2 lag0-7",
+   "exposure": "per 5 ug/m3",
+   "est": 1.172,
+   "lo": 1.102,
+   "hi": 1.247,
+   "metric": "RR",
+   "src": "Yue 2026 (Front Public Health)"
+  },
+  {
+   "label": "SGA at term, daily incense",
+   "exposure": "vs no exposure",
+   "est": 1.25,
+   "lo": 1.1,
+   "hi": 1.41,
+   "metric": "aOR",
+   "src": "Pai 2026 (Pediatr Neonatol)"
+  },
+  {
+   "label": "SGA at term, occasional incense",
+   "exposure": "vs no exposure",
+   "est": 1.16,
+   "lo": 1.0,
+   "hi": 1.33,
+   "metric": "aOR",
+   "src": "Pai 2026 (Pediatr Neonatol)"
+  },
+  {
+   "label": "Localised prostate cancer, SO2 Q4",
+   "exposure": "vs Q1, 5 y mean",
+   "est": 1.65,
+   "lo": 1.08,
+   "hi": 2.72,
+   "metric": "OR",
+   "src": "Zhou 2026 (BMJ Open)"
+  },
+  {
+   "label": "Localised prostate cancer, EDC mixture",
+   "exposure": "WQS index",
+   "est": 1.26,
+   "lo": 1.2,
+   "hi": 1.33,
+   "metric": "OR",
+   "src": "Zhou 2026 (BMJ Open)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 3,
+   "note": "preconception /\nin utero: cleft lip,\nbirth weight, SGA"
+  },
+  {
+   "n": 2,
+   "note": "childhood:\nbronchopneumonia,\npneumonia admissions"
+  },
+  {
+   "n": 0,
+   "note": "no adolescence\nrecord this window"
+  },
+  {
+   "n": 3,
+   "note": "working age:\npersonal PM proxies,\nstep counts, indoor air"
+  },
+  {
+   "n": 3,
+   "note": "older adults:\ncognition, prostate\ncancer, aging burden"
+  }
+ ]
+}
