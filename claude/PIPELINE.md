@@ -281,3 +281,10 @@ skip if the output file already exists.
 - Also fixed while proofing: an orphan page where the exec brief spilled two lines before a
   `\clearpage` (same defect class as 30 Jul). Proofed all 14 pages; 0 errors, 0 overfull.
 - `templates/monthly.tex` created from the shipped July issue as the exemplar.
+- **Correction inside the same run.** The first monthly build asserted "the 30 July and
+  1 August issues each recorded zero sensing records" and, in the gaps box, "0, 0, 1 and 6
+  across four consecutive daily issues". `state/metrics.csv` says the true series is
+  **2, 2, 6, 1, 0** across 27--30 Jul and 1 Aug (11 records). Both passages were rewritten
+  against `metrics.csv` and the issue reissued before the run closed. Lesson worth keeping:
+  **derive any cross-issue count from `metrics.csv`, never from memory of the prose** ---
+  the headline (23 for the month vs 11 across the dailies) survives and is still decisive.
