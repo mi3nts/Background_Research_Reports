@@ -344,3 +344,38 @@ skip if the output file already exists.
   unicode from PubMed crashed the build with 20 errors. Also made DOIs breakable
   (`\allowbreak`) and `\precisentry` unbreakable (a minipage) after a stranded DOI page.
 - Final: **46 pp, 0 LaTeX errors, 0 overfull boxes, 0 sparse pages, all 270 DOIs present.**
+
+### 2026-08-01 — the sensing leg is built; first weekly ships
+- **Window** 2026-08-01 (PubMed `[EDAT]`, Europe PMC `CREATION_DATE`), contiguous with 31 Jul.
+  PubMed 11 in window / 5 retained; EPMC 2, both duplicates of the 31 Jul issue; arXiv 1,
+  rejected (no PM application); OpenAlex still 403. **25 records in scope, 15 rejected with
+  a logged reason.**
+- **The prescribed fix works.** `harvest.crossref_journal` / `crossref_sensing` window
+  Crossref `created` **per journal ISSN** over 8 titles (AMT, ACP, AS&T, Atmos Environ,
+  J Aerosol Sci, Atmos Pollut Res, AAQR, ES:Atmos). A *global* `from-created-date` is
+  useless; scoped to one ISSN it returns that journal's genuine new deposits. First run
+  back-swept 26 Jul–1 Aug: **55 deposits, 12 PM-relevant, all 12 carried** (4 with
+  abstracts, 8 metadata-only — Elsevier deposits no abstract to Crossref and these are not
+  yet in EPMC/PubMed, so they are listed on metadata and explicitly *not* summarised).
+  **Sensing went 0, 0, 1 → 9.** Consensus added 8 more (2 dropped as 29 Jul duplicates).
+- **First weekly**: `Reports/weekly/PM-Research-Watch-Weekly_2026-08-01.pdf`, 14 pp.
+  Cadence is Sunday→Saturday and is generated on **Saturday's run**, so it lands on the
+  same calendar cell as that day's daily. **Pooled window is 27 Jul–1 Aug, not 26 Jul**:
+  the `2026-07-26` corpus slot holds the 1–26 Jul retrospective backfill (164 records) and
+  pooling it would put a month inside a week and double-count the July monthly. Stated in
+  the issue, not hidden. `run_all.rollup` now honours `PMRW_START_OVERRIDE` for exactly
+  this case.
+- **Three figure defects found by proofing, all fixed in `plots.py`/`plots_weekly.py`:**
+  (i) every instrumentation design string fell through to "Other / mixed", collapsing the
+  architecture donut to one slice — 20 design mappings added plus an honest `Metadata only`
+  bucket; (ii) f2's right-panel y-labels ran over the left panel's legend once an endpoint
+  label was long — `wspace` now scales with the longest label; (iii) `w1` was hard-wired to
+  the monthly "what the dailies missed" framing and showed an all-zero series for a week —
+  it now switches to a per-issue line trend, with issue size on a twin axis, when the range
+  is ≤10 issues and contains no backfill batch.
+- Trial watch +3 sham-controlled filtration RCTs (NCT05867381, NCT05718245, NCT05016271);
+  NCT05016271's primary completion was **June 2022 with no results posted**.
+- Daily 11 pp, weekly 14 pp, **0 overfull boxes, 0 sparse pages, all DOIs resolved.**
+- Carry forward: `state/` has no ORCID or affiliation field, so author-cluster analysis in
+  the rollups degenerates to surname frequency (Chen 5, Zhou 5 — distinct groups). The
+  weekly says so rather than reporting the noise; a schema change is the real fix.

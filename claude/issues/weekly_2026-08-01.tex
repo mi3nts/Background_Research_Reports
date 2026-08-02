@@ -1,0 +1,399 @@
+%% PM Research Watch - WEEKLY ROLLUP, week ending Saturday 1 August 2026.
+%% Authored from templates/weekly.tex. Aggregation only; no API was re-queried.
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\providecommand{\DIGESTDATE}{1 August 2026}
+\providecommand{\PERIODSTART}{27 July 2026}
+\providecommand{\PERIODEND}{1 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Teal] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ WEEKLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Week in Review\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Week ending Saturday \DIGESTDATE\;\;\textcolor{Teal}{\textbar}\;\;pooled
+ \PERIODSTART{} to \PERIODEND\;\;%
+ \textcolor{Teal}{\textbar}\;\;131 records from 6 daily issues\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{131}{RECORDS POOLED\\THIS WEEK}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{20}{SENSING RECORDS\\(15\% OF WEEK)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{SUBTOPICS\\ACTIVE}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{48}{POOLED EFFECT\\ESTIMATES}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{TRIALS ON\\THE WATCH LIST}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- week in one box
+\section*{\sffamily\bfseries\color{Deep}The week in one paragraph}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Four independent papers this week attacked the
+exposure \emph{variable} rather than the health model --- and all four found it
+wanting. The through-line is that PM$_{2.5}$ mass at a fixed monitor is now the
+weakest link in the causal chain, and the field has started saying so with
+numbers.}\\[1.4mm]
+\footnotesize
+Nyoni et al.\ (31 Jul, \textit{Air Qual Atmos Health}) validated road-geometry proxies
+against a year of filter-based personal PM$_{2.5}$ in 343 postpartum participants across
+three sub-Saharan countries: weighted road density correlated only in Mozambique
+($\rho = 0.351$) and \textbf{distance-to-highway inverted sign in Kenya}
+($\rho = -0.224$, $p = 0.018$). Saeedi et al.\ (1 Aug, \textit{ES\&T}) showed
+land-use regression for mobile ultrafine particles falling from
+\textbf{$\sim$217\% average percentage error under random cross-validation to
+$\sim$79\% under spatiotemporal CV} --- the model was never predicting, the validation
+was. Blanco et al.\ (1 Aug, \textit{JESEE}) resampled on-road campaign designs against a
+5{,}283-person cohort and found every alternative design attenuated the health estimate.
+And Zhu et al.\ (31 Jul) reported pneumonia-admission RRs of \textbf{1.004
+(0.991--1.017) for PM$_{2.5}$ against 1.221 (1.174--1.271) for NO$_2$} --- PM mass was
+the null term in its own model.
+
+What would have to be true for this to be wrong: the four results would have to be
+selection rather than signal. Two of them (Saeedi, Blanco) are methods papers whose
+premise is that current practice is inadequate, so they are not independent of the
+conclusion; Nyoni's setting is one where household biomass dominates the personal
+exposure budget, which is exactly where traffic geometry should fail; and Zhu's is a
+single-pollutant model over correlated combustion tracers, so it is a statement about
+correlation structure, not about which pollutant acts. \textbf{This is a real pattern,
+but it is a pattern about measurement adequacy, not about PM being harmless.} The
+distinction matters and the week's own papers do not always draw it.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- trend & inflection
+\section*{\sffamily\bfseries\color{Deep}Subtopic trend and inflection}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}.
+\textbf{The one real inflection is sensing/instrumentation: 2, 2, 6, 1, 0, 9 across
+27 July--1 August, against daily totals of 33, 19, 25, 18, 11, 25.} Both ends of that
+series are pipeline artefacts, not literature. The 6 on 29 July came from a Consensus
+backfill; the 0 on 31 July and the 9 on 1 August are the same defect and its fix --- the
+Crossref by-journal leg was activated on 1 August and back-swept the week, so nine
+records that were deposited between 26 July and 1 August all landed in one issue.
+\textbf{Read the weekly total (20/131, 15\%) rather than any daily value.} Every other
+subtopic is flat within Poisson noise on a base of 11--33 records/day; nothing else in
+this figure is a trend.}
+
+\footnotesize
+\textbf{Emerging this week.} Three genuinely new lines. (i) \textbf{Source-resolved
+exposure} --- Dales et al.\ separate wildfire-sourced from background PM$_{2.5}$ and find
+$+6.07\%$ (5.75--6.39) headache ED visits for the former against a null for the latter;
+Zhou M et al.\ attribute 27\% of India's population-weighted PM$_{2.5}$ to transboundary
+transport, more than any domestic sector. (ii) \textbf{Ultrafine and number-based
+metrics} --- 6 of 131 records this week use UFP or particle-number exposure (Ramsden,
+Zhou 2026b, Rusconi, Zhou L, Saeedi, Blanco), against essentially none in the preceding
+month's dailies. (iii) \textbf{Oxidative potential as a modelled quantity} --- Mishra
+et al.'s KM-OP predicts OP from composition at $R^2 > 0.75$, which is the step that makes
+speciated sensing actionable.
+
+\textbf{Fading.} Nothing has genuinely faded in six days, and claiming otherwise would be
+noise-fitting. The apparent drop in cardiovascular/metabolic records (4 on 29 July, 2 on
+30 July, 0 on 31 July and 1 August) is journal-issue timing on an 11--25-record base, not
+a decline.
+
+\textbf{Flat but load-bearing.} Exposure assessment \& modelling (17 records) and
+mechanistic toxicology (11) held steady all week and carry the field regardless of the
+weekly headline. Reproductive/developmental (10) is the cluster with the most consistent
+effect estimates --- Xie's pubertal-timing HRs, Li's stillbirth HRs, Sieber's LBW OR and
+Pai's incense aORs are all in the same direction with intervals that exclude the null.
+
+\clearpage
+
+% -------------------------------------------------------------- pooled analytics
+\section*{\sffamily\bfseries\color{Deep}Pooled analytics}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Pooled subtopic distribution, \PERIODSTART{} to \PERIODEND. Sensing (20) and
+exposure assessment (17) together account for \textbf{28\% of the week} --- the
+methodological half of the field is, for once, better represented than any single health
+cluster. Neuro/mental health, respiratory/allergic, burden/policy and occupational/indoor
+tie at 13.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Pooled study architecture and health endpoint. Measurement campaigns lead at 23,
+but \textbf{reviews and syntheses are effectively tied at 22 --- one record in six of this
+week's corpus is a review}, a high share that reflects a mid-year cluster of review issues
+rather than new primary evidence. Observational designs together contribute 36
+(16 cohort, 12 acute, 6 cross-sectional, 2 ecological) and only one record is a trial or
+intervention. \textbf{Thirty-two records carry no health endpoint} and eight more were
+surfaced without an abstract; among those that do, respiratory (17) and cardiovascular
+(12) lead.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{\textbf{Pooled effect estimates for the week --- read as a caterpillar plot, not a
+meta-analysis.} No summary diamond is drawn and none should be. \textbf{Pooling is not
+defensible here and no $I^2$ is reported}, for four separate reasons: exposure contrasts
+differ (per 1\,$\mu$g\,m$^{-3}$ in Xie, per IQR in S\'anchez, a $\geq$9\,$\mu$g\,m$^{-3}$
+threshold in Yang, a percentage-change conversion in Dales); outcomes differ across ten
+organ systems; several estimates are multiple contrasts from one paper and one cohort
+(Yang contributes 3, Xie 3, Ghana AIRCLARE 6, Luo 4), so they are not independent; and
+7 of the 48 estimates have \textbf{no published interval at all} (Mokoena $\times$3,
+Ouyang $\times$2, Abi Nader $\times$2) and are plotted as points. The one subset that is
+internally comparable is the four respiratory RRs per 10\,$\mu$g\,m$^{-3}$ from Zhu and
+Yue --- and within that subset the particulate terms (1.004, 1.004) are null while the
+gas terms (1.221, 1.068, 1.172) are not.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Pooled subtopic $\times$ study-architecture cross-tabulation. \textbf{The
+persistently empty cells are the finding.} Mechanistic toxicology has no cell in any
+observational column --- eleven records, no bridge to human biomarker work. The sensing
+row has no cell in any cohort or case-crossover column: across 131 records and six days,
+\textbf{no study characterised an instrument and used it to estimate a health effect in
+the same paper.} Eight records come closest (Wang's SARS-CoV-2 surveillance, Patton's
+outdoor risk assessment, S\'anchez's asthma admissions, Chen's 29-hazard mixture,
+Blanco's UFP--cognition analysis) but in every case the exposure instrument is inherited,
+not evaluated.}
+
+\clearpage
+
+% -------------------------------------------------------------- groups & citations
+\section*{\sffamily\bfseries\color{Deep}Groups, venues and most-cited work}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Recurring author and group clusters.} \textbf{There are none, and the apparent
+ones are an artefact worth naming.} Surname frequency over the pooled corpus returns
+Chen (5), Zhou (5), Ding, Park, Lu, Wang, Zhang and Li (3 each) --- but these are
+distinct research groups sharing common surnames, not repeat output. The 1 August issue
+alone carries two unrelated first-author Zhous (Liyuan Zhou on Bakhoor emissions, Mi Zhou
+on India source attribution), which is why they are disambiguated as ``Zhou L'' and
+``Zhou M'' in the register. \textbf{First-author surname is not a group identifier and
+should not be used as one}; a real cluster analysis needs ORCID or affiliation strings,
+which this pipeline does not currently store. That is a state-schema gap, logged as such.
+The only genuine programmatic stream visible is the Henan Rural Cohort (Zhang, 1 Aug) and
+the Chongqing Child Health Cohort (Xie, 27 Jul), each contributing one record.
+
+\vspace{2mm}
+\textbf{Venue concentration.} Nineteen journals contributed more than one record.
+\textit{Toxics} leads at 7, \textit{J Environ Sci (China)}, \textit{J Hazard Mater} and
+\textit{Atmos Environ} at 6 each, \textit{Front Public Health} and
+\textit{Environ Sci Pollut Res} at 3, \textit{Atmos Chem Phys} at 3. Two of these are
+structural rather than substantive: the \textit{Atmos Environ} count is entirely the
+Crossref by-journal leg activated on 1 August and reflects a deposit window, not a
+research surge; the \textit{Toxics} cluster is a themed-issue effect. \textbf{No
+single-journal cluster this week represents an independent replication.}
+
+\vspace{2mm}
+\textbf{Most-cited work of the period.} \textbf{Not reported, because it would be noise.}
+Every record in this corpus entered an index within the last six days; citation counts
+where available are 0--5 and are dominated by how long a preprint sat before formal
+publication, not by influence. Ranking a week-old corpus by citations measures
+publication lag. The metric becomes meaningful in the monthly and yearly rollups and is
+deferred to them.
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- trial watch
+\section*{\sffamily\bfseries\color{Deep}Trial registry watch}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}From \texttt{state/trials.json}: registrations
+created or updated inside the window. Daily issues accumulate; the rollup is where they
+surface.\par}
+
+\vspace{1.5mm}
+\footnotesize
+\textbf{New this week --- three sham-controlled filtration trials} (surfaced 1 August on
+an intervention sweep; all three are indoor HEPA filtration against a sham unit, which is
+the correct comparator and rules out the placebo-and-noise objection that sinks
+open-label purifier studies).
+
+\begin{itemize}\setlength{\itemsep}{1.0mm}
+\item \textbf{NCT05867381} --- \textit{Slowing Atherothrombosis Progression Through Indoor
+Air Filtration}, University of Southern California. Recruiting, N/A phase, \textbf{n =
+112}, crossover, HEPA vs sham, adults with ischaemic heart disease history, primary
+completion \textbf{June 2028}. Crossover on a progression endpoint is the right design
+for a within-person exposure contrast, but 112 participants against an atherothrombosis
+imaging endpoint is thin: the indoor PM$_{2.5}$ reduction a HEPA unit delivers
+($\sim$30--60\% of indoor mass) implies an effect far smaller than the between-person
+variance in plaque progression. Expect a surrogate-endpoint result.
+
+\item \textbf{NCT05718245} --- \textit{Using Indoor Air Filtration to Reduce PM$_{2.5}$
+Cardiometabolic Effects in At-risk Individuals}, USC. Recruiting, \textbf{n = 52},
+HEPA vs sham, primary completion \textbf{December 2026} --- the nearest-term readout on
+the list. At $n = 52$ this is powered for biomarker change (blood pressure, glucose,
+inflammatory markers), not for events, and should be read that way.
+
+\item \textbf{NCT05016271} --- \textit{Health Benefits of Air Purifiers in Primary School
+Students}, Fudan University. Active, not recruiting, \textbf{n = 110}, HEPA-equipped vs
+non-HEPA ventilation in classrooms, cardiopulmonary function. \textbf{Primary completion
+was June 2022 and no results have been posted} --- four years is well past the reporting
+expectation and is itself worth logging.
+\end{itemize}
+
+\vspace{1.5mm}
+\textbf{Is the endpoint capable of detecting the effect?} For all three: not for hard
+outcomes. A sham-controlled filtration trial changes personal PM$_{2.5}$ by single-digit
+$\mu$g\,m$^{-3}$ over weeks to months; the cohort literature in this same week
+(Luo: CVD-mortality RR 1.014 per 10\,$\mu$g\,m$^{-3}$; Yang: OHCA RR 1.02) implies effect
+sizes that a 52--112-person trial cannot resolve on events. \textbf{These trials are
+mechanism studies wearing RCT clothing}, and their value is the biomarker and personal-
+exposure data, not the clinical endpoint.
+
+\vspace{2mm}
+\textbf{Standing watch list.} \textbf{NCT05874479} --- \textit{Reducing Air Pollution
+Exposure to Lower Blood Pressure Among NYC Public Housing Residents} (NYU Langone,
+$n = 440$, active vs sham portable air cleaner, primary completion September 2027).
+Logged 29 July; at $n = 440$ it is the only trial on the list plausibly powered for a
+blood-pressure endpoint. Nearest readout to watch: \textbf{NCT05718245, December 2026}.
+
+\clearpage
+
+% -------------------------------------------------------------- gaps & direction
+\section*{\sffamily\bfseries\color{Deep}Open gaps}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}\setlength{\itemsep}{1.4mm}
+\item \textbf{Measurement--epidemiology coupling: still zero.} Across 131 records, no
+study both characterised an instrument and estimated a health effect with it. Blanco
+et al.\ came closest --- a mobile UFP campaign feeding a cognition analysis in the same
+paper --- but the monitoring instrument itself is not evaluated, only the campaign design.
+This is the same gap the 27 July issue named and it has not moved.
+
+\item \textbf{Ultrafine and speciated metrics: improving, from nothing.} 6 of 131 records
+(4.6\%) use UFP or particle-number exposure and 3 use speciated composition. That is up
+from near-zero, entirely because the aerosol-science journals are now being read. It
+remains badly out of proportion to the deposition physics: the fraction of deposited
+particle \emph{number} that reaches the alveolar region is dominated by exactly the size
+range that 95\% of this week's records do not measure.
+
+\item \textbf{Geographic coverage vs.\ attributable burden: the gap narrowed.} 13 of 131
+records (10\%) come from South Asia or sub-Saharan Africa --- India 7, Ghana, Uganda,
+South Africa, Bangladesh and a three-country Gambia/Kenya/Mozambique study. Against
+China's 42 (32\%) this is still inverted relative to attributable burden, but it is the
+best week on this measure so far, and two of the records (Nyoni, Ghana AIRCLARE) are
+primary measurement rather than secondary analysis.
+
+\item \textbf{Calibration transferability: reported, and it fails.} Three records tested
+transfer explicitly. Ginsburg et al.\ (29 Jul) found US-derived PurpleAir corrections do
+not transfer outside North America across 1{,}013 globally co-located sensors, with
+region-specific corrections needed to meet EPA 24\,h targets. Kumpika et al.\ report
+$R^2 = 0.974$ but on single-site, single-season, single-model data --- co-located fit, not
+held-out deployment. Qian et al.\ report chamber performance only. \textbf{No record this
+week reported held-out deployment performance at a site not used in fitting.}
+
+\item \textbf{Negative and null results: present, which is a good sign.} Zhu et al.'s null
+PM$_{2.5}$ pneumonia RR, Blanco et al.'s null UFP--cognition estimate, Yang et al.'s null
+PM$\times$heat interaction and the AFRI-c filtration process evaluation all published as
+nulls. A corpus with no nulls would be a reporting-bias signal; this one has four in six
+days, which is consistent with a literature that is at least sometimes publishing what it
+finds.
+\end{itemize}
+
+\vspace{3mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Where this is heading --- judgement, not
+measurement}\\[1.2mm]
+\footnotesize
+The methodological demand the field is converging on is \textbf{source- and
+size-resolved exposure with a validated error term}. Three separate literatures arrived
+at it independently this week: epidemiology (Dales's wildfire-vs-background split, Zhu's
+null mass term), exposure modelling (Saeedi and Blanco on validation and design), and
+aerosol science (Zhou L on number-dominated indoor emissions, Mishra on predicting
+oxidative potential from composition). None of them cites the others. That convergence is
+the strongest signal in the week and I would put moderate-to-high confidence on it
+persisting.
+
+What would change the picture: a well-powered cohort finding a robust total-mass
+association after adjusting for source and composition would undercut the whole line, and
+none of this week's records tested that. The mass-null results here come from
+single-pollutant models over correlated combustion tracers, which is a weak basis for
+demoting mass. \textbf{I would not yet write ``PM$_{2.5}$ mass is the wrong metric'' in a
+thesis introduction} --- I would write that its measured association is increasingly
+sensitive to source attribution and model specification, which is a defensible and much
+narrower claim.
+
+For a distributed low-cost PM sensing programme the operational reading is specific.
+First, \textbf{number-based channels are now worth the extra cost}: the week produced two
+independent results (Bakhoor UFP emission rates exceeding sidestream cigarette smoke;
+6 UFP records against essentially zero the previous month) that a mass-only network
+cannot see. Second, \textbf{validate on held-out sites, not held-out samples} --- Saeedi's
+217\%$\to$79\% collapse is what random-CV validation costs, and it applies directly to
+any network calibration reported as ``$R^2$ against co-located reference''. Third,
+\textbf{instrument ageing and firmware behaviour are first-order error terms}: Kumpika's
+duty-cycling result and Le's CL61 laser-power/calibration-factor finding both describe
+degradation that a deployed node cannot self-detect. A co-location rotation schedule is
+not optional infrastructure.
+
+Confidence that this week was informative: high --- but note that the single largest
+change in the corpus was a fix to \emph{this pipeline}, not to the literature. Nine of
+the twenty sensing records exist in this rollup because a harvest leg was built on
+Friday. The literature did not change; the instrument reading it did.
+\end{keybox}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+This rollup is an \textbf{aggregation only}. It pools \texttt{state/corpus/*.json},
+\texttt{state/metrics.csv} and \texttt{state/trials.json} over
+\PERIODSTART{}--\PERIODEND{} via \texttt{PMRW\_START}/\texttt{PMRW\_END} and
+\textbf{re-queries no API}, so every record was screened and deduplicated in the daily
+issue that first carried it. Per-record provenance, source-query windows, exclusions and
+known metadata defects are documented in those daily issues and are not restated here.
+\\[1.0mm]
+\textbf{Daily issues pooled: 27, 28, 29, 30, 31 July and 1 August 2026 --- six
+consecutive issues, no gap.}
+\\[1.0mm]
+\textbf{Why the window starts on 27 July and not 26 July.} The weekly cadence is
+Sunday-to-Saturday, so the nominal window is 26 July--1 August. The 26 July slot in
+\texttt{state/corpus/} does not hold a 26 July issue: it holds the \textbf{1--26 July
+retrospective backfill} (164 records, entry window \texttt{2026-07-01 -> 2026-07-26})
+harvested for the July monthly rollup. Pooling it here would put a month of records
+inside a week, inflate every count by a factor of 2.3 and double-count material already
+published in \texttt{Reports/monthly/PM-Research-Watch-Monthly\_2026-07-31.pdf}. It is
+therefore excluded and the pooled window is stated as 27 July--1 August throughout.
+The 164 backfill records are not lost --- they are in the July monthly in full.
+\\[1.0mm]
+Effect estimates are transcribed from abstracts and use heterogeneous exposure contrasts
+--- see the forest-plot caption; \textbf{no meta-analytic summary is computed and no
+$I^2$ is reported}, because the estimates are not exchangeable. Trend and inflection
+statements are judgements over a six-day window and are not statistical tests. The
+``where this is heading'' box is explicitly judgement and is labelled as such. Content
+derived from PubMed, Europe PMC and Crossref metadata; abstracts remain the copyright of
+their respective publishers.\par}
+\end{keybox}
+
+\end{document}

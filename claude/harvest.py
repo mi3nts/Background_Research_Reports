@@ -56,6 +56,47 @@ def arxiv(qs, maxr=60):
          "&sortOrder=descending&max_results=%d") % (urllib.parse.quote(qs), maxr)
     return get(u)
 
+
+# ---------------------------------------------------------------- Crossref by journal
+# PubMed does not index AMT / ACP and indexes the aerosol-engineering journals late and
+# unevenly, so pure instrumentation work is invisible on the PubMed axis. A *global*
+# Crossref `from-created-date` filter is useless (continuous re-indexing returns works
+# back to 2007) but the same filter scoped to a single journal ISSN behaves: it returns
+# that journal's genuinely new deposits for the window. Verified 2026-08-01.
+JOURNALS = {
+    "1867-8548": "Atmospheric Measurement Techniques",
+    "1680-7324": "Atmospheric Chemistry and Physics",
+    "1521-7388": "Aerosol Science and Technology",
+    "1352-2310": "Atmospheric Environment",
+    "0021-8502": "Journal of Aerosol Science",
+    "1309-1042": "Atmospheric Pollution Research",
+    "2071-1409": "Aerosol and Air Quality Research",
+    "2634-3606": "Environmental Science: Atmospheres",
+}
+
+
+def crossref_journal(issn, frm, to, rows=100):
+    """New deposits for one journal ISSN, windowed on Crossref `created`."""
+    u = ("https://api.crossref.org/journals/%s/works?rows=%d&mailto=rittikpatra2014@gmail.com"
+         "&filter=from-created-date:%s,until-created-date:%s"
+         "&select=DOI,title,created,container-title,abstract,author,type,URL") % (issn, rows, frm, to)
+    try:
+        m = json.loads(get(u) or "{}").get("message", {})
+        return m.get("items", [])
+    except Exception:
+        return []
+
+
+def crossref_sensing(frm, to):
+    """All tracked non-PubMed journals for the window, tagged with the journal name."""
+    out = []
+    for issn, name in JOURNALS.items():
+        for it in crossref_journal(issn, frm, to):
+            it["_issn"], it["_journal"] = issn, name
+            out.append(it)
+        time.sleep(0.5)
+    return out
+
 if __name__ == "__main__":
     ws, we, day = sys.argv[1], sys.argv[2], sys.argv[3]
     cache = os.path.join(HERE, "cache", day); os.makedirs(cache, exist_ok=True)
@@ -70,4 +111,7 @@ if __name__ == "__main__":
     json.dump(o, open(os.path.join(cache, "openalex.json"), "w")); summary["openalex"] = len(o)
     a = arxiv('all:"particulate matter" OR all:"PM2.5 sensor" OR all:"air quality sensor"')
     open(os.path.join(cache, "arxiv.xml"), "w").write(a); summary["arxiv_bytes"] = len(a)
+    # sensing leg: journals PubMed does not index, windowed on Crossref `created`
+    cj = crossref_sensing(ws, we)
+    json.dump(cj, open(os.path.join(cache, "crossref_journals.json"), "w")); summary["crossref_journals"] = len(cj)
     print(json.dumps(summary, indent=1))

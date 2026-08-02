@@ -45,5 +45,65 @@
    "registrations_or_updates": 1,
    "new_to_state": 1
   }
- ]
+ ],
+ "NCT05867381": {
+  "first_seen": "2026-08-01",
+  "title": "Slowing Atherothrombosis Progression Through Indoor Air Filtration: A Crossover Trial in Hispanic and Non-Hispanic Adults With Ischemic Heart Disease History",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "University of Southern California",
+  "enrollment": 112,
+  "interventions": [
+   "HEPA filtration",
+   "Sham filtration"
+  ],
+  "conditions": [
+   "Air Pollution",
+   "Atherosclerosis"
+  ],
+  "start_date": "2023-07-11",
+  "primary_completion_date": "2028-06-30",
+  "note": "Sham-controlled crossover; atherothrombosis progression endpoint. Surfaced on the 2026-08-01 filtration sweep."
+ },
+ "NCT05718245": {
+  "first_seen": "2026-08-01",
+  "title": "Using Indoor Air Filtration to Reduce PM2.5 Cardiometabolic Effects in At-risk Individuals",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "University of Southern California",
+  "enrollment": 52,
+  "interventions": [
+   "HEPA filter",
+   "Sham filter"
+  ],
+  "conditions": [
+   "Air Pollution",
+   "Cardiometabolic Health"
+  ],
+  "start_date": "2023-03-15",
+  "primary_completion_date": "2026-12-31",
+  "note": "Cardiometabolic endpoints; primary completion inside 2026."
+ },
+ "NCT05016271": {
+  "first_seen": "2026-08-01",
+  "title": "Health Benefits of Air Purifiers in Primary School Students: A Randomized Controlled Trial",
+  "status": "ACTIVE_NOT_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Fudan University",
+  "enrollment": 110,
+  "interventions": [
+   "HEPA purifier + fresh-air ventilation",
+   "Non-HEPA sham"
+  ],
+  "conditions": [
+   "Cardiopulmonary Function",
+   "Child"
+  ],
+  "start_date": "2021-09-22",
+  "primary_completion_date": "2022-06-30",
+  "note": "Paediatric classroom filtration RCT; primary completion 2022, results not yet posted."
+ }
 }

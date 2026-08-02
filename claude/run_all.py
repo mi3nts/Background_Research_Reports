@@ -112,7 +112,7 @@ def rollup(cadence, end):
     if os.path.exists(out):
         print("rollup exists, skipping:", out)
         return
-    start = period_start(cadence, end)
+    start = os.environ.get("PMRW_START_OVERRIDE") or period_start(cadence, end)
 
     src = os.path.join(HERE, "build", "%s.tex" % cadence)
     if not os.path.exists(src):

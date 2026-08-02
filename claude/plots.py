@@ -158,6 +158,32 @@ design_group = {
     "Ex vivo perfused organ": "Experimental / toxicology",
     "Satellite retrieval evaluation": "Modelling / inventory",
     "Chemical transport model": "Modelling / inventory",
+    # added 2026-08-01 with the Crossref by-journal leg: instrumentation designs
+    # were all falling through to "Other / mixed", which collapsed the architecture
+    # donut to a single slice on an issue that had four distinct architectures.
+    "Field co-location + chamber": "Measurement campaign",
+    "Chamber co-location, AutoML calibration": "Measurement campaign",
+    "Multi-instrument field evaluation": "Measurement campaign",
+    "Network deployment + field evaluation": "Measurement campaign",
+    "Proof-of-concept deployment": "Measurement campaign",
+    "Chamber emission characterisation": "Experimental / toxicology",
+    "Simulation (system-level)": "Modelling / inventory",
+    "LUR model comparison": "Modelling / inventory",
+    "Design resampling + cohort analysis": "Modelling / inventory",
+    "CTM simulation + source attribution": "Modelling / inventory",
+    "Kinetic model + field validation": "Modelling / inventory",
+    "Systematic review (PRISMA)": "Review / synthesis",
+    "Mapping review": "Review / synthesis",
+    "Cross-sectional (cohort baseline)": "Observational - cross-sectional",
+    "Cross-sectional (multistage)": "Observational - cross-sectional",
+    "Registry cohort, FE models": "Observational - cohort",
+    "Registry cohort + geospatial": "Observational - cohort",
+    "Prospective birth cohort": "Observational - cohort",
+    "Ecological panel, fixed effects": "Observational - ecological",
+    "Ecological panel": "Observational - ecological",
+    # honest fall-through for records surfaced without an abstract: they get their
+    # own slice rather than being silently pooled with characterised designs
+    "Metadata only (no abstract)": "Metadata only",
 }
 def dgrp(d):
     return design_group.get(d, "Other / mixed")
@@ -190,8 +216,14 @@ def canon_ep(e):
 
 ep = collections.Counter(canon_ep(p["endpoint"]) for p in PAPERS)
 
+# The right panel's y-tick labels grow leftwards out of its own axes. With a fixed
+# wspace they run over ax1's legend once an endpoint label is long ("Oxidative stress
+# (in vitro proxy)"), which is what happened in the first weekly build. Scale the gap
+# with the longest label instead of pinning it.
+_eplab = max((len(k) for k in ep), default=10)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=SZ(9.0, max(4.3, 0.30 * len(ep) + 1.6)),
-                               gridspec_kw={"width_ratios": [1.0, 1.0], "wspace": 0.42})
+                               gridspec_kw={"width_ratios": [1.0, 1.0],
+                                            "wspace": min(1.05, 0.42 + 0.021 * max(0, _eplab - 16))})
 w = [v for _, v in dg_items]
 lab = [k for k, _ in dg_items]
 wedges, _ = ax1.pie(w, colors=SEQ[:len(w)], startangle=90, radius=0.86,

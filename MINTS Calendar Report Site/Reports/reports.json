@@ -1,6 +1,10 @@
 {
   "daily": [
     {
+      "file": "PM-Research-Watch_2026-08-01.pdf",
+      "title": "Daily digest \u2014 1 Aug 2026"
+    },
+    {
       "file": "PM-Research-Watch_2026-07-31.pdf",
       "title": "Daily digest \u2014 31 Jul 2026"
     },
@@ -21,7 +25,12 @@
       "title": "Daily digest \u2014 27 Jul 2026"
     }
   ],
-  "weekly": [],
+  "weekly": [
+    {
+      "file": "PM-Research-Watch-Weekly_2026-08-01.pdf",
+      "title": "Week 31 \u00b7 26 Jul \u2013 1 Aug 2026"
+    }
+  ],
   "monthly": [
     {
       "file": "PM-Research-Watch-Monthly_2026-07-31.pdf",

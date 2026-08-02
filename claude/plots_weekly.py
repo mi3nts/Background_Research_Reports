@@ -34,13 +34,54 @@ M = {(d, s): 0 for d in dates for s in subs}
 for d, s, n in rows:
     M[(d, s)] = n
 
-# A stacked bar per issue is unreadable once one "issue" is a 164-record backfill batch
-# and the others are 11-33-record days: every segment collapses to a stripe. The question
-# the panel actually has to answer is "what did the daily cadence miss", so plot that
-# directly - per subtopic, records the dailies caught against records only the month-wide
-# harvest found.
-DAILY = [d for d in dates if d >= "2026-07-27"]
-BATCH = [d for d in dates if d < "2026-07-27"]
+# Two regimes, because one panel cannot serve both.
+#
+# WEEKLY (<= 10 issues, no backfill batch in range): the question is how each subtopic
+# moved day to day, so plot a per-issue line series with the daily total on a twin axis.
+# A jump from 2 to 6 means nothing without its denominator, and the denominator is the
+# issue size - so the figure carries it.
+#
+# MONTHLY (a 164-record backfill batch sits in range next to 11-33-record days): a
+# stacked per-issue bar collapses to stripes and is unreadable. The question there is
+# "what did the daily cadence miss", so plot caught-vs-missed per subtopic instead.
+BATCH_CUTOFF = "2026-07-27"          # first day of the daily cadence
+DAILY = [d for d in dates if d >= BATCH_CUTOFF]
+BATCH = [d for d in dates if d < BATCH_CUTOFF]
+
+if not BATCH and len(dates) <= 10:
+    tot = {d: sum(M[(d, s)] for s in subs) for d in dates}
+    top = subs[:6]                    # a line per subtopic past six is unreadable
+    fig, ax = plt.subplots(figsize=(11.0, 6.4))
+    x = np.arange(len(dates))
+    ax2 = ax.twinx()
+    ax2.bar(x, [tot[d] for d in dates], width=0.62, color=GRID, zorder=0,
+            label="records in issue (right axis)")
+    ax2.set_ylabel("Records in issue", fontsize=11.0, color=SLATE)
+    ax2.tick_params(axis="y", labelcolor=SLATE, labelsize=10)
+    ax2.set_ylim(0, max(tot.values()) * 1.9)
+    for sp in ("top", "left"):
+        ax2.spines[sp].set_visible(False)
+    for s in top:
+        ax.plot(x, [M[(d, s)] for d in dates], marker="o", ms=5.5, lw=2.0,
+                color=SUBCOL.get(s, DEEP), label=s, zorder=3)
+    ax.set_xticks(x)
+    ax.set_xticklabels([d[5:] for d in dates], fontsize=11)
+    ax.set_ylabel("Records in subtopic", fontsize=11.5)
+    ax.set_xlabel("Issue date (2026)", fontsize=11.5)
+    ax.set_ylim(0, max(max(M[(d, s)] for d in dates for s in top), 4) * 1.25)
+    ax.set_title("Subtopic movement across the week (%s to %s)" % (START, END), pad=12)
+    ax.yaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax.set_axisbelow(True)
+    for sp in ("top", "right"):
+        ax.spines[sp].set_visible(False)
+    h1, l1 = ax.get_legend_handles_labels()
+    h2, l2 = ax2.get_legend_handles_labels()
+    ax.legend(h1 + h2, l1 + l2, loc="upper center", bbox_to_anchor=(0.5, -0.13),
+              ncol=3, fontsize=9.8, frameon=False)
+    fig.tight_layout()
+    save(fig, "w1_subtopic_trend.png")
+    print("weekly trend figure written for %s..%s over %d issues" % (START, END, len(dates)))
+    raise SystemExit
+
 caught = np.array([sum(M[(d, s)] for d in DAILY) for s in subs], dtype=float)
 missed = np.array([sum(M[(d, s)] for d in BATCH) for s in subs], dtype=float)
 order = np.argsort(caught + missed)
