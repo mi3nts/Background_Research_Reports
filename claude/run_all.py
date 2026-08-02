@@ -52,8 +52,10 @@ def post(date):
     env = {"PMRW_DATE": date, "PMRW_FIGDIR": figdir, "PMRW_BUILD": build}
     run(["python3", "plots.py"], env)
     run(["python3", "mktable.py"], env)
-    if not os.path.exists(os.path.join(build, "preamble.tex")):
-        run(["cp", os.path.join(HERE, "preamble.tex"), build])
+    # ALWAYS refresh: build/ is scratch, and a stale copy silently compiles the previous
+    # design system. A preamble edit on 2026-08-02 (rollup digest macros) was invisible
+    # to the build for exactly this reason - same failure class as the stale fig symlink.
+    run(["cp", os.path.join(HERE, "preamble.tex"), build])
     # Always repoint the symlink: a stale link from a previous issue silently
     # compiles yesterday's figures into today's PDF.
     link = os.path.join(build, "fig")
@@ -127,8 +129,10 @@ def rollup(cadence, end):
     run(["python3", "plots_weekly.py"], env)    # w1 trend panel from metrics.csv
     run(["python3", "mktable.py"], env)
     run(["python3", "mkdigest.py"], env)        # per-paper digest body for the rollup
-    if not os.path.exists(os.path.join(build, "preamble.tex")):
-        run(["cp", os.path.join(HERE, "preamble.tex"), build])
+    # ALWAYS refresh: build/ is scratch, and a stale copy silently compiles the previous
+    # design system. A preamble edit on 2026-08-02 (rollup digest macros) was invisible
+    # to the build for exactly this reason - same failure class as the stale fig symlink.
+    run(["cp", os.path.join(HERE, "preamble.tex"), build])
     link = os.path.join(build, "fig")
     if os.path.islink(link) or os.path.exists(link):
         try:

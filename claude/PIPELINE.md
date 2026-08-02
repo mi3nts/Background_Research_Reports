@@ -379,3 +379,34 @@ skip if the output file already exists.
 - Carry forward: `state/` has no ORCID or affiliation field, so author-cluster analysis in
   the rollups degenerates to surname frequency (Chen 5, Zhou 5 — distinct groups). The
   weekly says so rather than reporting the noise; a schema change is the real fix.
+
+### 2026-08-02 — the rollup digest becomes a contract; weekly layout rebalanced
+Four fixes, all upstream of the one issue that exposed them.
+
+- **`mkdigest.py` now serves every cadence.** It read a hand-built
+  `cache/2026-07-monthly/daily_summaries.json`, so it only ever worked for July 2026.
+  It now builds its index by **parsing `issues/digest_*.tex` inside the window**
+  (`harvest_summaries`, brace-aware `_args`), which means any rollup — including ones that
+  do not exist yet — gets verbatim full summaries for free, and a rollup can never quote a
+  summary that was not actually shipped. `WITHDRAWN` issues are skipped. The July cache is
+  kept as an overriding overlay so that monthly reproduces unchanged. Tier label is now
+  cadence-neutral ("Not carried by a daily issue"), not "month-wide harvest".
+- **The paper-level digest is now mandatory in `templates/weekly.tex` and
+  `templates/monthly.tex`.** A rollup that only tabulates its records is a table of
+  contents. The weekly carries 123 full summaries + 8 metadata-only across 131 records.
+- **`\subsectionnote` and `\precisentry` moved into `preamble.tex`.** They were defined
+  locally in `build/monthly.tex`, so the first weekly to use the digest failed with 40
+  undefined-control-sequence errors. Related and worse: **`run_all` only copied
+  `preamble.tex` into `build/` if it was absent**, so the fix was invisible to the build —
+  a stale scratch copy silently compiled the old design system, exactly the failure class
+  the stale-`fig`-symlink guard already existed for. It now always refreshes.
+- **Figures.** (i) `w1`'s subtopic lines were completely hidden: a twin axis is created
+  after its parent and draws over it, so `zorder` inside `ax` cannot beat artists in
+  `ax2` — fixed by lifting the line axes above the bar axes and making its patch
+  invisible, plus `alpha=0.55` on the bars. (ii) `plots.py` now also emits
+  **`f2a_architecture.png` (wide/short) and `f2b_endpoint.png`** as separate panels; the
+  combined `f2` is squeezed at rollup scale. The weekly puts the architecture donut in the
+  whitespace under the trend text and gives the endpoint bars a full-width slot with `f1`.
+  Both templates carry the placement rule as a comment so it survives.
+- Weekly: **30 pp, 0 LaTeX errors, 0 overfull boxes**, no page given over to a single
+  figure.

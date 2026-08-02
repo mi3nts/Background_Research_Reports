@@ -110,6 +110,32 @@
 \newcommand{\figcap}[1]{\par\vspace{1.0mm}
   {\fontsize{7.2}{8.6}\selectfont\color{Slate}\textsf{\textbf{Fig.}}\; #1\par}\vspace{1.5mm}}
 
+% ---- rollup digest tiers -------------------------------------------------------
+% Promoted from build/monthly.tex on 2026-08-02: mkdigest.py emits \subsectionnote and
+% \precisentry for EVERY cadence, so defining them only in the monthly meant the first
+% weekly that used the digest failed to compile with 40 undefined-control-sequence
+% errors. They belong in the shared design system, not in one issue.
+% A tier label inside a band.
+\providecommand{\subsectionnote}[1]{%
+  \vspace{0.6mm}\noindent{\sffamily\fontsize{7.4}{9}\selectfont\color{Slate}\textsc{#1}}\par
+  \vspace{1.0mm}}
+% Compact entry for a record with no assessed summary. Deliberately lighter than
+% \paperentry so a reader can tell an assessed summary from an unread record at a glance.
+% Wrapped in a minipage so an entry never splits across a page break - without it a
+% single DOI line was left stranded on an otherwise empty page.
+\providecommand{\precisentry}[6]{%
+  \vspace{1.1mm}\noindent
+  \begin{minipage}{\linewidth}
+  \raggedright
+  {\sffamily\bfseries\fontsize{8.0}{9.6}\selectfont\color{Deep}#1}\;\;%
+  {\sffamily\fontsize{7.2}{9}\selectfont\color{Slate}#3}\par
+  {\fontsize{7.6}{9.2}\selectfont\itshape\color{Ink}#2\par}
+  {\fontsize{7.4}{9.0}\selectfont\color{Ink}#4\par}
+  {\fontsize{6.6}{8}\selectfont\color{Slate}%
+   \texttt{doi:\,\href{https://doi.org/#5}{#6}}\par}
+  \end{minipage}
+  \vspace{0.4mm}}
+
 \providecommand{\permil}{\textperthousand}
 
 \setlength{\parindent}{0pt}

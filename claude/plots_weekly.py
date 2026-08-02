@@ -51,10 +51,16 @@ BATCH = [d for d in dates if d < BATCH_CUTOFF]
 if not BATCH and len(dates) <= 10:
     tot = {d: sum(M[(d, s)] for s in subs) for d in dates}
     top = subs[:6]                    # a line per subtopic past six is unreadable
-    fig, ax = plt.subplots(figsize=(11.0, 6.4))
+    fig, ax = plt.subplots(figsize=(11.0, 5.3))
     x = np.arange(len(dates))
     ax2 = ax.twinx()
-    ax2.bar(x, [tot[d] for d in dates], width=0.62, color=GRID, zorder=0,
+    # A twin axis is created after its parent and therefore DRAWS OVER IT: zorder set
+    # inside ax has no effect against artists in ax2, so the denominator bars hid the
+    # subtopic lines completely in the first weekly build. Lift the line axes above the
+    # bar axes and punch out its background so the bars stay visible underneath.
+    ax.set_zorder(ax2.get_zorder() + 1)
+    ax.patch.set_visible(False)
+    ax2.bar(x, [tot[d] for d in dates], width=0.62, color=GRID, alpha=0.55, zorder=0,
             label="records in issue (right axis)")
     ax2.set_ylabel("Records in issue", fontsize=11.0, color=SLATE)
     ax2.tick_params(axis="y", labelcolor=SLATE, labelsize=10)

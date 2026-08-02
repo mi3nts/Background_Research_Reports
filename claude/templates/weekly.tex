@@ -21,6 +21,14 @@
 %%   6. Trial-registry watch (state/trials.json, first_seen inside the window)
 %%   7. Open gaps
 %%   8. A short read on where the field is heading
+%%   9. Subtopic-classified paper-level digest of EVERY record in the period
+%%      (\input{digest_body}, written by mkdigest.py) -- same as the daily and the
+%%      monthly. Added 2026-08-02; a rollup without it is a table of contents.
+%%
+%% Figure placement (2026-08-02): use the SPLIT panels f2a_architecture.png and
+%% f2b_endpoint.png, not the combined f2_design_endpoint.png. The architecture donut
+%% belongs in the whitespace under the trend text on the same page; the endpoint bars go
+%% with f1 on the analytics page. Never give either panel a page of its own.
 %% ===========================================================================
 \documentclass[10pt]{article}
 \providecommand{\FIGDIR}{fig}
@@ -101,6 +109,18 @@ genuine decline from journal-issue timing.>
 
 \textbf{Flat but load-bearing.} <Steady clusters that carry the field regardless of weekly noise.>
 
+%% LAYOUT RULE (set 2026-08-02, do not undo): the architecture donut goes HERE, in the
+%% whitespace under the trend text, not on its own page. plots.py emits the two f2 panels
+%% separately as f2a_architecture.png (wide and short) and f2b_endpoint.png precisely so
+%% a rollup can place them independently. The combined f2_design_endpoint.png is for the
+%% daily, where both panels are small. Do not \clearpage before this figure.
+\vspace{3mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Pooled study architecture. <Name the dominant architecture and give the review
+share explicitly --- a high review count is a publication-cycle artefact, not new
+evidence. Say how many records are trials or interventions; it is usually 0 or 1 and that
+is the finding.>}
+
 \clearpage
 
 % -------------------------------------------------------------- pooled analytics
@@ -111,8 +131,10 @@ genuine decline from journal-issue timing.>
 \figcap{Pooled subtopic distribution, \PERIODSTART{} to \PERIODEND.}
 
 \vspace{2mm}
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
-\figcap{Pooled study architecture and health endpoint.}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2b_endpoint.png}
+\figcap{Pooled health endpoint by organ system. <Give the no-endpoint and not-extracted
+counts as a share of the period --- that share is what an instrumentation-weighted corpus
+looks like. Warn that the long tail below 3 records is one study each, not a trend.>}
 
 \clearpage
 
@@ -202,6 +224,33 @@ demand is the field converging on? What would change the picture? What should a
 distributed low-cost PM sensing programme do differently next week as a result? State
 confidence and be willing to say the week was uninformative.>
 \end{keybox}
+
+\clearpage
+
+% ==================================================================== DIGEST
+%% MANDATORY (set 2026-08-02). Every rollup carries the subtopic-classified paper-level
+%% digest, exactly as the daily and monthly do -- a rollup that only tabulates its records
+%% is a table of contents, not a review. run_all.rollup already calls mkdigest.py, which
+%% writes build/digest_body.tex for whatever PMRW_START..PMRW_END is set.
+%%
+%% mkdigest.py builds its index by PARSING issues/digest_*.tex inside the window, so full
+%% summaries appear automatically for any record that was published in a daily issue --
+%% verbatim, never re-written. Records with no daily entry fall to \precisentry and are
+%% labelled as unassessed. Both macros live in preamble.tex; do not redefine them here.
+%% State the two-tier split in the prose below with real counts, and state plainly that
+%% absence of criticism in the lower tier is not approval.
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the week by subtopic}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2mm}
+
+\footnotesize
+<Every record of the period, grouped by subtopic. Give the split: N of M records carry the
+full critical summary lifted verbatim from the archived daily issue; the remainder are
+precis or metadata-only and are NOT assessed. Say that the absence of criticism in the
+lower tier means the record is unread, not sound.>
+
+\vspace{3mm}
+
+\input{digest_body}
 
 \clearpage
 

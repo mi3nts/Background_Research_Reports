@@ -159,14 +159,23 @@ bars are genuine daily windows. The panel is included because the contrast is th
 point: four narrow daily windows recovered 95 records while one month-wide query
 recovered 51 more that the dailies never saw.}
 
+%% Figure placement (2026-08-02): prefer the SPLIT panels f2a_architecture.png and
+%% f2b_endpoint.png over the combined f2_design_endpoint.png. At rollup scale the
+%% endpoint list runs to ~18 rows while the donut is squeezed to a quarter of the text
+%% width, which leaves a wide band of dead space beside it and pushes the endpoint
+%% labels over the donut's legend. Split, place the architecture panel in whatever
+%% whitespace precedes it, and give the endpoint bars the full width.
+\vspace{3mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Study architecture over the month. Measurement campaigns are the largest class
+(30), ahead of observational cohorts (25), modelling/inventory (22) and reviews (22).
+Only one trial or intervention record appeared in the entire month, which is the standing
+weakness of this evidence base: almost nothing here is experimental in humans.}
+
 \clearpage
 
-\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
-\figcap{Left --- study architecture over the month. Measurement campaigns are the
-largest class (30), ahead of observational cohorts (25), modelling/inventory (22) and
-reviews (22). Only one trial or intervention record appeared in the entire month, which
-is the standing weakness of this evidence base: almost nothing here is experimental in
-humans. Right --- health endpoint distribution.}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2b_endpoint.png}
+\figcap{Health endpoint distribution over the month.}
 
 \vspace{3mm}
 
@@ -341,6 +350,27 @@ CPC or aethalometer reference, framed explicitly against the new EU particle-num
 monitoring requirement.} If that does not appear by the September issue, the
 measurement community is lagging the epidemiology by more than the usual cycle, and the
 right inference is that the bottleneck is hardware cost rather than research attention.
+
+\clearpage
+
+% ==================================================================== DIGEST
+%% MANDATORY, same contract as the daily and the weekly (formalised 2026-08-02).
+%% run_all.rollup calls mkdigest.py, which writes build/digest_body.tex for the active
+%% PMRW_START..PMRW_END. Full summaries are lifted VERBATIM from issues/digest_*.tex by
+%% parsing the archive -- never re-written, never re-typed. Records with no daily entry
+%% get \precisentry (extractive precis or metadata only) and must be labelled unassessed.
+%% \subsectionnote and \precisentry are defined in preamble.tex; do not redefine here.
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the month by subtopic}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2mm}
+
+\footnotesize
+<Give the two-tier split with real counts and state plainly that a precis is not an
+assessment: it has not been checked against the paper, no limitation has been identified,
+and the absence of criticism is not approval.>
+
+\vspace{3mm}
+
+\input{digest_body}
 
 \clearpage
 

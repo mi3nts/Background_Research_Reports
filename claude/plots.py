@@ -252,6 +252,42 @@ despine(ax2, keep=("bottom",)); ax2.tick_params(axis="y", length=0)
 ax2.tick_params(axis="y", labelsize=FS(8.2))
 save(fig, "f2_design_endpoint.png")
 
+# Split versions of the same two panels. The combined figure is the right shape for a
+# daily, where both panels are small; in a rollup the architecture donut is squeezed to a
+# quarter of the text width while the endpoint bar list runs to 18 rows, so the page ends
+# up with a wide band of whitespace beside the donut. Emitting the panels separately lets
+# a rollup template place each one where it actually fits. Same data, same colours.
+# Wide-and-short so the panel fits in the whitespace under a trend figure rather than
+# forcing its own page: donut left, legend as a single column to its right.
+_fa, _axa = plt.subplots(figsize=SZ(8.6, 3.5))
+_w, _ = _axa.pie(w, colors=SEQ[:len(w)], startangle=90, radius=1.0,
+                 wedgeprops=dict(width=0.40, edgecolor=PAPER, linewidth=1.8))
+_axa.text(0, 0.09, str(sum(w)), ha="center", va="center", fontsize=FS(22),
+          fontweight="bold", color=DEEP)
+_axa.text(0, -0.17, "records", ha="center", va="center", fontsize=FS(9.5), color=SLATE)
+_axa.legend(_w, [f"{l}  ({v})" for l, v in zip(lab, w)],
+            loc="center left", bbox_to_anchor=(0.92, 0.5), fontsize=FS(8.0),
+            ncol=2 if len(lab) > 6 else 1,
+            handlelength=1.0, handletextpad=0.5, labelspacing=0.48, columnspacing=1.1,
+            frameon=False)
+_axa.set_title("Study architecture", pad=6)
+save(_fa, "f2a_architecture.png")
+
+_fb, _axb = plt.subplots(figsize=SZ(9.0, max(3.4, 0.30 * len(ep) + 1.1)))
+_axb.barh([k for k, _ in ep_items], [v for _, v in ep_items],
+          color=[SEQ[i % len(SEQ)] for i in range(len(ep_items))][::-1],
+          height=0.66, zorder=3)
+for i, (_, v) in enumerate(ep_items):
+    _axb.text(v + max(ep.values()) * 0.015, i, str(v), va="center", fontsize=FS(9.0),
+              fontweight="bold", color=INK)
+_axb.set_xlim(0, max(ep.values()) + 1)
+_axb.set_xlabel("Records")
+_axb.set_title("Health endpoint / organ system", pad=6)
+_axb.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); _axb.set_axisbelow(True)
+despine(_axb, keep=("bottom",)); _axb.tick_params(axis="y", length=0)
+_axb.tick_params(axis="y", labelsize=FS(9.0))
+save(_fb, "f2b_endpoint.png")
+
 # ---------------------------------------------------------------- 3. PM metric + geography
 def pmclass(s):
     s = s.lower()
