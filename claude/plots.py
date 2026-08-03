@@ -181,6 +181,22 @@ design_group = {
     "Prospective birth cohort": "Observational - cohort",
     "Ecological panel, fixed effects": "Observational - ecological",
     "Ecological panel": "Observational - ecological",
+    # added 2026-08-03: the 1 Aug fix covered the instrumentation designs that existed
+    # then, but an issue whose corpus is 41% instrumentation exposed eleven more that
+    # still fell through. Proofing caught it because the donut AND the f4 heatmap both
+    # collapsed to a single "Other / mixed" column, which made two figures worthless.
+    "Software / tool description": "Tool / software",
+    "Methods / near-road field data": "Measurement campaign",
+    "Laboratory metrology": "Chamber / laboratory",
+    "Controlled chamber factorial": "Chamber / laboratory",
+    "Chamber co-location, AutoML calibration": "Chamber / laboratory",
+    "Release-recapture field experiment": "Measurement campaign",
+    "Multi-site co-location evaluation": "Measurement campaign",
+    "Calibration model comparison": "Measurement campaign",
+    "Spatial cross-validation, operational network": "Measurement campaign",
+    "Mechanistic correction framework": "Modelling / inventory",
+    "Model intercomparison": "Modelling / inventory",
+    "Exposure assessment + in vitro": "Experimental / toxicology",
     # honest fall-through for records surfaced without an abstract: they get their
     # own slice rather than being silently pooled with characterised designs
     "Metadata only (no abstract)": "Metadata only",
@@ -210,6 +226,10 @@ ENDPOINT_CANON = {
     "Developmental / oxidative": "Reproductive", "Placental": "Reproductive",
     "Endocrine / puberty": "Reproductive",
     "Infectious surveillance": "Other clinical",
+    # added 2026-08-03
+    "None (monitoring)": "No health endpoint",
+    "Epigenetic ageing": "Epigenetic ageing",
+    "Toxicological (in vitro)": "Toxicological (in vitro)",
 }
 def canon_ep(e):
     return ENDPOINT_CANON.get(e, e)

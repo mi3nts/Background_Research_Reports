@@ -410,3 +410,39 @@ Four fixes, all upstream of the one issue that exposed them.
   Both templates carry the placement rule as a comment so it survives.
 - Weekly: **30 pp, 0 LaTeX errors, 0 overfull boxes**, no page given over to a single
   figure.
+
+### 2026-08-03 — instrumentation backfill, and two figures that were silently worthless
+Window 2–3 Aug (Sun–Mon), contiguous with 1 Aug. **32 records, 4 rejected.**
+
+- **Source counts.** PubMed connector 21 on the health axis vs **14 from the local
+  harvester** on the same window — the connector is the better recall leg and both are now
+  worth running; instrumentation axis 2, both already in the health set; union 23, 19
+  retained. Europe PMC 0. Crossref by-journal 1 (Lu, *Atmos Environ*, metadata-only).
+  arXiv 0 inside the recency screen. **OpenAlex returned HTTP 429** on top of the standing
+  paid-plan block — leg stays dead. Consensus ×4 sweeps returned **12**, all new.
+- **The Consensus records are Jan–Jun 2026 publications, not 2–3 Aug entries.** A two-day
+  weekend window on a literature PubMed does not index would have shipped an empty sensing
+  section. They are carried, dated to this issue, and **labelled in the masthead, the f1
+  caption and the provenance box as a backfill** so no trend line through 13 sensing
+  records is read as a two-day flux. The next weekly must not treat it as one.
+- **`plots.py` design map was still incomplete and it cost two figures.** The 1 Aug fix
+  covered the instrumentation designs that existed then; eleven more fell through here, so
+  the architecture donut *and* the f4 heatmap both collapsed to a single "Other / mixed"
+  column. Caught only by looking at the rendered page. Eleven mappings added plus two new
+  groups (`Tool / software`, `Chamber / laboratory`); endpoint canon gained
+  `None (monitoring)`, `Epigenetic ageing`, `Toxicological (in vitro)`, which collapsed a
+  17-bar endpoint panel to 6. **Lesson: any issue that introduces new `design` strings
+  must be re-proofed at the figure, not just at the DOI gate.**
+- **The forest plot was dropped, deliberately.** The window's only CI-bearing estimate is
+  Thies et al.'s 1.93 percentage-point *survival difference*; on the log-ratio axis the
+  null line at 1.0 falls inside its interval and it reads as a non-significant risk ratio.
+  Replaced with a keybox stating that no ratio-metric estimate was reported and why —
+  a misleading figure is worse than an absent one. `EFFECTS` is `[]` for this date.
+- **Author attribution defect found and fixed before shipping.** First-author surnames
+  were initially inferred rather than read; 16 of 19 were wrong. They are now taken from
+  the `efetch` `AuthorList`. **Verify `short` against efetch every run.**
+- Trial watch +14 (incl. NCT06376994, 770-participant multi-centre sham-controlled COPD
+  air-cleaner RCT; NCT06070428, n=400 heart failure; NCT07536178/NCT06749093 controlled
+  woodsmoke chambers). Surfaced in the weekly.
+- Daily 11 pp, **0 LaTeX errors, 0 overfull/underfull boxes**, all DOIs resolved (6
+  advisory paraphrase warnings). `metrics.csv` quoting confirmed correct — defect closed.
