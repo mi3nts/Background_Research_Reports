@@ -25,3 +25,7 @@ claude/log[0-9].txt
 
 # session tooling, not part of the pipeline
 .claude/
+
+# superseded state moved aside (mount is delete-restricted; remove on a local checkout)
+claude/state/.retired/
+claude/build/trash/

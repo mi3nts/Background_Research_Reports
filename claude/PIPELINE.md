@@ -411,38 +411,56 @@ Four fixes, all upstream of the one issue that exposed them.
 - Weekly: **30 pp, 0 LaTeX errors, 0 overfull boxes**, no page given over to a single
   figure.
 
-### 2026-08-03 — instrumentation backfill, and two figures that were silently worthless
-Window 2–3 Aug (Sun–Mon), contiguous with 1 Aug. **32 records, 4 rejected.**
+### 2026-08-02 — instrumentation backfill, two silently worthless figures, and an EDAT split
+Window **2 Aug alone** (Sunday), contiguous with 1 Aug. **31 records, 4 rejected, 1 held back.**
 
+- **Date correction, and the rule it establishes.** This issue was first built and pushed
+  as `2026-08-03` because the harvest window was `last_entry_date+1 → today` = 2–3 Aug and
+  the issue was dated to the query window's end. That is wrong when the run happens early
+  in the day: it consumes tomorrow's entry date. **An issue must be dated to the entry date
+  its records actually carry, and the harvest split on the per-record `[EDAT]` value, not
+  on the query window.** Reading `PubmedData/History/PubMedPubDate[@PubStatus="pubmed"]`
+  (*not* `entrez`, which runs a day earlier and does not match what `[EDAT]` filters on)
+  showed **18 of 19 retained PubMed records at 2 Aug and exactly one at 3 Aug**. The issue
+  was re-dated to 2 Aug, Nimmala et al. (PMID 42543389) was pulled and logged to
+  `rejected.jsonl` as **`HELD BACK`** rather than as a rejection, and `last_entry_date` set
+  to `2026-08-02` so the 3 Aug run picks it up. The withdrawn 3 Aug PDF, its mirror and its
+  `.tex` were moved to `claude/build/trash/` (mount is delete-restricted).
 - **Source counts.** PubMed connector 21 on the health axis vs **14 from the local
-  harvester** on the same window — the connector is the better recall leg and both are now
+  harvester** on the same window — the connector is the better recall leg and both are
   worth running; instrumentation axis 2, both already in the health set; union 23, 19
-  retained. Europe PMC 0. Crossref by-journal 1 (Lu, *Atmos Environ*, metadata-only).
-  arXiv 0 inside the recency screen. **OpenAlex returned HTTP 429** on top of the standing
-  paid-plan block — leg stays dead. Consensus ×4 sweeps returned **12**, all new.
-- **The Consensus records are Jan–Jun 2026 publications, not 2–3 Aug entries.** A two-day
-  weekend window on a literature PubMed does not index would have shipped an empty sensing
-  section. They are carried, dated to this issue, and **labelled in the masthead, the f1
-  caption and the provenance box as a backfill** so no trend line through 13 sensing
-  records is read as a two-day flux. The next weekly must not treat it as one.
+  retained, 18 carried. Europe PMC 0. Crossref by-journal 1 (Lu, *Atmos Environ*,
+  `created` 2 Aug, metadata-only). arXiv 0 inside the recency screen. **OpenAlex returned
+  HTTP 429** on top of the standing paid-plan block — leg stays dead. Consensus ×4 sweeps
+  returned **12**, all new.
+- **The Consensus records are Jan–Jun 2026 publications, not 2 Aug entries.** A single
+  Sunday on a literature PubMed does not index would have shipped an empty sensing section.
+  They are carried, dated to this issue, and **labelled in the masthead, the f1 caption and
+  the provenance box as a backfill** so no trend line through 12 sensing records is read as
+  a one-day flux. **The next weekly must not treat it as one.**
 - **`plots.py` design map was still incomplete and it cost two figures.** The 1 Aug fix
   covered the instrumentation designs that existed then; eleven more fell through here, so
   the architecture donut *and* the f4 heatmap both collapsed to a single "Other / mixed"
   column. Caught only by looking at the rendered page. Eleven mappings added plus two new
   groups (`Tool / software`, `Chamber / laboratory`); endpoint canon gained
-  `None (monitoring)`, `Epigenetic ageing`, `Toxicological (in vitro)`, which collapsed a
-  17-bar endpoint panel to 6. **Lesson: any issue that introduces new `design` strings
-  must be re-proofed at the figure, not just at the DOI gate.**
+  `None (monitoring)`, `Epigenetic ageing`, `Toxicological (in vitro)`, collapsing a
+  17-bar endpoint panel to 6. **Any issue that introduces new `design` strings must be
+  re-proofed at the figure, not just at the DOI gate.**
 - **The forest plot was dropped, deliberately.** The window's only CI-bearing estimate is
   Thies et al.'s 1.93 percentage-point *survival difference*; on the log-ratio axis the
   null line at 1.0 falls inside its interval and it reads as a non-significant risk ratio.
-  Replaced with a keybox stating that no ratio-metric estimate was reported and why —
-  a misleading figure is worse than an absent one. `EFFECTS` is `[]` for this date.
-- **Author attribution defect found and fixed before shipping.** First-author surnames
-  were initially inferred rather than read; 16 of 19 were wrong. They are now taken from
-  the `efetch` `AuthorList`. **Verify `short` against efetch every run.**
+  Replaced with a keybox stating that no ratio-metric estimate was reported and why.
+  `EFFECTS` is `[]` for this date — `plots.py` writes no `f5_forest.png`, so the
+  `\includegraphics` must be removed from the template too or a stale figure compiles.
+- **Author attribution defect found before shipping.** First-author surnames were initially
+  inferred rather than read; **16 of 19 were wrong**. Now taken from the `efetch`
+  `AuthorList`. **Verify `short` against efetch every run.**
 - Trial watch +14 (incl. NCT06376994, 770-participant multi-centre sham-controlled COPD
   air-cleaner RCT; NCT06070428, n=400 heart failure; NCT07536178/NCT06749093 controlled
   woodsmoke chambers). Surfaced in the weekly.
 - Daily 11 pp, **0 LaTeX errors, 0 overfull/underfull boxes**, all DOIs resolved (6
   advisory paraphrase warnings). `metrics.csv` quoting confirmed correct — defect closed.
+- **For the 3 Aug run:** window is `2026-08-03 → 2026-08-03`; Nimmala et al. is a known
+  held-back record, not a gap; run Consensus on *different* axes (mobile/personal
+  monitoring, source apportionment, drift over multi-year deployment) since the calibration
+  and satellite-fusion axes were swept dry today.

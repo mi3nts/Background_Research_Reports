@@ -1,6 +1,6 @@
 {
- "date": "2026-08-03",
- "entry_window": "2026-08-02 -> 2026-08-03",
+ "date": "2026-08-02",
+ "entry_window": "2026-08-02 -> 2026-08-02",
  "PAPERS": [
   {
    "pmid": "42540936",
@@ -43,20 +43,6 @@
    "endpoint": "None (monitoring)",
    "n": "35 single-component materials, 2 filter loadings",
    "tier": "A"
-  },
-  {
-   "pmid": "42543389",
-   "short": "Nimmala et al. 2026",
-   "doi": "10.1007/s10661-026-15632-3",
-   "title": "Drone- and ground-based bioaerosol sampling with Lagrangian stochastic dispersal inversion",
-   "journal": "Environ Monit Assess",
-   "sub": "Sensing, forecasting & instrumentation",
-   "design": "Release-recapture field experiment",
-   "pm": "Transgenic switchgrass pollen (bioaerosol)",
-   "geo": "Oliver Springs, TN, USA",
-   "endpoint": "None (monitoring)",
-   "n": "200 GE plants, multi-distance fixed + UAV samplers",
-   "tier": "B"
   },
   {
    "pmid": null,

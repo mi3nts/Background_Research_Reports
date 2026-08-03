@@ -1,6 +1,6 @@
 \documentclass[10pt]{article}
 \providecommand{\FIGDIR}{fig}
-\newcommand{\DIGESTDATE}{3 August 2026}
+\newcommand{\DIGESTDATE}{2 August 2026}
 \input{preamble}
 
 \begin{document}
@@ -29,18 +29,18 @@
  Monitoring \& Health Effects\par}
 \vspace{5.0mm}
 {\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
- Issue 2026-08-03\;\;\textcolor{Amber}{\textbar}\;\;Entry window 2--3 August 2026,
+ Issue 2026-08-02\;\;\textcolor{Amber}{\textbar}\;\;Entry window 2 August 2026,
  plus an out-of-window sensing sweep\;\;%
- \textcolor{Amber}{\textbar}\;\;32 records in scope\par}
+ \textcolor{Amber}{\textbar}\;\;31 records in scope\par}
 \vspace{18mm}
 
 % -------------------------------------------------------------- metric strip
 \noindent
-\begin{minipage}[t]{0.190\linewidth}\metric{32}{RECORDS IN SCOPE\\(7 SUBTOPICS)}{Deep}\end{minipage}\hfill
-\begin{minipage}[t]{0.190\linewidth}\metric{13}{SENSING /\\INSTRUMENTATION}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{31}{RECORDS IN SCOPE\\(7 SUBTOPICS)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{12}{SENSING /\\INSTRUMENTATION}{Teal}\end{minipage}\hfill
 \begin{minipage}[t]{0.190\linewidth}\metric{6}{ON SENSOR WATER /\\HUMIDITY ARTEFACT}{Sky}\end{minipage}\hfill
 \begin{minipage}[t]{0.190\linewidth}\metric{4}{REJECTED WITH\\LOGGED REASON}{Amber}\end{minipage}\hfill
-\begin{minipage}[t]{0.190\linewidth}\metric{23}{RECORDS WITH NO\\HEALTH ENDPOINT}{Clay}\end{minipage}
+\begin{minipage}[t]{0.190\linewidth}\metric{22}{RECORDS WITH NO\\HEALTH ENDPOINT}{Clay}\end{minipage}
 
 \vspace{6mm}
 
@@ -134,9 +134,9 @@ origin of fine particulate chloride in continental China'' (2018;624:1041--1051)
 \vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
 
 \noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
-\figcap{Subtopic assignment of the 32 in-scope records. The distribution is the most
-instrumentation-heavy of any issue to date (13/32, 41\%), which is an artefact of method
-as much as of the field: the two-day PubMed entry window was small and weekend-shaped,
+\figcap{Subtopic assignment of the 31 in-scope records. The distribution is the most
+instrumentation-heavy of any issue to date (12/31, 39\%), which is an artefact of method
+as much as of the field: the 2 August PubMed entry window was a single Sunday,
 so the deliberate Consensus sweep on calibration, humidity correction, siting and edge
 inference dominates. Health-endpoint clusters are correspondingly thin and no record
 this window sits in mechanistic toxicology, cardiovascular/metabolic or
@@ -145,7 +145,7 @@ reproductive/developmental.}
 \vspace{2mm}
 \noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
 \figcap{Left --- study architecture. Right --- health endpoint by organ system.
-\textbf{Twenty-three of 32 records carry no human health endpoint at all}, the highest share
+\textbf{Twenty-two of 31 records carry no human health endpoint at all}, the highest share
 this watch has recorded. That is the direct signature of an instrumentation-weighted
 harvest, and it is the same siloing the 27 July issue flagged: the sensing literature and
 the epidemiology literature are still not citing each other's designs.}
@@ -192,7 +192,7 @@ ratio in the abstract, and the remaining health records are reviews, microbiome
 compositional analyses or null SEM paths. This is the structural signature of an
 instrumentation-weighted harvest: the sensing literature reports $R^2$, RMSE and nRMSE,
 and those do not belong on a forest plot. The pooled plot returns in the weekly rollup,
-which draws on six days rather than two.\par}
+which draws on a full week rather than a single day.\par}
 \end{keybox}
 
 \clearpage
@@ -204,7 +204,7 @@ which draws on six days rather than two.\par}
 {\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
 methodological core and the finding that matters, not an abstract paraphrase.\par}
 
-\band{Sensing, forecasting \& instrumentation\hfill 13 records}{Amber}
+\band{Sensing, forecasting \& instrumentation\hfill 12 records}{Amber}
 
 \paperentry{Chyzhykov et al.\ 2026}
 {Particle-bound water and the composition dependence of gravimetric PM mass}
@@ -403,23 +403,6 @@ deployed node --- so the accuracy figure describes a synthetic label distributio
 power figure omits the real cost of sensor warm-up, radio retries and thermal effects.
 Read as an architecture proposal, not a measurement.}
 {10.3390/s26020703}
-
-\paperentry{Nimmala et al.\ 2026}
-{Drone plus ground sampling with Lagrangian inversion for emission rate}
-{Environ Monit Assess}
-{Release--recapture field studies with 200 transgenic switchgrass plants (two promoter
-constructs, constitutive and pollen-specific) at the centre of a clear-cut field. Pollen
-was sampled with fixed ground and drone-mounted devices at several distances while
-Lagrangian stochastic dispersal simulations were driven by high-resolution wind
-measurements; emission rate was inferred by combining simulated and measured
-concentrations. Emission showed strong diurnal structure, positively correlated with wind
-speed, temperature and vapour pressure deficit and negatively with RH. \textbf{In
-low-wind meandering conditions, letting wind direction vary within the dispersal model
-materially improved emission-rate recovery} --- the standard steady-direction assumption
-fails exactly when dispersion is weakest and concentrations highest. \textbf{Limitation:
-bioaerosol, one site, one season}; transfer to combustion PM is by analogy. The
-meandering result is the portable one for mobile and UAV-based PM sampling.}
-{10.1007/s10661-026-15632-3}
 
 \band{Exposure assessment \& modelling\hfill 8 records}{Clay}
 
@@ -768,20 +751,26 @@ assessment might.}
 {\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
 {\fontsize{7.2}{8.8}\selectfont
 \textbf{Windows --- and they are not uniform, which is stated rather than hidden.}
-The entry-dated legs cover \textbf{2--3 August 2026}, contiguous with the 1 August issue,
-no gap. PubMed was queried on \texttt{[Date - Entry]} along two independent axes: the
+The entry-dated legs cover \textbf{2 August 2026} alone, contiguous with the 1 August
+issue, no gap. The harvest was executed over a 2--3 August query window and then
+\textbf{split on the \texttt{[EDAT]} value read from each record's own PubMed history}
+rather than on the query window: \textbf{18 of the 19 retained PubMed records carry an
+entry date of 2 August} and are carried here; one --- Nimmala et al., transgenic
+switchgrass pollen dispersal, PMID 42543389 --- carries \textbf{3 August and is held back}
+for that issue, logged to \texttt{state/rejected.jsonl} as \texttt{HELD BACK} rather than
+as a rejection so it cannot be lost. PubMed was queried along two independent axes: the
 health axis returned 21 records via the connector against 14 from the local harvester
 (the connector's larger yield is why both are run), the instrumentation axis returned 2,
-both already inside the health set. The union was 23 records, 19 retained. Europe PMC
-\texttt{CREATION\_DATE:[2026-08-02 TO 2026-08-03]} returned 0. The Crossref by-journal leg
+both already inside the health set. Union 23, 19 retained, 18 carried. Europe PMC
+\texttt{CREATION\_DATE:[2026-08-02 TO 2026-08-02]} returned 0. The Crossref by-journal leg
 over eight sensing ISSNs returned \textbf{1} new deposit (Lu et al., \textit{Atmos
-Environ}), carried metadata-only because Elsevier deposits no abstract. arXiv's relevance
-query returned nothing inside the recency screen --- newest hit was 29 July, already past.
-OpenAlex returned \textbf{HTTP 429} today on top of the standing paid-plan block on
-\texttt{from\_created\_date}; that leg remains dead and coverage is routed through
-Consensus as prescribed.
+Environ}, \texttt{created} 2 August), carried metadata-only because Elsevier deposits no
+abstract. arXiv's relevance query returned nothing inside the recency screen --- newest hit
+was 29 July, already past. OpenAlex returned \textbf{HTTP 429} on top of the standing
+paid-plan block on \texttt{from\_created\_date}; that leg remains dead and coverage is
+routed through Consensus as prescribed.
 \\[1.0mm]
-\textbf{The out-of-window sensing sweep.} A two-day weekend window on a literature PubMed
+\textbf{The out-of-window sensing sweep.} A single-Sunday window on a literature PubMed
 structurally under-indexes would have produced a near-empty instrumentation section. Four
 Consensus sweeps --- calibration and drift against reference monitors, satellite--surface
 fusion, network siting and edge inference, humidity and hygroscopic-growth correction ---
@@ -790,20 +779,22 @@ PubMed does not index (\textit{Atmos.\ Meas.\ Tech.}, \textit{Aerosol Sci.\ Tech
 \textit{ACS ES\&T Air}, \textit{IEEE Access}, \textit{Geo-spatial Inf.\ Sci.},
 \textit{Sensor Review}, \textit{Sensors}, \textit{Atmosphere}).
 \textbf{These carry 2026 publication dates from January to June and are not inside the
-2--3 August entry window.} Consensus exposes no entry-date filter, so they are screened by
+2 August entry window.} Consensus exposes no entry-date filter, so they are screened by
 identity, not by date, and are dated to this issue because this is when the sweep surfaced
-them. \textbf{Read the 13-record sensing count as a backfill, not as a two-day flux} ---
+them. \textbf{Read the 12-record sensing count as a backfill, not as a one-day flux} ---
 any trend line drawn through it, including in the next weekly, will overstate the rate.
 DOIs were recovered by Crossref bibliographic matching, since Consensus returns none.
 \\[1.0mm]
-\textbf{Screening.} 32 records retained; \textbf{4 rejected with a logged reason} in
+\textbf{Screening.} 31 records retained; \textbf{4 rejected with a logged reason} in
 \texttt{state/rejected.jsonl} --- one urban-smellscape plant-VOC study with no particulate
 component, one drug-delivery nanocarrier paper in which PM$_{2.5}$ appears only as a
 motivating sentence, one animal-free redox assay in keratinocytes with no inhalation
 route, and the \textit{Sci Total Environ} retraction notice, which carries no research
-content and is noted in the editorial above instead. No cross-source duplicates arose
-today; all 23 PubMed records and all 12 Consensus records were new against
-\texttt{seen.json} on PMID, DOI and title signature.
+content and is noted in the editorial above instead. A fifth record is logged in the same
+file as \texttt{HELD BACK} rather than rejected --- it is in scope and will be summarised
+in the 3 August issue on its own entry date. No cross-source duplicates arose; all 23
+PubMed records and all 12 Consensus records were new against \texttt{seen.json} on PMID,
+DOI and title signature.
 \\[1.0mm]
 \textbf{Trial watch.} The ClinicalTrials.gov sweep on filtration, purifier, cookstove and
 mask interventions returned 25 active interventional records, of which \textbf{14 were new
