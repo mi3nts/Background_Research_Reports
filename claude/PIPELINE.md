@@ -513,3 +513,12 @@ Window **3 Aug alone**, contiguous with 2 Aug. **25 records, 11 rejected, 2 of t
   the Sat 8 Aug run owes a weekly for 2–8 Aug** — it must exclude the 2 Aug and 3 Aug sensing
   backfills from any trend line (both are dated, not entered, in their windows). Authenticate
   Consensus before the next backfill or the sensing leg stays capped at 3/sweep.
+- **Step 9 verified over HTTP, not visually.** The Claude-in-Chrome extension was not connected
+  on this run, so the calendar cell could not be eyeballed. Verified instead by fetching
+  `Reports/reports.json` (8 daily entries, 2026-08-03 newest) and the live PDF itself (renders,
+  10 pp, correct masthead) from `mi3nts.github.io`. **GitHub Pages served a cached manifest for
+  ~1 min after the push** — the first fetch was missing 2026-08-02; a cache-busted query string
+  returned the correct file. Do not treat the first post-push fetch as authoritative.
+- **Manual cleanup owed:** the delete-restricted mount left ~377 `.git/objects/**/tmp_obj_*`
+  files and ~32 moved lock files under `.git/lk/`. All inside `.git`, so untracked and harmless
+  to the site, but they accumulate every run and should be cleared from a normal shell.
