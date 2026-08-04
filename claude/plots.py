@@ -340,7 +340,71 @@ geo_group = {
     "Iran": "Middle East & N. Africa", "France": "Europe", "Italy": "Europe",
     "Denmark": "Europe", "Europe": "Europe", "Kenya": "Sub-Saharan Africa",
 }
-geo = collections.Counter(geo_group.get(p["geo"], "Global / multi-region") for p in PAPERS)
+# Aliases and sub-national place names. `geo` is written as free text on the record
+# ("Chiang Mai, Thailand", "Bogota, Colombia", "Ile-Ife, Nigeria"), so an exact-key
+# lookup silently dumps everything into the fallback. On 2026-08-03 that put 20 of 25
+# records into "Global / multi-region" and made the f3 right panel worthless - the same
+# failure class as the design-map fall-through fixed on 01/02 Aug. Resolution is now
+# exact -> alias -> substring, and anything still unresolved is PRINTED, so a new
+# unmapped place is visible in the run log instead of being absorbed silently.
+GEO_ALIAS = {
+    "United States": "USA", "US": "USA", "U.S.": "USA",
+    "United Kingdom": "UK", "Korea": "South Korea",
+}
+GEO_SUBSTR = [
+    ("united states", "USA"), ("u.s.", "USA"), (" usa", "USA"), ("america", "USA"),
+    ("united kingdom", "UK"), ("england", "UK"), ("london", "UK"), ("scotland", "UK"),
+    ("china", "China"), ("shanghai", "China"), ("beijing", "China"),
+    ("south korea", "South Korea"), ("seoul", "South Korea"), ("korea", "South Korea"),
+    ("taiwan", "Taiwan"), ("japan", "Japan"),
+    ("thailand", "Thailand"), ("chiang mai", "Thailand"), ("vietnam", "Vietnam"),
+    ("india", "India"), ("bangladesh", "Bangladesh"),
+    ("nigeria", "Nigeria"), ("ile-ife", "Nigeria"), ("south africa", "South Africa"),
+    ("southern africa", "South Africa"), ("kenya", "Kenya"), ("ghana", "Ghana"),
+    ("colombia", "Colombia"), ("bogota", "Colombia"), ("brazil", "Brazil"),
+    ("mexico", "Mexico"), ("medellin", "Colombia"),
+    ("germany", "Germany"), ("spain", "Spain"), ("cartagena", "Spain"),
+    ("france", "France"), ("italy", "Italy"), ("poland", "Poland"),
+    ("netherlands", "Netherlands"), ("denmark", "Denmark"), ("norway", "Norway"),
+    ("greece", "Greece"), ("europe", "Europe"),
+    ("canada", "Canada"), ("iran", "Iran"), ("turkiye", "Turkiye"),
+    ("australia", "Australia"),
+    ("global", "Global"), ("multi-region", "Global"), ("worldwide", "Global"),
+    # surfaced by the unmapped diagnostic when it was first run over 31 Jul - 2 Aug;
+    # these matter for the weekly/monthly rollups, not just for today's issue
+    ("hong kong", "China"), ("finland", "Norway"), ("northern ireland", "UK"),
+    ("ireland", "Europe"), ("bulgaria", "Bulgaria"), ("sofia", "Bulgaria"),
+    ("antwerp", "Europe"), ("oslo", "Norway"), ("zagreb", "Europe"),
+    ("siberia", "Global"), ("multi-country", "Global"), ("czech", "Czech Republic"),
+    ("pakistan", "India"), ("indonesia", "Vietnam"), ("malaysia", "Vietnam"),
+    ("singapore", "Vietnam"), ("egypt", "Turkiye"), ("saudi", "Turkiye"),
+    ("new zealand", "Australia"), ("switzerland", "Europe"), ("sweden", "Norway"),
+    ("belgium", "Europe"), ("austria", "Europe"), ("portugal", "Europe"),
+]
+# Labels that are honestly not geographic. They belong in the fallback bucket by
+# intent, not by accident, so they must not trip the unmapped warning.
+GEO_NONGEO = ("chamber", "laboratory", "lab ", "n/a", "not stated", "not applicable",
+              "method", "synthetic", "simulation", "in vitro", "in silico", "deposit")
+_geo_unmapped = set()
+def geo_of(g):
+    g = (g or "").strip()
+    if g in geo_group:
+        return geo_group[g]
+    if GEO_ALIAS.get(g) in geo_group:
+        return geo_group[GEO_ALIAS[g]]
+    low = g.lower()
+    for needle, key in GEO_SUBSTR:
+        if needle in low:
+            return geo_group[key]
+    # A chamber/methods paper with no field site is genuinely not geographic.
+    if any(w in low for w in GEO_NONGEO) or not low:
+        return "Global / multi-region"
+    _geo_unmapped.add(g)
+    return "Global / multi-region"
+
+geo = collections.Counter(geo_of(p["geo"]) for p in PAPERS)
+if _geo_unmapped:
+    print("!! geo unmapped (add to geo_group/GEO_SUBSTR):", sorted(_geo_unmapped))
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=SZ(9.4, 3.9),
                                gridspec_kw={"wspace": 0.46})

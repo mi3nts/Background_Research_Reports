@@ -247,6 +247,26 @@
    "study_type": "INTERVENTIONAL",
    "seen_window": "2026-08-02",
    "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
+  },
+  {
+   "nct_id": "NCT05874479",
+   "title": "Reducing AIR Pollution Exposure to Lower Blood PRESSURE Among New York City Public Housing Residents",
+   "status": "RECRUITING",
+   "study_type": "INTERVENTIONAL",
+   "phase": "NA",
+   "conditions": [
+    "Blood Pressure"
+   ],
+   "interventions": [
+    "Active portable air cleaner",
+    "Sham portable air cleaner"
+   ],
+   "sponsor": "NYU Langone Health",
+   "enrollment": 440,
+   "start_date": "2023-12-20",
+   "primary_completion_date": "2027-09",
+   "seen_window": "2026-08-03..2026-08-03",
+   "note": "Sham-controlled portable-air-cleaner RCT with a blood-pressure endpoint in public housing; registration updated in this window, already held as a top-level record from the 2026-07-29 run."
   }
  ],
  "windows": [
@@ -254,6 +274,12 @@
    "window": "2026-07-31..2026-08-01",
    "registrations_or_updates": 1,
    "new_to_state": 1
+  },
+  {
+   "window": "2026-08-03..2026-08-03",
+   "registrations_or_updates": 2,
+   "new_to_state": 1,
+   "note": "Two registrations updated (NCT05874479 sham-controlled PAC/BP RCT, n=440; NCT05160948 personal-monitor result feedback, completed). No new interventional registration in the window, so analyze_endpoints was not run. Surfaced in the weekly rollup, not the daily issue."
   }
  ],
  "NCT05867381": {

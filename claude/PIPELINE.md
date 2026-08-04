@@ -464,3 +464,52 @@ Window **2 Aug alone** (Sunday), contiguous with 1 Aug. **31 records, 4 rejected
   held-back record, not a gap; run Consensus on *different* axes (mobile/personal
   monitoring, source apportionment, drift over multi-year deployment) since the calibration
   and satellite-fusion axes were swept dry today.
+
+### 2026-08-03 — geography map fall-through, a DOI I had to reject as my own fabrication
+Window **3 Aug alone**, contiguous with 2 Aug. **25 records, 11 rejected, 2 of those duplicates.**
+
+- **Source counts.** PubMed connector 11 health / 6 instrumentation (5 already in health), union
+  12, **10 carried**; the local harvester found 12 on the health axis but 0 on sensing — the
+  connector remains the better recall leg on both. Europe PMC 5 → 1 unique preprint.
+  **Crossref by-journal 5 (all ACP/AMT, all carried)** — the single most productive leg this run
+  and none of it visible to PubMed. arXiv 1 in-screen. **OpenAlex HTTP 429** on top of the
+  paid-plan block; leg still dead. Consensus ×4 sweeps on the axes the 2 Aug log prescribed
+  (drift, network apportionment, mobile/hyperlocal, personal) returned 8 new — but the free
+  tier now **caps at 3 results per sweep**, which is the binding constraint on the sensing leg.
+  Nimmala et al. picked up as planned from the 2 Aug hold-back.
+- **`harvest.py` cannot be backgrounded from a tool call.** `nohup ... &` dies when the bash
+  call returns (each call is its own sandbox), so it was killed mid-`crossref_sensing` and
+  wrote a *stale* `crossref_journals.json` from the previous day. Caught because the file
+  mtime did not move. Run the legs synchronously in chunks under the timeout, and **check
+  cache mtimes against the run, not just file existence.**
+- **`geo` was an exact-string lookup and 20 of 25 records fell through to
+  "Global / multi-region".** Records carry free text ("Chiang Mai, Thailand", "Ile-Ife,
+  Nigeria"), so f3's right panel was a single bar — same failure class as the design-map
+  fall-through fixed 01–02 Aug, and again caught only by looking at the rendered figure.
+  Resolution is now **exact → alias → substring**, with a `GEO_NONGEO` list so chamber/method
+  labels land in the fallback *by intent*, and **anything still unresolved is printed** so the
+  next unmapped place is visible in the run log. Backfilled the places this surfaced in the
+  31 Jul – 2 Aug issues (Hong Kong, Finland, Northern Ireland, Sofia, Antwerp/Oslo/Zagreb,
+  "Multi-country", chamber labels) — those issues had the same silent collapse and the fix
+  improves the pending weekly/monthly rollups, not just today.
+- **I fabricated a DOI and the gate caught it.** PMID 42544279 (Canadian wildfire PM2.5)
+  carries a PMC id only; I guessed `10.60787/nmj.v67i1.783` from the journal prefix. It 404s,
+  the NCBI ID converter returns no DOI and Crossref does not know the title. **Record dropped
+  and logged, not shipped.** Rule: a DOI is *read* from efetch or Crossref or the record does
+  not ship — never inferred from a journal's prefix pattern.
+- **`EFFECTS` empty for a second consecutive day.** No ratio-metric estimate with a CI exists in
+  the window; the strongest numbers are R² goodness-of-fit. Forest plot omitted and replaced
+  with a keybox that says so. Do not let a rollup read two empty days as a data-loss bug.
+- **Orphan pages.** The exec-brief spilled one line onto p2 and the final entry's DOI orphaned
+  onto a page of its own — twice, through two rounds of prose-shaving. Fixed with
+  `\enlargethispage{3\baselineskip}` before the last `\paperentry`: **pull the page down
+  rather than shave prose until it happens to fit.** Final: 10 pp, 0 errors, 0 overfull.
+- **`trials.json` has meta keys (`trials`, `windows`) alongside legacy top-level NCT records.**
+  A naive list/dict normalisation flattened NCT05874479 and dropped `first_seen`/`note`;
+  reverted and re-applied against the real schema. `git checkout` cannot restore a file on this
+  mount (`unlink` EPERM) — restore by writing `git show HEAD:<path>` back in place.
+  Trial watch: 2 updates, 1 new to state, 0 new interventional → `analyze_endpoints` not run.
+- **For the 4 Aug run:** window `2026-08-04 → 2026-08-04`. **`templates/weekly.tex` exists and
+  the Sat 8 Aug run owes a weekly for 2–8 Aug** — it must exclude the 2 Aug and 3 Aug sensing
+  backfills from any trend line (both are dated, not entered, in their windows). Authenticate
+  Consensus before the next backfill or the sensing leg stays capped at 3/sweep.
