@@ -1,6 +1,6 @@
 \documentclass[10pt]{article}
 \providecommand{\FIGDIR}{fig}
-\newcommand{\DIGESTDATE}{5 August 2026}
+\newcommand{\DIGESTDATE}{4 August 2026}
 \input{preamble}
 
 \begin{document}
@@ -29,7 +29,7 @@
  Monitoring \& Health Effects\par}
 \vspace{5.0mm}
 {\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
- Issue 2026-08-05\;\;\textcolor{Amber}{\textbar}\;\;Entry window 4--5 August 2026\;\;%
+ Issue 2026-08-04\;\;\textcolor{Amber}{\textbar}\;\;Entry window 4 August 2026\;\;%
  \textcolor{Amber}{\textbar}\;\;13 records in scope\par}
 \vspace{18mm}
 
@@ -77,11 +77,12 @@ instead.
 
 \footnotesize
 \begin{itemize}\setlength{\itemsep}{1.1mm}
-\item \textbf{A two-day window, and the health axis is genuinely thin.} The 4 August run
-did not execute, so this issue covers 4--5 August contiguously. Even over two days
-PubMed returned only ten health-axis and two sensing-axis records, five of them
-off-topic. The sensing signal came almost entirely from Crossref-by-journal and
-Consensus, not PubMed --- the structural gap noted since 28 July, unchanged.
+\item \textbf{The health axis is genuinely thin today.} PubMed returned ten health-axis
+and two sensing-axis records for the 4 August entry date, five of them off-topic. The
+sensing signal came almost entirely from Crossref-by-journal and Consensus, not PubMed
+--- the structural gap noted since 28 July, unchanged. All six Crossref deposits carry a
+4 August \texttt{created} date and every PubMed record an Entrez date of 4 August or
+earlier, so nothing here belongs to a later issue.
 
 \item \textbf{Network \emph{siting} is emerging as a strand distinct from calibration.}
 Two independent groups treat sensor placement as an explicit optimisation rather than an
@@ -435,8 +436,11 @@ read ``SO$_2$ drives it'' as a hypothesis.}
 \begin{keybox}
 {\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
 {\fontsize{7.2}{8.8}\selectfont
-Entry window \textbf{4--5 August 2026}, contiguous with the 3 August issue. The 4 August
-scheduled run did not execute, so this issue covers both days and no gap was left.
+Entry window \textbf{4 August 2026}, contiguous with the 3 August issue. Records were
+screened on per-record entry date rather than on the harvest window: the sweep ran
+4--5 August, but every PubMed record carries an Entrez date of 4 August or earlier and
+every Crossref deposit a 4 August \texttt{created} date, so all 13 belong to this issue
+and none was held back for the next one.
 \textbf{Sources.} PubMed E-utilities and the PubMed connector on two separate axes
 (health, instrumentation) windowed on \texttt{[EDAT]} --- 10 health and 2 sensing hits.
 Europe PMC \texttt{CREATION\_DATE} --- 2 hits, 1 in scope. Crossref scoped by journal ISSN

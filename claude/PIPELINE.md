@@ -523,9 +523,13 @@ Window **3 Aug alone**, contiguous with 2 Aug. **25 records, 11 rejected, 2 of t
   files and ~32 moved lock files under `.git/lk/`. All inside `.git`, so untracked and harmless
   to the site, but they accumulate every run and should be cleared from a normal shell.
 
-### 2026-08-05 — the 4 Aug run never fired; design map fell through for *every* record
-Window **4–5 Aug** (the 4 Aug scheduled run did not execute; `last_entry_date` was still
-2026-08-03, so this issue covers both days and no gap was left). **13 records, 10 not shipped.**
+### 2026-08-04 — issue re-dated from 08-05; design map fell through for *every* record
+Window **4 Aug** (issued as `2026-08-04`). The 4 Aug scheduled run never fired, so this run
+executed early on 5 Aug and first built as an 08-05 issue over a 4–5 Aug window. **Withdrawn
+and re-dated to 08-04 on request**: the 5 Aug run is scheduled for 23:00 the same day, and
+per-record dates confirmed the split was unnecessary — every PubMed record carries an Entrez
+date of 4 Aug or earlier and all six Crossref deposits a 4 Aug `created` date, so all 13
+belong to the 4 Aug issue and none was held for the next. **13 records, 10 not shipped.**
 
 - **Source counts.** PubMed 10 health / 2 sensing (connector and local harvester agreed
   exactly). Europe PMC 2 → 1 carried. **Crossref by-journal 6, all new, 2 carried** — again
@@ -561,7 +565,16 @@ Window **4–5 Aug** (the 4 Aug scheduled run did not execute; `last_entry_date`
 - **Trial watch:** the connector exposes no last-update-date filter, so the sweep is relevance-
   ranked, not windowed. 1 new to state (NCT07111208, MARKOPOLO/METSGREEN, n=180, recruiting);
   `analyze_endpoints` run. Weekly rollup, not daily.
-- **For the 6 Aug run:** window `2026-08-06 → 2026-08-06`. **The Sat 8 Aug run still owes a
-  weekly for 2–8 Aug**; it must exclude the 2/3 Aug and the 3 Consensus sensing backfills from
-  any trend line (dated, not entered, in their windows). Retry the five held DOIs first.
+- **Re-dating touches six state files, not one.** `state/corpus/<date>.json` (renamed, with
+  `date` and `entry_window` rewritten), `seen.json` (35 values), `metrics.csv` (rewritten via
+  `csv.writer`, still 0 malformed), `rejected.jsonl` (10 `issue` fields), `trials.json`
+  (window + `first_seen`), `last_run.json`. The masthead, the exec-brief window bullet and the
+  provenance box in `digest.tex` all state the window in prose and must be edited too — the
+  `--date` flag alone does **not** re-date the issue body. Withdrawn artefacts (`Reports/daily`
+  PDF, site mirror, `issues/digest_*.tex`, `fig/<date>/`) were **moved**, not deleted; the
+  mount returns EPERM on `rm`. Superseded corpus left as `state/corpus/.withdrawn_2026-08-05.json`.
+- **For the 5 Aug run (tonight, 23:00):** window `2026-08-05 → 2026-08-05`; `last_entry_date`
+  is now `2026-08-04`. **The Sat 8 Aug run still owes a weekly for 2–8 Aug**; it must exclude
+  the 2/3 Aug and the 3 Consensus sensing backfills from any trend line (dated, not entered,
+  in their windows). Retry the five held DOIs first.
 - Final: **9 pp, 0 errors, 1 overfull hbox of 1.18pt** in a table cell (sub-visual, left).

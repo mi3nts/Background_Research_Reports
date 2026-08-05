@@ -292,7 +292,7 @@
    "start_date": "2025-10-24",
    "primary_completion_date": "2026-07",
    "locations_count": 2,
-   "first_seen": "2026-08-05",
+   "first_seen": "2026-08-04",
    "note": "Only UFP-exposure interventional registration in the sweep not already in state. Connector exposes no last-update-date filter, so this is a relevance sweep, not a true window query."
   }
  ],
@@ -309,8 +309,8 @@
    "note": "Two registrations updated (NCT05874479 sham-controlled PAC/BP RCT, n=440; NCT05160948 personal-monitor result feedback, completed). No new interventional registration in the window, so analyze_endpoints was not run. Surfaced in the weekly rollup, not the daily issue."
   },
   {
-   "window": "2026-08-04 -> 2026-08-05",
-   "queried": "2026-08-05",
+   "window": "2026-08-04 -> 2026-08-04",
+   "queried": "2026-08-04",
    "updates": 0,
    "new_to_state": 1,
    "note": "ClinicalTrials.gov connector has no update-date filter; sweep on 'air pollution particulate matter exposure' returned 10 relevance hits, 9 of them long-completed studies already outside the watch. NCT07111208 (MARKOPOLO/METSGREEN, n=180, recruiting) added and analyze_endpoints run. Surfaced in the weekly rollup, not the daily issue."
