@@ -1,0 +1,230 @@
+{
+ "date": "2026-08-05",
+ "entry_window": "2026-08-04 -> 2026-08-05",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Masoom et al. 2026",
+   "doi": "10.5194/acp-26-10801-2026",
+   "title": "Long range transport of Canadian wildfire smoke to Europe in 2023: aerosol properties and spectral features of smoke particles",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign / remote sensing",
+   "pm": "AOD; Angstrom exponent; single scattering albedo; volume size distribution",
+   "geo": "Multi-country",
+   "endpoint": "None (monitoring)",
+   "n": "multi-station remote sensing + in situ, 2023 fire season",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Li et al. 2026",
+   "doi": "10.5194/acp-26-10835-2026",
+   "title": "Summertime ice-nucleating particle concentrations over the Eurasian-Arctic Seas",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign / shipborne",
+   "pm": "INP number concentration (immersion mode)",
+   "geo": "Arctic Ocean",
+   "endpoint": "None (monitoring)",
+   "n": "Arctic Century Expedition, Aug-Sep 2021",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Magdaong et al. 2026",
+   "doi": "10.5194/isprs-annals-x-5-w4-2025-315-2026",
+   "title": "Developing criteria and an algorithm for a low-cost IoT-based air quality sensor network for near-road air quality monitoring",
+   "journal": "ISPRS Ann Photogramm Remote Sens Spat Inf Sci",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Method / algorithm",
+   "pm": "PM (low-cost sensor network siting)",
+   "geo": "Philippines",
+   "endpoint": "None (monitoring)",
+   "n": "40-sensor test network, Quezon City",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Colarusso et al. 2026",
+   "doi": "10.1016/j.iot.2026.101907",
+   "title": "Mobile urban sensing: spatio-temporal observability analysis and optimization",
+   "journal": "Internet of Things",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Method / algorithm",
+   "pm": "Reconstructed pollutant concentration maps",
+   "geo": "Italy",
+   "endpoint": "None (monitoring)",
+   "n": "3 sensing vehicles, 11.37 km2, Benevento",
+   "tier": "B"
+  },
+  {
+   "pmid": "42551799",
+   "short": "Buhendwa et al. 2026",
+   "doi": "10.1016/j.envpol.2026.128887",
+   "title": "Modeling the coupled PM2.5-ozone system in China: chemical mechanisms, persistent model biases, and future perspectives",
+   "journal": "Environ Pollut",
+   "sub": "Exposure assessment & modelling",
+   "design": "Review / synthesis",
+   "pm": "PM2.5 and O3 (chemical transport models)",
+   "geo": "China",
+   "endpoint": "None (modelling)",
+   "n": "review of CTM performance and bias",
+   "tier": "B"
+  },
+  {
+   "pmid": "42550079",
+   "short": "Zhang et al. 2026",
+   "doi": "10.1021/acs.est.5c17902",
+   "title": "H2O2-driven sulfate formation at air-water interfaces: stepwise mechanism and accelerated kinetics",
+   "journal": "Environ Sci Technol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Theory / simulation",
+   "pm": "Particulate sulfate formation rate",
+   "geo": "Computational",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "quantum-chemical + kinetic calculation",
+   "tier": "B"
+  },
+  {
+   "pmid": "42406552",
+   "short": "Bu & Sun 2026",
+   "doi": "10.1080/10962247.2026.2698603",
+   "title": "Particulate matter emissions from the iron and steel industry of China: patterns, drivers, and implications",
+   "journal": "J Air Waste Manag Assoc",
+   "sub": "Burden, policy & mitigation",
+   "design": "Emission inventory / decomposition",
+   "pm": "PM (stack and fugitive)",
+   "geo": "China",
+   "endpoint": "None (emissions)",
+   "n": "99 sites, 2010-2016 LMDI decomposition",
+   "tier": "B"
+  },
+  {
+   "pmid": "42546651",
+   "short": "Zhang et al. 2026",
+   "doi": "10.1016/j.jhazmat.2026.143156",
+   "title": "Particulate emission risks of HEVs during cold-starts and warm-restarts: particulate number under fresh and aged aftertreatment systems",
+   "journal": "J Hazard Mater",
+   "sub": "Burden, policy & mitigation",
+   "design": "Vehicle emission experiment",
+   "pm": "Particle number; particle number size distribution; sub-23 nm PN",
+   "geo": "China",
+   "endpoint": "None (emissions)",
+   "n": "1 China-6 HEV, RDE + RTS95, fresh vs bench-aged GPF",
+   "tier": "B"
+  },
+  {
+   "pmid": "42551966",
+   "short": "Shi et al. 2026",
+   "doi": "10.1002/jat.70358",
+   "title": "PM2.5 exacerbates airway inflammation and epithelial barrier disruption in COPD mice through the RAGE-dependent PERK/eIF2a/ATF4/CHOP pathway",
+   "journal": "J Appl Toxicol",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal experiment",
+   "pm": "PM2.5 (instilled)",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "murine cigarette-smoke COPD model + FPS-ZM1 / 4-PBA arms",
+   "tier": "B"
+  },
+  {
+   "pmid": "42546650",
+   "short": "Qi et al. 2026",
+   "doi": "10.1016/j.jhazmat.2026.143119",
+   "title": "Exposure to urban PM2.5 exacerbates renal injury and fibrosis via the lung-kidney axis through IL-6/ADCY3 signalling",
+   "journal": "J Hazard Mater",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal + in vitro",
+   "pm": "Urban PM2.5 (repeated intratracheal)",
+   "geo": "China",
+   "endpoint": "Renal",
+   "n": "mouse PM + renal ischaemia-reperfusion model, tubular cell assays",
+   "tier": "B"
+  },
+  {
+   "pmid": "42551848",
+   "short": "Russo et al. 2026",
+   "doi": "10.1111/ppe.70185",
+   "title": "Critical windows of air pollution exposure during spermatogenesis and intrauterine insemination outcomes",
+   "journal": "Paediatr Perinat Epidemiol",
+   "sub": "Reproductive & developmental",
+   "design": "Cohort (secondary trial analysis)",
+   "pm": "PM2.5, NO2, O3, SO2 (CMAQ, 74-day spermatogenesis window)",
+   "geo": "USA",
+   "endpoint": "Reproductive",
+   "n": "592 men, 1223 IUI cycles (FAZST trial, 2013-2018)",
+   "tier": "A"
+  },
+  {
+   "pmid": "42551576",
+   "short": "Guo et al. 2026",
+   "doi": "10.1016/j.reprotox.2026.109310",
+   "title": "Environmental pollutants and testicular toxicity in male reproductive health: basic evidence and translational prospects",
+   "journal": "Reprod Toxicol",
+   "sub": "Reproductive & developmental",
+   "design": "Review / synthesis",
+   "pm": "PM2.5 (traffic-derived metal constituents)",
+   "geo": "Global / multi-region",
+   "endpoint": "Reproductive",
+   "n": "narrative review",
+   "tier": "C"
+  },
+  {
+   "pmid": "42551618",
+   "short": "Yang et al. 2026",
+   "doi": "10.1016/j.jpain.2026.106400",
+   "title": "Associations of long-term exposure to multiple air pollutants with chronic pain among middle-aged and older adults in China",
+   "journal": "J Pain",
+   "sub": "Other clinical endpoints",
+   "design": "Cohort",
+   "pm": "PM2.5, PM10, NO2, SO2, CO (5-pollutant mixture, WQS)",
+   "geo": "China",
+   "endpoint": "Chronic pain",
+   "n": "10378 CHARLS participants, 8047 incident cases, mean 7.39 y",
+   "tier": "A"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Pregnancy per IUI cycle, O3 (74-d spermatogenesis window)",
+   "exposure": "per 5 ppb",
+   "est": 0.71,
+   "lo": 0.55,
+   "hi": 0.93,
+   "metric": "RR",
+   "src": "Russo 2026 (Paediatr Perinat Epidemiol)"
+  },
+  {
+   "label": "Pregnancy per IUI cycle, NO2 (74-d spermatogenesis window)",
+   "exposure": "per 5 ppb",
+   "est": 0.73,
+   "lo": 0.5,
+   "hi": 1.05,
+   "metric": "RR",
+   "src": "Russo 2026 (Paediatr Perinat Epidemiol)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "preconception /\nin utero:\npaternal exposure\nacross spermatogenesis"
+  },
+  {
+   "n": 0,
+   "note": "no childhood\nrecord this window"
+  },
+  {
+   "n": 0,
+   "note": "no adolescence\nrecord this window"
+  },
+  {
+   "n": 2,
+   "note": "working age:\nIUI cohort,\ntesticular toxicity\nreview"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nCHARLS chronic\npain cohort"
+  }
+ ]
+}

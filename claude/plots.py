@@ -200,8 +200,26 @@ design_group = {
     # honest fall-through for records surfaced without an abstract: they get their
     # own slice rather than being silently pooled with characterised designs
     "Metadata only (no abstract)": "Metadata only",
+    # added 2026-08-05: ALL 13 records fell through to "Other / mixed" on this run,
+    # the third recurrence of this failure class (01, 02, 03 Aug). The root cause is
+    # that an unmapped design was SILENT - only a rendered figure revealed it. The
+    # print below makes it loud, exactly as GEO already does.
+    "Field campaign / remote sensing": "Measurement campaign",
+    "Field campaign / shipborne": "Measurement campaign",
+    "Method / algorithm": "Modelling / inventory",
+    "Review / synthesis": "Review / synthesis",
+    "Theory / simulation": "Modelling / inventory",
+    "Emission inventory / decomposition": "Modelling / inventory",
+    "Vehicle emission experiment": "Chamber / laboratory",
+    "Animal experiment": "Experimental / toxicology",
+    "Animal + in vitro": "Experimental / toxicology",
+    "Cohort": "Observational - cohort",
+    "Cohort (secondary trial analysis)": "Observational - cohort",
 }
+_design_unmapped = set()
 def dgrp(d):
+    if d not in design_group:
+        _design_unmapped.add(d)
     return design_group.get(d, "Other / mixed")
 dg = collections.Counter(dgrp(p["design"]) for p in PAPERS)
 dg_items = dg.most_common()
@@ -339,6 +357,11 @@ geo_group = {
     "Czech Republic": "Europe", "The Gambia / Kenya / Mozambique": "Sub-Saharan Africa",
     "Iran": "Middle East & N. Africa", "France": "Europe", "Italy": "Europe",
     "Denmark": "Europe", "Europe": "Europe", "Kenya": "Sub-Saharan Africa",
+    # added 2026-08-05 from the printed-unmapped list
+    "Philippines": "Southeast Asia", "Indonesia": "Southeast Asia",
+    "Malaysia": "Southeast Asia", "Singapore": "Southeast Asia",
+    "Arctic Ocean": "Polar / remote marine", "Antarctica": "Polar / remote marine",
+    "Southern Ocean": "Polar / remote marine",
 }
 # Aliases and sub-national place names. `geo` is written as free text on the record
 # ("Chiang Mai, Thailand", "Bogota, Colombia", "Ile-Ife, Nigeria"), so an exact-key
@@ -380,11 +403,16 @@ GEO_SUBSTR = [
     ("singapore", "Vietnam"), ("egypt", "Turkiye"), ("saudi", "Turkiye"),
     ("new zealand", "Australia"), ("switzerland", "Europe"), ("sweden", "Norway"),
     ("belgium", "Europe"), ("austria", "Europe"), ("portugal", "Europe"),
+    # added 2026-08-05
+    ("philippines", "Philippines"), ("quezon city", "Philippines"), ("manila", "Philippines"),
+    ("arctic", "Arctic Ocean"), ("svalbard", "Arctic Ocean"), ("antarctic", "Antarctica"),
+    ("benevento", "Italy"), ("salt lake city", "USA"),
 ]
 # Labels that are honestly not geographic. They belong in the fallback bucket by
 # intent, not by accident, so they must not trip the unmapped warning.
 GEO_NONGEO = ("chamber", "laboratory", "lab ", "n/a", "not stated", "not applicable",
-              "method", "synthetic", "simulation", "in vitro", "in silico", "deposit")
+              "method", "synthetic", "simulation", "in vitro", "in silico", "deposit",
+              "computational", "no site", "theoretical", "modelled only")
 _geo_unmapped = set()
 def geo_of(g):
     g = (g or "").strip()
@@ -405,6 +433,8 @@ def geo_of(g):
 geo = collections.Counter(geo_of(p["geo"]) for p in PAPERS)
 if _geo_unmapped:
     print("!! geo unmapped (add to geo_group/GEO_SUBSTR):", sorted(_geo_unmapped))
+if _design_unmapped:
+    print("!! design unmapped (add to design_group):", sorted(_design_unmapped))
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=SZ(9.4, 3.9),
                                gridspec_kw={"wspace": 0.46})

@@ -522,3 +522,46 @@ Window **3 Aug alone**, contiguous with 2 Aug. **25 records, 11 rejected, 2 of t
 - **Manual cleanup owed:** the delete-restricted mount left ~377 `.git/objects/**/tmp_obj_*`
   files and ~32 moved lock files under `.git/lk/`. All inside `.git`, so untracked and harmless
   to the site, but they accumulate every run and should be cleared from a normal shell.
+
+### 2026-08-05 — the 4 Aug run never fired; design map fell through for *every* record
+Window **4–5 Aug** (the 4 Aug scheduled run did not execute; `last_entry_date` was still
+2026-08-03, so this issue covers both days and no gap was left). **13 records, 10 not shipped.**
+
+- **Source counts.** PubMed 10 health / 2 sensing (connector and local harvester agreed
+  exactly). Europe PMC 2 → 1 carried. **Crossref by-journal 6, all new, 2 carried** — again
+  the only leg that sees ACP/AMT. Consensus ×3 sweeps → 3 new after DOI resolution; the other
+  6 hits resolved to DOIs already in `seen.json` (Qian AMT, Ginsburg AS&T, Yaqoob IEEE Access,
+  both Geo-spat Inf Sci fusion papers, Nguyen Eng Res Express) — **resolving Consensus titles
+  to DOIs before screening is what stopped six re-summaries.** OpenAlex still paid-blocked.
+- **`seen.json` is nested (`pmid`/`doi`/`tsig`), not flat.** A screening probe keyed on the
+  top level reported "3 keys" and looked like total state loss. It was not. State is intact
+  (294→303 pmid, 346→359 doi). **Check the level before concluding corruption.**
+- **All 13 records fell through to `Other / mixed`.** Third recurrence (01, 02, 03 Aug) of the
+  same class, and the root cause is that an unmapped design was *silent* — only a rendered
+  donut ever revealed it. Fixed properly this time: added the 11 design labels **and** a
+  `_design_unmapped` set with a printed warning, mirroring what GEO already did. Geo also
+  surfaced `Arctic Ocean`, `Philippines`, `Computational (no site)`; added a
+  `Polar / remote marine` bucket, Southeast Asia entries, and `computational`/`no site`/
+  `theoretical` to `GEO_NONGEO`.
+- **`state/metrics.csv` quoting defect is already fixed** — 83 rows, 0 malformed under
+  `csv.reader`. The naive `awk -F,` check reports false positives on quoted fields; do not
+  re-open this.
+- **Five records found, verified, and deliberately *not* shipped.** 2×APR, Atmos Environ,
+  J Aerosol Sci, IEEE OJ-ITS: DOIs verify in Crossref but no abstract exists in Crossref,
+  Europe PMC or Consensus, and Elsevier/IEEE landing pages are client-rendered. Logged to
+  `rejected.jsonl` as **held, not rejected**, and kept OUT of `seen.json` so a later issue can
+  carry them. Prajapati (PM2.5 hygroscopicity, eastern IGP) is the priority pickup.
+- **`\enlargethispage` has a ceiling.** At 4–7 `\baselineskip` it stopped reflowing and started
+  **printing text over the folio** — worse than the sparse page it was fixing. Reverted to a
+  plain `\clearpage` before the last band. Rule: pull the page down, but *look at the bottom
+  margin*; if the last line reaches the page number, take the clean break instead.
+- **EFFECTS non-empty but co-pollutant only.** No PM ratio estimate with a CI exists in the
+  window (third straight issue). Plotted Russo's O3/NO2 estimates with the caption stating
+  plainly that they are not PM, so a rollup cannot read the gap as data loss.
+- **Trial watch:** the connector exposes no last-update-date filter, so the sweep is relevance-
+  ranked, not windowed. 1 new to state (NCT07111208, MARKOPOLO/METSGREEN, n=180, recruiting);
+  `analyze_endpoints` run. Weekly rollup, not daily.
+- **For the 6 Aug run:** window `2026-08-06 → 2026-08-06`. **The Sat 8 Aug run still owes a
+  weekly for 2–8 Aug**; it must exclude the 2/3 Aug and the 3 Consensus sensing backfills from
+  any trend line (dated, not entered, in their windows). Retry the five held DOIs first.
+- Final: **9 pp, 0 errors, 1 overfull hbox of 1.18pt** in a table cell (sub-visual, left).

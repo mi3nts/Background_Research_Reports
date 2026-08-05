@@ -1,0 +1,466 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{5 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-08-05\;\;\textcolor{Amber}{\textbar}\;\;Entry window 4--5 August 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;13 records in scope\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{13}{RECORDS IN SCOPE\\(5 off-topic, 5 held)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{SUBTOPIC CLUSTERS\\REPRESENTED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{RECORDS FROM CHINA\\(46\% OF CORPUS)}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{EFFECT ESTIMATES\\EXTRACTED}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{REVIEWS /\\EVIDENCE SYNTHESES}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Aged Canadian wildfire smoke produced a
+\emph{negative} \AA ngstr\"om exponent below 500\,nm --- the sign assumption that
+underwrites almost every optical PM retrieval broke in the field.}\\[1.4mm]
+\footnotesize
+Masoom et al.\ (\textit{Atmos Chem Phys}) tracked short- and long-range plumes from the
+2023 Canadian fire season across North America and Europe with combined remote sensing
+and in situ measurement. In a roughly week-long episode late in the season they observed
+\textbf{concave spectral curvature in AOD with the maximum above the 340\,nm minimum
+wavelength}, driving the \AA ngstr\"om exponent negative below 500\,nm, together with
+\textbf{accumulation-mode volume median diameters reaching $\sim$800\,nm} and
+non-monotonic single-scattering albedo in submicron particles. Each of those three
+features violates a default that low-cost optical sensing and AOD$\rightarrow$PM inversion
+quietly rely on: that fine smoke is spectrally well-behaved and size-stable. The
+practical reading for distributed sensing is narrow and concrete --- an optical instrument
+calibrated on background urban aerosol has no valid response function during an
+aged-smoke episode, and a fixed correction factor will fail in the \emph{direction} of
+the correction, not merely in magnitude. This is the lesson the regional-calibration
+literature reached from co-location statistics, arriving here from aerosol physics
+instead.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}\setlength{\itemsep}{1.1mm}
+\item \textbf{A two-day window, and the health axis is genuinely thin.} The 4 August run
+did not execute, so this issue covers 4--5 August contiguously. Even over two days
+PubMed returned only ten health-axis and two sensing-axis records, five of them
+off-topic. The sensing signal came almost entirely from Crossref-by-journal and
+Consensus, not PubMed --- the structural gap noted since 28 July, unchanged.
+
+\item \textbf{Network \emph{siting} is emerging as a strand distinct from calibration.}
+Two independent groups treat sensor placement as an explicit optimisation rather than an
+afterthought: Magdaong et al.\ combine street aspect ratio, traffic emissions and
+irradiance into a suitability raster and reach 23--24\% population coverage with 40 nodes
+in Quezon City; Colarusso et al.\ define spatial and temporal observability indices for
+opportunistic vehicle fleets and co-design fixed-node placement against them. Calibration
+research has matured far faster than siting research, and these are the first two papers
+this watch has seen that make siting quantitative.
+
+\item \textbf{Third consecutive day with no PM-specific ratio estimate carrying a
+confidence interval.} The two estimates in the forest plot are the O$_3$ and NO$_2$
+co-pollutant results from Russo et al.; that paper's PM$_{2.5}$ and SO$_2$ associations
+were reported only as ``less consistent'', without numbers. This is a property of the
+window, not a pipeline fault --- see the figure caption.
+
+\item \textbf{Paternal preconception exposure is the more interesting reproductive
+finding.} Russo et al.\ window exposure across the 74-day spermatogenesis cycle and
+resolve it into mitosis, meiosis I--II, spermiogenesis and spermiation --- a sharper
+exposure definition than the trimester blocks this literature normally uses. The signal
+sits in mitosis and meiosis. Guo et al.'s review independently nominates spermatogenesis
+stage I (70--90 days pre-collection) as the PM$_{2.5}$ vulnerability window and
+traffic-derived metal constituents as the driver: convergent, though a review citing the
+same primary literature is not independent evidence.
+
+\item \textbf{Two mechanistic papers, both extra-pulmonary or barrier-focused, both with
+rescue arms.} Shi et al.\ place RAGE upstream of
+PERK/\allowbreak eIF2$\alpha$/\allowbreak ATF4/\allowbreak CHOP in
+PM-aggravated COPD and rescue with FPS-ZM1 and 4-PBA; Qi et al.\ route PM$_{2.5}$ renal
+fibrosis through alveolar-macrophage IL-6 suppressing ADCY3--CREB--PGC1$\alpha$ and rescue
+by IL-6 blockade or ADCY3 overexpression. Both use intratracheal instillation, which
+remains the dosimetric weak point of this whole literature.
+
+\item \textbf{Five instrumentation-relevant records were found but not shipped.} Their
+DOIs verify in Crossref but no abstract is retrievable from Crossref, Europe PMC or
+Consensus, and the Elsevier and IEEE landing pages are client-rendered. They are logged
+as held --- not rejected --- and deliberately kept out of \texttt{seen.json} so they can be
+carried once indexed. Prajapati et al.\ on PM$_{2.5}$ hygroscopicity in the eastern
+Indo-Gangetic Plain is the one that matters: RH dependence is directly load-bearing for
+low-cost sensor correction.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 13 in-scope records, single-label by dominant
+contribution. \textit{Sensing, forecasting \& instrumentation} leads with 4 (31\%); the
+remaining five clusters carry one or two records each. Four of the ten standing
+subtopics --- neuro/mental health, cardiovascular/metabolic, respiratory/allergic as a
+primary label, and occupational/indoor --- are empty in this window.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. Modelling and inventory work dominates (4/13), ahead
+of measurement campaigns, reviews, cohort epidemiology and experimental toxicology at
+two each. \textbf{All 13 records initially fell through to ``Other / mixed'' on this
+run}; the design map has been extended and an unmapped-design warning added so this
+failure is loud rather than silent in future (see run log). Right --- health endpoint by
+organ system. Seven of thirteen records carry no human health endpoint at all --- four
+monitoring or modelling, two emissions --- the highest non-health share this watch has
+recorded.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. Only five records use PM$_{2.5}$ as the sole exposure and
+one pairs it with PM$_{10}$; the remaining seven are unspeciated PM, particle
+\emph{number}, INP concentration or column-integrated optical properties. That spread is
+itself the finding --- mass concentration is not the measurand in over half of today's
+corpus. Right --- geographic provenance. China contributes 6 of 13 (46\%). Southeast Asia
+and the Eurasian Arctic each appear once; South Asia and sub-Saharan Africa are absent
+again.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed; counts are non-exclusive, and only four of
+thirteen records carry a human life-course window at all. The preconception entry is
+paternal rather than maternal --- an unusual and welcome inversion of this literature's
+default framing.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. The persistent structural
+feature is visible again: the \textit{Sensing} row contains no health-endpoint linkage,
+and the mechanistic row is entirely experimental with no human biomarker bridge. With 13
+records spread across six subtopics and six architectures the matrix is necessarily
+sparse --- read it as a coverage map, not a distribution.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{\textbf{Both estimates plotted are co-pollutant results, not PM results.} No
+record in this entry window reported a PM$_{2.5}$ or PM$_{10}$ ratio estimate with a
+confidence interval --- the third consecutive issue for which that holds. Russo et al.\
+report RR 0.71 (95\% CI 0.55--0.93) per 5\,ppb O$_3$ and RR 0.73 (0.50--1.05) per 5\,ppb
+NO$_2$ for pregnancy per IUI cycle across the 74-day spermatogenesis window; their
+PM$_{2.5}$ and SO$_2$ associations were characterised as less consistent and given no
+numeric value. The plot is included so that the absence is recorded explicitly rather
+than inferred from a missing figure, and so a downstream weekly or monthly rollup does
+not read three sparse days as data loss.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 4 records}{Amber}
+
+\paperentry{Masoom et al.\ 2026}
+{Long-range transport of Canadian wildfire smoke to Europe in 2023: aerosol properties
+and spectral features}
+{Atmos Chem Phys}
+{Combined column remote sensing and in situ measurement of short- and long-range plumes
+across North America and Europe through the April--October 2023 fire season. The
+late-season episode is the payload: \textbf{concave AOD spectral curvature with the
+maximum above the 340\,nm minimum wavelength, giving negative \AA ngstr\"om exponents
+below 500\,nm}; accumulation-mode volume median diameters near 800\,nm; and
+non-monotonic single-scattering albedo, rising through the UV--visible then flattening or
+falling at longer wavelengths, consistently across most stations. Limitation: a rare
+$\sim$one-week event characterised observationally, with no closure between the retrieved
+optics and a measured composition, so the cause of the curvature is inferred rather than
+demonstrated. For distributed optical sensing the implication is that smoke-episode
+response cannot be extrapolated from background calibration.}
+{10.5194/acp-26-10801-2026}
+
+\paperentry{Magdaong et al.\ 2026}
+{Criteria and an algorithm for siting a low-cost IoT air-quality network near roads}
+{ISPRS Ann Photogramm Remote Sens Spat Inf Sci}
+{GIS multi-criteria analysis combining street aspect ratio, traffic emissions, global
+horizontal irradiance and road proximity into a 0--6 suitability surface for Quezon City,
+then a heuristic selecting nodes by joint suitability and population raster under a
+minimum-spacing constraint. A 40-sensor configuration covers \textbf{1.27--1.35 million
+residents, 23.0--24.4\% of the city}, stably across weighting schemes while keeping
+spatial dispersion balanced. Limitation: coverage is defined geometrically against a
+population raster with no validation against measured concentration fields, so
+``covered'' means ``near a node'', not ``well estimated''. Still the clearest statement
+this watch has seen that siting is an optimisation problem with a stated objective, and
+the criteria transfer directly to any near-road deployment in a low- or middle-income
+city.}
+{10.5194/isprs-annals-x-5-w4-2025-315-2026}
+
+\paperentry{Colarusso et al.\ 2026}
+{Mobile urban sensing: spatio-temporal observability analysis and optimisation}
+{Internet of Things}
+{Fleet-aware framework for hybrid mobile--fixed sensing on an Edge--Fog--Cloud
+architecture, evaluated on real data from three sensing vehicles covering 11.37\,km$^2$
+in Benevento, Italy. Introduces spatial and temporal observability indices and a
+value-of-fleet metric, then uses spatio-temporal interpolation plus what-if analysis to
+quantify how fleet size, route redundancy, sampling density and data loss propagate into
+reconstructed-map accuracy; a greedy co-design procedure places fixed nodes against the
+residual. Limitation: a single city, a single small fleet, and interpolation-based ground
+truth --- the observability indices are internally consistent but not externally
+validated. The framing is the transferable part: opportunistic mobile coverage becomes a
+measurable quantity rather than a qualitative claim.}
+{10.1016/j.iot.2026.101907}
+
+\paperentry{Li et al.\ 2026}
+{Summertime ice-nucleating particle concentrations over the Eurasian Arctic seas}
+{Atmos Chem Phys}
+{Shipborne immersion-mode INP measurements from the Arctic Century Expedition across the
+Barents, Kara and Laptev Seas and adjacent high-Arctic islands, August--September 2021.
+$N_{\mathrm{INP}}$ was lower than at continental high-latitude sites, most clearly below
+$-15\,^\circ$C, implying sparse mineral-dust INP; concentrations peaked in ice-free
+water, marginal ice zones and near land, and were very low inside the ice pack, with the
+maximum north of Novaya Zemlya under back-trajectories from the western Siberian coast.
+The authors conclude sources are local to regional with little long-range transport
+signature. Limitation: one summer and one cruise track, so the seasonal and interannual
+envelope is unconstrained. Peripheral to PM exposure, but relevant to interpreting
+particle counts in clean marine air, where the concentration floor is set by local
+sources rather than by transport.}
+{10.5194/acp-26-10835-2026}
+
+\band{Exposure assessment \& modelling\hfill 2 records}{Amber}
+
+\paperentry{Buhendwa et al.\ 2026}
+{Modelling the coupled PM$_{2.5}$--ozone system in China: mechanisms, model biases,
+perspectives}
+{Environ Pollut}
+{Review of the compound-pollution era in which PM$_{2.5}$ and O$_3$ share a precursor
+pool (VOCs, NO$_x$, SO$_2$, NH$_3$) and single-pollutant control can worsen the
+co-pollutant --- the ``pollution seesaw''. The useful content is the bias inventory:
+chemical transport models \textbf{underestimate secondary organic aerosol by about 40\%},
+with substantial spread across models, seasons and regions; daytime HONO sources and OH
+reactivity are missing or understated; ammonia and episodic agricultural-burning
+inventories are uncertain; nocturnal boundary-layer mixing is poorly represented. These
+errors propagate into data assimilation and into machine-learning models trained on CTM
+output. Limitation: a narrative synthesis with no quantitative pooling, so the 40\% figure
+is a reported central tendency, not a meta-analytic estimate. Directly relevant if CTM
+fields are used as priors or features in a sensor-fusion product.}
+{10.1016/j.envpol.2026.128887}
+
+\paperentry{Zhang et al.\ 2026}
+{H$_2$O$_2$-driven sulfate formation at air--water interfaces: stepwise mechanism and
+accelerated kinetics}
+{Environ Sci Technol}
+{Theoretical study of the dominant global route to particulate sulfate. At the air--water
+interface the pre-reaction complex is favoured and the reaction proceeds stepwise ---
+nucleophilic attack of HSO$_3^-$ on H$_2$O$_2$ to a HOOSO$_2^-$ intermediate, then
+isomerisation to sulfate --- with a \textbf{rate-determining barrier of 4.1\,kcal/mol},
+lower than in bulk, and with the rate-determining step itself shifting. Interfacial
+electric field and partial solvation together account for \textbf{89\% of the barrier
+reduction}. Limitation: entirely computational, with no experimental kinetic validation,
+and the idealised interface is not a deliquesced particle surface. It matters because
+rising H$_2$O$_2$ from wildfire activity makes this pathway more important, and because
+sulfate is both a large PM$_{2.5}$ mass fraction and one of its more hygroscopic ---
+therefore optically most humidity-sensitive --- components.}
+{10.1021/acs.est.5c17902}
+
+\band{Reproductive \& developmental\hfill 2 records}{Sky}
+
+\paperentry{Russo et al.\ 2026}
+{Critical windows of air-pollution exposure during spermatogenesis and IUI outcomes}
+{Paediatr Perinat Epidemiol}
+{Secondary analysis of the Folic Acid and Zinc Supplementation Trial: 592 male partners
+in the Salt Lake City area contributing \textbf{1{,}223 intrauterine insemination cycles}
+over nine months. Residential exposure came from Community Multiscale Air Quality models,
+averaged over the 74-day spermatogenesis window before insemination and separately over
+mitosis, meiosis I--II, spermiogenesis and spermiation, with generalised linear mixed
+models adjusted for age, season, income and co-pollutants. Per 5\,ppb across the full
+window, \textbf{O$_3$ RR 0.71 (95\% CI 0.55--0.93)} and \textbf{NO$_2$ RR 0.73
+(0.50--1.05)} for hCG$+$ pregnancy, concentrated in mitosis and meiosis; live-birth
+results were similar and no pattern emerged for pregnancy loss. \textbf{PM$_{2.5}$ and
+SO$_2$ were less consistently associated and no numeric estimate was given.} Limitation:
+an infertility-treatment population is not the general population, residential modelling
+ignores occupational and commuting exposure, and co-pollutant models cannot cleanly
+separate a traffic mixture. The stage-resolved exposure definition is the methodological
+contribution worth borrowing.}
+{10.1111/ppe.70185}
+
+\paperentry{Guo et al.\ 2026}
+{Environmental pollutants and testicular toxicity: basic evidence and translational
+prospects}
+{Reprod Toxicol}
+{Narrative review of testicular-level evidence for microplastics, bisphenols and air
+pollution, against a reported $>$50\% decline in global sperm concentration over five
+decades. The PM-relevant claims: \textbf{spermatogenesis stage I, 70--90 days before
+semen collection, is nominated as the PM$_{2.5}$ vulnerability window}, with metal
+constituents of traffic-derived PM$_{2.5}$ as the primary toxicity driver. Separately,
+microplastics are reported in human testicular tissue with a gut-dysbiosis $\rightarrow$
+immune activation $\rightarrow$ blood--testis barrier pathway, and BCAT1-mediated
+ferroptosis is offered as a bisphenol injury mechanism. Limitation: no systematic search
+or quality appraisal, so the window and constituent claims inherit whatever selection
+bias the cited primary literature carries. Read alongside Russo et al.\ --- convergent on
+timing, but not independent evidence for it.}
+{10.1016/j.reprotox.2026.109310}
+
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Shi et al.\ 2026}
+{PM$_{2.5}$ aggravates airway inflammation and barrier disruption in COPD mice via
+RAGE-dependent PERK/eIF2$\alpha$/ATF4/CHOP}
+{J Appl Toxicol}
+{Cigarette-smoke-induced murine COPD model with subsequent PM$_{2.5}$ exposure. PM
+worsened lung function, emphysema, inflammation, apoptosis and epithelial tight-junction
+damage, and activated the PERK/eIF2$\alpha$/ATF4/CHOP endoplasmic-reticulum stress arm.
+The causal claim rests on two rescue arms: the RAGE inhibitor FPS-ZM1 and the ER-stress
+modulator 4-PBA each attenuated the phenotype, placing RAGE upstream of ER stress rather
+than parallel to it. Limitation: instilled PM at a dose the abstract does not state, a
+smoke-primed rather than naive background, and pharmacological inhibitors of imperfect
+selectivity --- FPS-ZM1 in particular. The RAGE$\rightarrow$ER-stress ordering is the novel
+part; the downstream inflammatory readouts are well-trodden.}
+{10.1002/jat.70358}
+
+\paperentry{Qi et al.\ 2026}
+{Urban PM$_{2.5}$ worsens renal injury and fibrosis through a lung--kidney IL-6/ADCY3
+axis}
+{J Hazard Mater}
+{Repeated intratracheal urban PM$_{2.5}$ at an environmentally relevant dose combined
+with renal ischaemia--reperfusion injury in mice, plus tubular epithelial cell work.
+PM exposure worsened renal dysfunction, tubular injury, fibrosis and lipid-droplet
+accumulation; the proposed route is PM $\rightarrow$ systemic inflammation with alveolar
+macrophages as the likely IL-6 source $\rightarrow$ suppression of ADCY3--CREB--PGC1$\alpha$
+$\rightarrow$ impaired fatty-acid $\beta$-oxidation, increased glycolysis, mitochondrial
+dysfunction and fibrosis. IL-6 blockade and ADCY3 overexpression each rescued, in vivo
+and in vitro. Limitation: the renal-IRI co-insult makes this a second-hit model, so the
+finding concerns PM aggravating existing injury rather than causing nephropathy; and
+intratracheal instillation again overstates deposited dose rate. The extra-pulmonary axis
+and the metabolic mechanism are both worth tracking.}
+{10.1016/j.jhazmat.2026.143119}
+
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{Bu \& Sun 2026}
+{PM emissions from China's iron and steel industry: patterns, drivers, implications}
+{J Air Waste Manag Assoc}
+{LMDI decomposition over 99 Chinese sites, separating stack from fugitive emissions into
+five process factors: steel output, energy intensity, waste-gas generation coefficient,
+stack concentration and fugitive emission factor. \textbf{National PM emissions fell
+23.6\% from 2011 to 2016.} Stack concentration was the dominant inhibitor (to
+$-$31{,}558\,t in 2015--16); the fugitive factor flipped from $+$5{,}037\,t (2010--11) to
+$-$23{,}320\,t; the waste-gas coefficient pushed emissions up throughout
+($+$19{,}516\,t in 2015--16); energy intensity contributed under 25\%. Regionally the
+picture inverts --- South and Northwest China show annual increases, with Northwest
+fugitive emissions reaching 232\% of the annual change. Limitation: the series ends in
+2016, predating the ultra-low-emission retrofit programme entirely. The
+stack-versus-fugitive split is what matters for siting monitors near industry: the two
+have completely different spatial signatures.}
+{10.1080/10962247.2026.2698603}
+
+\paperentry{Zhang et al.\ 2026}
+{Particle-number emissions from a hybrid electric vehicle across cold and warm starts}
+{J Hazard Mater}
+{A China-6 compliant HEV tested over real-driving-emissions and RTS95 cycles with fresh
+and bench-aged aftertreatment. The particle-number size distribution was trimodal and
+dominated by an accumulation mode peaking near \textbf{90\,nm}, with most emission from
+urban and highway segments and \textbf{engine-start events, cold and warm alike, as the
+dominant source}. Counter-intuitively, catalyst ageing \emph{improved} overall PN
+removal: oxidation efficiency fell but gasoline particulate filter filtration rose as an
+ash layer established. Optimising warm-start fuel enrichment cut PN further on the aged
+system. Limitation: one vehicle, so this characterises a configuration, not a fleet.
+Directly relevant to near-road sensing --- a 90\,nm mode driven by discrete start events
+is largely invisible to mass-based instruments.}
+{10.1016/j.jhazmat.2026.143156}
+
+\clearpage
+
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Yang et al.\ 2026}
+{Long-term exposure to multiple air pollutants and chronic pain in middle-aged and older
+Chinese adults}
+{J Pain}
+{China Health and Retirement Longitudinal Study, 2011--2020: \textbf{10{,}378
+participants free of chronic pain at baseline, 8{,}047 incident cases over a mean 7.39
+years} --- an incidence approaching 78\%, itself the study's most important number and a
+strong hint that the outcome definition is broad. Time-dependent Cox and accelerated
+failure time models were combined with weighted quantile sum regression over the
+five-pollutant mixture. PM$_{2.5}$, PM$_{10}$, SO$_2$ and CO were each associated with
+higher risk and earlier onset, and \textbf{SO$_2$ was the predominant mixture
+contributor}, not PM. Limitation: no interval estimates appear in the abstract,
+self-reported pain invites differential misclassification, and in a highly correlated
+mixture WQS weights identify the best-measured proxy as readily as the causal agent ---
+read ``SO$_2$ drives it'' as a hypothesis.}
+{10.1016/j.jpain.2026.106400}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{4--5 August 2026}, contiguous with the 3 August issue. The 4 August
+scheduled run did not execute, so this issue covers both days and no gap was left.
+\textbf{Sources.} PubMed E-utilities and the PubMed connector on two separate axes
+(health, instrumentation) windowed on \texttt{[EDAT]} --- 10 health and 2 sensing hits.
+Europe PMC \texttt{CREATION\_DATE} --- 2 hits, 1 in scope. Crossref scoped by journal ISSN
+across eight aerosol and atmospheric titles that PubMed does not index --- 6 hits, all new
+to the corpus, 2 carried. Consensus on four sensing axes (calibration and drift,
+satellite--surface fusion, network siting, mobile sensing) --- 3 new records after DOI
+resolution and dedup; the free tier caps returns at 3 per sweep, which remains the binding
+constraint on the sensing leg. OpenAlex remains blocked behind a paid plan; arXiv
+returned nothing in scope after the recency screen.
+\textbf{Screening.} Deduplication keys PMID $\rightarrow$ lowercased DOI $\rightarrow$
+title signature, checked before summarising. \textbf{Five records were excluded as
+off-topic} (agricultural nitrogen accounting, tobacco harm-perception surveys, rice trace
+gas fluxes, cough-triggered ventilation, surface-water ecological risk) and \textbf{five
+were held, not rejected}: their DOIs verify in Crossref, but no abstract is retrievable
+from Crossref, Europe PMC or Consensus and the Elsevier and IEEE landing pages are
+client-rendered. Held records are deliberately absent from \texttt{seen.json} so a later
+issue can carry them once indexed. Nothing was summarised from a title alone, and no DOI
+was inferred from a journal prefix.
+\textbf{Labels.} Subtopic, design, particle-metric and geography assignments are
+single-label judgements from title, abstract, keywords and MeSH terms, not a controlled
+vocabulary. Effect estimates are transcribed verbatim; see the forest-plot caption for
+why both are co-pollutant rather than PM estimates.
+All DOI links resolve to the publisher of record and were checked by the automated DOI
+gate before this issue compiled. Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}
