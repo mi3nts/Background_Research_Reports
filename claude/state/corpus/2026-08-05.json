@@ -1,0 +1,179 @@
+{
+ "date": "2026-08-05",
+ "entry_window": "2026-08-05 -> 2026-08-05",
+ "PAPERS": [
+  {
+   "pmid": "42553774",
+   "short": "Siu et al. 2026",
+   "doi": "10.1088/2752-5309/ae87c0",
+   "title": "Disparities in fine particulate matter (PM2.5) monitoring capacity in eastern Canada",
+   "journal": "Environ Res Health",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Spatial analysis / GIS",
+   "pm": "PM2.5",
+   "geo": "North America",
+   "endpoint": "None (monitoring)",
+   "n": "regulatory + low-cost monitors, 2020-2024, Ontario/Quebec/Atlantic Canada",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Yang et al. 2026",
+   "doi": "10.5194/acp-26-10909-2026",
+   "title": "Diurnal sea breeze worsens coastal air quality and complicates monitoring of remote North Atlantic air",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign / remote sensing",
+   "pm": "PM2.5; PM10; total aerosol number",
+   "geo": "Europe",
+   "endpoint": "None (monitoring)",
+   "n": "428 sea-breeze events, 10 y record, Penlee Point Atmospheric Observatory",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Jafari et al. 2026",
+   "doi": "10.1109/ojits.2026.3706855",
+   "title": "Joint optimization of bus-based mobile sensing and reference sensor deployment for urban air quality monitoring",
+   "journal": "IEEE Open J Intell Transp Syst",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Modelling / inventory",
+   "pm": "Unspeciated PM",
+   "geo": "Europe",
+   "endpoint": "None (monitoring)",
+   "n": "Rotterdam bus network case study",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Gäbel & Hertig 2026",
+   "doi": "10.5194/amt-19-1293-2026",
+   "title": "Recalibration of low-cost O3 and PM2.5 sensors: linking practices to recent air sensor test protocols",
+   "journal": "Atmos Meas Tech",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign / remote sensing",
+   "pm": "PM2.5",
+   "geo": "Europe",
+   "endpoint": "None (monitoring)",
+   "n": "yearlong co-location, Alphasense OX-B431 + Sensirion SPS30, Augsburg",
+   "tier": "A"
+  },
+  {
+   "pmid": "42554908",
+   "short": "Wang et al. 2026",
+   "doi": "10.1007/s10661-026-15750-y",
+   "title": "Traffic-induced environmental health assessment at intersections using roadside LiDAR",
+   "journal": "Environ Monit Assess",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Modelling / inventory",
+   "pm": "Unspeciated PM",
+   "geo": "China",
+   "endpoint": "None (monitoring)",
+   "n": "one urban + one suburban intersection, roadside LiDAR trajectories",
+   "tier": "B"
+  },
+  {
+   "pmid": "42553168",
+   "short": "Pinakana et al. 2026",
+   "doi": "10.1038/s44407-026-00096-z",
+   "title": "Influence of transboundary wildfire smoke on fine particulate matter concentrations at South Texas border schools",
+   "journal": "NPJ Clean Air",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field campaign / remote sensing",
+   "pm": "PM2.5",
+   "geo": "North America",
+   "endpoint": "None (monitoring)",
+   "n": "146 d, Nov 2023-Apr 2024, schools in Starr County TX",
+   "tier": "A"
+  },
+  {
+   "pmid": "42554254",
+   "short": "Phalen et al. 2026",
+   "doi": "10.1080/08958378.2026.2691193",
+   "title": "Inhaled aerosol dosimetry update",
+   "journal": "Inhal Toxicol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Review / synthesis",
+   "pm": "Unspeciated PM; ultrafine",
+   "geo": "Multi-country",
+   "endpoint": "Respiratory",
+   "n": "Fourth International Aerosol Dosimetry Conference, Irvine CA 2024",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Zhang et al. 2026 (preprint)",
+   "doi": "10.64898/2026.08.04.26359640",
+   "title": "Health impacts of national and local air pollution control policies targeting electric generating units, mobile sources, and port activities in three US cities",
+   "journal": "medRxiv (preprint)",
+   "sub": "Burden, policy & mitigation",
+   "design": "Time-series / case-crossover",
+   "pm": "PM2.5; PM sources (PMF)",
+   "geo": "North America",
+   "endpoint": "Cardiorespiratory",
+   "n": "ED visits 2005-2019, 6 monitoring sites, NYC / LA / Atlanta",
+   "tier": "A"
+  },
+  {
+   "pmid": "42552310",
+   "short": "Goyal et al. 2026",
+   "doi": "10.1038/s41467-026-75905-w",
+   "title": "Quantifying environmental co-benefits of nitrogen-based crop restructuring and its implications on India's interstate trade network",
+   "journal": "Nat Commun",
+   "sub": "Burden, policy & mitigation",
+   "design": "Modelling / inventory",
+   "pm": "Precursor emissions (N)",
+   "geo": "India",
+   "endpoint": "None (monitoring)",
+   "n": "national crop-system accounting, all Indian states",
+   "tier": "B"
+  },
+  {
+   "pmid": "42552754",
+   "short": "Shi et al. 2026",
+   "doi": "10.1002/ccd.70783",
+   "title": "Ischemic heart disease in G20 countries: forecasted burden and regional disparities based on GBD 2023 estimates",
+   "journal": "Catheter Cardiovasc Interv",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Modelling / inventory",
+   "pm": "Unspeciated PM",
+   "geo": "Multi-country",
+   "endpoint": "Cardiovascular",
+   "n": "G20, 1990-2023 with projection to 2050; 8.52 M cases, 5.81 M deaths in 2023",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "All-cause cardiorespiratory ED visits averted, all policies (NYC/LA/Atlanta)",
+   "exposure": "policy vs counterfactual",
+   "est": 7.1,
+   "lo": 5.4,
+   "hi": 8.8,
+   "metric": "% averted",
+   "src": "Zhang 2026 preprint (medRxiv)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "no preconception /\nin utero record\nthis window"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nschool-age PM2.5\nexposure at\nborder schools"
+  },
+  {
+   "n": 0,
+   "note": "no adolescent\nrecord this window"
+  },
+  {
+   "n": 2,
+   "note": "adult:\ncardiorespiratory ED\nvisits, ischemic\nheart disease"
+  },
+  {
+   "n": 1,
+   "note": "older adult:\nG20 IHD burden\nprojection to 2050"
+  }
+ ]
+}

@@ -143,6 +143,20 @@ design_group = {
     "Supersite observation": "Measurement campaign",
     "Environmental surveillance campaign": "Measurement campaign",
     "Dispersion model + soil sampling": "Modelling / inventory",
+    # added 2026-08-05: the diagnostic fired again, this time because canonical GROUP
+    # names were being written straight onto records. Identity self-maps make a group
+    # name a legal design label, so the map is closed under its own output.
+    "Modelling / inventory": "Modelling / inventory",
+    "Measurement campaign": "Measurement campaign",
+    "Review / synthesis": "Review / synthesis",
+    "Experimental / toxicology": "Experimental / toxicology",
+    "Observational - acute": "Observational - acute",
+    "Observational - cohort": "Observational - cohort",
+    "Observational - cross-sectional": "Observational - cross-sectional",
+    "Ecological": "Ecological",
+    "Trial / intervention": "Trial / intervention",
+    "Spatial analysis / GIS": "Modelling / inventory",
+    "Time-series / case-crossover": "Observational - acute",
     "Spatial econometric model": "Modelling / inventory",
     "Bayesian + geospatial regression": "Modelling / inventory",
     "Cross-sectional imaging": "Observational - cross-sectional",
@@ -362,6 +376,9 @@ geo_group = {
     "Malaysia": "Southeast Asia", "Singapore": "Southeast Asia",
     "Arctic Ocean": "Polar / remote marine", "Antarctica": "Polar / remote marine",
     "Southern Ocean": "Polar / remote marine",
+    # added 2026-08-05: continental group names used directly as a record's geo
+    "East Asia": "East Asia (ex-China)", "South Asia": "South Asia",
+    "North America": "North America", "Multi-country": "Global / multi-region",
 }
 # Aliases and sub-national place names. `geo` is written as free text on the record
 # ("Chiang Mai, Thailand", "Bogota, Colombia", "Ile-Ife, Nigeria"), so an exact-key

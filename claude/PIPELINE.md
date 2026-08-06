@@ -578,3 +578,43 @@ belong to the 4 Aug issue and none was held for the next. **13 records, 10 not s
   the 2/3 Aug and the 3 Consensus sensing backfills from any trend line (dated, not entered,
   in their windows). Retry the five held DOIs first.
 - Final: **9 pp, 0 errors, 1 overfull hbox of 1.18pt** in a table cell (sub-visual, left).
+
+### 2026-08-05 — sensing is half the corpus; Semantic Scholar added to the abstract retry chain
+Window **5 Aug** (`2026-08-05 -> 2026-08-05`), contiguous with 08-04, no gap. **10 shipped,
+23 rejected, 7 held.** 7 pp, 0 errors, 0 overfull boxes.
+
+- **Source counts.** PubMed 15 health / 8 sensing after merging connector + local harvester
+  (the two disagree in *both* directions — connector missed 42554908 and 42552310, local
+  missed 10 others; merging is worth the extra esummary call). **11 PubMed hits rejected
+  as off-topic** — the worst health-axis yield to date. Europe PMC 2 → 1 (a medRxiv
+  preprint). Crossref-by-journal 7 → 1 carried, 3 out of scope, 3 held. Consensus ×3 →
+  **every hit resolved to a DOI created before the window**; 1 backfill carried, 9 rejected.
+  OpenAlex now returns **HTTP 429** on top of the paid block.
+- **Semantic Scholar Graph is a genuine fourth abstract source.** Retried all five DOIs held
+  on 04 Aug across Crossref → Europe PMC → S2; **S2 recovered `10.1109/ojits.2026.3706855`
+  (Jafari, IEEE OJ-ITS)** which the other three had failed on for two days. Add it to the
+  retry chain permanently. The four Elsevier holds remain unretrievable; 3 new Elsevier/T&F
+  holds joined them, so **7 held records now stand** — Prajapati (APR, PM2.5 hygroscopicity)
+  still the priority pickup.
+- **Design map fell through AGAIN — 4th recurrence, new root cause.** 6/10 landed in
+  `Other / mixed` because I wrote **canonical group *values*** (`Modelling / inventory`)
+  onto records, and the map only had granular *keys*. Fixed by making `design_group`
+  **closed under its own output**: identity self-maps for all 9 group names, plus
+  `Spatial analysis / GIS` → Modelling and `Time-series / case-crossover` → Obs-acute.
+  Same fix applied to `geo_group` (`East Asia`, `South Asia`, `North America`,
+  `Multi-country`). The printed-unmapped diagnostic is what caught it — keep it.
+- **A figure caption was wrong until the proof.** Caption claimed "6 of ten carry no health
+  endpoint"; the rendered chart said 7. **Read the numbers off the rendered figure, not off
+  the corpus you think you wrote.**
+- **`\enlargethispage{3\baselineskip}` was the right dose.** 3 lines of the last exec-brief
+  bullet spilled onto an otherwise blank p.2. 3 baselines absorbed it cleanly, 8 pp → 7 pp,
+  bottom margin re-proofed and clear of the folio. Confirms the 08-04 rule: small doses work,
+  4–7 prints over the page number.
+- **Unicode in `short` is safe** — `Gäbel & Hertig 2026` renders correctly through
+  `mktable.py`. Don't ASCII-fold author names; it desynchronised the register from the body.
+- **EFFECTS has one entry and it is a preprint** (7.1%, 95% UI 5.4–8.8, policy-attributable
+  fraction — not a concentration–response ratio). 4th straight issue with no peer-reviewed PM
+  ratio estimate carrying a CI. Caption states this explicitly.
+- **Sat 8 Aug still owes the weekly for 2–8 Aug.** Exclude from trend lines: the 3 Consensus
+  sensing backfills of 03/04 Aug and **Gäbel & Hertig (AMT, created 19 Feb 2026)** shipped
+  today — dated outside their issue windows.
