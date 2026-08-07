@@ -618,3 +618,43 @@ Window **5 Aug** (`2026-08-05 -> 2026-08-05`), contiguous with 08-04, no gap. **
 - **Sat 8 Aug still owes the weekly for 2–8 Aug.** Exclude from trend lines: the 3 Consensus
   sensing backfills of 03/04 Aug and **Gäbel & Hertig (AMT, created 19 Feb 2026)** shipped
   today — dated outside their issue windows.
+
+### 2026-08-06 — CI drought breaks; the geo/design closure fix from 08-05 was only half done
+Window **6 Aug** (`2026-08-06 -> 2026-08-06`), contiguous with 08-05, no gap. **27 shipped,
+23 rejected, 9 held.** 11 pp, 0 errors, 0 overfull boxes. Widest corpus since 27 Jul.
+
+- **`geo_group` was never closed under its own output — 5th latent recurrence.** The 08-05
+  fix self-mapped 9 of 13 `design_group` values and only **4 of 13** `geo_group` values, so
+  `Sub-Saharan Africa`, `Global / multi-region`, `Oceania`, `Latin America`,
+  `East Asia (ex-China)`, `Middle East & N. Africa`, `Southeast Asia`, `Central Asia` and
+  `Polar / remote marine` would all have collapsed to the unmapped bucket. Both maps are now
+  closed **generatively** (`m.update({v: v for v in set(m.values())})`) rather than by hand,
+  so the closure cannot drift again. Verified 0 unmapped this run.
+- **`\enlargethispage` must be read on the page it is meant to enlarge.** Two lines spilled
+  onto a blank p.2; placing the macro after `\end{itemize}` did nothing, because TeX reads it
+  on p.2 after the break has already happened. Moved **above the exec-brief section heading**
+  (still p.1): 12 pp -> 11 pp at 2 baselines, bottom margin re-proofed and clear. Two rounds
+  of prose trimming beforehand did **not** converge — the paragraph reflows and re-spills.
+- **Source counts.** PubMed connector 20 health / 4 sensing, local harvester 14 / 4; the two
+  disagree in **both** directions (10 connector-only, 3 harvester-only) — merging both legs is
+  mandatory, not optional. Union 25, 18 carried, 7 rejected (incl. 1 already-shipped dup).
+  Europe PMC on `FIRST_PDATE` **and** `CREATION_DATE` — 7 preprints, 5 carried. Crossref by
+  ISSN 11 -> 4 carried, 5 out of scope, 2 new holds. Consensus x3 -> **all 9 hits resolved to
+  DOIs created Jan-Jun 2026**, none in window, 0 backfilled. OpenAlex HTTP 429 again.
+- **First peer-reviewed PM ratio estimate with a CI in five issues**: Jung et al., RA flare
+  OR 1.113 (1.017-1.218). Six EFFECTS entries, four of them PM. The drought is over; the
+  forest caption still marks the two co-pollutant entries explicitly.
+- **efetch DOI parsing bug found and fixed in the ad-hoc merge script.** Taking the *last*
+  `ArticleId[@IdType=doi]` in a `PubmedArticle` picks up a **reference-list DOI** — 6 of 25
+  records got a wrong DOI (e.g. PMID 42558172 resolved to a Nature news item). Read
+  `ELocationID[@EIdType='doi']` first, then `PubmedData/ArticleIdList` only. `check_dois.py`
+  would have caught these as FAIL, but the cheaper fix is upstream.
+- **Held: 9.** The 7 carried from 4-5 Aug were retried a third time across Crossref, Semantic
+  Scholar and Scholar Gateway — all still abstract-less; Scholar Gateway's corpus is current
+  only to **May 2026**, so it is not a useful retry source for same-week Elsevier deposits.
+  2 new Atmos Environ holds joined. Prajapati (PM2.5 hygroscopicity, eastern IGP) still the
+  priority pickup, with Ginsburg et al. (global PurpleAir calibration, AS&T) as the backfill
+  candidate if a slot opens.
+- **Sat 8 Aug owes the weekly for 2-8 Aug.** Exclude from trend lines: the five PubMed records
+  in this issue carrying a 4-5 Aug entry date (re-indexed into today's window, flagged backfill
+  in the provenance box), plus the 08-03/08-04/08-05 backfills already noted.

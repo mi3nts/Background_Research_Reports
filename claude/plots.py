@@ -230,6 +230,11 @@ design_group = {
     "Cohort": "Observational - cohort",
     "Cohort (secondary trial analysis)": "Observational - cohort",
 }
+# Close design_group under its own output. The 2026-08-05 fix added self-maps for the
+# nine group names in use that day but left four uncovered; a record written with one of
+# those four would have fallen through to "Other / mixed" (5th recurrence of the same
+# defect). Generated rather than hand-listed so the closure cannot drift again.
+design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):
     if d not in design_group:
@@ -380,6 +385,10 @@ geo_group = {
     "East Asia": "East Asia (ex-China)", "South Asia": "South Asia",
     "North America": "North America", "Multi-country": "Global / multi-region",
 }
+# Same closure for geography. On 2026-08-05 only four of the thirteen group names were
+# self-mapped; "Sub-Saharan Africa", "Global / multi-region", "Oceania" and six others
+# would have collapsed to the unmapped bucket. Generated, not hand-listed.
+geo_group.update({v: v for v in set(geo_group.values())})
 # Aliases and sub-national place names. `geo` is written as free text on the record
 # ("Chiang Mai, Thailand", "Bogota, Colombia", "Ile-Ife, Nigeria"), so an exact-key
 # lookup silently dumps everything into the fallback. On 2026-08-03 that put 20 of 25
