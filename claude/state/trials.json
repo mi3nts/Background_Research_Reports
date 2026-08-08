@@ -294,6 +294,88 @@
    "locations_count": 2,
    "first_seen": "2026-08-04",
    "note": "Only UFP-exposure interventional registration in the sweep not already in state. Connector exposes no last-update-date filter, so this is a relevance sweep, not a true window query."
+  },
+  {
+   "nct_id": "NCT07479420",
+   "title": "Cluster-randomised trial of HEPA versus ionisation/plasma air cleaners on microbial and physicochemical markers in primary school classrooms",
+   "status": "COMPLETED",
+   "study_type": "INTERVENTIONAL",
+   "phase": "NA",
+   "conditions": [
+    "Airborne Microorganisms",
+    "Particulate Matter (PM)"
+   ],
+   "interventions": [
+    "HEPA filter air cleaners",
+    "Ionization or plasma air cleaners"
+   ],
+   "sponsor": "Lidwien Smit",
+   "enrollment": 180,
+   "start_date": "2023-12-06",
+   "primary_completion_date": "2025-05-01",
+   "seen_window": "2026-08-07",
+   "note": "Head-to-head air-cleaning technology comparison rather than active-vs-sham; PM and bioaerosol endpoints.",
+   "endpoints": {
+    "primary": [
+     "Airborne bacteria/virus presence and concentration in classroom air (12 wk/school)",
+     "Classroom PM concentration (11 wk/school)"
+    ],
+    "secondary": [
+     "Parent-reported respiratory symptoms (to 12 mo)",
+     "Student absenteeism (12 wk/school)"
+    ],
+    "note": "Primaries are air-quality measurements, not health outcomes; health sits in the secondaries. The cleanest design in the current watch for linking a filtration intervention to a measured PM change."
+   }
+  },
+  {
+   "nct_id": "NCT05994937",
+   "title": "Glycemic and Cardiometabolic Biomarker Improvements Associated With Reduction in Air Pollution Exposure",
+   "status": "COMPLETED",
+   "study_type": "INTERVENTIONAL",
+   "phase": "NA",
+   "conditions": [
+    "PreDiabetes"
+   ],
+   "interventions": [
+    "PAC with HEPA filter intact",
+    "PAC with HEPA filter removed"
+   ],
+   "sponsor": "NYU Langone Health",
+   "enrollment": 150,
+   "start_date": "2023-12-26",
+   "primary_completion_date": "2026-03-16",
+   "seen_window": "2026-08-07",
+   "note": "Sham-controlled portable air cleaner; primary completion 2026-03-16 with no results posted yet - watch for posting."
+  },
+  {
+   "nct_id": "NCT06197477",
+   "title": "Development of Novel Assessments for Indoor Air Quality Monitoring and Impact on Children's Health - Cohorts in Schools & Biomarkers of Exposure",
+   "status": "UNKNOWN",
+   "study_type": "INTERVENTIONAL",
+   "phase": "NA",
+   "conditions": [
+    "Cognition"
+   ],
+   "interventions": [
+    "OurAir SQ 1750 mobile air purification system",
+    "Sham intervention"
+   ],
+   "sponsor": "Hasselt University",
+   "enrollment": 900,
+   "start_date": "2023-11-20",
+   "primary_completion_date": "2025-12",
+   "seen_window": "2026-08-07",
+   "note": "Largest school-based sham-controlled purifier trial in state (n=900); cognition primary endpoint; status UNKNOWN past primary completion.",
+   "endpoints": {
+    "primary": [
+     "Change in Correct Detection, continuous Performance Test",
+     "Change in correct substitutions, Symbol Digit Modalities Test",
+     "Change in Memory Span Task score",
+     "Change in Signal Detection Test score"
+    ],
+    "secondary": [],
+    "note": "Four cognitive primaries and NO secondary endpoints - no respiratory or biomarker outcome despite 'biomarkers of exposure' in the title. Multiplicity across four co-primaries is unaddressed in the registration."
+   }
   }
  ],
  "windows": [
@@ -314,6 +396,13 @@
    "updates": 0,
    "new_to_state": 1,
    "note": "ClinicalTrials.gov connector has no update-date filter; sweep on 'air pollution particulate matter exposure' returned 10 relevance hits, 9 of them long-completed studies already outside the watch. NCT07111208 (MARKOPOLO/METSGREEN, n=180, recruiting) added and analyze_endpoints run. Surfaced in the weekly rollup, not the daily issue."
+  },
+  {
+   "issue": "2026-08-07",
+   "query": "interventional PM / air-pollution filtration and cookstove sweep",
+   "total_returned": 62,
+   "new_to_state": 3,
+   "note": "The connector exposes no last-update-date filter, so this sweep is relevance-ranked, not windowed. Surfaced in the weekly, not the daily."
   }
  ],
  "NCT05867381": {

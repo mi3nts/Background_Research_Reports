@@ -658,3 +658,63 @@ Window **6 Aug** (`2026-08-06 -> 2026-08-06`), contiguous with 08-05, no gap. **
 - **Sat 8 Aug owes the weekly for 2-8 Aug.** Exclude from trend lines: the five PubMed records
   in this issue carrying a 4-5 Aug entry date (re-indexed into today's window, flagged backfill
   in the provenance box), plus the 08-03/08-04/08-05 backfills already noted.
+
+### 2026-08-07 — the CI drought reverses hard; design map falls through for a 6th time
+Window **7 Aug** (`2026-08-07 -> 2026-08-07`), contiguous with 08-06, no gap. **26 shipped,
+20 rejected, 4 carried on metadata alone.** 10 pp, 0 errors, 0 underfull, 4 sub-visual
+1.18 pt overfull hboxes in the masthead metric strip (pre-existing, logged 08-04).
+
+- **Source counts.** PubMed connector 19 health / 17 instrumentation, union 27; **the local
+  harvester returned 18 health and 0 sensing** — its sensing query has now produced an empty
+  set twice, and the connector is the only working instrumentation leg into PubMed. 1 dup,
+  18 carried, 8 rejected. Europe PMC 1, already in the PubMed set. **Crossref by ISSN 10 —
+  the most productive sensing leg again**, 6 carried, 4 out of scope. Consensus x3 sweeps
+  returned 9 capped at 3/sweep by the free tier; **7 resolved to DOIs already in
+  `seen.json`** and 2 were carried as backfill (DeMarsh, Blanco-Villafuerte, Crossref
+  `created` Jan–Feb 2026). arXiv 60, none published on/after 1 Aug. OpenAlex HTTP 429 again.
+- **All 27 PubMed records carry `PubMedPubDate[@PubStatus="pubmed"]` = 2026-08-07.** No
+  record held back, none re-indexed from an earlier window — the first fully uniform EDAT
+  window since the split rule was adopted on 2 Aug.
+- **`design_group` fell through for 10 of 26 records — 6th recurrence.** The 08-05/08-06 fix
+  closed the map under its own output but did not anticipate *new* granular labels, and this
+  issue introduced ten (`Burden estimation (GBD)`, `Distributed-lag time-series`,
+  `Satellite remote sensing`, `Monitoring-record analysis`, `Sensor deployment (pilot)`,
+  `Biomonitoring transplant`, `Cross-sectional survey`, `Toxicological (in vitro)`,
+  `Materials / filtration`, `Literature review`). Added; 0 unmapped after the patch, and the
+  architecture donut went from 12-in-`Other / mixed` to 8 populated groups. **The printed
+  `!! design unmapped` diagnostic is the only thing that catches this — never silence it.**
+- **Sixteen effect estimates with intervals, the largest set this watch has carried** (6 on
+  08-06, 1 on 08-05). Cause is compositional, not a trend: Cantuaria (COPD, n=159,769),
+  Orr (wildfire PM2.5 x influenza, 6 states) and Sassano (Golestan household fuel,
+  n=50,045) each report a family of stratified estimates. **Orr's effect boundary coincides
+  exactly with the outcome-ascertainment boundary** — positive in the 4 lab-confirmed-
+  influenza states, null in NV and *protective* in WA (0.884, 0.842–0.919), the two
+  syndromic-ILI states. Flagged in the issue as misclassification, not geography.
+- **Jiang's PM10 RR 1.63 (0.18–15.94) deliberately excluded from the forest plot** — the
+  interval spans an order of magnitude and compresses every other estimate to a point. It
+  stays in `EFFECTS`-adjacent prose and the register, not the figure. Precedent worth keeping.
+- **Caption-vs-figure mismatch caught at the proof again**: the f2 caption claimed 12
+  endpoint-free records against 14 in the rendered chart. Fixed. **Read counts off the
+  rendered figure, not the corpus you think you wrote** — 3rd occurrence.
+- **Orphan p.2 did not yield to `\enlargethispage` and needed prose surgery.** 4 spilled
+  lines at 2 baselines; 3 baselines left 1 line; the fix that worked was **deleting the
+  weakest exec-brief bullet and folding one clause of it into bullet 1**, then trimming 6
+  words from the last bullet. 11 pp -> 10 pp. Confirms the 08-06 rule that trimming alone
+  does not converge — but deleting a whole bullet does, because it removes the reflow.
+- **Four records carried on metadata alone** (Yukhymchuk AAQR low-cost PM sensor performance,
+  Zheng *Atmos Environ* winter PM2.5 XAI, Sanders AS&T hygroscopic growth, Huang APR brown
+  carbon) — abstract-less across Crossref, Europe PMC and Semantic Scholar. All four are on
+  the sensing axis, so **the day's most relevant instrumentation content is un-summarisable**.
+  Listed, never summarised from a title. Yukhymchuk is the priority re-check.
+- **Trial watch:** 62 returned, **3 new to state** — NCT07479420 (classroom HEPA vs
+  ionisation cluster-RCT, n=180: primaries are *air-quality* measurements with health in the
+  secondaries, the cleanest filtration->PM->health chain in state), NCT06197477 (Hasselt
+  schools, n=900, **four cognitive co-primaries and zero secondaries**, multiplicity
+  unaddressed), NCT05994937 (NYU prediabetes PAC, n=150, primary completion 2026-03-16 with
+  no results posted). `analyze_endpoints` run on the two new interventional registrations.
+- **For the 8 Aug run (tonight):** window `2026-08-08 -> 2026-08-08`; `last_entry_date` is
+  now `2026-08-07`. **Saturday 8 Aug owes the weekly for 2–8 Aug** and must exclude from any
+  trend line: the 2/3/4/5 Aug Consensus sensing backfills, Gäbel & Hertig (AMT, created
+  19 Feb), the five 08-06 records re-indexed from 4–5 Aug, and today's two Consensus
+  backfills (DeMarsh, Blanco-Villafuerte). Also carry the four metadata-only sensing records
+  forward for an abstract retry.
