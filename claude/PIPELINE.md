@@ -718,3 +718,31 @@ Window **7 Aug** (`2026-08-07 -> 2026-08-07`), contiguous with 08-06, no gap. **
   19 Feb), the five 08-06 records re-indexed from 4–5 Aug, and today's two Consensus
   backfills (DeMarsh, Blanco-Villafuerte). Also carry the four metadata-only sensing records
   forward for an abstract retry.
+- **`git commit` is now unusable on this mount and there is a working substitute.** Every
+  lock file under `.git/` (`index.lock`, `HEAD.lock`, `refs/heads/main.lock`,
+  `packed-refs.lock`) is a stale zero-byte leftover that **cannot be removed** — `rm` is
+  EPERM and `mv` *reports success but leaves the file in place*, so the 08-03 note that
+  "`mv` works" is now wrong. Porcelain `commit` dies on `index.lock`, then on `HEAD.lock`.
+  The path that works, and should be used directly from now on:
+  ```
+  N=idx-$(date +%s%N); cp .git/index .git/$N; export GIT_INDEX_FILE=.git/$N
+  T=$(git write-tree); C=$(git commit-tree "$T" -p $(git rev-parse HEAD) -m "<msg>")
+  python3 -c "open('.git/refs/heads/main','w').write('$C\n')"   # in-place write, no unlink
+  git push origin main
+  ```
+  `git add` still works (it warns about unlinkable temp objects and stages correctly), and
+  `git push` is unaffected. A **fresh index copy per attempt** is required — the previous
+  attempt's `.lock` also survives. Pushed `296d058..379be35` this way.
+- **The site UI requests in the task file are already implemented and were verified in the
+  source this run** — no work was needed and none was done. `index.dc.html` builds
+  `many = reps.length > 1` and routes both the day cell and a corner count badge to
+  `openPicker(iso)`, which renders a modal listing every report for that date with its
+  cadence chip (so a multi-report day no longer opens the daily directly); and the "All
+  reports" button opens an archive overlay built from `archiveGroups`, one group per
+  cadence folder with per-group counts. Note `support.js` is a **generated bundle**
+  ("do not edit, rebuild with `cd dc-runtime && bun run build`") and `dc-runtime/` is not
+  in the repo — any future runtime change has to go through `index.dc.html`, not the bundle.
+- **Step 9 verified over HTTP, not visually** — the Claude-in-Chrome extension was not
+  connected. Live `reports.json` returns 12 daily entries with `2026-08-07` newest, and the
+  live PDF returns HTTP 200, 1,525,903 bytes, 10 pages, correct title. Two cache-busted
+  fetches 40 s apart agreed, so no Pages manifest lag this run.
