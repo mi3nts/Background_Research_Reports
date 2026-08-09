@@ -1,0 +1,271 @@
+{
+ "date": "2026-08-08",
+ "entry_window": "2026-08-08 -> 2026-08-08",
+ "PAPERS": [
+  {
+   "pmid": "42568331",
+   "short": "Çulpan et al. 2026",
+   "doi": "10.1515/reveh-2026-0032",
+   "title": "Long-term air pollution and blood pressure in children: updated systematic review and meta-analysis",
+   "journal": "Rev Environ Health",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Systematic review (PRISMA)",
+   "pm": "PM2.5, PM10, NO2 (long-term, per 10 ug/m3)",
+   "geo": "Global",
+   "endpoint": "Cardiovascular",
+   "n": "21 studies, 990,157 children/adolescents",
+   "tier": "A"
+  },
+  {
+   "pmid": "42567248",
+   "short": "Hur et al. 2026",
+   "doi": "10.1016/j.envpol.2026.128933",
+   "title": "Pollen modifies the association between suspended particulate matter and mortality across eight Kyushu cities",
+   "journal": "Environ Pollut",
+   "sub": "Respiratory & allergic",
+   "design": "Time-series / case-crossover",
+   "pm": "SPM (daily, Japanese suspended PM)",
+   "geo": "Kyushu, Japan",
+   "endpoint": "Respiratory",
+   "n": "262,288 deaths, 8 cities, 1989-2014",
+   "tier": "A"
+  },
+  {
+   "pmid": "42567636",
+   "short": "Shukla et al. 2026",
+   "doi": "10.1136/bmjopen-2025-110612",
+   "title": "Hourly ambient NO2 and emergency admissions for acute asthma, Birmingham and Solihull",
+   "journal": "BMJ Open",
+   "sub": "Respiratory & allergic",
+   "design": "Distributed-lag time-series",
+   "pm": "NO2 (hourly, co-pollutant proxy)",
+   "geo": "Birmingham, UK",
+   "endpoint": "Respiratory",
+   "n": "18,943 adult asthma admissions, 2016-2022",
+   "tier": "B"
+  },
+  {
+   "pmid": "42569680",
+   "short": "Tillery et al. 2026",
+   "doi": "10.1155/ina/7749725",
+   "title": "Indoor air nicotine, NO2 and COVID-19 outcomes in a Great Plains tribal community",
+   "journal": "Indoor Air",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional survey",
+   "pm": "Indoor air nicotine + NO2 (1-week passive badges)",
+   "geo": "South Dakota, USA",
+   "endpoint": "Respiratory",
+   "n": "290 multigenerational households (Cheyenne River Sioux Tribe)",
+   "tier": "B"
+  },
+  {
+   "pmid": "42569021",
+   "short": "Yibcharoenporn et al. 2026",
+   "doi": "10.1021/acsomega.6c00972",
+   "title": "Metabolic profiling of PM2.5- and PM10-induced developmental toxicity in zebrafish embryos",
+   "journal": "ACS Omega",
+   "sub": "Mechanistic toxicology",
+   "design": "Toxicological (in vitro)",
+   "pm": "PM2.5 + PM10 jointly (500, 1000 ug/mL suspensions)",
+   "geo": "Thailand (laboratory)",
+   "endpoint": "Reproductive",
+   "n": "Zebrafish embryos, 4-50 hpf",
+   "tier": "B"
+  },
+  {
+   "pmid": "42570392",
+   "short": "Gu et al. 2026",
+   "doi": "10.1016/j.jhazmat.2026.143130",
+   "title": "Electro-ultrasonic coupled agglomeration for removal of toxic fine particles from biomass combustion",
+   "journal": "J Hazard Mater",
+   "sub": "Burden, policy & mitigation",
+   "design": "Chamber / laboratory",
+   "pm": "PM (unspeciated) from biomass combustion",
+   "geo": "China",
+   "endpoint": "No health endpoint",
+   "n": "Continuous-flow bench platform",
+   "tier": "B"
+  },
+  {
+   "pmid": "42569933",
+   "short": "Wojcik et al. 2026",
+   "doi": "10.1093/atsscholar/aapag039",
+   "title": "An air pollution curriculum for pulmonary and critical care fellows",
+   "journal": "ATS Sch",
+   "sub": "Burden, policy & mitigation",
+   "design": "Educational intervention",
+   "pm": "PM (unspeciated), curriculum content",
+   "geo": "USA",
+   "endpoint": "No health endpoint",
+   "n": "Single-programme fellow cohort, pre/post 20-item scale",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Madalipay et al. 2026",
+   "doi": "10.1016/j.apr.2026.103171",
+   "title": "Establishing PM2.5 conversion factors for South Korea at provincial level",
+   "journal": "Atmos Pollut Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM2.5 + PM10 jointly",
+   "geo": "South Korea",
+   "endpoint": "No health endpoint",
+   "n": "Provincial monitoring records (n not stated)",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Cuerda Barcaiztegui et al. 2026",
+   "doi": "10.1016/j.apr.2026.103170",
+   "title": "Classroom ventilation management and user activities vs. indoor air quality in Madrid primary schools",
+   "journal": "Atmos Pollut Res",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM (unspeciated) + CO2, indoor",
+   "geo": "Madrid, Spain",
+   "endpoint": "No health endpoint",
+   "n": "Two-year field study, multiple schools (n not stated)",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Samburova et al. 2026",
+   "doi": "10.1016/j.apr.2026.103168",
+   "title": "Effects of western US wildfire smoke on urban air quality in northern Nevada",
+   "journal": "Atmos Pollut Res",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM2.5 only (wildfire-influenced)",
+   "geo": "Nevada, USA",
+   "endpoint": "No health endpoint",
+   "n": "Urban monitoring records (n not stated)",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "McCerery et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122289",
+   "title": "Arctic transport of North American and Canadian wildfire aerosols",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM (unspeciated) wildfire aerosol",
+   "geo": "Arctic / North America",
+   "endpoint": "No health endpoint",
+   "n": "Transport analysis (n not stated)",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Astaneh et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122288",
+   "title": "Source-tagged PM tracers in random-forest bias correction of ozone design-value predictions",
+   "journal": "Atmos Environ",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM (unspeciated), source-tagged tracers",
+   "geo": "USA",
+   "endpoint": "No health endpoint",
+   "n": "Model-evaluation study (n not stated)",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Raptaki et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122283",
+   "title": "Atmospheric BTEX in Heraklion, Crete: levels, sources and contribution to secondary aerosol formation",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Secondary organic aerosol precursors (BTEX)",
+   "geo": "Heraklion, Greece",
+   "endpoint": "No health endpoint",
+   "n": "Urban measurement campaign (n not stated)",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Kokol et al. 2026",
+   "doi": "10.21203/rs.3.rs-9910414/v1",
+   "title": "Artificial intelligence in the management of climate-change-related health issues in Africa: scoping review",
+   "journal": "Res Sq (preprint)",
+   "sub": "Burden, policy & mitigation",
+   "design": "Scoping review",
+   "pm": "PM (unspeciated), bibliometric corpus",
+   "geo": "Sub-Saharan Africa",
+   "endpoint": "No health endpoint",
+   "n": "Scopus corpus to Oct 2025, VOSviewer clustering",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Respiratory mortality, lag 1, all pollen days (8 Kyushu cities)",
+   "exposure": "SPM, daily",
+   "est": 1.01,
+   "lo": 1.0,
+   "hi": 1.019,
+   "metric": "RR",
+   "src": "Hur 2026 (Environ Pollut)"
+  },
+  {
+   "label": "Respiratory mortality, lag 1, high-pollen days (>75th pct)",
+   "exposure": "SPM x pollen",
+   "est": 1.021,
+   "lo": 1.005,
+   "hi": 1.037,
+   "metric": "RR",
+   "src": "Hur 2026 (Environ Pollut)"
+  },
+  {
+   "label": "Respiratory mortality, lag 1, low-pollen days",
+   "exposure": "SPM x pollen",
+   "est": 1.003,
+   "lo": 0.987,
+   "hi": 1.018,
+   "metric": "RR",
+   "src": "Hur 2026 (Environ Pollut)"
+  },
+  {
+   "label": "Daytime emergency asthma admission, lag 0-24 h (co-pollutant)",
+   "exposure": "NO2, 18 ug/m3 hourly",
+   "est": 1.13,
+   "lo": 1.01,
+   "hi": 1.26,
+   "metric": "RR",
+   "src": "Shukla 2026 (BMJ Open)"
+  },
+  {
+   "label": "Prior COVID-19 infection, indoor air nicotine detected",
+   "exposure": "Indoor air nicotine",
+   "est": 1.21,
+   "lo": 1.01,
+   "hi": 1.51,
+   "metric": "OR",
+   "src": "Tillery 2026 (Indoor Air)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "in utero:\nPM2.5/PM10 zebrafish\nembryo metabolomics"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nblood pressure meta-\nanalysis; classroom IAQ"
+  },
+  {
+   "n": 1,
+   "note": "adolescence:\npaediatric BP meta-\nanalysis (to age 18)"
+  },
+  {
+   "n": 3,
+   "note": "adult:\nasthma admissions,\nindoor NO2 and COVID"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nrespiratory mortality,\npollen interaction"
+  }
+ ]
+}

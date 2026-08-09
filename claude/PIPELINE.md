@@ -746,3 +746,62 @@ Window **7 Aug** (`2026-08-07 -> 2026-08-07`), contiguous with 08-06, no gap. **
   connected. Live `reports.json` returns 12 daily entries with `2026-08-07` newest, and the
   live PDF returns HTTP 200, 1,525,903 bytes, 10 pages, correct title. Two cache-busted
   fetches 40 s apart agreed, so no Pages manifest lag this run.
+
+### 2026-08-08 — thinnest window on record; Saturday weekly; two structural fixes
+Window **8 Aug** (`2026-08-08 -> 2026-08-08`), contiguous with 08-07, no gap. **14 shipped,
+13 rejected, 6 carried on metadata alone.** 7 pp, 0 errors, 0 overfull/underfull.
+Plus the **weekly rollup for 2–8 Aug** (36 pp, 146 records, 5 sub-visual 1.18 pt masthead
+overfulls, pre-existing).
+
+- **Source counts.** PubMed connector 9 health / **0 instrumentation** (third consecutive
+  empty sensing query — that leg is now unreliable, not merely lossy); a third MeSH-only
+  sweep returned 10 of which 9 were water/soil/cleanroom and were rejected. Local harvester
+  4 / 0. Europe PMC `CREATION_DATE` 2 preprints, 1 carried. **Crossref by ISSN 7 and it
+  carried the whole sensing axis (6 of 7 records).** Consensus x3: 20 hits per sweep capped
+  at 3, all 9 resolved to 2019–2025 or `seen.json`, 0 carried. arXiv 50, none on/after
+  1 Aug. OpenAlex HTTP 429, 6th consecutive.
+- **Abstract famine is not randomly distributed.** 6 of 14 records, and 6 of the 7 sensing
+  records, have no abstract in Crossref, Europe PMC **or** Semantic Scholar (S2 returns 404
+  on all six DOIs). All six are same-day Elsevier *Atmos Environ* / *APR* deposits. Listed,
+  never summarised. Priority re-checks: Madalipay (provincial PM2.5 conversion factors,
+  South Korea) and Cuerda Barcaiztegui (2-y Madrid classroom IAQ).
+- **`design_group` fell through for a 7th time** — one new leaf label (`Educational
+  intervention`). The 08-05 generative closure only self-maps *group* names; a new *leaf*
+  still falls through. Added. **`geo_of` also fell through on `Birmingham, UK`** — no needle
+  matched the bare abbreviation; added `, uk` / `birmingham` / `wales` / `solihull`.
+- **`\paperentry` had no page-break protection and stranded a DOI line alone on p.7.**
+  Neither `\\*` nor `\nopagebreak[4]` stopped it, and three rounds of prose trimming did not
+  converge (each trim frees one line and the reflow pushes the next down). Fixed by wrapping
+  the entry in a `minipage`, exactly as `\precisentry` already was for the identical defect.
+  8 pp -> 7 pp. **Structural fix, applies to every future issue.**
+- **`update_state.py` must run BEFORE the rollup.** The first weekly build silently omitted
+  the 8 Aug column from `w1_subtopic_trend` because `metrics.csv` had not been rebuilt.
+  Caught only by looking at the rendered axis. Order is: `--post` -> `update_state.py` ->
+  `--rollup`. Also note `rollup()` is idempotent, so a rebuild needs the output renamed
+  aside first (`rm` is EPERM; the aside is gitignored as `Reports/**/.trash_*.pdf`).
+- **Caption-vs-figure mismatch caught twice more** (5th and 6th occurrences): the daily f2
+  caption claimed 8 endpoint-free records against 9 rendered; the weekly donut caption
+  claimed 4 trial/intervention records against 1 rendered. **Read counts off the rendered
+  figure, every time.**
+- **Deduplication failure found in the weekly, one in 146.** DOI
+  `10.1080/26395940.2026.2616098` (Kumpika, PMS7003 humidity/ageing correction) shipped in
+  **both** the 02 Aug and 03 Aug issues under different titles. `seen.json` keys on DOI so
+  the check exists; the 03 Aug run evidently wrote before checking. Stated in the weekly
+  rather than quietly corrected. Also logged there: journal names are free text and three
+  venues appear under two spellings, understating venue concentration by ~1/3 at the top.
+- **Weekly content.** 146 records / 145 unique DOIs, 54 % measurement-side, 30 pooled
+  estimates (17 of them from just 4 papers — pooling explicitly refused, no I2). 24 LCS /
+  calibration records; the week's real theme is **calibration transferability** (Ginsburg
+  worldwide PurpleAir, Zhivkov distance-dependent transfer error, Chung US deployment
+  longevity, Gäbel & Hertig recalibration practice) — boundaries of existing corrections,
+  not new ones. Trial watch: 21 registrations surfaced, **13 sham-controlled filtration
+  trials on surrogate endpoints**; only NCT06376994 (n=770) and NCT05874479 (n=440) are
+  adequately powered; NCT05994937 is 5 months past primary completion with no results.
+  NCT05368493 added 8 Aug — registry says INTERVENTIONAL but the only intervention is an
+  MRI task.
+- **Standing gap, now measured over 146 records:** not one paper coupled an instrument to a
+  health endpoint. The empty f4 heatmap cell survived a 7x larger corpus, so it is
+  structural, not sampling.
+- **For the 9 Aug run:** window `2026-08-09 -> 2026-08-09`; `last_entry_date` is now
+  `2026-08-08`. Sunday — no rollup owed (weekly is generated Saturdays). Re-check the six
+  metadata-only Elsevier DOIs for abstracts, and the four still held from 7 Aug.

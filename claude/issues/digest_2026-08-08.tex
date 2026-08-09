@@ -1,0 +1,444 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{8 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-08-08\;\;\textcolor{Amber}{\textbar}\;\;Entry window 8 August 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;14 records in scope\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{14}{RECORDS IN SCOPE\\(13 REJECTED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{SENSING / EXPOSURE\\RECORDS (50\%)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{SUBTOPIC CLUSTERS\\REPRESENTED}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{EFFECT ESTIMATES\\EXTRACTED}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Two records on opposite ends of the evidence
+hierarchy make the same argument: the particle-mass concentration a monitor reports is
+conditional on a co-exposure the monitor does not measure.}\\[1.4mm]
+\footnotesize
+Hur et al.\ (\textit{Environ Pollut}) pooled \textbf{262{,}288} deaths across eight
+Kyushu cities over 26 pollen seasons and fitted an explicit SPM\,$\times$\,pollen
+interaction in a two-stage time-series. The marginal association of suspended particulate
+matter with respiratory mortality at lag 1 is barely distinguishable from null
+(\textbf{RR 1.010, 95\,\% CI 1.000--1.019}), but it separates cleanly on pollen load:
+\textbf{1.021 (1.005--1.037)} above the 75th percentile against \textbf{1.003
+(0.987--1.018)} below it, and the split is robust to the choice of cutoff. A mass-only
+instrument in Fukuoka in March therefore returns a number whose health meaning changes
+by a factor of seven depending on a biogenic co-pollutant it is blind to.
+Çulpan et al.\ (\textit{Rev Environ Health}) reach the same conclusion by subtraction
+across \textbf{21 studies and 990{,}157} children: the fine fraction is the only exposure
+with a consistent blood-pressure association (\textbf{+0.59\,mmHg systolic per
+10\,$\mu$g/m$^3$}, 0.28--0.90), the coarse-fraction estimates do not survive sensitivity
+analysis, and NO$_2$ is null --- but the authors' own stated limitation is that they could
+not fit multipollutant models because the primary studies did not report the exposure
+covariance. Both papers are asking the measurement side for the same thing: a
+co-exposure-resolved record, not a scalar.
+\end{keybox}
+
+\vspace{3mm}
+
+% Bottom margin proofed: the exec brief closes clear of the folio at 2 baselines.
+\enlargethispage{2\baselineskip}
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{The thinnest window this watch has run: 14 records against 26 yesterday
+and 27 on 6 August.} This is a calendar artefact, not a signal --- 8 August is a Saturday
+and PubMed's entry-date volume collapses at weekends. The PubMed connector returned
+\textbf{9 hits on the health axis and zero on the instrumentation axis}, the third
+consecutive empty sensing query from that leg, and the local harvester returned 4 and 0.
+The corpus is held up almost entirely by \textbf{Crossref by ISSN, which supplied 6 of
+the 7 sensing and exposure records}. Treat the daily counts for 8 August as a floor when
+they enter the weekly trend line.
+
+\item \textbf{Six of fourteen records --- and six of seven on the sensing axis --- carry no
+abstract anywhere.} All six are \textit{Atmospheric Environment} / \textit{Atmospheric
+Pollution Research} deposits made today; Crossref, Europe PMC and Semantic Scholar all
+return metadata only, and Semantic Scholar has no record of the DOIs at all. They are
+listed with design, metric and region but are \textbf{not summarised}, because a summary
+written from a title is a fabrication. The highest-value pickups are Madalipay et al.\ on
+provincial PM$_{2.5}$ conversion factors for South Korea and Cuerda Barcaiztegui et al.\
+on a two-year classroom ventilation and IAQ field study in Madrid.
+
+\item \textbf{Five effect estimates with intervals, down from sixteen yesterday}, and
+three of them are the same Kyushu interaction reported at different pollen strata.
+Two are co-pollutant (NO$_2$, indoor air nicotine). \textbf{No PM ratio estimate from a
+cohort entered the corpus today.} Çulpan et al.'s meta-analytic estimates are mean
+differences in mmHg and are deliberately excluded from the forest plot, which is a
+log-ratio axis --- plotting 0.59 against a null of 1.0 would render a harmful effect as
+protective. They are carried in the digest text and the register instead.
+
+\item \textbf{The one high-temporal-resolution result is a co-pollutant one.} Shukla
+et al.\ (\textit{BMJ Open}) fit a Poisson GAM/DLNM on \emph{hourly} NO$_2$ against
+18{,}943 adult asthma admissions in Birmingham and Solihull, and locate the association
+at a \textbf{3--6 hour lag} (RR 1.13, 1.01--1.26 at the 18\,$\mu$g/m$^3$ mean over
+lag 0--24\,h, daytime). The lag structure is the transferable part: an exposure signal
+resolvable at 3--6 hours is invisible to a 24-hour filter-based method and is exactly the
+regime distributed low-cost sensing is built for. It is NO$_2$, not PM, so it enters as a
+methodological rather than a substantive record.
+
+\item \textbf{Nothing new on sensor calibration, drift or co-location.} Three Consensus
+sweeps (calibration and drift, co-location against reference monitors, satellite--surface
+fusion with humidity correction) returned 20 hits each, capped at 3 per sweep by the free
+tier, and \textbf{every returned DOI resolved to 2019--2025 or to a record already in
+\texttt{seen.json}}. OpenAlex returned HTTP 429 for the sixth consecutive run. The
+calibration literature was not silent today; the available discovery paths simply cannot
+see a single day of it.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 14 in-scope records, single-label by dominant
+contribution. \textit{Burden, policy \& mitigation} and \textit{Exposure assessment \&
+modelling} tie at 3; adding \textit{Sensing, forecasting \& instrumentation} (2) and
+\textit{Occupational \& indoor} (2) puts \textbf{7 of 14 records on the measurement side}.
+Three of the ten canonical clusters are empty today --- \textit{Neuro / mental health},
+\textit{Reproductive \& developmental} and \textit{Other clinical endpoints} --- which at
+$n=14$ is expected sampling variation, not a field-level absence.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. \textbf{\textit{Metadata only} is the single largest
+slice at 6 of 14 (43\%)}, the highest share this watch has recorded, and it is an honest
+category rather than a residual: those records are listed but uncharacterised. No
+observational cohort entered today. Right --- health endpoint. \textbf{Nine of fourteen
+records carry \emph{no} human health endpoint} (six metadata-only sensing deposits, one
+control-technology bench study, one curriculum evaluation, one bibliometric review), so
+the endpoint panel describes five records and is not a field-level distribution.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. \textbf{Ten of fourteen records sit in
+\textit{PM (unspeciated) / emissions}}, which is a direct consequence of the
+metadata-only share: without an abstract there is no basis for assigning a size cut.
+Only one record (Samburova et al., wildfire-influenced urban PM$_{2.5}$ in northern
+Nevada) is unambiguously PM$_{2.5}$-only, and \textbf{no record today measures ultrafine
+particles} --- a gap now standing at six consecutive issues. Right --- geographic
+provenance. North America contributes 5; South Asia and Latin America are absent again.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed. Counts are non-exclusive and total 7, not 14,
+because the six metadata-only records and the curriculum evaluation address no life
+stage. The paediatric blood-pressure meta-analysis spans childhood and adolescence and is
+counted in both.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. The structural feature
+worth naming is that the entire \textit{Metadata only} column (6 records) lands in the
+\textit{Exposure assessment}, \textit{Sensing} and \textit{Occupational \& indoor} rows
+--- \textbf{the abstract-availability failure is not randomly distributed across the
+corpus, it falls almost entirely on the instrumentation axis}. This is the fourth issue in
+a row where the day's most methodologically relevant content is the least characterisable,
+and it is a property of Elsevier's atmospheric-sciences deposit pipeline, not of the
+literature.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{The five interval estimates in today's corpus, on a common logarithmic axis.
+\textbf{Three of the five are the same Kyushu SPM--mortality association reported at
+different pollen strata} and are therefore not independent; they are plotted together
+because the contrast between them is the finding. Two are co-pollutant rather than PM
+(Shukla, hourly NO$_2$; Tillery, indoor air nicotine). Exposure contrasts are
+heterogeneous --- a daily SPM increment, an 18\,$\mu$g/m$^3$ hourly NO$_2$ mean, and a
+binary detection indicator --- so the plot shows precision and direction only.
+\textbf{Two estimates are deliberately absent}: Çulpan et al.'s mmHg mean differences,
+which have no place on a ratio axis, and Tillery et al.'s long-COVID OR 3.69
+(1.11--16.6), whose interval spans a factor of 15 and would compress every other estimate
+to a point (same exclusion rule applied to Jiang et al.\ on 7 August). Both are given in
+the digest text.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textsc{metadata only} were surfaced without an abstract in Crossref, Europe PMC or
+Semantic Scholar and are listed, not summarised.\par}
+
+\band{Respiratory \& allergic\hfill 2 records}{Sage}
+
+\paperentry{Hur et al.\ 2026}
+{Pollen modifies the SPM--mortality association across eight Kyushu cities}
+{Environ Pollut}
+{Two-stage time-series over 262{,}288 all-cause deaths, eight cities, pollen seasons
+(Feb--Apr) 1989--2014, with an explicit SPM\,$\times$\,pollen interaction term in stage one
+and random-effects pooling in stage two. Respiratory mortality at lag 1:
+\textbf{RR 1.010 (1.000--1.019)} overall, \textbf{1.021 (1.005--1.037)} on days above the
+75th-percentile pollen concentration against \textbf{1.003 (0.987--1.018)} below,
+stable across alternative cutoffs. The threat to inference is exposure misclassification
+in the modifier, not the exposure: pollen is measured at a single station per city and
+the interaction is fitted on a binary split of a highly skewed distribution, so the
+contrast is a lower bound on a continuous effect. Suspended particulate matter is a
+Japanese regulatory metric with a 100\,\% cut near 10\,$\mu$m and is not
+interchangeable with PM$_{2.5}$. For distributed sensing the implication is concrete:
+an optical counter with a fluorescence or coarse-mode channel can resolve the modifier and
+the exposure on the same node, which no regulatory network in this study did.}
+{10.1016/j.envpol.2026.128933}
+
+\paperentry{Shukla et al.\ 2026}
+{Hourly NO$_2$ and emergency admissions for acute asthma, Birmingham and Solihull}
+{BMJ Open}
+{Poisson generalised additive model with a distributed-lag non-linear term on
+\emph{hourly} counts --- 18{,}943 adult asthma admissions to four acute hospitals,
+June 2016--May 2022, linked through the PIONEER data hub. The mean 18\,$\mu$g/m$^3$
+NO$_2$ exposure over lag 0--24\,h carried \textbf{RR 1.13 (1.01--1.26)} for daytime
+admissions, with the association concentrated at a \textbf{3--6 hour lag} and a steeper
+gradient in the most deprived quintile. Exposure is assigned from fixed monitors to
+residence, so the hourly resolution is nominal rather than personal --- time-activity
+displacement over a 3--6\,h window is precisely the scale at which residential assignment
+fails, which biases toward the null. The pollutant is NO$_2$, so this enters the watch on
+method rather than on substance: it is the cleanest recent demonstration that the
+health-relevant exposure signal lives below the 24-hour averaging period that
+filter-based reference methods impose.}
+{10.1136/bmjopen-2025-110612}
+
+\band{Cardiovascular \& metabolic\hfill 1 record}{Teal}
+
+\paperentry{Çulpan et al.\ 2026}
+{Long-term air pollution and blood pressure in children: updated systematic review and meta-analysis}
+{Rev Environ Health}
+{PRISMA-guided update over prior reviews plus PubMed and Web of Science to 27 March 2025;
+21 studies, 990{,}157 participants in the qualitative synthesis, with meta-analysis
+restricted to the fine and coarse fractions and NO$_2$ because cohort data for SO$_2$,
+O$_3$ and CO were too sparse. \textbf{Fine PM: +0.59\,mmHg systolic per 10\,$\mu$g/m$^3$
+(0.28--0.90)}, the only estimate consistent across sensitivity analyses. The coarse
+fraction gave nominally tighter systolic (+0.28, 0.25--0.31) and diastolic (+0.27,
+0.24--0.30) associations that \emph{did not survive} sensitivity analysis --- an
+implausibly narrow interval for a pooled estimate, which usually indicates a single
+dominant study. NO$_2$ was null for both. Several pollutants raised the odds of
+hypertension as a dichotomous outcome. Two limitations are load-bearing: exposure
+increments and hypertension definitions were not harmonised across primary studies, and
+no multipollutant model could be fitted because the primary studies did not report
+exposure covariance, so the pollutant-specific attribution is weaker than the point
+estimates suggest. Note also that the PubMed deposit strips subscripts from every
+particle-size label, so fraction assignment here is inferred from the stated
+meta-analytic scope.}
+{10.1515/reveh-2026-0032}
+
+\band{Occupational \& indoor exposure\hfill 2 records}{Clay}
+
+\paperentry{Tillery et al.\ 2026}
+{Indoor air nicotine, NO$_2$ and COVID-19 outcomes in a Great Plains tribal community}
+{Indoor Air}
+{COVID-19 Wayakta He? study: 290 multigenerational Cheyenne River Sioux Tribe households,
+each pair of adults at least 9 years apart in age, with one week of passive air-nicotine
+and NO$_2$ badges plus saliva serology. Geometric mean air nicotine
+0.052\,$\mu$g/m$^3$ (detected in 40.1\,\% of homes); geometric mean NO$_2$ 10.5\,ppb,
+range 0.65--138, consistent with propane cooking and heating. \textbf{OR 1.21
+(1.01--1.51)} for prior infection with detectable air nicotine; \textbf{OR 3.69
+(1.11--16.6)} for self-reported long COVID with NO$_2$ exposure. The second interval
+spans a factor of fifteen and rests on a self-reported outcome in a cross-sectional
+design with one week of exposure measurement standing in for a multi-year window ---
+it is a direction, not a magnitude. The study's real contribution is that it measured
+the microenvironment at all: no ambient network in the Northern Plains resolves
+household combustion, and community-deployed passive samplers are the only instrument
+that reached it.}
+{10.1155/ina/7749725}
+
+\paperentry{Cuerda Barcaiztegui et al.\ 2026}
+{Classroom ventilation management and user activities vs.\ indoor air quality, Madrid primary schools}
+{Atmos Pollut Res}
+{\textsc{metadata only} --- no abstract in Crossref, Europe PMC or Semantic Scholar at
+the time of this issue. A two-year classroom field study on ventilation management and
+occupant activity is directly on this watch's deployment axis and is the single highest-priority abstract re-check for the next run.}
+{10.1016/j.apr.2026.103170}
+
+% Proof 1 spilled 5 lines of this entry onto an orphan p.6. Per the 2026-08-06/07 log,
+% \enlargethispage does not recover a spill this large and prose trimming reflows without
+% converging; moving a whole band across the break does. The Mechanistic band now opens
+% p.6 instead of closing p.5.
+\clearpage
+
+\enlargethispage{4\baselineskip}
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Yibcharoenporn et al.\ 2026}
+{Metabolic profiling of PM-induced developmental toxicity in zebrafish embryos}
+{ACS Omega}
+{Zebrafish embryos exposed 4--50\,hpf to fine and coarse PM at 500 and
+1000\,$\mu$g/mL, with untargeted LC-MS/MS metabolomics. The fine fraction alone produced
+a \textbf{22\,h hatching delay} and disrupted pantothenate/CoA, retinol and riboflavin
+metabolism; riboflavin fell significantly at the higher dose. Glutathione responses
+diverged by size --- reduced glutathione depleted under the fine fraction but
+\emph{elevated} under the coarse --- which is the most interesting result here because it
+argues against a single shared oxidative mechanism scaled by mass. The dose is the
+problem: 500--1000\,$\mu$g/mL of suspended PM is three to four orders of magnitude above
+any inhalable ambient concentration, so this establishes a mechanism, not a risk. The
+authors' closing suggestion of vitamin supplementation is not supported by anything in
+the design.}
+{10.1021/acsomega.6c00972}
+
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Samburova et al.\ 2026}
+{Effects of western US wildfire smoke on urban air quality in northern Nevada}
+{Atmos Pollut Res}
+{\textsc{metadata only} --- no abstract available in Crossref, Europe PMC or Semantic
+Scholar. Long-range transported wildfire smoke over an urban receptor is the same
+problem class as Jin et al.\ (\textit{ACP}, 7 August) on aged smoke in Missoula; worth a
+re-check once the publisher deposits the abstract.}
+{10.1016/j.apr.2026.103168}
+
+\paperentry{Astaneh et al.\ 2026}
+{Source-tagged PM tracers in random-forest bias correction of ozone design-value predictions}
+{Atmos Environ}
+{\textsc{metadata only}. Using source-tagged particulate tracers as features in an ML
+bias-correction layer over a photochemical model is a transferable construction even
+though the target here is ozone, not PM.}
+{10.1016/j.atmosenv.2026.122288}
+
+\band{Exposure assessment \& modelling\hfill 3 records}{Amber}
+
+\paperentry{Madalipay et al.\ 2026}
+{Establishing PM$_{2.5}$ conversion factors for South Korea at provincial level}
+{Atmos Pollut Res}
+{\textsc{metadata only}. Provincial PM$_{2.5}$ conversion factors bear directly on how a
+sparse regulatory network is extrapolated to unmonitored areas, which is the same
+inference a low-cost network is deployed to replace. Priority re-check alongside the
+Madrid classroom study.}
+{10.1016/j.apr.2026.103171}
+
+\paperentry{McCerery et al.\ 2026}
+{Arctic transport of North American and Canadian wildfire aerosols}
+{Atmos Environ}
+{\textsc{metadata only}. The only record in today's corpus with a polar or remote-marine
+receptor; long-range transport to a low-background site is where instrument detection
+limits, not calibration slope, become the binding constraint.}
+{10.1016/j.atmosenv.2026.122289}
+
+\paperentry{Raptaki et al.\ 2026}
+{Atmospheric BTEX in Heraklion, Crete: levels, sources and contribution to secondary aerosol formation}
+{Atmos Environ}
+{\textsc{metadata only}. Enters on the secondary-organic-aerosol precursor link rather
+than on any direct PM measurement; tier C.}
+{10.1016/j.atmosenv.2026.122283}
+
+\band{Burden, policy \& mitigation\hfill 3 records}{Coral}
+
+\paperentry{Gu et al.\ 2026}
+{Electro-ultrasonic coupled agglomeration for removal of fine particles from biomass combustion}
+{J Hazard Mater}
+{Segmented continuous-flow bench platform combining bipolar charging ($\pm$16\,kV), a
+300\,V/400\,Hz AC field and 16\,kHz/142\,dB ultrasound, with particle-trajectory
+simulation and SEM. The coupled field reached \textbf{86.4\,\% light transmittance},
+against single-field results 33.1 and 67.2 percentage points lower, with the extinction
+coefficient down to 0.9\,m$^{-1}$; simulated cumulative particle displacement rose
+$>$445\,\% as linear trajectories became three-dimensional helical paths, and SEM
+confirmed 15--20\,$\mu$m agglomerates. The performance metric is the weakness: light
+transmittance and extinction coefficient are \emph{optical} proxies, not gravimetric or
+number-resolved removal efficiency, so the headline ``removal efficiency'' is not
+directly comparable with any filtration literature that reports mass penetration. The
+submicron fraction claimed as the target is precisely the fraction an extinction
+measurement is least sensitive to.}
+{10.1016/j.jhazmat.2026.143130}
+
+\paperentry{Wojcik et al.\ 2026}
+{An air pollution curriculum for pulmonary and critical care fellows}
+{ATS Sch}
+{Kern six-step curriculum development across five domains --- composition, health effects,
+\emph{monitoring}, risk mitigation and environmental justice --- with a 20-item knowledge
+scale built by modified Delphi and delivered as pre/post assessment over one academic
+year with spaced repetition. Knowledge rose in all five domains ($p<0.001$). Single
+programme, no control arm, self-selected respondents and a knowledge rather than
+behaviour endpoint, so the effect size is uninterpretable; it is included because the
+explicit inclusion of \emph{monitoring} as a clinical competency domain is a small but
+real indicator of where sensor-derived exposure data is expected to land clinically.}
+{10.1093/atsscholar/aapag039}
+
+\paperentry{Kokol et al.\ 2026}
+{Artificial intelligence in the management of climate-change-related health issues in Africa}
+{Res Sq (preprint)}
+{Scoping review over Scopus to October 2025, VOSviewer clustering a global against an
+African literature corpus. The divergence is the finding: global work clusters on
+environmental modelling, air-pollution mortality tracking and exposome integration,
+African work on supervised classification for infectious-disease triage and food
+security, with a ``compute deficit'', data silos and power instability named as barriers.
+This is bibliometrics, not evidence --- a VOSviewer map measures what Scopus indexed, and
+Scopus under-indexes African journals, so the gap is partly an artefact of the
+instrument. Preprint, not peer reviewed.}
+{10.21203/rs.3.rs-9910414/v1}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{2026-08-08 to 2026-08-08}, contiguous with the 7 August issue; no
+gap. Legs run: \textbf{PubMed} connector, two independent queries against
+\texttt{[Date - Entry]} --- health axis 9 hits, instrumentation axis \textbf{0}; a third
+MeSH-only sweep returned 10, of which 9 were water, soil or pharmaceutical-cleanroom
+monitoring and were rejected. The local harvester returned 4 health and 0 sensing.
+\textbf{Europe PMC} on \texttt{CREATION\_DATE} returned 2 preprints, 1 carried.
+\textbf{Crossref by ISSN} returned 7 and is the only productive sensing leg, 6 carried.
+\textbf{Consensus} $\times$3 sweeps returned 20 each, capped at 3 per sweep by the free
+tier; all 9 returned records resolved to 2019--2025 DOIs or to \texttt{seen.json}, 0
+carried. \textbf{arXiv} 50 records, none published or updated on or after 1 August.
+\textbf{OpenAlex} HTTP 429 (\texttt{from\_created\_date} leg remains broken).
+\textbf{13 records rejected}, each with a reason in \texttt{state/rejected.jsonl}.
+Six carried records have no abstract in any of the three checked sources and are
+listed without a summary; they are marked \textsc{metadata only} in the digest and in
+the architecture donut.
+Subtopic, design, particle-metric and geography labels are assigned from title, abstract,
+keywords and MeSH; assignment is single-label by dominant contribution and is a
+judgement, not a controlled vocabulary.
+All DOI links resolve to the publisher of record. Content derived from PubMed and
+Crossref metadata; abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

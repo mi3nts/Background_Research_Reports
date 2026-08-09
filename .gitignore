@@ -29,3 +29,8 @@ claude/log[0-9].txt
 # superseded state moved aside (mount is delete-restricted; remove on a local checkout)
 claude/state/.retired/
 claude/build/trash/
+
+# 2026-08-08: a pre-proof weekly build was renamed aside so the rollup would rebuild
+# (rollup() is idempotent and skips when the output exists). rm is EPERM on this mount.
+# Delete manually on a local checkout: Reports/weekly/.trash_weekly_0808.pdf
+Reports/**/.trash_*.pdf

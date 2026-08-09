@@ -97,13 +97,20 @@
   \end{tcolorbox}\vspace{1.6mm}}
 
 % one paper entry: {short cite}{title}{journal}{doi}{body}
+% 2026-08-08: the DOI line was breaking away from its entry and stranding itself alone on
+% an otherwise empty page. Neither \\* nor \nopagebreak stopped it, and trimming prose does
+% not converge (the reflow simply pushes the next line down). Fixed the way \precisentry
+% below already was: the whole entry is a minipage, so it moves as one block. Layout,
+% spacing and typography are unchanged.
 \newcommand{\paperentry}[5]{%
   \par\vspace{1.9mm}\noindent
+  \begin{minipage}{\linewidth}
   {\sffamily\bfseries\footnotesize\color{Ink}#1}\;%
   {\sffamily\fontsize{7}{8}\selectfont\color{Slate}#3}\\[0.4mm]
   {\footnotesize\itshape\color{Deep}#2}\\[0.6mm]
   {\footnotesize #4}\\[0.3mm]
   {\fontsize{6.6}{7.6}\selectfont\color{Slate}\texttt{doi:}\,\href{https://doi.org/#5}{\texttt{\detokenize{#5}}}}
+  \end{minipage}
   \par}
 
 % caption style

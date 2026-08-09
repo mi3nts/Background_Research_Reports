@@ -148,3 +148,16 @@
 {"issue": "2026-08-07", "pmid": null, "doi": "10.1007/s11356-026-37976-6", "title": "Spatiotemporal ML for PM2.5 from reconstructed satellite AOD", "reason": "duplicate - DOI already in seen.json"}
 {"issue": "2026-08-07", "pmid": null, "doi": "10.1088/2631-8695/ae7028", "title": "Satellite-driven PM2.5 prediction with ML and XAI", "reason": "duplicate - DOI already in seen.json"}
 {"issue": "2026-08-07", "pmid": null, "doi": "10.1080/10095020.2026.2680855", "title": "Fusion of ground, satellite and CTM for seamless PM2.5", "reason": "duplicate - DOI already in seen.json"}
+{"issue": "2026-08-08", "pmid": "42567825", "doi": "10.1016/j.jfma.2026.08.010", "reason": "Letter, no abstract; NOx psychiatric emergency commentary - no primary data"}
+{"issue": "2026-08-08", "pmid": "42569092", "doi": "10.1021/acsomega.6c03774", "reason": "Sulfonated-carbon catalyst synthesis; air pollution only as motivation for stover valorisation"}
+{"issue": "2026-08-08", "pmid": "42570163", "doi": "10.1007/s10653-026-03377-4", "reason": "Constructed-wetland water quality; no airborne PM"}
+{"issue": "2026-08-08", "pmid": "42570135", "doi": "10.1007/s10661-026-15710-6", "reason": "Avian richness vs NDVI; no PM measurement"}
+{"issue": "2026-08-08", "pmid": "42570126", "doi": "10.1007/s10661-026-15742-y", "reason": "Marine POCIS pharmaceutical passive sampling; aquatic, not airborne"}
+{"issue": "2026-08-08", "pmid": "42570038", "doi": "10.1007/s10653-026-03399-y", "reason": "Estuarine microplastics review; not airborne PM"}
+{"issue": "2026-08-08", "pmid": "42567997", "doi": "10.1007/s10661-026-15720-4", "reason": "Gold-mining surface water/sediment metals; no air pathway"}
+{"issue": "2026-08-08", "pmid": "42567985", "doi": "10.1007/s10653-026-03400-8", "reason": "Soil potentially toxic elements; no air pathway"}
+{"issue": "2026-08-08", "pmid": "42567672", "doi": "10.5731/pdajpst.2026.26412", "reason": "Cleanroom bioaerosol URS poster; pharmaceutical GMP, not ambient PM"}
+{"issue": "2026-08-08", "pmid": "42567656", "doi": "10.5731/pdajpst.2026.26425", "reason": "Cleanroom growth-promotion testing poster; microbiological QC"}
+{"issue": "2026-08-08", "pmid": "42567652", "doi": "10.5731/pdajpst.2026.26413", "reason": "Cleanroom air-sampler validation poster; microbiological QC"}
+{"issue": "2026-08-08", "pmid": "", "doi": "10.1016/j.apr.2026.103172", "reason": "Ozone and VOC precursor source apportionment, Shenyang; no PM endpoint"}
+{"issue": "2026-08-08", "pmid": "", "doi": "10.20944/preprints202608.0307.v1", "reason": "Qualitative multi-case 'quantum intelligence' governance preprint; no PM measurement or data"}

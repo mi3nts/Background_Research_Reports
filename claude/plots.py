@@ -240,6 +240,10 @@ design_group = {
     "Animal + in vitro": "Experimental / toxicology",
     "Cohort": "Observational - cohort",
     "Cohort (secondary trial analysis)": "Observational - cohort",
+    # added 2026-08-08 - 7th recurrence. A single new granular label (a pre/post
+    # curriculum evaluation) is enough to trip the diagnostic; the closure below only
+    # protects group names, not new leaf labels.
+    "Educational intervention": "Trial / intervention",
 }
 # Close design_group under its own output. The 2026-08-05 fix added self-maps for the
 # nine group names in use that day but left four uncovered; a record written with one of
@@ -414,6 +418,10 @@ GEO_ALIAS = {
 GEO_SUBSTR = [
     ("united states", "USA"), ("u.s.", "USA"), (" usa", "USA"), ("america", "USA"),
     ("united kingdom", "UK"), ("england", "UK"), ("london", "UK"), ("scotland", "UK"),
+    # added 2026-08-08: "Birmingham, UK" fell through because no needle matched the
+    # bare country abbreviation. Anchor on the separator so "UKraine"-style false
+    # positives cannot match.
+    (", uk", "UK"), ("birmingham", "UK"), ("wales", "UK"), ("solihull", "UK"),
     ("china", "China"), ("shanghai", "China"), ("beijing", "China"),
     ("south korea", "South Korea"), ("seoul", "South Korea"), ("korea", "South Korea"),
     ("taiwan", "Taiwan"), ("japan", "Japan"),
