@@ -805,3 +805,48 @@ overfulls, pre-existing).
 - **For the 9 Aug run:** window `2026-08-09 -> 2026-08-09`; `last_entry_date` is now
   `2026-08-08`. Sunday — no rollup owed (weekly is generated Saturdays). Re-check the six
   metadata-only Elsevier DOIs for abstracts, and the four still held from 7 Aug.
+
+### 2026-08-09 — hardware day; zero effect estimates; f5 intentionally absent
+Window **9 Aug** (`2026-08-09 -> 2026-08-09`), contiguous, no gap. **12 shipped, 16 rejected,
+3 metadata-only.** 9 pp, 0 errors, 0 overfull/underfull. Sunday — no rollup owed.
+
+- **Sources.** PubMed connector health 6 / sensing **4** (first non-empty sensing query in
+  four runs); broad MeSH sweep 15 for the day, of which **4 were 4-Aug records re-surfacing
+  on re-indexing** and were caught by `seen.json` on both PMID and DOI — the dedupe key
+  worked exactly as designed. Local harvester 5 / 1. Europe PMC `CREATION_DATE` 6, **2
+  carried** (incl. the µSPLIT impactor, reachable by no other leg). Crossref by ISSN across
+  17 journals 9, **3 carried** — a much lower yield than Saturday's 6-of-7. Consensus ×3:
+  all 9 returned DOIs resolved to Crossref creation dates **12 Jan – 15 Jul 2026**, none
+  within four weeks of the window. **Consensus is a relevance index, not a recency index;
+  stop asking it to see a single day.** OpenAlex HTTP 429, 7th consecutive. arXiv 50, none
+  on/after 1 Aug. ClinicalTrials.gov 0 on both queries; `trials.json` unchanged.
+- **`EFFECTS` is empty and `f5_forest.png` is intentionally not generated.** The only
+  intervals in the corpus are a PAF (41 %, 24.4–57.4) and two prevalence counts — none
+  ratio-scale. `plots.py` already no-ops on empty EFFECTS (`if not E: continue`), so the
+  **template must not `\includegraphics` f5 when EFFECTS is empty** or the build dies.
+  Stated in the provenance box as intentional, not missing.
+- **Abstract famine, measured over 24 h.** The six Elsevier DOIs flagged on 08-08 **still**
+  have no abstract in Crossref or Europe PMC. Three others resolved overnight but had
+  already shipped. **Move the abstract re-check to a weekly sweep; a daily one is too fast.**
+- **Caption-vs-figure mismatch caught 3× in proof 1** (7th–9th occurrences): f2 claimed a
+  Metadata-only/Chamber-laboratory tie at 3 when the tie is Metadata-only/Measurement-campaign
+  (Chamber/lab is 2); f2's endpoint composition list was wrong; f3 claimed six distinct
+  particle metrics "appear once each" when the rendered bar shows **10 of 12 collapsed into
+  `PM (unspeciated) / emissions`**. **Read every count off the rendered PNG.**
+- **New defect: `pm_of()` has no bin for instrument-side quantities** — absorption/scattering
+  coefficient, aerodynamic-diameter class, hygroscopicity κ, size-resolved oxidative
+  potential all fall into `PM (unspeciated)`. On a 67 %-measurement corpus this makes f3's
+  left panel uninformative. Stated honestly in the caption this issue; **fix the vocabulary
+  before the next instrumentation-heavy day.**
+- **`design_group` fell through an 8th time** — added `Instrument development` →
+  `Chamber / laboratory`.
+- **`build_manifest.py` now skips dot-files.** `.trash_weekly_0808.pdf` produced a spurious
+  PROBLEMS line on every run since 08-08.
+- **Git housekeeping:** the 08-08 run left a stale `.git/index` plus 13 `*.lock` files from
+  the copied-index workaround; `git status` showed phantom deletions of files that are in
+  HEAD. Fixed by moving every lock to `.git/lktrash/` (`mv`, not `rm`) then `git reset
+  --mixed HEAD`. `origin/main` had also been unable to update its local ref.
+- **For the 10 Aug run:** window `2026-08-10 -> 2026-08-10`; `last_entry_date` is now
+  `2026-08-09`. Monday — no rollup owed. Re-check `10.1016/j.jaerosci.2026.106882` (MARTHA)
+  first: if it has an abstract it is the first instrument×health-endpoint record of the watch.
+  Then `atmosenv.2026.122284` (κ) and `jhazmat.2026.143237` (size-resolved OP).

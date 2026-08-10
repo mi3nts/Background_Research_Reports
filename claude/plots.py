@@ -222,6 +222,12 @@ design_group = {
     "Mechanistic correction framework": "Modelling / inventory",
     "Model intercomparison": "Modelling / inventory",
     "Exposure assessment + in vitro": "Experimental / toxicology",
+    # added 2026-08-09 - 8th recurrence. Two instrument-development papers (a
+    # photoacoustic-scattering spectrometer, a 3D-printed virtual impactor) are
+    # CFD/design + prototype + bench validation, which is neither a co-location nor a
+    # toxicology experiment. "Laboratory metrology" already maps here; this is the
+    # design-side sibling of it, not a new group.
+    "Instrument development": "Chamber / laboratory",
     # honest fall-through for records surfaced without an abstract: they get their
     # own slice rather than being silently pooled with characterised designs
     "Metadata only (no abstract)": "Metadata only",

@@ -161,3 +161,19 @@
 {"issue": "2026-08-08", "pmid": "42567652", "doi": "10.5731/pdajpst.2026.26413", "reason": "Cleanroom air-sampler validation poster; microbiological QC"}
 {"issue": "2026-08-08", "pmid": "", "doi": "10.1016/j.apr.2026.103172", "reason": "Ozone and VOC precursor source apportionment, Shenyang; no PM endpoint"}
 {"issue": "2026-08-08", "pmid": "", "doi": "10.20944/preprints202608.0307.v1", "reason": "Qualitative multi-case 'quantum intelligence' governance preprint; no PM measurement or data"}
+{"date": "2026-08-09", "pmid": "42571706", "doi": "10.1002/cbdv.71582", "title": "Hypericum orientale extracts vs cigarette-smoke bronchial cytotoxicity", "reason": "off-topic: no particulate exposure; smoke-extract cytoprotection screen"}
+{"date": "2026-08-09", "pmid": "42570584", "doi": "10.1016/j.ecoenv.2026.120604", "title": "Cooking and bioaccessibility of toxic elements in leafy vegetables", "reason": "off-topic: dietary, not airborne particulate exposure"}
+{"date": "2026-08-09", "pmid": "42552168", "doi": "10.1016/j.scitotenv.2026.182155", "title": "Retraction notice, Shanghai organic aerosol molecular characteristics", "reason": "publication type: retraction notice, no new evidence"}
+{"date": "2026-08-09", "pmid": "42552135", "doi": "10.1016/j.tree.2026.06.013", "title": "The Cambrian fecal revolution", "reason": "false positive on 'particulate organic carbon'"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1016/j.envpol.2026.128927", "title": "Early-pregnancy essential metals and birth outcomes", "reason": "off-topic: biomarker metals, no airborne PM exposure"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1016/j.envres.2026.125432", "title": "Urban soil plastisphere microbial community", "reason": "off-topic: soil, not airborne PM"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1016/j.envres.2026.125392", "title": "Bisphenol A/S and skeletal muscle glucose metabolism", "reason": "off-topic: no PM exposure"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1016/j.jhazmat.2026.143225", "title": "Peri-implantation 6PPD-Q and endometrial decidualization", "reason": "off-topic: dosed chemical, not inhaled PM"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1016/j.jhazmat.2026.143226", "title": "Ferrate(VI) oxidation and VBNC E. coli", "reason": "off-topic: water treatment"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1016/j.jhazmat.2026.143251", "title": "Cadmium tolerance, phosphatase and nano-molybdenum", "reason": "off-topic: plant physiology"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1088/2631-8695/ae7028", "title": "Satellite-driven PM2.5 prediction with ML and XAI (Consensus)", "reason": "outside entry window: Crossref created 2026-05-19"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1080/10095020.2026.2624335", "title": "Urban-rural balanced PM2.5 estimation, China (Consensus)", "reason": "outside entry window: Crossref created 2026-03-06"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1007/s11356-026-37976-6", "title": "Spatiotemporal ML PM2.5, NE India (Consensus)", "reason": "outside entry window: Crossref created 2026-07-15"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1021/acsestair.5c00225", "title": "Aerosol liquid water correction for optical PM sensors (Consensus)", "reason": "outside entry window: Crossref created 2026-01-12"}
+{"date": "2026-08-09", "pmid": "", "doi": "10.1088/1361-6501/ae6298", "title": "Calibration strategies for low-cost PM sensors, review (Consensus)", "reason": "outside entry window: Crossref created 2026-04-21"}
+{"date": "2026-08-09", "pmid": "", "doi": "", "title": "Therapeutic delivery industry update Oct 2024 (Europe PMC)", "reason": "off-topic: trade news, no abstract"}

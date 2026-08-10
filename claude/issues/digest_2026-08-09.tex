@@ -1,0 +1,500 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{9 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-08-09\;\;\textcolor{Amber}{\textbar}\;\;Entry window 9 August 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;12 records in scope\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{12}{RECORDS IN SCOPE\\(16 REJECTED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{SENSING / EXPOSURE\\RECORDS (67\%)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{SUBTOPIC CLUSTERS\\REPRESENTED}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\EXTRACTED}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A hardware day. Three of twelve records are new
+instruments, and one of them is the first paper in 158 records to build a device whose
+stated purpose is to put an aerosol and a biological endpoint in the same
+apparatus.}\\[1.4mm]
+\footnotesize
+The standing gap this watch has logged since 26 July --- restated in the 2--8 August
+weekly over 146 records --- is that \textbf{not one paper coupled an instrument to a
+health endpoint}. Shirkhani et al.\ (\textit{J Aerosol Sci}) describe MARTHA, a
+high-throughput multipattern aerosol deposition device built explicitly ``for respiratory
+toxicity and health-risk assessment''; the author list (Amanatidis, Eiguren-Fernandez,
+Spielman) is an aerosol-instrumentation group, not a toxicology group. The record carries
+\textbf{no abstract in Crossref, Europe PMC or Semantic Scholar}, so it is listed and not
+summarised, and the claim above rests on a title and an author list. That is exactly the
+right amount of weight to put on it --- but it is the first time the empty cell in the
+f4 cross-tabulation has had a candidate at all.
+Alongside it, Li et al.\ (\textit{Photoacoustics}) close the split-instrument problem the
+other way: two integrating spheres serving simultaneously as scattering cavities and as a
+low-frequency differential Helmholtz resonator, with the connecting tube carrying a
+high-frequency longitudinal mode, so absorption and scattering at \textbf{450 and
+532\,nm} are measured \emph{in the same volume on one sampling path}
+(LOD \textbf{1.2} and \textbf{1.32\,Mm$^{-1}$} at 1\,s, 3$\sigma$). Laffolley et al.\
+(\textit{ACS Omega}) go the opposite direction on cost: a stereolithography-printed
+two-stage virtual impactor, disposable by incineration, CFD-optimised to
+\textbf{9.0} and \textbf{1.3\,$\mu$m} cutoffs. Three different answers to the same
+question --- what does a size- or wavelength-resolved measurement have to cost?
+\end{keybox}
+
+% Proof 1 left p.2 90 % empty: the six-bullet brief cannot fit under the keybox on p.1
+% and spilled its last two bullets alone onto p.2. Per the 06/07/08 Aug log, prose
+% trimming does not converge on a spill this size; moving the whole block across the
+% break does. The brief now owns p.2.
+\clearpage
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Zero effect estimates. The forest plot is absent from this issue for the
+first time since the watch began.} This is a reporting-format fact, not an absence of
+quantitative content. Three records carry intervals --- Urso et al.'s
+\textbf{41\,\% (24.4--57.4)} of EU-27 dementia DALYs attributable to modifiable risk
+factors, and their \textbf{7.76\,M (6.69--8.72)} and \textbf{12.28\,M (10.44--13.90)}
+prevalence counts --- but a population-attributable fraction and a case count are not
+ratios and have no defensible position on a log axis whose null is 1.0. The same rule
+excluded mmHg mean differences on 8 August and an OR spanning a factor of fifteen on
+7 August. Ni et al.'s $\rho=0.28$ and AUC 0.607 are likewise not ratio-scale. Rather than
+render one figure dishonestly, \texttt{f5\_forest} is not generated and the numbers are
+carried in the digest text and the register.
+
+\item \textbf{Sunday, and the thinnest window on record after yesterday's: 12 records
+against 14 on Saturday and 26 on Friday.} The PubMed connector returned \textbf{6 on the
+health axis and 4 on the instrumentation axis}, ending three consecutive empty sensing
+queries from that leg; a third broad MeSH sweep returned 15 for the whole day, of which
+4 were already shipped in the 4 August issue and re-surfaced on re-indexing, and 4 were
+off-topic. The local harvester returned 5 and 1. \textbf{Crossref by ISSN across
+17 journals returned 9, of which 3 carried} --- a materially lower yield than the
+6-of-7 it delivered on Saturday.
+
+\item \textbf{The instrumentation axis carried the issue, and two thirds of it came from
+outside PubMed's biomedical index.} Eight of twelve records are measurement-side
+(3 sensing, 3 exposure assessment, 2 occupational). The two strongest instrument papers
+reached the watch by different routes --- Li et al.\ through PubMed only because
+\textit{Photoacoustics} is biomedically indexed, Laffolley et al.\ only through Europe
+PMC's \texttt{CREATION\_DATE} leg. Neither would have been found by the health query.
+
+\item \textbf{Three of twelve records still carry no abstract anywhere, and all three are
+on the measurement side.} \textit{Atmospheric Environment} (Ray, size-resolved
+hygroscopicity and CCN activity), \textit{Journal of Aerosol Science} (Shirkhani, MARTHA)
+and \textit{Journal of Hazardous Materials} (Wei, size-resolved oxidative potential) ---
+all same-day Elsevier deposits, all returning HTTP 404 from Semantic Scholar. Separately,
+\textbf{the six Elsevier DOIs flagged for re-check on 8 August still have no abstract in
+Crossref or Europe PMC 24 hours later}, so the deposit lag is longer than a day and the
+re-check should move to a weekly sweep rather than a daily one. Three records held from
+7--8 August \emph{did} resolve overnight (\texttt{reveh-2026-0032},
+\texttt{envpol.2026.128933}, \texttt{acsomega.6c00972}) --- but all three had already
+shipped, so the abstracts arrived too late to be used.
+
+\item \textbf{Nothing new on calibration or drift for a second consecutive day, and the
+reason is now measured rather than suspected.} Three Consensus sweeps (calibration and
+drift, satellite--surface fusion, humidity and hygroscopic-growth correction) returned
+20 hits each, capped at 3. All nine returned DOIs resolved to Crossref creation dates
+between \textbf{12 January and 15 July 2026} --- none within four weeks of the window,
+let alone inside it. Consensus is a relevance index, not a recency index; it cannot see
+a single day and should stop being asked to. \textbf{OpenAlex returned HTTP 429 for the
+seventh consecutive run.} arXiv returned 50 records, none published on or after 1 August.
+
+\item \textbf{Trial watch: zero registrations or updates.} Both ClinicalTrials.gov
+queries (air-pollution/PM conditions; purifier, filtration, HEPA, cookstove and mask
+interventions) returned 0 for 9 August. \texttt{state/trials.json} is unchanged at the
+21 registrations reported in the 2--8 August weekly.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 12 in-scope records, single-label by dominant
+contribution. \textit{Sensing, forecasting \& instrumentation} and \textit{Exposure
+assessment \& modelling} tie at 3 and \textit{Occupational \& indoor} and \textit{Burden,
+policy \& mitigation} at 2; \textbf{8 of 12 records are on the measurement side, the
+highest share this watch has recorded}. Four of the ten canonical clusters are empty
+--- \textit{Neuro / mental health}, \textit{Cardiovascular \& metabolic},
+\textit{Reproductive \& developmental} and \textit{Other clinical endpoints}. The
+dementia-burden record is deliberately filed under \textit{Burden} rather than
+\textit{Neuro}, because its contribution is an attributable-fraction estimate, not a
+neurological finding.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. \textbf{\textit{Metadata only} and \textit{Measurement
+campaign} tie at 3 of 12}, with \textit{Chamber / laboratory} at 2 and
+\textit{Observational --- cross-sectional} at 2; \textit{Modelling / inventory} and
+\textit{Experimental / toxicology} carry 1 each. Six architectures across twelve records
+is the widest spread the watch has rendered at this $n$. \textbf{No observational cohort
+and no controlled trial entered today}, for the second consecutive issue. Right --- health
+endpoint. \textbf{Eight of twelve records carry \emph{no} human health endpoint}: two
+instrument-development papers, four pure exposure-monitoring records, one \emph{in vitro}
+oxidative-potential assay and one emissions bench study. The four that do are the
+respiratory \emph{in vitro} deposition device, the multi-system mining survey, the
+neuro/cognitive burden estimate and the respiratory clinical series --- so the endpoint
+panel describes four records and is not a field-level distribution.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric, and the panel is \textbf{measuring this watch's taxonomy
+rather than the literature}. Ten of twelve records land in \textit{PM (unspeciated) /
+emissions} against one \textit{PM$_{2.5}$ only} (Ni et al.) and one \textit{PM$_{2.5}$ +
+PM$_{10}$ jointly} (Adeniji et al.). The classifier has no bin for the quantities the
+day's instruments actually report --- absorption and scattering coefficient,
+aerodynamic-diameter class, size-resolved hygroscopicity ($\kappa$), size-resolved
+oxidative potential, gravimetric mass with SEM morphology --- so six physically distinct
+metrics collapse into one bar. \textbf{The figure is correct and the vocabulary is not};
+this is logged as a defect against \texttt{plots.py}, not read as a finding. Right ---
+geographic provenance. Europe and China tie at 3, South Asia 2, and \textbf{Sub-Saharan
+Africa appears for the first time in six issues} (Abeokuta, Nigeria; zero in each issue
+from 4 to 8 August). North America contributes 1, its lowest share of the watch.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed. Counts are non-exclusive and total 4, not 12,
+because eight records address no human life stage at all. \textbf{The three perinatal and
+paediatric stages are empty for the first time in this watch}; at $n=12$ on a Sunday this
+is sampling, not a field-level absence, and the reproductive/developmental literature was
+present as recently as 8 August.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. Two features are worth
+naming. First, the \textit{Metadata only} column is again distributed across
+\textit{Sensing}, \textit{Exposure assessment} and \textit{Mechanistic toxicology} rather
+than across the health rows --- the fifth consecutive issue in which the least
+characterisable records are the most methodologically relevant ones. Second, the
+\textit{Sensing} row is populated only in \textit{Metadata only} (1) and \textit{Chamber /
+laboratory} (2) --- every sensing record today is either an uncharacterisable deposit or a
+bench instrument, and \textbf{not one is a field co-location or a deployment}, which is
+the architecture a distributed network is actually built from. The instrument
+$\times$ health-endpoint coupling the 2--8 August weekly identified as structurally empty
+is still not visible here, because MARTHA is filed under \textit{Metadata only} and cannot
+be scored on architecture.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textsc{metadata only} were surfaced without an abstract in Crossref, Europe PMC or
+Semantic Scholar and are listed, not summarised.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{Li et al.\ 2026}
+{Spatiotemporally synchronised dual-wavelength photoacoustic--scattering measurement of aerosol optical properties}
+{Photoacoustics}
+{A sphere--tube coupled resonator that removes the transport, response-time and
+microenvironment mismatch inherent to split absorption/scattering instruments. Two
+integrating spheres act simultaneously as scattered-light collection cavities and as
+acoustic buffers forming a low-frequency \textbf{differential Helmholtz} resonator, while
+the central connecting tube supports a high-frequency \textbf{second-order longitudinal}
+mode; 450 and 532\,nm lasers are modulated at \textbf{2572} and \textbf{169\,Hz} and
+demodulated by an FPGA digital lock-in, so both wavelengths and both quantities are
+recovered from one sampling path. Absorption channels calibrated against NO$_2$,
+scattering against N$_2$/CO$_2$ Rayleigh scattering; at 1\,s integration and 3$\sigma$
+the 532\,nm limits of detection are \textbf{1.2\,Mm$^{-1}$} (absorption) and
+\textbf{1.32\,Mm$^{-1}$} (scattering). The validation is the weak part: water mist,
+controlled combustion and a field check establish channel isolation and feasibility but
+not accuracy against a reference absorption method, and no Allan-variance drift figure is
+given, so the 1\,s LOD does not tell you the useful averaging time. For distributed
+sensing the transferable idea is architectural rather than economic --- this is a
+laboratory instrument, but co-locating absorption and scattering in a shared volume is
+what would let a node report single-scattering albedo instead of a mass proxy.}
+{10.1016/j.pacs.2026.100864}
+
+\paperentry{Laffolley et al.\ 2026}
+{A 3D-printed two-stage virtual impactor ($\mu$SPLIT) for radioactive aerosol size classification and direct analysis}
+{ACS Omega}
+{Stereolithography-printed virtual impactor separating aerosol into \textbf{$>$10,
+1--10 and $<$1\,$\mu$m} aerodynamic classes onto integrated filters for direct
+post-collection $\alpha$ counting, designed for Fukushima Daiichi decommissioning where
+the instrument must be cheap enough to incinerate rather than decontaminate. Flow path
+optimised by CFD with Lagrangian particle tracking; predicted cutoffs \textbf{9.0} and
+\textbf{1.3\,$\mu$m}. The paper is unusually candid about its own failure modes:
+simulations identify small-particle contamination in the second-stage minor flow and
+large-particle contamination in the major flow, and dimensional metrology on the printed
+parts found channel contraction and corner rounding --- i.e.\ the as-built geometry is
+not the as-designed geometry, which for an impactor moves the cutoff directly.
+Experimental validation is a proof of concept only: incense smoke, and Rn-progeny-bearing
+NaCl at 1.70\,$\mu$m GMAD putting peak $\alpha$ activity on the middle filter. No
+standardised-aerosol calibration and no quantitative wall-loss budget, both of which the
+authors name as required next steps. Relevant well beyond radiological work --- additive
+manufacture of size-selective inlets is the cheapest available route to giving a
+low-cost node a real aerodynamic size cut instead of an optical inference.}
+{10.1021/acsomega.6c04521}
+
+\paperentry{Shirkhani et al.\ 2026}
+{Design and development of a high-throughput multipattern aerosol deposition device (MARTHA) for respiratory toxicity and health-risk assessment}
+{J Aerosol Sci}
+{\textsc{metadata only} --- no abstract in Crossref, Europe PMC or Semantic Scholar at the
+time of this issue (S2 returns 404 on the DOI). Listed rather than summarised. It is
+flagged as the day's highest-priority re-check for a specific reason: the title states an
+aerosol-delivery instrument built for respiratory toxicity assessment, which is the exact
+instrument\,$\times$\,health-endpoint coupling that the 2--8 August weekly identified as
+structurally absent across 146 records. Nothing beyond the title and the author list
+(Shirkhani, Salana, Amanatidis, Washeem, Eiguren-Fernandez, Spielman, Nannu Shankar,
+Lewis) supports that reading yet.}
+{10.1016/j.jaerosci.2026.106882}
+
+\band{Exposure assessment \& modelling\hfill 3 records}{Clay}
+
+\paperentry{Adeniji et al.\ 2026}
+{Long-term air quality and meteorological coupling dynamics in Abeokuta, Nigeria}
+{PLOS Glob Public Health}
+{Twelve years of hourly PM$_{2.5}$, PM$_{10}$, NO$_2$, SO$_2$, CO and O$_3$ (2012--2023)
+against six meteorological variables at a single West African site. Particulate matter
+dominates and \textbf{consistently exceeds WHO guideline values}, peaking in the
+December--March Harmattan; regression against temperature gives \textbf{R$^2$
+0.48--0.52}, with negative associations for rainfall and humidity consistent with thermal
+stagnation and wet scavenging. The aggregate AQI stays in the ``moderate'' band (39--51)
+while the health-risk-adjusted AQI exceeds \textbf{90} seasonally --- the paper's real
+contribution, since it demonstrates that an index which averages across pollutants
+conceals a PM-driven risk that a health-weighted index exposes. Two load-bearing
+limitations: the data provenance for a 12-year hourly record in Abeokuta is not
+established in the abstract, and reanalysis or satellite-derived series are common
+substitutes at such sites; and single-site, single-city inference cannot separate the
+meteorological coupling from local source seasonality (biomass burning peaks in the same
+months as the Harmattan). Sub-Saharan Africa remains the most under-monitored region in
+this watch and this is the first record from it in six issues.}
+{10.1371/journal.pgph.0006683}
+
+\paperentry{Ray et al.\ 2026}
+{Evaluating CCN activity through size-resolved hygroscopicity: synergistic observations and simulations in a tropical montane region}
+{Atmos Environ}
+{\textsc{metadata only} --- no abstract in Crossref, Europe PMC or Semantic Scholar.
+Listed, not summarised. Size-resolved hygroscopicity ($\kappa$) is the physical quantity
+underneath every relative-humidity correction applied to an optical PM sensor, and
+tropical montane conditions are the high-RH regime where those corrections fail worst, so
+this is a priority re-check even though the paper's own framing is cloud-condensation
+nuclei rather than air quality.}
+{10.1016/j.atmosenv.2026.122284}
+
+\paperentry{de la Torre et al.\ 2026}
+{A 15-year atmospheric record of intentionally produced persistent organic pollutants in Spain}
+{J Hazard Mater}
+{Polyurethane-foam passive samplers at \textbf{23 sites, 2009--2023}, evaluating
+Stockholm Convention effectiveness. Hexachlorobenzene dominates at a median
+\textbf{41\,\%} of $\sum$POPs with a remote-enriched spatial pattern; legacy pesticides
+and indicator PCBs show temperature-dependent secondary volatilisation from contaminated
+soils by Clausius--Clapeyron analysis, and an \emph{urban} enrichment plausibly driven by
+heat-island effects; PBDEs show a \textbf{35-fold} urban-to-remote gradient from
+late-regulated BDE-209. Early-banned compounds decline up to \textbf{$-$33\,\%/yr} while
+PeCB, iPCBs and BDE-209 are \textbf{stalled or rising to $+$20\,\%}. This is semi-volatile
+organic chemistry, not particulate mass, and enters on method rather than substance: a
+passive sampler is the cheapest long-record instrument in atmospheric science and this is
+a clean demonstration of what a 15-year, 23-site, zero-power network buys --- an
+altitudinal profile on Tenerife separating local secondary emission from free-troposphere
+clearance. The tradeoff is equally clear: no time resolution, no size information, and
+partitioning between gas and particle phases is unresolved throughout.}
+{10.1016/j.jhazmat.2026.143155}
+
+\band{Occupational \& indoor exposure\hfill 2 records}{Clay}
+
+\paperentry{Salcines et al.\ 2026}
+{Monitoring and risk assessment of airborne graphene oxide released during 3D printing with polylactic acid filaments}
+{J Environ Health Sci Eng}
+{Tiered exposure assessment to EN 17058:2018 and OECD guidance around fused-deposition
+printing of graphene-oxide-loaded PLA, combining \textbf{near-field and far-field particle
+counters} with SEM and Raman speciation plus VOC measurement against Spanish and Finnish
+2022 occupational limits, with ARIMA used to test whether the observed excursions are
+distinguishable from background drift. Nanoparticles and agglomerates were present at low
+average number concentration and \textbf{GO was detected in the respirable fraction},
+below proposed limits but demonstrably released --- the finding is qualitative
+(release occurred) rather than quantitative (how much). Weaknesses are structural: a
+pilot with no stated replicate count, number-concentration monitors that cannot speciate,
+so the GO attribution rests entirely on offline SEM/Raman of collected material, and
+occupational limits for GO that do not formally exist. The methodological point
+transfers directly --- paired near-field/far-field counters with an offline speciation
+leg is the minimum viable design for attributing a number-concentration excursion to a
+source, and it is the design a distributed indoor network would need.}
+{10.1007/s40201-026-00998-w}
+
+\paperentry{Shadmani et al.\ 2026}
+{A comprehensive health profile and exposure-risk analysis in an iron ore mining workforce}
+{J Environ Health Sci Eng}
+{Cross-sectional study of \textbf{1,193} Iranian iron-ore mine employees, stratified into
+high, moderate and low exposure \emph{by job role}, with physical examination, clinical
+chemistry and haematology compared by ANOVA and $\chi^2$ and modelled by linear and
+logistic regression. The workforce is young (mean \textbf{34.9\,$\pm$\,7.6\,y}) with low
+chronic-disease prevalence; the burden is localised --- hearing \textbf{23.8\,\%}, vision
+\textbf{17.8\,\%}, dermatological \textbf{31.3\,\%} --- while most haematological and
+metabolic markers did not differ by exposure group. Platelet count, LDL and blood
+pressure were \emph{lower} in the high-exposure group, which the authors do not resolve
+and which has an obvious competing explanation the paper does not exclude: the
+healthy-worker survivor effect plus role-based confounding by age and seniority. The
+central methodological weakness for this watch is that \textbf{exposure is a job-role
+proxy with no measured dust concentration at all} --- no gravimetric respirable sampling,
+no personal monitoring, no size fractionation. A three-level ordinal surrogate cannot
+support an exposure--response claim, and the paper's own conclusion (localised sensory and
+dermatological effects, not systemic metabolic ones) is a statement about a young cohort
+with short cumulative exposure rather than about the hazard.}
+{10.1007/s40201-026-01000-3}
+
+\band{Mechanistic toxicology\hfill 1 record}{Deep}
+
+\paperentry{Wei et al.\ 2026}
+{Seasonal source shifts drive oxidative potential of size-resolved particulate matter in coastal southeastern China}
+{J Hazard Mater}
+{\textsc{metadata only} --- no abstract in Crossref, Europe PMC or Semantic Scholar.
+Listed, not summarised. Noted because size-resolved oxidative potential is one of the few
+routinely measured quantities that is both a particle property and a plausible biological
+effect metric, and because a source-driven \emph{seasonal} shift in OP at fixed mass
+concentration would be direct evidence against mass as a sufficient exposure metric ---
+which is the substantive question behind this watch's instrumentation axis. Whether the
+paper supports that reading is unknown until an abstract appears.}
+{10.1016/j.jhazmat.2026.143237}
+
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{Urso et al.\ 2026}
+{Burden of dementia in Europe, 1990--2023: a systematic analysis from the Global Burden of Disease Study 2023}
+{Lancet Reg Health Eur}
+{GBD 2023 secondary analysis for the EU-27 and the WHO European Region, with non-fatal
+outcomes from DisMod-MR 2.1 and dementia-attributable mortality from an excess-mortality
+framework. \textbf{7.76\,M (95\,\% UI 6.69--8.72)} prevalent cases in the EU-27 and
+\textbf{12.28\,M (10.44--13.90)} across the WHO European Region, both roughly
+\textbf{+90\,\% since 1990} despite modest declines in age-standardised prevalence;
+dementia moved from the eighth to the \textbf{third} leading cause of death in the EU-27.
+\textbf{41\,\% (24.4--57.4)} of EU-27 dementia DALYs are attributed to six modifiable risk
+factors, with \textbf{ambient particulate matter pollution named first}, ahead of high
+fasting plasma glucose and high BMI, and concentrated in socioeconomically disadvantaged
+populations. The limitation is the one every GBD risk-factor attribution carries and this
+paper does not resolve: the PM$_{2.5}$--dementia relative risk is imported from a
+comparative-risk-assessment function fitted to a thin and heterogeneous cohort literature,
+and the \textbf{24.4--57.4} interval is a modelling uncertainty, not a sampling one --- it
+does not propagate uncertainty in the exposure surface, which for a 1990--2023 European
+back-cast is substantial. Treated here as a burden estimate, not as neurological evidence.
+The interval is deliberately absent from the forest plot: an attributable fraction has no
+position on a ratio axis.}
+{10.1016/j.lanepe.2026.101796}
+
+\paperentry{Sathasivam \& Veluchamy 2026}
+{Visual characteristics of PM from \textit{Halymenia dilatata} microalgae biodiesel compared to low-sulfur diesel}
+{Environ Sci Pollut Res}
+{Single-cylinder Kirloskar CI engine, four microalgae biodiesel blends (B10--B25) against
+S10 low-sulfur diesel, PM collected on a textile element in a deceleration chamber,
+quantified gravimetrically and characterised by SEM for morphology, deposition and
+agglomeration. \textbf{PM mass reduction 10.44--69.79\,\%} across blends. The result does
+not vary monotonically with blend ratio --- SEM showed heavier deposition for S10, B15 and
+B25 but lighter for B10 and B20 --- which the paper reports but does not explain, and a
+non-monotonic dose--response across four points with no stated replication is more likely
+measurement noise than combustion chemistry. Three further limits matter: a textile
+collection element in a deceleration chamber is not a dilution tunnel and has no
+characterised collection efficiency as a function of size, so the gravimetric numbers are
+not comparable with any regulated emissions measurement; no size distribution or number
+concentration was measured, so a mass reduction is fully compatible with an increase in
+ultrafine number; and no engine load or speed conditions are given in the abstract.
+Included as a tier-C source-characterisation record.}
+{10.1007/s11356-026-38134-8}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sage}
+
+\paperentry{Ni et al.\ 2026}
+{Socioeconomic and regional influences on eosinophilic inflammation in chronic rhinosinusitis with nasal polyps}
+{World Allergy Organ J}
+{Multicentre retrospective series, \textbf{1,047} CRSwNP patients undergoing endoscopic
+sinus surgery at three tertiary hospitals in Jiangsu, with paired blood and nasal-mucosa
+eosinophil counts at 2008, 2012 and 2016, analysed by correlation, ROC, linear regression
+and linear mixed-effects models. Blood eosinophils are a poor surrogate for tissue
+eosinophilia (\textbf{$\rho=0.28$}, \textbf{AUC 0.607}, adjusted \textbf{R$^2$ 0.053}) and
+vary heterogeneously by hospital and year. City-level GDP correlated with mean blood
+($\rho=0.80$, $p=0.014$) and tissue ($\rho=0.72$, $p=0.037$) eosinophil counts, whereas
+\textbf{annual mean PM$_{2.5}$ was associated with neither}. The null is the reason this
+record is carried, and it should be read as a measurement failure rather than as evidence
+of no effect: the exposure is a \emph{city-level annual mean} assigned to surgical
+patients at three time points, which is an ecological contrast with essentially no
+within-city variance, over an interval (2008--2016) in which Chinese PM$_{2.5}$ fell
+steeply and uniformly --- so exposure and calendar time are near-collinear by
+construction, and any true association is absorbed by the year term. With eight city-level
+observations, the GDP correlations are also fragile. Tier C.}
+{10.1016/j.waojou.2026.101440}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{2026-08-09 to 2026-08-09}, contiguous with the 8 August issue; no
+gap. Legs run: \textbf{PubMed} connector, two independent queries against
+\texttt{[Date - Entry]} --- health axis 6 hits, instrumentation axis 4 (overlapping),
+plus a third broad sweep returning 15 for the day. \textbf{Four of those 15 were already
+shipped in the 4 August issue} and re-surfaced on re-indexing; they were caught by
+\texttt{seen.json} on both PMID and DOI. The local harvester returned 5 health and
+1 sensing. \textbf{Europe PMC} on \texttt{CREATION\_DATE} returned 6, of which 3 were
+already shipped and 1 was trade news; \textbf{2 carried}, including the day's second
+instrument paper. \textbf{Crossref by ISSN} across 17 journals returned 9, \textbf{3
+carried}. \textbf{Consensus} $\times$3 sweeps returned 20 each, capped at 3 per sweep by
+the free tier; all 9 returned DOIs resolved to Crossref creation dates between 12 January
+and 15 July 2026 and were rejected as outside the window, 0 carried. \textbf{arXiv}
+50 records, none published on or after 1 August. \textbf{OpenAlex} HTTP 429, seventh
+consecutive run. \textbf{ClinicalTrials.gov} 0 registrations or updates on both the
+condition and the intervention query.
+\textbf{16 records rejected}, each with a reason in \texttt{state/rejected.jsonl}.
+Three carried records have no abstract in any of the three checked sources and are
+listed without a summary; they are marked \textsc{metadata only} in the digest and in
+the architecture donut.
+\textbf{No forest plot is generated for this issue}: the three interval estimates in the
+corpus are a population-attributable fraction and two prevalence counts, none of which is
+ratio-scale, and \texttt{f5\_forest.png} is therefore intentionally absent rather than
+missing.
+Subtopic, design, particle-metric and geography labels are assigned from title, abstract,
+keywords and MeSH; assignment is single-label by dominant contribution and is a
+judgement, not a controlled vocabulary.
+All DOI links resolve to the publisher of record. Content derived from PubMed and
+Crossref metadata; abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

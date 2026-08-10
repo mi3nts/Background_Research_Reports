@@ -351,7 +351,14 @@
   "42569680": "2026-08-08",
   "42569021": "2026-08-08",
   "42570392": "2026-08-08",
-  "42569933": "2026-08-08"
+  "42569933": "2026-08-08",
+  "42571256": "2026-08-09",
+  "42551365": "2026-08-09",
+  "42571074": "2026-08-09",
+  "42571082": "2026-08-09",
+  "42571406": "2026-08-09",
+  "42571677": "2026-08-09",
+  "42571263": "2026-08-09"
  },
  "doi": {
   "10.1001/jamanetworkopen.2026.25015": "2026-07-27",
@@ -789,7 +796,18 @@
   "10.1016/j.atmosenv.2026.122289": "2026-08-08",
   "10.1016/j.atmosenv.2026.122288": "2026-08-08",
   "10.1016/j.atmosenv.2026.122283": "2026-08-08",
-  "10.21203/rs.3.rs-9910414/v1": "2026-08-08"
+  "10.21203/rs.3.rs-9910414/v1": "2026-08-08",
+  "10.1016/j.pacs.2026.100864": "2026-08-09",
+  "10.1021/acsomega.6c04521": "2026-08-09",
+  "10.1016/j.jaerosci.2026.106882": "2026-08-09",
+  "10.1016/j.atmosenv.2026.122284": "2026-08-09",
+  "10.1016/j.jhazmat.2026.143155": "2026-08-09",
+  "10.1007/s40201-026-00998-w": "2026-08-09",
+  "10.1007/s40201-026-01000-3": "2026-08-09",
+  "10.1016/j.jhazmat.2026.143237": "2026-08-09",
+  "10.1016/j.lanepe.2026.101796": "2026-08-09",
+  "10.1007/s11356-026-38134-8": "2026-08-09",
+  "10.1016/j.waojou.2026.101440": "2026-08-09"
  },
  "tsig": {
   "874229f0be587eb19b31fc9bbdc33e67393ba341": "2026-07-27",
@@ -1233,6 +1251,30 @@
   "10448c075736a60878e959d360faf2dfbde05924": "2026-08-08",
   "89c4e9480bc6fb23568e68fb5ac24050e5e2b0a5": "2026-08-08",
   "5e175de7ff4cd4e8b6d73add00f7c5e70325683d": "2026-08-08",
-  "fc415c797b21ce5d0434a3e9b514223494525d03": "2026-08-08"
+  "fc415c797b21ce5d0434a3e9b514223494525d03": "2026-08-08",
+  "spatiotemporallysynchronizeddualwavelengthphotoacousticscatteringmeasu": "2026-08-09",
+  "a3dprintedtwostagevirtualimpactorusplitforradioactiveaerosolsizeclassi": "2026-08-09",
+  "designanddevelopmentofahighthroughputmultipatternaerosoldepositiondevi": "2026-08-09",
+  "longtermairqualityandmeteorologicalcouplingdynamicsinabeokutanigeria": "2026-08-09",
+  "evaluatingccnactivitythroughsizeresolvedhygroscopicitysynergisticobser": "2026-08-09",
+  "a15yearatmosphericrecordofintentionallyproducedpersistentorganicpollut": "2026-08-09",
+  "monitoringandriskassessmentofairbornegrapheneoxidereleasedduring3dprin": "2026-08-09",
+  "acomprehensivehealthprofileandexposureriskanalysisinanironoreminingwor": "2026-08-09",
+  "seasonalsourceshiftsdriveoxidativepotentialofsizeresolvedparticulatema": "2026-08-09",
+  "burdenofdementiaineurope19902023asystematicanalysisfromtheglobalburden": "2026-08-09",
+  "visualcharacteristicsofpmfromhalymeniadilatatamicroalgaebiodieselcompa": "2026-08-09",
+  "socioeconomicandregionalinfluencesoneosinophilicinflammationinchronicr": "2026-08-09",
+  "6f57da58faab7ab76b198294bd48eb76d94c41c2": "2026-08-09",
+  "d60cf1cce7ccbebc198e56ebf94537f610326305": "2026-08-09",
+  "7b6ed3038e861d94cab94ebdd7a12d2cd0a62fce": "2026-08-09",
+  "62a0d28813c342c46bcbccee3bdb9c1673f69445": "2026-08-09",
+  "58ef619b5f0caaaad1afd05ac51b48c106b52997": "2026-08-09",
+  "8b3ab186eed5f335fa7ca0b08e516bba7d4b5f6c": "2026-08-09",
+  "3b20f8fcd5d4a29057ed575f26da132ceeb46420": "2026-08-09",
+  "b3fd33a441c0570960765f000a25607381f43aea": "2026-08-09",
+  "ac5dc7e85356e7dab3a4b7e28a24adca5177dbde": "2026-08-09",
+  "072ec47b98a6615ca75665888307a867982228a7": "2026-08-09",
+  "0176c6690e739bacfa6f074ab5a5c30b30847d12": "2026-08-09",
+  "fdac503a6c6a932f3b544609a3c15b6b72b9e7fc": "2026-08-09"
  }
 }

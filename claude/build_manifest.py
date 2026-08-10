@@ -38,7 +38,11 @@ def build():
         entries = []
         if os.path.isdir(folder):
             for fn in sorted(os.listdir(folder)):
-                if not fn.lower().endswith(".pdf"):
+                # Dot-files are scratch, not reports. The repo mount is delete-restricted,
+                # so a superseded rollup is renamed aside as `.trash_*.pdf` and gitignored
+                # rather than removed; scanning it produced a spurious PROBLEMS line on
+                # every run from 08-08 onward. Skip them silently.
+                if fn.startswith(".") or not fn.lower().endswith(".pdf"):
                     continue
                 m = DATE_RE.search(fn)
                 if not m:
