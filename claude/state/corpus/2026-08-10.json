@@ -1,0 +1,253 @@
+{
+ "date": "2026-08-10",
+ "entry_window": "2026-08-10 -> 2026-08-10",
+ "PAPERS": [
+  {
+   "pmid": "42573706",
+   "short": "Babu et al. 2026",
+   "doi": "10.1007/s10661-026-15746-8",
+   "title": "Capturing the invisible: hyperlocal variability of size-resolved particulate matter in a smart city",
+   "journal": "Environ Monit Assess",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Mobile monitoring campaign",
+   "pm": "PM1, PM2.5, PM10 + size distribution",
+   "geo": "India",
+   "endpoint": "None (exposure)",
+   "n": "~2.4 km2, 50 m grid, 6 s cadence",
+   "tier": "A"
+  },
+  {
+   "pmid": "42422036",
+   "short": "Bobbia et al. 2026",
+   "doi": "10.1016/j.dib.2026.113025",
+   "title": "Multi-source dataset of NO2 and PM from mobile and fixed sensors in Rouen (France)",
+   "journal": "Data in Brief",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Network deployment / data descriptor",
+   "pm": "PM10, PM2.5, NO2 + RH/T/P",
+   "geo": "France",
+   "endpoint": "None (instrument)",
+   "n": "10 mobile + 18 fixed LCS + 6 reference, 10.5 months",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Wang et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122291",
+   "title": "Measuring heavy metals in atmospheric particulate matter: operational definitions, method comparability and environmental interpretation",
+   "journal": "Atmos Environ",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Method review",
+   "pm": "Heavy-metal content of PM",
+   "geo": "Not stated",
+   "endpoint": "None (instrument)",
+   "n": "Metadata only",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Acton-Bond et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122295",
+   "title": "Rolling positive matrix factorisation for aerosol optical apportionment",
+   "journal": "Atmos Environ",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Source-apportionment method",
+   "pm": "Absorption coefficient / optical apportionment",
+   "geo": "Europe",
+   "endpoint": "None (instrument)",
+   "n": "Metadata only",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Gilardoni et al. 2026",
+   "doi": "10.5194/acp-26-11135-2026",
+   "title": "First continuous aerosol measurements at Testa Grigia at 3480 m a.s.l.: aerosol populations and dust transport dynamics in the southern European Alps",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Measurement campaign",
+   "pm": "Number size distribution + absorption coefficient, 1 h",
+   "geo": "Europe",
+   "endpoint": "None (instrument)",
+   "n": "Sep 2021-May 2023, 3480 m a.s.l.",
+   "tier": "B"
+  },
+  {
+   "pmid": "42572079",
+   "short": "Akaezuwa et al. 2026",
+   "doi": "10.1007/s10661-026-15724-0",
+   "title": "SFFO-RL intelligent environmental monitoring: smart sensing networks with artificial intelligence",
+   "journal": "Environ Monit Assess",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Algorithm development",
+   "pm": "Unspecified pollutant concentration",
+   "geo": "Not stated",
+   "endpoint": "None (algorithm)",
+   "n": "97.1% accuracy claimed; n not stated",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Fan et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122292",
+   "title": "Santa Ana winds control wildfire smoke transport and related health impacts in California during January 2025",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport modelling",
+   "pm": "Wildfire-sourced PM2.5",
+   "geo": "North America",
+   "endpoint": "Smoke-attributable health impact",
+   "n": "Metadata only",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Lin et al. 2026",
+   "doi": "10.5194/acp-26-11111-2026",
+   "title": "Elevated aerosol layers within the daytime mixed layer over ecologically sensitive areas of northwest China: diurnal variation, formation mechanisms and regional effects",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Measurement campaign",
+   "pm": "Aerosol vertical profile, 0.6-2 km layer",
+   "geo": "China",
+   "endpoint": "None (exposure)",
+   "n": "2 campaigns (2010, 2012), 2 sites",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Gong et al. 2026",
+   "doi": "10.21203/rs.3.rs-10443285/v1",
+   "title": "Regional analysis of urban physical factors influencing air pollution: evidence from Seoul's living areas",
+   "journal": "Res Sq (preprint)",
+   "sub": "Exposure assessment & modelling",
+   "design": "Spatial regression (GWR)",
+   "pm": "Composite AQ index (incl. PM2.5, PM10)",
+   "geo": "East Asia",
+   "endpoint": "None (exposure)",
+   "n": "193 stations, 100 m grid",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Hernandez et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122294",
+   "title": "Urbanization and humidity impact atmospheric deposition of anthropogenic microparticles (including microplastics) in a humid subtropical city",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Deposition sampling",
+   "pm": "Anthropogenic microparticle deposition flux",
+   "geo": "North America",
+   "endpoint": "None (exposure)",
+   "n": "Metadata only",
+   "tier": "C"
+  },
+  {
+   "pmid": "42572237",
+   "short": "Cho et al. 2026",
+   "doi": "10.4014/jmb.2604.04029",
+   "title": "Lacticaseibacillus paracasei ATG-E1 alleviates particulate matter-induced airway inflammation in association with altered inflammatory signalling, gut microbiota and faecal metabolites",
+   "journal": "J Microbiol Biotechnol",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal model",
+   "pm": "PM10D (PM10 + diesel exhaust particles)",
+   "geo": "East Asia",
+   "endpoint": "BALF neutrophilia, IkBa/ERK",
+   "n": "BALB/c mice, 4 intranasal challenges",
+   "tier": "B"
+  },
+  {
+   "pmid": "42573149",
+   "short": "Zhao et al. 2026",
+   "doi": "10.1177/03000605261473853",
+   "title": "Occupational dust exposure and thyroid nodule screening: a predictive modelling approach for early detection in coal mining communities",
+   "journal": "J Int Med Res",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional + prediction model",
+   "pm": "Occupational coal dust (unmeasured)",
+   "geo": "China",
+   "endpoint": "Nodular thyroid disease",
+   "n": "1,708 coal miners",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Chin et al. 2026",
+   "doi": "10.21203/rs.3.rs-10570042/v1",
+   "title": "Impact of air quality and PM2.5 on hidradenitis suppurativa activity in the Sacramento region",
+   "journal": "Res Sq (preprint)",
+   "sub": "Other clinical endpoints",
+   "design": "Retrospective time series",
+   "pm": "Days above 12 ug/m3 PM2.5 (monthly count)",
+   "geo": "North America",
+   "endpoint": "HS clinical encounters",
+   "n": "10,431 encounters, 2015-2022",
+   "tier": "C"
+  },
+  {
+   "pmid": "42572697",
+   "short": "Vartanyan et al. 2026",
+   "doi": "10.7759/cureus.112418",
+   "title": "Structural inequities and chronic disease in Fresno County: a narrative review and multi-sectoral framework",
+   "journal": "Cureus",
+   "sub": "Burden, policy & mitigation",
+   "design": "Narrative review",
+   "pm": "Air + pesticide pollution (qualitative)",
+   "geo": "North America",
+   "endpoint": "Chronic-disease prevalence",
+   "n": "County-level data 2018-2021",
+   "tier": "C"
+  },
+  {
+   "pmid": "42369196",
+   "short": "Hahad et al. 2026",
+   "doi": "10.1007/s40201-026-00990-4",
+   "title": "Air pollution and adverse birth outcomes: a narrative review of epidemiological and mechanistic findings",
+   "journal": "J Environ Health Sci Eng",
+   "sub": "Reproductive & developmental",
+   "design": "Narrative review",
+   "pm": "PM2.5, trimester-specific",
+   "geo": "Multi-region",
+   "endpoint": "Birth weight, preterm birth, stillbirth",
+   "n": "Review; no pooled n",
+   "tier": "B"
+  },
+  {
+   "pmid": "42259955",
+   "short": "Domingo 2026",
+   "doi": "10.1007/s00204-026-04469-x",
+   "title": "Aging in a highly polluted world: challenges and solutions to prevent Alzheimer's disease",
+   "journal": "Arch Toxicol",
+   "sub": "Neuro / mental health",
+   "design": "Mechanistic review",
+   "pm": "Ambient PM + metals, PFAS, micro/nanoplastics",
+   "geo": "Multi-region",
+   "endpoint": "Alzheimer's neuropathology",
+   "n": "Review; no pooled n",
+   "tier": "B"
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "in utero:\ntrimester-specific PM2.5\nand birth weight\n(narrative review)"
+  },
+  {
+   "n": 0,
+   "note": "childhood:\nno record\nthis issue"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno record\nthis issue"
+  },
+  {
+   "n": 3,
+   "note": "adult:\ncoal miners, HS\nencounters, county\nchronic-disease burden"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nambient PM and\nAlzheimer's\nneuropathology"
+  }
+ ]
+}

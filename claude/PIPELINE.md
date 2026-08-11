@@ -850,3 +850,44 @@ Window **9 Aug** (`2026-08-09 -> 2026-08-09`), contiguous, no gap. **12 shipped,
   `2026-08-09`. Monday — no rollup owed. Re-check `10.1016/j.jaerosci.2026.106882` (MARTHA)
   first: if it has an abstract it is the first instrument×health-endpoint record of the watch.
   Then `atmosenv.2026.122284` (κ) and `jhazmat.2026.143237` (size-resolved OP).
+
+### 2026-08-10 — full connector sweep; two plots.py defects closed; 16 shipped
+Window **10 Aug** (`2026-08-10 -> 2026-08-10`), contiguous, no gap. **16 shipped
+(3 flagged pre-watch backfill), 27 rejected, 5 metadata-only.** 10 pp, 0 errors,
+0 overfull after one table-cell fix. Monday — no rollup owed.
+
+- **First run of the full connected connector set.** Routing, per-leg yield and measured
+  failure modes are now written up in **`claude/CONNECTORS.md`** — read it with this file;
+  do not re-derive. Headline: PubMed `[EDAT]` is still the only leg that resolves a single
+  day (3 queries, 13 distinct, 6 carried). **Amass BiomedCore is the best new leg** — 10
+  relevance-ranked records, 4 duplicates caught by `seen.json`, **3 carried as flagged
+  backfill** (entry 9 Jul / 29 Jun / 9 Jun), incl. the Rouen multi-hop-calibration dataset
+  that no date-windowed query could reach. Consensus **0 carried, 4th consecutive run**.
+  **Scholar Gateway is Wiley-only, corpus frozen at May 2026** — it is a passage retriever
+  for older full text, not a recency or cross-publisher leg; it resolved none of the five
+  Elsevier abstracts. medRxiv / Exa / Nimble 0 in window; Semantic Scholar rate-limited.
+  OpenAlex HTTP 429, **8th consecutive**. ClinicalTrials.gov 311 matches, none updated in
+  the window; note `search_trials` takes no `query` arg — use `condition`/`intervention`.
+- **`design_group` fell through for 12 of 16 records** — 9th recurrence and the worst yet;
+  f2's architecture donut rendered as one "Other / mixed" block on the first build. All
+  twelve labels mapped. **Rule: a new `design` string on a record and its `design_group`
+  entry are one edit, not two.**
+- **`pmclass()` extended** with the four instrument-side classes owed since 09-08, plus
+  hyphen normalisation — "Heavy-metal content of PM" was missing the `heavy metal` needle.
+  Fallback bin dropped 6 -> 4; optical 0 -> 3, composition 0 -> 2.
+- **Captions were wrong on the first pass, again (3x).** f4 is subtopic x architecture, not
+  design x endpoint, and I described the wrong figure; f3's fallback bin was called
+  eliminated when it is still the largest; a "162 records" corpus total was invented when
+  the store holds **469**. All three were caught only by reading the rendered PNGs and
+  counting the store. **Read every number off the render or the JSON.**
+- **Table overflow** in the Metric column: `PM1/PM2.5/PM10...` and `CAI from
+  SO2/CO/NO2/O3/PM10/PM2.5` overran 18 mm by 5.7 pt and 45.6 pt. Slash-chains do not break
+  — write comma-separated metric strings.
+- **EFFECTS empty for the 7th consecutive issue**; `f5_forest.png` intentionally absent.
+  The only quantitative health numbers are -11.8 g birth weight and +23.1 % preterm risk
+  per 10 ug/m3, both quoted without CIs in a narrative review.
+- **For the 11 Aug run:** window `2026-08-11 -> 2026-08-11`; `last_entry_date` is now
+  `2026-08-10`. Tuesday — no rollup owed. Weekly W9-15 Aug is generated on **Sat 15 Aug**.
+  Weekly sweep owed: re-check the five 08-10 Elsevier `atmosenv.2026.1222xx` DOIs plus
+  `jaerosci.2026.106882` (MARTHA), `atmosenv.2026.122284` (kappa) and
+  `jhazmat.2026.143237` (size-resolved OP) for abstracts.

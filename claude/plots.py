@@ -143,6 +143,23 @@ design_group = {
     "Supersite observation": "Measurement campaign",
     "Environmental surveillance campaign": "Measurement campaign",
     "Dispersion model + soil sampling": "Modelling / inventory",
+    # added 2026-08-10: the diagnostic fired for the 9th time, and this run was the
+    # worst yet -- 12 of 16 records fell through to "Other / mixed", which made the f2
+    # left panel report nothing. Every design label written on a record this issue is
+    # now mapped. The lesson the log has recorded three times: writing a NEW design
+    # string on a record silently breaks f2 unless it is added here in the same edit.
+    "Mobile monitoring campaign": "Measurement campaign",
+    "Network deployment / data descriptor": "Measurement campaign",
+    "Deposition sampling": "Measurement campaign",
+    "Method review": "Review / synthesis",
+    "Mechanistic review": "Review / synthesis",
+    "Source-apportionment method": "Modelling / inventory",
+    "Algorithm development": "Modelling / inventory",
+    "Chemical transport modelling": "Modelling / inventory",
+    "Spatial regression (GWR)": "Modelling / inventory",
+    "Animal model": "Experimental / toxicology",
+    "Cross-sectional + prediction model": "Observational - cross-sectional",
+    "Retrospective time series": "Observational - acute",
     # added 2026-08-05: the diagnostic fired again, this time because canonical GROUP
     # names were being written straight onto records. Identity self-maps make a group
     # name a legal design label, so the map is closed under its own output.
@@ -368,13 +385,42 @@ save(_fb, "f2b_endpoint.png")
 
 # ---------------------------------------------------------------- 3. PM metric + geography
 def pmclass(s):
-    s = s.lower()
+    """Single-label particle-metric class.
+
+    Mass-concentration bins are tested first because when a record reports both a
+    regulated mass metric and an instrument-side quantity, the mass metric is the
+    dominant contribution. Everything below the mass bins was added 2026-08-10:
+    the 08-09 run log recorded that absorption/scattering coefficient, aerodynamic
+    diameter class, hygroscopicity and size-resolved oxidative potential all fell
+    through to "PM (unspeciated) / emissions", which on a 67%-measurement corpus
+    made the f3 left panel uninformative. Six of today's sixteen records are
+    instrument-side, so the fallback is no longer acceptable.
+    """
+    # Normalise hyphens to spaces before matching. Without this, "Heavy-metal content
+    # of PM" missed the "heavy metal" needle on 2026-08-10 and fell through to the
+    # unspeciated bucket -- the same silent-fall-through class as the design map.
+    s = s.lower().replace("-", " ").replace("/", " / ")
     if "ultrafine" in s: return "Ultrafine / nanoscale"
     if "bioaerosol" in s or "seed" in s: return "Bioaerosol / coarse"
     if "settleable" in s or "respirable dust" in s: return "Settleable / respirable dust"
     if "pm2.5" in s and "pm10" in s: return "PM2.5 + PM10 jointly"
     if "pm2.5" in s: return "PM2.5 only"
     if "pm10" in s: return "PM10 only"
+    # ---- instrument-side quantities (added 2026-08-10) --------------------------
+    if any(w in s for w in ("absorption", "scattering", "extinction", "optical",
+                            "lidar", "aod", "aerosol optical", "vertical profile",
+                            "aerosol layer", "backscatter")):
+        return "Optical properties (abs./scat.)"
+    if any(w in s for w in ("size distribution", "aerodynamic diameter", "number size",
+                            "particle size", "size-resolved", "size resolved",
+                            "hygroscop", "kappa")):
+        return "Size-resolved / number dist."
+    if any(w in s for w in ("heavy metal", "black carbon", "elemental", "speciat",
+                            "oxidative potential", "microparticle", "microplastic",
+                            "chemical composition", "trace element")):
+        return "Composition / speciation"
+    if any(w in s for w in ("index", "cai", "aqi", "multi-pollutant", "multipollutant")):
+        return "Composite air-quality index"
     return "PM (unspeciated) / emissions"
 
 pmc = collections.Counter(pmclass(p["pm"]) for p in PAPERS)
