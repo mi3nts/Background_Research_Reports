@@ -891,3 +891,51 @@ Window **10 Aug** (`2026-08-10 -> 2026-08-10`), contiguous, no gap. **16 shipped
   Weekly sweep owed: re-check the five 08-10 Elsevier `atmosenv.2026.1222xx` DOIs plus
   `jaerosci.2026.106882` (MARTHA), `atmosenv.2026.122284` (kappa) and
   `jhazmat.2026.143237` (size-resolved OP) for abstracts.
+
+### 2026-08-11 — three defects closed, one of them a live fabrication path; 26 shipped
+Window **11 Aug** (`2026-08-11 -> 2026-08-11`), contiguous, no gap. **26 shipped, 24
+rejected, 6 metadata-only.** 12 pp, 0 errors, 0 overfull. Tuesday — no rollup owed.
+Weekly W9-15 Aug is generated on **Sat 15 Aug**.
+
+- **`plots.py` f6 was fabricating.** `stage_hits = [5, 3, 2, 3, 4]` and its exemplars
+  ("firefighter biomarkers", "care-home filtration", "PAH endocrine axis") were a
+  **silent default** used whenever the corpus JSON lacked `LIFECOURSE` — which is every
+  issue whose author calls `corpus.save()` without it, because `save()` never accepted the
+  key. The figure rendered counts describing **no record in the issue** and nothing in the
+  build said so. Caught only by reading the PNG against the store. `corpus.save()` now
+  takes `lifecourse=`; a missing key is now `SystemExit`, not a placeholder. **Rule: any
+  figure with a hardcoded default is a fabrication path — make it fail, not fall back.**
+- **PubMed DOI extraction was reading reference-list DOIs.** An efetch `PubmedArticle`
+  embeds the full reference list and every cited work carries its own
+  `<ArticleId IdType="doi">`, so `.//ArticleId` returns the first DOI *anywhere*. **15 of
+  33 records** got a DOI belonging to a paper they cited, several from the 2010s. Now in
+  committed `pubmed_fetch.py`, scoped to `PubmedData/ArticleIdList` with an `ELocationID`
+  fallback. `check_dois.py` is the backstop, not the fix.
+- **`mktable.py` author cell** stripped `" 2026b"` and `" 2026"` only, so 2026a/c/d shorts
+  rendered "Wang et al.a", "Atmos Environc". Now a regex over year + optional suffix.
+- **`design_group` did NOT fall through — first clean run in four.** Every design label was
+  chosen from the existing mapped vocabulary rather than written fresh. That is the whole
+  fix for a defect that recurred nine times. **Geo** fell through for *Faroe Islands*,
+  *West Africa*, *Idealised terrain* (inflated the global bin 8 -> 10); all mapped.
+- **`f2_design_endpoint.png` has a layout defect** at high endpoint cardinality: with 14
+  labels the right panel's y-text overlaps the donut centre and legend. `f2a`/`f2b` shipped
+  separately this issue. Fix the combined panel before an issue needs it.
+- **EFFECTS non-empty for the first time in 8 issues** — 7 interval estimates, both sources
+  Chinese. Percentage excess risks converted as `1+ER/100` (RR-equiv), percentage changes
+  in continuous biomarkers as geometric-mean ratios, purely to share a ratio axis; stated
+  in the caption and not pooled.
+- **`[EDAT]` != Entrez create date.** 10 of 33 connector records matched `[EDAT]` 11 Aug
+  while carrying an Entrez date of 10 Aug; none was in `seen.json`. Window on `[EDAT]`,
+  report the Entrez date, never treat them as interchangeable.
+- **Per-leg yield.** PubMed connector 3 queries, 33 distinct, **18 carried**. Local
+  harvester: pubmed_health 18 / pubmed_sensing 1, Europe PMC 1 (**1 carried**, a Research
+  Square preprint), Crossref by ISSN 12 (**7 carried**). **Consensus 20 / top-3 free tier,
+  0 carried, 5th consecutive** — all three resolved to 26 Mar 2026, 11 Nov 2025, 21 Apr
+  2026 and all three were already in `seen.json` on DOI. arXiv 60, 1 on/after 5 Aug and
+  off-topic. **OpenAlex HTTP 429, 9th consecutive.** ClinicalTrials.gov **0** updated in
+  window; `trials.json` unchanged.
+- **Abstract famine is widening, not narrowing** — 6 metadata-only (4 Elsevier, 1 Springer,
+  1 RSC) plus one RSC abstract truncated mid-sentence at source. 4th consecutive issue.
+- **For the 12 Aug run:** window `2026-08-12 -> 2026-08-12`; `last_entry_date` is now
+  `2026-08-11`. Wednesday — no rollup owed. Weekly sweep owed Sat 15 Aug: re-check the six
+  08-11 metadata-only DOIs plus the still-unresolved 08-08/08-09/08-10 Elsevier backlog.

@@ -62,11 +62,22 @@ def load_range(start, end):
     return papers, effects
 
 
-def save(date, papers, effects, entry_window=""):
-    os.makedirs(STORE, exist_ok=True)
-    json.dump({"date": date, "entry_window": entry_window,
-               "PAPERS": papers, "EFFECTS": effects},
-              open(os.path.join(STORE, "%s.json" % date), "w"),
+def save(date, papers, effects, entry_window="", lifecourse=None):
+    """Persist one issue. `lifecourse` is a 5-element list of {"n", "note"} for the
+    preconception / infancy / puberty / working-age / 65+ stages.
+
+    It is optional in the signature only so older callers still import; omitting it
+    is nevertheless a build failure downstream. plots.py used to fall back to a
+    hardcoded [5, 3, 2, 3, 4] with exemplars from unrelated issues when this key was
+    absent, which shipped a figure describing records the issue did not contain
+    (found 2026-08-11). plots.py now raises instead, so a missing key stops the
+    build rather than producing a plausible-looking fabrication.
+    """
+    out = {"date": date, "entry_window": entry_window,
+           "PAPERS": papers, "EFFECTS": effects}
+    if lifecourse is not None:
+        out["LIFECOURSE"] = lifecourse
+    json.dump(out, open(os.path.join(STORE, "%s.json" % date), "w"),
               indent=1, ensure_ascii=False)
 
 

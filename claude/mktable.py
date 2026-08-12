@@ -41,7 +41,14 @@ for sub in ORDER:
         r"\multicolumn{6}{@{}l@{}}{\cellcolor{Mist}\textsf{\textbf{\textcolor{%s}{%s}}}}\\[0.6mm]"
         % (BANDCOL[sub], esc(sub)))
     for p in sorted(grp, key=lambda d: d["short"]):
-        author = p["short"].replace(" 2026b", "").replace(" 2026", "")
+        # 2026-08-11: this was `.replace(" 2026b","").replace(" 2026","")`, which
+        # special-cased exactly one disambiguator letter. An issue with 2026a / 2026c /
+        # 2026d shorts rendered "Wang et al.a", "Atmos Environc", "Environ Sci Atmosa"
+        # in the register -- the year went, the suffix letter stayed glued on. Strip a
+        # trailing 4-digit year with any single-letter suffix, and any "(preprint)"
+        # marker that belongs in the Journal column rather than the author cell.
+        author = re.sub(r"\s*\((?:preprint)\)\s*$", "",
+                        re.sub(r"\s+\d{4}[a-z]?\s*$", "", p["short"]), flags=re.I)
         rows.append(" & ".join([
             r"\href{https://doi.org/%s}{%s}" % (p["doi"], esc(author)),
             esc(shorten_title(p["title"])),

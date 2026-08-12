@@ -204,3 +204,27 @@
 {"date": "2026-08-10", "pmid": "", "doi": "", "title": "6 further Consensus relevance hits (Yan, Qian, Silva, Msigwa, Kiss, +1)", "reason": "outside entry window: Consensus is a relevance index, not a recency index"}
 {"date": "2026-08-10", "pmid": "", "doi": "", "title": "59 of 60 arXiv relevance hits", "reason": "outside entry window: none published on or after 2026-07-26"}
 {"date": "2026-08-10", "pmid": "", "doi": "", "title": "1 arXiv hit, Dirichlet mixture models with missingness/censoring", "reason": "off-topic: general statistics, no aerosol application"}
+{"date": "2026-08-11", "pmid": "42575381", "doi": "10.1016/j.amepre.2026.108239", "title": "Social Public Policies for Cardiovascular Health among U.S. Adults", "reason": "no PM/air-pollution exposure; policy review of income/housing/food programmes"}
+{"date": "2026-08-11", "pmid": "42575421", "doi": "", "title": "The Exposome-Autoimmunity Axis: Environmental Xenobiotics, Gut Dysbiosis", "reason": "exposome review with no PM-specific exposure metric or effect estimate"}
+{"date": "2026-08-11", "pmid": "42575914", "doi": "10.1038/s41598-026-61071-y", "title": "Fenugreek seed meal in vitro rumen fermentation", "reason": "animal nutrition; CH4 only, no ambient PM"}
+{"date": "2026-08-11", "pmid": "42576059", "doi": "10.1007/s10661-026-15774-4", "title": "Ecosystem service value of cascade reservoirs, karst watershed", "reason": "hydrology/ESV, no atmospheric particulate"}
+{"date": "2026-08-11", "pmid": "42576076", "doi": "10.1007/s10653-026-03395-2", "title": "Railway-associated trace metal contaminants", "reason": "soil/sediment geochemistry; no airborne PM measurement"}
+{"date": "2026-08-11", "pmid": "42576099", "doi": "10.1007/s10661-026-15779-z", "title": "NDVI-based vegetation activity under soil and climate", "reason": "remote sensing of vegetation, not aerosol"}
+{"date": "2026-08-11", "pmid": "42576813", "doi": "", "title": "Coal fly ash and oyster shells for benthic nutrient removal", "reason": "aquatic remediation; fly ash used as substrate, not an inhalable exposure"}
+{"date": "2026-08-11", "pmid": "42577197", "doi": "10.3389/fpubh.2026.1904248", "title": "Internal radiation exposure via whole-body counter", "reason": "ionising radiation dosimetry, not particulate air pollution"}
+{"date": "2026-08-11", "pmid": "42578976", "doi": "10.1007/s00128-026-04315-x", "title": "Benthic macroinvertebrate recovery after restoration", "reason": "freshwater ecology"}
+{"date": "2026-08-11", "pmid": "42579002", "doi": "10.1007/s00128-026-04238-7", "title": "Heavy metals in fishers (Pekania pennanti)", "reason": "wildlife tissue burden; no atmospheric pathway quantified"}
+{"date": "2026-08-11", "pmid": "42579006", "doi": "10.1007/s00128-026-04316-w", "title": "Heavy metals in urban trees and soils", "reason": "soil/plant compartment; no airborne PM metric"}
+{"date": "2026-08-11", "pmid": "42579093", "doi": "", "title": "Open-set Raman framework for microplastic profiling", "reason": "waterborne microplastics, not airborne PM"}
+{"date": "2026-08-11", "pmid": "42579121", "doi": "", "title": "Land use amplifies riverine methane ebullition", "reason": "aquatic GHG flux"}
+{"date": "2026-08-11", "pmid": "42579147", "doi": "10.1007/s00128-026-04313-z", "title": "Total mercury in freshwater fish", "reason": "aquatic bioaccumulation"}
+{"date": "2026-08-11", "pmid": "42579173", "doi": "10.1007/s10661-026-15794-0", "title": "Fifteen-year soil organic carbon stability, Pampas", "reason": "soil science"}
+{"date": "2026-08-11", "pmid": "42579436", "doi": "", "title": "Microcystin congener detection with aerolysin nanopores", "reason": "water toxin sensing; not aerosol instrumentation"}
+{"date": "2026-08-11", "pmid": "", "doi": "10.5194/acp-26-11207-2026", "title": "CCMI-2022 stratospheric aerosol injection scenario", "reason": "geoengineering / stratospheric chemistry; no surface PM or exposure"}
+{"date": "2026-08-11", "pmid": "", "doi": "10.5194/acp-26-11189-2026", "title": "Arctic sea ice loss and water vapour isotopes", "reason": "isotope hydrology, no aerosol"}
+{"date": "2026-08-11", "pmid": "", "doi": "10.1016/s1352-2310(26)00510-8", "title": "Editorial Board", "reason": "not a research record"}
+{"date": "2026-08-11", "pmid": "", "doi": "10.1039/d6ea00097e", "title": "Formaldehyde evolution observed with Pandora spectrometer", "reason": "gas-phase HCHO column remote sensing; no particulate metric"}
+{"date": "2026-08-11", "pmid": "", "doi": "2608.arxiv-climate-health-bibliometric", "title": "Mapping the climate-health evidence base 2007-2023 (arXiv)", "reason": "bibliometric survey, no PM measurement or effect estimate"}
+{"date": "2026-08-11", "pmid": "", "doi": "10.3390/atmos17040335", "title": "ML calibration transfer for low-cost AQ sensors (Consensus)", "reason": "duplicate - already shipped, caught by seen.json on DOI"}
+{"date": "2026-08-11", "pmid": "", "doi": "10.1109/jiot.2025.3631631", "title": "AIoT real-time PM sensor calibration, TCM-Net (Consensus)", "reason": "duplicate - already shipped, caught by seen.json on DOI"}
+{"date": "2026-08-11", "pmid": "", "doi": "10.1088/1361-6501/ae6298", "title": "Calibration strategies for low-cost PM sensors, review (Consensus)", "reason": "duplicate - already shipped, caught by seen.json on DOI"}

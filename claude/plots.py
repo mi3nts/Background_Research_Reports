@@ -504,6 +504,13 @@ GEO_SUBSTR = [
     ("philippines", "Philippines"), ("quezon city", "Philippines"), ("manila", "Philippines"),
     ("arctic", "Arctic Ocean"), ("svalbard", "Arctic Ocean"), ("antarctic", "Antarctica"),
     ("benevento", "Italy"), ("salt lake city", "USA"),
+    # added 2026-08-11: the geo diagnostic fired for three labels that were all being
+    # pooled into "Global / multi-region", which inflated that bar from 7 to 10 and
+    # made f3's right panel misreport the corpus. "Idealised terrain" is the geo-side
+    # sibling of the GEO_NONGEO chamber/simulation cases and belongs in the fallback
+    # by intent; the other two are real places that simply had no needle.
+    ("faroe", "Denmark"), ("west africa", "Nigeria"),
+    ("idealised", "Global"), ("idealized", "Global"),
 ]
 # Labels that are honestly not geographic. They belong in the fallback bucket by
 # intent, not by accident, so they must not trip the unmapped warning.
@@ -660,15 +667,20 @@ for _ci, E in enumerate(_CHUNKS):
 # ---------------------------------------------------------------- 6. life-course window strip
 stages = ["Preconception /\nin utero", "Infancy &\nearly childhood", "Puberty &\nadolescence",
           "Working-age\nadulthood", "Older adults\n(65+)"]
-stage_hits = [5, 3, 2, 3, 4]
-stage_note = ["fetal growth, brain\nstructure, IQ",
-              "asthma admissions,\ndyslipidaemia",
-              "pubertal timing,\nPAH endocrine axis",
-              "occupational RCS,\nfirefighter biomarkers",
-              "AF events, cognition,\ncare-home filtration"]
-if LIFECOURSE:
-    stage_hits = [d["n"] for d in LIFECOURSE]
-    stage_note = [d["note"] for d in LIFECOURSE]
+# 2026-08-11 DEFECT FIX. These five numbers and their annotations used to be a
+# SILENT default: if the issue's corpus JSON carried no LIFECOURSE key, f6 rendered
+# [5, 3, 2, 3, 4] with exemplars ("firefighter biomarkers", "care-home filtration",
+# "PAH endocrine axis") drawn from issues weeks earlier, and nothing in the build
+# said so. Today's corpus has none of those records, so the figure would have
+# shipped counts describing no paper in the issue -- fabrication, caught only by
+# reading the rendered PNG against the store. corpus.save() now writes LIFECOURSE,
+# and a missing key is a hard failure rather than a plausible-looking placeholder.
+if not LIFECOURSE:
+    raise SystemExit(
+        "f6: LIFECOURSE missing for this issue. Write it via corpus.save(..., "
+        "lifecourse=[...]) -- refusing to render placeholder life-course counts.")
+stage_hits = [d["n"] for d in LIFECOURSE]
+stage_note = [d["note"] for d in LIFECOURSE]
 fig, ax = plt.subplots(figsize=SZ(8.4, 2.75))
 xs = np.arange(len(stages))
 ax.plot(xs, [0] * len(xs), color=GRID, lw=3, zorder=1, solid_capstyle="round")
