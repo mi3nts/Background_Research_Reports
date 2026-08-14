@@ -939,3 +939,59 @@ Weekly W9-15 Aug is generated on **Sat 15 Aug**.
 - **For the 12 Aug run:** window `2026-08-12 -> 2026-08-12`; `last_entry_date` is now
   `2026-08-11`. Wednesday — no rollup owed. Weekly sweep owed Sat 15 Aug: re-check the six
   08-11 metadata-only DOIs plus the still-unresolved 08-08/08-09/08-10 Elsevier backlog.
+
+### 2026-08-12 — backfill issue, contiguous; 28 shipped
+Window **12 Aug** (`2026-08-12 -> 2026-08-12`), contiguous with 11 Aug, no gap. **28
+shipped, 14 rejected in-harvest + 3 Consensus out-of-window, 6 metadata-only.** 11 pp,
+0 errors, 0 overfull. Wednesday — no rollup owed.
+
+- **`geo_of` fell through for `Asia`** (a GBD paper with a continent-wide setting). Added
+  `("asia", "Global")` as the **last** needle in `GEO_SUBSTR` — the ordering is load-bearing,
+  because `asia` is a substring of `malaysia` / `south asia` / `east asia`, all of which have
+  earlier needles. First geo fall-through in two issues; caught by the printed diagnostic,
+  not by eye.
+- **Crossref carries author names even when it withholds the abstract.** The four Elsevier
+  *Atmos. Environ.* metadata-only records were first written with `short="Atmos Environ
+  2026a..d"`, which rendered four identical author cells in the register. Crossref's
+  `author` array was populated all along. **Rule: read every Crossref field before
+  declaring a record author-less.**
+- **A caption asserted 12 where the figure showed 13.** The f2 endpoint count was written
+  from a mental tally rather than off the render. Same failure class as 10 Aug. Fixed;
+  every count in this issue's captions was re-read off the PNG afterwards.
+- **Per-leg yield.** PubMed connector 2 queries, 19 distinct, **18 carried**. Local
+  harvester: pubmed_health 13 (5 records the connector missed, 3 carried), pubmed_sensing
+  **0**, Europe PMC 2 (**2 carried**), Crossref by ISSN 16 (**7 carried**). arXiv 145 kB,
+  nothing in scope. **OpenAlex HTTP 429, 10th consecutive.** Consensus 20 / top-3 free tier,
+  **0 carried, 6th consecutive** — all three lacked a verifiable entry date. **Scholar
+  Gateway's corpus ends May 2026** and cannot serve an August entry window; it is now
+  useless for the metadata-only backlog and should not be tried again for it.
+  ClinicalTrials.gov **0** in window.
+
+### 2026-08-13 — instrumentation-heavy; 17 shipped, first clean issue in five
+Window **13 Aug** (`2026-08-13 -> 2026-08-13`), contiguous. **17 shipped, 12 rejected,
+0 metadata-only.** 9 pp, 0 errors, 0 overfull. Thursday — no rollup owed. **Weekly
+W9-15 Aug is generated on Sat 15 Aug.**
+
+- **The local harvester earned its keep.** `pubmed_sensing` returned 0 on 12 Aug and 4 on
+  13 Aug, and the local legs surfaced **4 carried records the connector queries missed**
+  (Sensors: LCS extrapolation, SAW sensor cleaning, UAV smoke detection). Do not retire
+  either leg on the basis of a single empty day.
+- **First draft orphaned one line onto page 2** — masthead + signal box + six bullets
+  overran page 1 by two lines, leaving a near-empty page. Trimmed the signal box's second
+  paragraph and the last two bullets; 10 pp -> 9 pp. Check page 2 for orphaning on every
+  issue whose exec brief runs to six bullets.
+- **`10.1159/ned/adwag005` resolves at doi.org but has no Crossref record** — a new Karger
+  `ned/` prefix pattern. `check_dois.py` warns rather than fails, correctly. Accepted and
+  documented in the issue's provenance box.
+- **Three of eight Crossref hits were RSC front matter** (contents list, front cover, back
+  cover). Journal-ISSN harvesting will keep returning these; they are rejected by title.
+- **Per-leg yield.** PubMed connector 2 queries (10 + 4, 1 overlapping), 13 distinct,
+  **9 carried**. Local harvester: pubmed_health 12 / pubmed_sensing 4 (**4 further
+  carried**), Europe PMC 2 (**2 carried**, both Research Square preprints), Crossref by ISSN
+  8 (**3 carried**). arXiv nothing in scope. **OpenAlex HTTP 429, 11th consecutive.**
+  ClinicalTrials.gov **0** in window; `trials.json` unchanged.
+- **For the 14 Aug run:** window `2026-08-14 -> 2026-08-14`; `last_entry_date` is now
+  `2026-08-13`. Friday — no rollup owed. **Sat 15 Aug owes weekly W9-15 Aug**, and the
+  weekly sweep must re-check the 08-08 through 08-12 Elsevier metadata-only backlog
+  (four 08-12 `atmosenv.2026.1222xx/1223xx` DOIs, `jacadv.2026.103149`,
+  `S2213-2600(26)00256-0`, plus the still-unresolved 08-08/08-09/08-10/08-11 items).

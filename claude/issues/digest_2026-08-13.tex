@@ -1,0 +1,499 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{13 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-08-13\;\;\textcolor{Amber}{\textbar}\;\;Entry window 13 August 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;17 records carried, 12 rejected\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{17}{RECORDS CARRIED\\(12 REJECTED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{SUBTOPIC CLUSTERS\\REPRESENTED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{EFFECT ESTIMATES\\WITH INTERVALS}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{INSTRUMENTATION /\\EXPOSURE RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{METADATA-ONLY\\(NO ABSTRACT)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A low-cost sensor calibration is only valid inside the
+box it was trained in --- and the failure mode differs by which wall you cross.}\\[1.4mm]
+\footnotesize
+Benjamin et al.\ (\textit{Sensors}, Hannigan group at Colorado) ran a multi-season
+co-location of a Plantower PMS5003 and an Alphasense CO-B4 against Federal Equivalence
+Method monitors, then deliberately trained calibration models on \emph{restricted} ranges
+of relative humidity, temperature and pollutant concentration and scored them on data
+outside those ranges. Three results, and the third is the one that is not obvious:
+within the training envelope, bias error was minimal; extrapolating outside it
+introduced \textbf{bias} error; and extrapolating specifically into \emph{higher
+concentrations} than the training data increased \textbf{random} error.
+
+That asymmetry matters operationally. Bias is in principle correctable after the fact if
+the excursion can be characterised; inflated variance at high concentration is not, and
+high concentration is exactly where a network is asked to support an exceedance call or a
+smoke advisory. The design rule follows: a training set must span the \emph{upper} tail of
+the expected concentration distribution even more than it spans the humidity range,
+because the humidity penalty appears as a correctable offset and the concentration penalty
+appears as noise. Transferability claims for LCS calibration need stating as an envelope,
+not as an $R^2$.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{An unusually instrumentation-heavy day: 9 of 17 records.} After a fortnight
+dominated by burden estimates and reviews, today's harvest is led by sensing and exposure
+work --- LCS calibration envelopes, a self-regenerating acoustic particle sensor, a
+broadband-sensor-array approach to VOC speciation, gradient-boosted PM$_{2.5}$
+forecasting, Pandora column NO$_2$ sub-pixel variability, and a satellite-monitoring
+scoping review for Africa.
+
+\item \textbf{Component-resolved PM keeps outperforming mass --- twice, independently.}
+Xu et al.\ report cerebral hypoperfusion ORs of \textbf{4.344 (3.323--5.734)} for
+PM$_{2.5}$ and \textbf{4.396 (3.327--5.869)} for black carbon in 967 patients with
+symptomatic intracranial stenosis, with organic matter and BC together carrying
+\textbf{86\% of the WQS mixture effect}. Tan et al.\ find the PM$_{2.5}$ component
+mixture associated with lower eGFR in 8{,}477 Wuhan subway workers (WQS OR \textbf{1.183,
+1.106--1.266}). Both used the TAP component product; neither could measure components
+directly. The measurement gap this exposes is now the recurring theme of this watch.
+
+\item \textbf{Sensor fouling gets an engineering answer.} Fawaz et al.\ actuated a water
+droplet with Rayleigh surface acoustic waves to sweep collected particles off the sensing
+zone of SAW microparticle sensors inside a cascade impactor, for both NaCl solution and
+SiC particles, without degrading sensor performance. Surface saturation is the limiting
+failure mode for gravimetric-equivalent sensors in long deployments; a self-regenerating
+prototype is a materially different maintenance model.
+
+\item \textbf{Senolytics reverse PM-induced endothelial activation in vivo.} Gomes et
+al.\ exposed C57BL/6J mice to concentrated ambient particles and observed increased
+leukocyte rolling and adhesion on intact vasculature plus senescence of peripheral
+mononuclear and endothelial progenitor cells. Dasatinib + quercetin reversed the
+senescence markers ($\beta$-galactosidase, SASP genes) and restored EPC tube-forming
+capacity. Mechanistic rather than translational --- but it places senescence upstream of
+early atherogenesis rather than downstream of it.
+
+\item \textbf{Africa's satellite-monitoring evidence base is 26 records.} Gould \&
+Jagarnath's PRISMA-ScR scoping review found 26 eligible studies linking satellite-derived
+air quality to health outcomes across the entire continent, mostly post-2015, mostly
+ecological, concentrated in West Africa. First record in this watch to put a number on a
+gap its geography figure has shown as an empty bar since 27 July.
+
+\item \textbf{No metadata-only records today} --- first clean issue in five. The 08-08 to
+08-12 Elsevier backlog is unchanged and stays queued for Saturday.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 17 carried records, single-label by dominant
+contribution. \textit{Sensing, forecasting \& instrumentation} is the largest cluster at
+7 records --- the highest single-day count this watch has recorded --- and with
+\textit{Exposure assessment} accounts for 9 of 17. \textit{Respiratory \& allergic} and
+\textit{Reproductive \& developmental} are both empty today.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. Modelling and algorithm work plus instrument
+development together dominate; no randomised or interventional design appears.
+Right --- health endpoint. Nine records carry no human health endpoint, which is the
+direct consequence of the instrumentation share.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. Note how many of today's exposure metrics are not PM
+mass: total column NO$_2$, aerosol depolarization ratio, VOC sensor response, a smoke
+plume in an image. On an instrumentation-heavy day the corpus stops being about mass
+concentration almost entirely. Right --- geographic provenance. China contributes six
+records; a Research Square scoping review is the only African-focused record and it is a
+review of how little there is.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed. Counts are non-exclusive and describe this issue
+only. The Thai leukaemia cohort is the only record spanning three stages, and it is the
+reason the adolescent window is non-empty at all. The in-utero window is empty for the
+second consecutive issue.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. The silo the 12 August
+issue flagged is if anything sharper today: every \textit{Sensing} record sits in a
+methods, instrument or modelling column and none carries a health endpoint, while every
+health record sits in an observational column and none reports its own measurement.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{The four interval estimates carried today. \textbf{The two pairs are on
+completely different exposure contrasts and must not be compared to each other}: Xu et
+al.'s ORs are top-versus-bottom contrasts on a 3-year mean in a clinical population with
+established intracranial stenosis --- a selected, high-risk sample in which effect sizes
+above 4 are not implausible but are not population estimates --- while Tan et al.'s are
+per-quantile mixture-index ORs from two different mixture estimators (WQS and QGC) fitted
+to the same data, so they are not independent of each other either. Xu et al.'s
+component-specific ORs for sulfate, organic matter, nitrate and ammonium are reported in
+the abstract without intervals and are therefore not plotted.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 7 records}{Amber}
+
+\paperentry{Benjamin et al.\ 2026}
+{Limitations of environmental extrapolation in low-cost carbon monoxide and PM$_{2.5}$ sensors}
+{Sensors (Basel)}
+{Multi-season co-location of a Plantower PMS5003 and an Alphasense CO-B4 against Federal
+Equivalence Method monitors, with calibration models deliberately trained on restricted
+ranges of relative humidity, temperature and pollutant concentration and then scored
+outside those ranges. \textbf{Within-envelope bias was minimal; crossing any envelope
+wall introduced bias; crossing the upper concentration wall specifically increased random
+error.} The design is the contribution --- most co-location papers report a single
+in-sample $R^2$ and say nothing about the envelope. Limitations: one site, one sensor
+model per pollutant, and no aerosol-composition contrast, so the concentration effect
+cannot be separated from a possible composition shift at high concentration.}
+{10.3390/s26154988}
+
+\paperentry{Fawaz et al.\ 2026}
+{Surface cleaning of SAW-based microparticle sensors in a cascade impactor via SAW-induced droplet displacement}
+{Sensors (Basel)}
+{Rayleigh waves generated on a lithium-niobate chip actuate a water droplet that sweeps
+deposited particles out of the sensing zone of surface-acoustic-wave microparticle
+sensors integrated into a cascade impactor. Optimal droplet size and required RF power
+were determined; the droplet displaced both NaCl-solution residue and SiC particles
+without degrading sensor performance. Surface saturation is the binding constraint on
+long unattended deployment of mass-sensitive acoustic sensors, so a self-regenerating
+cycle changes the maintenance model rather than the sensitivity. Laboratory
+demonstration only --- no ambient aerosol, no duty-cycle endurance data, and no accounting
+for what the droplet does to semi-volatile mass.}
+{10.3390/s26154666}
+
+\paperentry{Gao et al.\ 2026}
+{Feasibility of an air sensor array for real-time detection and characterisation of VOCs}
+{Atmos Meas Tech}
+{Commercial VOC air sensors are broadband --- each returns one scalar reflecting an
+ill-defined sensitivity envelope, which is why they have seen little research use. This
+paper tests whether an \emph{array} spanning three fundamentally different sensor types
+can recover speciation from the joint response. The measurand is VOCs, not PM, and it is
+carried here for the method: the same argument applies directly to optical PM sensors
+whose single scalar folds together size distribution, refractive index and hygroscopic
+growth. Feasibility study --- laboratory characterisation, and the practical question of
+whether the array's discrimination survives ambient interferent mixtures is not settled.}
+{10.5194/amt-19-5337-2026}
+
+\paperentry{Wu \& Qu 2026}
+{Interpretable short-term PM$_{2.5}$ forecasting using meteorology--pollution coupling across Beijing stations}
+{Environ Monit Assess}
+{420{,}768 hourly observations from 12 Beijing stations, 2013--2017, under a strict
+chronological train--validation--test split with Diebold--Mariano testing, feature-group
+ablation and station-holdout transfer. At the 6\,h horizon CatBoost gave
+\textbf{RMSE 51.24\,$\mu$g/m$^3$, MAE 30.87, $R^2=0.617$}, a 6.73\% RMSE reduction over
+persistence; station-holdout LightGBM reached 53.11\,$\mu$g/m$^3$, 5.65\% below
+persistence. Dominant predictors were recent PM history, wind speed and direction,
+diurnal cyclicity and the temperature--dew-point gap. \textbf{The honest part is the
+framing}: a 6.7\% gain over persistence is a modest operational return, performance
+degrades during high-pollution episodes, and the authors state that the 2013--2017 regime
+would require retraining for contemporary deployment.}
+{10.1007/s10661-026-15799-9}
+
+\paperentry{Adams et al.\ 2026}
+{Sampling sub-pixel scale variability in total column NO$_2$ within a coastal urban environment}
+{Environ Sci Atmos}
+{Long-term Pandora spectrometer records of column-integrated NO$_2$ at Boston University
+and Harvard University, used to characterise variability \emph{within} a single satellite
+pixel. Directly relevant to any satellite--surface fusion product: sub-pixel
+heterogeneity is an irreducible error term in the validation of column retrievals, and
+two sites a few kilometres apart in the same coastal urban area are the cleanest way to
+bound it. Two instruments in one metropolitan area is a small basis for a general claim
+about pixel-scale variability, and NO$_2$ column heterogeneity is not a direct proxy for
+PM heterogeneity.}
+{10.1039/d6ea00033a}
+
+\paperentry{Liu et al.\ 2026c}
+{Polarization calibration of spaceborne lidar using dense cirrus-scattered solar background}
+{Atmos Meas Tech}
+{Solar background scattered by optically thick ice cloud provides a semi-continuous
+daytime polarization calibration that complements onboard pseudo-depolarizers. At 1064\,nm
+(CATS) molecular scattering is negligible; at shorter wavelengths it polarizes the
+background and biases the calibration. The paper adds a vector-radiative-transfer
+molecular-scattering correction and shows the daytime bias at CALIOP 532\,nm is
+\textbf{$\sim$1\%}, removed by the correction to agree with onboard calibration; EarthCARE
+ATLID at 355\,nm is treated by model calculation only. Carried at tier C: depolarization
+ratio drives satellite aerosol typing, which in turn feeds AOD-to-PM$_{2.5}$ conversion,
+but the link to surface concentration is two inferential steps away.}
+{10.5194/amt-19-5325-2026}
+
+\paperentry{Liu et al.\ 2026d}
+{LRM-YOLO: lightweight YOLOv10n model for forest fire smoke detection in UAV images}
+{Sensors (Basel)}
+{YOLOv10n with a RepViTBlock feature-extraction module, a lightweight efficient
+convolutional detection head, and MPDIoU bounding-box regression loss. Against baseline:
+\textbf{$-$36.7\% parameters, $-$42.3\% GFLOPs, $+$1.3\% mAP50, $+$3.7\% mAP50-95},
+recall $+$3.2\%, precision $+$3.6\%, on a purpose-built UAV-perspective dataset plus
+Wildfire Smoke V1. Smoke detection in imagery is a plume-presence proxy, not a
+concentration measurement, and the self-constructed dataset means the headline gains are
+partly a property of the benchmark. Relevant only as an early-warning trigger upstream of
+a real exposure measurement.}
+{10.3390/s26154887}
+
+\clearpage
+
+\band{Exposure assessment \& modelling\hfill 2 records}{Clay}
+
+\paperentry{Gould \& Jagarnath 2026}
+{Satellite monitoring for air quality and public health research in Africa: a scoping review}
+{Research Square (preprint)}
+{JBI methodology, PRISMA-ScR reporting, five databases plus grey literature to May 2026,
+for studies using satellite-derived air quality data against human health outcomes in
+Africa. \textbf{Twenty-six records met inclusion} --- for an entire continent. Most
+post-2015, most ecological time-series or cross-sectional, concentrated in West Africa,
+with PM$_{2.5}$ the dominant exposure. This is the first record in this watch to put a
+number on the African evidence gap that its own geography figure has shown as an empty
+bar every day since 27 July. Preprint, not peer reviewed; a scoping review counts
+literature and does not weigh it.}
+{10.21203/rs.3.rs-10623736/v1}
+
+\paperentry{da Costa Cardoso et al.\ 2026}
+{Legacy Pb--Zn mine tailings as persistent sources of bioaccessible toxic elements in urban dust}
+{Environ Monit Assess}
+{18 urban dust samples and reference soils from Boquira, a former Pb--Zn district in
+northeastern Brazil; microwave-assisted digestion and XRF for Pb, Zn, Cd, Cu, Mn, Fe, Al;
+geoaccumulation index, contamination and enrichment factors, ecological risk index; oral
+bioaccessibility by dilute-nitric-acid gastric simulation. \textbf{Pb bioaccessibility
+$\sim$75\%}, Cu 54.8\%, Mn 28.1\%, Zn 27.0\%. Oral ingestion dominated over dermal;
+non-carcinogenic HI exceeded 1 for children on Pb, and carcinogenic risk from Cd exceeded
+limits for both children and adults. Eighteen samples in one district, a single gastric
+extraction protocol without an intestinal phase, and no particle-size fractionation ---
+which matters, because resuspension and inhalation-relevant dose are size-dependent and
+this design cannot resolve them.}
+{10.1007/s10661-026-15743-x}
+
+\band{Neuro, cognition \& mental health\hfill 1 record}{Deep}
+
+\paperentry{Xu et al.\ 2026}
+{PM$_{2.5}$ components and cerebral hypoperfusion, with mediation by inflammatory biomarkers}
+{Eur J Neurol}
+{967 patients with symptomatic intracranial arterial stenosis at one Suzhou hospital;
+hypoperfusion quantified from multimodal CT with MIStar; 3-year PM$_{2.5}$ and component
+exposures from the TAP database; generalized additive models, restricted cubic splines,
+weighted quantile sum for the mixture, and mediation analysis.
+\textbf{PM$_{2.5}$ OR 4.344 (3.323--5.734); black carbon 4.396 (3.327--5.869)}, then
+sulfate 4.359, organic matter 4.278, nitrate 3.552, ammonium 3.313 (no intervals given).
+OM (44.2\%) and BC (42.2\%) carry 86\% of the mixture effect. Mediation by neutrophils
+5.37\%, leukocytes 4.30\%, monocytes 2.73\% --- i.e.\ inflammation accounts for roughly a
+tenth of the total effect, so the dominant pathway is unexplained. Single-centre clinical
+sample already selected on stenosis; ORs above 4 in that population are not transportable
+to general-population risk. Component exposures are modelled, not measured.}
+{10.1111/ene.70716}
+
+\band{Occupational \& indoor\hfill 1 record}{Clay}
+
+\paperentry{Tan et al.\ 2026}
+{PM$_{2.5}$ components, nutritional indices and leisure-time physical activity vs lower eGFR in subway workers}
+{Nutrients}
+{8{,}477 Wuhan subway workers; PM$_{2.5}$ and components from the Tracking Air Pollution
+in China dataset; creatinine-based eGFR; GNRI and PNI nutritional indices; IPAQ-derived
+activity. Mixture effects by WQS, quantile g-computation and BKMR.
+\textbf{WQS OR 1.183 (1.106--1.266) and QGC OR 1.183 (1.083--1.291)} for lower eGFR;
+BKMR overall effect on eGFR of \textbf{$-0.045$ ($-0.068$, $-0.022$)} for a 5-percentile
+mixture increase against medians. Subgroups by nutrition and activity differed but
+\textbf{no significant interaction} was found --- the authors say so, and the correct
+reading is hypothesis generation, not effect modification. Cross-sectional, so reverse
+causation is unaddressed; and residential exposure is a poor proxy for the occupational
+exposure of people who work underground, which is the population's defining feature.}
+{10.3390/nu18152580}
+
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Gomes et al.\ 2026}
+{Senolytics reverse PM$_{2.5}$-induced cell and vascular dysfunction}
+{Cardiovasc Toxicol}
+{C57BL/6J mice inhaling concentrated ambient particles versus filtered air showed
+endothelial activation \emph{in vivo} --- increased leukocyte rolling on and adhesion to
+intact vasculature --- alongside senescence of peripheral blood mononuclear cells and
+endothelial progenitor cells. Dasatinib + quercetin reversed the senescence readouts
+($\beta$-galactosidase activity, SASP gene expression), restored EPC tube-forming capacity
+in vitro, and limited in vivo endothelial activation. Positions senescence upstream of
+early atherogenesis rather than as a late consequence. Concentrated ambient particles
+deliver a supra-ambient dose; the senolytic rescue demonstrates sufficiency of the
+senescence pathway under that dose, not its necessity at ambient concentrations. No
+exposure--response and no female animals reported.}
+{10.1007/s12012-026-10171-2}
+
+\paperentry{Zhang et al.\ 2026}
+{Pleural anthracosis severity and the structure and function of subcarinal lymph nodes}
+{J Thorac Dis}
+{Thoracoscopic grading of pleural anthracosis into four grades by three thoracic surgeons
+with ImageJ area quantification, against paired subcarinal lymph nodes stained with HE,
+Masson, EVG and immunohistochemistry for Ki67, CD31, CD68 and D2-40. Black particulate
+accumulation in node capsule and medulla rose with anthracosis grade, but every
+quantitative immunostaining index \textbf{rose then fell} with advancing severity --- a
+consistent non-monotonic pattern across proliferation, vascularity, macrophage presence
+and lymphatic integrity. The non-monotonicity is the finding and is also the weakness:
+with a graded surgical sample and no exposure history, an exhaustion interpretation and a
+selection interpretation are equally consistent with the data.}
+{10.21037/jtd-2026-1274}
+
+\clearpage
+
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{Chen et al.\ 2026}
+{Compound cold wave--PM$_{2.5}$ exposure and cardiovascular emergency ambulance calls}
+{Research Square (preprint)}
+{82{,}714 cardiovascular emergency ambulance call records from Shijiazhuang, 1 January
+2014 to 31 December 2023, with three cold-wave categories defined on temperature
+percentiles crossed with four PM$_{2.5}$ pollution levels to construct compound exposure
+events; distributed lag non-linear model with quasi-Poisson regression for lagged and
+interactive effects. The compound-exposure framing is the contribution --- most
+temperature $\times$ PM work tests a multiplicative interaction term rather than
+constructing joint exposure states. Preprint, not peer reviewed; ambulance calls are a
+severity-filtered and access-dependent outcome; and a 3$\times$4 exposure grid over ten
+years leaves the extreme cells thin.}
+{10.21203/rs.3.rs-10547139/v1}
+
+\paperentry{Gaggini \& Vassalle 2026}
+{Gene--air pollution interaction in cardiovascular disease}
+{Int J Mol Sci}
+{Narrative PubMed review of combined genetic-susceptibility and air-pollution effects on
+cardiovascular risk, concentrating on detoxification and inflammation genes. Argues the
+area could refine cardiovascular risk prediction beyond traditional factors. Narrative,
+not systematic; gene--environment interaction in this literature is dominated by
+underpowered candidate-gene studies, which the review acknowledges as ``lights and
+shadows'' but does not quantify. Useful only as an entry point to the literature.}
+{10.3390/ijms27156818}
+
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Traisathit et al.\ 2026}
+{Air pollution and mortality in acute lymphoblastic leukaemia across age groups, northern Thailand}
+{PLoS One}
+{604 ALL patients diagnosed 1999--2020 in upper northern Thailand --- a region with severe
+seasonal biomass-burning haze --- stratified into paediatric ($<$15, n=344), adolescent and
+young adult (15--39, n=152) and adult ($\geq$40, n=108). Five-year survival 64.5\%,
+19.6\% and 6.7\% respectively; adjusted HR for death 3.76 (AYA) and 8.10 (adult) versus
+paediatric; diagnosis before 2010 aHR 1.38. \textbf{PM$_{2.5}$ $\geq$50\,$\mu$g/m$^3$ was
+associated with increased mortality in paediatric patients.} The age-group HRs are
+prognosis, not pollution. The pollution claim rests on comparing mean concentrations
+between those who died and those who did not, with a threshold analysis in one stratum;
+no exposure window, no treatment-era adjustment beyond the pre/post-2010 term, and
+ambient station concentrations as individual exposure. Signal, not estimate.}
+{10.1371/journal.pone.0355856}
+
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{He et al.\ 2026}
+{Premature ischaemic stroke burden in adults aged 50--69 in China, India and the United States}
+{Neuroepidemiology}
+{GBD 2023 DALYs, YLLs, YLDs and population attributable fractions for the 50--69 stratum
+in three countries at different stages of epidemiological transition, with ARIMA
+projection to 2053. Trajectories diverge: China declining, India flat at a high level,
+the US on a high plateau; the US has shifted to a YLD-dominant (disability) composition
+while India remains YLL-dominant (acute mortality); China shows a near 2:1 male:female
+ratio driven by male smoking. \textbf{India is characterised as facing dual pressure from
+persistent PM$_{2.5}$ and rising metabolic risk.} The authors are explicit that widening
+intervals make the 2053 horizon scenario-based rather than forecast; a 34-year ARIMA
+extrapolation from modelled burden estimates is presentation, not evidence. Carried for
+the PAF decomposition only.}
+{10.1159/ned/adwag005}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance, screening and known gaps}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+\textbf{Window.} \texttt{2026-08-13 -> 2026-08-13}, contiguous with the 12 August issue;
+no gap. PubMed is windowed on \texttt{[Date - Entry]}, the Crossref-by-ISSN leg on
+Crossref \texttt{created}, and the Europe PMC leg on \texttt{CREATION\_DATE}. Three
+different clocks, not treated as interchangeable.\\[0.8mm]
+\textbf{Per-leg yield.} PubMed connector, two queries (health axis 10, instrumentation
+axis 4, one overlapping): 13 distinct, \textbf{9 carried}. Local harvester:
+\texttt{pubmed\_health} 12 and \texttt{pubmed\_sensing} 4 surfaced \textbf{4 further
+carried records} the connector queries missed --- the Sensors papers on LCS extrapolation,
+SAW sensor cleaning and UAV smoke detection --- which is the clearest case yet for keeping
+both legs. Europe PMC 2 (\textbf{2 carried}, both Research Square preprints). Crossref by
+ISSN 8 (\textbf{3 carried}; three of the eight were RSC front matter --- contents list,
+front cover, back cover). arXiv returned 145\,kB with nothing in scope on or after
+6 August. \textbf{OpenAlex HTTP 429, 11th consecutive.} Consensus was not re-queried this
+issue: the 12 August sweep on the calibration axis returned only out-of-window results
+and this is the sixth consecutive issue with zero Consensus carry. Scholar Gateway's
+corpus ends May 2026 and cannot serve an August window. ClinicalTrials.gov: no PM or
+air-pollution registration updated in the window; \texttt{trials.json} unchanged.\\[0.8mm]
+\textbf{Rejections (12).} Off-topic: broiler-diet life cycle assessment; bronchoscopic
+lavage case series (its ``particulate matter'' is aspirated gastric content); tourism and
+health satisfaction in older Chinese adults (air quality is one covariate among many);
+indirect soil NO$_x$ emission budget; ground-based hyperspectral retrieval of
+\emph{riverine} particulate organic carbon; zinc-pyrithione ultrafine particle synthesis
+in a microchannel reactor; Bayesian latent-component analysis of Volta Lake
+\emph{sediment} PAHs; UK methane isotope source attribution; sodium-layer lidar
+dynamics; and three RSC journal front-matter items. All logged with reasons to
+\texttt{state/rejected.jsonl}.\\[0.8mm]
+\textbf{Two records are preprints} (Research Square) and are labelled as such in the
+register. They are carried because both fill a documented gap in this watch --- African
+satellite monitoring and compound cold-wave $\times$ PM exposure --- and neither is used to
+support a numeric claim in the analytics.\\[0.8mm]
+\textbf{One DOI warning, accepted.} \texttt{10.1159/ned/adwag005} (He et al.) resolves at
+doi.org but has no Crossref record; the Karger \texttt{ned/} prefix pattern is new. The
+link was confirmed to resolve before shipping.\\[0.8mm]
+\textbf{Labels.} Subtopic, design, particle-metric and geography labels are drawn only
+from vocabularies already mapped in \texttt{plots.py} and \texttt{mktable.py}; no new leaf
+label was written this issue. Assignment is single-label by dominant contribution and is
+a judgement, not a controlled vocabulary.\\[0.8mm]
+Content derived from PubMed, Europe PMC and Crossref metadata; abstracts remain the
+copyright of their respective publishers. All DOI links resolve to the publisher of
+record.\par}
+\end{keybox}
+
+\end{document}

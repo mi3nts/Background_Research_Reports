@@ -511,6 +511,12 @@ GEO_SUBSTR = [
     # by intent; the other two are real places that simply had no needle.
     ("faroe", "Denmark"), ("west africa", "Nigeria"),
     ("idealised", "Global"), ("idealized", "Global"),
+    # added 2026-08-12: a GBD paper whose study setting is the whole of Asia had no
+    # needle. MUST stay last in this list - "asia" is a substring of "malaysia" and of
+    # "east asia"/"south asia", all of which have their own earlier needles, so the
+    # ordering is what keeps this from swallowing them. A continent-wide GBD setting
+    # belongs in the multi-region bucket, not in any single sub-region.
+    ("asia", "Global"),
 ]
 # Labels that are honestly not geographic. They belong in the fallback bucket by
 # intent, not by accident, so they must not trip the unmapped warning.

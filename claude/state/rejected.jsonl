@@ -228,3 +228,32 @@
 {"date": "2026-08-11", "pmid": "", "doi": "10.3390/atmos17040335", "title": "ML calibration transfer for low-cost AQ sensors (Consensus)", "reason": "duplicate - already shipped, caught by seen.json on DOI"}
 {"date": "2026-08-11", "pmid": "", "doi": "10.1109/jiot.2025.3631631", "title": "AIoT real-time PM sensor calibration, TCM-Net (Consensus)", "reason": "duplicate - already shipped, caught by seen.json on DOI"}
 {"date": "2026-08-11", "pmid": "", "doi": "10.1088/1361-6501/ae6298", "title": "Calibration strategies for low-cost PM sensors, review (Consensus)", "reason": "duplicate - already shipped, caught by seen.json on DOI"}
+{"issue": "2026-08-12", "pmid": "42586380", "doi": "10.1016/j.biortech.2026.135606", "title": "Dissolved black carbon on hematite facets", "reason": "off-topic: aquatic photochemistry, no airborne PM"}
+{"issue": "2026-08-12", "pmid": "42585161", "doi": "", "title": "Price premiums for meat products with sustainability labels", "reason": "off-topic: consumer economics"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/acp-26-11235-2026", "title": "Fractal characteristics of ice-supersaturated regions", "reason": "off-topic: upper-tropospheric cloud microphysics"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/acp-26-11281-2026", "title": "Precipitation-driven replenishment of CCN", "reason": "off-topic: cloud microphysics, no surface PM"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/acp-26-11355-2026", "title": "Hunga eruption impacts on stratospheric ozone", "reason": "off-topic: stratospheric chemistry"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/acp-26-11309-2026", "title": "Aerosol-cloud interactions in the ECMWF model", "reason": "off-topic: radiative forcing, no exposure link"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/acp-26-11371-2026", "title": "Secondary ice production in deep convection", "reason": "off-topic: cloud microphysics"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/acp-26-11255-2026", "title": "Model resolution and North Atlantic sulphate response", "reason": "off-topic: climate dynamics"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/acp-26-11339-2026", "title": "Sulfur-VOC + OH kinetics and multi-sulfur products", "reason": "out-of-axis: SOA precursor chemistry, no PM mass or health endpoint"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/amt-19-5267-2026", "title": "N2O clumped and position-specific isotopes", "reason": "off-topic: trace-gas isotope metrology"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/amt-19-5223-2026", "title": "IASI and ERA5 water vapour profiles", "reason": "off-topic: humidity sounding"}
+{"issue": "2026-08-12", "pmid": "", "doi": "10.5194/amt-19-5309-2026", "title": "Stratospheric aerosol from Frequency Scanning Lidar", "reason": "off-topic: stratospheric aerosol optics, no surface PM relevance"}
+{"issue": "2026-08-12", "pmid": "42583560", "doi": "10.1097/EE9.0000000000000513", "title": "Residential greenness and preeclampsia in Japan", "reason": "out-of-axis: exposure is NDVI greenness; no PM estimate reported"}
+{"issue": "2026-08-12", "pmid": "42584453", "doi": "", "title": "Tuberculosis recurrence in Asia: systematic review", "reason": "out-of-axis: PM one determinant among many; no DOI registered to verify"}
+{"issue": "2026-08-12", "pmid": "", "doi": "", "title": "Kumpika 2026 humidity/aging correction PMS7003 (Consensus)", "reason": "out-of-window: no verifiable entry date in 2026-08-12"}
+{"issue": "2026-08-12", "pmid": "", "doi": "", "title": "Qian 2026 AutoML indoor sensor calibration (Consensus)", "reason": "out-of-window: no verifiable entry date in 2026-08-12"}
+{"issue": "2026-08-12", "pmid": "", "doi": "", "title": "Ginsburg 2026 global PurpleAir calibration (Consensus)", "reason": "out-of-window: no verifiable entry date in 2026-08-12"}
+{"issue": "2026-08-13", "pmid": "42588998", "doi": "10.3390/ani16152360", "title": "Yeast postbiotic in broiler production: LCA", "reason": "off-topic: livestock life cycle assessment; PM is an LCA impact category"}
+{"issue": "2026-08-13", "pmid": "42592367", "doi": "10.21037/acr-2026-0085", "title": "Bronchoscopic lavage for pulmonary aspiration", "reason": "off-topic: 'particulate matter' denotes aspirated gastric content"}
+{"issue": "2026-08-13", "pmid": "42586991", "doi": "10.1038/s41598-026-54602-0", "title": "Health satisfaction among Chinese older adults with tourism", "reason": "off-topic: air quality is one covariate in a wellbeing model"}
+{"issue": "2026-08-13", "pmid": "42590953", "doi": "10.1111/gcb.71048", "title": "Indirect NOx emissions from anthropogenic nitrogen", "reason": "out-of-axis: soil nitrogen budget, no PM"}
+{"issue": "2026-08-13", "pmid": "42590528", "doi": "10.3390/s26154751", "title": "Ground-based hyperspectral monitoring of riverine organic carbon", "reason": "off-topic: aquatic POC/DOC, not airborne"}
+{"issue": "2026-08-13", "pmid": "42588470", "doi": "", "title": "Zinc pyrithione ultrafine particles via microchannel precipitation", "reason": "off-topic: pharmaceutical particle manufacture"}
+{"issue": "2026-08-13", "pmid": "42593579", "doi": "10.1007/s10653-026-03410-6", "title": "Bayesian latent component analysis of Volta Lake sediment PAHs", "reason": "off-topic: lake sediment geochemistry, not aerosol"}
+{"issue": "2026-08-13", "pmid": "", "doi": "10.5194/acp-26-11421-2026", "title": "UK methane source attribution from d13C-CH4 and d2H-CH4", "reason": "off-topic: methane isotope inversion"}
+{"issue": "2026-08-13", "pmid": "", "doi": "10.5194/acp-26-11409-2026", "title": "Sodium lidar multiple sodium layer structures", "reason": "off-topic: mesospheric dynamics"}
+{"issue": "2026-08-13", "pmid": "", "doi": "10.1039/d6ea90031c", "title": "Environ Sci Atmos contents list", "reason": "front matter, not a research record"}
+{"issue": "2026-08-13", "pmid": "", "doi": "10.1039/d6ea90032a", "title": "Environ Sci Atmos back cover", "reason": "front matter, not a research record"}
+{"issue": "2026-08-13", "pmid": "", "doi": "10.1039/d6ea90030e", "title": "Environ Sci Atmos front cover", "reason": "front matter, not a research record"}
