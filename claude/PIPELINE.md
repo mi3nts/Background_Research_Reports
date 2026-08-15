@@ -995,3 +995,38 @@ W9-15 Aug is generated on Sat 15 Aug.**
   weekly sweep must re-check the 08-08 through 08-12 Elsevier metadata-only backlog
   (four 08-12 `atmosenv.2026.1222xx/1223xx` DOIs, `jacadv.2026.103149`,
   `S2213-2600(26)00256-0`, plus the still-unresolved 08-08/08-09/08-10/08-11 items).
+
+### 2026-08-14 — broad and shallow; 14 shipped, 9 of 10 clusters occupied
+Window **14 Aug** (`2026-08-14 -> 2026-08-14`), contiguous with 13 Aug. **14 shipped,
+14 rejected in-harvest + 3 Consensus out-of-window, 0 metadata-only.** 9 pp, 0 errors,
+0 overfull. Friday — no rollup owed. **Sat 15 Aug owes weekly W9-15 Aug.**
+
+- **Three caption claims were wrong against the render and were caught by reading the
+  PNGs, not the corpus.** (i) "a single trial record" — `RCT process evaluation` also maps
+  to `Trial / intervention`, so f2 showed 2. (ii) "five records carry no health endpoint" —
+  O'Donnell's `No health endpoint` made it 6. (iii) an f4 claim that Ayala occupied "a cell
+  empty for a week" was false; Mechanistic toxicology x Experimental has been populated on
+  five of the last six issues. **Rule reaffirmed: derive every caption number from the
+  printed diagnostic or the PNG, never from the paper list you just wrote.**
+- **A design label can change a figure count without changing the corpus.** The trial-count
+  error came from two *different* design strings collapsing into one architecture column.
+  When writing a design label, check what it maps to in `design_group`, not just that it
+  exists there.
+- **Consensus is structurally unable to serve this watch.** All three hits were in scope and
+  genuinely useful (Sofia LCS calibration transfer, AMT recalibration cadence, global
+  PurpleAir correction transferability) but Crossref `created` was 2026-02-19, 2026-03-26
+  and 2026-06-15. **7th consecutive zero-carry.** It ranks by relevance, not recency.
+  Keep it for weekly/monthly gap-filling; stop expecting daily carry.
+- **Local harvester carried 2 the connector missed** (Zhai & Meng pneumonia DLNM; Wu & Cui
+  aviation burden) — 4th consecutive issue in which it earned its keep. `pubmed_sensing`
+  returned 1, fully contained in the connector set.
+- **Per-leg yield.** PubMed connector 2 queries (8 + 5), 13 distinct, **9 carried**. Local:
+  pubmed_health 15 / pubmed_sensing 1 (**2 further carried**), Europe PMC 3 (**2 carried**,
+  both preprints), Crossref by ISSN 7 (**1 carried**; 3 were ACP cloud microphysics, 1 an
+  editorial board listing, 1 an Elsevier metadata-only VOC record). arXiv 146 kB, nothing on
+  or after 10 Aug. **OpenAlex HTTP 429, 12th consecutive.** ClinicalTrials.gov **0** in
+  window; `trials.json` unchanged, though NCT05994937 now has a published protocol.
+- **For the 15 Aug run:** window `2026-08-15 -> 2026-08-15`; `last_entry_date` is now
+  `2026-08-14`. Saturday — **weekly W9-15 Aug is owed**, generated after the daily and
+  attached under 15 Aug alongside it. The weekly sweep must re-check the 08-08 through
+  08-12 Elsevier metadata-only backlog.

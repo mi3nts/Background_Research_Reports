@@ -1,0 +1,322 @@
+{
+ "date": "2026-08-14",
+ "entry_window": "2026-08-14 -> 2026-08-14",
+ "PAPERS": [
+  {
+   "pmid": "42600907",
+   "short": "Atalell et al. 2026",
+   "doi": "10.1016/j.envres.2026.125493",
+   "title": "Exposure to low-level fine particulate matter air pollution and developmental vulnerability at school entry: a population-based cohort study in Western Australia",
+   "journal": "Environ Res",
+   "sub": "Reproductive & developmental",
+   "design": "Registry cohort + geospatial",
+   "pm": "PM2.5",
+   "geo": "Australia",
+   "endpoint": "Neuro / cognitive",
+   "n": "54,458 children, AEDC waves 2009/2012/2015, SA2-level daily PM2.5",
+   "tier": "A"
+  },
+  {
+   "pmid": "42597324",
+   "short": "Makacha et al. 2026",
+   "doi": "10.3389/fgwh.2026.1843221",
+   "title": "Unequal exposure: spatio-temporal and structural determinants of personal PM2.5 exposure in three sub-Saharan African geographies",
+   "journal": "Front Glob Womens Health",
+   "sub": "Exposure assessment & modelling",
+   "design": "Observational exposure study",
+   "pm": "PM2.5",
+   "geo": "The Gambia / Kenya / Mozambique",
+   "endpoint": "No health endpoint",
+   "n": "343 parous women, 3,190 person-days, minute-resolved personal monitoring",
+   "tier": "A"
+  },
+  {
+   "pmid": "42600830",
+   "short": "Ayala et al. 2026",
+   "doi": "10.1016/j.envpol.2026.128961",
+   "title": "Contrasting neurotoxic pathways triggered by PM10 in relation with organic molecular markers in suburban and rural sites in Catalonia",
+   "journal": "Environ Pollut",
+   "sub": "Mechanistic toxicology",
+   "design": "Exposure assessment + in vitro",
+   "pm": "PM10",
+   "geo": "Spain",
+   "endpoint": "Toxicological (in vitro)",
+   "n": "54 filter samples, 3 sites, 30 organic tracers, SH-SY5Y, 6 endpoints",
+   "tier": "A"
+  },
+  {
+   "doi": "10.21203/rs.3.rs-10627504/v1",
+   "short": "d'Hondt et al. 2026",
+   "title": "Neural downscaling of air-quality simulations requires structural correction before spatial refinement",
+   "journal": "Research Square (preprint)",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Deep-learning model",
+   "pm": "PM2.5, PM10, NO2, O3",
+   "geo": "Europe",
+   "endpoint": "No health endpoint",
+   "n": "CAMS-class CTM fields, paired coarse/fine simulations",
+   "tier": "A"
+  },
+  {
+   "pmid": "42596852",
+   "short": "Chen et al. 2026",
+   "doi": "10.1111/pai.70424",
+   "title": "Cord blood DNA methylation as a potential mediator between prenatal ambient air pollution and early infant allergic symptoms in a Shanghai birth cohort",
+   "journal": "Pediatr Allergy Immunol",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective birth cohort",
+   "pm": "PM2.5, PM2.5 components (SO4, NO3, NH4), NO2",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "101 mother-infant pairs; 30 cord-blood naive CD4+ T-cell methylomes",
+   "tier": "B"
+  },
+  {
+   "pmid": "42598180",
+   "short": "Makrufardi et al. 2026",
+   "doi": "10.1016/j.waojou.2026.101444",
+   "title": "Effect of ambient relative humidity and particulate matter on the levels of asthma therapy",
+   "journal": "World Allergy Organ J",
+   "sub": "Respiratory & allergic",
+   "design": "Prospective cohort",
+   "pm": "PM2.5",
+   "geo": "Taiwan",
+   "endpoint": "Respiratory",
+   "n": "288 newly diagnosed adults, >=6 months GINA-guided follow-up",
+   "tier": "B"
+  },
+  {
+   "pmid": "42598989",
+   "short": "Zhai & Meng 2026",
+   "doi": "10.1080/09603123.2026.2718327",
+   "title": "Impacts of apparent temperature and air pollutants on daily pneumonia hospitalizations and their interaction in rural areas of Western China",
+   "journal": "Int J Environ Health Res",
+   "sub": "Respiratory & allergic",
+   "design": "Distributed-lag time-series",
+   "pm": "PM2.5, PM10",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "Jiuquan NRCMS daily pneumonia admissions, 2015-2020",
+   "tier": "B"
+  },
+  {
+   "pmid": "42600906",
+   "short": "Wittkopp et al. 2026",
+   "doi": "10.1016/j.ahj.2026.107573",
+   "title": "Cleaner Air for Lower Cardiometabolic Risk: protocol for a double-blind, randomized, sham-controlled trial of HEPA filtration in adults with prediabetes",
+   "journal": "Am Heart J",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Trial / intervention",
+   "pm": "PM2.5 (indoor, continuous)",
+   "geo": "USA",
+   "endpoint": "Metabolic",
+   "n": "Protocol; NCT05994937, 1-month bedroom HEPA vs sham, CGM primary",
+   "tier": "B"
+  },
+  {
+   "pmid": "42599337",
+   "short": "Negahi et al. 2026",
+   "doi": "10.1007/s00484-026-03293-3",
+   "title": "Climate-sensitive exposures and cancer outcomes: a systematic review and meta-analysis",
+   "journal": "Int J Biometeorol",
+   "sub": "Other clinical endpoints",
+   "design": "Systematic review (PRISMA)",
+   "pm": "PM2.5, wildfire smoke",
+   "geo": "Global",
+   "endpoint": "Oncologic",
+   "n": "14 studies, 25 estimates, 10 exposure-outcome groups, RVE pooling",
+   "tier": "B"
+  },
+  {
+   "pmid": "42595855",
+   "short": "Bajaj & Settle 2026",
+   "doi": "10.1007/s10661-026-15780-6",
+   "title": "Rapid assessment of air pollution data quality using a composite index",
+   "journal": "Environ Monit Assess",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Monitoring-record analysis",
+   "pm": "PM2.5",
+   "geo": "USA",
+   "endpoint": "No health endpoint",
+   "n": "1 reference monitor vs 1 low-cost sensor, OpenAQ, 1-5 July 2025",
+   "tier": "B"
+  },
+  {
+   "pmid": "42595892",
+   "short": "Yaqoob et al. 2026",
+   "doi": "10.1038/s41598-026-64590-w",
+   "title": "Semiparametric hybrid air quality forecasting using Prophet ensemble and feature selection",
+   "journal": "Sci Rep",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "PM2.5",
+   "geo": "South Korea",
+   "endpoint": "No health endpoint",
+   "n": "Seoul daily air quality plus a high-dimensional simulated benchmark",
+   "tier": "B"
+  },
+  {
+   "doi": "10.64898/2026.08.13.26360348",
+   "short": "O'Donnell et al. 2026",
+   "title": "Use of nicotine replacement therapy to reduce children's exposure to second-hand smoke in the home: a pilot randomised controlled trial in Scotland",
+   "journal": "medRxiv (preprint)",
+   "sub": "Occupational & indoor",
+   "design": "RCT process evaluation",
+   "pm": "PM2.5 (indoor)",
+   "geo": "Scotland",
+   "endpoint": "No health endpoint",
+   "n": "Pilot RCT, households with children, NRT + telephone support vs usual care",
+   "tier": "B"
+  },
+  {
+   "doi": "10.5194/acp-26-11473-2026",
+   "short": "Zhang et al. 2026",
+   "title": "High frequency of urban new particle formation on the Tibetan Plateau: quantifying formation rates, growth rates and CCN production",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Supersite observation",
+   "pm": "Particle number size distribution, CCN",
+   "geo": "China",
+   "endpoint": "No health endpoint",
+   "n": "Lhasa (3,650 m), spring and autumn campaigns, PNSD + size-segregated counts",
+   "tier": "C"
+  },
+  {
+   "pmid": "42596907",
+   "short": "Wu & Cui 2026",
+   "doi": "10.7189/jogh.16.04210",
+   "title": "Impact of aircraft CO, NO2 and SO2 emissions on public health in Chinese airports",
+   "journal": "J Glob Health",
+   "sub": "Burden, policy & mitigation",
+   "design": "Burden estimation (GBD)",
+   "pm": "CO, NO2, SO2 (no PM metric)",
+   "geo": "China",
+   "endpoint": "Mortality",
+   "n": "CAAC LTO cycles, Gaussian dispersion + GEMM, airport-adjacent populations",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Developmental vulnerability, >=1 domain",
+   "exposure": "per 1 ug/m3 early-childhood PM2.5",
+   "est": 1.04,
+   "lo": 1.01,
+   "hi": 1.07,
+   "metric": "OR",
+   "src": "Atalell 2026 (Environ Res)"
+  },
+  {
+   "label": "Developmental vulnerability, >=2 domains",
+   "exposure": "per 1 ug/m3 early-childhood PM2.5",
+   "est": 1.06,
+   "lo": 1.03,
+   "hi": 1.08,
+   "metric": "OR",
+   "src": "Atalell 2026 (Environ Res)"
+  },
+  {
+   "label": "Infant allergic symptoms, PM2.5 T1",
+   "exposure": "first-trimester PM2.5, per unit",
+   "est": 2.27,
+   "lo": 1.09,
+   "hi": 4.98,
+   "metric": "aOR",
+   "src": "Chen 2026 (Pediatr Allergy Immunol)"
+  },
+  {
+   "label": "Infant allergic symptoms, NO2 T1",
+   "exposure": "first-trimester NO2, per unit",
+   "est": 2.11,
+   "lo": 1.02,
+   "hi": 4.53,
+   "metric": "aOR",
+   "src": "Chen 2026 (Pediatr Allergy Immunol)"
+  },
+  {
+   "label": "Cancer outcomes, all climate exposures (RVE)",
+   "exposure": "pooled, dependence-aware",
+   "est": 1.02,
+   "lo": 0.93,
+   "hi": 1.11,
+   "metric": "RR",
+   "src": "Negahi 2026 (Int J Biometeorol)"
+  },
+  {
+   "label": "Cancer outcomes, uncorrected pooling",
+   "exposure": "pooled, ignoring within-cohort dependence",
+   "est": 1.07,
+   "lo": 1.02,
+   "hi": 1.12,
+   "metric": "RR",
+   "src": "Negahi 2026 (Int J Biometeorol)"
+  },
+  {
+   "label": "Cancer mortality, wildfire exposure",
+   "exposure": "wildfire smoke, RVE pooled",
+   "est": 1.11,
+   "lo": 0.89,
+   "hi": 1.38,
+   "metric": "RR",
+   "src": "Negahi 2026 (Int J Biometeorol)"
+  },
+  {
+   "label": "Pneumonia admission, PM10",
+   "exposure": "per IQR, rural W China",
+   "est": 1.05,
+   "lo": 1.0,
+   "hi": 1.12,
+   "metric": "RR",
+   "src": "Zhai 2026 (Int J Environ Health Res)"
+  },
+  {
+   "label": "Pneumonia admission, PM2.5",
+   "exposure": "per IQR, rural W China",
+   "est": 1.04,
+   "lo": 0.97,
+   "hi": 1.12,
+   "metric": "RR",
+   "src": "Zhai 2026 (Int J Environ Health Res)"
+  },
+  {
+   "label": "Pneumonia admission, CO",
+   "exposure": "per IQR, rural W China",
+   "est": 1.11,
+   "lo": 1.01,
+   "hi": 1.21,
+   "metric": "RR",
+   "src": "Zhai 2026 (Int J Environ Health Res)"
+  },
+  {
+   "label": "Pneumonia admission, high apparent temp",
+   "exposure": "peak of inverted-U vs reference",
+   "est": 1.5,
+   "lo": 1.41,
+   "hi": 1.6,
+   "metric": "RR",
+   "src": "Zhai 2026 (Int J Environ Health Res)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 2,
+   "note": "Shanghai cord-blood\nmethylation; personal\nexposure in pregnancy"
+  },
+  {
+   "n": 2,
+   "note": "AEDC school-entry\ncohort; Scottish\nSHS-in-home RCT"
+  },
+  {
+   "n": 0,
+   "note": "no record\nthis issue"
+  },
+  {
+   "n": 3,
+   "note": "Taiwanese adult\nasthma; NYC HEPA\nprediabetes protocol"
+  },
+  {
+   "n": 1,
+   "note": "rural W China\npneumonia\nadmissions"
+  }
+ ]
+}
