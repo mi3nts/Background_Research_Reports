@@ -1030,3 +1030,40 @@ Window **14 Aug** (`2026-08-14 -> 2026-08-14`), contiguous with 13 Aug. **14 shi
   `2026-08-14`. Saturday — **weekly W9-15 Aug is owed**, generated after the daily and
   attached under 15 Aug alongside it. The weekly sweep must re-check the 08-08 through
   08-12 Elsevier metadata-only backlog.
+
+### 2026-08-15 — Europe PMC carried the issue; harvester leg silently broken; weekly W9–15
+Window **15 Aug** (`2026-08-15 -> 2026-08-15`), contiguous with 14 Aug. **21 shipped,
+26 rejected, 2 metadata-only.** 10 pp, 0 errors, 2 pre-existing masthead/metric-strip
+overfulls. Saturday — **weekly rollup 9–15 Aug also shipped** (35 pp, 134 records).
+
+- **HARVESTER DEFECT, unrepaired.** `harvest.py`'s Europe PMC leg returned **0** for this
+  window; a hand-issued `CREATION_DATE:[2026-08-15 TO 2026-08-15]` query against the same
+  endpoint returned **59** (40 new after seen-dedupe, **15 carried**). The committed leg
+  would have shipped a 6-record issue. **Fix before the next run** — inspect the query
+  string and result-type in `harvest.py`; the connector legs cannot cover for it.
+- **Per-leg yield.** PubMed connector health 7 / instrumentation 1 (contained in health);
+  **6 carried**. The instrumentation query first returned 76 because `calibration` and
+  `exposure model` explode into clinical MeSH — it must be ANDed with a particulate term.
+  Local harvester `pubmed_health` 5 (all duplicates of the connector), `pubmed_sensing` 0,
+  Crossref by ISSN 9/18 journals (1 in scope, deferred), arXiv nothing since 11 Aug.
+  **OpenAlex HTTP 429, 13th consecutive** — leg is dead, stop retrying. ClinicalTrials.gov
+  0 in window; `trials.json` unchanged, and **zero new registrations across all seven days**
+  of the weekly period, which is the weekly trial finding.
+- **Three caption claims were wrong and were caught by checking `metrics.csv`, not by
+  reading the corpus.** (i) "first two-day neuro gap" — neuro was empty on 11 of 21 issues
+  including a six-day run 3–9 Aug. (ii) puberty window "empty on four of the last five" —
+  it was three of five. (iii) "silo wider than 13/14 Aug" — 43% vs 41%/43%, i.e. flat.
+  **Rule extended: any claim of the form "first/most/widest since X" must be computed from
+  `metrics.csv` or the corpus store before it is written, not recalled.**
+- **`state/metrics.csv` quoting defect is already fixed** — `update_state.py` writes with
+  `csv.writer`; 165 rows parse at exactly 3 fields. No action needed. Naive `awk -F,`
+  still miscounts and is not a valid check.
+- **Weekly sweep resolved 0 of 15 metadata-only abstracts** but recovered **6 authorships**
+  (Zhou, Habib, Hao, Li, Hsieh, Yavuz) that had shipped as journal names in the 11 Aug
+  register. Store corrected; **the 11 Aug PDF is stale on those six cells** and is left as
+  shipped. New weekly defect logged: seven endpoint labels meaning "no health endpoint" are
+  unmapped in `ENDPOINT_CANON`, so `f2b` understates that bar by 32 (true 67 of 134).
+- **For the 16 Aug run:** window `2026-08-16 -> 2026-08-16`; `last_entry_date` is now
+  `2026-08-15`. Sunday — no rollup owed (weekly is generated on Saturdays). Re-check the
+  08-08 through 08-12 Elsevier metadata-only backlog, and the deferred
+  `10.1007/s11869-026-02080-8` (Air Qual Atmos Health, N. African urban AQ anomalies).
