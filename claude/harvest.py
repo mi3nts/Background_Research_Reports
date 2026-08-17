@@ -39,11 +39,24 @@ def pubmed(window_start, window_end, tag, term, retmax=200):
     return ids, out
 
 def europepmc(qs, frm, to):
-    u = ("https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%s"
-         "&format=json&pageSize=100&resultType=core") % urllib.parse.quote(
-         '(%s) AND (FIRST_PDATE:[%s TO %s])' % (qs, frm, to))
-    try: return json.loads(get(u) or "{}").get("resultList", {}).get("result", [])
-    except Exception: return []
+    q = urllib.parse.quote('(%s) AND (CREATION_DATE:[%s TO %s])' % (qs, frm, to))
+    out, cursor = [], "*"
+    for _ in range(6):                      # <=600 records / window
+        u = ("https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%s"
+             "&format=json&pageSize=100&resultType=core&cursorMark=%s"
+             % (q, urllib.parse.quote(cursor)))
+        try:
+            d = json.loads(get(u) or "{}")
+        except Exception:
+            break
+        page = d.get("resultList", {}).get("result", [])
+        out.extend(page)
+        nxt = d.get("nextCursorMark")
+        if not page or not nxt or nxt == cursor:
+            break
+        cursor = nxt
+        time.sleep(0.3)
+    return out
 
 def openalex(qs, frm, to):
     u = ("https://api.openalex.org/works?filter=from_created_date:%s,to_created_date:%s"

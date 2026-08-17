@@ -1,0 +1,269 @@
+{
+ "date": "2026-08-16",
+ "entry_window": "2026-08-16 -> 2026-08-16",
+ "PAPERS": [
+  {
+   "pmid": "42603825",
+   "short": "Kannoth et al. 2026",
+   "doi": "10.1038/s41370-026-00957-5",
+   "title": "Short-term PM2.5 and COVID-19 pneumonia in New York City: risk amplified by pre-existing cardiovascular disease",
+   "journal": "J Expo Sci Environ Epidemiol",
+   "sub": "Respiratory & allergic",
+   "design": "Retrospective cohort",
+   "pm": "7-day residential ZIP-code CMAQ PM2.5 prior to admission",
+   "geo": "USA",
+   "endpoint": "Respiratory infection",
+   "n": "15,361 NYC COVID-19 hospitalisations, Mar-Dec 2020",
+   "tier": "A"
+  },
+  {
+   "pmid": "42603435",
+   "short": "Wu et al. 2026",
+   "doi": "10.1016/j.ecoenv.2026.120670",
+   "title": "Prenatal PM2.5 and its chemical constituents and early childhood overweight/obesity: organic matter dominates the mixture effect",
+   "journal": "Ecotoxicol Environ Saf",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective cohort (mixtures)",
+   "pm": "Gestational PM2.5 mass + OM, BC, NH4+, NO3-, SO42- (reanalysis)",
+   "geo": "China",
+   "endpoint": "Developmental / oxidative",
+   "n": "339,435 mother-child pairs, Liaoning",
+   "tier": "A"
+  },
+  {
+   "pmid": "42603436",
+   "short": "Wang et al. 2026",
+   "doi": "10.1016/j.ecoenv.2026.120658",
+   "title": "Early-life PM2.5 mass and components and childhood anaemia across China, India and 26 African countries",
+   "journal": "Ecotoxicol Environ Saf",
+   "sub": "Other clinical endpoints",
+   "design": "Cross-sectional (multistage)",
+   "pm": "MERRA-2 prenatal/postnatal/cumulative PM2.5 + BC, OC, sulfate, dust, sea salt",
+   "geo": "Multi-country",
+   "endpoint": "Other clinical",
+   "n": "449,894 children <5 y",
+   "tier": "A"
+  },
+  {
+   "pmid": "42603512",
+   "short": "Perisic et al. 2026",
+   "doi": "10.1016/j.scitotenv.2026.182195",
+   "title": "Explainable AI resolves ten recurrent environmental settings behind urban PM10 variability at a single regulatory station",
+   "journal": "Sci Total Environ",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Algorithm development",
+   "pm": "Regulatory PM10/PM2.5 + NO2, SO2, O3, meteorology, 2020-2023",
+   "geo": "Europe",
+   "endpoint": "None (monitoring)",
+   "n": "Four-year single-station record; ensemble ML + SHAP clustering",
+   "tier": "A"
+  },
+  {
+   "pmid": "42603360",
+   "short": "Diana et al. 2026",
+   "doi": "10.1016/j.talanta.2026.130448",
+   "title": "Validated multi-technique workflow for inorganic characterisation of brake-wear PM10 and source-marker identification",
+   "journal": "Talanta",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Bench / device experiment",
+   "pm": "WLTP brake-dynamometer PM10, low-steel and NAO pads on cast-iron/coated discs",
+   "geo": "Italy",
+   "endpoint": "Aerosol chemistry",
+   "n": "32 PM10 samples; ICP-OES/ICP-MS, FESEM-EDS, PCA/HCA",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Band & Mohammadi 2026 (preprint)",
+   "doi": "10.48550/arXiv.2608.14456",
+   "title": "Shift-aware dual-encoder transfer learning for short-horizon PM2.5 forecasting in data-limited target domains",
+   "journal": "arXiv (preprint)",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Deep-learning model",
+   "pm": "Hourly regulatory PM2.5, 10 US source sites -> 77 Taiwan target stations",
+   "geo": "Taiwan",
+   "endpoint": "None (monitoring)",
+   "n": "Two years hourly, 77 stations; chronological train/val/test",
+   "tier": "B"
+  },
+  {
+   "pmid": "42601556",
+   "short": "Alamsyah et al. 2026",
+   "doi": "10.1007/s11356-026-38148-2",
+   "title": "Industrial intensity and traffic congestion propagate air-pollution health vulnerability across district borders in Java",
+   "journal": "Environ Sci Pollut Res Int",
+   "sub": "Burden, policy & mitigation",
+   "design": "Ecological panel",
+   "pm": "Satellite pollutant fields + OpenStreetMap congestion, district level",
+   "geo": "Indonesia",
+   "endpoint": "Source / policy",
+   "n": "Java districts; PCA-derived HVI + spatial Durbin model",
+   "tier": "B"
+  },
+  {
+   "pmid": "42603772",
+   "short": "Erickson-DiRenzo et al. 2026",
+   "doi": "10.1016/j.jvoice.2026.07.048",
+   "title": "Wildfire PM2.5 and the human larynx: paired in-event and clean-air voice, endoscopy and ventricular-fold biopsy in one adult",
+   "journal": "J Voice",
+   "sub": "Respiratory & allergic",
+   "design": "Repeated-measures biomarker",
+   "pm": "Wildfire episode PM2.5 up to 117 ug/m3 vs <10 ug/m3 baseline",
+   "geo": "USA",
+   "endpoint": "Respiratory",
+   "n": "n = 1; acoustic/aerodynamic measures + qPCR on paired biopsies",
+   "tier": "C"
+  },
+  {
+   "pmid": "42602984",
+   "short": "Fan et al. 2026",
+   "doi": "10.1016/j.isci.2026.117013",
+   "title": "Multiple amides synergistically enhance sulfuric acid-ammonia nucleation by an order of magnitude over single-base systems",
+   "journal": "iScience",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport modelling",
+   "pm": "Modelled SA-NH3-MPA/MAA cluster formation (new particle formation)",
+   "geo": "China",
+   "endpoint": "Aerosol chemistry",
+   "n": "Quantum-chemical cluster thermodynamics + kinetic ACDC-type simulation",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Alshehri & El-Hamid 2026 (preprint)",
+   "doi": "10.21203/rs.3.rs-10538140/v1",
+   "title": "Sentinel-5P and MODIS land-surface coupling of pollutant fields over Riyadh, 2018-2025",
+   "journal": "Research Square (preprint)",
+   "sub": "Exposure assessment & modelling",
+   "design": "Spatial analysis / GIS",
+   "pm": "TROPOMI NO2/SO2/CO/O3 + Absorbing Aerosol Index; MODIS LST/NDVI",
+   "geo": "Middle East & N. Africa",
+   "endpoint": "None (monitoring)",
+   "n": "Eight years, Riyadh metropolitan area; PCA + MLR in Google Earth Engine",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "COVID-19 pneumonia, PM2.5 IQR + prior MI",
+   "exposure": "joint vs neither",
+   "est": 1.67,
+   "lo": 1.41,
+   "hi": 1.99,
+   "metric": "RR",
+   "src": "Kannoth 2026 (JESEE)"
+  },
+  {
+   "label": "COVID-19 pneumonia, prior MI alone",
+   "exposure": "MI, no PM2.5 elevation",
+   "est": 1.34,
+   "lo": 1.14,
+   "hi": 1.58,
+   "metric": "RR",
+   "src": "Kannoth 2026 (JESEE)"
+  },
+  {
+   "label": "COVID-19 pneumonia, PM2.5 alone",
+   "exposure": "IQR PM2.5, no CVD",
+   "est": 1.03,
+   "lo": 0.95,
+   "hi": 1.12,
+   "metric": "RR",
+   "src": "Kannoth 2026 (JESEE)"
+  },
+  {
+   "label": "Childhood overweight/obesity, PM2.5 mixture",
+   "exposure": "one-quartile increase, all constituents",
+   "est": 1.063,
+   "lo": 1.05,
+   "hi": 1.076,
+   "metric": "OR",
+   "src": "Wu 2026 (Ecotox Environ Saf)"
+  },
+  {
+   "label": "Childhood overweight/obesity, organic matter",
+   "exposure": "per IQR prenatal OM",
+   "est": 1.058,
+   "lo": 1.043,
+   "hi": 1.072,
+   "metric": "OR",
+   "src": "Wu 2026 (Ecotox Environ Saf)"
+  },
+  {
+   "label": "Childhood overweight/obesity, PM2.5 total mass",
+   "exposure": "per IQR prenatal PM2.5",
+   "est": 1.05,
+   "lo": 1.036,
+   "hi": 1.064,
+   "metric": "OR",
+   "src": "Wu 2026 (Ecotox Environ Saf)"
+  },
+  {
+   "label": "Childhood overweight/obesity, ammonium",
+   "exposure": "per IQR prenatal NH4+",
+   "est": 1.048,
+   "lo": 1.035,
+   "hi": 1.062,
+   "metric": "OR",
+   "src": "Wu 2026 (Ecotox Environ Saf)"
+  },
+  {
+   "label": "Childhood overweight/obesity, black carbon",
+   "exposure": "per IQR prenatal BC",
+   "est": 1.033,
+   "lo": 1.02,
+   "hi": 1.047,
+   "metric": "OR",
+   "src": "Wu 2026 (Ecotox Environ Saf)"
+  },
+  {
+   "label": "Childhood anaemia, China",
+   "exposure": "per 1 ug/m3 cumulative PM2.5",
+   "est": 1.019,
+   "lo": 1.009,
+   "hi": 1.028,
+   "metric": "OR",
+   "src": "Wang 2026 (Ecotox Environ Saf)"
+  },
+  {
+   "label": "Childhood anaemia, India",
+   "exposure": "per 1 ug/m3 cumulative PM2.5",
+   "est": 1.009,
+   "lo": 1.008,
+   "hi": 1.009,
+   "metric": "OR",
+   "src": "Wang 2026 (Ecotox Environ Saf)"
+  },
+  {
+   "label": "Childhood anaemia, Africa (26 countries)",
+   "exposure": "per 1 ug/m3 cumulative PM2.5",
+   "est": 1.001,
+   "lo": 1.0,
+   "hi": 1.002,
+   "metric": "OR",
+   "src": "Wang 2026 (Ecotox Environ Saf)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 2,
+   "note": "Prenatal PM2.5\nconstituent mixtures;\nprenatal MERRA-2 window"
+  },
+  {
+   "n": 2,
+   "note": "Overweight/obesity to\nage 2 y; anaemia in\nchildren under 5 y"
+  },
+  {
+   "n": 0,
+   "note": "No record addresses\nthis window"
+  },
+  {
+   "n": 2,
+   "note": "Hospitalised adults\nwith COVID-19; adult\nlaryngeal biopsy"
+  },
+  {
+   "n": 0,
+   "note": "No record addresses\nthis window"
+  }
+ ]
+}

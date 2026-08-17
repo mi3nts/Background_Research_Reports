@@ -1,0 +1,480 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{16 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-08-16\;\;\textcolor{Amber}{\textbar}\;\;Entry window 16 August 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;10 records carried, 15 rejected\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{RECORDS CARRIED\\(15 REJECTED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{SUBTOPIC CLUSTERS\\REPRESENTED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{11}{EFFECT ESTIMATES\\WITH INTERVALS}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{INSTRUMENTATION /\\EXPOSURE RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{PREPRINTS\\(LABELLED)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Two very large paediatric studies land on the same day
+and both report that the constituent, not the mass, carries the effect --- and both
+identify \emph{organic matter} as the dominant contributor.}\\[1.4mm]
+\footnotesize
+Wu et al.\ (\textit{Ecotoxicol Environ Saf}) run quantile g-computation on
+\textbf{339{,}435 mother--child pairs} in Liaoning and find prenatal PM$_{2.5}$ total mass
+at \textbf{OR 1.050 (95\% CI 1.036--1.064) per IQR} for overweight/obesity by age two,
+while the constituent mixture reaches \textbf{1.063 (1.050--1.076)} with
+\textbf{organic matter contributing 54.1\%} of the joint effect, ammonium 34.4\% and
+nitrate 11.5\%. Wang et al.\ (same journal, \textbf{449{,}894 children under five} in
+China, India and 26 African countries) report cumulative PM$_{2.5}$ at
+\textbf{OR 1.019 (1.009--1.028) in China, 1.009 (1.008--1.009) in India and
+1.001 (1.000--1.002) in Africa} for anaemia, with organic carbon and dust the leading
+components and population attributable fractions of \textbf{28.5\%, 10.6\% and 0.69\%}
+respectively. The two papers disagree on almost everything else --- design, outcome,
+exposure product (Chinese reanalysis vs.\ MERRA-2), continent --- and converge on the same
+methodological demand: \emph{a mass-only instrument cannot measure the quantity that
+carries the association}. For a distributed low-cost network this is the recurring problem
+in its sharpest form, because optical scattering is precisely the technique least able to
+separate organic matter from ammonium nitrate. Note also that the PAF ordering is inverted
+relative to the exposure ordering --- Africa has the highest anaemia prevalence (64.5\%)
+and the lowest attributable fraction --- which is a statement about model-assigned exposure
+contrast, not about African air.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Effect modification, not main effect, is where the COVID--PM$_{2.5}$ signal
+now sits.} Kannoth et al.\ (\textit{JESEE}) find short-term PM$_{2.5}$ alone essentially
+null for COVID-19 pneumonia (\textbf{RR 1.03, 95\% CI 0.95--1.12}) and prior myocardial
+infarction alone at \textbf{1.34 (1.14--1.58)}, but the joint contrast at
+\textbf{1.67 (1.41--1.99)}, with upper-quartile PM$_{2.5}$ raising pneumonia risk
+\emph{only} in those with cardiovascular disease (ATE 0.05, 0.02--0.08). A study powered on
+the main effect would have concluded nothing.
+
+\item \textbf{Non-exhaust PM gets a validated inorganic workflow.} Diana et al.\
+(\textit{Talanta}) put 32 WLTP brake-dynamometer PM$_{10}$ samples through a dual digestion
+(HNO$_3$/H$_2$O$_2$ and HNO$_3$/HF/H$_3$BO$_3$) validated against NIST SRM 1648a,
+quantifying \textbf{27 elements at $>$75\% recovery}. Low-steel pads on grey cast iron give
+the highest emission factors and Fe-dominated PM$_{10}$; non-asbestos organic pads give the
+lowest and are marked by Ba, Ti, K and Zr. That is a usable source-marker set for
+apportionment as tailpipe emissions keep falling and brake wear does not.
+
+\item \textbf{Two independent attacks on the same instrumentation problem: extracting
+structure from sparse regulatory data.} Peri\v{s}i\'c et al.\ (\textit{Sci Total Environ})
+cluster SHAP profiles from a single station into ten recurrent
+meteorology--pollutant settings ($R^2 = 0.913$), showing that identical PM$_{10}$
+concentrations correspond to different physical configurations. Band \& Mohammadi (arXiv)
+pretrain on 10 US stations and adapt to 77 in Taiwan, reaching \textbf{$R^2 = 0.8739$,
+MSE 21.66, MAE 3.14} with an adaptive source encoder. Both are aimed at deployments that
+cannot afford speciation or dense reference coverage.
+
+\item \textbf{The day's health records are all exposure-modelled, none exposure-measured.}
+Every one of the four human-endpoint records assigns exposure from a reanalysis or CMAQ
+product at ZIP-code, district or 1\,km resolution. No record this issue measured particles
+and outcomes on the same subjects --- the third consecutive issue with that property.
+
+\item \textbf{Weak record worth flagging rather than hiding.} Erickson-DiRenzo et al.\
+(\textit{J Voice}) report paired laryngeal biopsies from \textbf{one} participant during a
+117\,$\mu$g/m$^3$ wildfire episode and at $<$10\,$\mu$g/m$^3$, with a $\approx$2-fold
+MMP-1 increase. $n=1$, no control for time, phonatory load or infection; carried for the
+paired-biopsy design, not the result.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 10 carried records, single-label by dominant
+contribution. Ten records is the smallest issue of the watch to date, tying 5 August; the
+window is a single Sunday, and PubMed's \texttt{[EDAT]} pipeline deposits almost nothing at
+the weekend --- the connector returned one record for the whole day. Six of ten clusters
+are occupied. \textit{Sensing, forecasting \& instrumentation} leads at 3;
+\textit{Neuro / mental health}, \textit{Cardiovascular \& metabolic},
+\textit{Mechanistic toxicology} and \textit{Occupational \& indoor} are all empty. Neuro is
+now empty on 11 of 22 issues and remains the watch's least reliable cluster.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. \textit{Modelling / inventory} takes 4 of 10, the
+largest single block: the XAI station study, the transfer-learning forecaster, the
+nucleation cluster calculation and the Riyadh satellite preprint. Observational designs
+split 2 cohort, 1 cross-sectional, 1 ecological; one measurement campaign (the paired
+laryngeal biopsies) and one bench experiment (the brake dynamometer). No
+\textit{Trial / intervention} and no \textit{Review / synthesis} record at all. Right ---
+health endpoint. \textbf{No health endpoint} is the largest bar at 6 of 10 (60\%), within
+the 41--67\% band the last eight issues have occupied once the
+\texttt{None (\ldots)} label family is correctly canonicalised --- see the provenance note.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. PM$_{2.5}$-only accounts for 5 records; one is
+PM$_{10}$-only (the XAI station study), one is PM$_{2.5}$ and PM$_{10}$ jointly, and two
+are unspeciated PM or emissions. The single composite-index slice is the Riyadh preprint,
+which carries \emph{no surface PM product at all} --- only TROPOMI trace gases and an
+Absorbing Aerosol Index; read that slice as an absence. Right --- geography. Europe, China
+and North America hold 2 each; East Asia (ex-China), Southeast Asia, MENA and one
+multi-region record take the remainder. The multi-region record (Wang et al.) alone spans
+28 countries, so the count under-represents the day's actual geographic reach.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed. Counts are non-exclusive and describe this issue
+only. Preconception/in-utero and infancy/early childhood hold 2 each --- the two large
+paediatric constituent studies contribute to both, since each assigns a prenatal exposure
+window to a postnatal outcome. Puberty/adolescence and 65+ are empty. Working age holds
+2: the NYC hospitalisation cohort and the single-participant laryngeal study.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. Ten records occupy 8 of the
+70 available cells and no cell holds more than 2. With a corpus this small the figure
+carries little information beyond the silo already visible in f2: every
+\textit{Sensing} and \textit{Exposure} record sits in a \textit{Modelling / inventory},
+\textit{Measurement campaign} or \textit{Experimental} column, every human-endpoint record
+in an observational one, and the two never meet.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{The 11 interval estimates carried today, on a common logarithmic axis --- more
+estimates than records, because three studies each contribute a family of nested
+contrasts. \textbf{The estimates are not mutually independent.} The three Kannoth
+contrasts (PM$_{2.5}$ alone, myocardial infarction alone, both jointly) are drawn from the
+same 15{,}361-admission cohort and share person-time; the five Wu constituent estimates are
+IQR-scaled contrasts on correlated constituents of the same mixture in the same 339{,}435
+pairs, so their ordering is informative but their spread is not a between-study spread; the
+three Wang estimates are region-stratified from one pooled cross-section. Exposure
+contrasts also differ in kind --- Kannoth reports an IQR contrast on a 7-day average, Wu an
+IQR contrast on a gestational mean, Wang a per-1\,$\mu$g/m$^3$ slope on a cumulative
+window --- so interval width across the three families is not comparable and the plot
+should be read within family, not across it.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{Peri\v{s}i\'c et al.\ 2026}
+{Explainable AI resolves ten recurrent environmental settings behind urban PM$_{10}$ variability}
+{Sci Total Environ}
+{Four years (2020--2023) of routine regulatory data from a \emph{single} station ---
+PM$_{10}$, PM$_{2.5}$, NO$_2$, SO$_2$, O$_3$ and meteorology --- fed to ensemble
+machine-learning models with metaheuristic hyperparameter optimisation, reaching
+\textbf{$R^2 = 0.913$}, then clustered on SHAP-derived predictor-impact profiles rather
+than on concentrations. \textbf{Ten recurrent settings emerge.} The strongest positive
+contributions are cold-season accumulation regimes: E0 is frequent and predominantly
+nocturnal at a mean impact of \textbf{50.9\,$\mu$g\,m$^{-3}$}; E7 is rarer but reaches
+\textbf{82.9\,$\mu$g\,m$^{-3}$} and persists day and night. Warm, well-mixed settings run
+\textbf{26--29\,$\mu$g\,m$^{-3}$ below} the model baseline. The substantive claim --- that
+equal concentrations can encode different pollutant--meteorology configurations --- is well
+supported and directly useful where speciation is unaffordable. The limitation is
+structural and the authors say so: one station, one climate, no external validation, and
+SHAP attributions are model-conditional, so the ``settings'' are properties of a fitted
+ensemble before they are properties of the atmosphere. For distributed low-cost networks
+the appeal is that the entire input set is what a modest node plus a met sensor already
+produces.}
+{10.1016/j.scitotenv.2026.182195}
+
+\paperentry{Diana et al.\ 2026}
+{Validated multi-technique workflow for inorganic characterisation of brake-wear PM$_{10}$}
+{Talanta}
+{Thirty-two PM$_{10}$ samples from WLTP-based brake-dynamometer tests on four tribological
+couples --- low-steel (LS) and non-asbestos organic (NAO) pads against grey cast-iron (GCI)
+or coated discs. A combined acid digestion (HNO$_3$/H$_2$O$_2$ plus
+HNO$_3$/HF/H$_3$BO$_3$) was validated against \textbf{NIST SRM 1648a} and quantified by
+ICP-OES and ICP-MS, giving \textbf{27 elements with recoveries above 75\% for most
+analytes}; FESEM-EDS confirmed the trends at particle scale and PCA/HCA separated the
+tribological families cleanly. \textbf{LS-GCI produced the highest PM$_{10}$ emission
+factors and NAO-GCI the lowest}; Fe dominates LS-derived material while Ba, Ti, K and Zr
+mark NAO. An Mn-based enrichment factor improved discrimination of rotor- versus
+pad-derived contributions. The value here is a defensible marker set for non-exhaust source
+apportionment, which matters more each year as tailpipe PM falls. Caveats are the usual
+dynamometer ones: WLTP braking is not real-world braking duty, only four couples were
+tested, and no on-road or roadside validation is attempted.}
+{10.1016/j.talanta.2026.130448}
+
+\paperentry{Band \& Mohammadi 2026 (preprint)}
+{Shift-aware dual-encoder transfer learning for short-horizon PM$_{2.5}$ forecasting}
+{arXiv}
+{A source encoder pretrained on hourly PM$_{2.5}$ from 10 US monitoring locations is fused
+with a target-specific encoder and adapted to \textbf{77 Taiwanese stations} over two years
+under a chronological train/validation/test split --- the correct protocol, and one many
+comparable papers do not use. Against four baselines the frozen-source dual encoder gives
+\textbf{MSE 21.8960, MAE 3.1597, $R^2 = 0.8725$} (a 7.1\% and 4.1\% MSE reduction over two
+transfer-learning variants); allowing the source encoder to adapt improves this to
+\textbf{MSE 21.6575, MAE 3.1383, $R^2 = 0.8739$}. Ablation shows the Taiwan-specific branch
+matters most, and SHAP attributes predictions mainly to recent PM$_{2.5}$ and meteorology.
+The framing --- explicit handling of source/target distribution shift to avoid negative
+transfer --- is the right one for anyone standing up a network in a region with no long
+record. Two reservations: the absolute gain over the better baselines is a few percent of
+MSE and no significance or repeated-seed variance is reported, and both domains are
+reference-grade regulatory data, so transfer onto low-cost nodes (a far larger shift) is
+untested. Preprint, not peer reviewed.}
+{10.48550/arXiv.2608.14456}
+
+\band{Exposure assessment \& modelling\hfill 2 records}{Amber}
+
+\paperentry{Fan et al.\ 2026}
+{Multiple amides synergistically enhance sulfuric acid--ammonia nucleation}
+{iScience}
+{Quantum-chemical cluster thermodynamics plus kinetic simulation of new particle formation
+in binary, ternary and quaternary systems containing sulfuric acid (SA), ammonia,
+methylacetamide (MAA) and methylpropionamide (MPA). \textbf{(SA)$_1\cdot$(MPA)$_1$ and
+(SA)$_1\cdot$(MAA)$_1$ are more stable than (SA)$_1\cdot$(NH$_3$)$_1$ and even than
+(SA)$_1\cdot$(DMA)$_1$}, and the two amides together enhance nucleation by
+\textbf{an order of magnitude more than either alone}, most strongly at low SA
+concentration and low temperature. A displacement hierarchy is identified: MPA replaces
+NH$_3$, MAA replaces MPA. Carried because secondary particle number --- not mass --- is
+what an optical low-cost sensor is blindest to, and because amide sources (industrial,
+agricultural, carbon-capture solvent degradation) are rising and largely unmonitored. It is
+a purely computational result with no chamber or ambient confirmation, the amide
+concentrations assumed are not tied to measured ambient values, and cluster-level
+thermodynamics has a poor track record of quantitative transfer to observed formation
+rates.}
+{10.1016/j.isci.2026.117013}
+
+\paperentry{Alshehri \& El-Hamid 2026 (preprint)}
+{Sentinel-5P and MODIS land-surface coupling of pollutant fields over Riyadh, 2018--2025}
+{Research Square}
+{Eight years of TROPOMI NO$_2$, SO$_2$, CO, O$_3$ and Absorbing Aerosol Index combined with
+MODIS land-surface temperature and NDVI and Sentinel-2 land cover in Google Earth Engine,
+analysed by correlation, PCA and multiple linear regression. NO$_2$ and CO concentrate over
+urban and industrial areas, O$_3$ peaks downwind, LST falls from 43.10\,$^\circ$C (2021) to
+37.07\,$^\circ$C (2025) while NDVI rises after 2022. \textbf{The regression is weak:
+$R^2$ ranges from 0.124 (O$_3$) to 0.231 (SO$_2$)}, and PCA explains 55.8\% of variance;
+the authors correctly conclude that land-surface descriptors explain only a minor share and
+that emissions and transport dominate. Carried as a negative methodological result for an
+arid-region setting where ground networks are sparse --- and as a caution, because
+\textbf{no surface PM product appears anywhere in the study} despite the framing as air
+pollution monitoring; AAI is a column absorption index, not a PM concentration. Preprint,
+not peer reviewed, and the LST trend is reported without any test for its significance
+against interannual variability.}
+{10.21203/rs.3.rs-10538140/v1}
+
+\band{Respiratory \& allergic\hfill 2 records}{Sage}
+
+\paperentry{Kannoth et al.\ 2026}
+{Short-term PM$_{2.5}$ and COVID-19 pneumonia in New York City, amplified by pre-existing cardiovascular disease}
+{J Expo Sci Environ Epidemiol}
+{\textbf{15{,}361 NYC COVID-19 hospitalisations} (March--December 2020) with short-term
+PM$_{2.5}$ defined as the 7-day residential ZIP-code average from EPA CMAQ, and 15
+ICD-coded circulatory conditions as the modifier. Modified Poisson regression for ARDS,
+pneumonia, ventilation and dialysis; Cox models for fatality and length of stay; RERI for
+additive interaction; TMLE for average treatment effects. \textbf{PM$_{2.5}$ alone was null
+(RR 1.03, 95\% CI 0.95--1.12) and prior myocardial infarction alone 1.34 (1.14--1.58), but
+jointly 1.67 (1.41--1.99)}; upper-quartile PM$_{2.5}$ raised pneumonia risk only among
+those with cardiovascular conditions (\textbf{ATE 0.05, 0.02--0.08}). The interaction is
+the finding and it is the sort a main-effect analysis destroys. Weaknesses are real:
+ZIP-code CMAQ is a coarse surrogate for personal exposure and its error is spatially
+structured with deprivation, the effect appears only from July onward with no mechanism
+offered for the seasonal split, and the cohort is hospitalised patients only, so selection
+on admission is unaddressed. For network design the implication is concrete --- the
+susceptible stratum is identifiable in advance, which is an argument for siting density by
+cardiovascular prevalence rather than by population alone.}
+{10.1038/s41370-026-00957-5}
+
+\paperentry{Erickson-DiRenzo et al.\ 2026}
+{Wildfire PM$_{2.5}$ and the human larynx: paired in-event and clean-air assessment in one adult}
+{J Voice}
+{A single adult assessed twice --- during a wildfire episode with PM$_{2.5}$ reaching
+\textbf{117\,$\mu$g\,m$^{-3}$} and again at \textbf{$<$10\,$\mu$g\,m$^{-3}$} --- with
+acoustic and aerodynamic voice measures, laryngeal endoscopy with stroboscopy, and
+\emph{ventricular fold biopsies at both time points} analysed by qPCR for extracellular
+matrix and inflammatory markers. Speaking fundamental frequency fell relative to baseline,
+endoscopy showed visibly increased laryngeal mucus, and \textbf{MMP-1 expression roughly
+doubled}; other ECM and inflammatory genes moved inconsistently. \textbf{$n = 1$.} There is
+no control participant, no adjustment for phonatory load, hydration, intercurrent
+infection or the ordinary diurnal variation in fundamental frequency, and a two-point
+comparison cannot separate exposure from time. The reason to carry it is the design, not
+the result: paired human airway tissue across a natural exposure contrast is rare, and it
+establishes feasibility for a properly powered version. Treat the MMP-1 figure as a
+hypothesis.}
+{10.1016/j.jvoice.2026.07.048}
+
+\band{Reproductive \& developmental\hfill 1 record}{Sky}
+
+\paperentry{Wu et al.\ 2026}
+{Prenatal PM$_{2.5}$ constituents and early childhood obesity: organic matter dominates the mixture}
+{Ecotoxicol Environ Saf}
+{\textbf{339{,}435 mother--child pairs} in Liaoning Province with prenatal PM$_{2.5}$ and
+five constituents (organic matter, black carbon, ammonium, nitrate, sulfate) assigned from
+high-resolution atmospheric reanalysis, and overweight/obesity ascertained across the first
+two years. Single-pollutant models give \textbf{PM$_{2.5}$ mass OR 1.050 (95\% CI
+1.036--1.064) per IQR}, with \textbf{OM 1.058 (1.043--1.072)}, \textbf{NH$_4^+$ 1.048
+(1.035--1.062)}, \textbf{NO$_3^-$ 1.048 (1.033--1.064)} and \textbf{BC 1.033
+(1.020--1.047)}; sulfate is null. Quantile g-computation puts the mixture at \textbf{1.063
+(1.050--1.076)} per quartile increase with \textbf{OM contributing 54.1\%}, NH$_4^+$ 34.4\%
+and NO$_3^-$ 11.5\%. The sample size makes the intervals tight, but tight intervals on
+reanalysis-assigned exposure are a precision claim about the model, not the exposure:
+constituent fields are far more uncertain than total mass and their errors are correlated
+with each other, which is exactly the condition under which QGC weights become unstable.
+Residential address at delivery stands in for the whole gestation, and no gestational
+windows are resolved. The direction is credible; the 54\% attribution to OM is not
+something the exposure product can really support.}
+{10.1016/j.ecoenv.2026.120670}
+
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Alamsyah et al.\ 2026}
+{Industrial intensity and traffic congestion propagate air-pollution health vulnerability across district borders in Java}
+{Environ Sci Pollut Res Int}
+{A health vulnerability index (HVI) for Java built by PCA over satellite pollutant fields,
+official statistics and OpenStreetMap congestion data, then regressed on industrial
+activity intensity and congestion in a spatial Durbin model to separate direct from
+spillover effects. \textbf{HVI ranges 29.2--62.3 on a 0--100 scale}, highest in West Java,
+Jakarta and Banten and lowest in Central Java, Yogyakarta and East Java; the exposure
+dimension varies most (13.18) against adaptive capacity (9.40) and sensitivity (5.17), and
+both industrial intensity and congestion act through \textbf{direct and indirect
+(spillover) channels}. The spillover result is the useful one --- it says district-level
+mitigation will leak, which is a real argument for regional rather than municipal air
+management. But the index is a construct: PCA weights are data-driven rather than
+health-anchored, no health outcome is used to validate the HVI against observed morbidity,
+and OpenStreetMap congestion is an availability-biased proxy that is denser precisely in
+the wealthier districts. Uncertainty and sensitivity analysis is reported, which is more
+than most index papers do.}
+{10.1007/s11356-026-38148-2}
+
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Wang et al.\ 2026}
+{Early-life PM$_{2.5}$ mass and components and childhood anaemia across China, India and Africa}
+{Ecotoxicol Environ Saf}
+{Cross-sectional analysis of \textbf{449{,}894 children under five} from China, India and 26
+African countries, with prenatal, postnatal and cumulative PM$_{2.5}$ and five components
+(black carbon, organic carbon, sulfate, dust, sea salt) from NASA MERRA-2 reanalysis.
+Anaemia prevalence is \textbf{26.9\% in China, 62.6\% in India, 64.5\% in Africa}. Per
+1\,$\mu$g\,m$^{-3}$ of cumulative PM$_{2.5}$: \textbf{OR 1.019 (95\% CI 1.009--1.028) in
+China, 1.009 (1.008--1.009) in India, 1.001 (1.000--1.002) in Africa}, with organic carbon
+and dust positive in all three. Population attributable fractions are \textbf{28.46\%,
+10.64\% and 0.69\%}. The regional ordering of effect size and PAF runs \emph{opposite} to
+the ordering of anaemia burden, and the paper does not resolve this: the most economical
+explanation is that MERRA-2 at 0.5$^\circ\times$0.625$^\circ$ has little within-country
+exposure contrast in Africa and correspondingly attenuated coefficients, not that African
+children are less susceptible. Cross-sectional design cannot order exposure and outcome,
+and anaemia in these settings is dominated by iron deficiency, malaria and haemoglobinopathy
+--- confounders that co-vary strongly with dust exposure. Read the component ranking, not
+the PAFs.}
+{10.1016/j.ecoenv.2026.120658}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+\textbf{Window.} Entry window \textbf{2026-08-16 to 2026-08-16}, contiguous with the
+15 August issue; no gap. Every record was checked against \texttt{state/seen.json}
+(pmid $\rightarrow$ lowercased doi $\rightarrow$ title signature) before summarising;
+\textbf{11 Europe PMC hits were dropped as already-seen duplicates}.\\[0.8mm]
+\textbf{Harvester defect from 15 August: repaired.} The Europe PMC leg in
+\texttt{harvest.py} was windowing on \texttt{FIRST\_PDATE}, which the source-status notes
+had already recorded as non-functional for recent windows --- it returned 0 for both the
+15 and 16 August windows. Switched to \texttt{CREATION\_DATE} and given cursor-mark
+pagination to 600 records; the committed leg now returns \textbf{20} for this window
+unaided, and every record in this issue except one came through it.\\[0.8mm]
+\textbf{Per-leg yield.} A single Sunday window is close to the floor of what this watch can
+see. PubMed connector, two separate queries on the health and instrumentation axes:
+\textbf{1 hit total}, the same record on both axes, already present in the Europe PMC set.
+Local harvester \texttt{pubmed\_health} 0 and \texttt{pubmed\_sensing} 0 --- PubMed's
+\texttt{[EDAT]} pipeline deposits almost nothing at the weekend, which is a property of the
+source and not a failure. Europe PMC primary query 20 hits, 9 new after deduplication,
+\textbf{6 carried}; a second broader Europe PMC sweep on air-quality and aerosol terms
+returned 36, 15 further new, \textbf{3 carried}. arXiv 145\,kB with one in-scope entry
+dated 14 August that the 15 August sweep did not surface, \textbf{1 carried}. Crossref by
+ISSN returned \textbf{0} across 18 journals. \textbf{OpenAlex HTTP 429, 14th consecutive}
+--- the leg is dead. \textbf{Consensus: 8th consecutive zero-carry.} All three returned
+records were in scope and useful (AutoML indoor calibration, multi-city bi-pollutant LCS
+calibration, global PurpleAir transferability) but their Crossref \texttt{created} dates
+are 2026-01-23, 2026-01-20 and 2026-06-15. It ranks by relevance, not recency, and should
+be treated as a weekly/monthly gap-filler only. ClinicalTrials.gov: no PM or air-pollution
+registration created or updated inside the window; \texttt{trials.json}
+unchanged.\\[0.8mm]
+\textbf{Second defect repaired: endpoint canonicalisation.} \texttt{ENDPOINT\_CANON} mapped
+\texttt{None (monitoring)} but not the rest of the \texttt{None (\ldots)} family ---
+\texttt{None (exposure)}, \texttt{None (instrument)}, \texttt{None (emissions)},
+\texttt{None (algorithm)}, \texttt{None (modelling)}, \texttt{None (aerosol chemistry)} and
+singular variants, \textbf{35 records across the store}. All mean the same thing, so f2b
+understated its own largest bar; the 9, 10 and 11 August issues rendered a literal
+\textbf{0} for a category that in fact held 8, 9 and 15 records. \texttt{canon\_ep} now
+falls back on a prefix rule, and the corrected series for 7--16 August reads
+54, 64, 67, 56, 58, 46, 41, 43, 43, 60\,\%. \textbf{The three affected daily PDFs are stale
+on that panel} and are left as shipped; the store and all future rollups are
+correct.\\[0.8mm]
+\textbf{Rejections (15).} Six keyword collisions where \texttt{aerosol} or
+\texttt{exposure} matched an unrelated field (freeze-spray insecticide delivery,
+\textit{Francisella} aerosol-challenge vaccinology, inhaled siRNA therapeutics,
+PPE-adherence auditing, lanthanum sediment geochemistry, aqueous biochar sorption); four
+gas-phase-only records with no particulate measurement (formaldehyde catalysis,
+formaldehyde occupational olfaction, MgAl-LDH NO$_2$ sorption, ozone melanogenesis); a
+meteorology-only allergic-rhinitis DLNM carrying pollution as an adjustment covariate; a
+therapeutics review naming PM only as a background trigger; two correction/corrigendum
+notices; and one journal news item reporting a study already carried on 27 July. All logged
+with reasons to \texttt{state/rejected.jsonl}.\\[0.8mm]
+\textbf{Two records are preprints} (Band \& Mohammadi, arXiv; Alshehri \& El-Hamid,
+Research Square) and are labelled as such in the register and the digest. No record this
+issue is metadata-only.\\[0.8mm]
+\textbf{Labels.} Subtopic, design, particle-metric and geography labels were drawn only
+from vocabularies already mapped in \texttt{plots.py} and \texttt{mktable.py}; no new leaf
+label was written this issue and the unmapped-label diagnostics printed nothing.
+Assignment is single-label by dominant contribution and is a judgement, not a controlled
+vocabulary. \texttt{check\_dois.py} returned \textbf{0 fail, 4 warn} across all 10 records;
+all four warnings are title-overlap heuristics firing on editorial focus lines (three) or
+on arXiv's absence from Crossref (one), and each was confirmed by eye against the
+registered record.\\[0.8mm]
+Content derived from PubMed, Europe PMC, Crossref and arXiv metadata; abstracts remain the
+copyright of their respective publishers. All DOI links resolve to the publisher of record.\par}
+\end{keybox}
+
+\end{document}

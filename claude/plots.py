@@ -307,7 +307,21 @@ ENDPOINT_CANON = {
     "Toxicological (in vitro)": "Toxicological (in vitro)",
 }
 def canon_ep(e):
-    return ENDPOINT_CANON.get(e, e)
+    """Canonicalise an endpoint label.
+
+    2026-08-16: the exact-key map missed the whole `None (...)` family --
+    `None (exposure)`, `None (instrument)`, `None (emissions)`, `None (algorithm)`,
+    `None (modelling)`, `None (aerosol chemistry)` and singular/plural variants, 35
+    records in total. Every one of them means "this record measured particles, not
+    people", so f2b understated its own largest bar and the 9-11 Aug issues rendered
+    a 0 for a category that actually held 7, 6 and 8 records. Exact key first, then a
+    prefix rule so a new parenthetical variant cannot reintroduce the same hole.
+    """
+    if e in ENDPOINT_CANON:
+        return ENDPOINT_CANON[e]
+    if (e or "").strip().lower().startswith("none"):
+        return "No health endpoint"
+    return e
 
 ep = collections.Counter(canon_ep(p["endpoint"]) for p in PAPERS)
 

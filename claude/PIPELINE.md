@@ -1067,3 +1067,39 @@ overfulls. Saturday — **weekly rollup 9–15 Aug also shipped** (35 pp, 134 re
   `2026-08-15`. Sunday — no rollup owed (weekly is generated on Saturdays). Re-check the
   08-08 through 08-12 Elsevier metadata-only backlog, and the deferred
   `10.1007/s11869-026-02080-8` (Air Qual Atmos Health, N. African urban AQ anomalies).
+
+### 2026-08-16 — both logged defects repaired; smallest issue of the watch (Sunday floor)
+Window **16 Aug** (`2026-08-16 -> 2026-08-16`), contiguous with 15 Aug. **10 shipped,
+15 rejected, 0 metadata-only, 2 preprints.** 8 pp, 0 errors, 1 pre-existing masthead overfull.
+Sunday — no rollup owed (weeklies generate on Saturdays; W9–15 Aug shipped yesterday).
+
+- **Europe PMC harvester leg fixed.** The 15 Aug log blamed the leg without naming the cause:
+  it windowed on `FIRST_PDATE`, which SOURCE STATUS had *already* recorded as non-functional
+  for recent windows. Switched to `CREATION_DATE` + cursor-mark pagination (<=600/window).
+  Committed leg now returns **20** unaided where it returned 0 on two consecutive days.
+  **Lesson: a documented dead field can still be live in the code — grep the code against
+  SOURCE STATUS rather than trusting that the note was acted on.**
+- **`ENDPOINT_CANON` gap fixed.** Only `None (monitoring)` was mapped; `None (exposure)`,
+  `(instrument)`, `(emissions)`, `(algorithm)`, `(modelling)`, `(aerosol chemistry)` and
+  singular variants — **35 records** — were not. `canon_ep` now falls back on a `none*`
+  prefix rule. Corrected no-health-endpoint series 7–16 Aug: 54, 64, **67, 56, 58**, 46, 41,
+  43, 43, 60 %. The 9/10/11 Aug PDFs had rendered a literal **0** on that panel and are left
+  stale as shipped; store and all future rollups are correct.
+- **Sunday is the floor.** PubMed `[EDAT]` deposits almost nothing at the weekend: connector
+  **1 hit** across both axes, local `pubmed_health` 0, `pubmed_sensing` 0, Crossref-by-ISSN 0
+  across 18 journals. Europe PMC carried 9 of 10 (primary 20/9 new/**6**; broader
+  air-quality sweep 36/15 new/**3**); arXiv **1** (an in-scope 14 Aug entry the 15 Aug sweep
+  missed — the relevance query's ordering is not stable, so a 3-day recency screen is safer
+  than a 1-day one). **OpenAlex 429, 14th consecutive — dead.** **Consensus 8th consecutive
+  zero-carry**, all three hits created Jan/Jun 2026; weekly/monthly gap-filler only.
+  ClinicalTrials.gov 0 in window; `trials.json` unchanged.
+- **10 records ties 5 Aug as the smallest issue** (verified from `metrics.csv`, not recalled).
+  Neuro empty for the 11th time in 22 issues.
+- Site UI already carries the multi-report day picker, per-cadence tags, month count badges
+  and the category-grouped "All reports" archive — verified in `index.dc.html`, no change needed.
+- `claude/_mkcorpus_tmp.py` could not be deleted (mount EPERM); added to `.gitignore`,
+  **needs manual cleanup**.
+- **For the 17 Aug run:** window `2026-08-17 -> 2026-08-17`; `last_entry_date` is now
+  `2026-08-16`. Monday — expect the weekend backlog to land at once. Still open: the
+  08-08 to 08-12 Elsevier metadata-only backlog, and deferred
+  `10.1007/s11869-026-02080-8` (Air Qual Atmos Health, N. African urban AQ anomalies).

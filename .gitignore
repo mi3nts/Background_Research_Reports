@@ -34,3 +34,6 @@ claude/build/trash/
 # (rollup() is idempotent and skips when the output exists). rm is EPERM on this mount.
 # Delete manually on a local checkout: Reports/weekly/.trash_weekly_0808.pdf
 Reports/**/.trash_*.pdf
+
+# 2026-08-16: scratch corpus writer; repo mount is delete-restricted, cannot rm
+claude/_mkcorpus_tmp.py
