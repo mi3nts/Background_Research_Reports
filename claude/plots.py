@@ -465,6 +465,11 @@ geo_group = {
     # added 2026-08-05: continental group names used directly as a record's geo
     "East Asia": "East Asia (ex-China)", "South Asia": "South Asia",
     "North America": "North America", "Multi-country": "Global / multi-region",
+    # added 2026-08-17. "Sweden" had no key and no needle, so the Swedish COVID
+    # case-crossover would have fallen to the unmapped bucket. "Pakistan" resolved
+    # to the right GROUP only by routing through the ("pakistan","India") needle,
+    # which is correct in outcome and misleading to read; name it directly.
+    "Sweden": "Europe", "Finland": "Europe", "Pakistan": "South Asia",
 }
 # Same closure for geography. On 2026-08-05 only four of the thirteen group names were
 # self-mapped; "Sub-Saharan Africa", "Global / multi-region", "Oceania" and six others
@@ -500,7 +505,8 @@ GEO_SUBSTR = [
     ("germany", "Germany"), ("spain", "Spain"), ("cartagena", "Spain"),
     ("france", "France"), ("italy", "Italy"), ("poland", "Poland"),
     ("netherlands", "Netherlands"), ("denmark", "Denmark"), ("norway", "Norway"),
-    ("greece", "Greece"), ("europe", "Europe"),
+    ("greece", "Greece"), ("sweden", "Sweden"), ("stockholm", "Sweden"),
+    ("gothenburg", "Sweden"), ("uppsala", "Sweden"), ("europe", "Europe"),
     ("canada", "Canada"), ("iran", "Iran"), ("turkiye", "Turkiye"),
     ("australia", "Australia"),
     ("global", "Global"), ("multi-region", "Global"), ("worldwide", "Global"),

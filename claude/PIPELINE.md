@@ -1103,3 +1103,49 @@ Sunday — no rollup owed (weeklies generate on Saturdays; W9–15 Aug shipped y
   `2026-08-16`. Monday — expect the weekend backlog to land at once. Still open: the
   08-08 to 08-12 Elsevier metadata-only backlog, and deferred
   `10.1007/s11869-026-02080-8` (Air Qual Atmos Health, N. African urban AQ anomalies).
+
+### 2026-08-17 — Monday backlog was thin; Crossref-by-ISSN carried the whole sensing block
+Window **17 Aug** (`2026-08-17 -> 2026-08-17`), contiguous with 16 Aug. **12 shipped,
+9 rejected, 2 metadata-only, 1 preprint.** 8 pp, 0 errors, **0 overfull boxes** (the
+pre-existing masthead overfull did not recur). Tuesday run — no rollup owed; the next weekly
+is generated on Saturday 22 Aug for 16–22 Aug.
+
+- **The Monday backlog did not arrive.** PubMed connector 9 on the health axis, 1 on the
+  sensing axis (already in the health set); local `pubmed_health` 7 / `pubmed_sensing` 1, all
+  duplicates. Europe PMC primary **1**, broader air-quality sweep **6** (2 new). **OpenAlex
+  429, 15th consecutive — dead, no longer retried.** ClinicalTrials.gov 0 in window;
+  `trials.json` unchanged. **Crossref-by-ISSN returned 9 across 18 journals and carried all
+  three sensing records** — ACP, AS&T, J Aerosol Sci and AAQR are not PubMed-indexed, so
+  without that leg the issue would have had zero instrumentation content. arXiv 1 under the
+  3-day recency screen (a 14 Aug posting both the 15 and 16 Aug sweeps missed — **second**
+  catch by that screen, which now justifies keeping it at 3 days).
+- **Two metadata-only records.** Taylor & Francis and Elsevier both withheld the abstract
+  (`10.1080/02786826.2026.2711663`, `10.1016/j.jaerosci.2026.106883`) and the Semantic
+  Scholar fallback was rate-limited for the entire run; `web_fetch` also hit a 429 early and
+  tandfonline/sciencedirect returned empty bodies. Shipped under
+  `Metadata only (no abstract)` asserting nothing beyond the registered title. **Both are
+  aerosol-instrumentation publishers — the metadata gap on this watch is systematic, not
+  incidental.** Flagged for retrieval next run.
+- **Two caption claims failed verification and were rewritten before shipping.**
+  (i) "widest subtopic spread since 15 August" was **false** — 8 clusters today vs 9 on both
+  14 and 15 Aug. Replaced with a computed statistic that is true: 0.67 clusters per record is
+  the most dispersed issue of the watch (14 Aug 0.64, 31 Jul 0.64). (ii) "first South Asian
+  record since 14 August" was **false** — 15 Aug carried one. Both were caught by computing
+  against `metrics.csv` / the corpus store, which is the third consecutive issue where that
+  rule has caught something. **The rule is earning its keep; do not skip it.**
+- **Proofing caught a two-line orphan page** (the exec-brief itemize spilled past `\clearpage`
+  onto an otherwise blank p.2). Trimmed the last bullet twice, then folded it into the
+  preceding one. Also dropped the `\clearpage` before the Sensing band, which was leaving p.6
+  two-thirds empty on a corpus this small: **9 pp → 8 pp.** On small issues the template's
+  fixed `\clearpage` before Sensing should be treated as optional, not structural.
+- **`plots.py` geography map extended**: `Sweden`, `Finland`, `Pakistan` keys plus four
+  Swedish city needles. `Sweden` had **neither** a key nor a needle and would have fallen to
+  the unmapped bucket; `Pakistan` reached the right group only by routing through an `India`
+  needle, which is correct in outcome and misleading to read.
+- `check_dois.py` **0 fail, 4 warn** (3 focus-line paraphrases, 1 arXiv-not-in-Crossref), each
+  confirmed by eye. `state/metrics.csv` now 179 rows, all parsing at 3 fields.
+- `claude/_mkcorpus_tmp.py` still undeletable (mount EPERM), still gitignored — **manual
+  cleanup outstanding**. Proofing rasters were written to the session scratchpad, not `claude/`.
+- **For the 18 Aug run:** window `2026-08-18 -> 2026-08-18`; `last_entry_date` is now
+  `2026-08-17`. Still open: the 08-08 to 08-12 Elsevier metadata-only backlog, the two new
+  17 Aug metadata-only records, and deferred `10.1007/s11869-026-02080-8`.
