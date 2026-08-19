@@ -7,6 +7,36 @@ Output: a LaTeX/PDF digest in `Reports/daily/`, plus periodic rollups, indexed b
 
 ---
 
+## Run-timing rule — do not build the current day before 22:00 local
+
+**A run must not harvest or build an issue for the calendar day it is executing on,
+unless the local wall-clock time is 22:00 or later.**
+
+The scheduled run fires at 23:00 local and windows on PubMed `[EDAT]`. A day's deposits
+accumulate through that day; a run starting at, say, 01:30 sees a few hours of a
+23-hour window, ships a thin issue, advances `last_entry_date` to that date, and the
+records that land later that day are then **permanently unreachable** — the next run's
+window starts the day after. The gap is silent and unrecoverable without hand-editing
+state.
+
+So, at the start of every run:
+
+1. Compute `today` from local time. If local time is **before 22:00**, the newest
+   buildable date is `today - 1`.
+2. Backfill day-by-day from `last_entry_date + 1` up to that newest buildable date.
+   Each missed day gets its own issue, its own window, its own manifest entry.
+3. If `last_entry_date` already equals the newest buildable date, there is nothing to
+   do: report that and stop. Do **not** open the current day early.
+
+Corollary for the weekly rollup: a Saturday weekly covering Sun–Sat can only be built
+on the Saturday's own scheduled run at 23:00, or later. An earlier Saturday run
+backfills through Friday and leaves the weekly to the 23:00 run.
+
+Established 2026-08-19, when a 01:27 run inherited a missed 18 August and would
+otherwise have opened 19 August against roughly two hours of deposits.
+
+---
+
 ## Repo contract
 
 ```
@@ -1149,3 +1179,61 @@ is generated on Saturday 22 Aug for 16–22 Aug.
 - **For the 18 Aug run:** window `2026-08-18 -> 2026-08-18`; `last_entry_date` is now
   `2026-08-17`. Still open: the 08-08 to 08-12 Elsevier metadata-only backlog, the two new
   17 Aug metadata-only records, and deferred `10.1007/s11869-026-02080-8`.
+
+### 2026-08-18 — backfill run; Europe PMC index lag proven with a control query
+Window **18 Aug** (`2026-08-18 -> 2026-08-18`), contiguous with 17 Aug. **18 shipped,
+12 rejected, 2 metadata-only, 0 preprints.** 9 pp, 0 errors, **0 overfull boxes**.
+Built on **19 Aug at 01:27 local as a backfill** — the 18 Aug scheduled run did not fire.
+Per the new run-timing rule at the head of this file, **19 August was NOT opened**: at
+01:27 the day holds ~2 h of deposits, and building it would have burned the date.
+
+- **New standing rule: never build the current day before 22:00 local.** Documented in
+  full above. This run is the case that motivated it — the temptation was to catch up to
+  "today", which would have shipped a near-empty 19 Aug issue and made the rest of that
+  day's deposits permanently unreachable.
+- **Europe PMC zero was diagnosed, not assumed.** The leg returned 0 on both the primary
+  and the broad air-quality sweep. Rather than blaming the `CREATION_DATE` fix from
+  16 Aug, a topic-free control query settled it: **3 records of any kind** created
+  18 Aug, against 2,794 (17 Aug), 8,349 (16 Aug), 12,910 (15 Aug). The index simply had
+  not ingested the day. **Lesson: for any harvester returning zero, run the same query
+  with the topic clause removed before touching the code** — it distinguishes an empty
+  day from a broken leg in one call.
+- **Crossref-by-ISSN carried the instrumentation block again** (7 deposits / 18 journals,
+  4 shipped), including the AMT multimodal-PSD algorithm. PubMed connector 17 health / 3
+  sensing; local `pubmed_health` **23**, `pubmed_sensing` 1 (a duplicate) — a large ES\&T
+  issue-32 batch, of which 9 were rejected as aerosol chemistry with no PM measurement
+  and no health endpoint. arXiv 0 under the 3-day screen (newest posting 15 Aug, already
+  carried). **OpenAlex 429, 16th consecutive — dead.** **Consensus 9th consecutive
+  zero-carry.** ClinicalTrials.gov 0; `trials.json` unchanged.
+- **Three caption claims failed verification and were rewritten before shipping**, the
+  fourth consecutive issue in which that rule has caught something. (i) "largest
+  instrumentation share of any issue" — false, 0.50 ranks ~7th; 5 Aug was 0.70. (ii)
+  "first time CVM and OCC are simultaneously absent" — false, third time, after 4 and
+  16 Aug. (iii) "prenatal window thinner than the recent run" — false, 3 **ties** 15 Aug
+  for the highest of the last twelve. Also corrected "US leads China" (6–6 tie) and
+  "nine records carry no health endpoint" (7 explicit + 2 unknown, not the same thing).
+- **A fourth claim was caught by reading the rendered figure, not the store.** The
+  heatmap caption asserted every health record took its exposure from a model or a network
+  it did not operate. **Perera et al.\ monitored airborne PAH personally** in the CCCEH
+  cohorts. Rewritten to name the exception. Store-based verification would not have found
+  this one — it needed the abstract.
+- **Orphan-page fix took two passes and the `\clearpage` lesson from 17 Aug generalises.**
+  The exec brief spilled one line, leaving a 0.5 %-ink p.2; trimming two bullets fixed it.
+  Separately the fixed `\clearpage` before the Sensing/Respiratory boundary left p.6
+  two-thirds empty: **11 pp → 10 pp → 9 pp.** Treat that `\clearpage` as optional on any
+  issue under ~25 records, not just tiny ones.
+- **`plots.py` geography map: added `Argentina`** (key → Latin America, plus `argentina`
+  and `san juan` needles). First Argentine record of the watch; without the key it would
+  have fallen silently to the unmapped bucket — the identical failure mode as `Sweden` on
+  17 Aug. Worth a sweep of the map against a country list rather than waiting for the
+  next one.
+- `check_dois.py` **0 fail, 1 warn** (Li et al. 2026b focus-line paraphrase, confirmed by
+  eye). `state/metrics.csv` 187 rows, all parsing at 3 fields.
+- `claude/_mkcorpus_tmp.py` still undeletable (mount EPERM), still gitignored —
+  **manual cleanup outstanding**. Proofing rasters written to the session scratchpad.
+- **For the 19 Aug run (scheduled 23:00):** window `2026-08-19 -> 2026-08-19`;
+  `last_entry_date` is now `2026-08-18`. Wednesday — no rollup owed; next weekly is
+  generated on Saturday 22 Aug for 16–22 Aug. Still open: the 08-08 to 08-12 Elsevier
+  metadata-only backlog, the two 17 Aug and two 18 Aug metadata-only records
+  (`10.1016/j.apr.2026.103180`, `10.1016/j.atmosenv.2026.122293`), and deferred
+  `10.1007/s11869-026-02080-8`.

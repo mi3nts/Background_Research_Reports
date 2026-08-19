@@ -1,0 +1,363 @@
+{
+ "date": "2026-08-18",
+ "entry_window": "2026-08-18 -> 2026-08-18",
+ "PAPERS": [
+  {
+   "pmid": "42611486",
+   "short": "Wang et al. 2026",
+   "doi": "10.1021/acs.est.6c03270",
+   "title": "Remote calibration of a nationwide dense low-cost sensor network for hyperlocal air surveillance",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "Low-cost sensor PM2.5 vs regulatory reference monitors",
+   "geo": "USA",
+   "endpoint": "None (monitoring)",
+   "n": "33 million hourly observations, 10 US metropolitan areas",
+   "tier": "A"
+  },
+  {
+   "pmid": "42611446",
+   "short": "Zhang et al. 2026",
+   "doi": "10.1021/acs.est.6c05543",
+   "title": "Wearable device for direct assessment of particle deposition in the human respiratory system",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field measurement",
+   "pm": "Paired inhaled and exhaled size-resolved PM, PM1-PM10",
+   "geo": "China",
+   "endpoint": "None (instrument)",
+   "n": "12 healthy volunteers, subway microenvironment",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Rapp et al. 2026",
+   "doi": "10.5194/amt-19-5373-2026",
+   "title": "Curve fitting algorithm for multimodal particle size distributions: a theoretical basis",
+   "journal": "Atmos Meas Tech",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Measurement campaign",
+   "pm": "Mobility particle size distributions, number-based",
+   "geo": "USA",
+   "endpoint": "None (instrument)",
+   "n": "10-year record, Storm Peak Laboratory",
+   "tier": "B"
+  },
+  {
+   "pmid": "42611460",
+   "short": "Li et al. 2026",
+   "doi": "10.1021/acs.est.6c04657",
+   "title": "Crowdsourced, community-engaged VOC monitoring and source apportionment near a landfill",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field measurement",
+   "pm": "Gas-phase BTEX by EPA TO-17, not PM",
+   "geo": "USA",
+   "endpoint": "None (exposure)",
+   "n": "Community citizen-science sampling, Bristol VA landfill",
+   "tier": "C"
+  },
+  {
+   "pmid": "42611843",
+   "short": "Saravagna Sai Lakshmi et al. 2026",
+   "doi": "10.3791/71004",
+   "title": "CORTA-Net: hybrid deep learning with attention-based interpretability for PM2.5 forecasting",
+   "journal": "J Vis Exp",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "Hourly regulatory-station PM2.5 plus MODIS fire counts",
+   "geo": "India",
+   "endpoint": "None (monitoring)",
+   "n": "Delhi CPCB/DPCC stations, 2012-2024",
+   "tier": "C"
+  },
+  {
+   "pmid": "42611210",
+   "short": "Dias et al. 2026",
+   "doi": "10.1007/s00128-026-04318-8",
+   "title": "Micro-scale spatial patterns of PM2.5 across urban green and non-green areas in an arid city",
+   "journal": "Bull Environ Contam Toxicol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Measurement campaign",
+   "pm": "Mobile-monitored PM2.5 along a fixed transect",
+   "geo": "Argentina",
+   "endpoint": "None (exposure)",
+   "n": "75 georeferenced sites, 4.3 km transect, 6 campaigns",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Jin et al. 2026",
+   "doi": "10.1016/j.apr.2026.103180",
+   "title": "Hourly 2 km Himawari-8 aerosol fine-mode fraction retrieval improves PM2.5 mapping",
+   "journal": "Atmos Pollut Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Satellite AOD fine-mode fraction to surface PM2.5",
+   "geo": "China",
+   "endpoint": "Not extracted",
+   "n": "Beijing-Tianjin-Hebei region; abstract withheld",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Zaman & Mim 2026",
+   "doi": "10.1039/d6ea00108d",
+   "title": "Decadal variation of atmospheric PM2.5 over Bangladesh from MERRA-2 reanalysis",
+   "journal": "Environ Sci Atmos",
+   "sub": "Exposure assessment & modelling",
+   "design": "Machine-learning model",
+   "pm": "MERRA-2 reanalysis PM2.5 and speciated components",
+   "geo": "Bangladesh",
+   "endpoint": "None (exposure)",
+   "n": "25-year reanalysis record; abstract truncated at source",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Guo et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122293",
+   "title": "Meteorology-driven long-range transport to an ultra-low emission region during the monsoon",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not extractable from registered metadata",
+   "geo": "China",
+   "endpoint": "Not extracted",
+   "n": "Hainan case study; abstract withheld by publisher",
+   "tier": "C"
+  },
+  {
+   "pmid": "42612665",
+   "short": "Wood et al. 2026",
+   "doi": "10.1016/S2468-2667(26)00163-5",
+   "title": "Ultra Low Emission Zone and lung function growth in children: parallel cohort study",
+   "journal": "Lancet Public Health",
+   "sub": "Respiratory & allergic",
+   "design": "Prospective cohort",
+   "pm": "Modelled residential annual NO2 and PM (LAEI dispersion model)",
+   "geo": "UK",
+   "endpoint": "Respiratory",
+   "n": "3,414 children recruited, 3,209 in FEV1 analysis, 84 schools",
+   "tier": "A"
+  },
+  {
+   "pmid": "42612571",
+   "short": "Parmar et al. 2026",
+   "doi": "10.1016/j.envint.2026.110464",
+   "title": "Short-term PM2.5 and its chemical components and neuropsychiatric hospitalisations",
+   "journal": "Environ Int",
+   "sub": "Neuro / mental health",
+   "design": "Time-series",
+   "pm": "Ground-WRF-Chem fused PM2.5 at 5 km, speciated into BC, OC, OIN",
+   "geo": "India",
+   "endpoint": "Neuro / cognitive",
+   "n": "Delhi hospital admissions, 2016-2019",
+   "tier": "A"
+  },
+  {
+   "pmid": "42608705",
+   "short": "Perera et al. 2026",
+   "doi": "10.1186/s12940-026-01328-1",
+   "title": "Declining prenatal air pollution and improving cognitive scores across successive NYC cohorts",
+   "journal": "Environ Health",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort",
+   "pm": "Prenatal personal/modelled PM2.5, NO2 and airborne PAH",
+   "geo": "USA",
+   "endpoint": "Neuro / cognitive",
+   "n": "n = 1,109 children across three cohorts, 1998-2020",
+   "tier": "A"
+  },
+  {
+   "pmid": "42610449",
+   "short": "Jang et al. 2026",
+   "doi": "10.1210/clinem/dgag340",
+   "title": "Ambient air pollution and age at natural menopause in a multi-ethnic US cohort",
+   "journal": "J Clin Endocrinol Metab",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective cohort",
+   "pm": "1 km2 modelled annual PM2.5, NO2 and O3 at residence",
+   "geo": "USA",
+   "endpoint": "Reproductive",
+   "n": "1,457 midlife women, SWAN, six sites, 1999-2015",
+   "tier": "B"
+  },
+  {
+   "pmid": "42611483",
+   "short": "Li et al. 2026b",
+   "doi": "10.1021/acs.est.6c01030",
+   "title": "Component-resolved PM2.5 translocation across a human blood-brain barrier immune platform",
+   "journal": "Environ Sci Technol",
+   "sub": "Mechanistic toxicology",
+   "design": "In vitro organ-on-chip",
+   "pm": "Ambient PM2.5 extract, compartment-resolved constituent quantification",
+   "geo": "China",
+   "endpoint": "Neuro / cognitive",
+   "n": "Microfluidic BBB-immune platform, dose-resolved",
+   "tier": "B"
+  },
+  {
+   "pmid": "42612738",
+   "short": "Jin & Zhang 2026",
+   "doi": "10.1016/j.reprotox.2026.109328",
+   "title": "Astragaloside IV protects against PM2.5-induced spermatocyte injury via cGAS-STING/Nrf2/HMOX1",
+   "journal": "Reprod Toxicol",
+   "sub": "Mechanistic toxicology",
+   "design": "In vitro exposure",
+   "pm": "PM2.5 suspension at 200 ug/mL in GC-2 spermatocytes",
+   "geo": "China",
+   "endpoint": "Reproductive",
+   "n": "GC-2 cell line plus GEO transcriptomic reanalysis (GSE189187)",
+   "tier": "C"
+  },
+  {
+   "pmid": "42611484",
+   "short": "Liu et al. 2026",
+   "doi": "10.1021/acs.est.6c04728",
+   "title": "Disproportionate effects of direct air capture on regional health cobenefits of net-zero",
+   "journal": "Environ Sci Technol",
+   "sub": "Burden, policy & mitigation",
+   "design": "Health impact model",
+   "pm": "Grid-level (36 km2) modelled PM2.5 and O3 attributable mortality",
+   "geo": "China",
+   "endpoint": "Mortality / longevity",
+   "n": "National net-zero pathway, 2020-2060",
+   "tier": "B"
+  },
+  {
+   "pmid": "42612777",
+   "short": "Kang et al. 2026",
+   "doi": "10.1016/j.envpol.2026.128985",
+   "title": "Short-term ambient air pollution and acute osteoarthritis morbidity across subgroups",
+   "journal": "Environ Pollut",
+   "sub": "Other clinical endpoints",
+   "design": "Case-crossover",
+   "pm": "District-level PM10, PM2.5, NO2, SO2, O3, CO",
+   "geo": "South Korea",
+   "endpoint": "Other clinical",
+   "n": "3,697,314 OA-related hospital visits, NHIS-NSC 2002-2019",
+   "tier": "B"
+  },
+  {
+   "pmid": "42612421",
+   "short": "Zewdie et al. 2026",
+   "doi": "10.1016/j.canep.2026.103199",
+   "title": "Wildfire smoke PM2.5 and cancer history prevalence at census-tract level",
+   "journal": "Cancer Epidemiol",
+   "sub": "Other clinical endpoints",
+   "design": "Ecological panel",
+   "pm": "Daily modelled wildfire-specific smoke PM2.5, 2006-2020",
+   "geo": "USA",
+   "endpoint": "Oncologic",
+   "n": "All census tracts of the contiguous US, 2022 PLACES estimates",
+   "tier": "B"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Acute osteoarthritis hospital visits",
+   "exposure": "per IQR PM2.5",
+   "est": 1.0073,
+   "lo": 1.0047,
+   "hi": 1.01,
+   "metric": "RR-equiv",
+   "src": "Kang 2026 (Environ Pollut)"
+  },
+  {
+   "label": "Acute osteoarthritis hospital visits",
+   "exposure": "per IQR PM10",
+   "est": 1.009,
+   "lo": 1.0073,
+   "hi": 1.0107,
+   "metric": "RR-equiv",
+   "src": "Kang 2026 (Environ Pollut)"
+  },
+  {
+   "label": "Acute osteoarthritis hospital visits",
+   "exposure": "per IQR NO2",
+   "est": 1.0528,
+   "lo": 1.0502,
+   "hi": 1.0554,
+   "metric": "RR-equiv",
+   "src": "Kang 2026 (Environ Pollut)"
+  },
+  {
+   "label": "Neuropsychiatric hospitalisation, Delhi",
+   "exposure": "per 10 ug/m3 PM2.5",
+   "est": 1.0093,
+   "lo": 1.001,
+   "hi": 1.0176,
+   "metric": "RR-equiv",
+   "src": "Parmar 2026 (Environ Int)"
+  },
+  {
+   "label": "Neuropsychiatric hospitalisation, black carbon",
+   "exposure": "per 10 ug/m3 BC",
+   "est": 1.1151,
+   "lo": 1.0327,
+   "hi": 1.204,
+   "metric": "RR-equiv",
+   "src": "Parmar 2026 (Environ Int)"
+  },
+  {
+   "label": "Cancer history prevalence, Midwest tracts",
+   "exposure": "per IQR 3-y smoke PM2.5",
+   "est": 1.02,
+   "lo": 1.013,
+   "hi": 1.026,
+   "metric": "PR",
+   "src": "Zewdie 2026 (Cancer Epidemiol)"
+  },
+  {
+   "label": "Cancer history prevalence, Northeast tracts",
+   "exposure": "per IQR 3-y smoke PM2.5",
+   "est": 1.04,
+   "lo": 1.032,
+   "hi": 1.049,
+   "metric": "PR",
+   "src": "Zewdie 2026 (Cancer Epidemiol)"
+  },
+  {
+   "label": "Age at natural menopause",
+   "exposure": "Q4 vs Q1 NO2",
+   "est": 0.983,
+   "lo": 0.971,
+   "hi": 0.995,
+   "metric": "TR",
+   "src": "Jang 2026 (J Clin Endocrinol Metab)"
+  },
+  {
+   "label": "Age at natural menopause",
+   "exposure": "Q4 vs Q1 O3",
+   "est": 0.983,
+   "lo": 0.971,
+   "hi": 0.996,
+   "metric": "TR",
+   "src": "Jang 2026 (J Clin Endocrinol Metab)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 3,
+   "note": "Prenatal PM2.5/NO2/PAH\nin three NYC cohorts;\nspermatocyte injury model"
+  },
+  {
+   "n": 1,
+   "note": "NYC cognitive testing\nat ages 1, 2 and 3\n(Bayley MDI)"
+  },
+  {
+   "n": 1,
+   "note": "London/Luton school\ncohort entered at\nages 6-9"
+  },
+  {
+   "n": 6,
+   "note": "Delhi and Korean adult\nadmissions; SWAN midlife\nwomen; subway wearers"
+  },
+  {
+   "n": 2,
+   "note": "Korean OA visits skew\nolder; net-zero mortality\nweighted to 65+"
+  }
+ ]
+}
