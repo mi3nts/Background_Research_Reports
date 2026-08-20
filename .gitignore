@@ -37,3 +37,7 @@ Reports/**/.trash_*.pdf
 
 # 2026-08-16: scratch corpus writer; repo mount is delete-restricted, cannot rm
 claude/_mkcorpus_tmp.py
+
+# 2026-08-19: per-issue corpus authoring scripts are scratch. The published record is
+# state/corpus/<date>.json, which they only write. Wildcard so future ones are covered.
+claude/_mk_*.py

@@ -1237,3 +1237,52 @@ Per the new run-timing rule at the head of this file, **19 August was NOT opened
   metadata-only backlog, the two 17 Aug and two 18 Aug metadata-only records
   (`10.1016/j.apr.2026.103180`, `10.1016/j.atmosenv.2026.122293`), and deferred
   `10.1007/s11869-026-02080-8`.
+
+### 2026-08-19 — abstract-free deposits are 6 of 22; a caption claim about siloing was false
+Window **19 Aug** (`2026-08-19 -> 2026-08-19`), contiguous with 18 Aug. **22 shipped
+(6 of them metadata-only), 13 rejected, 0 preprints.** 10 pp, 0 errors, **0 overfull boxes**.
+Built at 23:0x local, satisfying the 22:00 rule at the head of this file. Wednesday — no
+rollup owed; the next weekly is generated Saturday 22 Aug for 16–22 Aug.
+
+- **Per-source:** PubMed local 14 health / 1 sensing; PubMed connector 8 health / 6 sensing,
+  4 of them connector-only — **18 unique PMIDs**. Crossref-by-ISSN 7 deposits over 18
+  journals carried the whole instrumentation block again (3 Copernicus shipped, 1 AMT
+  trace-gas paper rejected). Europe PMC 0; **the topic-free control query settled it** —
+  0 records of *any* kind created 19 Aug against 4 (18 Aug) and 2,794 (17 Aug), so index lag,
+  not a broken leg. This is the second consecutive run where that one call saved a debugging
+  session; keep it as the first move on any zero. arXiv 0 under the 3-day screen.
+  **OpenAlex 429, 17th consecutive — dead.** **Consensus 10th consecutive zero-carry**; it
+  returns relevant 2026 work but nothing inside an entry-date window, which is the wrong
+  shape for this pipeline. Consider dropping it to a weekly sweep.
+- **Metadata-only is now a structural cost, not an incident.** 6/22 (27%) — ties 8/11/12 Aug
+  for second-highest count, third-highest share. Four Elsevier (*Atmos Environ* ×3,
+  *Atmos Pollut Res*) and two RSC (*Environ Sci Atmos*) deposits. Europe PMC, Semantic
+  Scholar and a direct DOI fetch were all tried for abstracts and all returned nothing;
+  they are too new. They ship with an explicit `\textsc{metadata only}` marker and no
+  inferred quantity. **Still open:** the 08-08 to 08-12 backlog plus 17, 18 and 19 Aug.
+- **One caption claim failed verification — the fifth consecutive issue.** The heatmap
+  caption asserted instrumentation and epidemiology "remain siloed ... as they have been in
+  every issue this month". **False:** counted against the store, **12 of the 19 August
+  issues** carry at least one sensing- or exposure-side record with a human health endpoint.
+  Rewritten to state today's siloing and the counted exception rate. A second f6 claim
+  ("four of five population studies are older clinical cohorts") was replaced by naming the
+  five cohorts, because the Lahore sample's age distribution is not reported.
+- **`plots.py` geography map: added `Ethiopia`** (key → Sub-Saharan Africa, needles
+  `ethiopia` / `addis ababa`). The record was first labelled "West Africa", which reached
+  the right *bucket* only via the `west africa → Nigeria` needle and was geographically
+  wrong for Addis Ababa. Third country added in three days (Sweden, Argentina, Ethiopia) —
+  **do the full country-list sweep of `GEOMAP` rather than waiting for the fourth.**
+- **Two orphan-page passes, then a rejected third.** 12 pp → 11 (dropped the `\clearpage`
+  before *Other clinical*, which was leaving p.9 at 14% ink) → 10 (trimmed three exec-brief
+  bullets to clear a 0.4%-ink p.2). Also *tested* removing the `\clearpage` before *Sensing*:
+  it densified pp.6–7 but pushed a 1.3%-ink page to p.8 — strictly worse, reverted. **On a
+  ~22-record issue that `\clearpage` earns its place**; the 17–18 Aug "treat it as optional"
+  lesson applies below roughly 15 records, not universally. Ink-fraction per rendered page is
+  the cheap detector; anything under ~0.03 is an orphan.
+- `check_dois.py` **0 fail, 0 warn** — first clean sweep since 16 Aug. `state/metrics.csv`
+  196 rows, all parsing at 3 fields. `seen.json` now 490 pmid / 631 doi / 650 tsig.
+- `claude/_mk_<date>.py` (per-issue corpus authoring script) added to `.gitignore` as a
+  wildcard; `_mkcorpus_tmp.py` **still undeletable (mount EPERM) — manual cleanup
+  outstanding.** Proofing rasters written to the session scratchpad, never `claude/`.
+- **For the 20 Aug run:** window `2026-08-20 -> 2026-08-20`; `last_entry_date` is now
+  `2026-08-19`. Thursday — no rollup. Deferred `10.1007/s11869-026-02080-8` still open.
