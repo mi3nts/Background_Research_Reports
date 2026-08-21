@@ -1286,3 +1286,57 @@ rollup owed; the next weekly is generated Saturday 22 Aug for 16–22 Aug.
   outstanding.** Proofing rasters written to the session scratchpad, never `claude/`.
 - **For the 20 Aug run:** window `2026-08-20 -> 2026-08-20`; `last_entry_date` is now
   `2026-08-19`. Thursday — no rollup. Deferred `10.1007/s11869-026-02080-8` still open.
+
+### 2026-08-20 — an atmospheric-science day: 1 health endpoint, 0 effect estimates, no forest plot
+Window **20 Aug** (`2026-08-20 -> 2026-08-20`), contiguous with 19 Aug. **18 shipped
+(4 metadata-only), 49 rejected, 1 preprint.** 8 pp, 0 errors, **0 overfull boxes**.
+Built at 22:1x local, satisfying the 22:00 rule. Thursday — no rollup; next weekly is
+generated Saturday 22 Aug for 16–22 Aug.
+
+- **Per-source:** PubMed local 6 health / 3 sensing; connector 2 health / 5 sensing —
+  **8 unique PMIDs, 5 shipped** (rejected: a retraction notice, a Congo peatland GHG paper,
+  a global CO2 budget paper). Europe PMC 0, and the **topic-free control query also
+  returned 0** — index lag, third consecutive run where that one call replaced a debugging
+  session. **OpenAlex 429, 18th consecutive — dead.** arXiv 0 under the 3-day screen.
+  Consensus not called (11th run it would have zero-carried; it is not entry-date shaped).
+- **The 8 standing Crossref ISSNs returned only 5 deposits, so the sweep was widened to
+  18 supplementary ISSNs for this run** (ES&T, Environ Int, STOTEN, Environ Res, Environ
+  Pollut, Atmosphere, Sensors, AQAH, JESEE, Build Environ, npj Clim Atmos Sci, Atmos Res,
+  Part Fibre Toxicol, ACS EST Air, ES&T Lett, GeoHealth, Indoor Environments, Indoor Air).
+  54 deposits, **13 shipped** — the widened leg carried 72% of the issue. Precision is very
+  uneven: **MDPI *Sensors* returned 27 deposits and 0 in-scope records** (it indexes
+  sensing hardware of every kind, not airborne-particle instrumentation) and ES&T returned
+  16 for 5. **Before the next run, either drop the Sensors ISSN or keyword-prefilter it;
+  promote the productive supplementary ISSNs into `harvest.JOURNALS` rather than
+  re-adding them ad hoc.**
+- **`EFFECTS` is empty by decision, and f5 is not rendered.** Nothing published in the
+  window carried a confidence-interval risk estimate: the day's quantities are absolute
+  concentrations, deposition rates with CIs, chamber fold-changes and model fit statistics.
+  Putting any of those on the shared log risk axis would corrupt the **weekly pooled
+  forest plot**, which aggregates `EFFECTS` across issues. `plots.py` handles an empty
+  list cleanly (`_CHUNKS=[[]]`, loop skips, no file written) — the only change needed was
+  dropping the f5 `\includegraphics` and replacing it with a stated-null keybox.
+  **First zero-effect issue; note that the daily template assumes f5 exists.**
+- **One caption claim failed verification — the sixth consecutive issue.** The heatmap
+  caption inherited "12 of the 19 August issues" from yesterday's log. Recounted against
+  `state/corpus/*.json` under an explicit null-endpoint rule the answer is **11 of 19**;
+  the caption now states the rule and the discrepancy. Two metric-strip labels also
+  hyphenated badly ("SENS-ING", "HU-MAN") and were shortened.
+- **Orphan pass: dropped the `\clearpage` before *Corpus register*.** 9 pp → 8, killing a
+  0.038-ink page that held only the provenance box. On an 18-record issue the register
+  flows cleanly across a page break with the longtable header repeating. This is the
+  under-15-record lesson from 17–18 Aug applying at 18 records too; the 19 Aug finding that
+  the *Sensing* `\clearpage` earns its place at ~22 records still stands separately.
+- `check_dois.py` **0 fail, 0 warn** — second clean sweep running. `state/metrics.csv`
+  203 rows, all parsing at 3 fields (the csv.writer fix holds). `seen.json` now
+  495 pmid / 649 doi / 668 tsig.
+- Site work requested in the task file (per-cadence tabs, multi-report picker, homepage
+  category browse) was **already implemented in earlier runs** — verified in
+  `index.dc.html` (badge/`onBadge` picker, `CAD` cadence map, per-`FOLDERS` archive
+  listing). No front-end change this run.
+- `claude/_mkcorpus_tmp.py` **still undeletable (mount EPERM) — manual cleanup
+  outstanding.** Proofing rasters written to the session outputs dir, never `claude/`.
+- **For the 21 Aug run:** window `2026-08-21 -> 2026-08-21`; `last_entry_date` is now
+  `2026-08-20`. Friday — no rollup. Open: the supplementary-ISSN promotion above, the
+  four 20 Aug metadata-only records, the 08-08 to 08-12 Elsevier backlog, and deferred
+  `10.1007/s11869-026-02080-8`.
