@@ -1340,3 +1340,12 @@ generated Saturday 22 Aug for 16–22 Aug.
   `2026-08-20`. Friday — no rollup. Open: the supplementary-ISSN promotion above, the
   four 20 Aug metadata-only records, the 08-08 to 08-12 Elsevier backlog, and deferred
   `10.1007/s11869-026-02080-8`.
+
+### 2026-08-21 08:41 CDT — no-op run, deferred by the 22:00 rule
+Off-schedule morning invocation. `last_entry_date` = **2026-08-20**; local time 08:41 is
+before 22:00, so the newest buildable date is **2026-08-20** — already shipped. No gap to
+backfill (corpus contiguous 01–20 Aug), no rollup due (Friday; next weekly is Sat 22 Aug
+for 16–22 Aug). `git pull` clean, `build_manifest.py` validated 25/3/1/0 and reported
+`manifest OK`, working tree clean. **Nothing harvested, built, or pushed — opening 21 Aug
+now against ~9 h of deposits would strand the rest of the day permanently.** The 23:00
+scheduled run builds 21 Aug. Open items from 20 Aug all still stand.
