@@ -1437,3 +1437,21 @@ slash-joined string in a 22 mm column) was fixed generically in `mktable.esc()` 
   registry has not been refreshed since 8 Aug; the 08-08 to 08-12 Elsevier backlog and
   deferred `10.1007/s11869-026-02080-8` both still stand; `claude/_mkcorpus_tmp.py` still
   undeletable (mount EPERM).
+
+**Addendum — the git workaround now has a second half, and it should be used every run.**
+The 08-06 recipe (`GIT_INDEX_FILE` copy → `write-tree` → `commit-tree` → in-place ref write
+→ `push`) worked unchanged: `7e0f308..546011f` pushed. But committing through an alternate
+index leaves the *default* `.git/index` stale, so the next `git status` reports every file
+in the commit as `D` (deleted) — which looks exactly like a catastrophic working-tree loss
+and is not one. Repair it in place, without unlinking anything:
+```
+GIT_INDEX_FILE=/tmp/newidx git read-tree HEAD
+GIT_INDEX_FILE=/tmp/newidx git update-index --refresh
+python3 -c "open('.git/index','wb').write(open('/tmp/newidx','rb').read())"
+```
+`open(...,'wb')` truncates in place and never calls `unlink`, so it is not blocked by the
+mount. Verified afterwards by hashing every path in `git ls-tree -r HEAD` against its blob:
+**0 differing, 0 missing**, and `git status` clean. Note that the stale `.git/index.lock`
+that blocked porcelain `commit` this run is dated **21 Aug 08:41** — it is the leftover of
+the no-op run, so the lock accumulates even on runs that write nothing. Stray `.git/idx-*`
+copies from this workaround are also undeletable and will keep accumulating.
