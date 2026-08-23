@@ -1,0 +1,360 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{22 August 2026}
+\newcommand{\PERIODSTART}{16 August 2026}
+\newcommand{\PERIODEND}{22 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Teal] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ WEEKLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Week in Review\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Week ending \DIGESTDATE}\;\;\textcolor{Teal}{\textbar}\;\;\mbox{\PERIODSTART{} to \PERIODEND}\;\;
+ \textcolor{Teal}{\textbar}\;\;\mbox{112 records pooled from 7 daily issues}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{112}{RECORDS POOLED\\(112 UNIQUE DOIs)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{52\%}{ON THE MEASUREMENT\\SIDE (58 RECORDS)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{SUBTOPICS\\ACTIVE}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{41}{POOLED EFFECT\\ESTIMATES}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{22}{ABSTRACT-FREE\\(20\% OF WEEK)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- week in one box
+\section*{\sffamily\bfseries\color{Deep}The week in one paragraph}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Six independent groups stopped analysing PM$_{2.5}$
+as a mass this week and started analysing it as a list of constituents --- and in the two
+endpoints where a single constituent led, it was the same one. Meanwhile a fifth of the
+week's corpus arrived with no abstract, which is the price this pipeline is now paying for
+its own coverage.}\\[1.4mm]
+\footnotesize
+The methodological through-line is constituent decomposition, and it is unusually
+consistent. \textbf{Wu et al.} (16 Aug) put prenatal PM$_{2.5}$ and its components through
+a mixture model for childhood overweight; \textbf{Wang et al.} (16 Aug) do the same for
+early-life anaemia across China, India and 26 African countries; \textbf{Zhao et al.}
+(17 Aug) report spontaneous abortion by constituent, with \textbf{ammonium highest
+(OR 1.19) --- above total mass (1.18)}; \textbf{Parmar et al.} (18 Aug) separate black
+carbon from bulk PM$_{2.5}$ for neuropsychiatric hospitalisation in Delhi and find the
+component term nearly an order of magnitude larger; \textbf{Chen et al.} (21 Aug) run
+five constituents against incident depression in 24{,}940 UK Biobank participants and
+again land on \emph{ammonium}; and \textbf{Wei et al.} (21 Aug) run all fifteen components
+against mortality in 528{,}127 lung-cancer patients by weighted quantile sum.
+
+\textbf{The answers do not agree, and that is the finding.} Ammonium and nitrate --- the
+secondary inorganic fraction --- lead in the reproductive and psychiatric endpoints, while
+Wei's mortality weights fall on silicon, vanadium, zinc and iron, a crustal, traffic and
+heavy-fuel-oil signature. Two different exposures are being called PM$_{2.5}$. The week
+also supplies the atmospheric-chemistry half of that argument: \textbf{Chai et al.}
+(21 Aug) measure secondary inorganic aerosol at \textbf{49.55\% of PM$_{2.5}$ mass} in
+suburban Nanjing and show the system is total-nitrate-limited, so the very fraction that
+the epidemiology is now singling out is the one that does \emph{not} respond to ammonia
+control. If a component drives the risk, mass-only monitoring cannot see it and
+mass-targeted policy cannot move it.
+
+\textbf{Against that, an operational fact that should be read as a cost.} 22 of 112
+records (20\%) carry no abstract from any checked source and are classified but unread ---
+almost double last week's 15 of 134 (11\%). \textit{Metadata only} is now the single
+largest architecture label in the pooled corpus, ahead of every real study design.
+This follows directly from widening the Crossref by-ISSN sweep: the leg buys coverage
+of journals PubMed indexes late or not at all, and pays for it in publishers that
+deposit a title and a DOI and nothing more.
+\end{keybox}
+
+\clearpage
+
+% -------------------------------------------------------------- trend
+\section*{\sffamily\bfseries\color{Deep}Subtopic trend and inflection}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}.
+\textbf{Read the denominators first}: daily totals were 10, 12, 18, 22, 18, 19 and 13 ---
+a range of 2.2$\times$, and a flatter week than 9--15 August (12 to 28). The 16 August
+floor of 10 is a Sunday and the smallest issue the watch has recorded; the 22 August
+figure of 13 is a Saturday. \textbf{No day in this week carries a publisher batch
+artefact of the kind that distorted 11--12 August}, so unlike last week the trend line can
+be read more or less at face value.}
+
+\footnotesize
+\textbf{The measurement side took the week back.} \textit{Exposure assessment \&
+modelling} rose \textbf{26 $\rightarrow$ 36} while \textit{Sensing, forecasting \&
+instrumentation} fell \textbf{34 $\rightarrow$ 22}; together they are 58 of 112 records,
+a measurement-side share of \textbf{52\% against last week's 45\% and 54\% the week
+before}. \textbf{Do not read this as a recovery in instrumentation.} The sensing cluster
+shrank; what grew is exposure and deposition work, and four of the eight
+\textit{Exposure} records in the 21 August issue alone measure PM by what it lands on ---
+pine needles, privet leaves, tree canopies --- rather than by what it does in air. The
+oscillation between 54\%, 45\% and 52\% across three weeks is within the range this
+pipeline's own harvesting legs can produce, and no claim about the field should be built
+on it.
+
+\vspace{1.2mm}
+\textbf{Contracting, and worth watching.} \textit{Occupational \& indoor} fell
+\textbf{9 $\rightarrow$ 4}, \textit{Mechanistic toxicology} \textbf{11 $\rightarrow$ 8}
+and \textit{Cardiovascular \& metabolic} \textbf{7 $\rightarrow$ 3}. The mechanistic drop
+breaks a two-week run at exactly 11 and is the first movement in that cluster since the
+watch began keeping the count. Cardiovascular at 3 is the lowest recorded for what is
+normally the field's largest health cluster --- against 10 respiratory-endpoint records
+this week. One week is not a trend; two would be.
+
+\vspace{1.2mm}
+\textbf{Holding.} \textit{Other clinical endpoints} rose \textbf{11 $\rightarrow$ 13},
+extending last week's finding that the clinical tail is now longer than the
+cardiorespiratory trunk, and the content stays unfamiliar: cirrhotic hepatic
+decompensation, diabetic microvascular complications, systemic lupus, and --- new this
+week --- \textbf{the prognosis of an emerging tick-borne viral infection}. All ten
+subtopics were active on at least one day.
+
+%% LAYOUT RULE (2026-08-02): architecture donut in the whitespace here, not on its own page.
+\vspace{3mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Pooled study architecture over 112 records. \textbf{The largest slice is a defect,
+not a design.} \textit{Metadata only} is \textbf{22 records, 20\% of the week} --- surfaced
+with no abstract in Crossref or Europe PMC and therefore classified from title and journal
+alone --- and it now outranks measurement campaigns, cohorts and every other architecture in
+the corpus. It concentrates on two days (six on 19 August, six on 22 August) and on four
+Elsevier titles. Against that, \textit{Observational --- cohort} at 15 and
+\textit{Experimental / toxicology} at 9 are the load-bearing evidence classes.
+\textbf{\textit{Trial / intervention} is 1 record in 112}: a single filtration-intervention
+effectiveness study on 19 August. For the fourth week running, no completed randomised
+intervention on a PM exposure entered the corpus.}
+
+\clearpage
+
+% -------------------------------------------------------------- pooled analytics
+\section*{\sffamily\bfseries\color{Deep}Pooled analytics}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Pooled subtopic distribution, 16--22 August. \textit{Exposure assessment \&
+modelling} (36) and \textit{Sensing} (22) together are just over half the week;
+\textit{Other clinical endpoints} (13) is the largest health cluster, ahead of
+\textit{Respiratory \& allergic} (9) and \textit{Burden, policy \& mitigation} (9).
+Every one of the ten canonical clusters is occupied, which has now held for four
+consecutive weeks.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2b_endpoint.png}
+\figcap{Health endpoint by organ system across the pooled week. \textbf{62 of 112 records
+carry no human health endpoint at all} --- 20 because no abstract was deposited and the
+endpoint could not be extracted, and the remaining 42 because they are monitoring,
+exposure, instrument or aerosol-chemistry work by design. Of what is left, respiratory
+endpoints lead at 10, with a further 4 specifically respiratory \emph{infection};
+neuro/cognitive and cardiovascular follow.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric across the pooled week. PM$_{2.5}$ alone is the exposure
+in 55 records and appears jointly with PM$_{10}$ in 12; \textbf{ultrafine particles are
+the explicit subject of 2 records in 112}, and size-resolved number distributions of one
+more. That gap has been stable for the entire watch and is the clearest standing mismatch
+between what is measured and what deposition physics says matters. Right --- geographic
+provenance. \textbf{Europe (25) came within one record of China (26)}, which has not
+happened before in this watch; North America is 15. Sub-Saharan Africa and Southeast Asia
+contribute two records each.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+
+\vspace{1mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{All 41 pooled effect estimates, split across two panels at 32 rows each and
+plotted on a common logarithmic axis. \textbf{Exposure contrasts are heterogeneous and the
+estimates are not mutually comparable} --- per-IQR, per-10\,$\mu$g/m$^3$, per-SD,
+quartile contrasts and binary residential exposures all appear --- so read direction and
+precision, never relative magnitude, and \textbf{no meta-analytic summary is computed or
+implied}. Two structural features are worth naming. First, \textbf{the week is
+front-loaded}: 30 of the 41 estimates come from 16--18 August, 20 August produced none at
+all, and 21 August produced one. Second, \textbf{the constituent-resolved studies cluster
+tightly just above the null} --- Wu's five childhood-obesity ORs span 1.03--1.06 and Zhao's
+seven spontaneous-abortion ORs span 1.14--1.19 --- because a per-unit constituent contrast
+is a much smaller exposure step than a quartile or threshold contrast, not because the
+effects are weaker. The two estimates left of the null are both from the same paper: the
+CHARLS clean-fuel transition.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Pooled life-course coverage. Per-stage counts and annotations are summed and
+merged across the seven daily issues rather than inherited from any one of them. The
+in-utero and early-childhood windows carry the week, consistent with the developmental
+mixture cohorts (Wu, Wang, Zhao, Perera) that also supply most of the constituent-resolved
+estimates above.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ architecture over the pooled week. The \textit{Metadata only}
+column spreads across most subtopic rows rather than sitting in one corner --- the
+abstract-free deposits are not a single topic's problem. \textbf{The structural gap the
+watch has reported every week is visible again}: the \textit{Sensing} and \textit{Exposure}
+rows contain almost no cells that also carry a health endpoint, and the cohort column
+contains almost no cells that measured their own exposure. Instrumentation and
+epidemiology remain methodologically separate populations of paper.}
+
+\clearpage
+
+% -------------------------------------------------------------- venues
+\section*{\sffamily\bfseries\color{Deep}Venues, provenance and what the pipeline did}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Venues.} \textit{Environ Sci Technol} led with 11 records, then
+\textit{Atmos Chem Phys} (9), \textit{Atmos Environ} (8) and \textit{Environ Pollut} (6);
+\textit{Ecotoxicol Environ Saf}, \textit{Atmos Pollut Res}, \textit{Atmosphere} and
+\textit{Atmos Res} contributed 4 each. \textbf{Five preprints} entered the week
+(Research Square 3, medRxiv 1, Preprints.org 1) --- 4.5\% of the corpus, and three of the
+five carried quantitative results substantial enough to lead a daily issue.
+
+\vspace{1.2mm}
+\textbf{Two harvester changes were made inside this period, and both affect what the
+figures above show.} On 22 August the supplementary ISSN list trialled on 20 August was
+promoted into the standing Crossref sweep --- 15 additions, each ISSN verified against
+Crossref's own journal index, with MDPI \textit{Sensors} deliberately excluded after
+returning 27 deposits for zero in-scope records. The immediate effect was that the
+Crossref leg carried 62\% of the 22 August issue while PubMed returned two records. The
+immediate cost is the abstract-free share discussed above. \textbf{The first run with
+\textit{Environ Sci Technol} in the list also returned 154 works of which 142 were
+mastheads and issue-information stubs} being re-deposited in bulk from volumes 42--52;
+those carry DOIs and titles and would have passed every downstream check, so a
+title-pattern front-matter filter now drops them at the source.
+
+\vspace{1.2mm}
+\textbf{Three figure defects were closed during the period and one is disclosed
+uncorrected.} The forest-plot axis now enforces a minimum 1.6$\times$ span in log space,
+after a single near-null estimate on 21 August was auto-scaled onto an axis spanning 1.5\%
+and drawn two-thirds of the way to the right edge. Two design labels
+(\texttt{In vitro exposure}, \texttt{In vitro organ-on-chip}) and one more
+(\texttt{Health impact model}) were silently falling into ``Other / mixed'' on every issue
+and rollup that contained them, and \texttt{Literature review} was mapped to
+\textit{Tool / software}; all four are corrected, and this rollup is the first output
+rendered with the corrections. \textbf{Disclosed and not corrected:} the endpoint-label
+canonicalisation gap reported in the 15 August rollup persists, so \texttt{f2b}'s
+``no health endpoint'' bar is assembled here by hand in the caption (62 of 112) rather
+than being read off the figure.
+
+\vspace{1.2mm}
+\textbf{OpenAlex has now returned HTTP 429 on twenty consecutive runs} and should be
+treated as removed from the pipeline rather than degraded. Europe PMC's
+\texttt{CREATION\_DATE} leg continues to work but is increasingly dominated by archival
+back-scans --- legacy PMC page images with no title and a publication year decades outside
+the window --- which accounted for 14 of 28 unique Europe PMC hits on 21 August and 15 of
+23 on 22 August. \textbf{The trial registry has not been re-queried since 8 August};
+rollups do not query APIs, and the standing trial watch is therefore stale by two weeks
+and is not restated in this issue.
+
+\vspace{3mm}
+% -------------------------------------------------------------- gaps
+\section*{\sffamily\bfseries\color{Deep}Open gaps}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Nobody measured the exposure they analysed.} Of the 20 tier-A human health
+records this week, the overwhelming majority inherit a modelled exposure surface ---
+satellite, land-use regression, or a spatiotemporal reanalysis product --- and none reports
+that model's error at the spatial scale of its own analysis. The single clear exception is
+Liu et al.\ (22 Aug), whose exposure is a directly observed household fuel transition.
+This is now the fourth consecutive week the watch has recorded this and it remains the
+largest methodological opening for an instrumentation group.
+
+\item \textbf{Constituent-resolved epidemiology has arrived without
+constituent-resolved monitoring.} Six papers this week analyse PM$_{2.5}$ by component,
+and all six take those components from chemical transport or satellite-derived products.
+No record this week measured a speciated ambient time series and linked it to a health
+outcome in the same study.
+
+\item \textbf{Ultrafine particles: 2 records in 112.} Unchanged in direction and
+magnitude from every previous week of this watch.
+
+\item \textbf{One intervention study in 112 records, and it was not randomised.} The
+evidence base being built is almost entirely observational, while the policy questions the
+same papers pose --- which precursor to cut, which fuel to subsidise, which filter to
+deploy --- are interventional.
+
+\item \textbf{Twenty per cent of the week is unread.} 22 records have no abstract from any
+checked source. Two of them (aerosol pH and preterm birth; ammonia-driven ROS generation
+in secondary organic aerosol) sit directly on the week's main thread and are the highest
+priority for full-text retrieval before the monthly rollup.
+\end{itemize}
+
+\clearpage
+
+% -------------------------------------------------------------- digest
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the week by subtopic}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Every record that appeared in a daily issue
+keeps that issue's critical summary verbatim; nothing here is re-written or re-assessed.
+Records surfaced without an abstract are shown as such. Ordered by subtopic, then by the
+date of the issue that first carried the record.\par}
+
+\input{digest_body}
+
+\clearpage
+
+% -------------------------------------------------------------- register
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+This rollup is an \textbf{aggregation only}. It pools \texttt{state/corpus/*.json} and
+\texttt{state/metrics.csv} over \PERIODSTART{}--\PERIODEND{} via
+\texttt{PMRW\_START}/\texttt{PMRW\_END} and \textbf{re-queries no literature API}, so every
+record was screened and deduplicated in the daily issue that first carried it. Per-record
+provenance, source-query windows, exclusions and known metadata defects are documented in
+those daily issues and are not restated here.
+\textbf{Daily issues covered: 16, 17, 18, 19, 20, 21 and 22 August 2026 --- seven of seven,
+no gap in entry-date coverage.} The 21 and 22 August issues were built as a backfill on the
+evening of 22 August after an off-schedule 21 August invocation correctly deferred under
+the 22:00 rule; the entry windows are contiguous and nothing was skipped.
+\textbf{112 records, 112 unique DOIs} --- no duplicate survived the pooling.
+\textbf{Known defects carried into this rollup, stated rather than hidden:}
+(i) the \texttt{ENDPOINT\_CANON} gap reported on 15 August is unfixed, so \texttt{f2b}
+understates its ``no health endpoint'' bar and the caption states the hand-counted figure;
+(ii) journal names are free text, so preprint share is a lower bound;
+(iii) \textbf{22 records carry no abstract from any checked source and are classified but
+unassessed} --- they are counted in every distribution figure and contribute nothing to the
+narrative; (iv) the trial registry has not been refreshed since 8 August and no trial
+section is included in this issue rather than presenting stale counts as current.
+Effect estimates are transcribed from abstracts and use heterogeneous exposure contrasts
+--- see the forest-plot caption; \textbf{no meta-analytic summary is computed and none
+should be}. Trend and inflection statements are judgements over a seven-day window and are
+not statistical tests; where a movement is plausibly an artefact of this pipeline's own
+harvesting legs, the text says so. Content derived from publisher metadata; abstracts
+remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

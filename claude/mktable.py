@@ -24,6 +24,11 @@ def esc(s):
     s = s.replace("ug/m3", r"$\mu$g/m$^3$")
     s = s.replace("PMcoarse", r"PM$_{\mathrm{coarse}}$")
     s = s.replace("-", "--") if False else s
+    # 2026-08-22: slash-joined pollutant lists ("NO2/SO2/CO/O3") are a single unbreakable
+    # word to TeX and overflow the 22-27 mm register columns. Same failure and same fix as
+    # brk() for DOIs in mkdigest.py: allow a break after the separator. Zero-width, so
+    # nothing moves unless the cell was going to overflow anyway.
+    s = re.sub(r"/(?=\S)", r"/\\allowbreak ", s)
     return s
 
 

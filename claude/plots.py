@@ -267,7 +267,25 @@ design_group = {
     # curriculum evaluation) is enough to trip the diagnostic; the closure below only
     # protects group names, not new leaf labels.
     "Educational intervention": "Trial / intervention",
+    # added 2026-08-22 - 9th recurrence, three labels in one issue. All three are
+    # existing groups reached by a new granular name, not new kinds of study.
+    "Satellite + chemical transport model": "Modelling / inventory",
+    "Burden / economic model": "Modelling / inventory",
+    "Ecological / spatial": "Observational - ecological",
+    # Latent since first use: "In vitro exposure" is already on two corpus records and
+    # has been silently landing in "Other / mixed" on every issue and rollup that
+    # included them. It is the same kind of study as "In vitro (cell lines)".
+    "In vitro exposure": "Experimental / toxicology",
+    # Two more latent ones surfaced by the 16-22 Aug weekly pool, i.e. they were silent
+    # on the daily issue that wrote them and only became visible at rollup scale.
+    "In vitro organ-on-chip": "Experimental / toxicology",
+    "Health impact model": "Modelling / inventory",
 }
+# DEFECT, found 2026-08-22: "Literature review" mapped to "Tool / software", which is
+# not a plausible typo of "Review / synthesis" -- it put a review in the software slice
+# of f2a for as long as it has been in the corpus (one record, 2026-08-06). Corrected
+# here rather than in the dict above so the correction is visible in a diff.
+design_group["Literature review"] = "Review / synthesis"
 # Close design_group under its own output. The 2026-08-05 fix added self-maps for the
 # nine group names in use that day but left four uncovered; a record written with one of
 # those four would have fallen through to "Other / mixed" (5th recurrence of the same
@@ -471,6 +489,9 @@ geo_group = {
     # to the right GROUP only by routing through the ("pakistan","India") needle,
     # which is correct in outcome and misleading to read; name it directly.
     "Sweden": "Europe", "Finland": "Europe", "Pakistan": "South Asia",
+    # added 2026-08-22 alongside the needles below
+    "Cambodia": "Southeast Asia", "Albania": "Europe",
+    "Iraq": "Middle East & N. Africa",
 }
 # Same closure for geography. On 2026-08-05 only four of the thirteen group names were
 # self-mapped; "Sub-Saharan Africa", "Global / multi-region", "Oceania" and six others
@@ -534,6 +555,16 @@ GEO_SUBSTR = [
     # by intent; the other two are real places that simply had no needle.
     ("faroe", "Denmark"), ("west africa", "Nigeria"),
     ("idealised", "Global"), ("idealized", "Global"),
+    # added 2026-08-22 from the unmapped diagnostic: an airborne-microplastic campaign
+    # in Phnom Penh and a post-fire biomonitoring network in Elbasan. Both are real
+    # study sites that simply had no needle; without these they inflate the
+    # "Global / multi-region" bar, which is the 2026-08-03 failure mode.
+    # Named directly in geo_group rather than routed through a neighbouring country's
+    # key -- the ("pakistan", "India") style of hop is correct in outcome and
+    # misleading to read, as the 2026-08-17 entry notes.
+    ("cambodia", "Cambodia"), ("phnom penh", "Cambodia"),
+    ("albania", "Albania"), ("elbasan", "Albania"),
+    ("iraq", "Iraq"), ("mesopotamia", "Iraq"),
     # added 2026-08-12: a GBD paper whose study setting is the whole of Asia had no
     # needle. MUST stay last in this list - "asia" is a substring of "malaysia" and of
     # "east asia"/"south asia", all of which have their own earlier needles, so the
@@ -641,6 +672,17 @@ def _hasci(e):
 # a common x-range across panels so the eye can compare them
 _glo = min([e["lo"] for e in _ALL if e.get("lo") is not None] + [e["est"] for e in _ALL] + [1.0])
 _ghi = max([e["hi"] for e in _ALL if e.get("hi") is not None] + [e["est"] for e in _ALL] + [1.0])
+# DEFECT, found 2026-08-21. The axis auto-scaled to the data, so an issue whose only
+# estimate was RR 1.011 (1.010-1.013) produced a panel spanning 1.5% in which the point
+# sat two-thirds of the way from the null line to the right edge. Nothing about the
+# figure was false and everything about it read as a large effect. Enforce a minimum
+# span of 1.6x in log space (roughly 0.79-1.27 around the null) so that a near-null
+# estimate is *drawn* near the null. Issues with genuinely wide estimates are unaffected.
+_MINSPAN = 1.6
+if _ALL and _ghi / _glo < _MINSPAN:
+    _mid = (_glo * _ghi) ** 0.5
+    _half = _MINSPAN ** 0.5
+    _glo, _ghi = min(_glo, _mid / _half), max(_ghi, _mid * _half)
 
 for _ci, E in enumerate(_CHUNKS):
     if not E:
@@ -649,7 +691,9 @@ for _ci, E in enumerate(_CHUNKS):
     # Row pitch has to beat the label height AFTER the page scales the panel to
     # \linewidth. 0.30in/row rendered at ~11pt of page space for an 8.6pt two-line
     # label; 0.55 gives ~17pt and is legible.
-    _fh = max(4.6, (0.55 if (_S and _E) else 0.30) * len(E) + 1.9)
+    # The 4.6in floor exists to leave room for the legend; on a one- or two-row issue it
+    # leaves the panel 80% empty instead (2026-08-21). Lower the floor for tiny panels.
+    _fh = max(3.1 if len(E) <= 2 else 4.6, (0.55 if (_S and _E) else 0.30) * len(E) + 1.9)
     fig, ax = plt.subplots(figsize=((10.2 if (_S and _E) else 8.0), _fh))
     y = np.arange(len(E))
     for i, e in enumerate(E):

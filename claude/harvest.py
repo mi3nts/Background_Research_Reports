@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Harvest PM-monitoring / PM-health records for an entry-date window."""
-import os, sys, json, time, urllib.parse, urllib.request, datetime
+import os, re, sys, json, time, urllib.parse, urllib.request, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = {"User-Agent": "PM-Research-Watch/1.0 (mailto:rittikpatra2014@gmail.com)"}
@@ -85,26 +85,88 @@ JOURNALS = {
     "1309-1042": "Atmospheric Pollution Research",
     "2071-1409": "Aerosol and Air Quality Research",
     "2634-3606": "Environmental Science: Atmospheres",
+
+    # Promoted 2026-08-22 from the ad-hoc supplementary sweep run on 2026-08-20,
+    # where the 8 core ISSNs yielded only 5 deposits and the supplementary set
+    # carried 72% of the issue. These are PubMed-indexed titles, but Crossref sees
+    # the deposit days-to-weeks earlier; seen.json dedups the later PubMed arrival.
+    # ISSNs verified against api.crossref.org/journals/<issn> on 2026-08-22.
+    "1520-5851": "Environmental Science & Technology",
+    "2328-8930": "Environmental Science & Technology Letters",
+    "0160-4120": "Environment International",
+    "0048-9697": "Science of the Total Environment",
+    "1096-0953": "Environmental Research",
+    "0269-7491": "Environmental Pollution",
+    "2073-4433": "Atmosphere",
+    "0169-8095": "Atmospheric Research",
+    "2397-3722": "npj Climate and Atmospheric Science",
+    "1559-064X": "Journal of Exposure Science & Environmental Epidemiology",
+    "1743-8977": "Particle and Fibre Toxicology",
+    "2471-1403": "GeoHealth",
+    "0360-1323": "Building and Environment",
+    "2950-3620": "Indoor Environments",
+    "1600-0668": "Indoor Air",
 }
 
+# Deliberately NOT tracked:
+#   2073-4433 vs MDPI *Sensors* (1424-8220) — the 2026-08-20 sweep pulled 27 Sensors
+#     deposits for 0 in-scope records; it indexes sensing hardware of every kind, not
+#     airborne-particle instrumentation. Re-add only behind a keyword prefilter.
+#   ACS ES&T Air — has no entry in Crossref's /journals index (404 on every candidate
+#     ISSN, checked 2026-08-22); it reaches us via the PubMed leg instead.
 
-def crossref_journal(issn, frm, to, rows=100):
-    """New deposits for one journal ISSN, windowed on Crossref `created`."""
+
+# Journal front matter deposited under a normal `journal-article` type. ACS in
+# particular re-deposits decades of issue metadata in bulk: on 2026-08-22 the ES&T
+# ISSN returned 154 works of which 142 were mastheads and issue-information stubs
+# from volumes 42-52. They carry a DOI and a title, so nothing downstream rejects
+# them; they have to be dropped at the source.
+_FRONTMATTER = re.compile(
+    r"^\s*(issue\s+(publication\s+information|editorial\s+masthead|table\s+of\s+contents)"
+    r"|editorial\s+masthead|masthead|front\s+matter|back\s+matter|frontmatter|backmatter"
+    r"|editorial\s+board|table\s+of\s+contents|contents"
+    r"|(subject|author)\s+index|issue\s+cover|cover\s+(image|picture)"
+    r"|acknowledg(e)?ment\s+(to|of)\s+reviewers)\s*$", re.I)
+
+
+def is_frontmatter(item):
+    t = (item.get("title") or [""])
+    t = t[0] if t else ""
+    t = re.sub(r"<[^>]+>", " ", t)
+    t = " ".join(t.split())
+    return bool(_FRONTMATTER.match(t))
+
+
+def crossref_journal(issn, frm, to, rows=200):
+    """New deposits for one journal ISSN, windowed on Crossref `created`.
+
+    Returns (items, total). `total` is Crossref's own `total-results`; when it
+    exceeds `rows` the window was truncated and the caller should say so rather
+    than silently under-report a high-volume title (STOTEN, Environ Res, Environ
+    Pollut can each clear 100 deposits in a day)."""
     u = ("https://api.crossref.org/journals/%s/works?rows=%d&mailto=rittikpatra2014@gmail.com"
          "&filter=from-created-date:%s,until-created-date:%s"
          "&select=DOI,title,created,container-title,abstract,author,type,URL") % (issn, rows, frm, to)
     try:
         m = json.loads(get(u) or "{}").get("message", {})
-        return m.get("items", [])
+        return m.get("items", []), m.get("total-results", 0)
     except Exception:
-        return []
+        return [], 0
 
 
 def crossref_sensing(frm, to):
     """All tracked non-PubMed journals for the window, tagged with the journal name."""
     out = []
     for issn, name in JOURNALS.items():
-        for it in crossref_journal(issn, frm, to):
+        items, total = crossref_journal(issn, frm, to)
+        if total > len(items):
+            sys.stderr.write("TRUNCATED %s %s: %d of %d\n" % (issn, name, len(items), total))
+        kept = [it for it in items if not is_frontmatter(it)]
+        if len(kept) != len(items):
+            sys.stderr.write("FRONTMATTER %s %s: dropped %d of %d\n"
+                             % (issn, name, len(items) - len(kept), len(items)))
+        items = kept
+        for it in items:
             it["_issn"], it["_journal"] = issn, name
             out.append(it)
         time.sleep(0.5)

@@ -1,0 +1,406 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{22 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Issue 2026-08-22}\;\;\textcolor{Amber}{\textbar}\;\;\mbox{Entry window 22 Aug 2026}\;\;
+ \textcolor{Amber}{\textbar}\;\;\mbox{13 in scope, 44 screened out}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{13}{RECORDS IN SCOPE\\(44 SCREENED OUT)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 CLUSTERS\\OCCUPIED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{ABSTRACT-FREE\\DEPOSITS (46\%)}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RISK ESTIMATES\\ON THE PLOT}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{INFECTION-RELATED\\RECORDS}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Three papers, three scales, one claim: particulate
+exposure degrades the innate pulmonary defence against infection --- and today one of them
+carries a rescue.}\\[1.4mm]
+\footnotesize
+Zhang et al.\ (\textit{Environ Sci Technol}) followed 3{,}583 hospitalised patients with
+severe fever with thrombocytopenia syndrome and found long-term pre-admission PM$_{2.5}$
+associated with \textbf{HR 1.16 (95\% CI 1.04--1.30) per 10\,$\mu$g/m$^3$} for
+SFTS-attributable death, with viral load partially mediating; the paired mouse and cell
+work shows PM$_{2.5}$ pre-exposure raising SFTSV replication and tissue injury, implicates
+mitochondrial redox and ROS pathways, and \emph{reverses the effect with
+N-acetylcysteine}. Masci et al.\ (\textit{Environ Toxicol Pharmacol}) reach the same
+place from nutrition: in rats, chronic 20\% caloric restriction alone reproduced the
+alveolar-macrophage phenotype that residual oil fly ash produced in well-nourished
+animals --- reduced viability, lower Nrf2, higher TNF$\alpha$ --- and undernourished
+macrophages then \textbf{failed to mount a response to a Poly(I:C) viral challenge
+regardless of PM exposure}, i.e.\ the two insults are not additive because the first one
+has already saturated the damage. Introna et al.\ (\textit{ACS EST Air}) supply the
+dosimetric caveat that both need: exposing lung cells to subway-platform PM$_{2.5}$ at a
+realistic \emph{in situ} air-liquid-interface dose of 0.12\,$\pm$\,0.07\,$\mu$g/cm$^2$
+produced \textbf{no measurable change in viability or inflammatory markers at 24\,h},
+while the same particles submerged at laboratory doses moved four cytokines. The
+uncomfortable synthesis is that the epidemiology is real, the mechanism is plausible, and
+the standard in-vitro dose is nowhere near the ambient one.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Six of thirteen records arrived without an abstract --- the highest
+abstract-free share on record.} All six came through the Crossref by-ISSN sweep
+(\textit{Atmos Environ}, \textit{Atmos Res}, \textit{Atmos Pollut Res},
+\textit{Environ Pollut}), and Saturday's thin PubMed leg (2 records) meant the sweep
+carried 8 of 13. They are shipped as \textit{Metadata only} with design, sample and
+endpoint left unextracted rather than inferred. Two of them --- aerosol pH and preterm
+birth, and ammonia-driven ROS generation in secondary organic aerosol --- are the day's
+most interesting titles and the least characterisable records in it.
+
+\item \textbf{A household-fuel transition with a measurable physiological dividend.}
+In CHARLS, moving from solid to clean cooking fuel attenuated peak-expiratory-flow decline
+by \textbf{11.0\,L/min (95\% CI 4.7--17.3)} over two years and was associated with
+\textbf{OR 0.80 for chronic lung disease and 0.80 for heart disease} over the long term.
+This is one of the few PM-relevant exposures where the intervention, the physiological
+intermediate and the disease endpoint are all measured in the same cohort.
+
+\item \textbf{An outdoor-activity framing of wildfire smoke, at a two-orders-of-magnitude
+ratio.} A preprint on the July 2026 Gironde--Landes fires reports the footprint over the
+EAQI ``Poor'' threshold (hourly PM$_{2.5}$ $>$ 50\,$\mu$g/m$^3$) at \textbf{149 times the
+burned area}, extending roughly 370\,km downwind. The methodological point is the
+correction the author makes against himself: the 10\,km CAMS analysis reproduces the
+episode (daily $r = 0.83$) but underestimates peaks by a median factor of $\sim$2.2, so
+the mapped heat--smoke relay is a conservative floor, not an estimate.
+
+\item \textbf{Childhood eczema, with traffic proximity separated from the household
+cluster.} A 1{,}227-child Porto survey isolates \textbf{aOR 1.32 (1.11--1.48) for
+residence within 300\,m of a traffic zone} alongside \textbf{aOR 1.48 (1.26--1.73) for
+postnatal secondhand smoke}, after adjustment that also absorbs family history
+(aOR 3.53), income and maternal education. Cross-sectional and questionnaire-based ---
+but the traffic term surviving that adjustment set is the part worth citing.
+
+\item \textbf{Front-matter contamination in the newly promoted ES\&T feed, caught and
+closed.} The first run with the widened ISSN list pulled \textbf{154 works from
+\textit{Environ Sci Technol}, of which 142 were mastheads and issue-information stubs}
+from volumes 42--52 being re-deposited in bulk. They carry DOIs and titles, so nothing
+downstream would have rejected them. A title-pattern filter now drops them at the source.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 13 in-scope records; single-label by dominant
+contribution. \textit{Exposure assessment \& modelling} takes 5, and the health side is
+unusually evenly spread --- mechanistic toxicology 2, and one record each in
+cardiovascular/metabolic, respiratory/allergic, reproductive/developmental and other
+clinical endpoints. Seven of ten canonical clusters are occupied on a 13-record day,
+which is a wider spread than the 19-record issue that preceded it.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. \textit{Metadata only} is the largest single slice at
+6 of 13 (46\%), the highest share the watch has recorded. That slice is a statement about
+what publishers deposited, not about what was published: every one of the six is a
+Crossref journal-sweep record whose publisher supplied a title and DOI but no abstract.
+Right --- health endpoint by organ system. Four records carry a respiratory endpoint, and
+the \textit{Not extracted} bar is exactly the six abstract-free records.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. Six records are PM$_{2.5}$-specific and seven are
+unspeciated PM or a PM-proxy exposure (household solid fuel, traffic proximity, ROFA,
+mineral dust, aerosol acidity). Right --- geographic provenance. Europe leads with 4,
+China with 3, and the Middle East / North Africa contributes 2 --- an Iranian
+winter-PM$_{2.5}$ synoptic study and a Mesopotamian dust projection, both
+metadata-only. The three ``global / multi-region'' records include two whose study
+location is genuinely not stated in the deposited metadata.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{All five forest-plottable estimates, on a common logarithmic axis.
+\textbf{The exposure contrasts are not mutually comparable} --- a per-10\,$\mu$g/m$^3$
+ambient PM$_{2.5}$ contrast, two binary household/residential exposures, and a
+fuel-transition contrast --- so read direction and precision, not relative magnitude.
+The two Liu et al.\ odds ratios are protective and their published intervals are given to
+one decimal (0.7--1.0), so the upper bound touches unity even though the paper reports
+$p = 0.044$ and $p = 0.028$; they are transcribed as published rather than back-computed
+from the $p$-values.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed, counted only where a record's study population is
+explicitly anchored at that stage. Four of five windows are occupied --- the widest
+life-course coverage since 14 August --- and the day spans the whole arc from an
+aerosol-acidity/preterm-birth record through a paediatric eczema survey to a
+middle-aged-and-older cohort. Only adolescence is empty.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. The concentration of the
+\textit{Metadata only} column across four different subtopic rows is the structural
+feature of the day: the abstract-free deposits are not clustered in one corner of the
+corpus, so the gap they leave is spread across the whole issue rather than confined to
+one topic.}
+
+\vspace{3mm}
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Introna et al.\ 2026}
+{Novel approach to assess the toxicity of PM$_{2.5}$ on a subway platform using a mobile air-liquid interface system and submerged exposure}
+{ACS EST Air}
+{A mobile ALI exposure system operated \emph{on the platform itself}, with A549
+monoculture and A549 + dTHP-1 coculture, benchmarked against conventional submerged
+laboratory exposure to the same metal-rich mechanical-wear particles. At the realistic
+in-situ ALI dose of \textbf{0.12 $\pm$ 0.07\,$\mu$g/cm$^2$ there was no change in
+viability or inflammatory markers at 24\,h}. Submerged at higher dose, viability fell in
+both cell types; A549 released IL-6 and TNF$\alpha$ at 100\,$\mu$g/mL, and dTHP-1
+released IL-8 at the lowest dose tested (10\,$\mu$g/mL) with all four cytokines elevated
+at 100. The authors' own reading is the right one --- longer in-situ exposures are needed
+to reach comparable dose --- and the wider implication is that the submerged literature's
+dose range is not the ambient one.}
+{10.1021/acsestair.6c00018}
+
+\paperentry{Masci et al.\ 2026}
+{Air pollution and undernutrition induce rat alveolar macrophage functional dysregulation and compromise their response to a viral challenge}
+{Environ Toxicol Pharmacol}
+{Male Wistar rats, control vs.\ nutritional growth retardation (20\% caloric restriction,
+4 weeks), each with intranasal residual oil fly ash or vehicle; isolated alveolar
+macrophages assayed for viability, TNF$\alpha$, oxidative stress, Nrf2 and LC3, then
+challenged with Poly(I:C). Undernutrition alone reproduced what ROFA did to well-nourished
+animals. \textbf{ROFA added little or nothing on top of undernutrition} --- an attenuated
+rather than additive response --- and after Poly(I:C), control macrophages mounted an
+inflammatory response that prior ROFA \emph{amplified}, while undernourished macrophages
+failed to respond at all regardless of exposure. The interaction structure, not the main
+effect, is the finding: in a population that is already nutritionally compromised, the
+marginal immunological cost of PM may be small because the defence is already gone.}
+{10.1016/j.etap.2026.105138}
+
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Zhang et al.\ 2026}
+{PM$_{2.5}$ exposure and the prognosis of severe fever with thrombocytopenia syndrome}
+{Environ Sci Technol}
+{A cohort of \textbf{3{,}583 hospitalised SFTS patients} with long-term pre-admission
+ambient PM$_{2.5}$: \textbf{HR 1.16 (95\% CI 1.04--1.30) per 10\,$\mu$g/m$^3$} for
+SFTS-attributable death, with exploratory mediation implicating viral load. A
+counterfactual burden assessment estimates \textbf{137 avoidable SFTS deaths in Xinyang,
+2010--2022} had annual PM$_{2.5}$ met the Chinese national standard. The experimental arm
+shows PM$_{2.5}$ pre-exposure increasing SFTSV replication and tissue injury;
+transcriptomics implicate mitochondrial redox and ROS pathways, and ROS/MDA measurement
+plus N-acetylcysteine intervention support oxidative priming as the upstream step.
+Emerging-infection prognosis is a genuinely new endpoint class for this watch.}
+{10.1021/acs.est.6c03214}
+
+\band{Cardiovascular \& metabolic\hfill 1 record}{Teal}
+
+\paperentry{Liu et al.\ 2026b}
+{Household clean cooking fuel transition and attenuated cardiopulmonary function decline in middle-aged and older adults}
+{Indoor Air}
+{CHARLS 2011--2020, with two independent subcohorts built from baseline solid-fuel users:
+a short-term physiological cohort (n = 6{,}534; 27.4\% transitioned by 2013) and a
+long-term disease cohort (n = 6{,}362; 33.5\% transitioned by 2015). Transition attenuated
+peak-expiratory-flow decline by \textbf{11.0\,L/min (95\% CI 4.7--17.3)} and lowered
+systolic blood pressure modestly ($\beta = -1.7$, $p = 0.017$). Long term:
+\textbf{OR 0.80 (0.7--1.0, $p = 0.044$) for chronic lung disease} and \textbf{0.80
+(0.7--1.0, $p = 0.028$) for heart disease}, with no association for hypertension;
+protective effects were larger in non-smokers and non-drinkers. The two-subcohort design
+is what lets the physiological intermediate and the disease endpoint be read together.}
+{10.1155/ina/8898458}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sage}
+
+\paperentry{Hatem et al.\ 2026}
+{Child characteristics, household and home environmental factors associated with eczema}
+{Eur J Pediatr}
+{1{,}227 children aged 5--11 from 20 primary schools in Porto (46.5\% response), analysed
+with mixed-effects logistic regression with a school random intercept and multiple
+imputation. Independently associated with higher odds: \textbf{residence within 300\,m of
+a traffic zone, aOR 1.32 (1.11--1.48)}; \textbf{postnatal secondhand smoke, aOR 1.48
+(1.26--1.73)}; family history 3.53; higher family income 1.40; all-purpose cleaner use
+1.16. Lower odds: maternal education 0.68, detached housing 0.67, fur blanket use 0.85.
+Household dampness interacted with residence type and winter ventilation frequency.
+Cross-sectional and self-reported, so temporality is unavailable --- but the traffic term
+surviving a socioeconomic adjustment set this dense is the citable part.}
+{10.1007/s00431-026-07327-1}
+
+\band{Reproductive \& developmental\hfill 1 record}{Sky}
+
+\paperentry{Han et al.\ 2026}
+{Aerosol pH associated with preterm birth risk: unmasking the hidden role of atmospheric acidity in maternal-fetal health}
+{Environ Pollut}
+{\textbf{Metadata only.} Surfaced through the Crossref by-ISSN sweep with no abstract
+deposited; title, journal, authorship and DOI verified, nothing else extracted. Worth
+flagging by title alone: aerosol acidity as an exposure metric in a reproductive endpoint
+is not something this watch has seen before, and it pairs directly with Chai et al.'s
+pH-governed partitioning result in yesterday's issue. Queued for abstract retry.}
+{10.1016/j.envpol.2026.129011}
+
+\clearpage
+
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Fei et al.\ 2026}
+{SHAP-interpretable machine learning integrating exposures and multi-omics in COPD-lung cancer comorbidity}
+{Front Immunol}
+{A sequential cross-scale framework: GBD epidemiology 1990--2021 across 204 countries,
+exposome-wide random-forest classification with SHAP interpretation, immune
+characterisation via CIBERSORT and single-cell RNA sequencing, candidate-gene
+prioritisation by SMR and LASSO, then wet-lab validation including a macrophage-epithelial
+Transwell co-culture. \textbf{SHAP identified smoking, particulate matter pollution and
+residential radon as the major shared risk factors}; TREM1 and ODF2L emerged as shared hub
+genes, downregulated in both diseases, and macrophage-specific silencing of either
+attenuated macrophage-driven A549 migration and proliferation. The exposure side is
+GBD-level and coarse --- this is not an exposure-assessment paper --- but it is a clean
+worked example of putting an exposome variable through an interpretable-ML pipeline and
+ending at a testable target.}
+{10.3389/fimmu.2026.1875146}
+
+\paperentry{Zeng et al.\ 2026}
+{Aerosol vertical distributions determine the seasonal relationships between column AOD and surface PM$_{2.5}$ over Europe}
+{Atmos Environ}
+{\textbf{Metadata only.} No abstract deposited. The title states a result that matters
+directly to satellite-based PM$_{2.5}$ estimation --- the AOD-to-surface conversion being
+governed by vertical structure and therefore seasonally non-stationary --- so this is the
+highest-priority record of the six for abstract retry or full-text retrieval on the next
+run.}
+{10.1016/j.atmosenv.2026.122305}
+
+\band{Exposure assessment \& modelling\hfill 5 records}{Deep}
+
+\paperentry{Defrance 2026 (preprint)}
+{Beyond the fire perimeter: the smoke footprint that constrains outdoor activity dwarfs the burned area of the July 2026 Gironde--Landes wildfire episode}
+{Research Square}
+{ERA5-Land wet-bulb globe temperature combined with CAMS analysis PM$_{2.5}$ at hourly
+resolution over 25--31 July 2026, against 40 background monitoring stations. The two
+fires burned 340\,km$^2$ and forced $\sim$220{,}000 evacuations; the footprint above the
+European AQI ``Poor'' threshold (hourly PM$_{2.5}$ $>$ 50\,$\mu$g/m$^3$, where reduced
+outdoor activity is advised) reached \textbf{149 times the burned area} and about
+\textbf{370\,km downwind}, with 139$\times$ on the EU 2030 daily limit of 25\,$\mu$g/m$^3$
+and at least 121$\times$ against the larger operational fire perimeter. Plume co-location
+rose from 73\% hourly to 94\% daily. At the stations, a same-day heat--smoke relay
+affected 28\% of affected station-days at 25\,$\mu$g/m$^3$ and 19\% at 50, against
+0--2\% in the co-located grid cells --- \textbf{the 10\,km analysis smooths away the peaks
+that drive the relay}, and reproduces the episode at daily $r = 0.83$ while
+underestimating peaks by a median factor of $\sim$2.2. Preprint, single author, single
+episode; the self-directed error analysis is unusually thorough for the format.}
+{10.21203/rs.3.rs-10757961/v1}
+
+\paperentry{Qing et al.\ 2026}
+{Seasonal and urban-suburban characteristics, emission and spatial sources of PM$_{2.5}$-bound PAHs and n-alkanes in Wuhu City}
+{Atmos Pollut Res}
+{\textbf{Metadata only.} Crossref sweep, no abstract deposited. A source-apportionment
+study of the particle-bound organic fraction, which is the composition class the previous
+issue's mortality result pointed at --- flagged for retry rather than characterised here.}
+{10.1016/j.apr.2026.103186}
+
+\paperentry{Liu et al.\ 2026}
+{Identification of dominant weather patterns and circulation regulation mechanisms of winter PM$_{2.5}$ pollution in Iran}
+{Atmos Res}
+{\textbf{Metadata only.} Crossref sweep, no abstract deposited. Synoptic classification
+of winter PM$_{2.5}$ episodes; one of very few Iranian PM records the watch has surfaced,
+which is why it ships as a stub rather than being dropped.}
+{10.1016/j.atmosres.2026.109287}
+
+\paperentry{Abadi et al.\ 2026}
+{Future projections of surface dust concentrations in major dust source regions of the Mesopotamian plains}
+{Atmos Res}
+{\textbf{Metadata only.} Crossref sweep, no abstract deposited. Projected mineral-dust
+concentrations for a source region that exports coarse PM across the Gulf and into South
+Asia; no scenario, horizon or model family is extractable from the deposited metadata.}
+{10.1016/j.atmosres.2026.109282}
+
+\paperentry{Cai et al.\ 2026}
+{Effect of ammonia on reactive oxygen species generation in secondary organic aerosols}
+{Atmos Environ}
+{\textbf{Metadata only.} Crossref sweep, no abstract deposited, and no study location
+stated. Ammonia-modulated oxidative potential of secondary organic aerosol sits precisely
+between the previous issue's Nanjing ammonia-thermodynamics result and today's
+oxidative-priming mechanism papers, so it is the second-highest-priority retry after
+Zeng et al.}
+{10.1016/j.atmosenv.2026.122307}
+
+\vspace{4mm}
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{2026-08-22 $\rightarrow$ 2026-08-22}, contiguous with the 21 August
+issue. Built at 22:4x local on 22 August, satisfying the 22:00 rule for same-day
+harvesting. \textbf{Sources.} PubMed E-utilities on \texttt{[EDAT]} returned only
+\textbf{2 records}, both shipped --- a Saturday floor. Europe PMC on
+\texttt{CREATION\_DATE} returned 23 unique records, of which \textbf{15 were archival PMC
+back-scans} (legacy scans, no title, publication year decades outside the window), 3 were
+already seen or belonged to the 21 August issue, and 3 shipped. The Crossref by-ISSN
+sweep returned 36 records after front-matter filtering and \textbf{shipped 8 --- 62\% of
+the issue}. \textbf{OpenAlex returned HTTP 429 for the 20th consecutive run.} arXiv
+returned nothing new under the 3-day screen.
+\textbf{Two harvester changes this run.} The supplementary ISSN list trialled on 20 August
+was promoted into \texttt{harvest.JOURNALS} (15 additions, each ISSN verified against
+Crossref's journal index; MDPI \textit{Sensors} deliberately excluded after returning 27
+deposits for 0 in-scope records). The first run with \textit{Environ Sci Technol} in the
+list returned 154 works of which \textbf{142 were mastheads and issue-information stubs}
+being re-deposited in bulk from volumes 42--52; a title-pattern front-matter filter now
+drops these at the source, and the count is logged per journal.
+\textbf{Screening.} 44 records were screened out and written to
+\texttt{state/rejected.jsonl} with an individual reason each. Two borderline exclusions
+are logged as borderline: combustion SVOC residue on wildland-firefighter protective gear,
+and droplet-residue resuspension from medical PPE --- both occupational and
+combustion-adjacent, neither carrying an airborne particulate measurement.
+\textbf{Labels.} Six records carry no abstract and are marked \textit{Metadata only};
+their design, sample size, endpoint and (in two cases) study location are recorded as not
+extracted rather than inferred. Effect estimates are transcribed verbatim from abstracts.
+All DOIs were checked by \texttt{check\_dois.py} before publication. Content derived from
+publisher metadata; abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

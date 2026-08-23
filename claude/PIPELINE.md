@@ -1349,3 +1349,91 @@ for 16–22 Aug). `git pull` clean, `build_manifest.py` validated 25/3/1/0 and r
 `manifest OK`, working tree clean. **Nothing harvested, built, or pushed — opening 21 Aug
 now against ~9 h of deposits would strand the rest of the day permanently.** The 23:00
 scheduled run builds 21 Aug. Open items from 20 Aug all still stand.
+
+### 2026-08-22 22:1x–23:0x CDT — two-day backfill (21 + 22 Aug) and the Week-34 rollup
+Local time at start **22:14 CDT**, so under the 22:00 rule the newest buildable date is
+**today**. `last_entry_date` was `2026-08-20`, so both **21 Aug** and **22 Aug** were built,
+each with its own one-day window, and the **Saturday weekly (16–22 Aug)** was built after
+them. Corpus is contiguous 01–22 Aug. `check_dois.py` **0 fail / 0 warn on both issues**;
+`build_manifest.py` validates **27 / 4 / 1 / 0** and reports `manifest OK`.
+
+- **21 Aug — 19 shipped, 46 rejected, 7 deduped, 3 preprints.** 9 pp, 0 errors,
+  **0 overfull boxes**. Per-source: PubMed 10 unique / 6 shipped; Europe PMC 28 unique /
+  6 shipped; Crossref sweep 34 / 7. **OpenAlex 429, 19th consecutive.** Signal of the day:
+  three papers (Wei, Chen, Chai) all answering *which part of the mass* rather than *how
+  much*. Only one forest-plottable estimate (Wei, RR 1.011).
+- **22 Aug — 13 shipped, 44 rejected, 4 deduped, 1 preprint.** 7 pp, 0 errors,
+  **0 overfull boxes**. PubMed returned **2 records** (Saturday floor) and the Crossref
+  sweep carried **8 of 13**. **OpenAlex 429, 20th consecutive — treat as removed, not
+  degraded.** Signal: PM and innate defence against infection (Zhang SFTS HR 1.16;
+  Masci ROFA × undernutrition; Introna subway ALI), with Introna supplying the dosimetric
+  caveat that the realistic ALI dose produced *no* response while submerged lab doses did.
+- **Weekly W34 (16–22 Aug) — 112 records pooled, 112 unique DOIs, 7 of 7 issues, 41 effect
+  estimates.** 30 pp, 0 overfull. Measurement-side share **52%** (58/112) against 45% in
+  W33 and 54% in W32 — inside the range this pipeline's own legs can produce; the text
+  says so rather than claiming a field trend.
+
+**Harvester: the supplementary ISSN list was promoted (the 20 Aug open item).**
+15 ISSNs added to `harvest.JOURNALS`, each verified live against
+`api.crossref.org/journals/<issn>` before being written in. **MDPI *Sensors* deliberately
+excluded** (27 deposits, 0 in-scope on 20 Aug). **ACS ES&T Air has no entry in Crossref's
+`/journals` index at all** — every candidate ISSN 404s — so it stays on the PubMed leg;
+that is recorded in a comment so it is not re-attempted. `crossref_journal` now returns
+`total-results` alongside the items and warns on truncation.
+
+**New defect, found and closed the same run: Crossref front-matter.** The first sweep with
+*Environ Sci Technol* in the list returned **154 works, 142 of them mastheads and
+"Issue Publication Information" stubs** being re-deposited in bulk from volumes 42–52.
+They carry a DOI and a title, so **nothing downstream would have rejected them** — they
+would have been screened by hand forever. `harvest.is_frontmatter()` now drops them at the
+source on a title pattern and logs the count per journal. Verified: 08-22 went from 178
+raw deposits to 36.
+
+**Europe PMC is increasingly an archival-back-scan feed.** 14 of 28 unique hits on 21 Aug
+and 15 of 23 on 22 Aug were legacy PMC page scans — no title, `pubType: toc`, publication
+year decades outside the window — re-ingested with a `CREATION_DATE` inside it. They are
+now rejected with a named reason class rather than one-by-one.
+
+**f5 defect: the forest axis auto-scaled a near-null estimate into a large one.**
+The 21 Aug issue has a single estimate, RR 1.011 (1.010–1.013). `_glo/_ghi` were taken
+from the data, giving an axis spanning **1.5%**, on which the point sat two-thirds of the
+way from the null line to the right edge. Nothing was false and everything read as a large
+effect. `plots.py` now enforces **`_MINSPAN = 1.6`** in log space (≈0.79–1.27 around the
+null) and lowers the figure-height floor for panels of ≤2 rows. Issues with genuinely wide
+estimates are unaffected. **This is the fourth figure-honesty defect in the f5/f6 family
+and the first that was a scaling choice rather than a missing map entry.**
+
+**Four latent `design_group` misses, three of them silent for days.** `In vitro exposure`
+(2 corpus records) and `Health impact model` / `In vitro organ-on-chip` (surfaced only at
+weekly-pool scale) were all falling through to *Other / mixed*; `Literature review` was
+mapped to **`Tool / software`**, which is not a plausible near-miss of *Review / synthesis*.
+All four corrected. Geo: `Cambodia`, `Albania` and `Iraq` added as **named `geo_group`
+keys** with matching needles, not routed through a neighbouring country the way
+`("pakistan", "India")` is — the 17 Aug note about that hop being "correct in outcome and
+misleading to read" applied directly.
+
+**Process defect in this run, caught by proofing and worth a rule.** `mktable.py` writes a
+single `build/table_rows.tex`, so running it for 22 Aug and *then* compiling the 21 Aug
+`digest.tex` shipped the **wrong register** into the first 21 Aug PDF. Caught on the
+page-8 raster, rebuilt, re-shipped. **Rule: `mktable.py` and `pdflatex` must be adjacent
+for one date — never batch the table generation for several dates and compile afterwards.**
+
+**Layout.** Both dailies and the weekly needed `\clearpage` removals to kill low-ink pages
+(21 Aug 10 pp → 9, provenance box was alone on p10; 22 Aug 7 pp with the heatmap page
+lifted from 0.061 to 0.157 ink; weekly 31 pp → 30). No page in any of the three now falls
+below 0.050 ink. The remaining register overfull (`NO2/SO2/CO/O3`, an unbreakable
+slash-joined string in a 22 mm column) was fixed generically in `mktable.esc()` with an
+`\allowbreak` after `/` — the same fix `mkdigest.brk()` already applies to DOIs.
+
+- `state/metrics.csv` 216 rows; `seen.json` now **508 pmid / 681 doi / 700 tsig**.
+  `state/rejected.jsonl` 400 → 490 lines, every new line carrying an individual reason.
+- **For the 23 Aug run:** window `2026-08-23 -> 2026-08-23`; `last_entry_date` is now
+  `2026-08-22`. Sunday — no rollup (the monthly is due on the last Sunday, 30 Aug).
+  Open: the `ENDPOINT_CANON` gap from 15 Aug is still unfixed and f2b still understates its
+  "no health endpoint" bar; **22 abstract-free records in the W34 pool**, of which
+  `10.1016/j.atmosenv.2026.122305` (AOD ↔ surface PM2.5 over Europe),
+  `10.1016/j.envpol.2026.129011` (aerosol pH ↔ preterm birth) and
+  `10.1016/j.atmosenv.2026.122307` (NH3 ↔ ROS in SOA) are the priority retries; the trial
+  registry has not been refreshed since 8 Aug; the 08-08 to 08-12 Elsevier backlog and
+  deferred `10.1007/s11869-026-02080-8` both still stand; `claude/_mkcorpus_tmp.py` still
+  undeletable (mount EPERM).

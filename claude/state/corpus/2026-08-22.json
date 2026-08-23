@@ -1,0 +1,257 @@
+{
+ "date": "2026-08-22",
+ "entry_window": "2026-08-22 -> 2026-08-22",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Zeng et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122305",
+   "title": "Aerosol vertical distributions determine the seasonal relationships between column AOD and surface PM2.5 over Europe",
+   "journal": "Atmos Environ",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Column AOD vs surface PM2.5 (not extractable)",
+   "geo": "Europe",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "42630541",
+   "short": "Fei et al. 2026",
+   "doi": "10.3389/fimmu.2026.1875146",
+   "title": "SHAP-interpretable machine learning integrating exposures and multi-omics reveals immune alterations and biomarkers in COPD-lung cancer comorbidity",
+   "journal": "Front Immunol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "Particulate-matter pollution as a GBD exposome risk factor",
+   "geo": "Global",
+   "endpoint": "Respiratory",
+   "n": "GBD 1990-2021, 204 countries + scRNA-seq + Transwell validation",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Defrance 2026 (preprint)",
+   "doi": "10.21203/rs.3.rs-10757961/v1",
+   "title": "Beyond the fire perimeter: the smoke footprint that constrains outdoor activity dwarfs the burned area of the July 2026 Gironde-Landes wildfire episode",
+   "journal": "Research Square",
+   "sub": "Exposure assessment & modelling",
+   "design": "Modelling / inventory",
+   "pm": "CAMS analysis PM2.5 + 40 background monitors",
+   "geo": "Gironde-Landes, France",
+   "endpoint": "None (exposure)",
+   "n": "25-31 Jul 2026, hourly; 340 km2 burned area as reference",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Qing et al. 2026",
+   "doi": "10.1016/j.apr.2026.103186",
+   "title": "Seasonal and urban-suburban characteristics, emission and spatial sources of PM2.5-bound PAHs and n-alkanes in Wuhu City",
+   "journal": "Atmos Pollut Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM2.5-bound PAHs and n-alkanes (not extractable)",
+   "geo": "Wuhu, China",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Liu et al. 2026",
+   "doi": "10.1016/j.atmosres.2026.109287",
+   "title": "Identification of dominant weather patterns and circulation regulation mechanisms of winter PM2.5 pollution in Iran",
+   "journal": "Atmos Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Winter PM2.5 under synoptic weather types (not extractable)",
+   "geo": "Iran",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Abadi et al. 2026",
+   "doi": "10.1016/j.atmosres.2026.109282",
+   "title": "Future projections of surface dust concentrations in major dust source regions of the Mesopotamian plains",
+   "journal": "Atmos Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Projected surface mineral dust (not extractable)",
+   "geo": "Iraq",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Cai et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122307",
+   "title": "Effect of ammonia on reactive oxygen species generation in secondary organic aerosols",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "SOA reactive oxygen species yield (not extractable)",
+   "geo": "Not stated",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "42626119",
+   "short": "Introna et al. 2026",
+   "doi": "10.1021/acsestair.6c00018",
+   "title": "Novel approach to assess the toxicity of PM2.5 on a subway platform using a mobile air-liquid interface system and submerged exposure",
+   "journal": "ACS EST Air",
+   "sub": "Mechanistic toxicology",
+   "design": "In vitro exposure",
+   "pm": "Subway-platform PM2.5, metal-rich; ALI dose 0.12 +/- 0.07 ug/cm2",
+   "geo": "Sweden (Stockholm Univ. affiliation; platform city not stated)",
+   "endpoint": "Respiratory",
+   "n": "A549 monoculture and A549 + dTHP-1 coculture, in situ ALI + submerged",
+   "tier": "B"
+  },
+  {
+   "pmid": "42628706",
+   "short": "Masci et al. 2026",
+   "doi": "10.1016/j.etap.2026.105138",
+   "title": "Air pollution and undernutrition induce rat alveolar macrophage functional dysregulation and compromise their response to a viral challenge",
+   "journal": "Environ Toxicol Pharmacol",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal experiment",
+   "pm": "Residual oil fly ash (ROFA), intranasal, subchronic",
+   "geo": "Argentina",
+   "endpoint": "Respiratory",
+   "n": "Male Wistar rats, 20% caloric restriction x ROFA, Poly(I:C) challenge",
+   "tier": "B"
+  },
+  {
+   "pmid": "42629451",
+   "short": "Hatem et al. 2026",
+   "doi": "10.1007/s00431-026-07327-1",
+   "title": "Child characteristics, household, and home environmental factors associated with eczema: a cross-sectional study",
+   "journal": "Eur J Pediatr",
+   "sub": "Respiratory & allergic",
+   "design": "Cross-sectional survey",
+   "pm": "Traffic-zone proximity (<300 m) and postnatal secondhand smoke",
+   "geo": "Porto, Portugal",
+   "endpoint": "Respiratory",
+   "n": "1,227 children aged 5-11 across 20 primary schools",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Liu et al. 2026b",
+   "doi": "10.1155/ina/8898458",
+   "title": "Household clean cooking fuel transition and attenuated cardiopulmonary function decline: a national longitudinal study of middle-aged and older adults in China",
+   "journal": "Indoor Air",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Cohort",
+   "pm": "Household solid-fuel to clean-fuel cooking transition",
+   "geo": "China",
+   "endpoint": "Cardiovascular",
+   "n": "6,534 short-term / 6,362 long-term CHARLS participants, 2011-2020",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Han et al. 2026",
+   "doi": "10.1016/j.envpol.2026.129011",
+   "title": "Aerosol pH associated with preterm birth risk: unmasking the hidden role of atmospheric acidity in maternal-fetal health",
+   "journal": "Environ Pollut",
+   "sub": "Reproductive & developmental",
+   "design": "Metadata only (no abstract)",
+   "pm": "Aerosol acidity (pH) (not extractable)",
+   "geo": "Not stated",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Zhang et al. 2026",
+   "doi": "10.1021/acs.est.6c03214",
+   "title": "PM2.5 exposure and the prognosis of severe fever with thrombocytopenia syndrome: an integrated epidemiological and experimental study",
+   "journal": "Environ Sci Technol",
+   "sub": "Other clinical endpoints",
+   "design": "Cohort",
+   "pm": "Long-term pre-admission ambient PM2.5",
+   "geo": "Xinyang, China",
+   "endpoint": "Other clinical",
+   "n": "3,583 hospitalised SFTS patients, 2010-2022 + mouse/cell validation",
+   "tier": "A"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "SFTS-attributable death",
+   "exposure": "per 10 ug/m3 long-term PM2.5",
+   "est": 1.16,
+   "lo": 1.04,
+   "hi": 1.3,
+   "metric": "HR",
+   "src": "Zhang 2026 (Environ Sci Technol)"
+  },
+  {
+   "label": "Childhood eczema",
+   "exposure": "residence within 300 m of traffic zone",
+   "est": 1.32,
+   "lo": 1.11,
+   "hi": 1.48,
+   "metric": "aOR",
+   "src": "Hatem 2026 (Eur J Pediatr)"
+  },
+  {
+   "label": "Childhood eczema",
+   "exposure": "postnatal secondhand smoke",
+   "est": 1.48,
+   "lo": 1.26,
+   "hi": 1.73,
+   "metric": "aOR",
+   "src": "Hatem 2026 (Eur J Pediatr)"
+  },
+  {
+   "label": "Chronic lung disease",
+   "exposure": "transition to clean cooking fuel",
+   "est": 0.8,
+   "lo": 0.7,
+   "hi": 1.0,
+   "metric": "OR",
+   "src": "Liu 2026b (Indoor Air)"
+  },
+  {
+   "label": "Heart disease",
+   "exposure": "transition to clean cooking fuel",
+   "est": 0.8,
+   "lo": 0.7,
+   "hi": 1.0,
+   "metric": "OR",
+   "src": "Liu 2026b (Indoor Air)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "Aerosol acidity and\npreterm birth risk\n(metadata only)"
+  },
+  {
+   "n": 1,
+   "note": "Porto eczema survey,\n1,227 children\naged 5-11"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord this\nwindow"
+  },
+  {
+   "n": 1,
+   "note": "Xinyang SFTS\nhospital cohort\n(3,583 patients)"
+  },
+  {
+   "n": 1,
+   "note": "CHARLS middle-aged\nand older adults,\nclean-fuel transition"
+  }
+ ]
+}
