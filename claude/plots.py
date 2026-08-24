@@ -280,6 +280,17 @@ design_group = {
     # on the daily issue that wrote them and only became visible at rollup scale.
     "In vitro organ-on-chip": "Experimental / toxicology",
     "Health impact model": "Modelling / inventory",
+    # added 2026-08-23 (12th recurrence). Five of nine records on a single issue fell
+    # through, which put "Other / mixed" at the top of the donut on a day whose whole
+    # point was architectural diversity. Two of the five -- "Systematic review" and
+    # "Burden estimation" -- are bare variants of names already in the map with a
+    # parenthetical ("(PRISMA)", "(GBD)"), i.e. exactly the near-miss class that keeps
+    # recurring. The fall-through is now a hard build failure, see below.
+    "Field study": "Measurement campaign",
+    "Observational + ML": "Measurement campaign",
+    "Chamber + aircraft": "Chamber / laboratory",
+    "Systematic review": "Review / synthesis",
+    "Burden estimation": "Modelling / inventory",
 }
 # DEFECT, found 2026-08-22: "Literature review" mapped to "Tool / software", which is
 # not a plausible typo of "Review / synthesis" -- it put a review in the software slice
@@ -297,6 +308,16 @@ def dgrp(d):
         _design_unmapped.add(d)
     return design_group.get(d, "Other / mixed")
 dg = collections.Counter(dgrp(p["design"]) for p in PAPERS)
+# DEFECT CLASS CLOSED 2026-08-23. This fall-through has now been logged twelve times.
+# Every previous fix added map entries and left the diagnostic as a print() at the very
+# bottom of the file, where it is invisible under two pdflatex passes -- so the next
+# unmapped label shipped a wrong figure again. Fail the build at the point of use
+# instead: a figure that silently mislabels the corpus is worse than a build that stops.
+if _design_unmapped:
+    raise SystemExit(
+        "f2: design label(s) not in design_group, so they would be drawn as "
+        "'Other / mixed': %s\nAdd them to design_group in plots.py in the same edit "
+        "that writes them onto a record." % sorted(_design_unmapped))
 dg_items = dg.most_common()
 
 # Endpoint labels drifted across issues (Cognitive / Neurological / Neuro-cognitive were
@@ -484,6 +505,12 @@ geo_group = {
     # added 2026-08-05: continental group names used directly as a record's geo
     "East Asia": "East Asia (ex-China)", "South Asia": "South Asia",
     "North America": "North America", "Multi-country": "Global / multi-region",
+    # added 2026-08-23. A record naming two countries ("United States + Germany", a US
+    # airborne campaign plus a Julich chamber campaign) resolved to North America via the
+    # "united states" substring rule, silently dropping the second leg. Keys like this
+    # must be named explicitly and land in the multi-region bucket, because there is no
+    # honest single-country bar for them. Same failure mode as the 17 Aug Pakistan hop.
+    "United States + Germany": "Global / multi-region",
     # added 2026-08-17. "Sweden" had no key and no needle, so the Swedish COVID
     # case-crossover would have fallen to the unmapped bucket. "Pakistan" resolved
     # to the right GROUP only by routing through the ("pakistan","India") needle,

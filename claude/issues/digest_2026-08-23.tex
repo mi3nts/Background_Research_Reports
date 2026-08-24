@@ -1,0 +1,390 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{23 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Issue 2026-08-23}\;\;\textcolor{Amber}{\textbar}\;\;\mbox{Entry window 23 Aug 2026}\;\;
+ \textcolor{Amber}{\textbar}\;\;\mbox{9 in scope, 22 screened out}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{RECORDS IN SCOPE\\(22 SCREENED OUT)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{OF 10 CLUSTERS\\OCCUPIED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{ABSTRACT-FREE\\DEPOSITS (22\%)}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{RISK ESTIMATES\\ON A PM CONTRAST}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{INSTRUMENT- OR\\METRIC-LEVEL PAPERS}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A Sunday issue with no forest plot and an unusually
+direct message for the sensing side: the quantity being regulated and the quantity that
+drives inflammation are coming apart, and today's instrument paper is measuring the wrong
+one.}\\[1.4mm]
+\footnotesize
+Zhong et al.\ (\textit{Environ Int}) ran three years of Fuzhou observations against an
+animal-derived surface-area/inflammation dose--response and found that \textbf{6.6\% of
+hours that satisfied the PM$_{2.5}$ standard ($<$35\,$\mu$g/m$^3$) carried
+lung-deposited surface area 7.5$\times$ above what the local LDSA/PM$_{2.5}$ ratio
+predicts}, so that \textbf{82\% of the predicted inflammatory burden was invisible to
+mass-based assessment}. In those hours median PM$_{2.5}$ was \textbf{3.0\,$\mu$g/m$^3$}
+--- an order of magnitude under the standard --- while the dose--response projects 27\%
+lung neutrophil infiltration. Their ML attribution puts the mechanism on summer--autumn
+afternoon photochemistry producing 50--100\,nm particles, i.e.\ a regime that
+\emph{grows} as primary emissions fall and radiation load rises. Every optical low-cost
+sensor in the field, including the four characterised in today's other instrument paper
+(Werderman et al., \textit{Atmos Pollut Res}), is a light-scattering mass proxy with
+essentially no response below $\sim$300\,nm. If Zhong et al.\ are right about the
+regime, the distributed-sensing literature is building dense networks for a metric that
+is becoming progressively less informative about the endpoint it is meant to proxy, and
+the missing instrument --- a cheap, deployable surface-area or number-below-100\,nm
+sensor --- is not on anyone's roadmap in this corpus.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{The first four-way laboratory characterisation of the current low-cost
+sensor generation --- and it arrived without an abstract.} Werderman et al.\ evaluate
+\textbf{Sensirion SEN66, Piera IPS-7100, PurpleAir PIXEL and Alphasense OPC-N3} across
+aerosol types and concentration ranges. Three of the four are units this watch has not
+seen characterised before (the PIXEL is PurpleAir's move away from Plantower; the
+IPS-7100 is one of the few consumer-priced units advertising particle-number output).
+The publisher deposited title, authorship and DOI only, so it ships as
+\textit{Metadata only} and is the highest-priority abstract retry on the queue. Last
+author Sousan ran the 2021 OPC-N3/SPS30/AirBeam2/PMS-A003 evaluation that established the
+environmental-vs-occupational calibration split, which is the lineage but not a finding.
+
+\item \textbf{A biomonitoring result strong enough to be a sensor.} Giannetti et al.\
+sampled \textit{Crematogaster scutellaris} at 30 traffic sites plus 4 controls in Parma
+and found magnetic susceptibility of particles on the ant exoskeleton tracking traffic
+intensity at \textbf{Spearman $\rho = 0.825$, $p < 0.001$}, with each additional
+\textbf{1{,}000 vehicles/day associated with a 1.41-fold increase} and roughly
+\textbf{700-fold across the sampled gradient}. Co-located soil showed nothing
+($\rho = 0.167$, $p = 0.346$), which is the control that makes the result interesting:
+the ant is integrating the airborne fraction, not the deposited one. SEM-EDS puts Fe-oxide
+particles doped with Zn, Cu and Ti on the thorax, morphologically consistent with brake
+and tyre wear. No calibration to $\mu$g/m$^3$ and no CI on the slope --- but as a
+zero-power, zero-maintenance spatial sampler it is a genuinely different point in the
+network-design space.
+
+\item \textbf{Mediation of the air-pollution/cognition link is still not identified.}
+Sakhvidi et al.\ find only \textbf{16 studies and 72 exposure--mediator--outcome
+associations} across six pollutants for the whole literature, with cardio- and
+cerebrovascular disease the most consistent candidate mediator and mental health, sleep
+and lung function unresolved. Reporting quality was judged good; risk of bias was not,
+particularly for outcome ascertainment and confounding. The honest reading is that the
+mediation question is under-powered rather than answered.
+
+\item \textbf{UK Biobank puts PM next to plasma neurodegeneration markers and finds the
+interaction mostly absent.} In 19{,}645 participants aged $\geq$50 with complete
+proteomic, metabolomic and environmental data, \textbf{GFAP was associated with dementia
+at HR 2.65 (95\% CI 2.17--3.25)} and NfL with transitions to Parkinson's disease,
+dementia and death. \textbf{PM $\times$ NfL interacted with mortality only at the nominal
+level, and there was little evidence of PM interaction with either marker for dementia};
+NO$_2$/NO$_x$ $\times$ GFAP was \emph{negative}. This is largely a null for the PM term
+and should be cited that way, not as support for a PM--neurodegeneration pathway.
+
+\item \textbf{No forest plot today.} The only CI-bearing estimate in the corpus has a
+plasma protein on its left-hand side, not a particulate contrast, and Zhong's and
+Giannetti's numbers carry no intervals. f5 is omitted --- the same call as 20 August.
+\end{itemize}
+
+\vspace{3mm}
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 9 in-scope records; single-label by dominant
+contribution. \textit{Sensing, forecasting \& instrumentation} and \textit{Exposure
+assessment \& modelling} take 3 each --- \textbf{six of nine records sit on the
+measurement side of the field}, the most method-weighted day this watch has produced.
+\textbf{Only four of ten canonical clusters are occupied.} The six empty ones are
+mechanistic toxicology, cardiovascular/metabolic, respiratory/allergic,
+reproductive/developmental, occupational/indoor and other clinical endpoints --- that is,
+the entire clinical half of the taxonomy is absent from a nine-record day.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture, after grouping. The distribution is unusually flat:
+no group holds more than two of nine records --- measurement campaign 2 (the Parma ant
+survey and the Fuzhou LDSA record), chamber/laboratory 2 (the CIMS calibration and the
+biomass-burning chamber--aircraft work), \textit{Metadata only} 2, and one each of
+observational cohort, review/synthesis and modelling/inventory. The abstract-free share
+is 22\%, less than half of Saturday's 46\%. Right --- health endpoint by organ system.
+Only four records carry a health endpoint at all (two neuro/cognitive, one respiratory,
+one cancer); the \textit{No health endpoint} and \textit{Not extracted} bars together are
+five of nine.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. Note that only one record is PM$_{2.5}$ mass in the
+conventional sense; the rest use lung-deposited surface area, magnetic susceptibility of
+deposited particles, aerosol oxidation state, OVOC precursor concentration, a composite
+microclimate index, or GBD risk-factor categories. \textbf{The day's metric diversity is
+itself the finding} and it is the direct visual counterpart to the LDSA/mass decoupling in
+the lead item. Right --- geographic provenance. The \textit{global / multi-region} bar of 4
+is not four global studies: it is two genuinely global records (the GBD burden analysis and
+the cognitive-aging review), one two-country instrument campaign, and one metadata-only
+record whose study city the publisher did not deposit. Europe 2 (Parma, UK), North America
+2, China 1.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed, counted only where a record's study population is
+explicitly anchored at that stage. Two of five windows occupied and both at the old end
+--- the UK Biobank $\geq$50 cohort and the cognitive-aging review at 65+, the GBD female
+lung-cancer burden across working-age adulthood. \textbf{No record this window studies a
+population under 18}, and the perinatal window, occupied yesterday by the aerosol-acidity
+preterm-birth stub, is empty again.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. With nine records across
+seven architectures the matrix is close to a permutation --- no cell holds more than one
+record except \textit{Metadata only}, which spans sensing and exposure modelling. There is
+no methodological concentration to report on a day this small, and reading a pattern into
+it would be over-interpretation.}
+
+\vspace{3mm}
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{Werderman et al.\ 2026}
+{Laboratory evaluation of Sensirion SEN66, Piera IPS-7100, PurpleAir PIXEL and OPC-N3 low-cost aerosol sensors across aerosol types and concentration ranges}
+{Atmos Pollut Res}
+{\textbf{Metadata only.} Crossref by-ISSN sweep; title, authorship (Werderman, Richards,
+Berkuta, Sousan) and DOI verified, no abstract deposited and no numbers extractable. It is
+nevertheless the single most on-topic record of the window: a chamber characterisation of
+\emph{four} current-generation units across aerosol type and concentration range, three of
+which --- SEN66, IPS-7100, PurpleAir PIXEL --- have no prior evaluation in this corpus,
+against the OPC-N3 as the established reference point. The same last author's 2021
+four-sensor evaluation established that environmental and occupational settings need
+separate calibration factors, so the plausible contribution here is the aerosol-type
+dependence of that factor for the newer optics. \textbf{Highest-priority full-text
+retrieval on the next run}; nothing is asserted about its findings until then.}
+{10.1016/j.apr.2026.103185}
+
+\paperentry{Giannetti et al.\ 2026}
+{Ants as bioindicators of urban traffic pollution}
+{Environ Pollut}
+{Thirty traffic-graded sites plus four controls in Parma; magnetic susceptibility and
+SEM-EDS on \textit{Crematogaster scutellaris} exoskeleton and on co-located soil at 5\,cm.
+\textbf{Ant magnetic susceptibility tracked traffic intensity at $\rho = 0.825$
+($p < 0.001$); soil did not ($\rho = 0.167$, $p = 0.346$)}. On a log scale the relation is
+linear ($R = 0.66$, $p < 0.001$) with \textbf{1.41-fold per additional 1{,}000
+vehicles/day}, $\sim$700-fold across the gradient. SEM-EDS found Fe-oxide particles doped
+with Zn, Cu and Ti concentrated on the thorax, morphologically consistent with
+traffic-derived ultrafine PM. The weaknesses are that no slope CI is given, magnetic
+susceptibility is a proxy for the ferrous fraction only (it says nothing about organic or
+secondary mass), and nest-density confounding with traffic corridors is not addressed. For
+distributed sensing the interest is orthogonal: a passive, unpowered integrator with
+month-scale averaging at effectively zero unit cost, usable as a siting prior for where to
+put real instruments rather than as a replacement for them.}
+{10.1016/j.envpol.2026.129010}
+
+\paperentry{Roska et al.\ 2026}
+{Beyond targeted calibrations: comprehensive quantification of oxygenated organic compounds in urban atmospheres}
+{Environ Sci Technol}
+{A collision-induced-dissociation voltage-scanning method to derive sensitivities for an
+ammonium-adduct CIMS, so OVOCs without an authentic standard can still be quantified.
+Validated in the laboratory, then applied to the \textbf{2023 AEROMMA airborne campaign
+and the 2024 SAPHIR-CHANEL chamber campaign}: coverage rose to \textbf{98\% of total
+signal in chamber and 78\% in the field}, and adding the newly quantified species raised
+estimated \textbf{OH reactivity by $\sim$5\% and SOA formation potential by $\sim$62\%}.
+Coverage degrades with molecular size and oxidation state, and chamber-derived
+sensitivities are being transferred to ambient air on the strength of trend agreement
+rather than field standards --- the paper says so. The 62\% figure is the one that matters
+downstream: SOA yields used in chemical-transport models that feed exposure surfaces are
+calibrated against measurements that were missing most of this signal.}
+{10.1021/acs.est.6c04149}
+
+\band{Exposure assessment \& modelling\hfill 3 records}{Deep}
+
+\paperentry{Zhong et al.\ 2026}
+{Photochemical ultrafine particles pose potential inflammatory risk despite low PM$_{2.5}$ mass}
+{Environ Int}
+{Three years of hourly Fuzhou observations; lung-deposited surface area compared against
+what the local LDSA/PM$_{2.5}$ ratio predicts, with predicted inflammation from an
+animal-derived surface-area dose--response. \textbf{6.6\% of PM$_{2.5}$-attainment hours
+($<$35\,$\mu$g/m$^3$) carried 7.5$\times$ the expected surface-area exposure, and 82\% of
+the predicted inflammatory risk in those hours was undetected by mass}. Median
+PM$_{2.5}$ during them was \textbf{3.0\,$\mu$g/m$^3$}, with the dose--response projecting
+27\% lung neutrophil infiltration. Machine learning attributes the events to photochemical
+production of 50--100\,nm particles on warm, high-radiation summer--autumn afternoons
+(O$_3$ and secondary organic carbon dominate importance). \textbf{The limitation that
+threatens the inference is the dose--response itself}: an animal-derived surface-area
+relation extrapolated to a human population gives a predicted, not an observed,
+inflammatory response, and no human endpoint is measured here. Even so, the decoupling of
+LDSA from mass is measured, not modelled, and it is a direct challenge to the assumption
+that a dense network of scattering-based mass sensors indexes health-relevant exposure.}
+{10.1016/j.envint.2026.110469}
+
+\paperentry{Zhang et al.\ 2026b}
+{Photoinduced intraparticle chemistry drives the rapid atmospheric oxidation of biomass burning organic aerosol}
+{Environ Sci Technol}
+{Chamber isolation of biomass-burning aerosol aging pathways --- UV-A irradiation,
+OH-driven SOA formation, heterogeneous OH oxidation, ozonolysis and evaporation ---
+benchmarked against aircraft measurements of wildfire and prescribed-burn plumes.
+\textbf{UV-A irradiation drove intraparticle aging an order of magnitude faster than
+gas-phase oxidation}, at an estimated quantum yield of $\sim$0.4\% (four in a thousand
+absorbed photons generate particle-phase radicals). The authors estimate that
+\textbf{over half of oxygenated OA in biomass-burning-influenced regions may originate
+from photo-oxidised primary OA within the first day}. This inverts the standing
+assumption that gas-phase oxidation dominates BBOA aging, and it matters for exposure
+work because oxidation state governs both the oxidative potential of the inhaled particle
+and the optical properties that low-cost scattering sensors respond to --- a smoke plume's
+sensor bias is not constant along its trajectory.}
+{10.1021/acs.est.6c02532}
+
+\paperentry{Mohammed 2026}
+{Spatiotemporal dynamics of atmospheric vulnerability in hot arid cities: introducing the Urban Microclimate Air Stress Index (UMASI)}
+{Build Environ}
+{\textbf{Metadata only.} Crossref sweep, no abstract deposited, no study city named in the
+metadata. A composite index combining microclimate and air-quality stress is exactly the
+kind of construct that needs its weighting scheme inspected before it is used, so nothing
+is characterised here. Flagged for retry; low priority relative to Werderman et al.}
+{10.1016/j.buildenv.2026.115166}
+
+\clearpage
+
+\band{Neuro / mental health\hfill 2 records}{Deep}
+
+\paperentry{Beydoun et al.\ 2026}
+{The interplay of air pollution with plasma neurodegenerative markers and metabolome for dementia, Parkinson's disease and all-cause mortality}
+{Ecotoxicol Environ Saf}
+{UK Biobank, \textbf{19{,}645 participants aged $\geq$50} with complete proteomic,
+metabolomic and environmental data; Cox models plus multistate Weibull models for
+transitions from healthy to dementia, Parkinson's disease and death. Higher NfL predicted
+all three transitions; \textbf{GFAP was specific to dementia, HR 2.65 (95\% CI
+2.17--3.25)}. On the exposure side the result is largely negative: \textbf{PM $\times$
+NfL interacted with mortality only at the nominal level, NO$_2$/NO$_x$ $\times$ GFAP
+interacted \emph{negatively}, and there was little evidence of PM interaction with either
+marker for dementia}. Metabolomic principal components (lipid, amino-acid, energy) did
+modify the biomarker--outcome relations and interacted with PM for PD and dementia; a
+branched-chain-amino-acid component attenuated the GFAP--dementia association. The
+interaction tests are nominal and unadjusted for multiplicity across a large grid, so the
+positive ones should be treated as hypothesis-generating. Cite this for the biomarker
+result and for the \emph{absence} of a PM interaction, not for a PM effect.}
+{10.1016/j.ecoenv.2026.120657}
+
+\paperentry{Sakhvidi et al.\ 2026}
+{Ambient air pollution exposure and cognitive aging; mediators and possible pathways: a systematic review on the epidemiological studies}
+{Ageing Res Rev}
+{\textbf{16 studies, 72 unique exposure--mediator--outcome associations}, six pollutants
+(PM$_{2.5}$, PM$_{10}$, NO$_2$, NO$_x$, black carbon, PM$_1$ components), with PM$_{2.5}$
+in 65\% of analyses. Outcomes span memory, processing speed and diagnosed dementia;
+candidate mediators span depression/anxiety/stress, FEV$_1$/FVC/PEF, stroke and
+hypertension, CRP, type 2 diabetes, sleep and neuroanatomical change. \textbf{Cardio- and
+cerebrovascular disease emerged as the most consistent mediator}; mental health, sleep and
+lung function showed potential but unconfirmed mediation. Reporting quality was judged
+generally good, but most studies carried some risk of bias in outcome assessment and
+confounding adjustment. No pooled estimate, and 16 studies across six pollutants and this
+many candidate mediators is a thin base --- the useful output is the map of which pathways
+have been tested at all, and the observation that almost none have been tested with a
+formal causal-mediation design.}
+{10.1016/j.arr.2026.103330}
+
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Wang et al.\ 2026}
+{Trends, inequalities, and 2030 projections of women's tracheal, bronchial, and lung cancer attributable to air pollution, radon, and tobacco exposure}
+{Front Glob Womens Health}
+{GBD 2023, female tracheal/bronchial/lung cancer 1990--2023, five inhalation-related risk
+factors, with SDI-gradient smoothing, concentration indices for inequality, decomposition
+by demographic vs epidemiological change, and projection to 2030. Smoking remains the
+leading contributor, \textbf{ambient particulate matter second, secondhand smoke third}.
+Over 1990--2023 \textbf{household solid-fuel-attributable mortality fell most sharply
+while particulate-matter-attributable mortality rose slightly}, with China the standout
+for the PM-attributable share. Along the SDI gradient, PM shows a \textbf{rising burden
+with diminishing inequality} --- the opposite pattern to radon and tobacco --- and
+decomposition attributes the PM increase to population growth and aging rather than to
+rising risk. Projected to keep rising to 2030. Standard GBD caveats bind hard here:
+the exposure is a modelled global surface, the attributable fraction rests on assumed
+counterfactual and RR functions, and the 2030 projection is an extrapolation of fitted
+trend, not a scenario.}
+{10.3389/fgwh.2026.1662451}
+
+\vspace{4mm}
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{2026-08-23 $\rightarrow$ 2026-08-23}, contiguous with the 22 August
+issue. \textbf{This issue was built late}, on 24 August, because the scheduled Sunday run
+did not fire; the harvest window is unchanged and no gap was left, but the record is noted
+rather than concealed. \textbf{Sources.} PubMed E-utilities on \texttt{[EDAT]} returned
+\textbf{1 record} (a ruminant-methane study, screened out) --- the lowest single-day
+PubMed yield the watch has recorded, consistent with a Sunday deposit floor; the
+connector re-query on both the health and the instrumentation axis returned zero for the
+same window. Europe PMC on \texttt{CREATION\_DATE} returned 20 records, of which
+\textbf{13 were archival PMC back-scans} (publication years 1974--2005, no title in the
+record) and 5 shipped. The Crossref by-ISSN sweep returned 12 records after front-matter
+filtering and shipped 4. \textbf{OpenAlex returned HTTP 429 for the 21st consecutive
+run.} arXiv returned nothing new under the 3-day recency screen. Consensus and Scholar
+Gateway were both queried for the Werderman et al.\ sensor evaluation and neither has
+indexed it yet, which is why it ships as a stub.
+\textbf{Screening.} 22 records were screened out and written to
+\texttt{state/rejected.jsonl} with an individual reason each; the 13 archival back-scans
+carry a shared structural reason. One borderline exclusion is logged as borderline:
+a national wastewater-based-epidemiology assessment, environmental and
+population-scale but with no airborne route.
+\textbf{Labels.} Two records carry no abstract and are marked \textit{Metadata only};
+their design, sample size, endpoint and study location are recorded as not extracted
+rather than inferred. \textbf{No forest plot} is included --- see the closing bullet of
+``What changed today'' for why. All DOIs were checked by \texttt{check\_dois.py} before
+publication. Content derived from publisher metadata; abstracts remain the copyright of
+their respective publishers.\par}
+\end{keybox}
+
+\end{document}

@@ -504,5 +504,99 @@
   "start_date": "2023-01-23",
   "primary_completion_date": "2028-06-01",
   "note": "Only registration updated in the 2026-08-02..08 window. Labelled INTERVENTIONAL but the only intervention is an MRI task - it is an observational neuroimaging cohort with a registry misclassification. Exposure is modelled prenatal ambient PM, not measured."
+ },
+ "NCT06447974": {
+  "first_seen": "2026-08-22",
+  "title": "The Barts Charity Children's Environmental Health Clinic",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Queen Mary University of London",
+  "enrollment": 200,
+  "interventions": [
+   "Exposure mitigations"
+  ],
+  "conditions": [
+   "Environmental Exposure",
+   "Health Behavior",
+   "Asthma in Children",
+   "Environmental Illness"
+  ],
+  "start_date": "2025-07-24",
+  "last_update": "2026-08-13",
+  "primary_outcomes": [
+   "How effective is a specialist NHS environmental health clinic in reducing exposure to environmental contaminants in children with chronic respiratory disease, and what is the change in health outcomes."
+  ],
+  "window": "2026-08-08..2026-08-22"
+ },
+ "NCT05903950": {
+  "first_seen": "2026-08-22",
+  "title": "Air Pollution and Cardiovascular Disease in Qatar: an Interventional Study to Reduce Blood Pressure",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Weill Cornell Medical College in Qatar",
+  "enrollment": 100,
+  "interventions": [
+   "Air cleaners with HEPA filter",
+   "Air cleaners without HEPA filter"
+  ],
+  "conditions": [
+   "Hypertension, Systolic",
+   "Metabolic Syndrome"
+  ],
+  "start_date": "2024-11-03",
+  "last_update": "2026-08-20",
+  "primary_outcomes": [
+   "Change in Systolic Blood Pressure"
+  ],
+  "window": "2026-08-08..2026-08-22"
+ },
+ "NCT07540000": {
+  "first_seen": "2026-08-22",
+  "title": "The INTERvening for LUNG Health Trial",
+  "status": "NOT_YET_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "PHASE4",
+  "sponsor": "Johns Hopkins University",
+  "enrollment": 800,
+  "interventions": [
+   "Community health worker-delivered multi-component respiratory health intervention"
+  ],
+  "conditions": [
+   "Spirometry"
+  ],
+  "start_date": "2026-09-15",
+  "last_update": "2026-08-12",
+  "primary_outcomes": [
+   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
+  ],
+  "window": "2026-08-08..2026-08-22"
+ },
+ "NCT07271381": {
+  "first_seen": "2026-08-22",
+  "title": "THREAT: Testing Harms Related to Exposure to Allergenic and Epithelial Toxins",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "National Institute of Allergy and Infectious Diseases (NIAID)",
+  "enrollment": 120,
+  "interventions": [
+   "Environmental Exposures",
+   "Control Exposures"
+  ],
+  "conditions": [
+   "Allergic",
+   "Inflammatory"
+  ],
+  "start_date": "2026-04-15",
+  "last_update": "2026-08-10",
+  "primary_outcomes": [
+   "Cohort 1 (skin): The primary endpoint for the skin substudy is the skin impedance change response from the common environment.",
+   "Cohort 2 (GI): The primary endpoint for the GI substudy is analogous to that of the skin substudy, except replacing skin impedance with the Shannon-Weaver diversity index measured on the gut microbiome that measures metabolic diversity.",
+   "Cohort 2 (Airway): The primary endpoint for the airway substudy is the airway maximum change response from the common environment minus the airway maximum change response from the pure environment.",
+   "Based on combined exposures from all 3 organ systems and randomization design, repeat primary and secondary endpoint responses of Stage 1."
+  ],
+  "window": "2026-08-08..2026-08-22"
  }
 }

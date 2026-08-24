@@ -1455,3 +1455,49 @@ mount. Verified afterwards by hashing every path in `git ls-tree -r HEAD` agains
 that blocked porcelain `commit` this run is dated **21 Aug 08:41** — it is the leftover of
 the no-op run, so the lock accumulates even on runs that write nothing. Stray `.git/idx-*`
 copies from this workaround are also undeletable and will keep accumulating.
+
+## 2026-08-24 run — 23 Aug backfill only (24 Aug deferred to the evening run)
+
+Window `2026-08-23 -> 2026-08-23`; the scheduled Sunday run did not fire, so 23 Aug was
+built a day late. **Sources:** PubMed `[EDAT]` 1 (screened out); the connector re-query on
+*both* axes returned 0 for the same window — a genuine Sunday floor, not a query fault.
+Europe PMC 20, of which **13 archival PMC back-scans** (1974–2005, no title) and 5
+shipped. Crossref by-ISSN 12, shipped 4. **OpenAlex HTTP 429 for the 21st run.** arXiv
+nothing new. **9 in scope, 22 rejected** (each with an individual reason;
+`rejected.jsonl` 490 → 512). `seen.json` +9. `metrics.csv` 216 → 220 rows.
+**Zero-effect issue — f5 omitted**, as on 20 Aug: the only CI-bearing estimate (GFAP →
+dementia, HR 2.65) has a plasma protein, not a particulate contrast, on its left-hand side.
+
+**Two figure-honesty defects, both caught by proofing, both now closed at the code level.**
+(1) `design_group` fell through for **5 of 9 records** — "Field study", "Observational + ML",
+"Chamber + aircraft", "Systematic review", "Burden estimation" — putting *Other / mixed*
+at the top of the f2 donut on a day whose whole point was architectural diversity. Two of
+the five are bare variants of keys already present with a parenthetical
+("Systematic review (PRISMA)", "Burden estimation (GBD)"). **12th recurrence.** Every prior
+fix added map entries and left the diagnostic as a `print()` at the bottom of `plots.py`,
+invisible under two `pdflatex` passes. It is now a **`SystemExit` at the point of use** —
+a figure that silently mislabels the corpus is worse than a build that stops. Verified
+against every corpus file first: 0 unmapped across the whole store, so rollups are safe.
+(2) `"United States / Germany"` resolved to **North America** via the `"united states"`
+substring rule, silently dropping the Jülich chamber leg — the 17 Aug Pakistan-hop failure
+mode again. Record relabelled `"United States + Germany"` and named explicitly in
+`geo_group` → *Global / multi-region*.
+
+Proofing also caught **my own arithmetic**: the masthead claimed 5 of 10 clusters occupied
+when 4 are (SENS 3, EXPO 3, NEU 2, BURD 1), and the f1 caption named four empty clinical
+clusters when six are empty. Both corrected; the f2 and f3 captions were rewritten to
+describe the *grouped* bars actually plotted rather than the raw design/geo strings.
+Layout: `\clearpage` after the exec brief removed (8 pp → 7, killed a 0.005-ink orphan
+page). 0 overfull boxes; no page below 0.086 ink.
+
+- **24 Aug is deliberately NOT built.** User instruction during this run: build it on
+  tonight's scheduled run. `cache/2026-08-24/` is already warm (PubMed 3, Europe PMC 4,
+  Crossref 9 — including **4 ACP records, the first Atmos. Chem. Phys. deposits the sweep
+  has caught**, which is exactly the PubMed-invisible gap the Consensus/Crossref legs
+  exist to close). No corpus file was written and `last_entry_date` is left at
+  `2026-08-23`, so tonight's window resolves cleanly to `2026-08-24 -> 2026-08-24`.
+- Still open: `ENDPOINT_CANON` gap from 15 Aug; trial registry not refreshed since 8 Aug;
+  the 08-08→08-12 Elsevier backlog and `10.1007/s11869-026-02080-8`; Werderman et al.
+  (`10.1016/j.apr.2026.103185`) is the **top abstract-retry** — a four-way lab evaluation
+  of SEN66 / IPS-7100 / PurpleAir PIXEL / OPC-N3 that neither Consensus nor Scholar
+  Gateway has indexed yet. `claude/_mkcorpus_tmp.py` still undeletable (mount EPERM).

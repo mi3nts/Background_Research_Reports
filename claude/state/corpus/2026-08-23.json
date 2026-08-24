@@ -1,0 +1,155 @@
+{
+ "date": "2026-08-23",
+ "entry_window": "2026-08-23 -> 2026-08-23",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Werderman et al. 2026",
+   "doi": "10.1016/j.apr.2026.103185",
+   "title": "Laboratory evaluation of Sensirion SEN66, Piera IPS-7100, PurpleAir PIXEL and OPC-N3 low-cost aerosol sensors across aerosol types and concentration ranges",
+   "journal": "Atmos Pollut Res",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Chamber PM across aerosol types (not extractable)",
+   "geo": "Not stated",
+   "endpoint": "None (instrument)",
+   "n": "Four sensor models; not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "42632445",
+   "short": "Giannetti et al. 2026",
+   "doi": "10.1016/j.envpol.2026.129010",
+   "title": "Ants as bioindicators of urban traffic pollution",
+   "journal": "Environ Pollut",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field study",
+   "pm": "Magnetic susceptibility of traffic-derived PM on ant exoskeleton",
+   "geo": "Parma, Italy",
+   "endpoint": "None (exposure)",
+   "n": "30 traffic sites + 4 control sites, Crematogaster scutellaris",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Roska et al. 2026",
+   "doi": "10.1021/acs.est.6c04149",
+   "title": "Beyond targeted calibrations: comprehensive quantification of oxygenated organic compounds in urban atmospheres",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Instrument development",
+   "pm": "OVOC precursors of SOA; NH4+-adduct CIMS",
+   "geo": "United States + Germany",
+   "endpoint": "None (instrument)",
+   "n": "AEROMMA 2023 airborne + SAPHIR-CHANEL 2024 chamber",
+   "tier": "B"
+  },
+  {
+   "pmid": "42632264",
+   "short": "Zhong et al. 2026",
+   "doi": "10.1016/j.envint.2026.110469",
+   "title": "Photochemical ultrafine particles pose potential inflammatory risk despite low PM2.5 mass",
+   "journal": "Environ Int",
+   "sub": "Exposure assessment & modelling",
+   "design": "Observational + ML",
+   "pm": "Lung-deposited surface area vs PM2.5 mass",
+   "geo": "Fuzhou, China",
+   "endpoint": "Respiratory",
+   "n": "3 years of hourly observations",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Zhang et al. 2026b",
+   "doi": "10.1021/acs.est.6c02532",
+   "title": "Photoinduced intraparticle chemistry drives the rapid atmospheric oxidation of biomass burning organic aerosol",
+   "journal": "Environ Sci Technol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chamber + aircraft",
+   "pm": "Biomass-burning organic aerosol oxidation state",
+   "geo": "United States",
+   "endpoint": "None (exposure)",
+   "n": "Chamber experiments + wildfire/prescribed-burn plume flights",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Mohammed 2026",
+   "doi": "10.1016/j.buildenv.2026.115166",
+   "title": "Spatiotemporal dynamics of atmospheric vulnerability in hot arid cities: introducing the Urban Microclimate Air Stress Index (UMASI)",
+   "journal": "Build Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Composite microclimate/air-stress index (not extractable)",
+   "geo": "Hot arid cities (not stated)",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "42632170",
+   "short": "Beydoun et al. 2026",
+   "doi": "10.1016/j.ecoenv.2026.120657",
+   "title": "The interplay of air pollution with plasma neurodegenerative markers and metabolome for dementia, Parkinson's disease and all-cause mortality risks and transitions: the UK Biobank study",
+   "journal": "Ecotoxicol Environ Saf",
+   "sub": "Neuro / mental health",
+   "design": "Cohort",
+   "pm": "Ambient PM2.5 / PM10 and NO2/NOx, modelled residential",
+   "geo": "United Kingdom",
+   "endpoint": "Neurological",
+   "n": "19,645 participants aged >=50",
+   "tier": "A"
+  },
+  {
+   "pmid": "42632461",
+   "short": "Sakhvidi et al. 2026",
+   "doi": "10.1016/j.arr.2026.103330",
+   "title": "Ambient air pollution exposure and cognitive aging; mediators and possible pathways: a systematic review on the epidemiological studies",
+   "journal": "Ageing Res Rev",
+   "sub": "Neuro / mental health",
+   "design": "Systematic review",
+   "pm": "PM2.5, PM10, PM1 components, black carbon, NO2, NOx",
+   "geo": "Global",
+   "endpoint": "Neurological",
+   "n": "16 studies, 72 exposure-mediator-outcome associations",
+   "tier": "B"
+  },
+  {
+   "pmid": "42630277",
+   "short": "Wang et al. 2026",
+   "doi": "10.3389/fgwh.2026.1662451",
+   "title": "Trends, inequalities, and 2030 projections of women's tracheal, bronchial, and lung cancer attributable to air pollution, radon, and tobacco exposure",
+   "journal": "Front Glob Womens Health",
+   "sub": "Burden, policy & mitigation",
+   "design": "Burden estimation",
+   "pm": "Ambient particulate matter and household solid fuel (GBD risk factors)",
+   "geo": "Global",
+   "endpoint": "Cancer",
+   "n": "GBD 2023, 1990-2023, projected to 2030",
+   "tier": "B"
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "No preconception\nor in-utero record\nthis window"
+  },
+  {
+   "n": 0,
+   "note": "No paediatric\nrecord this\nwindow"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord this\nwindow"
+  },
+  {
+   "n": 1,
+   "note": "GBD 2023 female\nlung-cancer burden,\nadult risk factors"
+  },
+  {
+   "n": 2,
+   "note": "UK Biobank >=50\n(n=19,645) plus the\ncognitive-aging review"
+  }
+ ]
+}
