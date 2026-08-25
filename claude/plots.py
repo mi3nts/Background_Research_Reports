@@ -197,6 +197,12 @@ design_group = {
     "Proxy validation vs personal exposure": "Measurement campaign",
     "Exposome-wide association": "Observational - cross-sectional",
     "Case-control": "Observational - cross-sectional",
+    # added 2026-08-24, in the same edit as the records that use them (13th recurrence
+    # of the unmapped-design class, and the first run where the guard was in place
+    # *before* the labels were written rather than after).
+    "Field campaign + LES modelling": "Measurement campaign",
+    "Kinetic model + data reanalysis": "Modelling / inventory",
+    "Animal + in vitro + human cohort": "Experimental / toxicology",
     "Ex vivo perfused organ": "Experimental / toxicology",
     "Satellite retrieval evaluation": "Modelling / inventory",
     "Chemical transport model": "Modelling / inventory",
@@ -519,6 +525,11 @@ geo_group = {
     # added 2026-08-22 alongside the needles below
     "Cambodia": "Southeast Asia", "Albania": "Europe",
     "Iraq": "Middle East & N. Africa",
+    # added 2026-08-24: an ACP kinetic-modelling paper whose "field site" is a pooled
+    # set of field and chamber growth-rate datasets across several continents. It is
+    # genuinely multi-region rather than unlocatable, so it is named explicitly here
+    # instead of arriving in the fallback bucket through GEO_NONGEO.
+    "Global / multi-region": "Global / multi-region",
 }
 # Same closure for geography. On 2026-08-05 only four of the thirteen group names were
 # self-mapped; "Sub-Saharan Africa", "Global / multi-region", "Oceania" and six others

@@ -1,0 +1,174 @@
+{
+ "date": "2026-08-24",
+ "entry_window": "2026-08-24 -> 2026-08-24",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Neuberger et al. 2026",
+   "doi": "10.5194/acp-26-11991-2026",
+   "title": "Importance of hydrated aerosol particles for aerosol-fog relationships in the Italian Po Valley",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign + LES modelling",
+   "pm": "Hygroscopicity parameter kappa; hydrated vs activated particle diameter",
+   "geo": "Italy",
+   "endpoint": "None (instrument)",
+   "n": "FAIRARI 2021/2022 campaign, San Pietro Capofiume",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Zhang et al. 2026c",
+   "doi": "10.5194/acp-26-12037-2026",
+   "title": "Buffering of atmospheric nanoparticle growth by temperature-dependent shifts in molecular composition, volatility and diffusivity",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Kinetic model + data reanalysis",
+   "pm": "Nanoparticle growth rate (nm/h) vs condensable organic vapour",
+   "geo": "Global / multi-region",
+   "endpoint": "None (instrument)",
+   "n": "Pooled field and chamber growth-rate observations",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Zhang et al. 2026d",
+   "doi": "10.5194/acp-26-11967-2026",
+   "title": "Improved representation of isoprene-derived secondary organic aerosol in CAM6-Chem reveals regional contrasts in its long-term changes over China",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport modelling",
+   "pm": "Isoprene-derived SOA mass and subspecies composition",
+   "geo": "China",
+   "endpoint": "None (exposure)",
+   "n": "CAM6-Chem, 2000-2019, ground-observation evaluation",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Kim et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122324",
+   "title": "Application of machine learning-based wind corrections to coupled WRF-CMAQ simulations: a comparison of dynamic assimilation and static replacement",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not extractable",
+   "geo": "Not stated",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Kang et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122322",
+   "title": "Characteristics and dry deposition fluxes of particulate parent, alkyl, and nitro-polycyclic aromatic hydrocarbons in the Bohai Sea Strait, China",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Particle-bound parent / alkyl / nitro-PAH (not extractable)",
+   "geo": "China",
+   "endpoint": "Not extracted",
+   "n": "Not extractable",
+   "tier": "C"
+  },
+  {
+   "pmid": "42634462",
+   "short": "Li & Li 2026",
+   "doi": "10.3779/j.issn.1009-3419.2026.101.13",
+   "title": "Research advances in the pulmonary carcinogenic effects of atmospheric fine particulate matter mediated by GPER",
+   "journal": "Zhongguo Fei Ai Za Zhi",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "PM2.5 estrogen-like organic components and metal ions",
+   "geo": "China",
+   "endpoint": "Cancer",
+   "n": "Not applicable (review)",
+   "tier": "B"
+  },
+  {
+   "pmid": "42634095",
+   "short": "Qin et al. 2026",
+   "doi": "10.1002/biof.70146",
+   "title": "AlCl3 aerosol exposure is associated with pulmonary lactate accumulation, neutrophil dysfunction, and fibrosis-like remodeling",
+   "journal": "Biofactors",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal + in vitro + human cohort",
+   "pm": "Repeated AlCl3 aerosol inhalation (dose not deposited)",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "Rat model, bone-marrow neutrophils, Al-ILD vs non-Al-ILD vs controls",
+   "tier": "C"
+  },
+  {
+   "pmid": "42634456",
+   "short": "Zhongguo Fei Ai Za Zhi 2026",
+   "doi": "10.3779/j.issn.1009-3419.2026.102.16",
+   "title": "China Wumeng Mountain lung cancer: evidence chain, clinical and molecular characteristics of regional lung cancer related to coal pollution in the Yunnan-Guizhou Plateau",
+   "journal": "Zhongguo Fei Ai Za Zhi",
+   "sub": "Respiratory & allergic",
+   "design": "Narrative review",
+   "pm": "Household smoky-coal PM2.5 / black carbon, PAHs and methylated PAHs",
+   "geo": "China",
+   "endpoint": "Cancer",
+   "n": "Multi-database synthesis to May 2026",
+   "tier": "B"
+  },
+  {
+   "pmid": "42634841",
+   "short": "Aulia Anwar et al. 2026",
+   "doi": "10.15407/exp-oncology.2026.02.152",
+   "title": "Smoking, environmental exposures, and chronic lung disease as key risk factors for lung cancer in North Sumatra",
+   "journal": "Exp Oncol",
+   "sub": "Respiratory & allergic",
+   "design": "Case-control",
+   "pm": "Self-reported unhealthy indoor environment (ventilation, household pollutants)",
+   "geo": "Indonesia",
+   "endpoint": "Cancer",
+   "n": "240 histologically confirmed cases, 240 controls",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Lung cancer, North Sumatra",
+   "exposure": "unhealthy indoor environment (self-reported)",
+   "est": 2.53,
+   "lo": 1.45,
+   "hi": 4.4,
+   "metric": "OR",
+   "src": "Aulia Anwar 2026 (Exp Oncol)"
+  },
+  {
+   "label": "Lung cancer, North Sumatra",
+   "exposure": "occupational exposure (self-reported)",
+   "est": 1.91,
+   "lo": 1.13,
+   "hi": 3.25,
+   "metric": "OR",
+   "src": "Aulia Anwar 2026 (Exp Oncol)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "No preconception\nor in-utero record\nthis window"
+  },
+  {
+   "n": 0,
+   "note": "No paediatric\nrecord this\nwindow"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord this\nwindow"
+  },
+  {
+   "n": 2,
+   "note": "North Sumatra\ncase-control (n=480)\nand the Al-ILD cohort"
+  },
+  {
+   "n": 0,
+   "note": "No record anchored\nat 65+ this\nwindow"
+  }
+ ]
+}

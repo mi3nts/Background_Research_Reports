@@ -1,0 +1,436 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{24 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Issue 2026-08-24}\;\;\textcolor{Amber}{\textbar}\;\;\mbox{Entry window 24 Aug 2026}\;\;
+ \textcolor{Amber}{\textbar}\;\;\mbox{9 in scope, 21 screened out}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{RECORDS IN SCOPE\\(21 SCREENED OUT)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{OF 10 CLUSTERS\\OCCUPIED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{ABSTRACT-FREE\\DEPOSITS (22\%)}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{ATMOS. CHEM. PHYS.\\RECORDS (A FIRST)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{INTERVAL-BEARING\\EXPOSURE ESTIMATES}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}The Crossref by-ISSN leg finally caught
+\textit{Atmospheric Chemistry and Physics}, and the first four records it delivered
+include the cleanest quantification this watch has seen of the error a light-scattering
+sensor makes when it cannot tell a swollen aerosol particle from an activated droplet.}\\[1.4mm]
+\footnotesize
+Neuberger et al.\ (\textit{Atmos Chem Phys}) analysed the FAIRARI 2021/2022 fog campaign
+at San Pietro Capofiume in the Po Valley with $\kappa$--K\"ohler theory and the MIMICA
+large-eddy simulation. \textbf{Failing to account for hydrated, non-activated particles
+inflated the inferred effective diameter by 81\,\% (11.6 to 21.0\,$\mu$m) and cut the
+inferred cloud droplet number concentration by 87\,\% (97.4 to 12.4\,cm$^{-3}$)}, while
+hydrated particles supplied \textbf{21\,\% of liquid water content} and accounted for
+\textbf{36\,\% of sub-kilometre visibility events with no droplet activation at all}.
+Median $\kappa$ separated cleanly by population --- fog residuals 0.45, interstitial
+0.40, out-of-fog aerosol 0.34. This is a fog-microphysics paper, but the mechanism is
+exactly the one that governs low-cost optical PM sensors at high relative humidity: the
+instrument sizes a water-coated particle and reports the mass of a dry one. The
+literature's usual answer is an empirical RH correction fitted to a co-location period,
+which implicitly assumes a fixed $\kappa$; Neuberger et al.\ measure $\kappa$ varying by
+a third \emph{within a single site and campaign} depending on which population the
+particle belongs to. A humidity correction estimated during one aerosol regime should
+therefore not be expected to transfer to another, and the residual after correction is
+not noise --- it is composition.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{A structural coverage gap closed, at least for one day.} The sweep caught
+\textbf{four} \textit{Atmospheric Chemistry and Physics} deposits --- the first ACP
+records it has ever returned --- of which \textbf{three shipped}; the fourth, a
+Jungfraujoch radiocarbon CH$_4$/CO$_2$ study, is gas-phase only and was screened out.
+ACP is one of the two journals the source audit named as
+structurally invisible to PubMed, so until now the watch has been blind to it except
+through Consensus, which is relevance-ranked rather than date-windowed and therefore
+resurfaces old work. \textbf{This is a harvest-architecture result, not a literature
+result}, and it should be read as such: the by-ISSN Crossref leg is now demonstrably
+delivering the instrumentation-side coverage it was added for. Whether it does so
+reliably needs several more days before it can be claimed.
+
+\item \textbf{Consensus returned six on-topic sensor and exposure-modelling papers and
+every one of them was a duplicate.} Low-cost sensor calibration, recalibration cadence,
+calibration-strategy review, satellite--surface fusion in North-East India, an
+urban--rural balanced estimation framework for China, and a WRF-Chem/satellite/ground
+fusion scheme --- all six were already in \texttt{seen.json}, shipped between 26 July and
+5 August. The dedupe key caught all six before a single word was written about them. This
+is the expected behaviour of a relevance-ranked source against a date-windowed pipeline,
+and it is worth stating plainly that on a thin day Consensus adds nothing to recall; its
+value is in the topics PubMed cannot index, not in the recency of what it returns.
+
+\item \textbf{Two mechanistic lung-cancer records from the same Chinese journal issue,
+pointing at the same exposure from opposite ends.} Li \& Li review GPER as the receptor
+through which PM$_{2.5}$'s estrogen-like organics and metal ions drive MAPK/ERK and
+PI3K/AKT signalling; the Wumeng Mountain synthesis assembles the exposure--component--
+effect--molecular chain for household smoky-coal lung cancer in the Yunnan--Guizhou
+Plateau, where the disease concentrates in \textbf{never-smoking women} with a
+\textbf{distinctive driver-gene spectrum} (low classical EGFR 19del/L858R, elevated
+G719X, S768I, KRAS G12C, ALK and ROS1 fusions). Both are narrative reviews with no
+pooled estimate and no formal search protocol reported in the deposited abstract, so
+neither carries evidential weight on its own. What they carry jointly is a testable
+claim: that a specific source-resolved PM composition maps to a specific somatic
+mutation spectrum. That is the kind of claim source-apportionment-capable distributed
+sensing could eventually address and mass-only networks cannot.
+
+\item \textbf{The only intervals in the window are on self-reported exposure
+categories.} Aulia Anwar et al.'s North Sumatra case-control (240/240) reports
+\textbf{OR 2.53 (95\,\% CI 1.45--4.40)} for an unhealthy indoor environment and
+\textbf{OR 1.91 (1.13--3.25)} for occupational exposure. Neither is a measured
+particulate concentration --- both are questionnaire categories --- so the forest plot
+names the exposure metric on its own axis rather than implying a PM contrast. The
+same model's age ORs are demographic covariates and are excluded from the figure for
+the reason recorded on 20 and 23 August.
+
+\item \textbf{Two abstract-free Elsevier deposits again, both from \textit{Atmospheric
+Environment}.} A machine-learning wind-correction comparison for coupled WRF--CMAQ
+(dynamic assimilation vs static replacement) and a particulate PAH dry-deposition study
+in the Bohai Sea Strait. Both ship as \textit{Metadata only}. Scholar Gateway was queried
+for the wind-correction paper and cannot help --- its corpus ends May 2026 --- and
+Consensus has not indexed either. The Elsevier abstract backlog first noted on 8 August
+is therefore still open and now spans three weeks.
+\end{itemize}
+
+\vspace{3mm}
+
+% ==================================================================== FIGURES
+\section*{\sffamily\bfseries\color{Deep}Corpus at a glance}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Records per subtopic cluster. \textbf{Four of ten clusters are occupied} ---
+exposure assessment \& modelling 3, sensing/instrumentation 2, mechanistic toxicology 2,
+respiratory \& allergic 2. The six empty clusters are cardiovascular \& metabolic,
+neuro / mental health, reproductive \& developmental, occupational \& indoor, burden /
+policy \& mitigation, and other clinical endpoints. Yesterday's neuro pair and burden
+record have no counterpart today; the balance has shifted from clinical epidemiology
+toward atmospheric process and instrumentation, which is what the ACP arrivals do to a
+nine-record day.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture, grouped. \textit{Modelling / inventory} 2,
+\textit{Metadata only} 2, \textit{Review / synthesis} 2, and one each of measurement
+campaign, experimental / toxicology and observational cross-sectional --- six
+architectures over nine records, so the panel is close to flat by construction. Right ---
+health endpoint. \textbf{Cancer 3} (both lung-cancer reviews plus the North Sumatra
+case-control), respiratory 1, and \textbf{five of nine records carry no health endpoint
+at all}: two instrument/atmospheric-process papers, one exposure-modelling paper, and the
+two metadata-only deposits whose endpoint the publisher did not deposit. Those five are
+split across two bars --- \textit{No health endpoint} 3 and \textit{Not extracted} 2 ---
+rather than pooled, so the panel understates the no-endpoint share on a first reading.
+Separately, the triage tiers are one A (Neuberger et al.), four B
+and four C; the C block is the two abstract-free deposits plus the two records whose
+exposure is a questionnaire category or an undeposited aerosol dose.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric, as binned by the coarse grouper: \textit{PM
+(unspeciated) / emissions} 6, \textit{PM$_{2.5}$ only} 2, \textit{size-resolved / number
+distribution} 1. \textbf{The two records in the PM$_{2.5}$ bar do not measure PM$_{2.5}$
+mass} --- they are binned there because their metric strings contain the token: Li \& Li
+treat PM$_{2.5}$-borne estrogenic organics and metal ions as receptor ligands, and the
+Wumeng synthesis names smoky-coal PM$_{2.5}$/black carbon inside a PAH-dominated mixture.
+Read literally, \textbf{no record this window uses gravimetric PM$_{2.5}$ as its exposure
+variable}; the metrics actually in play are hygroscopicity parameter and hydrated
+diameter, nanoparticle growth rate, isoprene-SOA mass and subspecies composition,
+particle-bound PAH, source-resolved coal-smoke composition, an inhaled AlCl$_3$ aerosol
+and a self-reported household-environment category. Right --- geographic provenance.
+\textbf{China 5}, Europe 1 (Po Valley), Southeast Asia 1 (North Sumatra), multi-region 2
+--- and the multi-region bar is one genuinely pooled multi-continent growth-rate dataset
+plus one metadata-only record whose study region the publisher did not deposit, not two
+global studies.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{The window's only interval-bearing exposure estimates, both from the same
+multivariate model in Aulia Anwar et al.\ (240 cases / 240 controls, North Sumatra).
+\textbf{Both exposures are self-reported questionnaire categories, not measured
+concentrations}, and the axis is labelled accordingly. Two points from one study is not
+a synthesis and no pooled estimate is implied or drawn.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed, counted only where a record's study population is
+explicitly anchored at that stage. \textbf{One of five windows occupied}, and it is
+working-age adulthood: the North Sumatra case-control and the aluminium-ILD supportive
+cohort. The perinatal, paediatric and adolescent windows are empty for the second
+consecutive issue, and unlike yesterday the 65+ window is empty too --- no record this
+window studies an older population.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. \textbf{The only cell
+holding more than one record is exposure assessment $\times$ \textit{Metadata only}} ---
+i.e.\ the densest cell in the matrix is an artefact of two publisher deposits arriving
+without abstracts, not a methodological concentration. Every other occupied cell holds
+exactly one record, and the two narrative reviews sit in different rows (mechanistic
+toxicology and respiratory) despite arriving from the same journal issue. With nine
+records over six architectures the matrix is close to a permutation and reading a pattern
+into it would be over-interpretation.}
+
+\vspace{3mm}
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Neuberger et al.\ 2026}
+{Importance of hydrated aerosol particles for aerosol--fog relationships in the Italian Po Valley}
+{Atmos Chem Phys}
+{FAIRARI 2021/2022 aerosol--fog observations at San Pietro Capofiume, analysed with
+$\kappa$--K\"ohler theory and the MIMICA large-eddy simulation. Median hygroscopicity
+separated by population: \textbf{fog residuals $\kappa = 0.45$, interstitial particles
+0.40, out-of-fog aerosol 0.34}, the gradient reflecting inorganic enrichment in activated
+droplets. Excluding hydrated but non-activated particles from the analysis
+\textbf{inflated effective diameter by 81\,\% (11.6 $\rightarrow$ 21.0\,$\mu$m) and
+depressed droplet number concentration by 87\,\% (97.4 $\rightarrow$ 12.4\,cm$^{-3}$)};
+hydrated particles supplied \textbf{21\,\% of liquid water content} and drove
+\textbf{36\,\% of sub-kilometre visibility events without any activation}. The LES leg
+shows fog prediction hinging on the largest dry particles. The limitation that binds is
+site specificity --- one heavily polluted valley over two winters, with a $\kappa$
+distribution shaped by Po Valley nitrate that will not transfer to a marine or biomass-
+burning regime. For distributed low-cost sensing the transferable point is that the
+hydrated/activated distinction is a \emph{composition} problem, so an RH correction
+fitted at one site during one season inherits that site's $\kappa$ and no more.}
+{10.5194/acp-26-11991-2026}
+
+\paperentry{Zhang et al.\ 2026c}
+{Buffering of atmospheric nanoparticle growth by temperature-dependent shifts in molecular composition, volatility and diffusivity}
+{Atmos Chem Phys}
+{A kinetic multiphase treatment applied to previously unreconciled field and chamber
+nanoparticle growth-rate data. The standing puzzle is that observed growth rates are
+smaller than theory predicts and \emph{less} sensitive to condensable vapour
+concentration than theory predicts. The resolution offered is two antagonistic
+temperature dependencies: \textbf{slow surface-to-bulk transport limits vapour uptake by
+semi-solid, low-diffusivity particles, while Clausius--Clapeyron shifts in the volatility
+distribution enhance growth at low temperature and low concentration}. Netted out, they
+buffer the vapour-concentration dependence, which is why measured growth rates converge
+on a few nm/h across widely varying conditions. No new measurement is reported --- this
+is a reinterpretation of existing datasets, and its persuasiveness rests on the
+volatility-distribution parameterisation rather than on independent validation. The
+relevance here is upstream of sensing: the 50--100\,nm photochemical mode that Zhong
+et al.\ flagged yesterday as invisible to mass-based assessment is produced by exactly
+this growth process, and a mechanism that makes its rate insensitive to precursor
+loading also makes it insensitive to the emission controls that reduce PM$_{2.5}$ mass.}
+{10.5194/acp-26-12037-2026}
+
+\band{Exposure assessment \& modelling\hfill 3 records}{Deep}
+
+\paperentry{Zhang et al.\ 2026d}
+{Improved representation of isoprene-derived secondary organic aerosol in CAM6-Chem reveals regional contrasts in its long-term changes over China}
+{Atmos Chem Phys}
+{An explicit isoprene-SOA formation scheme implemented in CAM6-Chem with high-NO$_x$
+gas-phase epoxide precursors and branch-resolved heterogeneous uptake from both low- and
+high-NO$_x$ pathways. Against ground observations the update \textbf{improves the SOA
+normalised mean bias over China from $-76.7\,\%$ to $-51.6\,\%$} and reproduces the
+compositional structure of four explicit ISOA subspecies. Over 2000--2019 the national
+mean ISOA trend is weak because regional changes cancel: \textbf{the sharpest increase is
+in Southwest China, where rising biogenic isoprene emission is the leading statistical
+predictor at a 58.3\,\% regression-based contribution}, with the strongest decrease in
+Shaanxi--Gansu--Ningxia. The honest reading of the headline number is that a $-51.6\,\%$
+bias is still a factor-of-two underestimate --- the scheme narrows the gap without
+closing it, and a regression-based attribution is not a causal decomposition. For
+exposure work the consequence is directional: any health study using a CTM-derived
+organic-aerosol surface over China is working with a field that is known-low by roughly
+half, and non-uniformly so by region.}
+{10.5194/acp-26-11967-2026}
+
+\paperentry{Kim et al.\ 2026}
+{Application of machine learning-based wind corrections to coupled WRF--CMAQ simulations: a comparison of dynamic assimilation and static replacement}
+{Atmos Environ}
+{\textbf{Metadata only.} Crossref by-ISSN sweep; title, authorship and DOI verified, no
+abstract deposited. The comparison it names --- injecting an ML-corrected wind field into
+CMAQ dynamically during the run versus statically replacing the WRF field beforehand ---
+is a live methodological question for anyone producing exposure surfaces, because wind
+error is the dominant transport error in urban CTM output and the two strategies have
+very different mass-conservation properties. Nothing is asserted about which won. Scholar
+Gateway cannot reach it (corpus ends May 2026) and Consensus has not indexed it.
+Second-priority abstract retry behind Werderman et al.}
+{10.1016/j.atmosenv.2026.122324}
+
+\paperentry{Kang et al.\ 2026}
+{Characteristics and dry deposition fluxes of particulate parent, alkyl, and nitro-polycyclic aromatic hydrocarbons in the Bohai Sea Strait, China}
+{Atmos Environ}
+{\textbf{Metadata only.} Crossref sweep, no abstract deposited. Nitro-PAHs are among the
+more directly mutagenic particle-bound species and are under-measured relative to the
+parent compounds, and a marine-strait dry-deposition budget is a receptor-side
+measurement rather than an emission inventory --- but no flux, no concentration and no
+sampling period are extractable from the deposited record. Flagged for retry, low
+priority relative to the wind-correction paper.}
+{10.1016/j.atmosenv.2026.122322}
+
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Li \& Li 2026}
+{Research advances in the pulmonary carcinogenic effects of atmospheric fine particulate matter mediated by GPER}
+{Zhongguo Fei Ai Za Zhi}
+{Narrative review positioning the G protein-coupled estrogen receptor as the molecular
+hub linking PM$_{2.5}$ to lung carcinogenesis. The argument: environmental estrogen-like
+organics and metal ions carried on PM$_{2.5}$ activate GPER, which is overexpressed in
+lung tumour tissue, and the activated receptor drives \textbf{MAPK/ERK and PI3K/AKT}
+signalling into inflammation, oxidative stress and ferroptosis, with downstream
+proliferation, EMT and tumour-microenvironment remodelling. GPER inhibition is proposed
+as a target. \textbf{The weaknesses are structural to the format}: no search protocol,
+no risk-of-bias assessment, no quantitative synthesis, and a receptor-centric frame that
+cannot by construction weigh GPER against the AhR and oxidative-stress pathways it does
+not review. Read it as a hypothesis map, not as evidence of pathway dominance. The one
+genuinely actionable implication for exposure science is that it assigns the causal role
+to specific \emph{components} --- estrogenic organics and transition metals --- rather
+than to mass, which is another argument for composition-resolved rather than
+gravimetric-equivalent monitoring.}
+{10.3779/j.issn.1009-3419.2026.101.13}
+
+\paperentry{Qin et al.\ 2026}
+{AlCl$_3$ aerosol exposure is associated with pulmonary lactate accumulation, neutrophil dysfunction, and fibrosis-like remodeling}
+{Biofactors}
+{Repeated AlCl$_3$ aerosol exposure in rats, with and without the MCT1 inhibitor AZD3965,
+plus bone-marrow-derived neutrophils treated with sodium L-lactate, plus a supportive
+human cohort of aluminium-exposure-related ILD, non-aluminium ILD and healthy controls
+characterised by quantitative CT, spirometry and blood transcriptomics. Exposure produced
+pulmonary aluminium deposition, \textbf{lactate accumulation}, oxidative stress, DNA
+damage response signalling and collagen-rich fibrosis-like remodelling; in vitro,
+high lactate impaired neutrophil chemotaxis, oxidative burst, mitochondrial membrane
+potential, calcium signalling and NET responses. AZD3965 partially reversed both.
+Al-ILD patients showed greater CT parenchymal abnormality and lower FVC and DLCO than
+non-Al-ILD, with innate-immune, cytokine, ECM and NET pathways enriched in blood.
+\textbf{No exposure concentration, particle size distribution or duration appears in the
+deposited abstract}, so the animal arm cannot be placed on any dose axis, and the human
+arm is cross-sectional with no exposure measurement at all --- it supports the mechanism
+narratively and cannot test it. Relevant here as occupational-aerosol toxicology and as
+a reminder that metal-bearing particulate has organ-level effects that mass concentration
+does not index.}
+{10.1002/biof.70146}
+
+\band{Respiratory \& allergic\hfill 2 records}{Teal}
+
+\paperentry{Zhongguo Fei Ai Za Zhi 2026}
+{China Wumeng Mountain lung cancer: evidence chain, clinical and molecular characteristics of regional lung cancer related to coal pollution in the Yunnan--Guizhou Plateau}
+{Zhongguo Fei Ai Za Zhi}
+{Narrative synthesis assembling an
+exposure\,$\rightarrow$\,component\,$\rightarrow$\,biological-effect\,$\rightarrow$\,%
+clinical-molecular\,$\rightarrow$\,prevention chain for household smoky-coal lung cancer
+in Xuanwei/Fuyuan, searching PubMed, Web of Science, Embase, CNKI and Wanfang to May 2026.
+Carcinogenic components named: \textbf{PAHs and methylated PAHs, PM$_{2.5}$/black carbon,
+inorganic minerals and metals, and carbonyls}, as a mixture. The clinical phenotype is
+distinctive --- predominantly \textbf{never-smoking women}, high adenocarcinoma fraction,
+young onset, early metastasis, multifocal disease and family aggregation. So is the
+molecular one: total EGFR mutation is high but classical 19del and L858R are
+\emph{under}-represented, while \textbf{G719X, S768I, KRAS G12C and ALK/ROS1 fusions are
+elevated} relative to non-Wumeng lung cancer; ARHGEF5, MYO18B and MUC16 are proposed
+germline susceptibility genes interacting with POT1/TERT/TERF2. Sputum microbiome shifts
+are reported alongside. \textbf{It is a narrative review by an unnamed author group with
+no formal inclusion criteria or bias assessment}, drawing on the same group's prior work,
+so the evidence chain is an argument rather than a synthesis. Its value is as the clearest
+statement in this corpus of a testable source-composition-to-mutation-spectrum hypothesis.}
+{10.3779/j.issn.1009-3419.2026.102.16}
+
+\paperentry{Aulia Anwar et al.\ 2026}
+{Smoking, environmental exposures, and chronic lung disease as key risk factors for lung cancer in North Sumatra}
+{Exp Oncol}
+{Hospital-based case-control across three referral hospitals in North Sumatra,
+August--November 2024: \textbf{240 histologically confirmed lung cancers and 240 controls}
+without malignancy or chronic respiratory disease, matched on sex and residential area
+with age adjusted in the model. Independent predictors: \textbf{unhealthy indoor
+environment (poor ventilation, household pollutants) OR 2.53 (95\,\% CI 1.45--4.40)} and
+\textbf{occupational exposure OR 1.91 (1.13--3.25)}; tuberculosis and COPD were more
+prevalent among cases. \textbf{Three weaknesses threaten the inference and should be
+stated first.} The exposure is a self-reported composite category with no measured
+particulate concentration, so it is subject to recall bias in a design where cases know
+their diagnosis. Controls were selected to be free of chronic respiratory disease, which
+is a collider on the pathway from household smoke to both COPD and lung cancer and biases
+the household-environment OR upward. And smoking differed between groups at $p = 0.023$
+yet does not appear among the adjusted independent predictors --- the deposited abstract
+does not explain that discrepancy. Treat 2.53 as an upper bound on a poorly specified
+exposure, not as a household-PM effect estimate.}
+{10.15407/exp-oncology.2026.02.152}
+
+\vspace{4mm}
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{2026-08-24 $\rightarrow$ 2026-08-24}, contiguous with the 23 August
+issue. \textbf{This issue was built late}, on 25 August: the 24 August harvest ran and its
+cache was warmed, but the issue was deliberately deferred to the following scheduled run.
+The window is unchanged and no gap was left. \textbf{Sources.} PubMed E-utilities on
+\texttt{[EDAT]} returned 3 records; the connector re-query on the health axis returned
+\textbf{4} and on the instrumentation axis \textbf{1}, five distinct records in total,
+of which four shipped. Europe PMC on \texttt{CREATION\_DATE} returned \textbf{9 records,
+all archival PMC back-scans} with no title, DOI or abstract --- the same structural
+artefact as the 13 seen on 23 August --- and none shipped. The Crossref by-ISSN sweep
+returned 9 records and shipped 5, including the \textbf{first four \textit{Atmospheric
+Chemistry and Physics} deposits the pipeline has ever caught}. \textbf{OpenAlex returned
+an empty result for the 22nd consecutive run} and remains a broken leg. arXiv returned
+nothing new under the recency screen. Consensus was swept on low-cost sensor calibration
+and drift and on satellite--surface PM$_{2.5}$ fusion and returned 6 on-topic records,
+\textbf{all 6 already in \texttt{seen.json}}. Scholar Gateway was queried for the
+abstract-free WRF--CMAQ record and cannot reach it; its corpus ends May 2026.
+\textbf{Screening.} 21 records were screened out and written to
+\texttt{state/rejected.jsonl} with an individual reason each; the 9 archival back-scans
+carry a shared structural reason and the 6 Consensus hits carry the issue date on which
+each was originally shipped. One borderline exclusion is logged as borderline: a
+physics-informed indoor CO$_2$ prediction method whose architecture transfers directly to
+PM but which reports no particulate contrast. \textbf{Labels.} Two records carry no
+abstract and are marked \textit{Metadata only}; their design, sample size, endpoint and
+study location are recorded as not extracted rather than inferred. \textbf{The forest plot
+carries two estimates from a single model} and both exposures are self-reported
+categories, stated on the axis; no pooled estimate is drawn. All DOIs were checked by
+\texttt{check\_dois.py} before publication. Content derived from publisher metadata;
+abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}
