@@ -1501,3 +1501,47 @@ page). 0 overfull boxes; no page below 0.086 ink.
   (`10.1016/j.apr.2026.103185`) is the **top abstract-retry** — a four-way lab evaluation
   of SEN66 / IPS-7100 / PurpleAir PIXEL / OPC-N3 that neither Consensus nor Scholar
   Gateway has indexed yet. `claude/_mkcorpus_tmp.py` still undeletable (mount EPERM).
+
+## 2026-08-25 run — 24 Aug issue (built one day late, as planned on 24 Aug)
+
+Window `2026-08-24 -> 2026-08-24`; `last_entry_date` is now `2026-08-24`. **Sources:**
+PubMed `[EDAT]` 3 via E-utilities, connector re-query 4 on the health axis + 1 on the
+instrumentation axis (5 distinct, 4 shipped). Europe PMC 9, **all 9 archival PMC
+back-scans** with no title/DOI/abstract — same artefact as the 13 on 23 Aug, none shipped.
+Crossref by-ISSN 9, shipped 5, **including the first four *Atmos. Chem. Phys.* deposits
+the pipeline has ever caught** (3 shipped; the Jungfraujoch radiocarbon record is
+gas-phase and was screened out). **OpenAlex empty for the 22nd run.** arXiv nothing new.
+**9 in scope, 21 rejected** (`rejected.jsonl` 512 → 533). `seen.json` +9; `metrics.csv`
+220 → 224 rows. f5 shipped with 2 estimates, both from one model and both on
+*self-reported* exposure categories — stated on the axis; the same model's age ORs were
+excluded as non-exposure contrasts, per the 20/23 Aug rule.
+
+**Consensus returned 6 on-topic records and all 6 were already in `seen.json`** (shipped
+26 Jul – 5 Aug). Worth recording as a property, not a fault: Consensus is relevance-ranked,
+not date-windowed, so on a thin day it adds zero recall. Its value is topical coverage
+(ACP/AMT), and the Crossref by-ISSN leg now appears to cover that axis directly.
+
+**Three caption-honesty defects caught by proofing, all mine, none structural.** (1) The f4
+caption claimed the 2-cell was mechanistic toxicology × review; it is **exposure assessment
+× *Metadata only*** — i.e. the densest cell is an artefact of two abstract-free deposits.
+(2) The exec brief said "four of the nine records are ACP"; three shipped. (3) The f2 right
+panel splits the no-endpoint records across **two** bars, not three. Also corrected the f3
+caption: the grouper bins two records into *PM2.5 only* on a token match although neither
+measures PM2.5 mass, and the caption now says so rather than asserting "no PM2.5 record"
+against a visible PM2.5 bar. **`design_group`/`geo_group` additions were made in the same
+edit as the records that use them** — first run where the guard was satisfied ahead of the
+labels rather than after. 0 overfull boxes, 7 pp, no page below 0.055 ink (p7 carries the
+full provenance box, not an orphan).
+
+- **25 Aug is deliberately NOT built.** This run is the 24 Aug issue; `last_entry_date` is
+  left at `2026-08-24` so tonight's scheduled run resolves cleanly to `2026-08-25 ->
+  2026-08-25` on a complete day of deposits. **Weekly W35 (23–29 Aug) is due Sat 29 Aug.**
+- `git add` failed on EPERM tmp-object unlink again; the `GIT_INDEX_FILE` → `write-tree` →
+  `commit-tree` → in-place ref write recipe worked, plus this time `.git/HEAD.lock` **and**
+  `.git/refs/heads/main.lock` both had to be renamed away before the ref could be written.
+  `d911dd2..fcc17a0` pushed; default index repaired in place, `git status` clean.
+- Still open: `ENDPOINT_CANON` gap (15 Aug); trial registry not refreshed since 8 Aug; the
+  Elsevier abstract backlog now spans three weeks and gained two *Atmos Environ* records
+  today; Werderman et al. (`10.1016/j.apr.2026.103185`) remains the top abstract retry,
+  with Kim et al. (`10.1016/j.atmosenv.2026.122324`) second. `claude/_mkcorpus_tmp.py`,
+  stray `.git/idx-*` and `.git/lk.*` all still undeletable (mount EPERM).
