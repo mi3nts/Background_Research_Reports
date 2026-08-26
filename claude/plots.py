@@ -303,6 +303,35 @@ design_group = {
 # of f2a for as long as it has been in the corpus (one record, 2026-08-06). Corrected
 # here rather than in the dict above so the correction is visible in a diff.
 design_group["Literature review"] = "Review / synthesis"
+# 2026-08-25 issue: design strings written in the same edit as the records that use them,
+# per the guard added on 22 Aug.
+design_group.update({
+    "Year-long co-location field evaluation": "Measurement campaign",
+    "Benchmark / forecasting model comparison": "Modelling / inventory",
+    "Chemical transport model evaluation": "Modelling / inventory",
+    "Ecological cross-sectional, copula tail dependence": "Ecological",
+    "Direct-measurement field campaign": "Measurement campaign",
+    "Community cross-sectional + USEPA HQ": "Observational - cross-sectional",
+    "DLNM + geographically-temporally weighted regression": "Observational - acute",
+    "Systematic review & meta-analysis": "Review / synthesis",
+    "Mechanistic review": "Review / synthesis",
+    "Repeated-measures panel, 24 h indoor monitoring": "Observational - acute",
+    "Time-stratified case-crossover": "Observational - acute",
+    "Multi-omics regional evidence synthesis": "Review / synthesis",
+    "Seasonal field sampling + filtration test": "Measurement campaign",
+})
+# 2026-08-26 issue.
+design_group.update({
+    "Interlaboratory comparison": "Measurement campaign",
+    "Field campaign": "Measurement campaign",
+    "Prospective birth cohort": "Observational - cohort",
+    "Prospective birth cohort (mixtures)": "Observational - cohort",
+    "Real-ambient murine + cell model": "Experimental / toxicology",
+    "Multi-omics animal consortium": "Experimental / toxicology",
+    "Time-series (generalized additive model)": "Observational - acute",
+    "Ecological (GLOBOCAN secondary analysis)": "Ecological",
+    "Regulatory coding framework": "Modelling / inventory",
+})
 # Close design_group under its own output. The 2026-08-05 fix added self-maps for the
 # nine group names in use that day but left four uncovered; a record written with one of
 # those four would have fallen through to "Other / mixed" (5th recurrence of the same

@@ -1,0 +1,307 @@
+{
+ "date": "2026-08-26",
+ "entry_window": "2026-08-26 -> 2026-08-26",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Anon et al. 2026",
+   "doi": "10.3390/atmos17090828",
+   "title": "Assessment Campaign of the Gravimetric Method (PM10 and PM2.5): Analyzing Environmental Artifacts and Metrological Consistency for the 2030 Regulatory Challenge",
+   "journal": "Atmosphere",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Interlaboratory comparison",
+   "pm": "Gravimetric PM10 and PM2.5 (EN 12341)",
+   "geo": "Italy",
+   "endpoint": "None (instrument)",
+   "n": "18 regional agencies, ISPRA Castel Romano",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Alharbi et al. 2026",
+   "doi": "10.3390/atmos17090830",
+   "title": "Multi-Technique Characterization of Atmospheric Aerosol Particles from the Coastal Area of Jeddah, Saudi Arabia: Morphology, Surface Chemistry, and Mineralogy",
+   "journal": "Atmosphere",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign",
+   "pm": "PM2.5 morphology, surface oxidation state, crystalline phase (SEM/EDS/XPS/XRD)",
+   "geo": "Saudi Arabia",
+   "endpoint": "None (instrument)",
+   "n": "3 coastal sites, summer 2017",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Anon et al. 2026b",
+   "doi": "10.1016/j.envint.2026.110472",
+   "title": "Severe winter PM2.5 pollution in remote Canadian mountain communities: Insights into the role of condensable particulate matter under subzero conditions",
+   "journal": "Environ Int",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field campaign",
+   "pm": "PM2.5 including condensable fraction, subzero conditions",
+   "geo": "Canada",
+   "endpoint": "None (exposure)",
+   "n": "Metadata only - abstract not deposited",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Anon et al. 2026c",
+   "doi": "10.1016/j.apr.2026.103189",
+   "title": "Metal Processing and Combustion Dominate Source-Specific PM2.5 Oxidative Potential in a National Shipbuilding Complex",
+   "journal": "Atmos Pollut Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field campaign",
+   "pm": "Source-apportioned PM2.5 oxidative potential",
+   "geo": "South Korea",
+   "endpoint": "None (exposure)",
+   "n": "Metadata only - abstract not deposited",
+   "tier": "C"
+  },
+  {
+   "pmid": "42644138",
+   "short": "Li et al. 2026",
+   "doi": "10.2147/copd.s617521",
+   "title": "Associations Between Air Pollution and Hospitalization of Patients with Chronic Obstructive Pulmonary Disease in Kashi, China: A Time-Stratified Case-Crossover Study",
+   "journal": "Int J Chron Obstruct Pulmon Dis",
+   "sub": "Respiratory & allergic",
+   "design": "Time-stratified case-crossover",
+   "pm": "Address-matched daily PM2.5 and PM10",
+   "geo": "China",
+   "endpoint": "COPD hospitalisation",
+   "n": "68,482 patients, Kashi 2012-2022",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Wang & Li 2026",
+   "doi": "10.3389/fpubh.2026.1854212",
+   "title": "Advances in research on the association between global air pollution and atopic dermatitis",
+   "journal": "Front Public Health",
+   "sub": "Respiratory & allergic",
+   "design": "Narrative review",
+   "pm": "Ambient PM2.5/PM10 and gaseous co-pollutants",
+   "geo": "Multi-region",
+   "endpoint": "Atopic dermatitis",
+   "n": "Literature Apr 2021 - Dec 2025",
+   "tier": "C"
+  },
+  {
+   "pmid": "42643992",
+   "short": "Kessler et al. 2026",
+   "doi": "10.1021/envhealth.5c00490",
+   "title": "Joint Mixture Associations of Prenatal Air Pollution and Polyunsaturated Fatty Acid Intake on Birth Weight Outcomes in an African American Cohort",
+   "journal": "Environ Health (Wash)",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective birth cohort (mixtures)",
+   "pm": "First-trimester traffic-related PM2.5, CO, NOx",
+   "geo": "United States",
+   "endpoint": "Birth weight for gestational age z-score",
+   "n": "297 pregnant African Americans, Atlanta",
+   "tier": "A"
+  },
+  {
+   "pmid": "42643681",
+   "short": "Wang et al. 2026",
+   "doi": "10.1021/envhealth.5c00760",
+   "title": "Ambient Ultrafine Particles and Hypertensive Disorders of Pregnancy: A Mediation Analysis of Homocysteine in a Birth Cohort",
+   "journal": "Environ Health (Wash)",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective birth cohort",
+   "pm": "Modelled ultrafine particle number, high spatiotemporal resolution",
+   "geo": "China",
+   "endpoint": "Hypertensive disorders of pregnancy, pre-eclampsia",
+   "n": "7,569 pregnancies, Shanghai 2017-2018",
+   "tier": "A"
+  },
+  {
+   "pmid": "42643667",
+   "short": "Liu et al. 2026",
+   "doi": "10.1021/envhealth.5c00595",
+   "title": "Ambient PM2.5 Induced Pulmonary Vascular Remodeling via MSC-Mediated Cellular Senescence in Pulmonary Arterial Endothelial Cells",
+   "journal": "Environ Health (Wash)",
+   "sub": "Mechanistic toxicology",
+   "design": "Real-ambient murine + cell model",
+   "pm": "Real-ambient PM2.5 exposure",
+   "geo": "China",
+   "endpoint": "Pulmonary artery pressure and wall thickness",
+   "n": "Mouse model + MPAEC in vitro",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "TaRGET II Consortium 2026",
+   "doi": "10.64898/2026.08.20.746014",
+   "title": "Lifecourse sex-specific molecular response to early-life exposures of toxic substances",
+   "journal": "bioRxiv (preprint)",
+   "sub": "Mechanistic toxicology",
+   "design": "Multi-omics animal consortium",
+   "pm": "PM2.5 among seven toxicants, preconception through lactation",
+   "geo": "United States",
+   "endpoint": "Hepatic transcriptome and epigenome",
+   "n": "1,025 omics datasets, 3 mouse life stages",
+   "tier": "B"
+  },
+  {
+   "pmid": "42643683",
+   "short": "Wei et al. 2026",
+   "doi": "10.1021/envhealth.5c00806",
+   "title": "Prospective Metabolomic Cohort of 123,037 Men Reveals Lipid Mediators Linking Air Pollution to Benign Prostatic Hyperplasia",
+   "journal": "Environ Health (Wash)",
+   "sub": "Other clinical endpoints",
+   "design": "Prospective cohort (mixtures)",
+   "pm": "Annual PM2.5, PM10, NO2, NOx; WQS and qgcomp mixtures",
+   "geo": "United Kingdom",
+   "endpoint": "Benign prostatic hyperplasia, lower urinary tract symptoms",
+   "n": "123,037 men (UK Biobank) + western China replication",
+   "tier": "A"
+  },
+  {
+   "pmid": "42643416",
+   "short": "Mao et al. 2026",
+   "doi": "10.3389/fpubh.2026.1891236",
+   "title": "Component-specific effects of PM2.5 on endoscopically identified erosive gastric mucosal lesions: a time-series study in Yixing, China",
+   "journal": "Front Public Health",
+   "sub": "Other clinical endpoints",
+   "design": "Time-series (generalized additive model)",
+   "pm": "Gridded daily PM2.5 and five chemical components",
+   "geo": "China",
+   "endpoint": "Erosive gastric mucosal lesions at gastroscopy",
+   "n": "60,789 gastroscopies, 14,325 cases, 2024-2025",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Anon et al. 2026d",
+   "doi": "10.1016/j.pmedr.2026.103602",
+   "title": "Lifetime risk of respiratory system cancers across 185 countries: Global variation, socioeconomic inequalities, and ecological associations with air pollution",
+   "journal": "Prev Med Rep",
+   "sub": "Burden, policy & mitigation",
+   "design": "Ecological (GLOBOCAN secondary analysis)",
+   "pm": "Country-level annual PM2.5, PM10, NO2, SO2",
+   "geo": "Multi-region",
+   "endpoint": "Lifetime lung and laryngeal cancer risk",
+   "n": "185 countries, GLOBOCAN 2022 + UN life tables",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Anon et al. 2026e",
+   "doi": "10.21203/rs.3.rs-10491363/v1",
+   "title": "A Harmonization Index for Comparative Assessment of Industrial Particulate Matter Emission Regulations",
+   "journal": "Res Sq (preprint)",
+   "sub": "Burden, policy & mitigation",
+   "design": "Regulatory coding framework",
+   "pm": "Industrial PM emission limits across regulatory architectures",
+   "geo": "Multi-region",
+   "endpoint": "None (policy)",
+   "n": "21 indicators, 4 jurisdictions (EU, US, China, Uzbekistan)",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Erosive gastric mucosal lesions - total PM2.5",
+   "exposure": "per IQR, GAM time-series",
+   "est": 1.076,
+   "lo": 1.024,
+   "hi": 1.132,
+   "metric": "IRR",
+   "src": "Mao et al. 2026 (Front Public Health)"
+  },
+  {
+   "label": "Erosive gastric lesions - ammonium fraction",
+   "exposure": "per IQR, GAM time-series",
+   "est": 1.082,
+   "lo": 1.026,
+   "hi": 1.141,
+   "metric": "IRR",
+   "src": "Mao et al. 2026 (Front Public Health)"
+  },
+  {
+   "label": "Erosive gastric lesions - sulfate fraction",
+   "exposure": "per IQR, GAM time-series",
+   "est": 1.07,
+   "lo": 1.024,
+   "hi": 1.118,
+   "metric": "IRR",
+   "src": "Mao et al. 2026 (Front Public Health)"
+  },
+  {
+   "label": "Erosive gastric lesions - nitrate fraction",
+   "exposure": "per IQR, GAM time-series",
+   "est": 1.012,
+   "lo": 0.979,
+   "hi": 1.046,
+   "metric": "IRR",
+   "src": "Mao et al. 2026 (Front Public Health)"
+  },
+  {
+   "label": "Erosive gastric lesions - organic matter fraction",
+   "exposure": "per IQR, GAM time-series",
+   "est": 1.012,
+   "lo": 0.981,
+   "hi": 1.043,
+   "metric": "IRR",
+   "src": "Mao et al. 2026 (Front Public Health)"
+  },
+  {
+   "label": "Erosive gastric lesions - black carbon fraction",
+   "exposure": "per IQR, GAM time-series",
+   "est": 1.012,
+   "lo": 0.982,
+   "hi": 1.043,
+   "metric": "IRR",
+   "src": "Mao et al. 2026 (Front Public Health)"
+  },
+  {
+   "label": "COPD hospitalisation, finer PM fraction (lag 4)",
+   "exposure": "per unit, case-crossover",
+   "est": 1.015,
+   "lo": 1.002,
+   "hi": 1.032,
+   "metric": "OR",
+   "src": "Li et al. 2026 (Int J COPD)"
+  },
+  {
+   "label": "COPD hospitalisation, coarser PM fraction (lag 4)",
+   "exposure": "per unit, case-crossover",
+   "est": 1.008,
+   "lo": 1.002,
+   "hi": 1.016,
+   "metric": "OR",
+   "src": "Li et al. 2026 (Int J COPD)"
+  },
+  {
+   "label": "Pre-eclampsia per unit homocysteine (UFP mediator)",
+   "exposure": "serum Hcy, first trimester",
+   "est": 1.49,
+   "lo": 1.04,
+   "hi": 2.13,
+   "metric": "RR",
+   "src": "Wang et al. 2026 (Environ Health)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 3,
+   "note": "Atlanta cohort\n(n=297), Shanghai\nUFP cohort (n=7,569),\nTaRGET II mice"
+  },
+  {
+   "n": 0,
+   "note": "No paediatric\nrecord this\nwindow"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord this\nwindow"
+  },
+  {
+   "n": 2,
+   "note": "UK Biobank men\n(n=123,037), Yixing\ngastroscopy series\n(n=60,789)"
+  },
+  {
+   "n": 1,
+   "note": "Kashi COPD\ncase-crossover\n(n=68,482), largely\nolder adults"
+  }
+ ]
+}

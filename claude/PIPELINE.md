@@ -1545,3 +1545,55 @@ full provenance box, not an orphan).
   today; Werderman et al. (`10.1016/j.apr.2026.103185`) remains the top abstract retry,
   with Kim et al. (`10.1016/j.atmosenv.2026.122324`) second. `claude/_mkcorpus_tmp.py`,
   stray `.git/idx-*` and `.git/lk.*` all still undeletable (mount EPERM).
+
+## 2026-08-26 run — two issues: 25 Aug (gap fill) and 26 Aug
+
+The 25 Aug scheduled run died mid-harvest (MCP 180 s cap kills backgrounded jobs; only
+`/tmp` logs survive within a single call). Recovered here: **25 Aug built as a gap fill,
+then 26 Aug**. `last_entry_date` now `2026-08-26`, no gap.
+
+**Real defect found and fixed.** The ad-hoc screening script keyed `r['pmid'] in seen`
+against a `seen.json` whose top level is `{pmid,doi,tsig}` sub-dicts, so **every
+already-seen check silently passed**. Caught because "seen entries: 3" printed instead of
+~700. Rewritten to index the sub-dicts; `tsig` is a SHA-1 of title|author|year and cannot
+be reconstructed at screen time, so screening keys on PMID and DOI only and `tsig`
+catches the rest at `update_state` time. `harvest.crossref_sensing` was also re-run in
+two ISSN halves via `/tmp/cr.py` because the full sweep exceeds the 180 s cap.
+
+**25 Aug.** Window `2026-08-25 -> 2026-08-25`. PubMed E-utilities 9 health / 0 sensing;
+connector 13 / 0. Europe PMC 13. Crossref by-ISSN 43. OpenAlex empty (23rd run). 74 raw,
+65 unique, 2 seen, **14 in scope, 51 rejected** (`rejected.jsonl` 533 → 583). **5 of 14
+are unreviewed preprints, the highest preprint share to date**, all via Europe PMC.
+Effects: 4, all from one preprint, mixing an OR with three conditional exceedance ratios;
+stated on the axis. 9 pp, 0 overfull. **Three caption defects caught at proof, all mine:**
+f2 named a nonexistent "Exposure assessment" design group and said 7 endpoint-free
+records when the plot shows 6; f3 claimed the grouper mis-binned Eger and Yang when it
+had in fact resolved both into their own bins; f1 asserted "widest spread since 20 Aug"
+without checking. Figure order was also f1,f2,f3,f5,f6,f4 — corrected to f1..f6.
+
+**26 Aug.** Window `2026-08-26 -> 2026-08-26`. PubMed 11 / 0, Europe PMC 12, Crossref 33.
+56 raw, 52 unique, 2 seen, **14 in scope, 36 rejected** (583 → 619) — 11 of the rejects
+were Elsevier retraction notices deposited in one day. **Exactly 2 records in each of 7
+clusters**, a flat distribution not seen before. 9 effect estimates from 3 studies; the
+six Mao et al. component IRRs are the first mutually comparable component set this watch
+has carried. 10 pp, 0 overfull. Proof caught the f4 caption claiming 2 cells above 1 when
+the plot shows 4, and two unverified "N consecutive issues" counts — both checked against
+`LIFECOURSE` and corrected.
+
+**Consensus backfill, new pattern.** The LCS-calibration sweep returned 6 records, all
+new to `seen.json`, Crossref `created` 23 Jan – 21 Jun 2026 — i.e. deposited before the
+by-ISSN leg existed on 22 Aug, two of them in journals it still did not track. Carried as
+a labelled **Coverage backfill** section, deliberately **excluded from the metric strip,
+all six figures and the register** so the window statistics stay honest, and written into
+`seen.json` under `2026-08-26-backfill`. `Meas Sci Technol` (0957-0233) and
+`Aerosol Sci Technol` (0278-6826) added to `harvest.JOURNALS` in the same edit.
+This is the first time Consensus has added recall rather than returning only duplicates
+(cf. 24 Aug) — the difference is that the query targeted a coverage hole, not the day.
+
+- **Weekly W35 (23–29 Aug) is due Sat 29 Aug**; `templates/weekly.tex` still absent.
+- Still open: `ENDPOINT_CANON` gap (15 Aug); trial registry not refreshed since 8 Aug.
+  Abstract retries, in order: Werderman `10.1016/j.apr.2026.103185`, the 26 Aug
+  condensable-PM record `10.1016/j.envint.2026.110472`, the shipbuilding OP record
+  `10.1016/j.apr.2026.103189`, Kim `10.1016/j.atmosenv.2026.122324`, Vivanco
+  `10.1016/j.envpol.2026.129031`. `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*`
+  all still undeletable (mount EPERM).

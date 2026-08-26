@@ -106,6 +106,11 @@ JOURNALS = {
     "0360-1323": "Building and Environment",
     "2950-3620": "Indoor Environments",
     "1600-0668": "Indoor Air",
+    # Added 2026-08-26. The Consensus backfill in that issue surfaced six 2026 low-cost
+    # sensor calibration papers no leg had ever seen; two of them sit in these titles,
+    # which the by-ISSN leg did not track. Verified against api.crossref.org/journals.
+    "0957-0233": "Measurement Science and Technology",
+    "0278-6826": "Aerosol Science and Technology",
 }
 
 # Deliberately NOT tracked:
