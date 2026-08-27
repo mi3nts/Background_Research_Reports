@@ -35,17 +35,17 @@
    "geo_group": "Multi-region"
   },
   {
-   "pmid": "",
+   "pmid": "42641852",
    "short": "Vivanco et al. 2026",
    "doi": "10.1016/j.envpol.2026.129031",
    "title": "Assessing the responsiveness of an air quality model to real-world emission changes for air quality planning",
    "journal": "Environ Pollut",
    "sub": "Sensing, forecasting & instrumentation",
-   "design": "Chemical transport model evaluation",
-   "pm": "Modelled PM and gaseous pollutant response to emission perturbation",
+   "design": "CTM evaluation against observation-based counterfactuals (COVID-19 emission shift)",
+   "pm": "Modelled NO2 and O3 response to a real-world emission reduction; PM not reported in abstract",
    "geo": "Europe",
-   "endpoint": "None (model)",
-   "n": "Metadata only - abstract not deposited",
+   "endpoint": "None (model responsiveness)",
+   "n": "CHIMERE vs 5-yr means, GAM, and (Spain) GBM; Europe-wide",
    "tier": "C",
    "design_group": "Modelling",
    "geo_group": "Europe"

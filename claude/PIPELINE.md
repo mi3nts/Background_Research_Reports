@@ -1597,3 +1597,36 @@ This is the first time Consensus has added recall rather than returning only dup
   `10.1016/j.apr.2026.103189`, Kim `10.1016/j.atmosenv.2026.122324`, Vivanco
   `10.1016/j.envpol.2026.129031`. `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*`
   all still undeletable (mount EPERM).
+
+### 2026-08-27 — no-op for the daily issue; trial registry and abstract backlog worked instead
+
+Two runs fired (00:26 and 13:34 CDT), both **before 22:00**, so under the run-timing rule the
+newest buildable date is 2026-08-26 — already shipped, `last_entry_date` already there. No
+issue built, no window opened, no gap. Backlog work done instead:
+
+- **Trial watch refreshed** (first since 22 Aug), window `2026-08-22..26`, for the W35 weekly.
+  The c-trials MCP **timed out at 882 s** on an `AREA[LastUpdatePostDate]RANGE[...]` advanced
+  query; fell back to the ClinicalTrials.gov v2 API directly, which answers it fine. Condition
+  axis 1 in-window hit; intervention and free-text axes returned 21 and 4 but nearly all false
+  positives ("respirator"→mechanical ventilation, "air cleaner"→airway anatomy). **2 kept**:
+  NCT05338242 (Utah, real-time exposure feedback as the intervention, n=30, →COMPLETED) and
+  NCT06247059 (Stanford, box-fan + UVGI in Bangladeshi classrooms, →WITHDRAWN at n=0). Both are
+  status changes, no new interventional registration, so `analyze_endpoints` was not run.
+  `trials.json` 21→23 records, `windows` 4→5.
+- **Abstract backlog:** 4 of 5 still absent from Europe PMC; Vivanco `10.1016/j.envpol.2026.129031`
+  has landed (PMID 42641852). Corpus record for 25 Aug upgraded from the metadata-only stub —
+  it is a CHIMERE responsiveness evaluation against COVID-era emission cuts, **NO2/O3 only, no PM
+  effect size**, so it stays tier C. The **shipped 25 Aug PDF keeps the stub**; the corrected
+  record propagates to the W35 weekly. `seen.json` pmid 525→526.
+- Corrections to the stale note at the end of the 26 Aug entry: `templates/weekly.tex` **does
+  exist** (25 KB, alongside `monthly.tex`), and the `metrics.csv` comma defect is **already
+  fixed** — rows carrying a comma are properly quoted. Site UI items (per-day report-count
+  badge, `openPicker` popup, category-grouped archive) are all present in `index.dc.html`.
+- Not verified live: Chrome extension not connected and `web_fetch` timed out on
+  `Reports/reports.json`. Confirmed instead that `HEAD == origin/main` (7067c2e) and the 26 Aug
+  PDF is on `origin/main`. Manifest revalidates: daily 31 / weekly 4 / monthly 1 / yearly 0.
+- **W35 weekly (23–29 Aug) is due on Saturday 29 Aug's 23:00 run**, per the Saturday rule.
+- Still open: `ENDPOINT_CANON` gap (15 Aug). Abstract retries, in order: Werderman
+  `10.1016/j.apr.2026.103185`, `10.1016/j.envint.2026.110472`, `10.1016/j.apr.2026.103189`,
+  Kim `10.1016/j.atmosenv.2026.122324`. `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*`
+  remain undeletable (mount EPERM).
