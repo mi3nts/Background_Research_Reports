@@ -1630,3 +1630,43 @@ issue built, no window opened, no gap. Backlog work done instead:
   `10.1016/j.apr.2026.103185`, `10.1016/j.envint.2026.110472`, `10.1016/j.apr.2026.103189`,
   Kim `10.1016/j.atmosenv.2026.122324`. `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*`
   remain undeletable (mount EPERM).
+
+### 2026-08-27 issue, built on the 2026-08-28 11:5x CDT run (gap fill)
+
+Local time 11:50 CDT, before 22:00, so the newest buildable date was **2026-08-27** while
+`last_entry_date` sat at 2026-08-26 — a real one-day gap, opened and closed. Window
+`2026-08-27 -> 2026-08-27`. PubMed 19 health / 5 sensing (2 overlapping), Europe PMC 31,
+Crossref by-ISSN 43, arXiv 0. **OpenAlex now returns HTTP 429 on top of the standing 403**
+— the leg is doubly dead; still routed through Consensus.
+98 raw, 95 unique, 6 seen, **36 in scope, 53 rejected**. 13 pp, 0 overfull.
+
+- **Largest single-day issue to date** (only the 26 Jul founding backfill, 164 over a
+  month, is bigger) and the **fourth ever to occupy all ten clusters**. Cause is a
+  single-day MDPI *Toxics* volume release (6 records) plus a 43-deposit Crossref day.
+- **Screening defect, found this run.** The ad-hoc screen keyed on
+  `norm(title)` against `seen['tsig']`, but `update_state.tsig()` stores a **SHA-1 of
+  title+author+year**, so the title leg never matched anything — dedup this run rested
+  entirely on PMID and DOI, which happened to be sufficient (6 collisions caught). Any
+  future hand-rolled screen must call `update_state.tsig()`, not re-derive a key.
+- **Consensus** was run on the forward-scattering / refractive-index axis and returned
+  only Moteki et al. 2023, the antecedent to the in-window J Aerosol Sci deposit. No
+  backfill section this issue.
+- **Proof caught four false claims**, all in captions, all checked against the store and
+  corrected: "largest issue ever" (07-26 had 164), "all ten clusters for the first time"
+  (4th occurrence), "first fully populated life-course strip" (7th; last was 19 Aug), and
+  a stale f4 heatmap cell count (said 3 for Other clinical x cross-sectional; the UK
+  Biobank RA design was relabelled cohort mid-run, making it 2). Page 1 also spilled a
+  single orphan line onto page 2 through five trim attempts; resolved by reclaiming 5 mm
+  of masthead/section vspace on this issue only.
+- **`plots.py` geo map extended**: morocco, pakistan, indonesia, reunion, belgium, arctic.
+  All six were falling through the unmapped diagnostic into *Global / multi-region*.
+- `state/rejected.jsonl` logged **58** rows for this date against the 53 reported in the
+  PDF: the rejection logger keys on PMID-or-DOI only, so a PubMed esummary record with no
+  DOI and its Europe PMC twin are written twice. The PDF count (95 unique - 6 - 36) is the
+  correct one. Fix the logger to reuse the same collapse the screen uses.
+- **W35 weekly (23-29 Aug) is due on Saturday 29 Aug's 23:00 run**, per the Saturday rule.
+- Still open: `ENDPOINT_CANON` gap (15 Aug). Abstract retries, in order: Moteki
+  `10.1016/j.jaerosci.2026.106884`, `10.1038/s41612-026-01527-0`, Werderman
+  `10.1016/j.apr.2026.103185`, `10.1016/j.envint.2026.110472`, `10.1016/j.apr.2026.103190`,
+  `10.1016/j.atmosenv.2026.122331`, Kim `10.1016/j.atmosenv.2026.122324`.
+  `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).

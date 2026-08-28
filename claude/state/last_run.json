@@ -1,6 +1,4 @@
 {
- "last_entry_date": "2026-08-26",
- "last_run_utc": "2026-08-27T18:35:10Z",
- "last_noop_utc": "2026-08-27T18:35:10Z",
- "last_noop_reason": "before 22:00 local; last_entry_date already equals newest buildable date (2026-08-26)"
+ "last_entry_date": "2026-08-27",
+ "last_run_utc": "2026-08-28T17:17:13Z"
 }

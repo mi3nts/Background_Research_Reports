@@ -609,6 +609,10 @@ GEO_SUBSTR = [
     ("siberia", "Global"), ("multi-country", "Global"), ("czech", "Czech Republic"),
     ("pakistan", "India"), ("indonesia", "Vietnam"), ("malaysia", "Vietnam"),
     ("singapore", "Vietnam"), ("egypt", "Turkiye"), ("saudi", "Turkiye"),
+    # added 2026-08-27 with the Casablanca formaldehyde record. "Turkiye" is the
+    # key that carries the Middle East & N. Africa group; Morocco is N. Africa.
+    ("morocco", "Turkiye"), ("pakistan", "India"), ("indonesia", "Vietnam"),
+    ("reunion", "France"), ("belgium", "Europe"), ("arctic", "Arctic Ocean"),
     ("new zealand", "Australia"), ("switzerland", "Europe"), ("sweden", "Norway"),
     ("belgium", "Europe"), ("austria", "Europe"), ("portugal", "Europe"),
     # added 2026-08-05
