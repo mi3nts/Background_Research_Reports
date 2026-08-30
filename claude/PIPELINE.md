@@ -1670,3 +1670,42 @@ Crossref by-ISSN 43, arXiv 0. **OpenAlex now returns HTTP 429 on top of the stan
   `10.1016/j.apr.2026.103185`, `10.1016/j.envint.2026.110472`, `10.1016/j.apr.2026.103190`,
   `10.1016/j.atmosenv.2026.122331`, Kim `10.1016/j.atmosenv.2026.122324`.
   `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).
+
+### 2026-08-30 (run at 12:50 CDT — 22:00 rule: newest buildable date is 29 Aug)
+- Backfilled the two missed days and the Saturday weekly. Windows: PubMed `[EDAT]`
+  2026/08/28 (health 17, sensing 2) and 2026/08/29 (health 20, sensing 3); Europe PMC
+  `CREATION_DATE` returned **0 on both days**; Crossref by-ISSN 57 (28 Aug) then 79 across
+  the harvester's 28–29 window, of which 57 were 28 Aug deposits already screened and 22
+  were new. OpenAlex HTTP 429/403 on every call. arXiv nothing in window.
+- **28 Aug: 73 unique → 19 included, 54 rejected** (43 out of scope, 8 in scope but
+  abstract-free, 3 front matter). **29 Aug: 30 unique → 8 included, 22 rejected.**
+  0 collisions against `seen.json` on either day.
+- **W35 weekly (23–29 Aug) built**: 109 records over **107 unique DOIs**, 37 effect
+  estimates, all ten subtopics active for the 5th week, 32 pages, 0 overfull after one
+  DOI-wrapping fix. `Reports/weekly/PM-Research-Watch-Weekly_2026-08-29.pdf`.
+- **Defect found by the rollup — duplicate publication.** `10.3779/j.issn.1009-3419`
+  article numbers `2026.101.13` and `2026.102.16` were published in **both** the 24 and
+  25 Aug issues, with differently-cased titles. The DOI leg of `seen.json` should have
+  caught it. Not retro-fixed (rewriting shipped issues is worse); disclosed in W35.
+  **Fix needed: lowercase-normalise the DOI on write as well as on read.**
+- **Defect found and repaired this run — short-label collisions.** Five labels coined on
+  28/29 Aug collided with 27 Aug records (`Chen et al. 2026e`/`2026f`, `Li et al. 2026d`,
+  `Wu et al. 2026c`, `Zhang et al. 2026f`). The short label is the only identifier in the
+  digest and register, so a collision makes two papers indistinguishable. Renamed to
+  `2026i`/`2026j`/`2026e`/`2026d`/`2026h`, corpus + tex + EFFECTS `src` all updated, both
+  issues recompiled and re-shipped. **Rule: check `short` against every label already in
+  `state/corpus/*.json` before writing a record.** Three older collisions
+  (`Wang et al. 2026`, `Yang et al. 2026b`, `Li & Li 2026`) remain and are documented.
+- `plots.py`: 23 design labels added across the two issues plus one found unmapped by the
+  rollup (`CTM evaluation against observation-based counterfactuals…`, written 25 Aug);
+  `Slovakia` and `Italy` added to the geo map.
+- Proofing caught three false claims and fixed them before shipping: the 28 Aug
+  no-endpoint metric said 5 where the figure showed 8; "eleven-issue Africa gap" (the true
+  gap was eight issues, last African record 20 Aug); "first day since 24 August with no
+  respiratory record" (23 Aug was also empty). Two f2b endpoint labels were clipping the
+  donut and were shortened at the corpus, not in the caption.
+- Still open: `ENDPOINT_CANON` gap (15 Aug); no first-author affiliation field, so no real
+  author-cluster analysis is possible in rollups; abstract retry list now also carries the
+  28–29 Aug abstract-free deposits (AQI forecasting `10.1016/j.apr.2026.103184`, ragweed
+  `10.1016/j.envpol.2026.129060`, plus the six from 28 Aug).
+  `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).

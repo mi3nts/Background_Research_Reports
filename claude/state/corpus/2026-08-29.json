@@ -1,0 +1,187 @@
+{
+ "date": "2026-08-29",
+ "entry_window": "2026-08-29 -> 2026-08-29",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Yu et al. 2026b",
+   "doi": "10.1155/ina/8230467",
+   "title": "Machine learning-based prediction of occupant symptom risk using indoor and outdoor environmental quality data in university dormitories",
+   "journal": "Indoor Air",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Continuous IEQ monitoring + supervised classification",
+   "pm": "Five indoor and five outdoor environmental parameters incl. PM; distributional shape features",
+   "geo": "Italy",
+   "endpoint": "Self-reported symptom risk",
+   "n": "74 occupant samples, 2 dormitories, 7 periods, May 2024 - Jun 2025",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Kalumbi et al. 2026",
+   "doi": "10.1038/s41370-026-00972-6",
+   "title": "Age-specific time-spent patterns among residents living near gold mine tailings storage facilities in the West Rand, South Africa",
+   "journal": "J Expo Sci Environ Epidemiol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Cross-sectional time-activity survey",
+   "pm": "None measured; indoor/outdoor time fractions as exposure-weighting inputs",
+   "geo": "South Africa",
+   "endpoint": "None (time-activity)",
+   "n": "330 households, Kagiso, West Rand",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Chen et al. 2026j",
+   "doi": "10.1186/s12989-026-00697-2",
+   "title": "Multi-omics integration reveals human placental molecular signatures associated with microplastics exposure",
+   "journal": "Part Fibre Toxicol",
+   "sub": "Mechanistic toxicology",
+   "design": "Human tissue multi-omics (transcriptome/proteome/metabolome)",
+   "pm": "Placental microplastic mass burden by Py-GC-MS, high vs low strata",
+   "geo": "China",
+   "endpoint": "Placental molecular perturbation",
+   "n": "Human placental tissues, DIABLO cross-omics integration",
+   "tier": "A"
+  },
+  {
+   "pmid": "42665724",
+   "short": "Ramirez et al. 2026",
+   "doi": "10.1007/s11882-026-01289-y",
+   "title": "Airway diseases and occupational exposures in poultry industry workers: a comprehensive review",
+   "journal": "Curr Allergy Asthma Rep",
+   "sub": "Occupational & indoor",
+   "design": "Comprehensive review",
+   "pm": "Poultry-barn organic dust: feather, mite, feed dust, mould, endotoxin, NH3",
+   "geo": "Global / multi-region",
+   "endpoint": "Occupational asthma / COPD",
+   "n": "Narrative synthesis; no pooled estimate",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Siemens et al. 2026",
+   "doi": "10.1155/ina/9690417",
+   "title": "A SynAir-G position statement for the improvement of indoor air quality for children",
+   "journal": "Indoor Air",
+   "sub": "Occupational & indoor",
+   "design": "Consensus position statement",
+   "pm": "Indoor chemical and biological pollutants, bioaerosols, synergistic mixtures",
+   "geo": "Europe",
+   "endpoint": "Allergy and asthma exacerbation (children)",
+   "n": "18 partners, 11 countries; EU IDEAL Cluster",
+   "tier": "B"
+  },
+  {
+   "pmid": "42666678",
+   "short": "Silva et al. 2026",
+   "doi": "10.3389/frsle.2026.1918405",
+   "title": "Shared mechanisms linking PM2.5 exposure, obstructive sleep apnea and obesity",
+   "journal": "Front Sleep",
+   "sub": "Respiratory & allergic",
+   "design": "Mechanistic review",
+   "pm": "Chronic ambient PM2.5",
+   "geo": "Global / multi-region",
+   "endpoint": "OSA risk and severity; BMI",
+   "n": "Narrative synthesis; no pooled estimate",
+   "tier": "C"
+  },
+  {
+   "pmid": "42667350",
+   "short": "Park et al. 2026b",
+   "doi": "10.1007/s40618-026-02965-6",
+   "title": "Association between annual air pollutant exposure and thyroid function: a retrospective cross-sectional study",
+   "journal": "J Endocrinol Invest",
+   "sub": "Other clinical endpoints",
+   "design": "Retrospective cross-sectional (health screening)",
+   "pm": "Annual mean PM2.5 and PM10 from CMAQ, per IQR",
+   "geo": "South Korea",
+   "endpoint": "TSH / FT4; hypothyroid phenotype",
+   "n": "16,193 adults, mean age 53.8 y",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Cliff et al. 2026",
+   "doi": "10.1029/2025gh001749",
+   "title": "How do climatic factors directly influence the incidence and risk of meningococcal meningitis across the African meningitis belt? A narrative literature review",
+   "journal": "GeoHealth",
+   "sub": "Burden, policy & mitigation",
+   "design": "Narrative review",
+   "pm": "Atmospheric mineral dust load and wind speed",
+   "geo": "Sub-Saharan Africa",
+   "endpoint": "Meningococcal meningitis incidence",
+   "n": "26-country meningitis belt; narrative synthesis",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "High TSH-low FT4 phenotype, PM10",
+   "exposure": "PM10 annual, per IQR",
+   "est": 1.55,
+   "lo": 1.42,
+   "hi": 1.69,
+   "metric": "aOR",
+   "src": "Park et al. 2026b (J Endocrinol Invest)"
+  },
+  {
+   "label": "High TSH-low FT4 phenotype, PM2.5",
+   "exposure": "PM2.5 annual, per IQR",
+   "est": 1.25,
+   "lo": 1.17,
+   "hi": 1.34,
+   "metric": "aOR",
+   "src": "Park et al. 2026b (J Endocrinol Invest)"
+  },
+  {
+   "label": "High TSH-low FT4 phenotype, NO2",
+   "exposure": "NO2 annual, per IQR",
+   "est": 1.36,
+   "lo": 1.23,
+   "hi": 1.5,
+   "metric": "aOR",
+   "src": "Park et al. 2026b (J Endocrinol Invest)"
+  },
+  {
+   "label": "High TSH-low FT4 phenotype, SO2",
+   "exposure": "SO2 annual, per IQR",
+   "est": 1.38,
+   "lo": 1.28,
+   "hi": 1.49,
+   "metric": "aOR",
+   "src": "Park et al. 2026b (J Endocrinol Invest)"
+  },
+  {
+   "label": "High TSH-low FT4 phenotype, CO",
+   "exposure": "CO annual, per IQR",
+   "est": 1.23,
+   "lo": 1.15,
+   "hi": 1.31,
+   "metric": "aOR",
+   "src": "Park et al. 2026b (J Endocrinol Invest)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "Human placental\ntissue, microplastic\nburden strata"
+  },
+  {
+   "n": 1,
+   "note": "SynAir-G school\nposition statement,\nchildren"
+  },
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 2,
+   "note": "Korean screening\ncohort (n=16,193);\nMilan dormitories"
+  },
+  {
+   "n": 0,
+   "note": ""
+  }
+ ]
+}

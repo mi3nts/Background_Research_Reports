@@ -1,0 +1,332 @@
+{
+ "date": "2026-08-28",
+ "entry_window": "2026-08-28 -> 2026-08-28",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Zhang et al. 2026h",
+   "doi": "10.5194/acp-26-12197-2026",
+   "title": "Contrasting nighttime heterogeneous and daytime photochemical aging drive the optical evolution of black carbon",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign, single-particle instrumentation",
+   "pm": "rBC mass, core MMD, coating-to-core mass ratio, MAC at 532 nm (SP2 + SPAMS)",
+   "geo": "China",
+   "endpoint": "None (instrument)",
+   "n": "Urban Shenzhen campaign; mean rBC 1.2 ug/m3, MMD 155-170 nm",
+   "tier": "A"
+  },
+  {
+   "pmid": "42663889",
+   "short": "Marcon et al. 2026",
+   "doi": "10.1007/s40572-026-00559-1",
+   "title": "Citizen science in air pollution monitoring: methodological approaches, effectiveness, and integration with health research",
+   "journal": "Curr Environ Health Rep",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Critical review",
+   "pm": "Low-cost sensor networks, wearables, AI-assisted calibration",
+   "geo": "Global / multi-region",
+   "endpoint": "None (instrument)",
+   "n": "Narrative synthesis; no pooled estimate",
+   "tier": "A"
+  },
+  {
+   "pmid": "42661122",
+   "short": "Wongsasuluk et al. 2026",
+   "doi": "10.1007/s11356-026-38171-3",
+   "title": "PM2.5 exposure and respiratory health risk for vulnerable populations in an urban underpass: a predictive MLR approach, Chiang Mai",
+   "journal": "Environ Sci Pollut Res Int",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Network deployment + statistical model",
+   "pm": "PM2.5 and PM10 from five DustBoy low-cost stations, 10-min cadence",
+   "geo": "Thailand",
+   "endpoint": "Respiratory risk (modelled)",
+   "n": "385,622 records, 5 stations, Aug 2022 - Jul 2023",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Xiong et al. 2026",
+   "doi": "10.5194/acp-26-12183-2026",
+   "title": "In situ real-time determination of SO2 photochemical oxidation in nanoscale sea salt aerosols based on dark-field microscopy",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Laboratory instrument development",
+   "pm": "Single-nanoparticle hygroscopic growth factor; first-order rate constant",
+   "geo": "China",
+   "endpoint": "None (instrument)",
+   "n": "50-500 nm NaCl and NaCl-SOS aerosols under UV + SO2",
+   "tier": "B"
+  },
+  {
+   "pmid": "42665078",
+   "short": "Cui et al. 2026",
+   "doi": "10.1016/j.envpol.2026.129051",
+   "title": "Daily 1 km satellite-based PM2.5 exposure estimates in Bangladesh, 2020-2025",
+   "journal": "Environ Pollut",
+   "sub": "Exposure assessment & modelling",
+   "design": "Satellite-surface fusion, machine learning",
+   "pm": "Gap-filled MAIAC AOD -> ground PM2.5 (LightGBM + TabNet)",
+   "geo": "Bangladesh",
+   "endpoint": "None (exposure surface)",
+   "n": "1,857 days at 1 km; R2 0.95, RMSE 17.41 ug/m3",
+   "tier": "A"
+  },
+  {
+   "pmid": "42663752",
+   "short": "Hopke et al. 2026",
+   "doi": "10.1007/s10661-026-15858-1",
+   "title": "A PM2.5 magnitude-rank index for summarizing annual concentration-frequency structure",
+   "journal": "Environ Monit Assess",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metric development + retrospective application",
+   "pm": "PMRI: largest k with >= k days at >= k ug/m3",
+   "geo": "United States",
+   "endpoint": "None (exposure metric)",
+   "n": "918 MSA-years, 96 metropolitan areas, 2013-2022",
+   "tier": "B"
+  },
+  {
+   "pmid": "42661022",
+   "short": "Reyna-Bello et al. 2026",
+   "doi": "10.1007/s10661-026-15856-3",
+   "title": "Seasonal variability of PM2.5-bound metals and meteorology in an urban-industrial area of northern Mexico: a PCA assessment",
+   "journal": "Environ Monit Assess",
+   "sub": "Exposure assessment & modelling",
+   "design": "Filter sampling + composition",
+   "pm": "MiniVol low-volume PM2.5 mass; 10 metals by FAAS",
+   "geo": "Mexico",
+   "endpoint": "None (composition)",
+   "n": "Four seasons, Saltillo, 2023",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Leibensperger et al. 2026",
+   "doi": "10.5194/acp-26-12211-2026",
+   "title": "Sea surface warming suppresses primary sea spray aerosol number production",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Controlled wave-channel experiment",
+   "pm": "Bubble and SSA number concentration and emission flux, 0.008-20 um",
+   "geo": "Global / multi-region",
+   "endpoint": "None (source process)",
+   "n": "SOARS wave channel, SST 2-23 C",
+   "tier": "C"
+  },
+  {
+   "pmid": "42663702",
+   "short": "Agpaoa et al. 2026",
+   "doi": "10.1007/s10661-026-15814-z",
+   "title": "Occurrence, temporal variation and meteorological drivers of airborne fungal spores in Laoag City, northern Philippines",
+   "journal": "Environ Monit Assess",
+   "sub": "Exposure assessment & modelling",
+   "design": "Bioaerosol monitoring campaign",
+   "pm": "Volumetric spore counts (spores/m3), six spore types",
+   "geo": "Philippines",
+   "endpoint": "None (bioaerosol)",
+   "n": "216 sampling days, Mar-Nov 2022; 190,096 spores/m3 cumulative",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Li et al. 2026e",
+   "doi": "10.1021/acs.estlett.6c00288",
+   "title": "Sulfate-dominated PM2.5 constituents are associated with increased acute myocardial infarction mortality: a US nationwide difference-in-differences study",
+   "journal": "Environ Sci Technol Lett",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Quasi-experimental (difference-in-differences)",
+   "pm": "PM2.5 mass and EC / OC / SO4 / NO3 constituent mixture, per IQR",
+   "geo": "United States",
+   "endpoint": "AMI mortality",
+   "n": "County-level nationwide panel",
+   "tier": "A"
+  },
+  {
+   "pmid": "42664633",
+   "short": "Wang et al. 2026e",
+   "doi": "10.1016/j.sleep.2026.109229",
+   "title": "Speciated fine particulate matter and self-reported sleep time in middle-aged and older Chinese adults",
+   "journal": "Sleep Med",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort (CHARLS)",
+   "pm": "6-month and 2-year PM2.5 plus BC, OM, SO4, NO3, NH4 (TAP dataset)",
+   "geo": "China",
+   "endpoint": "Total sleep time",
+   "n": "19,505 adults >= 45 y, 2011-2018",
+   "tier": "A"
+  },
+  {
+   "pmid": "42664112",
+   "short": "Chen et al. 2026i",
+   "doi": "10.1097/JOM.0000000000003848",
+   "title": "Gender and season disparities in the influence of short-term PM2.5 exposure on emergency room visits for mood disorders in Taiwan",
+   "journal": "J Occup Environ Med",
+   "sub": "Neuro / mental health",
+   "design": "Time-stratified case-crossover + DLNM",
+   "pm": "Daily PM2.5, lags 0-5",
+   "geo": "Taiwan",
+   "endpoint": "ER visits for bipolar / depressive disorder",
+   "n": "2,172 ER visits, 2010-2020",
+   "tier": "B"
+  },
+  {
+   "pmid": "42665413",
+   "short": "Van et al. 2026",
+   "doi": "10.21873/invivo.14428",
+   "title": "MASLD exacerbates chronic low-dose PM2.5-induced lung injury, inflammation and fibrosis",
+   "journal": "In Vivo",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal model (chronic instillation)",
+   "pm": "Diesel PM 0.5 mg/kg intratracheal 3x/week (~50 ug/m3 equivalent)",
+   "geo": "Taiwan",
+   "endpoint": "Lung injury, fibrosis, BALF cytokines",
+   "n": "C57BL/6J mice, Western vs normal diet, 28 weeks",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Ospalek et al. 2026",
+   "doi": "10.3390/atmos17090840",
+   "title": "Air quality assessment and potential inhalation exposure across equestrian facilities: a case study",
+   "journal": "Atmosphere",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional environmental survey",
+   "pm": "PM1, PM2.5, PM10, respirable and total dust at 1.5 m; NH3",
+   "geo": "Slovakia",
+   "endpoint": "Inhaled dust dose (equine)",
+   "n": "9 measurements across 3 locations, 4 exposure scenarios",
+   "tier": "C"
+  },
+  {
+   "pmid": "42660941",
+   "short": "Zhang et al. 2026g",
+   "doi": "10.1038/s41467-026-76134-x",
+   "title": "Health and economic impacts of improved air quality from transitioning global shipping energy to hydrogen",
+   "journal": "Nat Commun",
+   "sub": "Burden, policy & mitigation",
+   "design": "Integrated emission-air quality-health modelling",
+   "pm": "Modelled PM2.5 and O3 concentration change under hydrogen scenarios",
+   "geo": "Global / multi-region",
+   "endpoint": "Premature mortality averted",
+   "n": "Global shipping emission inventory, scenario ensemble",
+   "tier": "A"
+  },
+  {
+   "pmid": "42662650",
+   "short": "Nilsson et al. 2026",
+   "doi": "10.1097/EE9.0000000000000516",
+   "title": "Urban environment, health and equity: symptoms and annoyances related to air pollution, traffic noise and greenness",
+   "journal": "Environ Epidemiol",
+   "sub": "Burden, policy & mitigation",
+   "design": "Cross-sectional population survey",
+   "pm": "Dichotomised residential PM2.5, PM10, NO2 at geocoded address",
+   "geo": "Sweden",
+   "endpoint": "Self-reported symptoms and annoyance",
+   "n": "46,282 adults 18-84 y, Stockholm County, 2023",
+   "tier": "B"
+  },
+  {
+   "pmid": "42662866",
+   "short": "Sirikul et al. 2026",
+   "doi": "10.1016/j.joclim.2026.100734",
+   "title": "Knowledge, attitudes and practices of caregivers regarding PM2.5 exposure among children in northern Thailand",
+   "journal": "J Clim Chang Health",
+   "sub": "Burden, policy & mitigation",
+   "design": "Cross-sectional survey",
+   "pm": "None measured; AQI literacy and protective behaviour",
+   "geo": "Thailand",
+   "endpoint": "KAP scores; protective practice",
+   "n": "Caregivers at Chiang Mai Child Development Centres",
+   "tier": "C"
+  },
+  {
+   "pmid": "42663173",
+   "short": "Sharma et al. 2026b",
+   "doi": "10.1002/hpja.70241",
+   "title": "Geospatial linkage of environmental exposures, socioeconomic profile and health outcomes among women of reproductive age, Victoria",
+   "journal": "Health Promot J Austr",
+   "sub": "Burden, policy & mitigation",
+   "design": "Ecological geospatial linkage",
+   "pm": "Postcode-level PM2.5, NO2, CO, SO2, HCHO, O3, LST, greenness",
+   "geo": "Australia",
+   "endpoint": "Non-communicable disease rate per 1000 WRA",
+   "n": "2021 Census postcodes, Victoria",
+   "tier": "C"
+  },
+  {
+   "pmid": "42660475",
+   "short": "Wu et al. 2026d",
+   "doi": "10.1016/j.jacr.2026.08.014",
+   "title": "Short-term environmental exposures and emergency department imaging utilization",
+   "journal": "J Am Coll Radiol",
+   "sub": "Other clinical endpoints",
+   "design": "Time-stratified case-crossover",
+   "pm": "Daily PM2.5, per 10 ug/m3",
+   "geo": "Canada",
+   "endpoint": "ED imaging volume and per-visit imaging rate",
+   "n": "1,946,465 imaging studies, 5 hospitals, 2013-2023",
+   "tier": "B"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "AMI mortality, PM2.5 mass",
+   "exposure": "PM2.5 long-term, per IQR",
+   "est": 1.019,
+   "lo": 1.013,
+   "hi": 1.025,
+   "metric": "RR",
+   "src": "Li et al. 2026e (Environ Sci Technol Lett)"
+  },
+  {
+   "label": "AMI mortality, constituent mixture",
+   "exposure": "EC/OC/SO4/NO3 mixture, per quartile",
+   "est": 1.116,
+   "lo": 1.101,
+   "hi": 1.13,
+   "metric": "RR",
+   "src": "Li et al. 2026e (Environ Sci Technol Lett)"
+  },
+  {
+   "label": "ED imaging volume",
+   "exposure": "PM2.5 short-term, per 10 ug/m3",
+   "est": 1.02,
+   "lo": 1.017,
+   "hi": 1.024,
+   "metric": "IRR",
+   "src": "Wu et al. 2026d (J Am Coll Radiol)"
+  },
+  {
+   "label": "ED imaging volume, NO2 comparator",
+   "exposure": "NO2 short-term, per 10 ppb",
+   "est": 1.017,
+   "lo": 1.014,
+   "hi": 1.02,
+   "metric": "IRR",
+   "src": "Wu et al. 2026d (J Am Coll Radiol)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "Victorian women of\nreproductive age,\npostcode ecological"
+  },
+  {
+   "n": 1,
+   "note": "Chiang Mai child\ndevelopment centres,\npreschool caregivers"
+  },
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 1,
+   "note": "Stockholm County\nadults 18-84 y\n(n=46,282)"
+  },
+  {
+   "n": 1,
+   "note": "CHARLS adults\naged 45+ (n=19,505),\nsleep duration"
+  }
+ ]
+}

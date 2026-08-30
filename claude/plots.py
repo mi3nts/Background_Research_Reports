@@ -332,6 +332,38 @@ design_group.update({
     "Ecological (GLOBOCAN secondary analysis)": "Ecological",
     "Regulatory coding framework": "Modelling / inventory",
 })
+# 2026-08-28 issue.
+design_group.update({
+    "Animal model (chronic instillation)": "Experimental / toxicology",
+    "Bioaerosol monitoring campaign": "Measurement campaign",
+    "Controlled wave-channel experiment": "Experimental / toxicology",
+    "Cross-sectional environmental survey": "Measurement campaign",
+    "Cross-sectional population survey": "Observational - cross-sectional",
+    "Ecological geospatial linkage": "Ecological",
+    "Field campaign, single-particle instrumentation": "Measurement campaign",
+    "Filter sampling + composition": "Measurement campaign",
+    "Integrated emission-air quality-health modelling": "Modelling / inventory",
+    "Laboratory instrument development": "Experimental / toxicology",
+    "Metric development + retrospective application": "Modelling / inventory",
+    "Network deployment + statistical model": "Measurement campaign",
+    "Prospective cohort (CHARLS)": "Observational - cohort",
+    "Quasi-experimental (difference-in-differences)": "Ecological",
+    "Satellite-surface fusion, machine learning": "Modelling / inventory",
+    "Time-stratified case-crossover + DLNM": "Observational - acute",
+    "Cross-sectional survey": "Observational - cross-sectional",
+})
+# 2026-08-29 issue.
+design_group.update({
+    "Continuous IEQ monitoring + supervised classification": "Measurement campaign",
+    "Cross-sectional time-activity survey": "Observational - cross-sectional",
+    "Human tissue multi-omics (transcriptome/proteome/metabolome)": "Experimental / toxicology",
+    "Comprehensive review": "Review / synthesis",
+    "Consensus position statement": "Review / synthesis",
+    "Retrospective cross-sectional (health screening)": "Observational - cross-sectional",
+    # found by the W35 rollup: written on a 2026-08-25 record without a mapping
+    "CTM evaluation against observation-based counterfactuals (COVID-19 emission shift)":
+        "Modelling / inventory",
+})
 # Close design_group under its own output. The 2026-08-05 fix added self-maps for the
 # nine group names in use that day but left four uncovered; a record written with one of
 # those four would have fallen through to "Other / mixed" (5th recurrence of the same
@@ -524,6 +556,7 @@ geo_group = {
     "Nigeria": "Sub-Saharan Africa", "Kenya": "Sub-Saharan Africa",
     "Ethiopia": "Sub-Saharan Africa",
     "Poland": "Europe", "Romania": "Europe", "Netherlands": "Europe",
+    "Slovakia": "Europe", "Italy": "Europe",
     "Turkiye": "Middle East & N. Africa", "India": "South Asia",
     "South Africa": "Sub-Saharan Africa", "Mexico": "Latin America",
     "Lebanon": "Middle East & N. Africa", "Bangladesh": "South Asia",

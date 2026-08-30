@@ -1,0 +1,376 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{29 August 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-08-29\;\;\textcolor{Amber}{\textbar}\;\;Entry window 29 August 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;8 records screened in scope\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{RECORDS IN SCOPE\\(22 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{SUBTOPIC CLUSTERS\\OCCUPIED (OF 10)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{REVIEWS /\\POSITION STATEMENTS}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{EFFECT ESTIMATES\\FROM 1 STUDY}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{RECORDS FROM\\SUB-SAHARAN AFRICA}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Thyroid function joins the list of endpoints with a
+coherent air-pollution dose--response --- and PM$_{10}$, not PM$_{2.5}$, carries the
+strongest association.}\\[1.4mm]
+\footnotesize
+Park et al.\ (\textit{J Endocrinol Invest}) screened \textbf{16{,}193 Korean adults} with
+TSH in the assayable 0.1--10.0\,mIU/L range against CMAQ-modelled annual PM$_{2.5}$,
+PM$_{10}$, NO$_2$, SO$_2$ and CO. Every pollutant is positively associated with TSH and
+negatively with free thyroxine ($P<0.001$), and for the combined
+\textbf{high-TSH/low-FT4 phenotype} the adjusted odds ratios per IQR order as
+\textbf{PM$_{10}$ 1.55 (95\% CI 1.42--1.69)} $>$ SO$_2$ 1.38 (1.28--1.49) $>$ NO$_2$ 1.36
+(1.23--1.50) $>$ \textbf{PM$_{2.5}$ 1.25 (1.17--1.34)} $>$ CO 1.23 (1.15--1.31), with
+stronger effects in women. That PM$_{10}$ outranks PM$_{2.5}$ is worth sitting with: five
+collinear pollutants from a single CMAQ field, entered in separate single-pollutant
+models, cannot separate coarse-fraction mechanism from correlation structure --- but if
+the coarse fraction really is doing the work, it is the fraction most low-cost optical
+networks measure worst, because PM$_{10}$ sizing in a nephelometric unit is the least
+reliable channel it has. Cross-sectional design and a single-hospital screening
+population cap the inference at hypothesis strength.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{A thin day, and half of it is synthesis.} Eight records over seven clusters,
+of which \textbf{four are reviews or position statements}. No cluster holds more than two.
+
+\item \textbf{Sub-Saharan Africa appears twice after an eight-issue absence.} A West Rand
+time-activity survey (330 households near gold-mine tailings) and a meningitis-belt dust
+review. The time-activity paper is the more useful for exposure work: it reports indoor
+fractions \textbf{roughly 10 percentage points below the USEPA Exposure Factors Handbook
+values} that most exposure models silently import, which biases indoor--outdoor
+apportionment for any African deployment using default time budgets.
+
+\item \textbf{Microplastics enter through a particle-toxicology route.} Chen et al.\
+(\textit{Part Fibre Toxicol}) quantify placental microplastic burden by pyrolysis-GC-MS
+and stratify transcriptome, proteome and metabolome by it --- the first record in this
+watch to treat placental MP burden as a graded internal dose rather than a
+presence/absence finding.
+
+\item \textbf{A cautionary machine-learning result.} Yu et al.\ (\textit{Indoor Air})
+predict seven self-reported symptoms in Milan dormitories from continuous environmental
+quality data: \textbf{mean AUC 0.595 (0.398--0.705)}, only four models above 0.6, from 74
+occupant samples and 131 candidate predictors. The paper's own observation is the
+interesting one --- dominant predictors were \textbf{outdoor statistics and
+distributional shape features, not mean indoor concentrations}. Mean-value summaries of a
+sensor time series discard most of the health-relevant information.
+
+\item \textbf{Two records that are mostly agenda-setting.} The SynAir-G statement on
+children's indoor air quality argues for chemical$\times$biological synergy as the
+policy-relevant unit of exposure; the poultry-worker airway review restates a
+well-established organic-dust hazard without new quantification.
+
+\item \textbf{Rejected but worth naming.} Two directly on-topic Elsevier deposits --- a
+hybrid AQI forecasting framework (\textit{Atmos Pollut Res}) and an operational
+ragweed-pollen forecast evaluation (\textit{Environ Pollut}) --- arrived with no abstract
+in any indexed source and are carried to the retry list rather than summarised from
+titles.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus at a glance}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Records per subtopic cluster: 8 records over \textbf{seven of ten} clusters, with
+\textit{Occupational \& indoor} the only cluster holding 2. \textit{Cardiovascular \&
+metabolic}, \textit{Neuro / mental health} and \textit{Reproductive \& developmental} are
+empty --- although the placental microplastics record is reproductive in substance and
+sits under \textit{Mechanistic toxicology} because its contribution is molecular rather
+than obstetric. A flat distribution like this one carries no signal about the field; it
+is what a low-volume deposit day looks like.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture, and the dominant fact of this issue:
+\textbf{\textit{Review / synthesis} is 4 of 8}, against \textit{Observational ---
+cross-sectional} 2, \textit{Experimental / toxicology} 1 and \textit{Measurement
+campaign} 1. A day with more synthesis than primary data is a deposit-calendar artefact,
+not a statement about research direction. Right --- health endpoint: one record (the
+West Rand time-activity survey) carries none, and no endpoint repeats.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. \textit{PM (unspeciated) / emissions} 4 dominates,
+because half the corpus characterises a mixed or organic dust rather than a regulated
+mass fraction; one each for \textit{PM$_{2.5}$ only},
+\textit{PM$_{2.5}$ + PM$_{10}$ jointly}, \textit{composition / speciation} (placental
+polymer burden) and \textit{bioaerosol / coarse}. Right --- geography: Europe 2,
+\textbf{Sub-Saharan Africa 2}, multi-region 2, China 1, East Asia ex-China 1. The African
+pair ends an eight-issue absence running from 21 August; the last previous African
+record was the Addis Ababa study of 20 August.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ architecture cross-tabulation. With 8 records over seven
+clusters and four architectures, \textbf{only one cell holds 2} ---
+\textit{Occupational \& indoor} $\times$ \textit{Review / synthesis} --- and the other six
+occupied cells hold 1. There is no structure to read here; the panel is carried for
+continuity of the series.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Five estimates, \textbf{all from a single study} (Park et al.), all for the same
+outcome and all on a common per-IQR contrast, so this is one of the few panels in this
+watch where a pollutant-versus-pollutant reading is internally consistent. It is
+\emph{not} a potency comparison in any causal sense: the five exposures come from one
+CMAQ field, are mutually collinear, and were entered in separate single-pollutant models,
+so the ordering (PM$_{10}$ $>$ SO$_2$ $>$ NO$_2$ $>$ PM$_{2.5}$ $>$ CO) partly reflects
+each pollutant's IQR width and its correlation with the others rather than an independent
+effect. The intervals are narrow because $n$ is large, not because confounding is small.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. \textbf{Four records across three of five windows}: the
+in-utero cell holds the placental microplastics study, the childhood cell the SynAir-G
+schools statement, and the working-age cell both the Korean screening cohort and the
+Milan dormitory panel. Puberty/adolescence and 65+ are empty.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster; the 29 August entry window
+only.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 1 record}{Amber}
+
+\paperentry{Yu et al.\ 2026b}
+{Machine learning-based prediction of occupant symptom risk using indoor and outdoor
+environmental quality data in university dormitories}
+{Indoor Air}
+{Seven monitoring periods across two Milan student residences, May 2024 to June 2025,
+pairing continuous indoor and outdoor environmental quality data with occupant symptom
+surveys. From \textbf{74 occupant samples} and 131 candidate predictors (reduced per
+symptom to 3--40 by permutation importance), seven binary symptom classifiers were fitted
+under leave-one-period-out cross-validation. Performance is weak and honestly reported:
+\textbf{mean AUC 0.595, range 0.398--0.705}, four of seven above 0.6; the higher combined
+accuracy figures appear only after dropping the two least specific symptoms. With $n=74$
+against 131 candidate predictors the feature-selection step is almost certainly
+overfitting even under LOPO-CV. The transferable finding is the feature ranking:
+\textbf{outdoor statistics and distributional shape features beat mean indoor
+concentrations}, which argues directly against summarising a sensor time series by its
+mean.}
+{10.1155/ina/8230467}
+
+\band{Exposure assessment \& modelling\hfill 1 record}{Amber}
+
+\paperentry{Kalumbi et al.\ 2026}
+{Age-specific time-spent patterns among residents living near gold mine tailings storage
+facilities in the West Rand, South Africa}
+{J Expo Sci Environ Epidemiol}
+{Cross-sectional structured-questionnaire survey of \textbf{330 households in Kagiso},
+West Rand, resolving indoor and outdoor time across five age categories with
+Kruskal--Wallis tests and Bonferroni-adjusted Dunn's comparisons. Indoor time runs
+\textbf{66.6--84.8\% of a weekday and 76.0--82.7\% of a weekend day}
+(18.28$\pm$3.02\,h weekdays, 19.00$\pm$1.99\,h weekends); young children and older adults
+are indoors most, and weekend indoor time rises significantly for children, adolescents
+and adults but not for the two extreme age groups. The headline for exposure modelling is
+that indoor time is \textbf{nearly 10 percentage points below USEPA Exposure Factors
+Handbook defaults}. Self-reported recall with no diary or wearable validation, and a
+single district, so the magnitude is soft --- the direction of the bias in imported
+default time budgets is the usable result.}
+{10.1038/s41370-026-00972-6}
+
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Chen et al.\ 2026j}
+{Multi-omics integration reveals human placental molecular signatures associated with
+microplastics exposure}
+{Part Fibre Toxicol}
+{Placental microplastic burden quantified by \textbf{pyrolysis-gas chromatography--mass
+spectrometry}, samples stratified into high- and low-burden groups, then transcriptomic,
+proteomic and metabolomic profiling integrated through the DIABLO framework with network
+analysis for regulatory hubs. High-burden placentae show multi-layer molecular
+perturbation centred on immune dysregulation. The design's strength is that MP burden is
+treated as a \emph{graded internal dose} rather than a detection/non-detection flag,
+which separates it from most human-tissue microplastics work. Its limits are the usual
+ones for cross-sectional human tissue: burden is measured once at delivery, exposure
+timing is unknown, the omics contrasts are correlational, no sample size appears in the
+abstract, and Py-GC-MS quantifies polymer \emph{mass} without particle size or count ---
+so the dose metric is mass, not number or surface area.}
+{10.1186/s12989-026-00697-2}
+
+\clearpage
+
+\band{Occupational \& indoor\hfill 2 records}{Clay}
+
+\paperentry{Ramirez et al.\ 2026}
+{Airway diseases and occupational exposures in poultry industry workers: a comprehensive
+review}
+{Curr Allergy Asthma Rep}
+{Review of occupational asthma and chronic obstructive lung disease in poultry workers,
+attributing risk to the barn's mixed aerosol --- feather and feed dust, mites, moulds,
+ammonia and bacterial endotoxin --- acting through airway inflammation and
+hypersensitivity, with a symptom spectrum from wheeze and chest tightness to chronic
+cough and dyspnoea. Emphasis falls on early identification through occupational
+history-taking and on barn control practices. \textbf{No prevalence figures, no
+exposure--response estimates and no search or inclusion strategy} are reported, so this is
+a clinical orientation piece rather than an evidence synthesis. Its relevance here is the
+exposure architecture: an occupational aerosol whose health-relevant fraction is defined
+by biological composition, which a mass-only monitor cannot resolve at all.}
+{10.1007/s11882-026-01289-y}
+
+\paperentry{Siemens et al.\ 2026}
+{A SynAir-G position statement for the improvement of indoor air quality for children}
+{Indoor Air}
+{Position statement from the EU-funded SynAir-G project (18 partners, 11 countries) within
+the seven-project IDEAL Cluster, arguing that indoor air has been under-regulated relative
+to outdoor air despite most exposure occurring indoors, and that the policy-relevant unit
+is the \textbf{synergistic interaction between chemical and biological pollutants} rather
+than any single-pollutant concentration. Schools and children are the target setting. As a
+consensus document it presents no new measurements, no systematic evidence appraisal and
+no quantified synergy, so the central claim is asserted rather than demonstrated. The
+instrumentation implication is nonetheless concrete: a synergy framing requires co-located
+chemical and bioaerosol sensing at classroom scale, which no current low-cost platform
+delivers.}
+{10.1155/ina/9690417}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sage}
+
+\paperentry{Silva et al.\ 2026}
+{Shared mechanisms linking PM$_{2.5}$ exposure, obstructive sleep apnea and obesity}
+{Front Sleep}
+{Narrative review of the three-way relationship between chronic PM$_{2.5}$ exposure,
+obstructive sleep apnea and obesity, proposing systemic inflammation, oxidative stress,
+neuroendocrine dysregulation and gut microbiota alteration as shared pathways, and noting
+that intermittent hypoxia and sleep fragmentation feed back into weight gain. The
+mechanistic overlap is plausible and the review is explicit that it is
+hypothesis-organising, but \textbf{no effect estimates, no study inventory and no
+appraisal of confounding by adiposity} appear --- and adiposity confounds both the
+exposure (residential location) and the outcome. Read alongside the CHARLS sleep-duration
+result carried on 28 August, the practical gap is identical in both: no objective sleep
+measurement anywhere in this literature.}
+{10.3389/frsle.2026.1918405}
+
+\clearpage
+
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Park et al.\ 2026b}
+{Association between annual air pollutant exposure and thyroid function: a retrospective
+cross-sectional study}
+{J Endocrinol Invest}
+{\textbf{16{,}193 adults} (8{,}812 male, 7{,}381 female; mean age 53.8$\pm$13.1\,y)
+screened at Seoul National University with TSH within 0.1--10.0\,mIU/L, against
+CMAQ-estimated annual PM$_{2.5}$, PM$_{10}$, NO$_2$, SO$_2$ and CO. All five pollutants
+associate positively with TSH and negatively with free thyroxine ($P<0.001$), with
+significant non-linearity for PM$_{2.5}$ and NO$_2$ against log TSH. For the combined
+high-TSH/low-FT4 phenotype the per-IQR adjusted odds ratios run
+\textbf{PM$_{10}$ 1.55 (1.42--1.69)}, SO$_2$ 1.38 (1.28--1.49), NO$_2$ 1.36 (1.23--1.50),
+\textbf{PM$_{2.5}$ 1.25 (1.17--1.34)} and CO 1.23 (1.15--1.31), stronger among women. The
+binding limitations: exposure is a modelled annual field at residence with no personal
+component, the design is cross-sectional so temporality is unresolved, and the five
+pollutants are collinear by construction --- the ordering must not be read as
+differential potency.}
+{10.1007/s40618-026-02965-6}
+
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Cliff et al.\ 2026}
+{How do climatic factors directly influence the incidence and risk of meningococcal
+meningitis across the African meningitis belt?}
+{GeoHealth}
+{Narrative review over the 26-country African meningitis belt, where outbreaks cluster
+strongly in the dry season, examining dust, wind speed, temperature, rainfall and land
+cover as candidate drivers. \textbf{Atmospheric dust and wind speed carry the strongest
+statistical association and the greatest predictive probability} of the variables
+examined, with mucosal damage from inhaled mineral dust the standing mechanistic
+hypothesis. The review's own central caveat is the right one: these climatic variables are
+severely multicollinear within the dry season, so attributing incidence to dust rather
+than to temperature or humidity is not identified by the observational record. Carried
+here because it is one of the few live health endpoints where the \emph{coarse} mineral
+fraction, not PM$_{2.5}$, is the hypothesised agent --- and where satellite dust products
+substitute for a ground network that does not exist.}
+{10.1029/2025gh001749}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{2026-08-29 to 2026-08-29}, a single day of deposits.
+\textbf{Sources.} PubMed E-utilities on \texttt{[Date - Entry]}, run as two separate
+queries (health axis 20, instrumentation axis 3). Europe PMC \texttt{CREATION\_DATE}
+returned 0. Crossref by-ISSN returned 79 deposits across the harvester's two-day window;
+because that window opened at \texttt{last\_entry\_date + 1} while the 28 August issue was
+still being written, \textbf{57 of the 79 carry a Crossref creation date of 28 August and
+were screened in the previous issue} --- they are excluded here rather than re-screened,
+so this issue's Crossref pool is the 22 deposits created on 29 August. OpenAlex remains
+broken for entry-date windowing; arXiv contributed nothing in window.
+\textbf{Screening.} \textbf{30 unique} candidates after PMID/DOI collapse and removal of
+records already in \texttt{seen.json} (15 of the 23 PubMed hits were already published in
+the 28 August issue), \textbf{8 retained and 22 rejected} with reason
+logged to \texttt{state/rejected.jsonl}. Rejections were dominated by non-particle
+environmental science (\textit{Sci Total Environ} soil, water and carbon-flux deposits
+plus four retraction notices), non-airborne chemical exposure (bisphenol A, 2,4-DTBP,
+endocrine-disruptor mixtures) and \textit{Meas Sci Technol} non-atmospheric metrology.
+\textbf{Two in-scope deposits} --- an AQI forecasting framework and a ragweed-pollen
+operational forecast --- had no retrievable abstract and were carried to the retry list
+rather than summarised.
+\textbf{Effect estimates.} Five estimates, all from Park et al.; the figure caption states
+why the between-pollutant ordering is not a potency comparison.
+\textbf{Pipeline changes made this run.} Six design labels and \textit{Italy} were added
+to \texttt{plots.py} in the same edit that wrote them onto records.
+\textbf{Labels.} Subtopic, design, particle-metric and geography are single-label by
+dominant contribution --- a judgement, not a controlled vocabulary. All 8 DOIs passed
+\texttt{check\_dois.py} (0 fail, 0 warn) before build.\par}
+\end{keybox}
+
+\end{document}
