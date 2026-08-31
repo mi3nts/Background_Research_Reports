@@ -417,7 +417,7 @@
    "primary_completion_date": "2024-03-25",
    "last_update_posted": "2026-08-25",
    "seen_window": "2026-08-22..2026-08-26",
-   "note": "Status moved to COMPLETED in this window. Real-time personal exposure feedback as the intervention itself, n=30 \u2014 the same behaviour-change axis as NCT05160948 but with a live feedback loop rather than a post-hoc report. Directly relevant to distributed low-cost PM sensing: it tests whether the display, not the measurement, is what changes exposure. n=30 is far too small for a behavioural endpoint and there is no sham-display arm, so any effect is confounded with participation."
+   "note": "Status moved to COMPLETED in this window. Real-time personal exposure feedback as the intervention itself, n=30 — the same behaviour-change axis as NCT05160948 but with a live feedback loop rather than a post-hoc report. Directly relevant to distributed low-cost PM sensing: it tests whether the display, not the measurement, is what changes exposure. n=30 is far too small for a behavioural endpoint and there is no sham-display arm, so any effect is confounded with participation."
   },
   {
    "nct_id": "NCT06247059",
@@ -475,7 +475,15 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+  },
+  {
+   "window": "2026-08-27..2026-08-31",
+   "run": "2026-08-30 issue",
+   "queried": "clinicaltrials.gov API v2, AREA[LastUpdatePostDate] range on condition/intervention axes",
+   "hits": 1,
+   "kept": 0,
+   "note": "Sole hit NCT07793123 (antioxidant supplement for skin radiance, n=60, NOT_YET_RECRUITING) screened out: cosmetic endpoint, pollution only as marketing framing, no PM exposure metric. No new interventional PM registration in the window, so analyze_endpoints was not run."
   }
  ],
  "NCT05867381": {
@@ -622,7 +630,7 @@
   "start_date": "2026-09-15",
   "last_update": "2026-08-12",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
+   "Pre-bronchodilator FEV₁ Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },

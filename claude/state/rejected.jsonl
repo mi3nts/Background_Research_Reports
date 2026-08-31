@@ -751,3 +751,20 @@
 {"date": "2026-08-29", "doi": "10.1016/j.atmosres.2026.109298", "title": "Non-stationary evolution of summer wet-bulb temperature in China (1951\u20132024): Accelerated warming and time-varying roles of temperature and humidity", "reason": "out of scope: not particulate-matter monitoring or PM health effect"}
 {"date": "2026-08-29", "doi": "10.1029/gh2.v10.9", "title": "(no title)", "reason": "out of scope: not particulate-matter monitoring or PM health effect"}
 {"date": "2026-08-29", "doi": "10.1029/gh2.70193", "title": "Issue Information", "reason": "editorial front matter"}
+{"issue": "2026-08-30", "pmid": "42669268", "doi": "10.1016/j.watres.2026.126812", "title": "Threshold-driven reuse of mineral processing water", "reason": "out of scope: water-phase flotation chemistry, not airborne PM"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1021/acs.est.6c03224", "title": "Oxygen isotope anomaly in surface ozone across China", "reason": "out of scope: gas-phase O3 isotopes, no PM measurement"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1021/acs.est.6c08050", "title": "Manganese redox cycling / vanadium immobilization in soil", "reason": "out of scope: soil geochemistry"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1021/acs.est.6c08698", "title": "Emulsified vegetable oil droplet interfaces PFOA defluorination", "reason": "out of scope: groundwater remediation"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1021/acs.est.6c04546", "title": "PFASs disrupt airway epithelial homeostasis in organoids", "reason": "out of scope: non-particulate chemical exposure"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1021/acs.est.6c04982", "title": "Fish serotonin/dopamine transporters", "reason": "out of scope: aquatic pharmacology"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1021/acs.est.6c06984", "title": "Structural shift of global consumption-based biodiversity threats", "reason": "out of scope: biodiversity footprinting"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1016/j.envint.2026.110492", "title": "Mortality study of a PFOA-exposed cohort, mid-Ohio Valley", "reason": "out of scope: PFOA serum cohort, no PM exposure metric"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1016/j.envint.2026.110494", "title": "Aromatic amine antioxidants and PPD-quinones, thyroid and cognition", "reason": "out of scope: no airborne PM exposure metric confirmable; no abstract deposited"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1016/j.envint.2026.110493", "title": "PCB exposure and predicted 10-year ASCVD risk", "reason": "out of scope: PCB body burden, no PM"}
+{"issue": "2026-08-30", "pmid": "42666678", "doi": "10.3389/frsle.2026.1918405", "title": "Shared mechanisms linking PM2.5, OSA and obesity", "reason": "duplicate: already published in the 2026-08-29 issue"}
+{"issue": "2026-08-30", "pmid": "42667350", "doi": "10.1007/s40618-026-02965-6", "title": "Annual air pollutant exposure and thyroid function", "reason": "duplicate: already published in the 2026-08-29 issue"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.3390/atmos17040335", "title": "ML calibration transfer, Sofia hybrid network", "reason": "Consensus backfill, DOI already in seen.json"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1088/1361-6501/ae6298", "title": "Calibration strategies for low-cost PM sensors (review)", "reason": "Consensus backfill, DOI already in seen.json"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.3390/s26030796", "title": "Calibration of low-cost PM sensors with AI for smart cities", "reason": "Consensus backfill, DOI already in seen.json"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1108/sr-10-2025-0761", "title": "ML approaches for LCS network calibration (review)", "reason": "Consensus backfill, DOI already in seen.json"}
+{"issue": "2026-08-30", "pmid": null, "doi": "10.1007/s44408-026-00146-x", "title": "Evaluating and calibrating LCS in contrasting aerosol regimes", "reason": "Consensus backfill, DOI already in seen.json"}

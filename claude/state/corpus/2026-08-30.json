@@ -1,0 +1,262 @@
+{
+ "date": "2026-08-30",
+ "entry_window": "2026-08-30 -> 2026-08-30",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Chen et al. 2026k",
+   "doi": "10.1021/acs.est.6c09290",
+   "title": "Lake Breeze Effects on the Urban Environment in Chicago",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Sensor-network event analysis (lake-breeze compositing)",
+   "pm": "PM2.5 and O3 from the Microsoft Eclipse low-cost sensor network plus meteorological stations, 1 year",
+   "geo": "United States",
+   "endpoint": "None (monitoring)",
+   "n": "42 lake-breeze events + 51 weak events, Chicago, 2022",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Blaga et al. 2026",
+   "doi": "10.1371/journal.pclm.0000780",
+   "title": "City-scale calibration of a low-cost PM2.5 network for regulatory-compliant air-quality assessment",
+   "journal": "PLOS Clim",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Sensor co-location + seasonal MLR calibration",
+   "pm": "PM2.5, Clarity Node-S vs NEPA reference stations",
+   "geo": "Romania",
+   "endpoint": "None (monitoring)",
+   "n": "44 sensors, 9 co-located clusters (1 train / 8 validate), Bucharest",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Senarathna et al. 2026",
+   "doi": "10.1007/s10661-026-15623-4",
+   "title": "Enhancing low-cost PM2.5 air quality monitoring sensors through sensor calibration using regression and echo-state network models",
+   "journal": "Environ Monit Assess",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Sensor co-location + regression / echo-state network calibration",
+   "pm": "PM2.5, TSI BlueSky vs reference, wet and dry season",
+   "geo": "Sri Lanka",
+   "endpoint": "None (monitoring)",
+   "n": "Harmonised network across 2 climatic zones (Colombo, Kandy)",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Sengupta et al. 2026",
+   "doi": "10.48550/arXiv.2604.21527",
+   "title": "A temporal deep learning framework for calibration of low-cost air quality sensors",
+   "journal": "arXiv (preprint)",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Sensor co-location + LSTM sequence calibration",
+   "pm": "PM2.5, PM10 and NO2, LCS vs co-located reference (OxAria)",
+   "geo": "United Kingdom",
+   "endpoint": "None (monitoring)",
+   "n": "OxAria network co-location, Oxford",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Li et al. 2026f",
+   "doi": "10.1007/s44408-026-00161-y",
+   "title": "Study on the Non-uniform Distribution Characteristics of Oil Mist and Local Ventilation Method in Machining Workshop",
+   "journal": "Aerosol Air Qual Res",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only",
+   "pm": "Oil-mist aerosol, spatial distribution",
+   "geo": "China",
+   "endpoint": "None (monitoring)",
+   "n": "Not retrievable (no abstract deposited)",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Gu et al. 2026b",
+   "doi": "10.1016/j.envint.2026.110491",
+   "title": "Nitrogen-containing organic compounds in household solid-fuel combustion PM and residential urinary inflammatory and targeted amino-acid profiles: an exploratory personal exposure study",
+   "journal": "Environ Int",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only",
+   "pm": "Personal PM from household solid-fuel combustion; N-containing organic speciation",
+   "geo": "Not stated (metadata only)",
+   "endpoint": "Inflammatory / amino-acid biomarkers",
+   "n": "Not retrievable (no abstract deposited)",
+   "tier": "C"
+  },
+  {
+   "pmid": "42669045",
+   "short": "Rahmani et al. 2026",
+   "doi": "10.1515/reveh-2025-0059",
+   "title": "Airborne microplastics: a comprehensive analysis of indoor and outdoor pollution patterns",
+   "journal": "Rev Environ Health",
+   "sub": "Exposure assessment & modelling",
+   "design": "Systematic review + random-effects meta-analysis",
+   "pm": "Airborne microplastic number concentration (MP/m3), indoor vs outdoor",
+   "geo": "Multi-country",
+   "endpoint": "None (monitoring)",
+   "n": "27 studies / 16 countries; 21 pooled",
+   "tier": "B"
+  },
+  {
+   "pmid": "42668565",
+   "short": "Ren et al. 2026",
+   "doi": "10.1016/j.isci.2026.117090",
+   "title": "Contrasting chemical characteristics and secondary formation of PM2.5 from mountain and urban sites in central China",
+   "journal": "iScience",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "PM2.5 mass and SNA / OC-EC speciation, annual",
+   "geo": "China",
+   "endpoint": "None (monitoring)",
+   "n": "3 urban + 1 mountain site, Shiyan, 1 year",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Zhang & Yu 2026 (preprint)",
+   "doi": "10.21203/rs.3.rs-10496137/v1",
+   "title": "Environmental and calendar correlates of daily emergency department demand in Wuhan, China: a single-centre time-series study with temporal validation",
+   "journal": "Res Sq (preprint)",
+   "sub": "Other clinical endpoints",
+   "design": "Time-series / case-crossover",
+   "pm": "Pollutant-specific AQI (PM2.5, PM10, NO2, O3), lag 0-2, per IQR",
+   "geo": "China",
+   "endpoint": "Emergency department attendance",
+   "n": "906 days, 391,344 visits, Jan 2024 - Jun 2026",
+   "tier": "B"
+  },
+  {
+   "pmid": "42669197",
+   "short": "Jerome et al. 2026",
+   "doi": "10.1080/1547691X.2026.2722654",
+   "title": "Prolonged brain cytokine elevation and microgliosis following exposure to World Trade Center dust particulate matter in male spontaneously hypertensive rats",
+   "journal": "J Immunotoxicol",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal exposure study",
+   "pm": "WTC dust, intratracheal, 2.43 (+/-0.78) mg/day x 2 d",
+   "geo": "United States",
+   "endpoint": "Neuroinflammation / myelin",
+   "n": "Male SHR rats, 12 wk at exposure; 3 and 12 mo post-exposure",
+   "tier": "B"
+  },
+  {
+   "pmid": "42667487",
+   "short": "Luo et al. 2026b",
+   "doi": "10.1007/s12016-026-09193-z",
+   "title": "Impacts of Environmental Pollutants on Innate Immunity: The Role of Group 2 Innate Lymphoid Cells",
+   "journal": "Clin Rev Allergy Immunol",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "PM, diesel exhaust particles, O3, cigarette smoke, nanomaterials, microplastics",
+   "geo": "Multi-country",
+   "endpoint": "Toxicological (in vitro)",
+   "n": "Review, no primary n",
+   "tier": "C"
+  },
+  {
+   "pmid": "42668842",
+   "short": "Tanner et al. 2026",
+   "doi": "10.1093/eep/dvag027",
+   "title": "Prenatal environmental determinants of aromatase brain-promoter methylation in cord blood: chemical, airborne, pharmacological, and nutritional factors",
+   "journal": "Environ Epigenet",
+   "sub": "Reproductive & developmental",
+   "design": "Birth cohort + weighted quantile sum regression",
+   "pm": "Air pollution as 1 of 25 prenatal exposures in a WQS mixture index",
+   "geo": "Australia",
+   "endpoint": "Epigenetic (cord-blood methylation)",
+   "n": "906 mother-infant pairs, Barwon Infant Study",
+   "tier": "C"
+  },
+  {
+   "pmid": "42668576",
+   "short": "Simion et al. 2026",
+   "doi": "10.1016/j.lanwpc.2026.101952",
+   "title": "Attributing climate-related health burdens in Southeast Asia: a scoping review",
+   "journal": "Lancet Reg Health West Pac",
+   "sub": "Burden, policy & mitigation",
+   "design": "Scoping review",
+   "pm": "Air pollution, heat and extreme-weather attribution studies",
+   "geo": "Southeast Asia",
+   "endpoint": "Mortality",
+   "n": "5,294 records screened, 77 studies included",
+   "tier": "B"
+  },
+  {
+   "pmid": "42668336",
+   "short": "Donaldson et al. 2026",
+   "doi": "10.1186/s40798-026-01099-6",
+   "title": "Air Pollution Impairs Marathon Performance: A Cross-Sectional Analysis of 2.7 Million Finishers Across Six World Marathon Majors",
+   "journal": "Sports Med Open",
+   "sub": "Other clinical endpoints",
+   "design": "Observational - cross-sectional",
+   "pm": "Race-day NO2 and PM2.5 from CAMS global reanalysis, per 1 ug/m3",
+   "geo": "Multi-country",
+   "endpoint": "Athletic performance (finishing time)",
+   "n": "2,756,553 finishes, 75 marathon-year events, 2010-2024",
+   "tier": "A"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "ED attendance, PM2.5 AQI",
+   "exposure": "PM2.5 AQI lag 0-2, per IQR",
+   "est": 1.028,
+   "lo": 1.015,
+   "hi": 1.042,
+   "metric": "RR",
+   "src": "Zhang & Yu 2026 (Res Sq preprint)"
+  },
+  {
+   "label": "ED attendance, PM10 AQI",
+   "exposure": "PM10 AQI lag 0-2, per IQR",
+   "est": 1.03,
+   "lo": 1.017,
+   "hi": 1.043,
+   "metric": "RR",
+   "src": "Zhang & Yu 2026 (Res Sq preprint)"
+  },
+  {
+   "label": "ED attendance, NO2 AQI",
+   "exposure": "NO2 AQI lag 0-2, per IQR",
+   "est": 1.049,
+   "lo": 1.034,
+   "hi": 1.064,
+   "metric": "RR",
+   "src": "Zhang & Yu 2026 (Res Sq preprint)"
+  },
+  {
+   "label": "ED attendance, O3 AQI",
+   "exposure": "O3 AQI lag 0-2, per IQR",
+   "est": 0.98,
+   "lo": 0.965,
+   "hi": 0.996,
+   "metric": "RR",
+   "src": "Zhang & Yu 2026 (Res Sq preprint)"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "Barwon Infant\nStudy cord blood\n(n=906)"
+  },
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 3,
+   "note": "Marathon finishers\n18-59; machining\nworkshop; solid-fuel\nhouseholds"
+  },
+  {
+   "n": 1,
+   "note": "Marathon finishers\n65+ stratum\n(smallest NO2 effect)"
+  }
+ ]
+}

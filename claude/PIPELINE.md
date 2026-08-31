@@ -1709,3 +1709,41 @@ Crossref by-ISSN 43, arXiv 0. **OpenAlex now returns HTTP 429 on top of the stan
   28–29 Aug abstract-free deposits (AQI forecasting `10.1016/j.apr.2026.103184`, ragweed
   `10.1016/j.envpol.2026.129060`, plus the six from 28 Aug).
   `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).
+
+### 2026-08-30 issue, built on the 2026-08-31 11:0x CDT run (22:00 rule)
+Local time 11:05 CDT on 31 Aug, before 22:00, so the newest buildable date was **2026-08-30**
+while `last_entry_date` sat at 2026-08-29 — a genuine one-day gap, opened and closed. Window
+`2026-08-30 -> 2026-08-30` (a Sunday). **31 unique considered, 7 already seen, 14 in scope,
+17 rejected.** 9 pp, 0 errors, 0 overfull/underfull boxes, 0 DOI failures or warnings.
+- **Source counts.** PubMed `[EDAT]` 2026/08/30: connector **7** health / **0** sensing against
+  **4** / 0 from the local harvester — the local set is a strict subset, connector still the
+  better recall leg. Europe PMC 6 → 2 unique (2 were in the PubMed set, 2 were shipped on
+  29 Aug). Crossref by-ISSN **12** deposits → 3 carried, 9 non-particulate. arXiv 60 entries,
+  0 inside the 25 Aug recency screen. **OpenAlex HTTP 403/429, leg still dead.** Consensus 10
+  on the calibration/drift axis → 7 DOIs already in `seen.json`, **3 new**, all carried as
+  explicitly labelled backfill (Blaga PLOS Clim, Senarathna Environ Monit Assess,
+  Sengupta arXiv; Feb/Jun/Apr 2026 publication dates).
+- **`harvest.py` cannot complete inside the 180 s tool timeout.** `run_all.py --harvest` was
+  killed after PubMed+EPMC; the `crossref_sensing` leg was finished by running the 25 ISSNs in
+  three chunks and merging `crossref_part_*.json`. Journal index 17 (JESEE) hung on the
+  harvester's own request path and needed an explicit 12 s socket timeout. **Chunk the sensing
+  leg by default; do not assume a single `--harvest` call completes.**
+- **Proof caught three false claims**, all checked against `metrics.csv`/the corpus and
+  corrected before shipping: the f2b no-endpoint metric said 6 where the figure showed 7
+  (Sengupta was added after the first count); "first day since 23 August with no respiratory
+  record" (21, 23 *and* 28 Aug were also empty); and "sub-Saharan Africa absent for a tenth
+  consecutive issue" — **flatly wrong, 29 Aug carried two African records**. Also fixed a build
+  failure: `\band{...}{Musk}` — `Musk` exists in `plots.py`'s palette but is **not** a colour in
+  `preamble.tex`; `mktable.BANDCOL` maps EXPO to `Amber`. Do not use `Musk` in a template.
+- `plots.py`: 6 design labels added in the same edit that wrote them (incl. three
+  `Sensor co-location + ...` variants) plus `Sri Lanka` → South Asia, which the unmapped-geo
+  diagnostic caught.
+- Trial watch, window 27–31 Aug via the v2 API: 1 hit, 0 kept (NCT07793123, cosmetic skin
+  endpoint). No new interventional PM registration, so `analyze_endpoints` not run.
+  `trials.json` windows 5 → 6.
+- **Next: the 31 Aug run owes the daily *and* the August monthly** (last day of month), and the
+  W36 weekly (30 Aug–5 Sep) falls to Sat 5 Sep. The monthly must exclude nothing —
+  30–31 Aug corpus files will both exist — but it must state that the 30 Aug sensing count of 4
+  contains 3 dated backfills. Abstract retry list unchanged plus
+  `10.1016/j.envint.2026.110491` and `10.1007/s44408-026-00161-y` (both shipped metadata-only).
+  `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).

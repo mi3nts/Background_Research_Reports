@@ -109,6 +109,15 @@ save(fig, "f1_subtopics.png")
 
 # ---------------------------------------------------------------- 2. design donut + tier bar
 design_group = {
+    # 2026-08-30: six labels coined this issue. Added in the same edit that wrote
+    # them onto records, per the standing rule.
+    "Animal exposure study": "Experimental / toxicology",
+    "Birth cohort + weighted quantile sum regression": "Observational - cohort",
+    "Sensor co-location + regression / echo-state network calibration": "Sensor co-location",
+    "Sensor co-location + seasonal MLR calibration": "Sensor co-location",
+    "Sensor co-location + LSTM sequence calibration": "Sensor co-location",
+    "Sensor-network event analysis (lake-breeze compositing)": "Measurement campaign",
+    "Systematic review + random-effects meta-analysis": "Review / synthesis",
     "Case-crossover": "Observational - acute",
     "Panel study": "Observational - acute",
     "Prospective cohort": "Observational - cohort",
@@ -560,6 +569,7 @@ geo_group = {
     "Turkiye": "Middle East & N. Africa", "India": "South Asia",
     "South Africa": "Sub-Saharan Africa", "Mexico": "Latin America",
     "Lebanon": "Middle East & N. Africa", "Bangladesh": "South Asia",
+    "Sri Lanka": "South Asia",  # 2026-08-30: fell through to Global / multi-region
     "Kazakhstan": "Central Asia", "Greece": "Europe", "Bulgaria": "Europe",
     "Norway": "Europe", "Taiwan": "East Asia (ex-China)",
     "Czech Republic": "Europe", "The Gambia / Kenya / Mozambique": "Sub-Saharan Africa",
