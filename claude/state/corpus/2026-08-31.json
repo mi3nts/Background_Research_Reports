@@ -1,0 +1,272 @@
+{
+ "date": "2026-08-31",
+ "entry_window": "2026-08-31 -> 2026-08-31",
+ "PAPERS": [
+  {
+   "pmid": "42674653",
+   "short": "Li Q et al. 2026",
+   "doi": "10.1021/acs.est.6c00144",
+   "title": "Health risk of fine particulate matter across China with a pollutant-specific index, 2013-2023",
+   "journal": "Environ Sci Technol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Machine-learning exposure model + meta-analysis + risk index",
+   "pm": "Daily 1 km PM2.5, 2013-2023, machine-learning estimate; PM2.5-specific AQHI",
+   "geo": "China",
+   "endpoint": "All-cause / CVD / resp. mortality",
+   "n": "Nationwide China, 11 years; CV R2 0.88 spatial / 0.82 temporal",
+   "tier": "A"
+  },
+  {
+   "pmid": "42674649",
+   "short": "Illa et al. 2026",
+   "doi": "10.1021/acs.est.6c02953",
+   "title": "How are we exposed to chemicals when drugs are smoked indoors?",
+   "journal": "Environ Sci Technol",
+   "sub": "Occupational & indoor",
+   "design": "Mechanistic indoor fate and exposure model",
+   "pm": "Indoor smoke aerosol; 7 compounds spanning volatility and hydrophobicity; first-, second- and third-hand pathways",
+   "geo": "Global (computational)",
+   "endpoint": "None (modelled exposure dose)",
+   "n": "Scenario model over retention rate and smoking frequency; adult and child receptors",
+   "tier": "B"
+  },
+  {
+   "pmid": "42674178",
+   "short": "Feng et al. 2026",
+   "doi": "10.1016/j.jbspin.2026.106129",
+   "title": "Plasma metabolic and proteomic signatures of mixed ambient air pollutant exposure and incident arthritis subtypes",
+   "journal": "Joint Bone Spine",
+   "sub": "Other clinical endpoints",
+   "design": "Prospective cohort (mixtures) + omics mediation",
+   "pm": "Annual PM2.5, PM10, NOx, NO2 combined in a weighted quantile sum index",
+   "geo": "United Kingdom",
+   "endpoint": "Incident arthritis subtypes",
+   "n": "UK Biobank, 401,676 arthritis-free at baseline; 78,188 incident cases, median 13 y",
+   "tier": "A"
+  },
+  {
+   "pmid": "42673782",
+   "short": "Yohanna & Lim 2026",
+   "doi": "10.1016/j.chemosphere.2026.145074",
+   "title": "Regional and seasonal variation of PM2.5 and ozone across Malaysia using XGBoost and SHAP",
+   "journal": "Chemosphere",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Gradient-boosting model + SHAP interpretability",
+   "pm": "Daily PM2.5 and O3 from the DOE monitoring network plus ERA5 reanalysis, 2018-2023",
+   "geo": "Malaysia",
+   "endpoint": "None (monitoring / forecasting)",
+   "n": "Five regions, 6 years of daily observations",
+   "tier": "B"
+  },
+  {
+   "pmid": "42671733",
+   "short": "Boogaard et al. 2026",
+   "doi": "10.1007/s40572-026-00560-8",
+   "title": "Advancing long-term outdoor air pollution exposure assessment for health studies",
+   "journal": "Curr Environ Health Rep",
+   "sub": "Exposure assessment & modelling",
+   "design": "Programme-level synthesis of exposure-model comparisons",
+   "pm": "Long-term outdoor PM2.5, NO2 and BC; mobility- and infiltration-adjusted exposure models",
+   "geo": "Global / multi-region",
+   "endpoint": "Mortality (re-analysed cohorts)",
+   "n": "HEI multinational initiative; cross-model correlations generally >0.7",
+   "tier": "A"
+  },
+  {
+   "pmid": "42671661",
+   "short": "Saad et al. 2026",
+   "doi": "10.1007/s10661-026-15828-7",
+   "title": "Short-term monitoring of air pollutants at the port-urban exposure zone, Alexandria Port",
+   "journal": "Environ Monit Assess",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Portable sensor monitoring campaign",
+   "pm": "PM2.5, PM10, CO2, CO, NO2, SO2, NH3 and VOC by portable multi-gas monitor and particulate sensors",
+   "geo": "Egypt",
+   "endpoint": "None (monitoring; AQI derived)",
+   "n": "24 sites (11 in-port, 13 urban), two campaigns May-Oct 2022",
+   "tier": "B"
+  },
+  {
+   "pmid": "42670256",
+   "short": "Wang L et al. 2026",
+   "doi": "10.1002/lipd.70072",
+   "title": "Joint exposure to small dense LDL-C and long-term PM2.5 and risk of incident stroke",
+   "journal": "Lipids",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort + trajectory clustering",
+   "pm": "Annual mean PM2.5 from the ChinaHighPM2.5 dataset, 2011-2020",
+   "geo": "China",
+   "endpoint": "Incident stroke",
+   "n": "CHARLS, 6,457 stroke-free adults; 710 incident strokes over median 9 y",
+   "tier": "A"
+  },
+  {
+   "pmid": "42669693",
+   "short": "Lim et al. 2026",
+   "doi": "10.1038/s41467-026-75908-7",
+   "title": "Public responses about air quality in the world's ten most populous countries",
+   "journal": "Nat Commun",
+   "sub": "Burden, policy & mitigation",
+   "design": "Multi-country quota survey + exposure linkage",
+   "pm": "Modelled ambient PM2.5 linked to respondent locality",
+   "geo": "Global / multi-region",
+   "endpoint": "None (knowledge, attitudes, practices, concern)",
+   "n": "10,618 respondents across 1,372 localities in 10 countries",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Chi et al. 2026",
+   "doi": "10.5194/acp-26-12261-2026",
+   "title": "Heterogeneous nitrosation of amines driven by dinitrogen tetroxide: a missing source of particulate nitrosamines",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Born-Oppenheimer molecular dynamics + metadynamics",
+   "pm": "Particulate nitrosamines from methylamine / dimethylamine + N2O4 at the air-water interface",
+   "geo": "Global (computational)",
+   "endpoint": "None (formation mechanism)",
+   "n": "Two amines; HONO generated in 2-16 ps, nitrosation barrier 7.65 kcal/mol at 300 K",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Guo et al. 2026b",
+   "doi": "10.5194/acp-26-12231-2026",
+   "title": "Resolving systematic errors in sulfate source apportionment: a field-validated kinetic isotope fractionation framework",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Kinetic model + field validation",
+   "pm": "Seasonal PM2.5 sulfate; stable-isotope Bayesian mixing plus Rayleigh fractionation",
+   "geo": "China",
+   "endpoint": "None (source apportionment)",
+   "n": "Seasonal PM2.5 observations, Nanjing",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Hernandez Pardo et al. 2026",
+   "doi": "10.5194/acp-26-12275-2026",
+   "title": "Downward transport of tropical upper-tropospheric aerosols: multi-year idealized simulations",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Global chemistry-climate tracer simulation",
+   "pm": "19 idealised aerosol tracers, 20-100 nm, released in the tropical upper troposphere",
+   "geo": "Global / multi-region",
+   "endpoint": "None (transport)",
+   "n": "Multi-year EMAC simulations; age of air 45 d (tropics-wide) to >250 d (regional)",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Song et al. 2026",
+   "doi": "10.1021/acs.est.6c05282",
+   "title": "Shifting PM2.5 control from mass to toxicity for health equity worldwide",
+   "journal": "Environ Sci Technol",
+   "sub": "Burden, policy & mitigation",
+   "design": "Perspective / evidence synthesis",
+   "pm": "Source-specific PM2.5 toxicity weighting applied to global exposure surfaces",
+   "geo": "Global / multi-region",
+   "endpoint": "Toxicity-adjusted mortality",
+   "n": "Global; 8.2% of population bears 24.0% of toxicity-adjusted exposure",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Garcia Dominguez et al. 2026",
+   "doi": "10.1021/acs.est.6c05957",
+   "title": "Ultrafine airborne particle deposition and clearance in an avian lung under ecologically relevant conditions",
+   "journal": "Environ Sci Technol",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal inhalation exposure + dosimetry",
+   "pm": "50 and 100 nm model ultrafine particles at 5 or 25 degrees C",
+   "geo": "Sweden",
+   "endpoint": "Lung deposition & clearance",
+   "n": "Zebra finches (Taeniopygia guttata); 44% of 100 nm dose retained at 2 weeks",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Liu T et al. 2026",
+   "doi": "10.1021/acs.est.6c09521",
+   "title": "Aerosol solute strength drives transition-metal-ion-catalyzed sulfate aerosol formation",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Aerosol flow reactor + model implementation",
+   "pm": "Aqueous aerosol sulfate from SO2 + O2 with Fe(III)/Mn(II) catalysis; ionic strength threshold 16 mol/kg",
+   "geo": "Global / multi-region",
+   "endpoint": "None (formation chemistry)",
+   "n": "Flow-reactor experiments across solute strengths; implemented in an atmospheric model",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Jin et al. 2026b",
+   "doi": "10.1016/j.buildenv.2026.115193",
+   "title": "Synergistic optimization of air change rate and air purifier type for bioaerosol control during dental ultrasonic scaling",
+   "journal": "Build Environ",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only",
+   "pm": "Bioaerosol transport and deposition during dental ultrasonic scaling",
+   "geo": "China",
+   "endpoint": "None (abstract not deposited)",
+   "n": "Not available - no abstract in the Crossref deposit",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Wood et al. 2026b",
+   "doi": "10.1016/j.indenv.2026.100191",
+   "title": "Influence of ventilation rate on the potential for indoor particulate matter exposure",
+   "journal": "Indoor Environments",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only",
+   "pm": "Indoor PM exposure potential as a function of ventilation rate",
+   "geo": "United Kingdom",
+   "endpoint": "None (abstract not deposited)",
+   "n": "Not available - no abstract in the Crossref deposit",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Incident stroke, PM2.5",
+   "exposure": "Annual mean PM2.5, per 1 SD",
+   "est": 1.321,
+   "lo": 1.222,
+   "hi": 1.428,
+   "metric": "HR",
+   "src": "Wang L et al. 2026"
+  },
+  {
+   "label": "Incident stroke, high sd-LDL-C x high PM2.5",
+   "exposure": "Joint high-high vs. low-low",
+   "est": 1.713,
+   "lo": 1.335,
+   "hi": 2.198,
+   "metric": "HR",
+   "src": "Wang L et al. 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 1,
+   "note": "Indoor-smoking\nfate model:\nchild bystander\nreceptor"
+  },
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 3,
+   "note": "UK Biobank\n(n=401,676);\nCHARLS 45+\n(n=6,457);\n10-country survey\n(n=10,618)"
+  },
+  {
+   "n": 0,
+   "note": ""
+  }
+ ]
+}

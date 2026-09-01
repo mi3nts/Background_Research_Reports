@@ -86,11 +86,37 @@ def overlap(a, b):
     return len(wa & wb) / max(1, len(wa))
 
 
+def prior_issue_dois(date):
+    """DOI (lowercased) -> the issue that already shipped it, for every issue
+    OTHER than `date`.
+
+    Added 2026-09-01. The August monthly rollup found **8 duplicate records
+    across 7 DOIs** (1-3 Aug x4, 7/9 Aug, 24/25 Aug x2) that had all been
+    correctly written into `state/seen.json` under their first issue date and
+    were then re-summarised the next day under a reworded title. So the index
+    was being *written* and not *read*: the screening step is a human-in-the-
+    loop judgement and cannot be trusted to consult it. This reads the shipped
+    corpus itself rather than seen.json, so it cannot be defeated by a
+    write-side bug either.
+    """
+    out = {}
+    for path in sorted(glob.glob(os.path.join(STORE, "*.json"))):
+        d = os.path.basename(path)[:-5]
+        if d == date:
+            continue
+        for p in json.load(open(path)).get("PAPERS", []):
+            if p.get("doi"):
+                out.setdefault(p["doi"].strip().lower(), d)
+    return out
+
+
 def check(date):
     path = os.path.join(STORE, "%s.json" % date)
     papers = json.load(open(path))["PAPERS"]
     pmids = [str(p["pmid"]) for p in papers if str(p.get("pmid", "")).isdigit()]
     live = pubmed_dois(pmids)
+    prior = prior_issue_dois(date)
+    seen_here = {}
 
     fails, warns = [], []
     for p in papers:
@@ -98,6 +124,18 @@ def check(date):
         if not doi:
             fails.append((short, "NO-DOI", "record has no DOI"))
             continue
+
+        # 0. cross-issue duplicate - the index was written but not read
+        key = doi.strip().lower()
+        if key in prior:
+            fails.append((short, "DUPLICATE-DOI",
+                          "%s already shipped in the %s issue" % (doi, prior[key])))
+            continue
+        if key in seen_here:
+            fails.append((short, "DUPLICATE-DOI",
+                          "%s appears twice in this issue (also %s)" % (doi, seen_here[key])))
+            continue
+        seen_here[key] = short
 
         # 1. authority - the reliable check
         if pmid in live and live[pmid].lower() != doi.lower():

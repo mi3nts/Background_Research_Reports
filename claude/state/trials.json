@@ -442,6 +442,42 @@
    "last_update_posted": "2026-08-24",
    "seen_window": "2026-08-22..2026-08-26",
    "note": "WITHDRAWN at enrollment 0, no reason posted. Box-fan (Corsi-Rosenthal-class) and UVGI arms in low-resource classrooms; the endpoint was viral transmission, not PM, but it is the only registered trial of DIY filtration at classroom scale this watch has tracked. Its withdrawal removes the one prospective test of whether cheap box-fan units deliver measurable benefit in the settings that most need them."
+  },
+  {
+   "nct_id": "NCT07797413",
+   "title": "Savannah Environmental Nutrition Study (SENS) Food as Prevention: A Community-Based Nutrition Intervention to Reduce Air Pollution-Related Inflammation and Oxidative Stress in Residents Near the Port of Savannah",
+   "status": "NOT_YET_RECRUITING",
+   "study_type": "INTERVENTIONAL",
+   "phase": "NA",
+   "conditions": [
+    "Air Pollution Exposure",
+    "Oxidative Stress",
+    "Airway Inflammation"
+   ],
+   "interventions": [
+    "Antioxidant- and Nutrient-Rich Food-Based Nutrition Intervention"
+   ],
+   "sponsor": "Georgia Southern University",
+   "enrollment": 20,
+   "start_date": "2026-09-01",
+   "primary_completion_date": "2027-04-30",
+   "last_update_posted": "2026-08-31",
+   "seen_window": "2026-08-31",
+   "endpoints": {
+    "primary": [
+     "Participant retention rate (>=80% target), baseline to week 12"
+    ],
+    "secondary": [
+     "Change in FeNO (ppb, NIOX Mini)",
+     "Change in exhaled-breath-condensate H2O2 (uM, Amplex Red)",
+     "Change in systolic and diastolic BP",
+     "Change in resting heart rate",
+     "Change in HbA1c",
+     "Recruitment/accrual rate (>=70% target)",
+     "Intervention delivery fidelity and adherence"
+    ]
+   },
+   "note": "Feasibility trial; primary endpoint is retention, not a health outcome. FeNO and EBC H2O2 are the airway-inflammation and oxidative-stress markers. No PM exposure measurement is registered - proximity to the Port of Savannah is the exposure proxy."
   }
  ],
  "windows": [
@@ -484,6 +520,14 @@
    "hits": 1,
    "kept": 0,
    "note": "Sole hit NCT07793123 (antioxidant supplement for skin radiance, n=60, NOT_YET_RECRUITING) screened out: cosmetic endpoint, pollution only as marketing framing, no PM exposure metric. No new interventional PM registration in the window, so analyze_endpoints was not run."
+  },
+  {
+   "window": "2026-08-31",
+   "run": "2026-08-31 issue / August monthly",
+   "queried": "clinicaltrials.gov API v2 via connector, AREA[LastUpdatePostDate]RANGE[2026-08-31,MAX] on the condition axis",
+   "hits": 1,
+   "kept": 1,
+   "note": "NCT07797413 is the first new interventional PM/air-pollution registration since NCT07111208 (4 Aug). analyze_endpoints was run; endpoints stored on the record. Surfaced in the August monthly."
   }
  ],
  "NCT05867381": {

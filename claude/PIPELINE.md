@@ -1747,3 +1747,56 @@ while `last_entry_date` sat at 2026-08-29 — a genuine one-day gap, opened and 
   contains 3 dated backfills. Abstract retry list unchanged plus
   `10.1016/j.envint.2026.110491` and `10.1007/s44408-026-00161-y` (both shipped metadata-only).
   `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).
+
+### 2026-08-31 issue + August monthly, built on the 2026-09-01 11:1x CDT run (22:00 rule)
+Local 11:16 CDT on 1 Sep, before 22:00, so the newest buildable date was **2026-08-31**
+against `last_entry_date` 2026-08-30 — one day, opened and closed. Window
+`2026-08-31 -> 2026-08-31`. **47 unique considered, 1 already seen, 16 in scope, 31
+rejected.** 9 pp, 0 DOI fail/warn, 1 overfull hbox at 0.67 pt.
+- **Source counts.** PubMed `[EDAT]` 2026/08/31: health **11** via the connector; the
+  instrumentation axis **had to be split in two** — the connector rejects >20 boolean
+  operators (`INVALID_QUERY`) and the stock `QUERIES["sensing"]` term has 21 — and both
+  survivors were already in the health set, so sensing added 0 unique. Europe PMC 1 hit,
+  already shipped 30 Aug. Crossref by-ISSN **35** deposits → 8 carried. arXiv 60 entries,
+  0 inside the recency screen. OpenAlex 403. **Consensus 3 hits, all 3 already in
+  `seen.json`** (29 Jul / 1 Aug / 2 Aug), so no backfill this run.
+- **August monthly built** (`Reports/monthly/PM-Research-Watch-Monthly_2026-08-31.pdf`,
+  117 pp): 556 records over 31 daily issues, 548 unique DOIs, 148 effect estimates from
+  63 sources, all ten subtopics. Pure aggregation — no API re-queried, unlike July's.
+  Headline: **the AMT/ACP Crossref channel that July's rollup asked for now supplies the
+  largest venue in the corpus** (ACP 37, AMT 11).
+- **DEFECT FOUND BY THE ROLLUP AND GATED — duplicates shipped.** A full-store audit found
+  **12 records published twice** (7 on 2 Aug, 2 on 3 Aug, 1 on 9 Aug, 2 on 25 Aug). In
+  every case the DOI was already correctly in `seen.json` under the first issue date:
+  **the index was written and not read**, and the reworded title defeated the `tsig` leg.
+  Fixed forward — `check_dois.py` now hard-fails `DUPLICATE-DOI`, scanning
+  `state/corpus/*.json` directly rather than `seen.json`, so a write-side bug cannot
+  defeat it either. Shipped issues NOT retro-edited; disclosed in the monthly instead.
+- **`f2b_endpoint.png` omitted from the monthly on purpose.** At rollup scale it is
+  1087x2727 px, overflowed page 6 by **507 pt**, and height-capping made ~90 rows render
+  at ~3 pt. Root cause is the open `ENDPOINT_CANON` gap: 556 records carry **144 distinct
+  endpoint strings**, four of which are spellings of "no endpoint". Distribution shipped
+  as prose instead. **Fix before the September rollup: a bounded `ENDPOINT_CANON` in
+  `plots.py`, same pattern as `design_group`/`geo_group`.**
+- **`plots.py` f3 fix:** `set_xlim(0, max + 1.2)` is not enough headroom for the bold
+  value label, which is drawn at `v + max*0.018`. At max=213 the "213" was clipped
+  outside the axes and printed over the right panel's "Global / multi-region" tick.
+  Both panels now use `max*1.10 + 1.2`. 13 design labels added for the day's records.
+- Proof caught and fixed three things before shipping: an f2b label collision on the
+  daily (five endpoint strings shortened at the corpus, not in the caption); a
+  **false "first time all three clusters vacant"** claim (5 August was also all-three
+  empty); and a **false "highest no-endpoint share this month"** claim (62% vs 20
+  August's 72%). Also removed one mid-digest `\clearpage` that orphaned a single entry
+  onto its own page, and moved another to stop an orphaned band heading.
+- Trial watch, window 31 Aug: 1 hit, **1 kept** — NCT07797413 (Savannah Environmental
+  Nutrition Study, n=20, feasibility, FeNO + EBC H2O2 secondaries, **no registered PM
+  exposure measurement**). `analyze_endpoints` run, endpoints stored on the record.
+  `trials.json` 23 -> 24 trials, windows 6 -> 7.
+- Site UI: week view already renders one cadence-tagged button per report, month view
+  already has the count badge -> chooser popup, and the header "All reports" archive is
+  already folder-categorised. No change needed; verified live.
+- Still open: `ENDPOINT_CANON`; no first-author affiliation field (no author-cluster
+  analysis possible); venue names unnormalised (Research Square under 3 spellings,
+  medRxiv under 2); abstract retry list now also carries
+  `10.1016/j.buildenv.2026.115193` and `10.1016/j.indenv.2026.100191`.
+  `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).

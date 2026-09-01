@@ -109,6 +109,21 @@ save(fig, "f1_subtopics.png")
 
 # ---------------------------------------------------------------- 2. design donut + tier bar
 design_group = {
+    # 2026-08-31: nine labels coined this issue. Added in the same edit that wrote
+    # them onto records, per the standing rule.
+    "Machine-learning exposure model + meta-analysis + risk index": "Modelling / inventory",
+    "Mechanistic indoor fate and exposure model": "Modelling / inventory",
+    "Prospective cohort (mixtures) + omics mediation": "Observational - cohort",
+    "Gradient-boosting model + SHAP interpretability": "Modelling / inventory",
+    "Programme-level synthesis of exposure-model comparisons": "Review / synthesis",
+    "Portable sensor monitoring campaign": "Measurement campaign",
+    "Prospective cohort + trajectory clustering": "Observational - cohort",
+    "Multi-country quota survey + exposure linkage": "Observational - cross-sectional",
+    "Born-Oppenheimer molecular dynamics + metadynamics": "Chamber / laboratory",
+    "Global chemistry-climate tracer simulation": "Modelling / inventory",
+    "Perspective / evidence synthesis": "Review / synthesis",
+    "Animal inhalation exposure + dosimetry": "Experimental / toxicology",
+    "Aerosol flow reactor + model implementation": "Chamber / laboratory",
     # 2026-08-30: six labels coined this issue. Added in the same edit that wrote
     # them onto records, per the standing rule.
     "Animal exposure study": "Experimental / toxicology",
@@ -722,7 +737,12 @@ ax1.barh([k for k, _ in pi], [v for _, v in pi],
          height=0.6, zorder=3)
 for i, (_, v) in enumerate(pi):
     ax1.text(v + max(pmc.values()) * 0.018, i, str(v), va="center", fontsize=FS(8.4), fontweight="bold")
-ax1.set_xlim(0, max(pmc.values()) + 1.2)
+# Headroom must be PROPORTIONAL, not a flat +1.2. The value label is drawn at
+# v + max*0.018, so at rollup scale (max=213 on 2026-08-31) the label for the longest
+# bar starts 3.8 units past the axis limit, is clipped outside the axes and lands on
+# the right panel's tick labels -- "213" printed over "Global / multi-region".
+# Found at proof of the August monthly, 2026-09-01.
+ax1.set_xlim(0, max(pmc.values()) * 1.10 + 1.2)
 ax1.set_title("Particle metric under study", pad=8)
 ax1.set_xlabel("Records")
 ax1.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax1.set_axisbelow(True)
@@ -734,7 +754,7 @@ ax2.barh([k for k, _ in gi], [v for _, v in gi],
          height=0.6, zorder=3)
 for i, (_, v) in enumerate(gi):
     ax2.text(v + max(geo.values()) * 0.018, i, str(v), va="center", fontsize=FS(8.4), fontweight="bold")
-ax2.set_xlim(0, max(geo.values()) + 1.2)
+ax2.set_xlim(0, max(geo.values()) * 1.10 + 1.2)   # same fix as ax1, see above
 ax2.set_title("Geographic provenance of evidence", pad=8)
 ax2.set_xlabel("Records")
 ax2.xaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax2.set_axisbelow(True)
