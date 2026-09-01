@@ -1794,7 +1794,16 @@ rejected.** 9 pp, 0 DOI fail/warn, 1 overfull hbox at 0.67 pt.
   `trials.json` 23 -> 24 trials, windows 6 -> 7.
 - Site UI: week view already renders one cadence-tagged button per report, month view
   already has the count badge -> chooser popup, and the header "All reports" archive is
-  already folder-categorised. No change needed; verified live.
+  already folder-categorised. No change needed.
+- **Step 9 (live verification) NOT COMPLETED this run** — every network tool
+  (`web_fetch`, the browser pane) was refused for the whole session by a safety-classifier
+  outage, so `index.dc.html` was never loaded against the deployed site. What *was*
+  verified, locally and by replaying the site's own cell logic against the shipped
+  manifest: `84edf0c` is on `origin/main`; all **43** manifest entries resolve to a file
+  that exists on disk; and the seven multi-report days (31 Jul, 1/8/15/22/29 Aug, 31 Aug)
+  each produce the two-entry list the badge/picker path expects — 29 Aug is Daily+Weekly,
+  31 Aug is Daily+Monthly. **The next run must load the live page and confirm the 31 Aug
+  cell renders both reports before treating this issue as delivered.**
 - Still open: `ENDPOINT_CANON`; no first-author affiliation field (no author-cluster
   analysis possible); venue names unnormalised (Research Square under 3 spellings,
   medRxiv under 2); abstract retry list now also carries
