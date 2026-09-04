@@ -388,6 +388,20 @@ design_group.update({
     "CTM evaluation against observation-based counterfactuals (COVID-19 emission shift)":
         "Modelling / inventory",
 })
+# 2026-09-02 issue.
+design_group.update({
+    "Mendelian randomisation + TWAS": "Modelling / inventory",
+})
+# 2026-09-01 issue.
+design_group.update({
+    "Aircraft measurement campaign": "Measurement campaign",
+    "Multi-platform observation synthesis": "Measurement campaign",
+    "Smog chamber experiment": "Experimental / toxicology",
+    "Exposure model (secondary data)": "Modelling / inventory",
+    "Prospective birth cohort + DLNM": "Observational - cohort",
+    "Prospective cohort + in vitro screening": "Observational - cohort",
+    "Twin-pair longitudinal comparison": "Observational - cohort",
+})
 # Close design_group under its own output. The 2026-08-05 fix added self-maps for the
 # nine group names in use that day but left four uncovered; a record written with one of
 # those four would have fallen through to "Other / mixed" (5th recurrence of the same
@@ -594,6 +608,9 @@ geo_group = {
     "Philippines": "Southeast Asia", "Indonesia": "Southeast Asia",
     "Malaysia": "Southeast Asia", "Singapore": "Southeast Asia",
     "Arctic Ocean": "Polar / remote marine", "Antarctica": "Polar / remote marine",
+    # added 2026-09-01: aircraft campaign over remote tropical ocean, and a
+    # basin-scale dust study whose sites are all northern-Mediterranean European.
+    "Indo-Pacific": "Polar / remote marine", "Mediterranean": "Europe",
     "Southern Ocean": "Polar / remote marine",
     # added 2026-08-05: continental group names used directly as a record's geo
     "East Asia": "East Asia (ex-China)", "South Asia": "South Asia",

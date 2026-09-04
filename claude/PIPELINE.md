@@ -1809,3 +1809,62 @@ rejected.** 9 pp, 0 DOI fail/warn, 1 overfull hbox at 0.67 pt.
   medRxiv under 2); abstract retry list now also carries
   `10.1016/j.buildenv.2026.115193` and `10.1016/j.indenv.2026.100191`.
   `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).
+
+### 2026-09-01 and 2026-09-02 issues, built on the 2026-09-03 20:5x CDT run (22:00 rule)
+Local 20:59 CDT on 3 Sep, before 22:00, so the newest buildable date was **2026-09-02**
+against `last_entry_date` 2026-08-31 — two owed days, opened and closed separately.
+**1 Sep:** 135 unique considered, 4 already seen, **33 in scope**, 98 rejected, 13 pp.
+**2 Sep:** 89 unique, 12 already seen, **15 in scope**, 62 rejected, 10 pp. 0 DOI fail/warn
+on both; one 1.0 pt overfull hbox on the 1 Sep masthead.
+- **Source counts.** 1 Sep — PubMed `[EDAT]` health **26** / sensing **5**, Europe PMC 11,
+  Crossref by-ISSN **97**, Consensus 3 (**all 3 already in the store**: 2 Aug, 5 Aug, and a
+  30 Jul out-of-window rejection — fourth consecutive nil run for that leg).
+  2 Sep — PubMed health **4** / sensing **0**, Europe PMC 17, Crossref **68**; Consensus not
+  re-queried. **OpenAlex 403** (unchanged since 28 Jul) and **arXiv 429 on every attempt**
+  across both days — four retries over a five-minute window, so the preprint-instrumentation
+  leg is a hard failure this run, not an empty result.
+- **DEFECT IN MY OWN SCREEN, caught before it shipped.** The first screening pass read
+  `seen.json` at the wrong nesting level (it is `{pmid:{}, doi:{}, tsig:{}}`, not a flat
+  map), reported "0 already seen" against 136 candidates, and would have re-shipped four
+  31 Aug records (Saad, Lim, Yohanna & Lim, Wang L). Fixed by keying on the three
+  sub-maps **and** re-indexing `state/corpus/*.json` directly as a second leg. Note also
+  that `seen.json`'s `tsig` is a SHA-1 of title+author+year, not a normalised title, so a
+  raw-title comparison against it silently matches nothing — the pmid/doi legs are the
+  real protection.
+- **`plots.py` map additions** (written in the same edit as the records): designs
+  `Aircraft measurement campaign`, `Multi-platform observation synthesis`,
+  `Smog chamber experiment`, `Exposure model (secondary data)`,
+  `Prospective birth cohort + DLNM`, `Prospective cohort + in vitro screening`,
+  `Twin-pair longitudinal comparison`, `Mendelian randomisation + TWAS`; geos
+  `Indo-Pacific` -> Polar / remote marine, `Mediterranean` -> Europe.
+- **Proof caught four false claims before shipping.** (1) "largest single-cluster count
+  this watch has recorded" — 26 July had 26 in the same cluster. (2) "eight *J. Environ.
+  Sci.* papers inside EXPO" — seven; the eighth (Arora) is in Mechanistic toxicology, and
+  the list wrongly included an ozone-flux paper that was rejected. (3) 2 Sep "first day
+  since 5 August with four clusters vacant" — 24 Aug had six. (4) 2 Sep "Latin America
+  returns for the first time since 25 August" — 28 Aug carried Mexico. Also fixed: the
+  67 %-no-endpoint ranking (9 Aug ties it; 2 and 5 Aug beat it), a claim that the four
+  cohort records span four health clusters (three), an orphaned band heading and a
+  two-line spill onto a blank page 2.
+- **`Metadata only` is now written as the *design* for abstract-free records.** The 2 Sep
+  issue carries **6 of 15** such records (five Elsevier Crossref deposits with no abstract,
+  none yet in PubMed/Europe PMC, all 404 or null in Semantic Scholar). They were initially
+  given designs inferred from their titles; that is a guess dressed as data, so they were
+  rescored `Metadata only`, which is also what the f2 panel and the exec brief now say.
+- Trial watch, window 1–2 Sep via the v2 API direct (**the Clinical Trials MCP connector
+  was unavailable this session** — safety-classifier timeout): 3 hits, **1 kept**
+  (NCT04153539, Fudan, randomised crossover of walking a busy road vs a traffic-free park,
+  n=69, FEV1/BP/HRV). All three are record *updates*, not new registrations, so
+  `analyze_endpoints` was not run. `trials.json` 24 -> 25 trials, windows 7 -> 8.
+  **For the W36 weekly:** NCT04153539 is the interventional counterpart to the Engeroff
+  running-route preprint shipped 2 Sep — pair them.
+- **GitHub MCP connector failed to connect this session** (`does not support dynamic client
+  registration`), so the connector fallback in step 8 was unavailable and the CLI push was
+  the only route. The delete-restricted mount also required moving a stale `.git/index.lock`
+  aside before every git operation.
+- Still open: no first-author affiliation field; venue names unnormalised; abstract retry
+  list now also carries `10.1016/j.apr.2026.103191`, `10.1039/d6ea00092d`,
+  `10.1016/j.atmosenv.2026.122336`, `10.1016/j.atmosenv.2026.122339`,
+  `10.1016/j.scitotenv.2026.182285`, `10.1016/j.envpol.2026.129046`,
+  `10.1016/j.envpol.2026.129084`, `10.1016/j.buildenv.2026.115195`.
+  `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).

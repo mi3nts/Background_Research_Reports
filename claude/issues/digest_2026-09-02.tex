@@ -1,0 +1,469 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{2 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-09-02\;\;\textcolor{Amber}{\textbar}\;\;Entry window 2 September 2026 (single day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;15 records in scope, 62 screened out\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{15}{RECORDS IN SCOPE\\(62 SCREENED OUT)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{SUBTOPIC CLUSTERS\\OF TEN OCCUPIED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{EFFECT ESTIMATES\\(TWO SOURCES)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{RECORDS SHIPPING\\ON METADATA ONLY}{Clay}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{RECORDS WITH NO\\HEALTH ENDPOINT}{Sky}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A national STEMI register and a Mendelian-randomisation
+study land on the same day at opposite ends of the effect-size scale --- and the gap
+between them is the whole methodological problem of PM epidemiology in one figure.}\\[1.4mm]
+\footnotesize
+De Potter et al.\ analysed \textbf{every ST-elevation myocardial infarction admission in
+Belgium} over nine years ($n$=51{,}544) in a time-stratified case-crossover design with
+residential exposure from high-resolution models. Per IQR, same-day PM$_{2.5}$ gave
+\textbf{OR 1.022 (1.008--1.035)} --- a 2\% acute excess, tight CI, and the kind of number
+a design that self-matches on person and season is built to produce. Li H et al.\ instead
+instrument lifetime PM$_{2.5}$ genetically and report \textbf{OR 1.897 (1.063--3.388)}
+for childhood asthma, with \textbf{FUT10 mediating 19.3\%} of the effect and 70
+TWAS-implicated genes enriched in lysosomal and leukocyte-mediated immunity.
+Both are defensible; they are not measuring the same thing. The case-crossover isolates a
+trigger effect over hours with the chronic exposure held constant by design; the MR
+estimates a lifetime contrast with the acute component invisible. Reading either as
+``the'' PM effect is a category error, and any sensor network that claims to serve
+epidemiology has to declare which of the two it is resolving --- minutes-to-days for the
+first, cumulative annual burden for the second. They imply completely different siting,
+duty cycle and calibration requirements.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Six of fifteen records ship on metadata only} --- the worst abstract
+availability this watch has recorded. Elsevier deposited five \textit{Atmos.\ Environ.},
+\textit{Environ.\ Pollut.}, \textit{Sci.\ Total Environ.} and \textit{Build.\ Environ.}
+records to Crossref with no abstract, none is yet in PubMed or Europe PMC, and Semantic
+Scholar returns 404 or a null abstract for all of them. They are counted and listed;
+\textbf{no number is attributed to any of them}, and four are on-topic enough
+(PM$_{2.5}$-bound metals, solid-fuel PAH biomarkers, heritage-site particle sensing,
+landfill receptor monitoring) that they belong on the abstract retry list. All six are
+scored \textit{Metadata only} in the architecture figure rather than being given a design
+guessed from the title.
+
+\item \textbf{Two effect estimates on the same acute contrast, in the same paper,
+disagree by pollutant.} De Potter et al.\ report same-day \textbf{PM$_{2.5}$ OR 1.022
+(1.008--1.035)} against \textbf{NO$_2$ OR 1.044 (1.025--1.063)} per IQR, with O$_3$
+strongest at lag 0--2 (\textbf{1.063, 1.034--1.090}). NO$_2$ doubling the PM$_{2.5}$
+coefficient in a single-pollutant comparison is the traffic-proximity confounding this
+literature never resolves --- and in-hospital mortality (11.8\%) was driven not by any
+pollutant but by individual and area income and retirement status.
+
+\item \textbf{A filtration material with a number worth writing down.} Lv H et al.'s
+single-component polyimide gradient aerogel reaches \textbf{99.996\% PM$_{0.3}$ efficiency
+at 45.08\,Pa initial pressure drop} with \textbf{127\,g\,m$^{-2}$ dust-holding capacity},
+holding 99.91\% at \textbf{300\,\textdegree C}. The gradient architecture buys depth
+filtration rather than surface caking, which is why the dust-holding number is the
+interesting one, not the efficiency.
+
+\item \textbf{Personal exposure during exercise, measured rather than modelled.} Engeroff
+et al.\ ran 60 instrumented 2\,km runs across a park, a residential street and a major
+road at two times of day. Lowest PM across all fractions: \textbf{midday in the park};
+highest PM$_{10}$: \textbf{morning on the same park route}. Route choice and rush-hour
+avoidance both work, but the meteorological covariates (humidity, pressure, wind,
+temperature) carried real signal --- which is a warning about drawing route conclusions
+from a single campaign.
+
+\item \textbf{Sulfate aerosol water turns out to be photochemically active on its own.}
+Petersen et al.\ show the sulfate anion absorbs surface sunlight and ejects an electron to
+form SO$_4^{\bullet-}$ on a sub-microsecond timescale, at rates \textbf{comparable to
+measured hydroxyl-radical production in aerosols}. Biomass-fire chromophores photosensitise
+the pathway, raising radical formation \textbf{up to five-fold} and more strongly at low
+pH. The consequence is not marginal: secondary brown carbon from this chemistry
+\textbf{flips the direct radiative forcing of sulfate-containing aerosol from negative to
+positive}.
+
+\item \textbf{No sensing-side calibration or drift work today.} \textit{Sensing,
+forecasting \& instrumentation} holds two records, both metadata-only. OpenAlex was 403
+and arXiv 429 again, Consensus was not re-queried after returning three
+already-seen records on the 1 September run, and PubMed's instrumentation axis returned
+\textbf{zero} hits for this entry date.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 15 in-scope records. \textbf{Only six of ten clusters
+are occupied} --- \textit{Mechanistic toxicology}, \textit{Neuro / mental health},
+\textit{Burden, policy \& mitigation} and \textit{Other clinical endpoints} are all empty,
+the first day since 24 August with four or more simultaneously vacant.
+\textit{Occupational \& indoor} at 4 is unusually large for this watch and is genuinely
+heterogeneous: a filtration material, a surgical-smoke bench test, a solid-fuel biomarker
+study and an infiltration metric.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. \textbf{\textit{Metadata only} is the largest group
+at 6 of 15} --- these records are scored as an absence of information rather than assigned
+a design inferred from their titles, which is why the real architectures behind them do
+not appear anywhere in this panel. Of the nine that do carry a design,
+\textit{Modelling / inventory} and \textit{Experimental / toxicology} hold 3 each and the
+single \textit{Observational --- acute} entry is the Belgian case-crossover. Right ---
+health endpoint. \textbf{Nine of fifteen (60\%)} carry no human health endpoint, below
+1 September's 67\%; four of the six that do are metadata-only or MR-derived, so the
+observed-incidence content of this issue is one paper.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. The eight records in \textit{PM (unspeciated) /
+emissions} are inflated by the metadata-only entries, whose particle metric can only be
+inferred from the title; treat that bar as an artefact of missing abstracts rather than a
+statement about the day's measurement practice. Right --- geographic provenance. Europe
+leads at 5 --- Belgium and Germany named, three coded only to \textit{Europe} because two
+are multi-country and one ships on metadata --- then China 4, North America 2, Latin
+America 1. \textbf{Sub-Saharan Africa, South Asia, Southeast Asia
+and Oceania are all absent}; Latin America returns for the first time since 28 August, via
+a heritage-conservation sensing study.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed; counts are non-exclusive. \textbf{Puberty and
+adolescence is empty}. The childhood-asthma MR is scored against both the in-utero and
+early-childhood cells because a genetically instrumented lifetime exposure has no
+identifiable window --- which is precisely the interpretive weakness of the design, and
+scoring it in a single cell would hide that.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. Sparse by construction at
+$n$=15, and the \textit{Metadata only} column carries 6 of the 15 --- including
+\emph{both} \textit{Sensing, forecasting \& instrumentation} records, which is why that
+row contributes no method detail at all. Read this figure as a map of what is missing as
+much as of what is present.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Four estimates from \textbf{two} sources. The three Belgian case-crossover odds
+ratios are per-IQR, same-day (or lag 0--2 for O$_3$) contrasts within one register and are
+not independent of one another; the childhood-asthma odds ratio is a Mendelian
+randomisation on a lifetime genetically instrumented exposure. They share an axis but not
+a scale of inference --- the MR point estimate is roughly forty times larger in excess
+risk (89.7\% vs 2.2\%) and its interval spans a factor of three. Do not read the spread as
+heterogeneity between studies of the same quantity.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Cardiovascular \& metabolic\hfill 1 record}{Teal}
+
+\paperentry{De Potter et al.\ 2026}
+{Socioeconomic and environmental determinants of STEMI incidence and in-hospital mortality}
+{Eur Heart J Acute Cardiovasc Care}
+{Nine years of Belgian national hospital discharge data, \textbf{51{,}544 STEMI
+admissions} (51.4 per 100{,}000 per year), with residential PM$_{2.5}$, NO$_2$, O$_3$,
+temperature, noise and greenspace from high-resolution models. A time-stratified
+case-crossover handled the acute question and multivariable logistic regression the
+mortality question. Per IQR, same-day: \textbf{PM$_{2.5}$ OR 1.022 (1.008--1.035)},
+\textbf{NO$_2$ OR 1.044 (1.025--1.063)}; O$_3$ peaked over lag 0--2 at
+\textbf{1.063 (1.034--1.090)}. In-hospital mortality was 11.8\% and tracked
+\emph{socioeconomic} variables --- lower individual and area income, retirement status ---
+rather than any pollutant. Two readings matter: NO$_2$ outperforming PM$_{2.5}$ in
+single-pollutant models is the standard traffic-proximity confounding, and the
+incidence/mortality split says exposure and outcome severity are governed by different
+mechanisms.}
+{10.1093/ehjacc/zuag118}
+
+\band{Reproductive \& developmental\hfill 1 record}{Sky}
+
+\paperentry{Zanini et al.\ 2026}
+{Maternal air-pollution exposure and fetoplacental Doppler markers}
+{Environ Pollut}
+{Ships on metadata only. The Crossref deposit carries no abstract, the record is not in
+PubMed or Europe PMC, and Semantic Scholar returns 404 for the DOI, so cohort size,
+exposure model and Doppler effect sizes are all unavailable. Counted and listed; no
+numbers claimed. Flagged for the abstract retry list --- fetoplacental haemodynamics is a
+mechanistically informative intermediate between maternal PM exposure and birth outcome
+and is thinly represented in this watch's corpus.}
+{10.1016/j.envpol.2026.129046}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sage}
+
+\paperentry{Li H et al.\ 2026}
+{Multi-omics Mendelian randomisation of PM$_{2.5}$ and childhood asthma}
+{ERJ Open Res}
+{Two-sample MR on large-scale GWAS summary data gives \textbf{OR 1.897 (1.063--3.388),
+$p$=0.030} for genetically instrumented PM$_{2.5}$ on childhood asthma. A TWAS identified
+\textbf{70 genes} co-expressed with both, enriched in lysosome- and leukocyte-mediated
+immunity, with \textbf{MEAF6} validated as protective and \textbf{RNF40} as a risk gene.
+Two-step MR put \textbf{FUT10 as a positive mediator carrying 19.3\%} of the effect, with
+CD200 and MANBA negative mediators; a phenome-wide MR flagged associations of these
+targets with other diseases, which the authors correctly present as a caution against
+treating them as drug targets. The limits are the usual MR limits and they are severe
+here: the PM$_{2.5}$ instrument is a genetic proxy for a residentially correlated
+environmental exposure, so horizontal pleiotropy through socioeconomic position is not
+excluded, and the interval spans a factor of three.}
+{10.1183/23120541.01444-2025}
+
+\band{Occupational \& indoor\hfill 4 records}{Clay}
+
+\paperentry{Lv H et al.\ 2026}
+{Polyimide microsphere/nanofibre gradient aerogels for high-temperature filtration}
+{ACS Appl Mater Interfaces}
+{A single-component polyimide gradient aerogel built to beat the dust-holding limit of
+uniform nanofibre mats, which cake at the surface and choke. Dual-layer structure:
+$\approx$730\,nm coarse fibres under $\approx$300\,nm medium fibres, with a composite
+functional layer of $\approx$3.34\,$\mu$m microspheres and $\approx$60\,nm ultrafine
+fibres on top. Performance: \textbf{99.996\% PM$_{0.3}$ efficiency at 45.08\,Pa} initial
+pressure drop, \textbf{127\,g\,m$^{-2}$ dust-holding capacity}, and \textbf{99.91\%
+retained at 300\,\textdegree C}. Single-component construction is claimed for
+recyclability and uniform thermal expansion. What is not reported is loaded pressure-drop
+evolution or efficiency after thermal cycling, which is what actually determines service
+life in a stack.}
+{10.1021/acsami.6c10042}
+
+\paperentry{Ma L et al.\ 2026}
+{Surgical smoke from laser laparoscopic partial nephrectomy with an aspirating handle}
+{Can J Urol}
+{Ex vivo porcine kidney comparison of electrocoagulation, ultrasonic, 980\,nm diode and
+532\,nm KTP laser resection, with and without a novel aspirator-integrated handle. The
+KTP green laser produced the most smoke; coagulation-layer thickness ran diode
+(\textbf{4.16 $\pm$ 0.21\,mm}) $>$ green (1.55 $\pm$ 0.21) $>$ electrocoagulation
+(0.35 $\pm$ 0.08) $>$ ultrasonic (0.52 $\pm$ 0.08). With the aspirator, diode-laser
+formaldehyde fell \textbf{4.95 $\to$ 1.69\,mg\,m$^{-3}$}, TVOC \textbf{8.34 $\to$
+1.11\,mg\,m$^{-3}$} and CO \textbf{124 $\to$ 24\,ppm}. Gases only --- the study reports no
+particle-size distribution or number concentration, which is the fraction that reaches the
+alveoli and the reason surgical smoke is an occupational aerosol problem rather than a
+gas one. In vitro, no personal sampling.}
+{10.32604/cju.2026.070096}
+
+\paperentry{Chen Y et al.\ 2026}
+{Solid-fuel PAH exposure, phenanthrene metabolites, DNA damage and inflammation}
+{Atmos Environ}
+{Ships on metadata only --- no abstract in the Crossref deposit and no PubMed, Europe PMC
+or Semantic Scholar record on this run. Title and authorship indicate urinary
+phenanthrene metabolites as the exposure index in a rural northern Chinese solid-fuel
+population, with DNA-damage and systemic-inflammation biomarkers as outcomes. Counted and
+listed; no numbers claimed. High priority for the retry list: household solid-fuel
+combustion is the single largest PM exposure contrast available in observational work and
+this watch carries very little of it.}
+{10.1016/j.atmosenv.2026.122339}
+
+\paperentry{Micallef \& Scerri 2026}
+{A flow-conditioned infiltration metric for traffic-related pollution ingress}
+{Build Environ}
+{Ships on metadata only --- Crossref carries no abstract and the record is not otherwise
+indexed on this run. The title indicates an outdoor-to-indoor infiltration metric for
+traffic-related air pollution in naturally ventilated buildings, conditioned on flow
+regime rather than assumed constant. Counted and listed; no numbers claimed. Worth
+retrying: a flow-dependent infiltration factor is exactly the term that makes
+outdoor-monitor-based exposure assignment wrong for naturally ventilated stock, and it is
+the term a paired indoor/outdoor sensor pair can actually estimate.}
+{10.1016/j.buildenv.2026.115195}
+
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Chaparro et al.\ 2026}
+{Biological and technological sensors for airborne particles at heritage sites}
+{Sci Total Environ}
+{Ships on metadata only. The title indicates parallel biomonitoring and instrumental
+sensing of airborne fine particles for preventive conservation of cultural heritage, but
+no abstract was deposited and the record is not in PubMed, Europe PMC or Semantic Scholar
+on this run, so the sensor models, the biomonitor species and any agreement statistics
+between the two are unavailable. Counted and listed; no numbers claimed. On the retry
+list --- cross-validation of a biological against an instrumental particle sensor is
+directly relevant to low-cost network validation and rarely published.}
+{10.1016/j.scitotenv.2026.182285}
+
+\paperentry{Delkash 2026}
+{Barometric pressure variability in community air monitoring near a landfill}
+{Environ Pollut}
+{Ships on metadata only --- the Crossref deposit has no abstract and Semantic Scholar
+returns the record with a null abstract field. The title describes a receptor-scale
+multi-method analysis of how barometric pressure variability imprints on community
+monitoring data around an elevated-temperature landfill, across two mitigation
+interventions. Counted and listed; no numbers claimed. This is the single most operationally
+relevant record of the day for network work --- pressure-driven emission modulation is a
+known confounder in fenceline and community monitoring and is almost never quantified ---
+so it goes to the top of the retry list.}
+{10.1016/j.envpol.2026.129084}
+
+\band{Exposure assessment \& modelling\hfill 6 records}{Amber}
+
+\paperentry{Petersen et al.\ 2026}
+{Sulfate ions in aerosol water are their own source of radical oxidants}
+{Environ Sci Technol}
+{Direct spectroscopic evidence that the sulfate anion absorbs surface-level sunlight and
+ejects an electron, forming \textbf{SO$_4^{\bullet-}$ on a sub-microsecond timescale} in a
+concentration-dependent manner; long-timescale production rates quantified by radical
+trapping with LC-HRMS. Compounds emitted from biomass fires photosensitise the pathway,
+raising radical formation \textbf{up to five-fold} over direct photolysis across
+pH 1.6--5.5, more strongly at low pH. Estimated SO$_4^{\bullet-}$ production is
+\textbf{comparable to measured hydroxyl-radical production in aerosols} --- i.e.\ a second
+oxidant budget nobody was counting. The downstream claim is the striking one: secondary
+brown carbon from this chemistry \textbf{turns the direct radiative forcing of
+sulfate-containing aerosol from negative to positive}, and the organosulfates formed are
+cloud-active. Bulk solutions at controlled ionic strength; extrapolation to real
+aerosol water is the open step.}
+{10.1021/acs.est.6c05704}
+
+\paperentry{Engeroff et al.\ 2026}
+{PM exposure while running: park, residential and roadside routes by time of day}
+{Research Square (preprint)}
+{Mobile personal PM$_{10}$, PM$_{2.5}$ and PM$_1$ over \textbf{60 instrumented 2\,km runs}
+(20 each on a major road, a residential street and an urban park; 30 morning, 30 midday;
+pace 8:02--4:31\,min/km) with local urban background as reference and linear mixed-effects
+models adjusting for meteorology. Lowest concentrations of every fraction:
+\textbf{midday in the park}. Highest PM$_{10}$ anywhere: \textbf{morning on that same park
+route}. Exposure across all routes was lower at midday, tracking urban background, and
+humidity, pressure, wind speed and temperature all carried signal. The conclusion --- park
+routes and rush-hour avoidance are sufficient --- is reasonable but rests on 20 runs per
+route in one city, and the fact that the park produced both the minimum and the maximum
+should temper any general route advice. Preprint, not peer reviewed.}
+{10.21203/rs.3.rs-10016764/v1}
+
+\paperentry{Zhu et al.\ 2026}
+{Stabilized Criegee intermediates and the sensitivity of sulfuric acid formation}
+{Atmos Chem Phys}
+{Criegee reactions in MCM v3.3.1 updated to current IUPAC recommendations, driven through
+a large AtChem box-model ensemble, with interpretable XGBoost surrogates used to attribute
+the sCI-mediated SO$_2$ loss rate and its fractional share to controlling factors. The
+sCI loss rate is governed chiefly by \textbf{relative humidity and isoprene}; the drivers
+of the sCI \emph{fraction} split diurnally --- alkene speciation, O$_3$ and alkene share of
+VOCs by day, alkene speciation, RH and NO$_x$ by night. Under high-sCI-fraction regimes,
+the positive response of total SO$_2$ oxidation to O$_3$, VOCs and alkene fraction is
+\emph{amplified}, which a summer episode at Wuhai supports. Policy consequence: where
+alkene ozonolysis is active, \textbf{cutting VOCs controls sulfuric acid formation more
+effectively than cutting SO$_2$ alone} --- and sulfuric acid is the new-particle-formation
+precursor. Box model with a machine-learned surrogate; the surrogate inherits every
+mechanistic assumption underneath it.}
+{10.5194/acp-26-12479-2026}
+
+\paperentry{Zhao H et al.\ 2026}
+{Lead isotopes resolve dustfall sources across urban functional areas}
+{Environ Monit Assess}
+{Ten trace elements (V, Mn, Co, Cr, Ni, Cu, Zn, As, Cd, Pb) in dustfall from
+\textbf{16 sites} across residential, busy-road, park and industrial areas of Baoding,
+with enrichment factors, geo-accumulation index and Pb isotope fingerprinting. Cu, Pb, Zn
+and Cd reach considerable pollution levels; the spatial ranking is
+\textbf{residential $>$ busy road $>$ industrial $>$ park}, which is not the ordering most
+source-apportionment intuition predicts and the paper does not fully explain. Total
+non-carcinogenic risk stayed below threshold but \textbf{total carcinogenic risk exceeded
+the acceptable threshold} in several areas, worst on busy roads and in residential zones.
+Pb isotopes attribute \textbf{over 50\%} to a combined coal-combustion plus
+traffic-emission group in most areas --- combined, i.e.\ the isotope system does not
+separate the two here, which is the honest limit of the method in a city that burns coal
+and drives cars.}
+{10.1007/s10661-026-15859-0}
+
+\paperentry{Lei et al.\ 2026}
+{Source transition in PM$_{2.5}$-bound metals in a coastal megacity}
+{Atmos Environ}
+{Ships on metadata only --- no abstract in the Crossref deposit and no other index carries
+the record on this run. The title indicates a multi-year, high-time-resolution
+observational record of PM$_{2.5}$-bound metals with a source-transition analysis and a
+health-implication component. Counted and listed; no numbers claimed. High retry priority:
+multi-year hourly metals is exactly the dataset class against which a low-cost network's
+composition proxies would have to be validated, and there are very few of them.}
+{10.1016/j.atmosenv.2026.122336}
+
+\paperentry{Mutic et al.\ 2026}
+{Paired silicone wristbands across home and early-childhood-education settings}
+{medRxiv (preprint)}
+{A \emph{protocol}, not results. Prospective repeated-measures pilot targeting
+\textbf{44 preschool children and 8 staff} across two sociodemographically distinct Atlanta
+early-childhood centres, with home- and centre-designated silicone wristbands exchanged
+between settings over three consecutive days and nights, one spot urine per child, and
+continuous indoor air-quality monitoring in two classrooms per site. Eight pre-specified
+feasibility indicators. The design premise is sound and underexploited --- children spend
+$>$90\% of time indoors and early-childhood centres are high-occupant-density
+microenvironments almost absent from the exposure literature --- but wristbands integrate
+semi-volatile organics, not particle mass, so the PM component rests entirely on the
+fixed classroom monitors. Listed for the design; nothing to conclude from it yet.}
+{10.64898/2026.08.27.26361470}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{2 September 2026}, single day, opened against a
+\texttt{last\_entry\_date} of 1 September. Sources queried on 3 September 2026; under this
+pipeline's 22:00-local rule, 2 September is the newest buildable date and 3 September is
+not opened.
+\textbf{PubMed} E-utilities on \texttt{[EDAT]} 2026/09/02: 4 hits on the health axis and
+\textbf{0} on the instrumentation axis.
+\textbf{Europe PMC} \texttt{CREATION\_DATE}: 17 hits, including the two preprints carried
+here.
+\textbf{Crossref} by-ISSN, windowed on \texttt{created}: 68 deposits.
+\textbf{OpenAlex} HTTP 403 (plan-gated date filter) and \textbf{arXiv} HTTP 429; both legs
+recorded as failed, not empty. Consensus was not re-queried --- it returned three
+already-seen records on the 1 September run and its calibration axis does not move daily.
+After collapsing cross-source duplicates by DOI and normalised title, 89 unique records
+were considered; \textbf{12 were already shipped} (11 on 1 September, 1 on 31 August ---
+the by-ISSN sweep re-lists a deposit for several days), 15 were screened in scope and 62
+were screened out. Notable exclusions: an \textit{Atmos.\ Environ.} O$_3$-only cohort
+(\texttt{10.1016/j.atmosenv.2026.122338}) and a Barcelona indoor-NO$_2$ modelling study,
+both excluded as non-particulate; a settled-dust contaminants-of-emerging-concern survey,
+excluded as a chemical rather than aerosol measurement.
+\textbf{Six of the fifteen in-scope records ship on metadata only} and carry no attributed
+numbers; every one is on the abstract retry list.
+Subtopic, design, particle-metric and geography labels are single-label by dominant
+contribution and are a judgement, not a controlled vocabulary. All DOI links resolve to
+the publisher of record; abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

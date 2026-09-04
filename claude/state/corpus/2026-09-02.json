@@ -1,0 +1,276 @@
+{
+ "date": "2026-09-02",
+ "entry_window": "2026-09-02 -> 2026-09-02",
+ "PAPERS": [
+  {
+   "pmid": "42683773",
+   "short": "De Potter et al. 2026",
+   "doi": "10.1093/ehjacc/zuag118",
+   "title": "Influences of socioeconomic and environmental factors on STEMI incidence and related mortality: insights from the Belgian Environmental Myocardial Infarction Risk (EMIR) study",
+   "journal": "Eur Heart J Acute Cardiovasc Care",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Time-stratified case-crossover + DLNM",
+   "pm": "Acute and chronic residential PM2.5, NO2, O3, temperature, noise and greenspace from high-resolution models; per IQR",
+   "geo": "Belgium",
+   "endpoint": "Cardiovascular",
+   "n": "All Belgian STEMI admissions 2012-2014 and 2016-2021, n=51,544 (51.4 per 100,000/yr); in-hospital mortality 11.8%",
+   "tier": "A"
+  },
+  {
+   "pmid": "42683229",
+   "short": "Li H et al. 2026",
+   "doi": "10.1183/23120541.01444-2025",
+   "title": "Multi-omics causal inference of childhood asthma triggered by ambient particulate matter",
+   "journal": "ERJ Open Res",
+   "sub": "Respiratory & allergic",
+   "design": "Mendelian randomisation + TWAS",
+   "pm": "Genetically instrumented ambient PM2.5 from GWAS summary statistics",
+   "geo": "Europe",
+   "endpoint": "Respiratory",
+   "n": "Two-sample MR on large-scale GWAS; 70 co-expressed genes from TWAS; two-step MR for protein mediators",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Petersen et al. 2026",
+   "doi": "10.1021/acs.est.6c05704",
+   "title": "Direct photolysis and photosensitized reactions of sulfate ions in aerosol water form radical oxidants, secondary brown carbon, and organosulfates",
+   "journal": "Environ Sci Technol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Bench / device experiment",
+   "pm": "Sulfate-radical (SO4 anion radical) production in concentrated aerosol water; transient absorption plus radical trapping with LC-HRMS",
+   "geo": "Laboratory",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "pH 1.6-5.5; biomass-fire photosensitisers raise radical formation up to 5x over direct photolysis",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Engeroff et al. 2026",
+   "doi": "10.21203/rs.3.rs-10016764/v1",
+   "title": "Air pollution exposure during urban running: a randomized crossover comparison of particulate matter exposure on park, roadside, and residential routes with consideration of rush-hour timing",
+   "journal": "Research Square (preprint)",
+   "sub": "Exposure assessment & modelling",
+   "design": "Mobile monitoring campaign",
+   "pm": "Mobile personal PM10, PM2.5 and PM1 during 2 km runs, referenced to local urban background PM2.5/PM10",
+   "geo": "Germany",
+   "endpoint": "None (exposure)",
+   "n": "n=60 runs (20 roadside / 20 residential / 20 park; 30 morning / 30 midday), pace 8:02-4:31 min/km; linear mixed-effects models",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Zhu et al. 2026",
+   "doi": "10.5194/acp-26-12479-2026",
+   "title": "Revisiting the critical role of stabilized Criegee intermediates in sulfuric acid formation: coupling mechanistic updates with interpretable machine learning",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport modelling",
+   "pm": "Gas-phase SO2 oxidation rate via stabilized Criegee intermediates; sCI fraction of total SO2 loss",
+   "geo": "China",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "MCM v3.3.1 updated to IUPAC recommendations, AtChem box-model ensemble, XGBoost surrogate; field episode at Wuhai",
+   "tier": "B"
+  },
+  {
+   "pmid": "42680918",
+   "short": "Zhao H et al. 2026",
+   "doi": "10.1007/s10661-026-15859-0",
+   "title": "Lead isotope characteristics and source analysis of dust fall in different functional areas of a typical city in northern China",
+   "journal": "Environ Monit Assess",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source-apportionment method",
+   "pm": "Dustfall trace elements (V, Mn, Co, Cr, Ni, Cu, Zn, As, Cd, Pb) with Pb isotope source fingerprinting",
+   "geo": "China",
+   "endpoint": "Carcinogenic risk",
+   "n": "16 sites across residential, busy-road, park and industrial areas of Baoding; pollution ranking RA > BR > IA > PA",
+   "tier": "B"
+  },
+  {
+   "pmid": "42681804",
+   "short": "Lv H et al. 2026",
+   "doi": "10.1021/acsami.6c10042",
+   "title": "Structurally engineered polyimide microsphere/nanofibrous gradient aerogels with enhanced dust-holding capacity for high-temperature air filtration",
+   "journal": "ACS Appl Mater Interfaces",
+   "sub": "Occupational & indoor",
+   "design": "Laboratory instrument development",
+   "pm": "PM0.3 filtration efficiency, pressure drop and dust-holding capacity of a single-component polyimide gradient aerogel",
+   "geo": "Laboratory",
+   "endpoint": "None (instrument)",
+   "n": "Dual-layer aerogel (730 nm coarse / 300 nm medium fibres, 3.34 um microspheres, 60 nm ultrafine); 99.996% at 45.08 Pa, 127 g/m2 dust-holding, 99.91% at 300 C",
+   "tier": "B"
+  },
+  {
+   "pmid": "42682060",
+   "short": "Ma L et al. 2026",
+   "doi": "10.32604/cju.2026.070096",
+   "title": "Evaluating surgical smoke in laser-assisted laparoscopic partial nephrectomy with a novel handle: an in vitro study",
+   "journal": "Can J Urol",
+   "sub": "Occupational & indoor",
+   "design": "Bench / device experiment",
+   "pm": "Surgical-smoke formaldehyde, TVOC and CO with and without an integrated aspirator handle",
+   "geo": "Laboratory",
+   "endpoint": "None (instrument)",
+   "n": "Ex vivo porcine kidney; electrocoagulation, ultrasonic, 980 nm diode and 532 nm KTP laser compared",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Mutic et al. 2026",
+   "doi": "10.64898/2026.08.27.26361470",
+   "title": "Characterizing preschool children's multi-matrix air pollutant exposures across home and early childhood education settings: a paired silicone wristband study protocol",
+   "journal": "medRxiv (preprint)",
+   "sub": "Exposure assessment & modelling",
+   "design": "Cross-sectional time-activity survey",
+   "pm": "Paired home- and centre-designated silicone wristbands plus continuous indoor air-quality monitoring in two classrooms per site",
+   "geo": "United States",
+   "endpoint": "None (exposure)",
+   "n": "Protocol only: target 44 preschool children and 8 staff across two Atlanta early-childhood centres; three consecutive days, one spot urine",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Lei et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122336",
+   "title": "Source transition and health implication of PM2.5-bound metals: multi-year high-resolution observation in a coastal megacity",
+   "journal": "Atmos Environ",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only",
+   "pm": "Hourly PM2.5-bound metals, multi-year record",
+   "geo": "China",
+   "endpoint": "Carcinogenic risk",
+   "n": "Metadata only - no abstract deposited to Crossref and not in PubMed, Europe PMC or Semantic Scholar on this run",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Chen Y et al. 2026",
+   "doi": "10.1016/j.atmosenv.2026.122339",
+   "title": "Household solid fuel combustion-related PAH exposure in rural northern China: associations of phenanthrene metabolites with DNA damage and systemic inflammation",
+   "journal": "Atmos Environ",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only",
+   "pm": "Household solid-fuel PAH exposure indexed by urinary phenanthrene metabolites",
+   "geo": "China",
+   "endpoint": "Other clinical",
+   "n": "Metadata only - no abstract deposited; effect estimates not retrievable on this run",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Chaparro et al. 2026",
+   "doi": "10.1016/j.scitotenv.2026.182285",
+   "title": "Monitoring airborne fine particles with biological and technological sensors for preventive conservation of cultural heritage sites",
+   "journal": "Sci Total Environ",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only",
+   "pm": "Airborne fine particles measured in parallel by biomonitors and instrumental sensors",
+   "geo": "Latin America",
+   "endpoint": "None (instrument)",
+   "n": "Metadata only - no abstract deposited; sensor models and agreement statistics not retrievable on this run",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Delkash 2026",
+   "doi": "10.1016/j.envpol.2026.129084",
+   "title": "Receptor-scale imprint of barometric pressure variability on community air monitoring near an elevated-temperature landfill: a multi-method analysis across two mitigation interventions",
+   "journal": "Environ Pollut",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only",
+   "pm": "Community-monitor receptor concentrations against barometric pressure variability, across two landfill mitigation interventions",
+   "geo": "United States",
+   "endpoint": "None (instrument)",
+   "n": "Metadata only - Crossref deposit carries no abstract and Semantic Scholar returns the record without one",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Zanini et al. 2026",
+   "doi": "10.1016/j.envpol.2026.129046",
+   "title": "Maternal exposure to air pollution and fetoplacental Doppler markers during pregnancy",
+   "journal": "Environ Pollut",
+   "sub": "Reproductive & developmental",
+   "design": "Metadata only",
+   "pm": "Maternal residential air-pollution exposure during pregnancy",
+   "geo": "Europe",
+   "endpoint": "Reproductive",
+   "n": "Metadata only - no abstract deposited; cohort size and Doppler effect sizes not retrievable on this run",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Micallef & Scerri 2026",
+   "doi": "10.1016/j.buildenv.2026.115195",
+   "title": "A flow conditioned infiltration metric for traffic-related air pollution ingress and indoor air quality in naturally ventilated buildings",
+   "journal": "Build Environ",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only",
+   "pm": "Outdoor-to-indoor infiltration of traffic-related air pollution, conditioned on flow regime",
+   "geo": "Europe",
+   "endpoint": "None (modelling)",
+   "n": "Metadata only - no abstract deposited; the metric definition and validation data are not retrievable on this run",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "STEMI admission, same-day PM2.5",
+   "exposure": "Residential PM2.5, per IQR",
+   "est": 1.022,
+   "lo": 1.008,
+   "hi": 1.035,
+   "metric": "OR",
+   "src": "De Potter et al. 2026"
+  },
+  {
+   "label": "STEMI admission, same-day NO2",
+   "exposure": "Residential NO2, per IQR",
+   "est": 1.044,
+   "lo": 1.025,
+   "hi": 1.063,
+   "metric": "OR",
+   "src": "De Potter et al. 2026"
+  },
+  {
+   "label": "STEMI admission, O3 lag 0-2",
+   "exposure": "Residential O3, per IQR",
+   "est": 1.063,
+   "lo": 1.034,
+   "hi": 1.09,
+   "metric": "OR",
+   "src": "De Potter et al. 2026"
+  },
+  {
+   "label": "Childhood asthma (Mendelian randomisation)",
+   "exposure": "Genetically instrumented PM2.5",
+   "est": 1.897,
+   "lo": 1.063,
+   "hi": 3.388,
+   "metric": "OR",
+   "src": "Li H et al. 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 2,
+   "note": "Maternal exposure\nand fetoplacental\nDoppler (metadata\nonly); childhood\nasthma MR"
+  },
+  {
+   "n": 2,
+   "note": "Preschool wristband\nprotocol (target\nn=44, Atlanta);\nchildhood asthma\nMR"
+  },
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 2,
+   "note": "Belgian STEMI\nadmissions\n(n=51,544);\nrural solid-fuel\nPAH biomarkers"
+  },
+  {
+   "n": 1,
+   "note": "STEMI in-hospital\nmortality most\nstrongly tied to\nretirement status"
+  }
+ ]
+}
