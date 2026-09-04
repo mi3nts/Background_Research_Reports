@@ -402,6 +402,26 @@ design_group.update({
     "Prospective cohort + in vitro screening": "Observational - cohort",
     "Twin-pair longitudinal comparison": "Observational - cohort",
 })
+# 2026-09-03 issue. Written in the same edit as the records that use them. Fourteen
+# labels at once because this issue is the widest-architecture one the watch has run
+# (23 distinct design strings over 38 records); without these, f2 and the f4 heatmap
+# would have put 21 of 38 records into "Other / mixed" and said nothing.
+design_group.update({
+    "Sensor co-location / calibration": "Measurement campaign",
+    "Field emission-factor campaign": "Measurement campaign",
+    "Remote sensing / lidar retrieval": "Measurement campaign",
+    "Long-term field measurement campaign": "Measurement campaign",
+    "Personal exposure monitoring + in vitro": "Measurement campaign",
+    "Data-fusion / ML surrogate model": "Modelling / inventory",
+    "Integrated assessment modelling": "Modelling / inventory",
+    "Narrative / critical review": "Review / synthesis",
+    "Systematic review / meta-analysis": "Review / synthesis",
+    "Biomonitoring + in vitro": "Experimental / toxicology",
+    "Prospective cohort (registry linkage)": "Observational - cohort",
+    "Prospective cohort + PCA": "Observational - cohort",
+    "Retrospective cohort + DLNM": "Observational - cohort",
+    "Case-control (registry)": "Observational - cross-sectional",
+})
 # Close design_group under its own output. The 2026-08-05 fix added self-maps for the
 # nine group names in use that day but left four uncovered; a record written with one of
 # those four would have fallen through to "Other / mixed" (5th recurrence of the same

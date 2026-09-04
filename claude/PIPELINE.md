@@ -1880,3 +1880,68 @@ on both; one 1.0 pt overfull hbox on the 1 Sep masthead.
   view tags each button with its cadence (l.90, l.150), month view has the count badge ->
   picker popup (l.366-390, l.474), and the header archive is folder-grouped
   (`archiveGroups`, l.500). **The next run still owes a live load of `index.dc.html`.**
+
+### 2026-09-03 issue, built on the 2026-09-04 11:3x CDT run (22:00 rule)
+Local 11:38 CDT on 4 Sep, before 22:00, so the newest buildable date was **2026-09-03**
+against `last_entry_date` 2026-09-02 — exactly one owed day, no backfill gap. Next weekly
+is Sat 2026-09-05, not owed today. **38 in scope** (largest single-day issue this watch has
+run; 27 Aug's 36 was the previous maximum), 88 rejected, 12 already seen, 138 unique
+considered, 16 pp, 0 LaTeX errors, 0 overfull boxes.
+- **Source counts.** PubMed `[EDAT]` health **29** / sensing **6**, Europe PMC 23, Crossref
+  by-ISSN **94**. **arXiv answered cleanly for the first time since 31 Aug** (60 entries,
+  HTTP 200, no 429) but its newest submission is 2026-08-20, so the undated relevance query
+  still contributed zero — the leg works and the query is the problem. **OpenAlex 429**
+  (unchanged since 28 Jul). **Consensus nil for the fifth consecutive run**: ten low-cost
+  sensor calibration papers, all 2018–2024, none in window, none in the store.
+- **Two blocked git objects cleared before the pull.** `git pull` failed with
+  `fatal: bad object refs/remotes/origin/main.lock.m.1788490795312763933` — a zero-byte
+  file left *inside* `.git/refs/remotes/origin/` by a previous run's lock workaround, which
+  git then read as a ref. Renamed to `.git/lk.badref.*` (mount is delete-restricted);
+  `.git/index.lock` moved aside the same way. Worth knowing: moving a lock **into** the refs
+  tree breaks fetch outright, so park them at `.git/` root.
+- **DOI GATE DEFECT, fixed.** `check_dois.py` FAILed two records as DEAD-DOI —
+  `10.12182/20260760103` (J Sichuan Univ Med Sci) and `10.3967/bes2026.072` (Biomed Environ
+  Sci). Both are indexed by PubMed under exactly those DOIs and both resolve. They failed
+  because neither existing leg can see them: registered outside Crossref (Chinese agency),
+  so Crossref 404s, and their publishers stall a bare HEAD from this sandbox. Added
+  `handle_registered()` — `https://doi.org/api/handles/<doi>`, `responseCode == 1` — as a
+  final authority after the doi.org HEAD. Both now pass as `NOT-IN-CROSSREF` warnings, which
+  is the correct severity. Without this the gate would have silently dropped two tier-A
+  cohort records (CHARLS frailty, 51,122-cycle ART) from an issue.
+- **`plots.py` map additions:** fourteen designs in one edit (`Sensor co-location /
+  calibration`, `Field emission-factor campaign`, `Remote sensing / lidar retrieval`,
+  `Long-term field measurement campaign`, `Personal exposure monitoring + in vitro`,
+  `Data-fusion / ML surrogate model`, `Integrated assessment modelling`,
+  `Narrative / critical review`, `Systematic review / meta-analysis`,
+  `Biomonitoring + in vitro`, `Prospective cohort (registry linkage)`,
+  `Prospective cohort + PCA`, `Retrospective cohort + DLNM`, `Case-control (registry)`).
+  23 distinct design strings over 38 records; without these, 21 of 38 would have drawn as
+  "Other / mixed". Also rewrote one record's geo from `Asia (other)` to `South Korea` —
+  the `("asia","Global")` needle is last in `GEO_SUBSTR` by design and was swallowing it
+  into the multi-region bucket.
+- **Proof caught seven false claims and one layout defect before shipping.** (1) "largest
+  issue this watch has shipped" — 26 Jul has 164 from the retrospective back-scan; corrected
+  to largest *single-day*. (2) "61% no-endpoint, the highest share recorded" — 20 Aug hit
+  72% and 2 Aug 71%; it is the largest *count*, not share. (3) "first time nine of ten
+  clusters occupied" — nine or more on ten prior issues, all ten as recently as 27 Aug.
+  (4) "Sub-Saharan Africa at 3 is the highest recorded" — *ties* 6 Aug. (5) "Review /
+  synthesis at 6 is high for one day" — 26 Jul had 11, 27 Jul 8. (6) "12 estimates from
+  three sources" — four (Batisse, Chen K, Chen Y, Park J); wrong in both the metric strip
+  and the f5 caption. (7) forest-plot outliers described as "top-left" when they sit top
+  *right*. Layout: the exec brief spilled two lines onto an otherwise blank page 2 through
+  three rounds of trimming before it fit.
+- **Full text pulled through the browser for exactly two records.** The Plantower PMSX003N
+  evaluation (Taylor & Francis, JavaScript-gated, and the signal of the day) and the
+  Guangdong CHD paper, whose PubMed abstract renders its strongest component as
+  "[Formula: see text]" — resolved to **sulfate** at source rather than guessed.
+  ScienceDirect refused retrieval, so the two *Atmos. Pollut. Res.* records ship as
+  `Metadata only`; both are on the abstract retry list.
+- **Trial watch: a true zero for 3 Sep**, verified rather than assumed — the same
+  `LastUpdatePostDate` filter with no search term returns 1,001 studies, and "air pollution"
+  with no date filter returns 496. The Clinical Trials MCP connector rejected its own call
+  signature (`Unexpected keyword argument`), so the v2 API was queried directly.
+  `trials.json` windows 8 -> 9; trial count unchanged at 25.
+- Still open: no first-author affiliation field; venue names unnormalised; `ENDPOINT_CANON`
+  still splits `Cancer` from `Oncologic`, which put two visually redundant bars in f2b.
+  Abstract retry list gains `10.1016/j.apr.2026.103192` and `10.1016/j.apr.2026.103193`.
+  `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).

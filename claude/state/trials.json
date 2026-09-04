@@ -563,6 +563,15 @@
    "hits": 3,
    "kept": 1,
    "note": "3 hits: NCT07797413 already stored 31 Aug, NCT05016271 already in state under the legacy top-level shape, NCT04153539 new to state. All three are record UPDATES, not new registrations, so analyze_endpoints was not run. Surface in the W36 weekly (30 Aug - 5 Sep), not the daily issues."
+  },
+  {
+   "window": "2026-09-03 -> 2026-09-03",
+   "queried": "2026-09-04",
+   "source": "ClinicalTrials.gov API v2 direct (MCP connector rejected the call signature this session)",
+   "filter": "AREA[LastUpdatePostDate]RANGE[2026-09-03,2026-09-03] x query.term in {air pollution, particulate matter, PM2.5, air purifier OR air filtration, cookstove OR household air pollution}",
+   "hits": 0,
+   "kept": 0,
+   "note": "Genuine zero, not a query failure: the same date filter with no term returns 1,001 studies updated 2026-09-03, and 'air pollution' with no date filter returns 496. Widening to 2026-09-01..09-04 returns 5, of which NCT05016271, NCT04153539 and NCT07797413 fall in windows already logged and NCT07805824 (workplace mitigation of gingival pigmentation in restaurant oven workers, first posted 2026-09-04) is outside this entry window and belongs to the next one."
   }
  ],
  "NCT05867381": {

@@ -41,3 +41,11 @@ claude/_mkcorpus_tmp.py
 # 2026-08-19: per-issue corpus authoring scripts are scratch. The published record is
 # state/corpus/<date>.json, which they only write. Wildcard so future ones are covered.
 claude/_mk_*.py
+
+# 2026-09-04: the same rule as claude/_mk_*.py, for the other per-issue scratch scripts.
+# The screen, the abstract fetcher and the rejection logger are one-off and their only
+# durable outputs are cache/<date>/_fresh.json, state/corpus/<date>.json and
+# state/rejected.jsonl, all of which are tracked or reproducible.
+claude/_screen_*.py
+claude/_fetchabs_*.py
+claude/_rej_*.py

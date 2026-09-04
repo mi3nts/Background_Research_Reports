@@ -29,7 +29,7 @@ Exit status is 1 if any record FAILs, so this can gate a build.
     python3 check_dois.py 2026-07-29     # one issue
     python3 check_dois.py --all          # every issue in the store
 """
-import os, sys, json, glob, time, urllib.request, urllib.error
+import os, sys, json, glob, time, urllib.request, urllib.error, urllib.parse
 
 HERE  = os.path.dirname(os.path.abspath(__file__))
 STORE = os.path.join(HERE, "state", "corpus")
@@ -70,14 +70,46 @@ def crossref(doi):
         return None, str(e)[:60]
 
 
+def handle_registered(doi):
+    """Authoritative last resort: is the DOI registered in the global Handle system?
+
+    Added 2026-09-04. Two records FAILed as DEAD-DOI on the 3 Sep issue --
+    10.12182/20260760103 (J Sichuan Univ Med Sci) and 10.3967/bes2026.072
+    (Biomed Environ Sci). Both are indexed by PubMed under exactly those DOIs and
+    both resolve in a browser. They failed because the two existing legs cannot see
+    them: they are registered outside Crossref (Chinese registration agency), so
+    Crossref returns 404, and their publishers drop or stall a bare HEAD from this
+    sandbox, so the doi.org fallback times out. That combination -- non-Crossref
+    agency plus HEAD-hostile publisher -- produced a false FAIL that would have
+    silently dropped two tier-A cohort records from the issue.
+
+    https://doi.org/api/handles/<doi> is the resolver's own metadata API. It answers
+    with responseCode 1 and the registered target URL when the DOI exists, and 100
+    when it does not, and it does not touch the publisher at all.
+    """
+    try:
+        d = json.load(_get("https://doi.org/api/handles/" + urllib.parse.quote(doi), 30))
+        return d.get("responseCode") == 1
+    except urllib.error.HTTPError as e:
+        try:
+            return json.loads(e.read()).get("responseCode") == 1
+        except Exception:
+            return False
+    except Exception:
+        return False
+
+
 def doi_org_live(doi):
     try:
         req = urllib.request.Request("https://doi.org/" + doi, headers=UA, method="HEAD")
-        return urllib.request.urlopen(req, timeout=25).status < 400
+        if urllib.request.urlopen(req, timeout=25).status < 400:
+            return True
     except urllib.error.HTTPError as e:
-        return e.code < 400
+        if e.code < 400:
+            return True
     except Exception:
-        return False
+        pass
+    return handle_registered(doi)
 
 
 def overlap(a, b):
