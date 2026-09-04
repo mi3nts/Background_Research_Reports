@@ -1868,3 +1868,15 @@ on both; one 1.0 pt overfull hbox on the 1 Sep masthead.
   `10.1016/j.scitotenv.2026.182285`, `10.1016/j.envpol.2026.129046`,
   `10.1016/j.envpol.2026.129084`, `10.1016/j.buildenv.2026.115195`.
   `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).
+- **Step 9 (live verification) NOT COMPLETED, second run in a row.** Every network tool
+  (`web_fetch`, the browser pane) was refused for the whole session by the same
+  safety-classifier outage that blocked the 1 Sep run, across five attempts spread over
+  ~10 minutes. Verified instead, locally and against the remote: `851c80b` is on
+  `origin/main` (HEAD == origin/main, and `git branch -r --contains HEAD` lists
+  origin/main); all **45** manifest entries resolve to a file that exists on disk; the
+  seven multi-report days each produce the two-entry list the badge/picker path expects;
+  and 1 and 2 Sep are single-report cells, which take the direct-open branch at
+  `index.dc.html:367`, not the picker. Site UI re-checked in source and unchanged: week
+  view tags each button with its cadence (l.90, l.150), month view has the count badge ->
+  picker popup (l.366-390, l.474), and the header archive is folder-grouped
+  (`archiveGroups`, l.500). **The next run still owes a live load of `index.dc.html`.**
