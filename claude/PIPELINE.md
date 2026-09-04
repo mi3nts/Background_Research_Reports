@@ -1945,3 +1945,27 @@ considered, 16 pp, 0 LaTeX errors, 0 overfull boxes.
   still splits `Cancer` from `Oncologic`, which put two visually redundant bars in f2b.
   Abstract retry list gains `10.1016/j.apr.2026.103192` and `10.1016/j.apr.2026.103193`.
   `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*` remain undeletable (mount EPERM).
+- **STEP 9 COMPLETED — first live verification in three runs.** `5dc07f4` and `47da56a`
+  are both on `origin/main` (`git ls-remote` agrees with local HEAD). The live calendar at
+  `index.dc.html` renders **Daily digest — 3 Sep 2026** on the Thu 3 Sep cell with the
+  `Daily` badge, lists it first under IN THIS WEEK, and opens the 16-page PDF in the reader
+  with the correct masthead and metric strip (38 / 9 / 12 / 11 / 23). Header reads
+  46 reports archived.
+- **SITE DEFECT found by that verification, and fixed.** The first two loads after a
+  *correct* deploy showed no 3 Sep cell and 45 reports archived. Cause: GitHub Pages serves
+  `reports.json` with `Cache-Control: max-age=600`, and `componentDidMount`'s plain
+  `fetch(MANIFEST)` is answered from the browser's own HTTP cache without revalidating —
+  measured directly, `fetch(..., {cache:'no-store'})` returned 39 daily entries in the same
+  tab where the default fetch returned 38. So for up to ten minutes after every push, a
+  returning visitor sees the previous day's calendar and nothing indicates it is stale.
+  `index.dc.html` now fetches the manifest with `cache: 'no-store'` (commit `47da56a`).
+  Worth checking whether the four earlier "cell did not render" reports were this and not
+  a manifest problem.
+- **The refs-tree lock bites twice per run, not once.** After the first push, `git push`
+  reported `Everything up-to-date` while `origin/main` still pointed at the previous commit
+  — a `refs/remotes/origin/main.lock` had reappeared and silently blocked the
+  remote-tracking update, so git compared against a stale ref. `git ls-remote` is the only
+  trustworthy check here; `git rev-parse origin/main` is not. Also cleared this run:
+  `HEAD.lock`, `REBASE_HEAD.lock`, `packed-refs.lock`, two `idx-*.lock`.
+- `.gitignore` extended to `claude/_screen_*.py`, `claude/_fetchabs_*.py`,
+  `claude/_rej_*.py`, matching the existing `claude/_mk_*.py` rule.
