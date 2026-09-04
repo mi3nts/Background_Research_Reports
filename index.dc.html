@@ -247,7 +247,12 @@ class Component extends DCLogic {
     const h = decodeURIComponent(String(location.hash || '').replace('#', ''));
     this.pending = /^\d{4}-\d{2}-\d{2}$/.test(h) ? h : null;
     window.addEventListener('keydown', this.onKey);
-    fetch(MANIFEST)
+    // 2026-09-04: GitHub Pages serves reports.json with Cache-Control: max-age=600, so a
+    // plain fetch() is answered from the browser's own HTTP cache without revalidating.
+    // Verified live on the 3 Sep push: the origin had 39 daily entries while the page
+    // rendered 38 and the new cell was simply absent for up to ten minutes after a
+    // correct deploy. cache:'no-store' forces the conditional request.
+    fetch(MANIFEST, { cache: 'no-store' })
       .then(r => (r.ok ? r.json() : Promise.reject()))
       .then(j => this.ingest(j))
       .catch(() => this.ingest(FALLBACK));
