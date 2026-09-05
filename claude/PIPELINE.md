@@ -1969,3 +1969,72 @@ considered, 16 pp, 0 LaTeX errors, 0 overfull boxes.
   `HEAD.lock`, `REBASE_HEAD.lock`, `packed-refs.lock`, two `idx-*.lock`.
 - `.gitignore` extended to `claude/_screen_*.py`, `claude/_fetchabs_*.py`,
   `claude/_rej_*.py`, matching the existing `claude/_mk_*.py` rule.
+
+### 2026-09-04 issue, built on the 2026-09-05 11:4x CDT run (22:00 rule)
+Local 11:45 CDT on Sat 5 Sep, before 22:00, so the newest buildable date was **2026-09-04**
+against `last_entry_date` 2026-09-03 — exactly one owed day, no backfill gap. **W36 weekly
+(30 Aug–5 Sep) NOT built and not owed today**: per the run-timing corollary at the head of
+this file, a Sat weekly needs the Saturday's own daily, which only the 23:00 run can open.
+**27 in scope**, 55 rejected, 9 already seen, 91 unique considered, 14 pp, 0 LaTeX errors,
+0 overfull boxes.
+- **Source counts.** PubMed `[EDAT]` health **14** / sensing **3**; Europe PMC 24; Crossref
+  by-ISSN **57**; arXiv HTTP 200 (149 kB) for the second consecutive run but newest
+  submission still 2026-08-20, so zero carry; OpenAlex **429** (unchanged since 28 Jul).
+  The PubMed *connector*, run independently with looser field tags, returned 15/4 and
+  surfaced **no record the harvester had missed** — first time this cross-check has been
+  run both ways in one session, and it validates `harvest.py`'s query as adequate.
+- **Consensus nil for the sixth run, but for the first time verified rather than inspected.**
+  Its three hits were checked against Crossref `created`: `10.3390/atmos17040335` (2026-03-26)
+  and `10.1088/1361-6501/ae6298` (2026-04-21) are out of window, and the third (Gäbel,
+  *AMT*, LCS recalibration cadence) **is already in this corpus**. So the leg retrieves
+  exactly the right literature and only the date filter is missing — that is a different
+  and more fixable problem than "Consensus returns nothing useful", which is how the
+  previous five runs recorded it. **Worth a targeted fix: post-filter Consensus hits on
+  Crossref `created` inside the window rather than discarding the leg.**
+- **Short-label collisions caught before writing, per the 30 Aug rule.** Five candidates
+  collided with existing labels and were renamed: `Zeng et al. 2026` → **2026d** (2026,
+  2026b, 2026c all taken), `Cai et al. 2026` → **Cai J et al. 2026**, `Ibrahim 2026` →
+  **2026b**, `Pan et al. 2026` → **Pan SG et al. 2026**, `Ding et al. 2026` →
+  **Ding E et al. 2026**. Within-issue near-collisions `Wei Q`/`Wei J` and `Ren X`/`Ren Y`
+  were disambiguated by given-name initial at authoring time.
+- **Zero design-map edits — the first such run since the map was completed.** 24 distinct
+  design labels over 27 records, every one already in `design_group`; `_design_unmapped`
+  and `_geo_unmapped` both empty. 3 Sep needed fourteen additions. Design strings were
+  chosen *from* the existing vocabulary at authoring time rather than coined and then
+  patched in, which is what the 10 Aug and 30 Aug entries have twice asked for.
+- **DOI gate: 0 FAIL, 0 warn** across all 27. The Handle-API leg added on 4 Sep was not
+  needed this run.
+- **Proof caught four false claims and two layout defects.** (1) "lowest no-endpoint share
+  since 28 August" — 29 Aug was 12%; corrected to 29 Aug. (2) "North America at 2 is the
+  thinnest for an issue of this size" — 27 Aug had 1 at n=36; replaced with the actual run
+  (1 / 2 / 8 / 2). (3) "Cardiovascular is the only subtopic across four architecture
+  families" — it is three, and *Other clinical endpoints* also has three. (4) "second
+  consecutive week of an abstract-free *Atmos. Environ.* record" — it is the **32nd since
+  1 August**, i.e. chronic, not incidental. Layout: the exec brief spilled three bullets
+  onto an 80%-empty p2 and the last digest entry sat alone on a 90%-empty p10; both fixed
+  by removing the two `\clearpage`s (the documented remedy from 22 Aug), 15 pp → 14 pp with
+  no low-ink page left.
+- **f2b still draws `Cancer` and `Oncologic` as two bars** for one quantity (an oesophageal
+  incidence RR and a computed carcinogenic-risk index). Logged 3 Sep, still unfixed; this
+  issue now says so in the caption rather than leaving the reader to notice.
+- **Trial watch: 1 new interventional registration, and the connector worked** (it was
+  unavailable 1–2 Sep and rejected its own call signature on 3 Sep). **NCT07805824** —
+  cluster RCT, workplace heat and air-pollution mitigation, 20 restaurants / 200 oven
+  workers, Najaf, Iraq; primary endpoint an objective gingival melanin index, **sole
+  secondary endpoint change in personal PM2.5 by gravimetric and real-time monitoring**.
+  `analyze_endpoints` run per protocol (1 primary, 1 secondary, 0 other). **Registry-hygiene
+  flags recorded in `trials.json`:** labelled PHASE4 with no drug; `start_date` ==
+  `primary_completion_date` == 2026-01-01 while status is COMPLETED; and the public
+  `detailed_description` still carries the submitter's own pre-submission checklist. The
+  3 Sep run had already flagged this NCT as belonging to this window — that hand-off worked.
+  `trials.json` 25 → 26 trials, windows 9 → 10. **For the W36 weekly:** pair with
+  NCT04153539 (Fudan road-vs-park crossover) and the Engeroff running-route preprint.
+- **`state/metrics.csv` comma defect: verified already fixed, no action.** `update_state.py`
+  writes with `csv.writer`; all 310 rows carry exactly 3 fields and
+  `"Sensing, forecasting & instrumentation"` is correctly quoted. The KNOWN DEFECT note in
+  the task file is stale and can be dropped.
+- Still open: no first-author affiliation field; venue names unnormalised; `ENDPOINT_CANON`
+  Cancer/Oncologic split. Abstract retry list gains `10.1016/j.atmosenv.2026.122340` and
+  `10.1016/j.buildenv.2026.115206`. `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*`
+  remain undeletable (mount EPERM); ~90 `.git/lk.*` files have now accumulated and want a
+  manual sweep from a machine without the delete restriction.

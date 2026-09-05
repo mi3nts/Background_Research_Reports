@@ -505,6 +505,36 @@
     "Heart Rate Variability Parameters"
    ],
    "note": "Pre-existing registration; this window carried a record UPDATE, not a new registration, so analyze_endpoints was not run."
+  },
+  {
+   "nct_id": "NCT07805824",
+   "title": "Effects of Workplace Heat and Air Pollution Mitigation on Gingival Melanogenesis in Restaurant Oven Workers: A Cluster Randomized Controlled Trial",
+   "status": "COMPLETED",
+   "study_type": "INTERVENTIONAL",
+   "phase": "PHASE4",
+   "conditions": [
+    "Gingival Pigmentation",
+    "Occupational Heat Exposure",
+    "Occupational Air Pollution Exposure"
+   ],
+   "interventions": [
+    "Workplace Heat and Air Pollution Mitigation Package",
+    "Delayed Workplace Heat and Air Pollution Mitigation Package"
+   ],
+   "sponsor": "Salah M. Ibrahim (University of Kufa, Najaf, Iraq)",
+   "enrollment": 200,
+   "start_date": "2026-01-01",
+   "primary_completion_date": "2026-01-01",
+   "completion_date": "2026-06-30",
+   "last_update_posted": "2026-09-04",
+   "seen_window": "2026-09-04..2026-09-04",
+   "primary_outcomes": [
+    "Change From Baseline in Objective Gingival Melanin Index at Week 24"
+   ],
+   "secondary_outcomes": [
+    "Change From Baseline in Personal PM2.5 Exposure at Week 24 (gravimetric + real-time)"
+   ],
+   "note": "NEW registration (first posted 2026-09-04), flagged in the 2026-09-03 run log as belonging to this window. analyze_endpoints RUN: 1 primary, 1 secondary, 0 other. DATA-QUALITY FLAGS: labelled PHASE4 with no drug; start_date == primary_completion_date == 2026-01-01 while status is COMPLETED; the public detailed_description still contains the submitter's own pre-submission checklist ('confirm the exact first-participant enrollment date, the official protocol ID, and whether a formal Data Monitoring Committee was actually appointed'). Endpoint design usable; timeline fields not. Cluster-randomised, 20 restaurants, 24 weeks, delayed-intervention comparator."
   }
  ],
  "windows": [
@@ -572,6 +602,15 @@
    "hits": 0,
    "kept": 0,
    "note": "Genuine zero, not a query failure: the same date filter with no term returns 1,001 studies updated 2026-09-03, and 'air pollution' with no date filter returns 496. Widening to 2026-09-01..09-04 returns 5, of which NCT05016271, NCT04153539 and NCT07797413 fall in windows already logged and NCT07805824 (workplace mitigation of gingival pigmentation in restaurant oven workers, first posted 2026-09-04) is outside this entry window and belongs to the next one."
+  },
+  {
+   "window": "2026-09-04 -> 2026-09-04",
+   "queried": "2026-09-05",
+   "source": "ClinicalTrials.gov MCP connector (search_trials + get_trial_details + analyze_endpoints); connector healthy this session, unlike the previous two runs",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR household air pollution' x AREA[LastUpdatePostDate]RANGE[2026-09-04,2026-09-04]",
+   "hits": 1,
+   "kept": 1,
+   "note": "NCT07805824, a NEW interventional registration with personal PM2.5 as its sole secondary endpoint. analyze_endpoints run per protocol. Surface in the W36 weekly (30 Aug - 5 Sep) alongside NCT04153539 and the Engeroff running-route preprint."
   }
  ],
  "NCT05867381": {
