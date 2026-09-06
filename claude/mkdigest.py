@@ -28,7 +28,16 @@ BANDCOL = {C.SENS:"Amber", C.EXPO:"Amber", C.CVM:"Teal", C.NEU:"Deep", C.RESP:"S
 
 def brk(doi):
     """DOIs sit in \texttt and never hyphenate, which produced 9 overfull boxes at 270
-    records. Insert discretionary breaks after the separators so they wrap."""
+    records. Insert discretionary breaks after the separators so they wrap.
+
+    The display copy cannot use \\detokenize (it already carries \\allowbreak), so any
+    LaTeX-special character in the DOI must be escaped by hand. Found 2026-09-06: the
+    W36 weekly failed to compile on 10.25259/nmji_668_2024 (Srinivasan et al., Natl Med
+    J India) with "Missing $ inserted" -- an underscore is legal in a DOI and had simply
+    never appeared in a rollup window before. The daily issues were unaffected because
+    \\paperentry detokenizes its DOI argument."""
+    for ch in "\\_#&%${}~^":
+        doi = doi.replace(ch, "\\" + ch) if ch != "\\" else doi
     return doi.replace("/", "/\\allowbreak ").replace(".", ".\\allowbreak ")
 
 

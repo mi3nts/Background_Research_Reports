@@ -1,0 +1,345 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{5 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-09-05\;\;\textcolor{Amber}{\textbar}\;\;Entry window 5 September 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;7 records screened in scope\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{RECORDS IN SCOPE\\(22 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{PubMed [EDAT] HITS\\ON EITHER AXIS}{Coral}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{OF 7 ON THE SENSING /\\EXPOSURE AXIS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{WITH A HUMAN\\HEALTH ENDPOINT}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{METADATA ONLY\\(NO ABSTRACT)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Aviation and roadway leave separable fingerprints on
+the same neighbourhood --- but only if the network measures particle \emph{number} and
+absorption, not mass.}\\[1.4mm]
+\footnotesize
+Sawan et al.\ (\textit{Environ Sci Technol}) ran a hybrid mobile and fixed-site campaign in
+a marginalized northwest Toronto neighbourhood sitting downwind of Toronto Pearson and a
+freight corridor, and showed the two dominant combustion sources decouple spatially.
+Ultrafine particle number tracked flight activity (\textbf{$r=0.58$, $p<0.05$ at 3.5\,km})
+with \textbf{1.7--3.3-fold enrichment} under downwind conditions, still
+\textbf{3.2-fold at residential sites $\sim$8\,km} from the airport; black carbon instead
+followed roadway proximity and freight, correlating weakly with flights. The diagnostic
+detail is that BC--UFP correlation collapses from $r=0.62$ under northerly winds to
+$r=0.1$ downwind of the airport --- shared sources versus independent ones, visible only
+because both pollutants were measured together. Random Forest models
+($R^2=0.79$ UFP, $0.87$ BC) separated airport proximity as a UFP-specific driver from
+freight trucking as a BC-specific one. For distributed low-cost networks the implication
+is unwelcome and concrete: a PM$_{2.5}$-mass node sited here would have reported an
+essentially null aviation signal, because the aviation contribution lives in a size range
+that contributes negligible mass. Source separation of this kind needs a CPC-class number
+channel and an absorption channel at the same node, which is precisely the pairing most
+low-cost deployments omit.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{PubMed returned a true zero, verified two ways.} No record entering PubMed on
+5 September matched either the health axis or the sensing axis. This is not a harvester
+fault: 544 records entered PubMed that day against 4{,}765 on Friday 4 September, and the
+independent PubMed connector run with looser field tags also returned 0/0. Saturday
+deposits are thin and, this week, contained no PM work at all.
+
+\item \textbf{The issue was carried entirely by the non-PubMed legs.} Crossref-by-ISSN
+supplied four of seven records and Europe PMC three. Europe PMC returned 11 hits but
+\textbf{seven were already shipped in the 4 September issue} --- its
+\texttt{CREATION\_DATE} runs about a day behind PubMed \texttt{[EDAT]}, so cross-source
+deduplication, not recall, is what that leg mostly exercises.
+
+\item \textbf{Instrumentation dominates a health-thin day.} Five of seven records sit on
+the sensing or exposure-assessment axis (71\%, second only to 20 August's 78\%), and only
+\textbf{two records carry a human health endpoint at all}. No record in the window reports
+an effect estimate with a confidence interval, so there is no forest plot today --- the
+seventh such issue of 42.
+
+\item \textbf{Two source-attribution results worth reading together.} Sawan et al.\ separate
+aviation UFP from roadway BC by wind sector; Shi S et al.\ show that vanadium, the
+canonical ship-plume tracer, is carried by only \textbf{35.8\% of plume particles} and that
+coverage moves with vessel speed (29.5\% at 4.9 knots vs.\ 39.7\% at 13.4). Both are
+warnings that a single-species or single-metric tracer under-identifies its own source.
+
+\item \textbf{A speed-reduction policy may trade CO$_2$ for composition.} In Shi S et al.'s
+matched-vessel pair the CO$_2$ benefit of slowing coincided with a carbon-rich particle
+shift and lower detectable-vanadium coverage. They also find \textbf{$\sim$20\% of analysed
+particles meet single-particle biomass-burning criteria}, i.e.\ ship plumes generate false
+positives in exactly the source-apportionment schemes used to police them.
+
+\item \textbf{Trial watch is a structural zero, not a topical one.} ClinicalTrials.gov
+posted \emph{no} updates registry-wide on 5 September --- nor on 29/30 August --- against
+973--1{,}001 on each weekday. Every Saturday and Sunday issue will carry this zero for
+calendar reasons, and it should not be read as an absence of PM trial activity.
+
+\item \textbf{Two records ship without abstracts.} The \textit{Atmos Pollut Res} tire-wear
+tracer review and the \textit{Atmos Res} dust-aging lidar paper are indexed by Crossref
+with no abstract and no Europe PMC record; both are titled informatively enough to
+place but not to assess, and both go on the retry list.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the seven in-scope records. Four of the ten clusters are
+occupied --- tying the fewest recorded (5, 23 and 24 August) --- and at seven records this
+is the \textbf{smallest single-day issue this watch has shipped}, below the previous
+minimum of eight on 29 August. \textit{Sensing, forecasting \& instrumentation} leads with
+three; six of the ten clusters, including all four of the cardiovascular, neuro,
+respiratory and reproductive health blocks, are empty.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. \textit{Measurement campaign} accounts for three of
+seven, with one laboratory-combustion study, one in-vitro toxicology preprint and two
+records that could not be classified beyond \textit{Metadata only} because no abstract has
+been deposited. Right --- health endpoint. Five records carry no human endpoint at all
+(two aerosol chemistry, one instrument, one exposure, one with no health endpoint), which
+is why the endpoint panel is so sparse; only the Johannesburg occupational study and the
+in-vitro preprint sit on a health axis.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. Four metrics span seven records: ultrafine number (2),
+unspeciated PM and emission factors (3), lidar optical properties (1) and PM$_{2.5}$ (1).
+\textbf{PM$_{2.5}$ mass appears alone exactly once, and only as a dosed in-vitro
+concentration} (25--100\,$\mu$g/mL) rather than an ambient measurement --- every ambient
+record here is instrumented on number, emission factors or optical properties instead.
+Right --- geographic provenance. North America and
+China contribute two each; the Johannesburg occupational study is the day's only
+sub-Saharan African record, and South Asia, Latin America and Oceania are absent.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed. Only the working-age stage is occupied, by the
+12-teacher Johannesburg personal-sampling study; the preconception, infancy, adolescence
+and 65+ windows are all empty. A single-stage day is a direct consequence of a corpus
+that is 71\% instrumentation and exposure assessment.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. With seven records the
+matrix is necessarily sparse, but the standing structural finding survives at small
+sample: the \textit{Sensing} and \textit{Exposure} rows again contain \emph{no}
+health-endpoint linkage, and the one mechanistic record is again purely experimental with
+no bridge to human biomarker data. There is no forest plot in this issue --- no record in
+the window reports an effect estimate with a confidence interval.}
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{Shi S et al.\ 2026}
+{Vessel speed reduction trades CO$_2$ against plume composition --- and against the tracer
+that identifies the plume}
+{npj Clim Atmos Sci}
+{UAV interception of 14 fresh ship plumes with single-particle mass spectrometry and
+population-balance inversion to reconstruct ultrafine and coarse modes. Two marker gaps
+emerge. \textbf{Only 35.8\% of the reconstructed particle-number population carried
+detectable vanadium} (29.5\% at 4.9 knots vs.\ 39.7\% at 13.4 knots in a matched-vessel
+pair; 0--70.8\% across a speed-blind manifold), so the canonical ship tracer is
+operation-dependent rather than conserved. Separately, \textbf{$\sim$20\% of analysed
+particles met biomass-burning criteria}, a false-positive channel in ship-influenced
+samples. Sulfate-related ion signals ran 2.3--10.7-fold higher in V/VO-bearing particles.
+The authors are careful that laser desorption/ionization matrix effects may contribute to
+that contrast, which is the right caveat and limits how far the V--S co-location can be
+pushed mechanistically. Single campaign, 14 plumes, one matched pair --- the speed
+comparison rests on very few vessels.}
+{10.1038/s41612-026-01532-3}
+
+\paperentry{Wang S et al.\ 2026}
+{Smoldering chaparral emits 10--70$\times$ the particulate of flaming, and fuel moisture
+sets the multiplier}
+{Fire Saf J}
+{FTIR quantification of gas and particulate emissions from controlled flaming and
+smoldering combustion of four dominant California chaparral species at varying fuel
+moisture. \textbf{Smoldering produced 10--70-fold higher PM emission factors than flaming
+across all species}, with the amplification ratio itself varying by fuel type and
+moisture; higher moisture enhanced incomplete-combustion products, principally CO and
+hydrocarbons, with live eucalyptus highest at
+\textbf{37.18 $\pm$ 0.65\,g/kg} hydrocarbons under smoldering. Cross-ecosystem comparison
+found chaparral broadly similar to western shrubland and grassland fuels except in
+nitrogen-containing species. The limitation that matters is scale: these are
+bench-scale burns, and the authors note combustion scale and mixing conditions shift
+emission profiles, so transfer to landscape fire inventories is an assumption rather than
+a result. Directly useful for anyone weighting wildfire smoke exposure by combustion
+phase rather than by total burned area.}
+{10.1016/j.firesaf.2026.104687}
+
+\paperentry{Ji et al.\ 2026}
+{Dust aerosol aging tracked by combined Mie, polarization and fluorescence lidar}
+{Atmos Res}
+{\textbf{Metadata only.} Crossref carries the title, author list (8) and 5 September
+registration date but no abstract, and there is no Europe PMC record; the publisher's
+full text was not retrievable on this run. From the title the study links optical
+evolution during dust aging to chemical transformation using a three-channel lidar ---
+a combination relevant to anyone attempting composition inference from optical
+instruments rather than mass. \textbf{No quantities, site, campaign length or retrieval
+performance are asserted here, because none could be verified.} Added to the abstract
+retry list.}
+{10.1016/j.atmosres.2026.109312}
+
+\band{Exposure assessment \& modelling\hfill 2 records}{Amber}
+
+\paperentry{Sawan et al.\ 2026}
+{Aviation drives ultrafine number, freight drives black carbon, in the same
+neighbourhood}
+{Environ Sci Technol}
+{Hybrid mobile and fixed-site campaign in a marginalized northwest Toronto neighbourhood
+downwind of Toronto Pearson and a freight corridor. UFP correlated with flight activity
+(\textbf{$r=0.58$, $p<0.05$ at 3.5\,km}) and was enriched \textbf{1.7--3.3-fold} downwind
+of the airport, measured as the ratio of interquartile ranges under downwind versus other
+wind conditions, reaching \textbf{3.2-fold at residential sites $\sim$8\,km away}. BC
+instead tracked roadway proximity and freight and correlated weakly with flight counts.
+BC--UFP correlation was strong under northerly winds (mean $r=0.62$) but collapsed to
+$r=0.1$ downwind of the airport. Random Forest models ($R^2=0.79$ UFP, $0.87$ BC)
+identified industrial land use and a highway as shared drivers, airport proximity as
+UFP-specific and freight trucking as BC-specific. The inference is observational and
+wind-sector stratified, so airport attribution rests on a co-location argument rather than
+on any tracer unique to jet exhaust. The lesson for network design is that mass-based
+siting would have missed the aviation signal entirely.}
+{10.1021/acs.est.6c06666}
+
+\paperentry{Scalabrin et al.\ 2026}
+{Chemical tracers for tire wear particles in atmospheric aerosol: analytical approaches
+and challenges}
+{Atmos Pollut Res}
+{\textbf{Metadata only.} Crossref registers the title, 11 authors and a 5 September
+creation date with no abstract, and the record has no Europe PMC counterpart. The title
+places it as a review of tracer chemistry for apportioning non-exhaust tire wear ---
+a live problem, since tire wear is a growing share of traffic PM precisely as exhaust
+controls tighten, and the standard markers each fail differently. \textbf{No findings,
+recommended tracer or study count are asserted here.} A targeted Scholar Gateway
+full-text query returned only adjacent June 2026 reviews, not this paper. Added to the
+abstract retry list.}
+{10.1016/j.apr.2026.103194}
+
+\band{Occupational \& indoor exposure\hfill 1 record}{Clay}
+
+\paperentry{Mbazima et al.\ 2026}
+{Chalk dust puts teachers over a deposition threshold while staying under the
+occupational limit}
+{Int J Environ Health Res}
+{Sixty personal breathing-zone samples from 12 Johannesburg secondary-school teachers
+(7 female, 5 male), collected Monday--Friday 08:00--14:35 with GilAir-3 pumps, a 4\,$\mu$m
+cut-point cyclone and 25\,mm PVC filters at 1.85\,L/min, then run through a multiple-path
+particle dosimetry model at low, moderate and high exertion for nasal and oronasal
+breathing. \textbf{PM$_4$ ranged 0.019--0.761\,mg/m$^3$, mean 0.126 $\pm$
+0.134\,mg/m$^3$}; chalk use ($\beta=0.468$) and sampling duration ($\beta=0.305$, both
+$p<0.001$) predicted concentration. Breathing route dominated deposition, and alveolar
+clearance was slower than tracheobronchial in both sexes. The authors' conclusion --- that
+risk persists below the occupational exposure limit --- rests on modelled rather than
+measured dose, and 12 teachers in one region is a small and non-random base. Note the
+standard deviation exceeds the mean, so the distribution is heavily right-skewed and the
+mean is a poor summary.}
+{10.1080/09603123.2026.2726420}
+
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Han G et al.\ 2026 (preprint)}
+{Picropodophyllotoxin attenuates PM$_{2.5}$ injury in pulmonary endothelial cells via
+mTOR-dependent autophagy}
+{Research Square (preprint)}
+{Human pulmonary artery endothelial cells exposed to PM$_{2.5}$ at 25--100\,$\mu$g/mL for
+24--48\,h with picropodophyllotoxin (2--50\,$\mu$M) or dexamethasone (50\,$\mu$M).
+PM$_{2.5}$ reduced viability dose- and time-dependently with increased LDH leakage and ROS
+and suppressed SOD/CAT and SGK1; PPT restored viability, SGK1 and mTOR phosphorylation and
+attenuated TLR4, MyD88, LC3II and Beclin 1 upregulation. \textbf{Not peer reviewed, single
+cell line, no animal or human data, and no dose--response statistics reported in the
+abstract.} The exposure concentrations are far above realistic alveolar deposition, which
+is the standard weakness of this design and limits the finding to pathway plausibility
+rather than therapeutic inference. Included for completeness of the mechanistic map,
+not as evidence of effect.}
+{10.21203/rs.3.rs-10446885/v1}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{5 September 2026}, a single day. \textbf{PubMed} (NCBI E-utilities)
+was queried on both the health and sensing axes against \texttt{[Date - Entry]} and
+returned \textbf{zero hits on each}; the PubMed connector, run independently with looser
+field tags, also returned zero, and a control query confirmed only 544 records of any
+kind entered PubMed that day against 4{,}765 the previous day. The issue therefore rests
+on \textbf{Crossref-by-ISSN} (18 raw hits, 4 in scope) and \textbf{Europe PMC}
+(\texttt{CREATION\_DATE}, 11 raw hits, 3 in scope after seven were found already published
+in the 4 September issue). \textbf{arXiv} returned HTTP 200 but its newest submission
+remains 2026-08-20 for the third consecutive run, so it carried nothing.
+\textbf{OpenAlex} returned HTTP 429 (unchanged since 28 July). \textbf{Consensus} returned
+three hits, all verified out of window by Crossref \texttt{created} date (2018, 2019,
+2025) --- a nil for the seventh consecutive run.
+\textbf{ClinicalTrials.gov} posted no updates registry-wide on 5 September; the same holds
+for 29 and 30 August against 973--1{,}001 on each intervening weekday, so the weekend
+trial zero is a posting-calendar artefact and is reported as such.
+Twenty-two records were screened out with a logged reason: seven as duplicates of the
+4 September issue and fifteen as off-topic or non-research (aquatic microplastics and
+PFAS, a corrigendum, a correspondence letter, indoor lighting, urban heat island and
+precipitation forecasting).
+Subtopic, design, particle-metric and geography labels are assigned from title, abstract
+and keywords; assignment is single-label by dominant contribution and is a judgement, not
+a controlled vocabulary. Two records carry no abstract from any source and are labelled
+\textit{Metadata only}; nothing is asserted about their findings.
+All DOI links resolve to the publisher of record. Abstracts remain the copyright of their
+respective publishers.\par}
+\end{keybox}
+
+\end{document}

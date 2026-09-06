@@ -954,3 +954,25 @@
 {"date": "2026-09-04", "title": "High-precision synchronous control for multi-motor system: An event-triggered model predictive iterative learning approach", "doi": "10.1088/1361-6501/aea2b2", "journal": "Measurement Science and Technology", "src": "crossref", "reason": "out of scope: non-atmospheric measurement-science engineering (Meas Sci Technol by-ISSN deposit)"}
 {"date": "2026-09-04", "title": "Measurement of dissipation-coupling mechanism in a two-stage pendulum system for gravitational experiment", "doi": "10.1088/1361-6501/aea2b7", "journal": "Measurement Science and Technology", "src": "crossref", "reason": "out of scope: non-atmospheric measurement-science engineering (Meas Sci Technol by-ISSN deposit)"}
 {"date": "2026-09-04", "title": "Transfer-learning-based physics-informed neural networks for 6-DoF pose detection of a passive mover in a maglev planar motor with a Hall sensor array", "doi": "10.1088/1361-6501/aea2b5", "journal": "Measurement Science and Technology", "src": "crossref", "reason": "out of scope: non-atmospheric measurement-science engineering (Meas Sci Technol by-ISSN deposit)"}
+{"date": "2026-09-05", "doi": "10.1093/eurjpc/zwag465", "reason": "dup: shipped 2026-09-04 (pmid+doi in seen.json)"}
+{"date": "2026-09-05", "doi": "10.1093/ije/dyag185", "reason": "dup: shipped 2026-09-04 (pmid+doi in seen.json)"}
+{"date": "2026-09-05", "doi": "10.3389/fpubh.2026.1887542", "reason": "dup: shipped 2026-09-04 (pmid+doi in seen.json)"}
+{"date": "2026-09-05", "doi": "10.1016/j.envpol.2026.129064", "reason": "dup: shipped 2026-09-04 (pmid+doi in seen.json)"}
+{"date": "2026-09-05", "doi": "10.3389/fimmu.2026.1882845", "reason": "dup: shipped 2026-09-04 (pmid+doi in seen.json)"}
+{"date": "2026-09-05", "doi": "10.1016/j.jhazmat.2026.143459", "reason": "dup: shipped 2026-09-04 (pmid+doi in seen.json)"}
+{"date": "2026-09-05", "doi": "10.1093/eurjpc/zwag456", "reason": "dup: shipped 2026-09-04 (pmid+doi in seen.json)"}
+{"date": "2026-09-05", "doi": "10.1016/j.envpol.2026.129109", "reason": "off-topic: antibiotic trophic magnification in a coral reef food web; no airborne PM"}
+{"date": "2026-09-05", "doi": "10.1021/acs.est.6c05832", "reason": "off-topic: nanofiltration membrane chemistry; no atmospheric aerosol"}
+{"date": "2026-09-05", "doi": "10.1016/j.scitotenv.2026.182294", "reason": "off-topic: aquatic microalgal bioindicators of metal pollution"}
+{"date": "2026-09-05", "doi": "10.1016/j.scitotenv.2026.182289", "reason": "off-topic: freshwater biodiversity surrogates"}
+{"date": "2026-09-05", "doi": "10.1016/j.scitotenv.2026.182287", "reason": "off-topic: forest hydrology under climate warming"}
+{"date": "2026-09-05", "doi": "10.1016/j.scitotenv.2026.182288", "reason": "excluded: corrigendum, not a research record"}
+{"date": "2026-09-05", "doi": "10.1016/j.envpol.2026.129107", "reason": "off-topic: waterborne microplastic ingestion in Daphnia magna"}
+{"date": "2026-09-05", "doi": "10.1016/j.envpol.2026.129115", "reason": "off-topic: waterborne microplastics in emergent aquatic insects"}
+{"date": "2026-09-05", "doi": "10.1016/j.envpol.2026.129093", "reason": "off-topic: PFAS in aquatic macroinvertebrates"}
+{"date": "2026-09-05", "doi": "10.1016/j.envpol.2026.129116", "reason": "off-topic: microplastic transfer to riparian spiders"}
+{"date": "2026-09-05", "doi": "10.1016/j.atmosres.2026.109303", "reason": "off-topic: FY-4A precipitable water vapour assimilation for precipitation NWP; no PM"}
+{"date": "2026-09-05", "doi": "10.1038/s41612-026-01539-w", "reason": "off-topic: revised Koppen climate classification"}
+{"date": "2026-09-05", "doi": "10.1038/s41370-026-00967-3", "reason": "excluded: correspondence on ethylene oxide biomarkers, not PM and not a research record"}
+{"date": "2026-09-05", "doi": "10.1016/j.buildenv.2026.115217", "reason": "off-topic: indoor lighting and alertness; no PM measurement"}
+{"date": "2026-09-05", "doi": "10.1016/j.buildenv.2026.115216", "reason": "off-topic: nocturnal urban heat island from Doppler lidar; thermal, not PM"}

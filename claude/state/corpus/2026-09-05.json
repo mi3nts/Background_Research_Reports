@@ -1,0 +1,127 @@
+{
+ "date": "2026-09-05",
+ "entry_window": "2026-09-05 -> 2026-09-05",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Sawan et al. 2026",
+   "doi": "10.1021/acs.est.6c06666",
+   "title": "Uncoupling aviation and roadway contributions to ultrafine particle and black carbon exposure in a marginalized neighborhood",
+   "journal": "Environ Sci Technol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "Ultrafine particle number and black carbon, wind-sector stratified",
+   "geo": "North America",
+   "endpoint": "None (exposure)",
+   "n": "Marginalized northwest Toronto neighbourhood downwind of Toronto Pearson International Airport and a freight distribution corridor; residential sites out to ~8 km; campaign duration not stated in the abstract",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Shi S et al. 2026",
+   "doi": "10.1038/s41612-026-01532-3",
+   "title": "Potential aerosol tradeoffs of vessel speed reduction for fresh ship plume composition and tracer coverage",
+   "journal": "npj Clim Atmos Sci",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Measurement campaign",
+   "pm": "Ultrafine and coarse modes of fresh ship plumes; V/VO and sulfate markers",
+   "geo": "China",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "14 ship plumes including one matched-vessel pair sampled at 4.9 vs 13.4 knots; Greater Bay Area coastal waters",
+   "tier": "A"
+  },
+  {
+   "pmid": "42696312",
+   "short": "Mbazima et al. 2026",
+   "doi": "10.1080/09603123.2026.2726420",
+   "title": "Exposure and respiratory tract deposition of particulate matter among teachers using chalkboards in selected public secondary schools in the Johannesburg region",
+   "journal": "Int J Environ Health Res",
+   "sub": "Occupational & indoor",
+   "design": "Measurement campaign",
+   "pm": "Respirable PM4, personal breathing-zone sampling + MPPD deposition model",
+   "geo": "Sub-Saharan Africa",
+   "endpoint": "Occupational",
+   "n": "60 personal samples from 12 teachers (7 female, 5 male), Monday-Friday 08:00-14:35, Johannesburg region public secondary schools",
+   "tier": "B"
+  },
+  {
+   "pmid": "42695109",
+   "short": "Wang S et al. 2026",
+   "doi": "10.1016/j.firesaf.2026.104687",
+   "title": "Impact of fuel moisture on chaparral emissions under flaming and smoldering conditions",
+   "journal": "Fire Saf J",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Chamber / laboratory",
+   "pm": "PM and gas emission factors by FTIR, flaming vs smoldering",
+   "geo": "North America",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "Four dominant California chaparral species (eucalyptus, coastal live oak, manzanita, toyon) at varying fuel moisture; controlled laboratory combustion",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Ji et al. 2026",
+   "doi": "10.1016/j.atmosres.2026.109312",
+   "title": "Quantifying the aging of dust aerosols using Mie-polarization-fluorescence lidar: linking optical evolution to chemical transformations",
+   "journal": "Atmos Res",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Dust optical properties by Mie-polarization-fluorescence lidar",
+   "geo": "China",
+   "endpoint": "None (instrument)",
+   "n": "Not extractable - no abstract deposited with Crossref and no Europe PMC record",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Scalabrin et al. 2026",
+   "doi": "10.1016/j.apr.2026.103194",
+   "title": "Chemical tracers for assessing the contribution of tire wear particles in atmospheric aerosol: analytical approaches, challenges and future perspectives",
+   "journal": "Atmos Pollut Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Non-exhaust tire wear particles via chemical tracers",
+   "geo": "Europe",
+   "endpoint": "No health endpoint",
+   "n": "Review, 11 authors; scope and included-study count not extractable without an abstract",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Han G et al. 2026 (preprint)",
+   "doi": "10.21203/rs.3.rs-10446885/v1",
+   "title": "Picropodophyllotoxin attenuates PM2.5-induced pulmonary injury via modulation of oxidative stress and mTOR-mediated autophagy",
+   "journal": "Research Square (preprint)",
+   "sub": "Mechanistic toxicology",
+   "design": "Experimental / toxicology",
+   "pm": "PM2.5 dosed in vitro at 25-100 ug/mL",
+   "geo": "East Asia (ex-China)",
+   "endpoint": "Toxicological (in vitro)",
+   "n": "Human pulmonary artery endothelial cells (HPAECs); picropodophyllotoxin 2-50 uM, dexamethasone 50 uM comparator; no animal or human data; not peer reviewed",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "No preconception\nor prenatal record\nin this window"
+  },
+  {
+   "n": 0,
+   "note": "No infancy or\nchildhood record\nin this window"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 1,
+   "note": "Johannesburg\nchalkboard teachers,\n12 workers /\n60 personal PM4\nsamples"
+  },
+  {
+   "n": 0,
+   "note": "No older-adult\nrecord in this\nwindow"
+  }
+ ]
+}

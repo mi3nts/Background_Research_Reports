@@ -2038,3 +2038,72 @@ this file, a Sat weekly needs the Saturday's own daily, which only the 23:00 run
   `10.1016/j.buildenv.2026.115206`. `claude/_mkcorpus_tmp.py`, `.git/idx-*` and `.git/lk.*`
   remain undeletable (mount EPERM); ~90 `.git/lk.*` files have now accumulated and want a
   manual sweep from a machine without the delete restriction.
+
+### 2026-09-05 issue + W36 weekly, built on the 2026-09-06 14:3x CDT run (22:00 rule)
+Local 14:33 CDT Sun 6 Sep, before 22:00, so the newest buildable date was **2026-09-05**
+against `last_entry_date` 2026-09-04 — one owed day, no gap. The **W36 weekly (30 Aug–5 Sep)
+was owed and built**: the corollary requires a Sat weekly to wait for the Saturday's own
+23:00 run *or later*, and this run is later. **7 records in scope** (smallest single-day
+issue this watch has shipped, below 8 on 29 Aug), 22 rejected, 6 pp, 0 LaTeX errors,
+0 overfull boxes. Weekly: 150 records, 45 pp, 0 errors.
+- **PubMed returned a TRUE ZERO on both axes, verified three ways** — harvester 0/0, the
+  connector with looser field tags 0/0, and a control query showing only **544 records of
+  any kind** entered PubMed on Sat 5 Sep against **4,765** on Fri 4 Sep. Topic+EDAT probes
+  (`"particulate matter"[MeSH]`, `PM2.5[tiab]`, `"air pollution"[tiab]`) each returned 0,
+  while the 09-04→09-05 range returned 4 (all belonging to 09-04). Not a harvester fault.
+  First both-ways-verified zero on record.
+- **Source counts.** PubMed 0/0; Europe PMC 11 raw but **7 already shipped on 09-04** —
+  its `CREATION_DATE` lags PubMed `[EDAT]` by ~1 day, so that leg mostly exercises
+  cross-source dedup, not recall; Crossref-by-ISSN 18 raw → **4 in scope, carrying the
+  issue**; arXiv HTTP 200 but newest submission still **2026-08-20 for the third
+  consecutive run** (zero carry all week — worth checking the query); OpenAlex **429**
+  (unchanged since 28 Jul, every day this week). Consensus nil for the **seventh** run,
+  again verified by Crossref `created` (2018/2019/2025 — all out of window). The
+  post-filter fix recommended on 4 Sep is still not implemented.
+- **CLINICALTRIALS.GOV POSTS NOTHING AT WEEKENDS — the weekend trial zero is structural.**
+  The no-term control returns **0 studies updated registry-wide** on Sat 5 Sep, and equally
+  on Sat 29 and Sun 30 Aug, against 973 / 1,001 / 983 on Wed–Fri. Every Sat and Sun issue
+  will carry a trial zero for calendar reasons. Previous runs recorded weekend zeros as
+  topical nulls; **they are not**, and both this issue and the W36 weekly now say so.
+- **`brk()` in `mkdigest.py` could not escape LaTeX specials — fixed.** The W36 weekly
+  failed to compile with `Missing $ inserted` on **`10.25259/nmji_668_2024`**
+  (Srinivasan et al., *Natl Med J India*, 3 Sep): the display DOI cannot use
+  `\detokenize` because it already carries `\allowbreak`, so an underscore reached the
+  typesetter bare. Daily issues were never affected — `\paperentry` detokenizes its DOI
+  argument — so this was latent from the first rollup and only fires when an underscore
+  DOI falls inside a rollup window. `brk()` now escapes `_ # & % $ { } ~ ^`. **Three more
+  archive-wide DOIs would have hit it**: `10.4103/ijoem.ijoem_150_25`,
+  `10.4103/ijoem.ijoem_146_24`, `10.4103/joacp.joacp_380_25` — all in the September
+  monthly's range.
+- **Proof caught one false claim and three layout defects.** (1) the f3 caption asserted
+  "no record uses PM2.5 mass alone" while the panel plainly showed `PM2.5 only = 1`
+  (the Han G preprint) — rewritten to the true and sharper point, that PM2.5-alone appears
+  once and only as a *dosed in-vitro* concentration. Layout: the daily's 4th metric box
+  overflowed its frame ("POINT" below the rule) and the weekly's 2nd did the same; the
+  daily's last digest entry sat alone on an 85%-empty p6 and the weekly's on an 88%-empty
+  p30 — both the documented `\clearpage` remedy (22 Aug, 4 Sep). Daily 8 pp → **6 pp**,
+  weekly 46 pp → **45 pp**, no low-ink page left in either.
+- **`pm` fields were 145–255 chars against an archive median of 38**, which blew the
+  register's Metric column into a 12-line-per-row column. Shortened all seven to 36–73
+  chars; `pmclass()` categories verified unchanged before and after. Authoring norm for
+  future runs: keep `pm` under ~80 characters.
+- **Zero design-map edits, second consecutive run.** All seven design strings
+  (`Source apportionment`, `Measurement campaign`, `Chamber / laboratory`,
+  `Metadata only (no abstract)`, `Experimental / toxicology`) were chosen from the existing
+  vocabulary at authoring time. Short-label collisions caught before writing:
+  `Shi et al. 2026` → **Shi S et al. 2026**, `Han et al. 2026` → **Han G et al. 2026 (preprint)**.
+- **PM₄ resolved at source, not guessed.** PubMed's abstract renders the cyclone cut-point
+  as bare "PM" (subscripts stripped); Europe PMC's `abstractText` preserves `PM<sub>4</sub>`.
+  Same class as the 3 Sep sulfate resolution — check Europe PMC before inferring a subscript.
+- **Site features requested in the task file were already shipped** and were verified rather
+  than rebuilt: week-view per-report cadence tabs (`d.reports` sc-for, index.dc.html:88),
+  month-view count badge → picker popup (:114, :169), and the categorized "All reports"
+  archive grouped by cadence (:44, :198). 2026-09-05 is the first genuine two-report day.
+- Still open: no first-author affiliation field (the weekly's author-cluster section is
+  therefore surname noise, and says so); geography labels unnormalised (`North America` /
+  `United States` / `Canada` are distinct, which understates western concentration in f3);
+  `ENDPOINT_CANON` Cancer/Oncologic split. **New:** `state/corpus/2026-08-03.json` carries a
+  **6-element `LIFECOURSE`** array (`[0,0,0,5,1,19]`) where the schema requires 5 — outside
+  the W36 window so it cannot affect this weekly, but it will corrupt any rollup spanning
+  3 Aug, including a yearly. Abstract retry list gains `10.1016/j.apr.2026.103194` and
+  `10.1016/j.atmosres.2026.109312`. `.git/lk.*` now ~97 files, still undeletable (mount EPERM).

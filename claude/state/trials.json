@@ -611,6 +611,16 @@
    "hits": 1,
    "kept": 1,
    "note": "NCT07805824, a NEW interventional registration with personal PM2.5 as its sole secondary endpoint. analyze_endpoints run per protocol. Surface in the W36 weekly (30 Aug - 5 Sep) alongside NCT04153539 and the Engeroff running-route preprint."
+  },
+  {
+   "window": "2026-09-05 -> 2026-09-05",
+   "queried": "2026-09-06",
+   "source": "ClinicalTrials.gov MCP connector + API v2 direct control queries",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5' x AREA[LastUpdatePostDate]RANGE[2026-09-05,2026-09-05]",
+   "hits": 0,
+   "kept": 0,
+   "note": "STRUCTURAL zero, not a topical one. The control query with NO search term also returns 0 studies updated registry-wide on 2026-09-05, and the same holds for Sat 2026-08-29 and Sun 2026-08-30, against 973 (Wed 09-02), 1001 (Thu 09-03) and 983 (Fri 09-04) on the intervening weekdays. ClinicalTrials.gov posts no updates at weekends, so EVERY Saturday and Sunday daily issue will report a trial zero for calendar reasons alone. Previous runs recorded weekend zeros as topical nulls; they are not. Verified across six dates this run.",
+   "rollup": "W36 weekly (2026-08-30..2026-09-05): 1 new interventional registration in the period (NCT07805824, 4 Sep), 2 updates (NCT04153539, NCT05016271); NCT07797413 carried in the August monthly."
   }
  ],
  "NCT05867381": {
