@@ -2107,3 +2107,17 @@ issue this watch has shipped, below 8 on 29 Aug), 22 rejected, 6 pp, 0 LaTeX err
   the W36 window so it cannot affect this weekly, but it will corrupt any rollup spanning
   3 Aug, including a yearly. Abstract retry list gains `10.1016/j.apr.2026.103194` and
   `10.1016/j.atmosres.2026.109312`. `.git/lk.*` now ~97 files, still undeletable (mount EPERM).
+- **STEP 9 COMPLETED LIVE.** `e58b5cb` confirmed on `origin/main` by `git ls-remote`
+  (matches local HEAD). Pages served the new manifest ~4 min after push (`last-modified`
+  19:58:25 GMT) with `daily: 41`, `weekly: 6`. On the live calendar, **2026-09-05 is the
+  first genuine two-report day** and all four requested behaviours check out:
+  the **week view** renders the Daily and Weekly as separate cadence-tagged tabs on the
+  Sat 5 Sep cell (31 Aug likewise shows Daily + Monthly); the **month view** shows a
+  count badge on every multi-report day; the badge opens a **picker popup** listing both
+  ("Daily digest — 5 Sep 2026" / "Week 36 · 30 Aug – 5 Sep 2026"), and choosing the weekly
+  opens `Reports/weekly/PM-Research-Watch-Weekly_2026-09-05.pdf` in the reader; the
+  **"All reports" archive** is grouped by cadence — Daily 41, Weekly 6, Monthly 2,
+  Yearly 0 ("None yet."). Header reads 49 reports archived.
+  Note for future verification runs: the picker closes on any backdrop click, so a
+  `screenshot` taken as a separate tool call after opening it will show it already
+  dismissed — assert on the DOM inside a single evaluation instead of on a raster.
