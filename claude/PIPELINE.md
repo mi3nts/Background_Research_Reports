@@ -2121,3 +2121,53 @@ issue this watch has shipped, below 8 on 29 Aug), 22 rejected, 6 pp, 0 LaTeX err
   Note for future verification runs: the picker closes on any backdrop click, so a
   `screenshot` taken as a separate tool call after opening it will show it already
   dismissed — assert on the DOM inside a single evaluation instead of on a raster.
+
+### 2026-09-06 issue, built on the 2026-09-07 12:1x CDT run (22:00 rule)
+Local 12:18 CDT Mon 7 Sep, before 22:00, so the newest buildable date was **2026-09-06**
+against `last_entry_date` 2026-09-05 — one owed day, no gap. Sunday, and W36 already
+shipped on the 5 Sep run, so no rollup was owed. **15 records in scope**, 21 rejected,
+10 effect estimates, 8 pp, 0 LaTeX errors, 0 overfull boxes.
+- **PubMed deposits on Sundays — the 5 Sep zero was day-specific, not a weekend rule.**
+  Harvester 9 health / 1 sensing; connector 10 / 13. Worth recording because the 5 Sep
+  entry could be misread as establishing a weekend rule for PubMed. **ClinicalTrials.gov
+  is the genuine weekend case** and the no-term control returned **0 registry-wide** on
+  6 Sep, matching 5 Sep and 29/30 Aug. Trial watch zero is calendrical, `trials.json`
+  unchanged at 26.
+- **Source counts.** PubMed 9/1 (harvester), 10/13 (connector, +3 in-scope the harvester
+  missed); Europe PMC 6 raw (+1 in-scope: the wildfire FT-ICR record); Crossref-by-ISSN
+  11 raw, 0 in scope — every hit was ES&T non-atmospheric, Build Environ or ozone-only;
+  arXiv 1 inside the recency screen and it shipped (first arXiv carry since 30 Aug);
+  OpenAlex **429** (unchanged since 28 Jul). Consensus nil for the **eighth** run, again
+  verified by Crossref `created` (2019/2022/2023). 28 raw → 23 unique → 15 shipped.
+- **The connector's sensing axis is now mostly noise and should be rewritten.** 13 hits,
+  **10 rejected**, only 2 new to the issue. Bare `"remote sensing"[tiab]` and
+  `"exposure assessment"[tiab]` matched phycotoxin hydrography, a football-heading index,
+  Nabro volcano petrology, riparian-buffer CNNs, MODIS evapotranspiration and kelp-forest
+  dive tourism. **Action for the next run: AND a particle clause into the sensing axis.**
+- **`--post` compiles `build/digest.tex` verbatim; it is NOT generated.** The first build
+  this run produced new figures wrapped in the **5 September prose and masthead** — right
+  numbers, wrong words — and would have shipped had the proof not caught it. `templates/
+  daily.tex` is a structural model only. **Author `build/digest.tex` before every
+  `--post`;** `issues/digest_<prev>.tex` is the closest structural model, not the template.
+- **DOI gate blocked the build on the arXiv record and was right to.** Preprint had no
+  DOI; resolved to the DataCite form `10.48550/arXiv.2609.04422` and HEAD-verified 200 →
+  `arxiv.org/abs/2609.04422` before writing. Matches the four prior arXiv records in the
+  archive. Gate then passed 15/15, 0 warn.
+- **Proof caught two false claims and three layout defects.** (1) "13 hits, 2 in scope" —
+  it is 3 in scope / 10 rejected, the third being one the health axis had already
+  returned; (2) "contributing four records the harvester missed" — the connector
+  contributed three, the fourth came from Europe PMC. Layout: the 5th metric box
+  overflowed its frame on "STRUCTURAL" (same defect as 5 Sep — **keep metric labels under
+  ~18 characters per line**); a bullet's last line orphaned onto p2 twice, once after the
+  correction re-lengthened it; and the f6 caption split across the p3/p4 break, fixed by
+  moving f6 to sit after f4 so the break falls between whole figure+caption units.
+- **`pm` fields kept to 36–71 chars** per the 5 Sep norm; register Metric column reads
+  cleanly. `metrics.csv` verified again: 323 rows, 0 malformed, comma-bearing subtopics
+  correctly quoted — the KNOWN DEFECT note in the task file remains stale.
+- Still open: no first-author affiliation field; geography unnormalised (`Not stated` and
+  `Laboratory` fall into the *Global / multi-region* bucket, which the f3 caption now says
+  out loud); `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` still
+  carries a 6-element `LIFECOURSE` that will corrupt any rollup spanning 3 Aug.
+  Scholar Gateway returned a 94k-char payload that exceeded the reply budget and was not
+  consumed — no record depended on it, but the call needs a narrower query next run.
+  `.git/lk.*` ~97 files, still undeletable (mount EPERM).

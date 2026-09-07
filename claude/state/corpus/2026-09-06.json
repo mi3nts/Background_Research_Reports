@@ -1,0 +1,330 @@
+{
+ "date": "2026-09-06",
+ "entry_window": "2026-09-06 -> 2026-09-06",
+ "PAPERS": [
+  {
+   "pmid": "42701930",
+   "short": "Sichuan Basin CAA 2026",
+   "doi": "10.1007/s00420-026-02237-z",
+   "title": "Temporal changes in short-term PM2.5-cardiorespiratory mortality associations and implications for the health benefits of the clean air action in the Sichuan Basin, 2014-2022",
+   "journal": "Int Arch Occup Environ Health",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Time-series",
+   "pm": "Ambient PM2.5, county daily means; ER per 10 ug m-3",
+   "geo": "China",
+   "endpoint": "Mortality / longevity",
+   "n": "Multi-county Sichuan Basin, 2014-2022, extended two-stage design with longitudinal meta-regression; 52,831 deaths averted by concentration decline vs 10,041 added by risk drift",
+   "tier": "A"
+  },
+  {
+   "pmid": "42698726",
+   "short": "Zhongshan AMI 2026",
+   "doi": "10.3389/fpubh.2026.1911027",
+   "title": "Daily changes in fine particulate matter are associated with acute myocardial infarction hospitalizations: an individual-level time-stratified case-crossover study in Zhongshan, China",
+   "journal": "Front Public Health",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Case-crossover",
+   "pm": "Day-to-day PM2.5 change, CHAP 1 km, residence-assigned",
+   "geo": "China",
+   "endpoint": "Cardiovascular",
+   "n": "1,795 AMI admissions, one tertiary hospital, Zhongshan 2020-2024; 5,877 matched control days",
+   "tier": "A"
+  },
+  {
+   "pmid": "42701986",
+   "short": "CHARLS coexposure 2026",
+   "doi": "10.1007/s00420-026-02232-4",
+   "title": "Association of coexposure to indoor solid fuels, outdoor air pollution, and heatwave with the risk of Cardiometabolic Multimorbidity among middle-aged and older Chinese adults",
+   "journal": "Int Arch Occup Environ Health",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort",
+   "pm": "PM1, PM2.5 and PM10 with solid-fuel use and heatwave, Qgcomp mixture",
+   "geo": "China",
+   "endpoint": "Cardiovascular",
+   "n": "CHARLS five waves 2011-2020; CMM n=10,273, diabetes n=9,893, heart disease n=9,536, stroke n=10,466",
+   "tier": "A"
+  },
+  {
+   "pmid": "42700721",
+   "short": "ENVIRONAGE eye-track 2026",
+   "doi": "10.1016/j.ebiom.2026.106469",
+   "title": "Residential early-life air pollution exposure and oculomotor markers of cognitive workload in children: a prospective birth cohort study",
+   "journal": "EBioMedicine",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort",
+   "pm": "Modelled residential BC, NO2 and PM2.5; windowed, per IQR",
+   "geo": "Europe",
+   "endpoint": "Neuro / cognitive",
+   "n": "196 children aged 9-11 from the ENVIRONAGE birth cohort (>2400 pairs enrolled), eye-tracking Sep 2021-Nov 2023, Belgium",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "ABCD amygdala 2026 (preprint)",
+   "doi": "10.64898/2026.08.31.748438",
+   "title": "Air Pollution, Early Adversity, and Amygdala: Environmental Correlates of Psychopathology in Preadolescents",
+   "journal": "bioRxiv (preprint)",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort",
+   "pm": "Annual residential PM2.5 total mass plus 15 components",
+   "geo": "United States",
+   "endpoint": "Neuro / cognitive",
+   "n": "3,601 children aged 9-10 (45% female at birth) from the ABCD Study; linear mixed-effects, co-pollutant adjusted; not peer reviewed",
+   "tier": "B"
+  },
+  {
+   "pmid": "42699267",
+   "short": "COPD anaemia metals 2026",
+   "doi": "10.2147/COPD.S626348",
+   "title": "Air Pollution-Associated Intracellular Metals, Immune Gene Expression, and Erythrocyte Indices in COPD with Anemia",
+   "journal": "Int J Chron Obstruct Pulmon Dis",
+   "sub": "Respiratory & allergic",
+   "design": "Repeated-measures biomarker",
+   "pm": "Annual PM10, PM2.5, NO2, NOx by land-use regression",
+   "geo": "Not stated",
+   "endpoint": "Respiratory",
+   "n": "61 COPD patients and 10 healthy controls; ICP-MS and single-cell ICP-MS metals, PBMC RNA-seq",
+   "tier": "B"
+  },
+  {
+   "pmid": "42699959",
+   "short": "Bengaluru COPD 2026",
+   "doi": "10.4103/ijcm.ijcm_145_25",
+   "title": "Prevalence and Risk Factors of Chronic Obstructive Pulmonary Disease (COPD) in an Urban Poor Locality of Bengaluru, South India - A Cross-sectional Study",
+   "journal": "Indian J Community Med",
+   "sub": "Respiratory & allergic",
+   "design": "Cross-sectional (multistage)",
+   "pm": "Self-reported cooking fuel, biomass and indoor smoke; no measurement",
+   "geo": "India",
+   "endpoint": "Respiratory",
+   "n": "1,560 target sample, adults >30 y, PPS sampling, urban poor locality of Bengaluru; spirometry-confirmed COPD",
+   "tier": "C"
+  },
+  {
+   "pmid": "42702481",
+   "short": "Douala households 2026",
+   "doi": "10.1016/j.sste.2026.100836",
+   "title": "What is the impact of the concentration of particulate matter on the respiratory health of households in urban Cameroon?",
+   "journal": "Spat Spatiotemporal Epidemiol",
+   "sub": "Exposure assessment & modelling",
+   "design": "Observational exposure study",
+   "pm": "PM10, PM5, PM2.5 by OC 300 Dust Particle Laser, low-cost portable",
+   "geo": "Sub-Saharan Africa",
+   "endpoint": "Respiratory",
+   "n": "1,721 individuals in 344 households near the measurement campaigns, Douala, Cameroon; instrumental Logit",
+   "tier": "B"
+  },
+  {
+   "pmid": "42698773",
+   "short": "Tangshan CWP IGF1 2026",
+   "doi": "10.3389/fpubh.2026.1899729",
+   "title": "Effects of dust exposure on IGF1 and autophagy related to coal workers' pneumoconiosis",
+   "journal": "Front Public Health",
+   "sub": "Occupational & indoor",
+   "design": "Experimental / toxicology",
+   "pm": "Cumulative occupational coal dust by job history; SiO2 in vitro",
+   "geo": "China",
+   "endpoint": "Occupational",
+   "n": "2,028 employees of one Tangshan coal enterprise 2023-2024, retrospective; paired SiO2-stimulated macrophage model",
+   "tier": "C"
+  },
+  {
+   "pmid": "42699770",
+   "short": "Retinal CRM 2026",
+   "doi": "10.1016/j.bbrep.2026.102758",
+   "title": "Environmental particulate reference materials increase DCFDA fluorescence and reduce ATP-dependent viability in primary mouse retinal cells",
+   "journal": "Biochem Biophys Rep",
+   "sub": "Mechanistic toxicology",
+   "design": "Experimental / toxicology",
+   "pm": "Two certified environmental particulate reference materials, dosed",
+   "geo": "Laboratory",
+   "endpoint": "Toxicological (in vitro)",
+   "n": "Primary mouse retinal cells plus topical ocular exposure in postnatal and adult Thy1-CFP mice; alpha-tocopherol and NAC rescue arms",
+   "tier": "C"
+  },
+  {
+   "pmid": "42700858",
+   "short": "Wildfire CHON PM2.5 2026",
+   "doi": "10.1016/j.envres.2026.125576",
+   "title": "Integrating FT-ICR MS with Rule-Based Prediction and QSAR to Resolve Nitrogen-Containing Organic Compounds and Their Toxicity in Wildfire-Derived PM2.5",
+   "journal": "Environ Res",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Measurement campaign",
+   "pm": "Wildfire PM2.5 by GC-MS and FT-ICR MS; nitrated PAC in ng m-3",
+   "geo": "South Korea",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "Temperate coniferous forest wildfire, South Korea; wildfire vs post-wildfire sampling periods; QSAR LC50 on formula-level assignments",
+   "tier": "B"
+  },
+  {
+   "pmid": "42702138",
+   "short": "SAQIN 2026",
+   "doi": "10.1016/j.neunet.2026.109575",
+   "title": "Long-short-term decoupled residual learning for high-resolution spatio-temporal air quality inference",
+   "journal": "Neural Netw",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "Criteria-pollutant fields inferred from sparse reference stations",
+   "geo": "Not stated",
+   "endpoint": "None (monitoring)",
+   "n": "Large-scale real-world datasets; static branch from segmentation, remote sensing, population and elevation, dynamic branch multi-head attention; zero-shot cross-domain tests",
+   "tier": "A"
+  },
+  {
+   "pmid": "42701162",
+   "short": "Paediatric exposome 2026",
+   "doi": "10.1038/s41390-026-05460-z",
+   "title": "Assessing environmental exposures in children: toward a comprehensive exposome approach",
+   "journal": "Pediatr Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Narrative review",
+   "pm": "Survey of questionnaires, biomarkers, sensors and geospatial indicators",
+   "geo": "Global",
+   "endpoint": "No health endpoint",
+   "n": "Narrative review; no pooled estimate, no systematic search protocol reported",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "CA wine-grape smoke 2026 (preprint)",
+   "doi": "10.48550/arXiv.2609.04422",
+   "title": "Quantifying Impacts of Wildfire Smoke on Crop Yields in California",
+   "journal": "arXiv (preprint)",
+   "sub": "Burden, policy & mitigation",
+   "design": "Modelling / inventory",
+   "pm": "Regulatory PM as a yield predictor alongside temperature covariates",
+   "geo": "United States",
+   "endpoint": "No health endpoint",
+   "n": "Three Northern California wine-grape study sites; regression models, Sonoma R2 0.79 and Napa R2 0.66; not peer reviewed",
+   "tier": "C"
+  },
+  {
+   "pmid": "42698419",
+   "short": "CLHLS exercise 2026",
+   "doi": "10.3389/fpubh.2026.1894835",
+   "title": "Exercise is associated with lower all-cause mortality among older adults: a national cohort survival analysis with county-level industrial air pollution indicators",
+   "journal": "Front Public Health",
+   "sub": "Burden, policy & mitigation",
+   "design": "Prospective cohort",
+   "pm": "County annual industrial soot and SO2 emissions and removals",
+   "geo": "China",
+   "endpoint": "Mortality / longevity",
+   "n": "16,954 adults aged >=65 y, CLHLS 2008-2014, 23 provinces, three follow-up waves over 6 years",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "AMI hospitalisation, lag0-1",
+   "exposure": "Day-to-day PM2.5 change, per 10 ug m-3",
+   "est": 1.0789,
+   "lo": 1.0086,
+   "hi": 1.154,
+   "metric": "OR",
+   "src": "Zhongshan AMI 2026"
+  },
+  {
+   "label": "AMI, ST-elevation subtype",
+   "exposure": "Day-to-day PM2.5 change, per 10 ug m-3",
+   "est": 1.179,
+   "lo": null,
+   "hi": null,
+   "metric": "OR",
+   "src": "Zhongshan AMI 2026"
+  },
+  {
+   "label": "Heart disease",
+   "exposure": "Indoor solid-fuel use vs clean fuel",
+   "est": 1.118,
+   "lo": 1.016,
+   "hi": 1.231,
+   "metric": "HR",
+   "src": "CHARLS coexposure 2026"
+  },
+  {
+   "label": "Stroke",
+   "exposure": "Indoor solid-fuel use vs clean fuel",
+   "est": 1.149,
+   "lo": 1.007,
+   "hi": 1.31,
+   "metric": "HR",
+   "src": "CHARLS coexposure 2026"
+  },
+  {
+   "label": "Cardiometabolic multimorbidity",
+   "exposure": "Qgcomp mixture, all exposures up one quantile",
+   "est": 1.65,
+   "lo": 1.375,
+   "hi": 1.979,
+   "metric": "OR",
+   "src": "CHARLS coexposure 2026"
+  },
+  {
+   "label": "Diabetes",
+   "exposure": "Qgcomp mixture, all exposures up one quantile",
+   "est": 1.675,
+   "lo": 1.475,
+   "hi": 1.903,
+   "metric": "OR",
+   "src": "CHARLS coexposure 2026"
+  },
+  {
+   "label": "Heart disease, mixture",
+   "exposure": "Qgcomp mixture, all exposures up one quantile",
+   "est": 1.228,
+   "lo": 1.08,
+   "hi": 1.397,
+   "metric": "OR",
+   "src": "CHARLS coexposure 2026"
+  },
+  {
+   "label": "Stroke, mixture",
+   "exposure": "Qgcomp mixture, all exposures up one quantile",
+   "est": 1.205,
+   "lo": 1.011,
+   "hi": 1.437,
+   "metric": "OR",
+   "src": "CHARLS coexposure 2026"
+  },
+  {
+   "label": "All-cause mortality, exercise",
+   "exposure": "Habitual exercise, fully adjusted",
+   "est": 0.835,
+   "lo": 0.773,
+   "hi": 0.902,
+   "metric": "HR",
+   "src": "CLHLS exercise 2026"
+  },
+  {
+   "label": "All-cause mortality, SO2",
+   "exposure": "County industrial SO2 emissions, standardised",
+   "est": 1.001,
+   "lo": 0.874,
+   "hi": 1.146,
+   "metric": "HR",
+   "src": "CLHLS exercise 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "No preconception\nor prenatal record\nin this window"
+  },
+  {
+   "n": 2,
+   "note": "ENVIRONAGE\neye-tracking, 196\nchildren 9-11 y;\nABCD amygdala,\n3,601 aged 9-10"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 2,
+   "note": "Tangshan coal\ncohort, 2,028\nworkers; Bengaluru\nCOPD, adults >30 y"
+  },
+  {
+   "n": 2,
+   "note": "CHARLS middle-aged\nand older, n=10,273;\nCLHLS >=65 y,\nn=16,954"
+  }
+ ]
+}
