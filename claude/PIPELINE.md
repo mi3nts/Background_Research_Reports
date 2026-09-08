@@ -2171,3 +2171,43 @@ shipped on the 5 Sep run, so no rollup was owed. **15 records in scope**, 21 rej
   Scholar Gateway returned a 94k-char payload that exceeded the reply budget and was not
   consumed — no record depended on it, but the call needs a narrower query next run.
   `.git/lk.*` ~97 files, still undeletable (mount EPERM).
+
+### 2026-09-07 issue, built on the 2026-09-07 23:0x CDT run (22:00 rule satisfied)
+Local 23:04 CDT Mon 7 Sep, **after** 22:00, so the newest buildable date was **2026-09-07**
+itself against `last_entry_date` 2026-09-06 — one owed day, no gap. Monday, so no rollup.
+**20 records in scope**, 17 rejected, 8 effect estimates, 9 pp, 0 LaTeX errors, 0 overfull.
+- **The 6 Sep sensing-axis action item is closed and it worked completely.** ANDing a particle
+  clause into the connector's sensing query took it from 13 hits / 10 rejected to **10 hits,
+  all 10 particle-bearing, 0 topical rejects**. Recall did not drop. Keep this form.
+- **Crossref-by-ISSN carried the issue: 46 raw → 13 fetched → 7 shipped**, against 0 in scope
+  on 6 Sep. Largest contribution this leg has made, and the source of the signal of the day
+  (`10.1021/acs.est.6c03923`, Boston sparse-network vs mobile). *ACP*/*AMT*/*Atmosphere* are
+  invisible to PubMed — a PubMed-only watch ships 13 records and misses the best one.
+- **`check_dois.py` gained an `UNREGISTERED-DOI` warn class.**
+  `10.1016/j.envres.2026.125643` FAILed DEAD-DOI on both remaining legs (Crossref **and**
+  Handle API 404) yet PubMed asserts it in `ArticleIdList` *and* `ELocationID` with a matching
+  PII. That is a publisher deposit lag, not a wrong DOI, and the wrong-DOI failure mode is
+  excluded exactly when the step-1 authority leg confirms the string. Downgraded to warn
+  **only** when `pmid in live and live[pmid]==doi`; an unconfirmed unresolvable DOI is still a
+  hard FAIL. Gate then passed 20/20, 2 warn. That link may not resolve until Elsevier deposits.
+- **Two long-open map defects closed.** `plots.py` gained **17 design labels** (the entire
+  issue had fallen to *Other / mixed*) and the geo diagnostic fired on `Africa`. Continent-level
+  geo values were resolved to the countries `GEO_SUBSTR` already knows — Ethiopia, Taiwan,
+  Colombia, Canada, Spain, United States — which surfaced **Sub-Saharan Africa** and **Latin
+  America** as their own bars instead of burying them in the *Global / multi-region* fallback.
+  Prefer specific settings over continents when writing `geo`.
+- **Trial-watch zero is a federal holiday, not a weekend.** ClinicalTrials.gov returned
+  **0 registry-wide** on 7 Sep (no-term control). 7 Sep 2026 is **Labor Day**. The prior
+  "weekend artefact" reading is incomplete; US federal holidays do it too. `trials.json` = 11.
+- **Proof caught three defects, two of them false claims.** (1) f2 caption said observational
+  designs totalled 3; the legend sums to 5 (cohort 2 + acute 1 + cross-sectional 2).
+  (2) f4 caption asserted a "single densest cell"; four cells tie at 2 — it is a maximally
+  dispersed day. (3) f3 caption orphaned its last line onto p4 twice, fixed by deleting the
+  closing sentence rather than trimming words. **Always sum the f2 legend against the caption.**
+- `pm` fields 47–56 chars, metric label lines ≤18 — both norms held, no metric-box overflow.
+  `metrics.csv` 331 rows, 0 malformed: the KNOWN DEFECT note in the task file is **stale**.
+- Still open: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split;
+  `state/corpus/2026-08-03.json` still carries a 6-element `LIFECOURSE` that will corrupt any
+  rollup spanning 3 Aug. Abstract retry list gains `10.1016/j.atmosenv.2026.122350` (no
+  abstract in Crossref; Scholar Gateway queried with a narrowed query, stayed within budget
+  this time but did not hold the article). `.git/lk.*` ~97 files, still undeletable (EPERM).

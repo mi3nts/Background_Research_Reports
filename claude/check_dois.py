@@ -181,6 +181,27 @@ def check(date):
             if doi_org_live(doi):
                 warns.append((short, "NOT-IN-CROSSREF",
                               "%s resolves at doi.org but Crossref has no record" % doi))
+            elif pmid in live and live[pmid].lower() == doi.lower():
+                # Deposit lag, not a wrong DOI. Added 2026-09-07 after
+                # 10.1016/j.envres.2026.125643 (Environ Res, indoor PAH across six
+                # European cities) FAILed DEAD-DOI on both remaining legs: Crossref
+                # 404 and the Handle API 404, i.e. the suffix is not registered
+                # anywhere yet. Elsevier had accepted the article -- PubMed carries
+                # the PII S0013-9351(26)01974-2 -- but had not deposited the DOI.
+                #
+                # The failure this gate exists to catch is a DOI belonging to some
+                # OTHER paper, which is what the scoped-XPath defect in
+                # pubmed_fetch.py used to produce. That failure mode is excluded
+                # exactly when PubMed's own record asserts this same DOI string,
+                # which is the authority leg at step 1. So when step 1 has already
+                # confirmed the string and only registration is missing, this is a
+                # warn, not a fail: the identifier is right and will resolve once
+                # the publisher deposits. Do NOT relax this to records whose PMID
+                # is absent from `live` -- an unconfirmed unresolvable DOI stays a
+                # hard FAIL, because nothing then vouches for the string.
+                warns.append((short, "UNREGISTERED-DOI",
+                              "%s not yet deposited (Crossref and Handle both 404) "
+                              "but PubMed reports this exact DOI" % doi))
             else:
                 fails.append((short, "DEAD-DOI", "%s does not resolve (%s)" % (doi, container)))
         else:

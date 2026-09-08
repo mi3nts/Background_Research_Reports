@@ -1,0 +1,382 @@
+{
+ "date": "2026-09-07",
+ "entry_window": "2026-09-07 -> 2026-09-07",
+ "PAPERS": [
+  {
+   "pmid": "42702610",
+   "short": "Fetal macrophage FCER1G 2026",
+   "doi": "10.1038/s41467-026-76298-6",
+   "title": "Prenatal PM2.5 exposure drives epigenetic reprogramming of fetal macrophages linked to atopic dermatitis",
+   "journal": "Nat Commun",
+   "sub": "Mechanistic toxicology",
+   "design": "Birth cohort + multi-omics",
+   "pm": "First-trimester ambient PM2.5, modelled residential",
+   "geo": "South Korea",
+   "endpoint": "Immune / allergic",
+   "n": "Birth-cohort AD risk paired with placental methylation and single-cell profiling; FCER1G hypomethylated in fetal macrophages, sustained overexpression persisting into M2 macrophages of AD skin and blood, driving NOX-dependent ROS and Th2 signalling",
+   "tier": "A"
+  },
+  {
+   "pmid": "42705519",
+   "short": "Tianjin myopia 2026",
+   "doi": "10.1016/j.envpol.2026.129120",
+   "title": "Association of long-term exposure to ambient air pollution and myopia in Chinese children",
+   "journal": "Environ Pollut",
+   "sub": "Other clinical endpoints",
+   "design": "School-based cross-sectional",
+   "pm": "3-yr PM2.5 and components, ML model at school point",
+   "geo": "China",
+   "endpoint": "Other clinical",
+   "n": "212,566 students in grades 4-6, Tianjin; restricted cubic splines plus quartile modified Poisson, qgcomp for the mixture; sulfate carried the signal, OM/BC/NO3/NH4 weaker",
+   "tier": "A"
+  },
+  {
+   "pmid": "42703178",
+   "short": "Shijiazhuang AECOPD 2026",
+   "doi": "10.1080/15412555.2026.2723102",
+   "title": "Seasonal patterns and short-term environmental associations with AECOPD hospitalizations in Shijiazhuang, China, 2020-2024",
+   "journal": "COPD",
+   "sub": "Respiratory & allergic",
+   "design": "Time-series",
+   "pm": "Daily PM2.5/PM10 city means; lags 0-7 and 7-day mean",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "22,468 admissions from the municipal insurance database covering all tertiary, secondary and community hospitals; mean age 71.7 (SD 9.1), M:F 3.7:1; winter peak 6,009 vs summer 5,051",
+   "tier": "B"
+  },
+  {
+   "pmid": "42705439",
+   "short": "Umea wood smoke chamber 2026",
+   "doi": "10.1016/j.envres.2026.125629",
+   "title": "Acute controlled wood smoke exposure induces sensory airway irritation without detectable changes in small airway mechanics in healthy adults: a randomized crossover study",
+   "journal": "Environ Res",
+   "sub": "Respiratory & allergic",
+   "design": "Randomised crossover chamber",
+   "pm": "Chamber PM1 453 +/- 13 ug m-3, 2 h vs filtered air",
+   "geo": "Europe",
+   "endpoint": "Respiratory",
+   "n": "14 healthy non-smokers (11 M, 3 F, mean 26 y), double-blind, 3-week washout; forced oscillometry (tremoFlo) plus spirometry and Borg symptom scoring; NCT03302117",
+   "tier": "B"
+  },
+  {
+   "pmid": "42703838",
+   "short": "SIP prenatal Bayley 2026",
+   "doi": "10.1080/09297049.2026.2723475",
+   "title": "The effect of in utero exposure to air pollution and subsequent cognitive and behavioral development in children aged 1-3 years old",
+   "journal": "Child Neuropsychol",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective birth cohort",
+   "pm": "Prenatal PM2.5 and NO2 from public monitoring data",
+   "geo": "United States",
+   "endpoint": "Neurodevelopmental",
+   "n": "Stress in Pregnancy cohort, n=210, Queens NY; Bayley-III and ABAS-3 at 18, 24 and 36 months; PM2.5 deficits in boys (communication, social, gross motor), NO2 deficits in girls",
+   "tier": "B"
+  },
+  {
+   "pmid": "42703248",
+   "short": "Addis Ababa hybrid net 2026",
+   "doi": "10.1177/11786329261487535",
+   "title": "Spatiotemporal variation of PM2.5 concentration and health impacts in Addis Ababa, Ethiopia: trends and patterns",
+   "journal": "Health Serv Insights",
+   "sub": "Burden, policy & mitigation",
+   "design": "Network monitoring + burden",
+   "pm": "Hourly PM2.5, 7 low-cost sensors plus 2 BAM, 2022-23",
+   "geo": "Ethiopia",
+   "endpoint": "Mortality / longevity",
+   "n": "Two-year hybrid network; site means 15-33 ug m-3, citywide 27 (5.4x the WHO AQG), 07:00 diurnal peak 38; HQ>1 in all age groups; DALYs monetised on a local VSL at USD 652.95 M, 0.25% of GDP",
+   "tier": "A"
+  },
+  {
+   "pmid": "42705444",
+   "short": "Europe indoor PAH children 2026",
+   "doi": "10.1016/j.envres.2026.125643",
+   "title": "Polycyclic aromatic hydrocarbon (PAH) levels in indoor air and their associated health risks for children across Europe",
+   "journal": "Environ Res",
+   "sub": "Occupational & indoor",
+   "design": "Multi-city indoor survey",
+   "pm": "Active indoor air sampling plus deposited dust, 12 PAHs",
+   "geo": "Europe",
+   "endpoint": "Carcinogenic risk",
+   "n": "Schools, homes and sports halls in Athens, Barcelona, Colchester, Copenhagen, Helsinki and Lisbon; medians >50,000 pg m-3 where residential wood burning dominates vs <10,000 in the south-west; ECR5 10^-8 to 10^-5",
+   "tier": "B"
+  },
+  {
+   "pmid": "42705433",
+   "short": "Taiwan LRT bioaerosol 2026",
+   "doi": "10.1016/j.envres.2026.125640",
+   "title": "Impacts of long-range transport on the concentration, composition, and persistence of airborne fungi in northern Taiwan",
+   "journal": "Environ Res",
+   "sub": "Exposure assessment & modelling",
+   "design": "Event-based monitoring",
+   "pm": "Daily culturable/spore fungal counts under ADS and FP",
+   "geo": "Taiwan",
+   "endpoint": "None (bioaerosol)",
+   "n": "Wintertime daily monitoring, northern Taiwan; Asian dust storms vs frontal pollution contrasted against non-event days; ADS enriched Basidiospores and Cladosporium, FP enriched Aspergillus/Penicillium",
+   "tier": "B"
+  },
+  {
+   "pmid": "42705517",
+   "short": "Hohhot park PM removal 2026",
+   "doi": "10.1016/j.envpol.2026.129128",
+   "title": "Quantifying the reduction in particulate matter by urban park green spaces using a random forest model: a case study of Hohhot, China",
+   "journal": "Environ Pollut",
+   "sub": "Burden, policy & mitigation",
+   "design": "Cross-sectional + ML",
+   "pm": "Six PM size fractions, summer daytime, in/out of park",
+   "geo": "China",
+   "endpoint": "None (monitoring)",
+   "n": "37 parks; linear vs GAM vs random forest under leave-one-park-out CV (point R2 0.19-0.58, park R2 0.18-0.72); SHAP plus PDP/ICE derivatives fixed nine driver thresholds beyond which mitigation plateaus",
+   "tier": "B"
+  },
+  {
+   "pmid": "42704503",
+   "short": "Rouyn-Noranda citizen dust 2026",
+   "doi": "10.1007/s10661-026-15900-2",
+   "title": "Metal contamination in residential snow and indoor dust near the Horne Smelter: a citizen-science study in Rouyn-Noranda, Quebec",
+   "journal": "Environ Monit Assess",
+   "sub": "Occupational & indoor",
+   "design": "Citizen-science sampling",
+   "pm": "Cu, Pb, Cd, As, Zn, Cr in snow and settled indoor dust",
+   "geo": "Canada",
+   "endpoint": "None (biomonitoring)",
+   "n": "23 residences 540-2,080 m from Canada's only copper smelter, samples collected by residents; smelter distance plus wind direction explained 73% (Cu, Cr) to 44% (Zn) of snow variance and 36% to 15% of indoor dust variance",
+   "tier": "C"
+  },
+  {
+   "pmid": "42706022",
+   "short": "Bi/Bi2Te3 workplace ICP-OES 2026",
+   "doi": "10.3760/cma.j.cn121094-20250319-00107",
+   "title": "Determination of bismuth and bismuth telluride in workplace air by ultra microwave digestion with inductively coupled plasma optical emission spectrometry",
+   "journal": "Zhonghua Lao Dong Wei Sheng Zhi Ye Bing Za Zhi",
+   "sub": "Occupational & indoor",
+   "design": "Analytical method validation",
+   "pm": "MCE filter, 75 L; Bi and Te by ICP-OES after digestion",
+   "geo": "China",
+   "endpoint": "None (instrument)",
+   "n": "Ultra microwave digestion at 130 C for 10 min; linear 0.04-30 mg L-1 (r>0.9990); minimum detectable Bi2Te3 0.006 mg m-3 (via Bi) and 0.008 (via Te); digestion efficiency 99.1-100.0% Bi, 101.2-103.3% Te; Ag/Al/As non-interfering to 10 mg L-1",
+   "tier": "C"
+  },
+  {
+   "pmid": "42705025",
+   "short": "6PPD-Q AC16 p53 2026",
+   "doi": "10.1016/j.ecoenv.2026.120754",
+   "title": "Exploring the targets and mechanisms of 6PPD-Q-induced cardiotoxicity: a network toxicology and molecular docking study",
+   "journal": "Ecotoxicol Environ Saf",
+   "sub": "Mechanistic toxicology",
+   "design": "In silico + in vitro",
+   "pm": "No airborne metric; 6PPD-Q is a road-dust constituent",
+   "geo": "China",
+   "endpoint": "Toxicological (in vitro)",
+   "n": "144 putative targets, TP53 top hub; human AC16 cardiomyocytes, IC50 13.92 uM at 24 h; ROS accumulation, p53 Ser15 phosphorylation without TP53 transcriptional change, mitochondrial apoptosis and blocked late autophagic flux, all attenuated by pifithrin-alpha",
+   "tier": "C"
+  },
+  {
+   "pmid": "42703988",
+   "short": "Disaster respiratory review 2026",
+   "doi": "10.4274/ThoracResPract.2026.2026-6-13",
+   "title": "Respiratory emergencies in disasters: a narrative review",
+   "journal": "Thorac Res Pract",
+   "sub": "Respiratory & allergic",
+   "design": "Narrative review",
+   "pm": "No new measurement; wildfire PM, silica and ash dust",
+   "geo": "Global / multi-region",
+   "endpoint": "Respiratory",
+   "n": "Synthesis of PubMed/MEDLINE, Web of Science and Scopus with EM-DAT, WHO and UNDRR reports; unsystematic search with no stated inclusion criteria or risk-of-bias appraisal, so it indexes the literature rather than weighing it",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Boston sparse network 2026",
+   "doi": "10.1021/acs.est.6c03923",
+   "title": "Air quality in cities: what do sparse sensor networks miss?",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Mobile vs fixed co-measurement",
+   "pm": "Fixed-station PM2.5 vs mobile within a 250 m radius",
+   "geo": "United States",
+   "endpoint": "None (monitoring)",
+   "n": "Three contrasting Boston Metro areas, spring and summer 2025; mean station-mobile difference 2.0 ug m-3 (median 1.5, IQR 0.6-2.8) but dynamic events exceeded 300% and 800 ug m-3; 10.4% of cases (21.8% at one site) crossed an AQI category boundary",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Bogota BiLSTM Huber 2026",
+   "doi": "10.3390/atmos17090871",
+   "title": "BiLSTM with asymmetric Huber loss for 24 h PM2.5 forecasting and early exceedance detection at an industrial monitoring station in Bogota, Colombia",
+   "journal": "Atmosphere",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Deep-learning forecasting",
+   "pm": "Hourly PM2.5, Puente Aranda industrial corridor",
+   "geo": "Colombia",
+   "endpoint": "None (forecasting)",
+   "n": "n=31,961 hourly records, 2022-2025; asymmetric Huber loss, exceedance sample weighting and Optuna-TPE over 100 trials; 98.7% of WHO-exceeding days contain an hour above 25 ug m-3, median peak-to-mean 1.90",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "UAV single-particle CCSEM 2026",
+   "doi": "10.1021/acs.est.6c03627",
+   "title": "Temporal evolution and vertical distribution of size-resolved aerosol composition and mixing state within the boundary layer using an unmanned aerial vehicle",
+   "journal": "Environ Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "UAV instrument deployment",
+   "pm": "Microscopy sampler on a UAV, 30 m and 1 min resolution",
+   "geo": "Global / multi-region",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "Over 100,000 particles by computer-controlled SEM with EDX in a coastal boundary layer; aged sea salt and dust (46-83%) gave way to organic-sulfur particles (57-89%), driving the mixing state index from 53% to 27%",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Liupan tethered eBC 2026",
+   "doi": "10.5194/acp-26-12671-2026",
+   "title": "Measurement report: impacts of thermodynamic and dynamic processes on the vertical distribution of carbonaceous aerosols: lessons from in-situ observations at the eastern foothills of Liupan Mountains, Loess Plateau",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Tethered-balloon profiling",
+   "pm": "eBC and UVPM profiles, tethered balloon, July 23 and 24",
+   "geo": "China",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "Two campaigns at Pingliang; near-surface eBC 0.84 and UVPM 1.24 ug m-3, both decreasing with height; UVPM exceeded eBC aloft overnight, attributed to nucleation from gaseous precursors; thermodynamics dominated near-surface transport, dynamics aloft drove horizontal dispersion",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "EROD-HR/SOILHD Iberia 2026",
+   "doi": "10.5194/acp-26-12641-2026",
+   "title": "Impact of high-resolution soil erodibility datasets on dust simulations in WRF-Chem with the GOCART scheme",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Regional CTM evaluation",
+   "pm": "Modelled PM10 vs SINQLAIR network, 5 dust episodes",
+   "geo": "Spain",
+   "endpoint": "None (modelling)",
+   "n": "EROD-HR (0.0625 deg global, 1 km Iberia) and SOILHD (1 km global, soil-texture-resolved, misclassified bare soil removed) over five 2022-2025 episodes; PM10 peak magnitude and timing improved inland, gains limited at coastal stations",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "St Elias proglacial dust 2026",
+   "doi": "10.5194/acp-26-12613-2026",
+   "title": "Modelling mineral dust emissions from proglacial valleys of the St. Elias Mountains, Canada",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Sub-km CTM development",
+   "pm": "Modelled dust emission vs in situ, camera and Doppler",
+   "geo": "Canada",
+   "endpoint": "None (emission)",
+   "n": "Sub-km WRF-Chem with glaciofluvial deposit heterogeneity and inundation explicitly treated; 5-19 d simulations across 2019-2022 gave 1.0e4 kg km-2 d-1 over 47 d; skill is season-dependent and the emission scheme stays sensitive to soil texture",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Coriolis sampler inactivation 2026",
+   "doi": "10.1155/ina/5068026",
+   "title": "Sampler-induced loss of respiratory virus infectivity revealed by spiked collection-liquid experiments",
+   "journal": "Indoor Air",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Laboratory sampler validation",
+   "pm": "Coriolis micro liquid impinger, spiked collection liquid",
+   "geo": "Laboratory",
+   "endpoint": "None (instrument)",
+   "n": "Rhinovirus, SARS-CoV-2 and influenza A spiked into collection liquid and run at several airflow rates; culturable virus fell up to 98.6% for SARS-CoV-2 and influenza A while RNA copies were largely unchanged; rhinovirus was near-unaffected",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Myopia, sulfate\nQ4 vs Q1",
+   "exposure": "3-yr school-level SO4 2-, top vs bottom quartile",
+   "est": 1.1,
+   "lo": 1.07,
+   "hi": 1.13,
+   "metric": "PR",
+   "src": "Tianjin myopia 2026"
+  },
+  {
+   "label": "Myopia, pollutant\nmixture",
+   "exposure": "Joint exposure, per one-quartile increase (qgcomp)",
+   "est": 1.017,
+   "lo": 1.007,
+   "hi": 1.027,
+   "metric": "PR",
+   "src": "Tianjin myopia 2026"
+  },
+  {
+   "label": "Myopia, ozone\nQ4 vs Q1",
+   "exposure": "3-yr school-level O3, top vs bottom quartile",
+   "est": 1.03,
+   "lo": 1.0,
+   "hi": 1.05,
+   "metric": "PR",
+   "src": "Tianjin myopia 2026"
+  },
+  {
+   "label": "AECOPD winter,\nPM10",
+   "exposure": "Winter PM10, per 10 ug m-3, 7-day mean lag0-6",
+   "est": 1.069,
+   "lo": 1.052,
+   "hi": 1.085,
+   "metric": "IRR",
+   "src": "Shijiazhuang AECOPD 2026"
+  },
+  {
+   "label": "AECOPD winter,\nNO2",
+   "exposure": "Winter NO2, per 10 ug m-3, 7-day mean lag0-6",
+   "est": 1.089,
+   "lo": 1.05,
+   "hi": 1.129,
+   "metric": "IRR",
+   "src": "Shijiazhuang AECOPD 2026"
+  },
+  {
+   "label": "AECOPD summer,\nozone",
+   "exposure": "Summer O3, per 10 ug m-3, 7-day mean lag0-6",
+   "est": 1.035,
+   "lo": 1.015,
+   "hi": 1.056,
+   "metric": "IRR",
+   "src": "Shijiazhuang AECOPD 2026"
+  },
+  {
+   "label": "AECOPD autumn,\nozone",
+   "exposure": "Autumn O3, per 10 ug m-3, 7-day mean lag0-6",
+   "est": 1.022,
+   "lo": 1.005,
+   "hi": 1.039,
+   "metric": "IRR",
+   "src": "Shijiazhuang AECOPD 2026"
+  },
+  {
+   "label": "AECOPD, diurnal\ntemp range",
+   "exposure": "Diurnal temperature range, per 1 C wider",
+   "est": 1.055,
+   "lo": 1.034,
+   "hi": 1.077,
+   "metric": "IRR",
+   "src": "Shijiazhuang AECOPD 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 2,
+   "note": "Nat Commun\nfirst-trimester\nPM2.5 birth cohort;\nSIP prenatal\ncohort, n=210"
+  },
+  {
+   "n": 2,
+   "note": "Tianjin myopia,\n212,566 in grades\n4-6; indoor PAH\nin schools across\nsix EU cities"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 3,
+   "note": "Wood smoke chamber,\n14 adults mean 26 y;\nBi2Te3 workplace\nair; 23 smelter-\nadjacent residences"
+  },
+  {
+   "n": 1,
+   "note": "Shijiazhuang AECOPD,\n22,468 admissions,\nmean age 71.7 y"
+  }
+ ]
+}

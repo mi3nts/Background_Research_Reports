@@ -356,6 +356,32 @@ design_group.update({
     "Ecological (GLOBOCAN secondary analysis)": "Ecological",
     "Regulatory coding framework": "Modelling / inventory",
 })
+# 2026-09-07 issue. Seventeen labels coined this issue -- the whole set fell through
+# to "Other / mixed" on the first plots.py run and the f2 diagnostic caught it.
+# Added in the same edit that wrote them onto records, per the standing rule.
+# Note the three platform labels: a UAV, a tethered balloon and a mobile-vs-fixed
+# co-measurement are all measurement campaigns, not "sensor co-location" -- that
+# bucket is reserved for a low-cost node evaluated against a reference instrument,
+# which is a different claim from a vertical or spatial survey.
+design_group.update({
+    "Analytical method validation": "Experimental / toxicology",
+    "Birth cohort + multi-omics": "Observational - cohort",
+    "Citizen-science sampling": "Measurement campaign",
+    "Cross-sectional + ML": "Observational - cross-sectional",
+    "Deep-learning forecasting": "Modelling / inventory",
+    "Event-based monitoring": "Measurement campaign",
+    "In silico + in vitro": "Experimental / toxicology",
+    "Laboratory sampler validation": "Chamber / laboratory",
+    "Mobile vs fixed co-measurement": "Measurement campaign",
+    "Multi-city indoor survey": "Measurement campaign",
+    "Network monitoring + burden": "Measurement campaign",
+    "Randomised crossover chamber": "Chamber / laboratory",
+    "Regional CTM evaluation": "Modelling / inventory",
+    "School-based cross-sectional": "Observational - cross-sectional",
+    "Sub-km CTM development": "Modelling / inventory",
+    "Tethered-balloon profiling": "Measurement campaign",
+    "UAV instrument deployment": "Measurement campaign",
+})
 # 2026-08-28 issue.
 design_group.update({
     "Animal model (chronic instillation)": "Experimental / toxicology",
