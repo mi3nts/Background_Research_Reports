@@ -2211,3 +2211,48 @@ itself against `last_entry_date` 2026-09-06 — one owed day, no gap. Monday, so
   rollup spanning 3 Aug. Abstract retry list gains `10.1016/j.atmosenv.2026.122350` (no
   abstract in Crossref; Scholar Gateway queried with a narrowed query, stayed within budget
   this time but did not hold the article). `.git/lk.*` ~97 files, still undeletable (EPERM).
+
+### 2026-09-08 issue, built on the 2026-09-08 22:0x CDT run (22:00 rule satisfied by waiting)
+Run fired at **21:47 CDT, 13 min early**. Rather than open 8 Sep against a truncated window or
+skip the day, the run **slept to 22:00** and then harvested — the rule's intent is a full day of
+deposits, and waiting satisfies it exactly where building early or stopping would not. Do this
+again rather than shipping thin or deferring. `last_entry_date` 2026-09-07, one owed day, no gap.
+Tuesday, no rollup (next weekly Sat 12 Sep). **18 in scope**, 34 rejected, 4 effect estimates,
+9 pp, 0 LaTeX errors, 0 overfull.
+- **New failure mode: 7 of 18 records have no abstract in existence anywhere.** Nine
+  Crossref-by-ISSN records were abstract-free in the journal-scoped payload; each was re-checked
+  **per DOI** against Crossref direct, Europe PMC, Semantic Scholar (429) and the publisher page
+  (ScienceDirect and T&F both refused). All legs nil. Seven unambiguously in scope on title ship
+  as `Metadata only (no abstract)`, tier C, asserting **no finding**; two whose PM scope could not
+  even be confirmed were rejected. **Crossref indexes a DOI before the publisher deposits the
+  abstract, and a one-day window sits inside that gap.** Expect this on every same-day Elsevier/T&F
+  record. Retry list: the 7 shipped DOIs.
+- **Scholar Gateway is not an abstract source for same-day records.** Its corpus is Wiley-weighted;
+  queried for the SIBS paper it returned four unrelated Wiley articles. Stop routing fresh
+  Elsevier/T&F abstract lookups through it — that is what burned budget on 6 Sep too.
+- **Crossref-by-ISSN carried the issue again: 59 raw → 12 shipped**, two thirds of the corpus,
+  against 7 on 7 Sep. PubMed spine 5, Europe PMC 1. Nine of the 12 are in journals PubMed does not
+  index; two (*Environ Int*, *Environ Pollut*) are PubMed-indexed and still arrived here first.
+- **PubMed connector added nothing — first pure-confirmation run.** Health axis returned the
+  identical 19 PMIDs the harvester fetched; sensing axis 2, a subset of the harvester's 3 (the
+  connector query omitted `machine learning`, and the missed record was rejected anyway).
+- **Consensus nil verified properly this time.** Three hits, all three resolved to DOIs and found
+  in `seen.json` (1, 2, 5 Aug). Closes the 4 Sep weakness of verifying by publication date.
+- **Trial-watch zero is topical, not an outage.** 1,135 registry-wide updates on 8 Sep, 0 PM/air
+  pollution. Yesterday's Labor Day zero could not distinguish the two; the no-term control does.
+  `trials.json` = 11.
+- **Proof caught three defects, two of them false claims.** (1) f3 caption called Sub-Saharan
+  Africa "joint-largest for the first time in this archive" — it is neither: *Global / multi-region*
+  is larger at 4, and SSA=3 occurred on 6 Aug and 3 Sep. Corrected to the defensible claim, that
+  3/18 is the largest SSA **share** on record (16.7%). **Check archive-wide superlatives against
+  `state/corpus/*.json` before writing them.** (2) f6's caption orphaned wholly onto the next page
+  away from its figure; fixed by swapping f4/f6 so the last figure+caption unit is whole. (3) That
+  swap then orphaned the *Sensing* band header at the foot of p4 — fixed with a `\clearpage` before
+  the digest section. A band header alone at a page foot elsewhere is pre-existing and tolerated.
+- Three new design labels mapped in the same edit as the records using them; geo diagnostic silent.
+  `metrics.csv` 337 rows, 0 malformed — the KNOWN DEFECT note in the task file is **stale**.
+- Still open: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split;
+  `state/corpus/2026-08-03.json` still carries a 6-element `LIFECOURSE` that will corrupt any
+  rollup spanning 3 Aug. arXiv and OpenAlex both returned HTTP 429 (rate limit, not the usual 403).
+  `.git/lk.*` now ~110 files, still undeletable (mount EPERM) — needs manual cleanup on a local
+  checkout.
