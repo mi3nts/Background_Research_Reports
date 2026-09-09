@@ -1,0 +1,318 @@
+{
+ "date": "2026-09-08",
+ "entry_window": "2026-09-08 -> 2026-09-08",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "SIBS inexpensive single-particle 2026",
+   "doi": "10.1080/02786826.2026.2721653",
+   "title": "Feasibility of an inexpensive single-particle SIBS instrument",
+   "journal": "Aerosol Sci Technol",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Single-particle spark-induced breakdown spectroscopy",
+   "geo": "Not stated",
+   "endpoint": "None (instrument)",
+   "n": "Metadata only - no abstract in Crossref, Europe PMC or the publisher page on the entry date. Title asserts a feasibility study for a low-cost single-particle SIBS instrument; no performance figure can be quoted until the abstract deposits",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "3D-LSS particle shape 2026",
+   "doi": "10.1016/j.jaerosci.2026.106860",
+   "title": "Enhanced three-dimensional light scattering sensor (3D-LSS) for online characterization of aerosol particle shape: Development and validation with test aerosols",
+   "journal": "J Aerosol Sci",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Angularly resolved elastic scattering, single particle",
+   "geo": "Not stated",
+   "endpoint": "None (instrument)",
+   "n": "Metadata only - no abstract retrievable on the entry date. Title states development plus validation against test aerosols of an enhanced 3D light-scattering sensor for online particle shape; the validation aerosols and size range are not recoverable yet",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "W Sub-Saharan Africa PM monitoring 2026",
+   "doi": "10.1016/j.apr.2026.103195",
+   "title": "Monitoring and estimating PM2.5 and PM10 concentrations in Western Sub-Saharan Africa: Challenges and perspectives",
+   "journal": "Atmos Pollut Res",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Regional PM2.5/PM10 monitoring and estimation capacity",
+   "geo": "West Africa",
+   "endpoint": "None (monitoring)",
+   "n": "Metadata only - no abstract retrievable on the entry date. Scope is the monitoring and estimation of PM2.5/PM10 across Western Sub-Saharan Africa, the sparsest reference network on the continent and the canonical low-cost-sensor use case",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "BC coating optics 2026",
+   "doi": "10.1016/j.jaerosci.2026.106885",
+   "title": "Effects of V2O5, NiO, and Fe2O3 surface coatings on the optical properties of black carbon aggregates",
+   "journal": "J Aerosol Sci",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Optical properties of coated BC aggregates",
+   "geo": "Laboratory",
+   "endpoint": "None (instrument)",
+   "n": "Metadata only - no abstract retrievable on the entry date. Metal-oxide coatings on BC aggregates bear directly on absorption-based BC measurement, where the coating enhancement factor is the dominant systematic in aethalometer and photoacoustic retrievals",
+   "tier": "C"
+  },
+  {
+   "pmid": "42709920",
+   "short": "PPDRTL leaf-image AQI 2026",
+   "doi": "10.1371/journal.pone.0326588",
+   "title": "PPDRTL: A novel framework for predicting pollutant deposition on roadside tree leaves using linear regression",
+   "journal": "PLoS One",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Image-feature regression proxy",
+   "pm": "AQI regressed on leaf-surface image texture features",
+   "geo": "India",
+   "endpoint": "None (monitoring)",
+   "n": "10-day pilot at high/medium/low-traffic roadside sites, Haryana; PSO/DPSO/FODPSO segmentation of leaf images, contrast-entropy-SD features, linear regression to HSPCB reference AQI; FODPSO variant R2 up to 0.894, RMSE 8.76-12.34 ug m-3",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Europe BLH regression kriging 2026",
+   "doi": "10.5194/amt-19-5697-2026",
+   "title": "Modelling monthly Boundary Layer Height maps combining radiosonde, satellite, and reanalysis over Europe",
+   "journal": "Atmos Meas Tech",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Regression kriging map product",
+   "pm": "Gridded monthly PBL height, 25 km, 00 and 12 UTC",
+   "geo": "Europe",
+   "endpoint": "None (monitoring)",
+   "n": "2010-2020, radiosonde plus land-surface-temperature and topographic covariates plus ERA5; random forest regression kriging beat linear and gradient boosting. Midday winter spatial RMSE <=170 m vs >=250 m for ERA5; night performance degrades sharply",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "TROPOMI SO2 EAKF assimilation 2026",
+   "doi": "10.3390/atmos17090875",
+   "title": "Assimilation of SO2 TROPOMI Retrievals at the European Scale with EAKF Implemented in MINNI Through DART",
+   "journal": "Atmosphere",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Satellite + chemical transport model",
+   "pm": "TROPOMI SO2-COBRA total column into MINNI CTM",
+   "geo": "Europe",
+   "endpoint": "None (monitoring)",
+   "n": "August 2023, continental Europe, 20-member ensemble with perturbed emissions and boundary conditions; domain-mean column correction 2e-5 mol m-2, local maxima 3.3e-4; surface corrections up to 2.6 ug m-3, validated against in situ",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "SE India monsoon aerosol 2026",
+   "doi": "10.3390/atmos17090876",
+   "title": "Monsoon-Regulated Aerosol Variability and Radiative Effects over a Rural Receptor Site in Southeast India",
+   "journal": "Atmosphere",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Long-term field measurement campaign",
+   "pm": "MICROTOPS-II sunphotometer AOD500 and Angstrom exponent",
+   "geo": "India",
+   "endpoint": "None (monitoring)",
+   "n": "April 2021-December 2023 rural receptor site; annual mean AOD500 0.56 +/- 0.22, pre-monsoon 0.66, monsoon 0.49; AE 1.30 +/- 0.24 in winter/pre-monsoon vs 0.83 +/- 0.37 in monsoon; PSCF/CWT source attribution, OPAC-SBDART forcing",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "N China indoor Finf 48 homes 2026",
+   "doi": "10.3390/atmos17090874",
+   "title": "Multivariable Determinants of Indoor PM2.5 and Infiltration Factors in 48 Residential Buildings Across Eight Northern Chinese Cities: A Seasonal Monitoring and Linear Mixed-Effects Modelling Study",
+   "journal": "Atmosphere",
+   "sub": "Exposure assessment & modelling",
+   "design": "Seasonal indoor-outdoor monitoring + LMM",
+   "pm": "Paired indoor/outdoor PM2.5 at 5 min, hourly aggregate",
+   "geo": "China",
+   "endpoint": "None (monitoring)",
+   "n": "48 residences, 8 cities, 4 seasons, 7 consecutive days each; 31,094 valid hourly observations of 32,256 scheduled. LMM with residence random intercept and AR(1) residuals, marginal R2 0.71 / conditional 0.91, ICC 0.34",
+   "tier": "A"
+  },
+  {
+   "pmid": "42706383",
+   "short": "Accra traffic intersections 2026",
+   "doi": "10.1007/s10661-026-15889-8",
+   "title": "Meteorological drivers of ambient PM2.5 pollution at urban traffic intersections in Accra, Ghana",
+   "journal": "Environ Monit Assess",
+   "sub": "Exposure assessment & modelling",
+   "design": "Portable sensor monitoring campaign",
+   "pm": "Aeroqual Ranger portable dust monitor, 9 traffic hotspots",
+   "geo": "Ghana",
+   "endpoint": "None (monitoring)",
+   "n": "Nine intersections across harmattan and non-harmattan seasons; median PM2.5 54.90 ug m-3 high-density, 34.26 commercial, 16.75 low-density, against the WHO 24 h guideline of 15; temperature r = 0.353 (p<0.01), wind speed r = 0.079 in harmattan",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Xiamen chlorine NO2 uptake 2026",
+   "doi": "10.5194/acp-26-12715-2026",
+   "title": "Chlorine enhances nocturnal heterogeneous uptake of NO2 in coastal atmosphere under sea-land breeze circulation",
+   "journal": "Atmos Chem Phys",
+   "sub": "Exposure assessment & modelling",
+   "design": "Kinetic model + field validation",
+   "pm": "Nocturnal particulate nitrate and HONO under sea-land breeze",
+   "geo": "China",
+   "endpoint": "Aerosol chemistry",
+   "n": "Coastal Xiamen field observations plus machine learning plus a multiphase box model; mean NO2 uptake rate constant 9.70e-6 s-1 on sea-land-breeze nights. Uptake dominates HONO formation (83.9%) and contributes 46.4% of nitrate production",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Brisbane Aitken-mode PNC 2026",
+   "doi": "10.1016/j.envint.2026.110514",
+   "title": "Long-term changes in Aitken-mode particle number concentration in Brisbane: roles of meteorology, traffic, and biomass burning",
+   "journal": "Environ Int",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Long-term Aitken-mode particle number concentration",
+   "geo": "Australia",
+   "endpoint": "None (monitoring)",
+   "n": "Metadata only - no abstract retrievable on the entry date. Title commits to a long-term Aitken-mode number-concentration trend attributed across meteorology, traffic and biomass burning; the trend magnitude and record length are not recoverable yet",
+   "tier": "C"
+  },
+  {
+   "pmid": "42708839",
+   "short": "Oklahoma cannabis facility IAQ 2026",
+   "doi": "10.1093/annweh/wxag074",
+   "title": "Multi-parameter characterization of indoor air quality in a medical marijuana cultivation facility in Oklahoma: a pilot study of occupational exposure determinants",
+   "journal": "Ann Work Expo Health",
+   "sub": "Occupational & indoor",
+   "design": "Multi-instrument field evaluation",
+   "pm": "Size-resolved PM by TSI AirAssure + 2 PurpleAir PA-II-FLEX",
+   "geo": "United States",
+   "endpoint": "Respiratory",
+   "n": "186 m2 HVAC-equipped cultivation room, ~900 plants, 10 Jul-1 Aug 2023; 7 instruments (3 Aranet4 NDIR, 2 TSI AirAssure, 2 PurpleAir) across 3 zones at 1.5 m breathing height, ~113,000 QC'd records. CO2 means 979-1,086 ppm, maxima >2,200; median PM2.5 1.4-3.1 ug m-3",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Ethiopia dormitory ventilation 2026",
+   "doi": "10.1016/j.indenv.2026.100192",
+   "title": "Occupant-driven ventilation and indoor exposure dynamics in naturally ventilated Ethiopian university dormitories",
+   "journal": "Indoor Environments",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Indoor exposure under occupant-driven natural ventilation",
+   "geo": "Ethiopia",
+   "endpoint": "None (monitoring)",
+   "n": "Metadata only - no abstract retrievable on the entry date. Naturally ventilated dormitories in Ethiopia; occupant-driven ventilation is the dominant uncontrolled term in indoor exposure models for low-resource settings, and field data are scarce",
+   "tier": "C"
+  },
+  {
+   "pmid": "42707885",
+   "short": "Multimorbidity meta-analysis 2026",
+   "doi": "10.1136/bmjph-2025-004782",
+   "title": "Association between air pollution, multimorbidity and polypharmacy: a systematic review and meta-analysis",
+   "journal": "BMJ Public Health",
+   "sub": "Other clinical endpoints",
+   "design": "Systematic review + random-effects meta-analysis",
+   "pm": "Long-term ambient PM2.5/PM10/PM1/NO2, per 5 ug m-3",
+   "geo": "Global",
+   "endpoint": "Other clinical",
+   "n": "22 studies screened in, 21 meta-analysed, PROSPERO CRD42024613048; only 4/3/2/4 studies survived the per-5 ug m-3 harmonisation for PM2.5/PM10/PM1/NO2. Zero eligible studies on polypharmacy, household air pollution, older adults, or the Americas and Oceania",
+   "tier": "A"
+  },
+  {
+   "pmid": "42706486",
+   "short": "France SUDI case-crossover 2026",
+   "doi": "10.1111/ppe.70196",
+   "title": "Short-Term Effect of Air Pollutants on Sudden Unexpected Death in Infancy: A Case-Crossover Study Based on the French National Registry",
+   "journal": "Paediatr Perinat Epidemiol",
+   "sub": "Reproductive & developmental",
+   "design": "Time-stratified case-crossover",
+   "pm": "Modelled residential daily PM10, PM2.5, NO2, O3",
+   "geo": "France",
+   "endpoint": "Mortality / longevity",
+   "n": "1,078 SUDI cases, French national registry 2015-2022; conditional logistic regression adjusted for holidays, influenza-like illness and daily mean temperature, lags to 6 days; PM associated at lags 3-5 and over the last week of life, strongest cumulatively",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Puyang PM2.5-O3 decade 2026",
+   "doi": "10.20944/preprints202609.0349.v1",
+   "title": "Long-Term Trends and Nonlinear Interactions of PM2.5-O3 Compound Pollution in a Typical Oilfield City of the 2+26 Region",
+   "journal": "Preprints.org",
+   "sub": "Burden, policy & mitigation",
+   "design": "Monitoring-record analysis",
+   "pm": "Regulatory PM2.5 and MDA8 O3, Puyang, 2015-2025",
+   "geo": "China",
+   "endpoint": "Source / policy",
+   "n": "PREPRINT. PM2.5 fell 79.6 -> 39.3 ug m-3 while MDA8 O3 rose 123.0 -> 189.6 ug m-3 over 2015-2025; weak positive PM2.5-O3 correlation only above 160 ug m-3 O3 and below 35 PM2.5 (r 0.21-0.38 by season); OPE consistently >7, indicating NOx-limited O3",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Australian air health risk index 2026",
+   "doi": "10.1016/j.envpol.2026.129117",
+   "title": "Constructing Community- and Outcome-specific Weather and Air Health Risk Indices Using Explainable Machine Learning: A Multicentre Study in 66 Australian Communities",
+   "journal": "Environ Pollut",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Community- and outcome-specific air health risk index",
+   "geo": "Australia",
+   "endpoint": "Other clinical",
+   "n": "Metadata only - no abstract retrievable on the entry date. 66 Australian communities, explainable ML to build community- and outcome-specific weather-and-air health risk indices; the pollutant set and index skill are not recoverable yet",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Multimorbidity\nPM2.5, per 5",
+   "exposure": "Long-term ambient PM2.5, per 5 ug m-3",
+   "est": 1.15,
+   "lo": 1.08,
+   "hi": 1.23,
+   "metric": "RR",
+   "src": "Multimorbidity meta-analysis 2026"
+  },
+  {
+   "label": "Multimorbidity\nPM10, per 5",
+   "exposure": "Long-term ambient PM10, per 5 ug m-3",
+   "est": 1.27,
+   "lo": 1.11,
+   "hi": 1.47,
+   "metric": "RR",
+   "src": "Multimorbidity meta-analysis 2026"
+  },
+  {
+   "label": "Multimorbidity\nPM1, per 5",
+   "exposure": "Long-term ambient PM1, per 5 ug m-3",
+   "est": 1.07,
+   "lo": 1.05,
+   "hi": 1.09,
+   "metric": "RR",
+   "src": "Multimorbidity meta-analysis 2026"
+  },
+  {
+   "label": "Multimorbidity\nNO2, per 5",
+   "exposure": "Long-term ambient NO2, per 5 ug m-3",
+   "est": 1.12,
+   "lo": 1.0,
+   "hi": 1.26,
+   "metric": "RR",
+   "src": "Multimorbidity meta-analysis 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "French SUDI\nregistry, 1,078\ninfant deaths,\n2015-2022"
+  },
+  {
+   "n": 0,
+   "note": "No child-specific\nrecord in this\nwindow"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 3,
+   "note": "Cannabis facility\nworkers; Ethiopian\ndormitory residents;\n48 N. Chinese\nhouseholds"
+  },
+  {
+   "n": 1,
+   "note": "Multimorbidity\nmeta-analysis, 21\nstudies pooled,\nolder-skewed"
+  }
+ ]
+}

@@ -452,6 +452,14 @@ design_group.update({
 # nine group names in use that day but left four uncovered; a record written with one of
 # those four would have fallen through to "Other / mixed" (5th recurrence of the same
 # defect). Generated rather than hand-listed so the closure cannot drift again.
+# 2026-09-08 issue: three design strings written in the same edit as the records that
+# use them, per the standing rule that a NEW design label is mapped in the same commit.
+# `Metadata only (no abstract)` already existed and carries seven records this issue.
+design_group.update({
+    "Image-feature regression proxy": "Modelling / inventory",
+    "Seasonal indoor-outdoor monitoring + LMM": "Measurement campaign",
+    "Regression kriging map product": "Modelling / inventory",
+})
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):
