@@ -278,6 +278,13 @@ design_group = {
     # honest fall-through for records surfaced without an abstract: they get their
     # own slice rather than being silently pooled with characterised designs
     "Metadata only (no abstract)": "Metadata only",
+    # added 2026-09-10 with the brake-wear SO2 uptake record: a bench
+    # heterogeneous-kinetics experiment, not a smog chamber and not metrology.
+    "Heterogeneous kinetics experiment": "Chamber / laboratory",
+    # added 2026-09-11 with the Japanese intergenerational mortality record, which
+    # runs a case-crossover leg for acute effects and a DiD leg for chronic ones.
+    "Case-crossover + difference-in-differences": "Observational - cohort",
+    "Comparative field monitoring (built environment)": "Measurement campaign",
     # added 2026-08-05: ALL 13 records fell through to "Other / mixed" on this run,
     # the third recurrence of this failure class (01, 02, 03 Aug). The root cause is
     # that an unmapped design was SILENT - only a rendered figure revealed it. The
@@ -697,6 +704,12 @@ geo_group = {
     "Sweden": "Europe", "Finland": "Europe", "Pakistan": "South Asia",
     # added 2026-08-22 alongside the needles below
     "Cambodia": "Southeast Asia", "Albania": "Europe",
+    # added 2026-09-10: Cyprus (AMT dust typing), Tanzania (rural house-design
+    # indoor PM trial) and Kuwait (university tobacco-smoke survey) were all real
+    # study sites with no needle, and without these three they inflate the
+    # Global / multi-region bar -- the 2026-08-03 failure mode.
+    "Cyprus": "Middle East & N. Africa", "Tanzania": "Sub-Saharan Africa",
+    "Kuwait": "Middle East & N. Africa",
     "Iraq": "Middle East & N. Africa",
     # added 2026-08-24: an ACP kinetic-modelling paper whose "field site" is a pooled
     # set of field and chamber growth-rate datasets across several continents. It is
@@ -778,6 +791,7 @@ GEO_SUBSTR = [
     # key -- the ("pakistan", "India") style of hop is correct in outcome and
     # misleading to read, as the 2026-08-17 entry notes.
     ("cambodia", "Cambodia"), ("phnom penh", "Cambodia"),
+    ("cyprus", "Cyprus"), ("tanzania", "Tanzania"), ("kuwait", "Kuwait"),
     ("albania", "Albania"), ("elbasan", "Albania"),
     ("iraq", "Iraq"), ("mesopotamia", "Iraq"),
     # added 2026-08-12: a GBD paper whose study setting is the whole of Asia had no

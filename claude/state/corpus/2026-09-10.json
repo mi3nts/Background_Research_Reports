@@ -1,0 +1,308 @@
+{
+ "date": "2026-09-10",
+ "entry_window": "2026-09-10 -> 2026-09-10",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Cyprus dust typing + DRE 2026",
+   "doi": "10.5194/amt-19-5753-2026",
+   "title": "Characterization of Saharan and Middle Eastern dust aerosols and their associated shortwave direct radiative effects over Cyprus",
+   "journal": "Atmos Meas Tech",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field campaign / remote sensing",
+   "pm": "AERONET optical properties, LIDAR, MODIS, HYSPLIT typing",
+   "geo": "Cyprus",
+   "endpoint": "None (monitoring)",
+   "n": "Seven years (2015-2022) at Agia Marina Xyliatou. Dust is 28.3% of aerosol cases in MAM and 12.7% in SON; 86% Saharan, 14% Middle Eastern. AOD440 0.34 +/- 0.13 Saharan vs 0.40 +/- 0.13 Middle Eastern, SSA440 0.93 for both, i.e. the two source regions are separable by trajectory and loading but not by single-scattering albedo. Modelled GHI within +/-5% of ground irradiance for 87% of cases. At SZA 60 deg the strongest monthly mean surface forcing is -92 W m-2 (Saharan) and -86 W m-2 (Middle Eastern), with +72 and +59 W m-2 of atmospheric heating. Limitation: DRE is reported at one fixed SZA, so the monthly means are not diurnally integrated and cannot be read as energy budgets. Column optical typing is the reference against which a low-cost PM network's dust-episode flags should be scored",
+   "tier": "A"
+  },
+  {
+   "pmid": "42719208",
+   "short": "LCS field calibration correction 2026",
+   "doi": "10.1007/s40201-026-01003-0",
+   "title": "Correction: Long-term performance evaluation and seasonal field calibration of a low-cost particulate matter sensor",
+   "journal": "J Environ Health Sci Eng",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Low-cost PM sensor, seasonal field calibration",
+   "geo": "Iran",
+   "endpoint": "None (instrument)",
+   "n": "Correction notice to 10.1007/s40201-026-00986-0. The notice carries no content of its own; logged here only so the archive records that the underlying long-term low-cost-sensor calibration paper has been amended, and so a later reader of that record checks which figures or coefficients moved before reusing them. No finding is asserted and the record is tier C on that basis",
+   "tier": "C"
+  },
+  {
+   "pmid": "42716925",
+   "short": "Brake wear SO2 uptake 2026",
+   "doi": "10.1038/s41467-026-76820-w",
+   "title": "Unexpectedly rapid SO2 heterogeneous reaction on the surface of vehicular brake wear particles",
+   "journal": "Nat Commun",
+   "sub": "Exposure assessment & modelling",
+   "design": "Heterogeneous kinetics experiment",
+   "pm": "Brake wear particles, SO2 uptake coefficient",
+   "geo": "China",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "Bench heterogeneous kinetics on collected brake wear particles. SO2 uptake coefficient up to 2.87e-5 under dark ambient conditions, orders of magnitude above mineral dust or soot. The mechanism proposed is a self-sustained alpha-Fe2O3 / carbonaceous synergy: oxygen vacancies activate O2 and H2O to ROS and Fe-OH, while organics and elemental carbon promote H2O dissociation and enhance SO2 adsorption at carbon defects. Limitation: uptake coefficients are measured on collected, laboratory-handled particles under dry dark conditions, so the extrapolation to ambient RH and photochemistry is an assumption, not a measurement. Relevance: non-exhaust PM is now the dominant vehicular primary source in regulated fleets, and a reactive brake-wear pathway means roadside sulfate is not purely advected",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Korea paediatric severity IV 2026",
+   "doi": "10.64898/2026.09.03.26362213",
+   "title": "Air pollution drives concentrated clinical severity of respiratory illness in early childhood",
+   "journal": "medRxiv",
+   "sub": "Respiratory & allergic",
+   "design": "Registry cohort, FE models",
+   "pm": "Monthly PM2.5, thermal-inversion instrument",
+   "geo": "South Korea",
+   "endpoint": "Respiratory",
+   "n": "PREPRINT. Nationwide claims for 3,210,381 children, 99,261,945 child-months, 2015-2019, with thermal inversions used as a quasi-random instrument for monthly PM2.5. A 1-SD rise (7.23 ug m-3) adds 0.29 respiratory visits per child-month at age 1, significant through age 6; expenditure rises 46.7%, 43.0% and 35.4% at ages 0, 1 and 2 and is indistinguishable from zero past age 4, giving a 32.2% increase in annual respiratory spending under age 5. The severity gradient, not the visit count, is the contribution. Limitation: the inversion instrument is plausibly exogenous to care-seeking but not to temperature, and no temperature control is described in the abstract; that is the exclusion restriction the peer review will test",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Amazon PM2.5 x heat 2026",
+   "doi": "10.21203/rs.3.rs-10973377/v1",
+   "title": "Interaction Effects of PM2.5 and High Temperatures on the Respiratory Health of Vulnerable Age Groups in the Brazilian Amazon",
+   "journal": "Research Square",
+   "sub": "Respiratory & allergic",
+   "design": "Ecological panel",
+   "pm": "Monthly PM2.5 from biomass burning, temperature interaction",
+   "geo": "Brazil",
+   "endpoint": "Respiratory",
+   "n": "PREPRINT. Monthly municipal data 2009-2019 for the Legal Amazon, hierarchical Bayesian models with 0-2 month distributed lags. Per 10 ug m-3 PM2.5 under high-temperature conditions, respiratory mortality in adults 60+ rose 2.5% and hospitalisations in those aged 1-19 rose 2.7%, both at lag 0 with no reported persistence at longer lags. Limitations: ecological design at monthly resolution, so the interaction is estimated well below the timescale on which wildfire smoke and heat actually covary, and no confidence intervals are given in the abstract. Relevance: a monthly aggregate cannot resolve smoke episodes, which is exactly the gap a dense low-cost network in the burning arc would fill",
+   "tier": "B"
+  },
+  {
+   "pmid": "42717348",
+   "short": "Kuwait tobacco smoke morbidity 2026",
+   "doi": "10.1186/s12913-026-15530-x",
+   "title": "Exposure to tobacco smoke, concurrent short-term symptoms of respiratory, allergic, cardiovascular morbidities and health-services use among young adults in Kuwait",
+   "journal": "BMC Health Serv Res",
+   "sub": "Respiratory & allergic",
+   "design": "Cross-sectional survey",
+   "pm": "Self-reported first-hand and second-hand tobacco smoke",
+   "geo": "Kuwait",
+   "endpoint": "Respiratory",
+   "n": "Convenience sample of 1,323 Kuwait University undergraduates, October 2022, electronic questionnaire. First-hand smoke exposure 13.4%, second-hand at home 50.8%, any exposure 55.9%. Self-reported symptoms were common: shortness of breath 59.1%, cough 46.3%, chest pain 26.9%. Limitations are severe and the authors name most of them: convenience sampling in one university, 75.8% female, all exposure and outcome self-reported, cross-sectional so no temporality. The prevalence figures are usable as a local exposure baseline; the symptom associations are not evidence of effect",
+   "tier": "C"
+  },
+  {
+   "pmid": "42721926",
+   "short": "IL23A / NF-kB lung tumour 2026",
+   "doi": "10.1016/j.ecoenv.2026.120742",
+   "title": "IL23A acts as a pivotal mediator of PM2.5-induced lung tumorigenesis through the NF-kB pathway activation",
+   "journal": "Ecotoxicol Environ Saf",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal + in vitro",
+   "pm": "PM2.5 extract exposure, NSCLC lines + orthotopic mice",
+   "geo": "China",
+   "endpoint": "Oncological",
+   "n": "PM2.5 raised proinflammatory cytokines including IL23A in lung epithelial and NSCLC lines; induction was blocked by p65 siRNA knockdown or chemical NF-kB inhibition, placing IL23A downstream of canonical NF-kB. IL23A is overexpressed in LUAD tissue and inversely associated with prognosis in non-smokers. Anti-IL23A neutralising antibody suppressed tumour formation and growth in orthotopic PM2.5-treated mice. An atypical IL12B-independent secreted IL23A form was identified in lung epithelium. Limitation: PM2.5 dose and composition are not stated in the abstract, and instilled or extract-based dosing routinely exceeds inhaled ambient dose by orders of magnitude, so the axis is established and the exposure-response is not",
+   "tier": "B"
+  },
+  {
+   "pmid": "42722279",
+   "short": "China WBC homeostasis 2026",
+   "doi": "10.1016/j.envpol.2026.129140",
+   "title": "Long-term exposure to ambient air pollution and circulating white blood cell homeostasis among adults in China: Time-window-specific associations and the mediating role of fasting blood glucose",
+   "journal": "Environ Pollut",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Retrospective cohort",
+   "pm": "1-, 6-, 12- and 24-month mean PM2.5, PM10, NO2, SO2, CO, O3",
+   "geo": "China",
+   "endpoint": "Metabolic",
+   "n": "29,603 adults with routine health examinations at Liangshan General Hospital, 2016-2024, pollutants assigned to geocoded residences. Associations were strongest at the six-month window and were negative for every particulate pollutant: per IQR, WBC fell 0.503 x10^9/L (95% CI 0.454-0.552) for PM2.5 and 0.349 (0.307-0.391) for PM10, while O3 was positively associated. Quantile g-computation put PM in the dominant negative position at six months and SO2 at two years; fasting glucose mediated 4.97-10.98%. The direction is the problem: a fall in WBC with rising PM runs against the inflammatory-recruitment model the authors invoke, and a single-hospital examinee population selected on health-seeking is a plausible source of that inversion. Not included in the forest plot - the estimates are absolute counts, not ratios",
+   "tier": "B"
+  },
+  {
+   "pmid": "42721376",
+   "short": "4HAIE hair cortisol 2026",
+   "doi": "10.1080/10253890.2026.2721526",
+   "title": "Intensity-dependent associations of physical activity and cardiorespiratory fitness with hair cortisol concentrations in the context of lifetime air pollution exposure",
+   "journal": "Stress",
+   "sub": "Neuro / mental health",
+   "design": "Cross-sectional (cohort baseline)",
+   "pm": "Lifetime residential PM2.5, PM10 and NO2 from historical models",
+   "geo": "Czech Republic",
+   "endpoint": "Mental health",
+   "n": "133 adults (87% women) from the 4HAIE industrial-environment study. Hair cortisol over ~3 months by LC-MS/MS against Fitbit and questionnaire activity, VO2peak, and lifetime PM2.5/PM10/NO2 reconstructed from residential histories. Vigorous activity was positively associated with hair cortisol (LTEQ B = 0.010, p = 0.042; Fitbit B = 0.006, p = 0.044); VO2peak attenuated to null once vigorous activity entered. Lifetime air pollution showed no association with hair cortisol. A clean null, but an underpowered one: n = 133 against a lifetime exposure contrast within one industrial region leaves little variance to detect, so this constrains nothing about the PM-cortisol question",
+   "tier": "C"
+  },
+  {
+   "pmid": "42722274",
+   "short": "China gym co-exposure 2026",
+   "doi": "10.1016/j.envpol.2026.129141",
+   "title": "Association of indoor multiple airborne pollutants co-exposure and typical respiratory symptoms among gym employees: A nationwide observational study in China",
+   "journal": "Environ Pollut",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional survey",
+   "pm": "Indoor PM2.5, PM10, total fungal and total plate count",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "n": "280 gyms across 32 Chinese provinces, 2022-2023. Median PM2.5 35 ug m-3, PM10 59 ug m-3, fungal count 170 CFU m-3, plate count 226 CFU m-3; 22.13% of employees reported respiratory symptoms. PM2.5 OR 2.31, PM10 2.19, fungi 1.17, bacteria 1.24, and a quantile g-computation mixture OR 1.70 with PM2.5 and fungal count as the dominant components. Natural ventilation (OR 0.36) and high-efficiency filters (0.42) were protective; absent equipment disinfection (3.30) and air-return air conditioning (2.85) raised risk. Limitations: cross-sectional, self-reported symptoms, and no confidence intervals reported for any OR in the abstract, which is why the forest plot carries them as point estimates only. The ventilation and filtration coefficients are the operationally useful part",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Tanzania house-design IAQ 2026",
+   "doi": "10.21203/rs.3.rs-10498557/v1",
+   "title": "A comparative study to investigate the impact of novel house design on indoor air quality in rural Tanzania",
+   "journal": "Research Square",
+   "sub": "Occupational & indoor",
+   "design": "Comparative field monitoring (built environment)",
+   "pm": "Continuous indoor PM2.5 and PM10, 77-day deployment",
+   "geo": "Tanzania",
+   "endpoint": "Respiratory",
+   "n": "PREPRINT. Magoda village, four novel-design houses against three local control houses over 77 days. Mean indoor PM2.5 was 2.8x lower and PM10 2.4x lower in the novel houses; the authors attribute this to integrated chimneys, increased envelope permeability, the lighting strategy and raised bedrooms, in a setting where ambient PM is low so indoor sources dominate. n = 7 houses is the limitation and it is a hard one: households are not randomised, occupancy and cooking behaviour differ, and the design elements are confounded with each other so no single feature is attributable. The secondary proposal - an hourly rather than 24-hour indoor guideline for homes empty during the day - is the more transferable idea",
+   "tier": "B"
+  },
+  {
+   "pmid": "42719539",
+   "short": "Turkish cigarette PM chamber 2026",
+   "doi": "10.1177/1179173x261473110",
+   "title": "Particulate Matter Emissions of Turkish Cigarettes in Comparison to German Brands - An Aerosol Spectrometric Study",
+   "journal": "Tob Use Insights",
+   "sub": "Occupational & indoor",
+   "design": "Chamber emission characterisation",
+   "pm": "PM10, PM2.5, PM1 by laser aerosol spectroscopy, 2.88 m3 chamber",
+   "geo": "Turkiye",
+   "endpoint": "None (emissions)",
+   "n": "Eleven Turkish brands, four German comparators and the 3R4F reference burned in a 2.88 m3 chamber. PM10 1044-1677 ug m-3 and PM2.5 1043-1675 ug m-3, i.e. essentially all mass below 2.5 um, with PM1 994-1548 ug m-3 carrying the bulk. Five Turkish brands exceeded the reference cigarette on PM10 and PM2.5; all four German brands were lower. No correlation with tobacco weight, filling density, filter length or rod length, so the brand differences are not explained by the physical parameters measured. Limitation: a sealed unventilated chamber sized like a car cabin is a worst case, not a room, and the authors use it to argue for vehicle smoking bans rather than generalising to dwellings",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Occupational nanoparticle scoping 2026",
+   "doi": "10.1186/s12989-026-00699-0",
+   "title": "Occupational nanoparticle exposure and its effects on pulmonary health, cardiovascular health, and systemic biomarkers: a scoping review",
+   "journal": "Part Fibre Toxicol",
+   "sub": "Occupational & indoor",
+   "design": "Scoping review",
+   "pm": "Engineered nanomaterials and workplace ultrafine particles",
+   "geo": "Global",
+   "endpoint": "Respiratory",
+   "n": "MEDLINE, EMBASE and Web of Science to April 2024; 66 of 6,020 records included, mostly cross-sectional (n = 37) or panel (n = 18). Exposures are dominated by carbon nanotubes and fibres, titanium dioxide and metal oxides in manufacturing. Reported outcomes are reduced lung function and raised inflammatory and oxidative-stress markers, with cardiovascular and systemic biomarker changes. The review explicitly performed no quality appraisal, so the evidence map is a catalogue of what has been measured rather than a weighing of it, and the cross-sectional predominance means reverse causation is unaddressed across most of the base. Useful mainly for the biomarker inventory and for locating where UFP metrology in workplaces is missing",
+   "tier": "B"
+  },
+  {
+   "pmid": "42719285",
+   "short": "TS-AQHI two-city validation 2026",
+   "doi": "10.3389/fpubh.2026.1806127",
+   "title": "Development and two-city validation of a Temperature-Sensitive Air Quality Health Index incorporating synergistic effects of air pollution and thermal stress",
+   "journal": "Front Public Health",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metric development + retrospective application",
+   "pm": "Multi-pollutant WQS-weighted index with temperature interaction",
+   "geo": "Global",
+   "endpoint": "Other clinical",
+   "n": "Weighted quantile sum regression supplies pollutant weights to a GAM carrying temperature, humidity and two-day-lagged multiplicative interactions; validated against daily mortality in Ningbo and London, 2014-2017. For high-risk categories the temperature-sensitive index gave excess risk 22.9 (95% CI 21.1-24.7) vs 15.0 (13.4-16.7) for conventional AQHI in Ningbo, and 22.2 (20.7-23.8) vs 7.7 (6.3-9.0) in London. Limitation: index weights are estimated and validated on the same 1,461-day series in each city with no out-of-sample or out-of-period hold-out, so the margin over the benchmark is an in-sample fit advantage until someone tests it forward. Two cities on different continents is nonetheless a real generalisation test of the framework",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Livestock ammonia review 2026",
+   "doi": "10.20944/preprints202609.0590.v1",
+   "title": "Livestock Ammonia Emissions: Impacts on Air Quality, Animal and Human Health, and Mitigation Strategies",
+   "journal": "Preprints.org",
+   "sub": "Burden, policy & mitigation",
+   "design": "Narrative review",
+   "pm": "NH3 flux as secondary inorganic PM precursor",
+   "geo": "Global",
+   "endpoint": "Respiratory",
+   "n": "PREPRINT, single author. Reviews NH3 formation from urea and uric acid hydrolysis and the physical controls on volatilisation - pH, temperature, moisture, residence time, exposed area, airflow - and insists on the distinction between concentration and mass flux, which is the measurement point that matters for inventories. Mitigation is framed as layered barriers: precision protein nutrition, rapid excreta removal, litter and slurry stabilisation, ventilation with capture, covered storage, low-emission land application; warming is noted to erode mitigation performance. No systematic search strategy, no quantitative synthesis, not peer reviewed. Relevant as agricultural NH3 is the precursor controlling ammonium nitrate PM2.5 across much of Europe and the US Midwest",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "12M student visual impairment 2026",
+   "doi": "10.1016/j.envint.2026.110513",
+   "title": "Associations of long-term exposure to PM2.5 and its chemical constituents with incident visual impairment risk: A cohort study of 12 million school students",
+   "journal": "Environ Int",
+   "sub": "Other clinical endpoints",
+   "design": "Metadata only (no abstract)",
+   "pm": "Long-term PM2.5 and speciated constituents",
+   "geo": "China",
+   "endpoint": "Ocular",
+   "n": "No abstract was available on the entry date from Crossref per-DOI, Europe PMC, PubMed efetch or Semantic Scholar - the same same-day Elsevier deposit lag logged repeatedly since 2026-09-08. Title, journal and cohort scale establish that this is a constituent-resolved long-term PM2.5 cohort with an incident ocular endpoint in a 12-million-student population, which would make it the largest PM-vision cohort in the archive. No effect estimate, no exposure model description and no confounding structure are available, so nothing is asserted here and the record is tier C. Flag for re-reading once the abstract deposits",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Respiratory symptoms\nPM2.5, gym employees",
+   "exposure": "Indoor PM2.5",
+   "est": 2.31,
+   "lo": null,
+   "hi": null,
+   "metric": "OR",
+   "src": "China gym co-exposure 2026"
+  },
+  {
+   "label": "Respiratory symptoms\nPM10, gym employees",
+   "exposure": "Indoor PM10",
+   "est": 2.19,
+   "lo": null,
+   "hi": null,
+   "metric": "OR",
+   "src": "China gym co-exposure 2026"
+  },
+  {
+   "label": "Respiratory symptoms\n4-pollutant mixture (q-gcomp)",
+   "exposure": "PM2.5+PM10+fungi+bacteria",
+   "est": 1.7,
+   "lo": null,
+   "hi": null,
+   "metric": "OR",
+   "src": "China gym co-exposure 2026"
+  },
+  {
+   "label": "Respiratory symptoms\nnatural ventilation present",
+   "exposure": "Ventilation strategy",
+   "est": 0.36,
+   "lo": null,
+   "hi": null,
+   "metric": "OR",
+   "src": "China gym co-exposure 2026"
+  },
+  {
+   "label": "Respiratory symptoms\nhigh-efficiency filter fitted",
+   "exposure": "Filtration",
+   "est": 0.42,
+   "lo": null,
+   "hi": null,
+   "metric": "OR",
+   "src": "China gym co-exposure 2026"
+  },
+  {
+   "label": "Respiratory symptoms\nair-return air conditioning",
+   "exposure": "HVAC configuration",
+   "est": 2.85,
+   "lo": null,
+   "hi": null,
+   "metric": "OR",
+   "src": "China gym co-exposure 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "3.21M Korean children\n0-6 y, 99.3M child-\nmonths; effect peaks\nat age 1"
+  },
+  {
+   "n": 1,
+   "note": "Amazon hospitalis-\nations, ages 1-19,\nmonthly 2009-2019"
+  },
+  {
+   "n": 1,
+   "note": "Same Amazon panel\nspans to 19 y; no\nadolescent-specific\nrecord today"
+  },
+  {
+   "n": 4,
+   "note": "29,603 China health\nexaminees; 280 gyms;\n1,323 Kuwait students;\n133 4HAIE adults"
+  },
+  {
+   "n": 1,
+   "note": "Amazon respiratory\nmortality, 60+ y"
+  }
+ ]
+}

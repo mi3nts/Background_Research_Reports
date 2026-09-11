@@ -1,0 +1,206 @@
+{
+ "date": "2026-09-11",
+ "entry_window": "2026-09-10 -> 2026-09-11",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "short": "Cooking aerosol FIGAERO partitioning 2026",
+   "doi": "10.5194/acp-26-12793-2026",
+   "title": "Unravelling gas-particle partitioning dynamics in cooking aerosol oxidation through FIGAERO-CIMS analysis",
+   "journal": "Atmos Chem Phys",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Aerosol flow reactor + model implementation",
+   "pm": "FIGAERO-I-CIMS speciation, 2-D VBS volatility",
+   "geo": "China",
+   "endpoint": "None (aerosol chemistry)",
+   "n": "Heated corn oil emissions aged in a Go:PAM oxidation flow reactor, with FIGAERO-I-CIMS and a 2-D VBS parameterisation tracking composition, volatility and partitioning. Kinetic calculations give molar-mass-dependent partitioning with the surface process rate-limiting. Primary cooking aerosol sits biased toward the gas phase relative to equilibrium; in secondary aerosol the crossover is near 120-220 g mol-1, below which compounds favour gas and above which they favour particle. The honest result is the negative one: a substantial unresolved gap remains between FIGAERO-derived effective volatility and equilibrium thermodynamic estimates, which the authors attribute to combined measurement and model uncertainty rather than resolving. Cooking is a rising share of urban OA as combustion sources are controlled, and non-equilibrium partitioning is a direct problem for any mass-based sensor calibrated on ambient mix",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "FY-4B/AGRI AOD evaluation 2026",
+   "doi": "10.1016/j.atmosenv.2026.122354",
+   "title": "Evaluation of the FY-4B/AGRI Land Aerosol Optical Depth Product and Comparison with Geostationary Satellite Products over Asia",
+   "journal": "Atmos Environ",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Geostationary land AOD retrieval, FY-4B/AGRI vs peer products",
+   "geo": "Global",
+   "endpoint": "None (instrument)",
+   "n": "No abstract was available on the entry date from any of the four sources queried - the same same-day Elsevier deposit lag logged repeatedly since 2026-09-08. Title and journal establish a validation of the FY-4B/AGRI land AOD product against other geostationary retrievals over Asia. No validation statistics, no reference network and no spatial or temporal coverage are available, so nothing is asserted here and the record is tier C. Worth re-reading when the abstract deposits: geostationary AOD is the only route to sub-daily satellite-surface PM fusion, and product-versus-product agreement is the term that dominates the error budget of any such fusion",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "Milan pizza-oven dispersion 2026",
+   "doi": "10.20944/preprints202609.0792.v1",
+   "title": "Assessment of Air Quality Impacts from Wood-Fired Pizza Ovens: Comparison with Major Urban Emission Sources",
+   "journal": "Preprints.org",
+   "sub": "Exposure assessment & modelling",
+   "design": "CTM simulation + source attribution",
+   "pm": "Measured emission factors + dispersion modelling vs ARPA network",
+   "geo": "Italy",
+   "endpoint": "None (emissions)",
+   "n": "PREPRINT. Milan. Measured wood-fired-oven emission factors feed a dispersion model, with road traffic and domestic heating simulated on the same framework and all three compared against ARPA Lombardia monitors. Oven contributions concentrate in the city centre: 0.085-3.34 ug m-3 of primary PM10, only 0.0044-1.75 ug m-3 of NOx, but 19.70-34.28% of levoglucosan and 34.95-37.47% of benzo(a)pyrene. That split is the finding - a source that is minor by mass and major by tracer, which is exactly the pattern that breaks levoglucosan-based residential-wood-burning apportionment in a restaurant-dense centre. Limitations: preprint, single city, emission factors from a small appliance sample, and the ranges are model spreads rather than measured confidence intervals",
+   "tier": "B"
+  },
+  {
+   "pmid": "42723573",
+   "short": "Korea 8.25M asthma cohort 2026",
+   "doi": "10.1111/all.70502",
+   "title": "Cumulative Vulnerability to Particulate Matter and Incident Asthma: Joint Effects of Urbanicity, Poverty, and Age in a Nationwide Cohort",
+   "journal": "Allergy",
+   "sub": "Respiratory & allergic",
+   "design": "Nationwide cohort",
+   "pm": "1-km long-term PM2.5 and PM10 estimates",
+   "geo": "South Korea",
+   "endpoint": "Respiratory",
+   "n": "8,252,498 adults in the Korean National Health Insurance Service database linked to 1-km long-term PM estimates, Cox models for incident asthma. Per 10 ug m-3, PM2.5 gave HR 1.33 (95% CI 1.32-1.34) and PM10 HR 1.38 (1.37-1.38). Stratification by age, Medical Aid status and urbanicity produced a monotone gradient from HR 1.16 (1.14-1.18) in younger rural adults without Medical Aid to 1.80 (1.66-1.94) in older urban Medical Aid recipients, p for interaction < 0.001. Limitation: incident asthma in claims data is diagnosis-coded, and urban Medical Aid recipients have higher healthcare contact, so part of the 1.16-to-1.80 gradient is plausibly ascertainment rather than susceptibility - the confidence intervals are narrow enough to make that distinction matter. Exposure contrast at 1 km is coarse relative to the urbanicity modifier being tested, which is the resolution argument for dense low-cost networks",
+   "tier": "A"
+  },
+  {
+   "pmid": "42722095",
+   "short": "Vancouver DE blood-lung concordance 2026",
+   "doi": "10.1016/j.envres.2026.125625",
+   "title": "Concordant transcriptomics analysis of the lungs and blood after exposure to diesel exhaust: a randomized, controlled human exposure study",
+   "journal": "Environ Res",
+   "sub": "Mechanistic toxicology",
+   "design": "Randomised crossover chamber",
+   "pm": "Controlled 2-h diesel exhaust vs filtered air",
+   "geo": "Canada",
+   "endpoint": "Respiratory",
+   "n": "Double-blind crossover controlled human exposure, 32 participants, two hours of diesel exhaust and of filtered air on separate occasions, with paired-end RNA-seq on blood and bronchial brushings. Airway DEGs at FDR < 10% include upregulated GPX2 and NQO1, i.e. the NRF2 antioxidant arm. Hallmark pathway mapping gives IFN-alpha, IFN-gamma, inflammatory response and ROS activity in both compartments, and a concordant analysis finds correlated blood-airway expression that neither compartment showed alone. The authors are explicit that this is exploratory. n = 32 at a single two-hour dose, no exposure-response, and the concordance is correlational - but it is the right design question: whether a blood transcriptomic readout can stand in for bronchoscopy in panel studies of traffic-related particles",
+   "tier": "A"
+  },
+  {
+   "pmid": "",
+   "short": "Constituent multiomics cardiopulmonary 2026",
+   "doi": "10.1021/acs.est.6c04206",
+   "title": "PM2.5 Constituents and Cardiopulmonary Dysfunctions in Older Adults: A Multiomics Approach Unveiling Molecular Pathways",
+   "journal": "Environ Sci Technol",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort (mixtures) + omics mediation",
+   "pm": "Personal PM2.5 monitoring with constituent speciation",
+   "geo": "China",
+   "endpoint": "Metabolic",
+   "n": "Longitudinal panel, 313 repeated measurements in older adults, personal rather than ambient PM2.5 with constituent speciation, screened by a linear mixed model plus three machine-learning methods. Chloride, nickel, barium and selenium emerged as the key constituents. Per IQR, chloride was associated with a 3.48% (95% CI 1.50-5.46) rise in diastolic blood pressure and nickel with a 0.09% (0.05-0.12) fall in FEV1/FVC. Mediation implicated 212 CpG sites acting on both cardiovascular and pulmonary endpoints and 7 genes spanning more than two constituent-function pairs, with 22 CpGs linked by eQTM to 14 coding genes including CERS6 and LRCH3. Limitations: 313 measurements is a small panel for a screen over this many constituents and CpGs, the constituent set is collinear so the four winners are correlates rather than isolated causes, and the mediation is cross-sectional within visit. Personal monitoring is the strength - it removes the spatial misalignment that defeats constituent studies built on central-site speciation",
+   "tier": "A"
+  },
+  {
+   "pmid": "42723532",
+   "short": "Older-adult cognition review 2026",
+   "doi": "10.1515/reveh-2026-0022",
+   "title": "Air pollution and cognitive outcomes in older adults: a systematic review",
+   "journal": "Rev Environ Health",
+   "sub": "Neuro / mental health",
+   "design": "Systematic review",
+   "pm": "Ambient PM2.5 and co-pollutants, long-term",
+   "geo": "Global",
+   "endpoint": "Cognitive",
+   "n": "PubMed searched to February 2025 for observational studies from 2000 onward on ambient air pollution and cognition in adults 50+; 36 studies included. PM2.5 is the most-studied pollutant, and most studies report worse global or domain-specific cognition, faster decline, or higher impairment and dementia risk with higher PM2.5. Other pollutants trend adverse; ozone is the least consistent. Heterogeneity is attributed to exposure-assessment method, cognitive instrument, design and confounding control. Two limitations bound what this can support: a single-database search with no quantitative pooling and no formal risk-of-bias tool, so the conclusion is a vote count, not a weighted synthesis, and publication bias in a literature this size is unaddressed. The exposure-assessment heterogeneity it names is the actionable part",
+   "tier": "B"
+  },
+  {
+   "pmid": "",
+   "short": "Korean birth-cohort growth mixture 2026",
+   "doi": "10.1016/j.envpol.2026.129145",
+   "title": "Prenatal bisphenols and ambient air pollutants are differentially associated with early childhood length and weight from birth to 36 months: a multi-domain mixture analysis in a Korean birth cohort",
+   "journal": "Environ Pollut",
+   "sub": "Reproductive & developmental",
+   "design": "Metadata only (no abstract)",
+   "pm": "Prenatal ambient air pollutants in a multi-domain mixture",
+   "geo": "South Korea",
+   "endpoint": "Developmental / oxidative",
+   "n": "No abstract was available on the entry date from Crossref per-DOI, Europe PMC, PubMed efetch or Semantic Scholar. Title establishes a Korean birth cohort with a multi-domain mixture analysis placing prenatal bisphenols alongside ambient air pollutants against length and weight trajectories to 36 months, and states that the two exposure domains behave differently - but not in which direction, for which pollutant, or at what magnitude. Nothing is asserted here and the record is tier C. Flag for re-reading: multi-domain mixture methods that carry chemical and air exposures in one model are the methodological question this archive should track",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "China PM1 burden projection 2026",
+   "doi": "10.1016/j.envpol.2026.129144",
+   "title": "Ambient PM1-Related Health Burdens and Mortality Influencing Factors in China: Historical Trends to Future Projections",
+   "journal": "Environ Pollut",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Ambient PM1, historical reconstruction and projection",
+   "geo": "China",
+   "endpoint": "Surgical / mortality",
+   "n": "No abstract was available on the entry date from any of the four sources queried. Title establishes a China-wide PM1 attributable-burden analysis running historical trends into projections with a decomposition of mortality drivers. No exposure product, no concentration-response function, no scenario definition and no burden figure are available, so nothing is asserted and the record is tier C. Worth re-reading: PM1 burden work is scarce because almost no regulatory network measures PM1, which makes whatever exposure surface this study used the interesting part",
+   "tier": "C"
+  },
+  {
+   "pmid": "",
+   "short": "COVID air-quality lessons review 2026",
+   "doi": "10.20944/preprints202609.0712.v1",
+   "title": "COVID-19 Pandemic as an Environmental Health Indicator: Lessons Learned from Air Pollution Changes and Climate Implications",
+   "journal": "Preprints.org",
+   "sub": "Burden, policy & mitigation",
+   "design": "Narrative review",
+   "pm": "Lockdown-period ambient PM and co-pollutant changes",
+   "geo": "Global",
+   "endpoint": "Respiratory",
+   "n": "PREPRINT, single author. Reviews the lockdown natural experiment: short-term outdoor air-quality improvement and greenhouse-gas reduction across many regions, the reported interactions between meteorology, pollutant concentrations and respiratory viral transmission, and the argument that temporary activity reductions demonstrate the ceiling of behavioural mitigation rather than a strategy. No systematic search, no inclusion criteria, no quantitative synthesis, not peer reviewed, and the pollution-COVID-transmission literature it draws on is itself heavily confounded by the timing of interventions. Logged for completeness of the burden-and-policy subtopic; carries no estimate this archive should propagate",
+   "tier": "C"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Incident asthma\nper 10 ug/m3 PM2.5",
+   "exposure": "Long-term PM2.5",
+   "est": 1.33,
+   "lo": 1.32,
+   "hi": 1.34,
+   "metric": "HR",
+   "src": "Korea 8.25M asthma cohort 2026"
+  },
+  {
+   "label": "Incident asthma\nper 10 ug/m3 PM10",
+   "exposure": "Long-term PM10",
+   "est": 1.38,
+   "lo": 1.37,
+   "hi": 1.38,
+   "metric": "HR",
+   "src": "Korea 8.25M asthma cohort 2026"
+  },
+  {
+   "label": "Incident asthma, younger\nrural, no Medical Aid",
+   "exposure": "Long-term PM",
+   "est": 1.16,
+   "lo": 1.14,
+   "hi": 1.18,
+   "metric": "HR",
+   "src": "Korea 8.25M asthma cohort 2026"
+  },
+  {
+   "label": "Incident asthma, older\nurban, Medical Aid",
+   "exposure": "Long-term PM",
+   "est": 1.8,
+   "lo": 1.66,
+   "hi": 1.94,
+   "metric": "HR",
+   "src": "Korea 8.25M asthma cohort 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "Korean birth cohort,\nprenatal exposure,\nlength and weight\nto 36 months"
+  },
+  {
+   "n": 0,
+   "note": "No child-specific\nrecord in this\nwindow"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 2,
+   "note": "8.25M Korean adults;\n32 Vancouver diesel-\nexhaust volunteers"
+  },
+  {
+   "n": 2,
+   "note": "313 personal-monitor\nmeasurements, older\nadults; 36-study 50+\ncognition review"
+  }
+ ]
+}
