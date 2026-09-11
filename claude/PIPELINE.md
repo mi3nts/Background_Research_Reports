@@ -2256,3 +2256,54 @@ Tuesday, no rollup (next weekly Sat 12 Sep). **18 in scope**, 34 rejected, 4 eff
   rollup spanning 3 Aug. arXiv and OpenAlex both returned HTTP 429 (rate limit, not the usual 403).
   `.git/lk.*` now ~110 files, still undeletable (mount EPERM) — needs manual cleanup on a local
   checkout.
+
+### 2026-09-09 issue, built on the 2026-09-10 18:39 CDT run (backfill, one owed day)
+The 9 Sep scheduled run did not fire. This run started 10 Sep 18:39 CDT — **before the
+22:00 gate** — so the newest buildable date was 9 Sep and 10 Sep was deliberately left
+unopened rather than harvested against a two-thirds day. `last_entry_date` 2026-09-08, one
+owed day, no gap. Thursday, no rollup (next weekly Sat 12 Sep). **26 in scope**, 71
+rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
+- **The PubMed connector added net-new records for the first time, reversing 8 Sep.** Health
+  axis returned **16 PMIDs against the harvester's own E-utilities leg's 11**, nine unseen;
+  three ship (alkylamine IC-MS/MS, condensable-PM removal, cardiorespiratory review), six
+  rejected. On 8 Sep the connector was pure confirmation and the log called it redundant.
+  It is not. **Keep running both legs and diffing the PMID sets.**
+- **Crossref-by-ISSN again carried the sensing axis**: 68 raw, 4 of the 7 sensing records,
+  including the day's signal (`10.3390/atmos17090883`, Genoa AE33 vs MWAA/BLAnCA). *AMT*,
+  *ACP* and *Atmosphere* remain invisible to PubMed. Its cost is bycatch: 19 *Meas Sci
+  Technol* records (bearings, SLAM, inertial navigation) and 11 non-atmospheric *ES&T* —
+  30 of the 71 exclusions come from this one leg. Worth it, but log the ratio.
+- **Abstract-free same-day Elsevier deposits recurred exactly as predicted.** Four records
+  (*Environ Int*, *Atmos Environ*, *Atmos Pollut Res*, *Eur J Intern Med*) had no abstract
+  in Crossref per-DOI, Europe PMC or PubMed efetch. Ship as `Metadata only`, tier C, no
+  finding asserted; two further abstract-free records rejected because PM scope could not
+  be confirmed. **Treat as expected behaviour, not as an incident — stop re-diagnosing it.**
+- **Consensus nil verified by Crossref `created` date, not publication date.** Three hits:
+  one in `seen.json` (5 Aug), two created 2026-03-26 and 2026-01-20, i.e. far outside the
+  window — archive gaps, not records for this issue. This closes the 4 Sep weakness for
+  good; `created` is the entry-date analogue and is the only correct check here.
+- **Proof caught three false claims, all superlatives or scope quantifiers.** (1) f1 caption
+  said *Other clinical endpoints* was "the first cluster to take no record this week" — false,
+  it was empty on 5 and 6 Sep too, and 8 Sep had four empty clusters. Replaced with the
+  checked claim (9/10 clusters, ties 4 Sep for the week's broadest). (2) f4 caption said the
+  *Sensing* and *Exposure* rows "together hold 11 records and none carries a health endpoint"
+  — Hong Kong GEMA is in *Exposure* and carries Mental health. (3) Provenance said the one
+  in-window arXiv record was "rejected"; it was **already in the archive by title**.
+  **The 8 Sep lesson generalises: check every superlative AND every "none/all" quantifier
+  against `state/corpus/*.json` before writing it.**
+- Eight new design labels mapped in the same edit as the records using them, incl. the two
+  trial designs the map genuinely lacked (`Cluster-randomised controlled trial`,
+  `Cluster-randomised trial protocol`). Geo and design diagnostics both silent.
+- **`_rej_*.py` must read titles and DOIs back out of `_fresh.json` by index.** A first draft
+  hand-wrote them and invented plausible DOIs for the 19-record MST block. Rewritten to index
+  into the harvest payload; the fabrication mode is now structurally impossible. Do it this
+  way from now on.
+- `metrics.csv` 346 rows, 0 malformed — the KNOWN DEFECT note in the task file is **stale**,
+  third consecutive issue to confirm this. DOI gate 26/26, 0 fail, 2 warn (`10.4103/mgr.
+  MEDGASRES-D-25-00201` unregistered-DOI, PubMed-confirmed; `10.1159/ned/adwag030` resolves
+  but is not in Crossref).
+- Still open: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split;
+  `state/corpus/2026-08-03.json` still carries a 6-element `LIFECOURSE` that will corrupt any
+  rollup spanning 3 Aug. OpenAlex returned HTTP 429 again (rate limit, not 403). `.git/lk.*`
+  now ~115 files and both `index.lock` and `HEAD.lock` had to be renamed mid-commit — still
+  undeletable (mount EPERM), needs manual cleanup on a local checkout.
