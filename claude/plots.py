@@ -460,6 +460,21 @@ design_group.update({
     "Seasonal indoor-outdoor monitoring + LMM": "Measurement campaign",
     "Regression kriging map product": "Modelling / inventory",
 })
+# 2026-09-09 issue: seven design strings written in the same edit as the records that use
+# them. Two are trial designs the map genuinely lacked -- the archive had
+# "RCT process evaluation" but no plain cluster-randomised trial and no trial *protocol*,
+# and this issue carries one of each. A protocol is a Trial / intervention record that
+# reports no result, which f2's tier bar already separates via tier B.
+design_group.update({
+    "Cluster-randomised controlled trial": "Trial / intervention",
+    "Cluster-randomised trial protocol": "Trial / intervention",
+    "Geographic ecological momentary assessment": "Observational - cross-sectional",
+    "Personal exposure monitoring + panel spirometry": "Observational - acute",
+    "Causal ML on monitoring records": "Modelling / inventory",
+    "Seasonal prediction framework": "Modelling / inventory",
+    "Mesoscale simulation + campaign validation": "Modelling / inventory",
+    "Matched case-control + DLNM": "Observational - cross-sectional",
+})
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):
