@@ -2307,3 +2307,48 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   rollup spanning 3 Aug. OpenAlex returned HTTP 429 again (rate limit, not 403). `.git/lk.*`
   now ~115 files and both `index.lock` and `HEAD.lock` had to be renamed mid-commit — still
   undeletable (mount EPERM), needs manual cleanup on a local checkout.
+
+## Run 2026-09-11 (window 10 Sep backfill + 10--11 Sep)
+
+- Two issues shipped: **2026-09-10** (owed day, 16 records) and **2026-09-11** (10 records).
+  Per-source 10 Sep: PubMed 9+1, Europe PMC 13, Crossref-ISSN 34, arXiv 0 in window,
+  OpenAlex 429. 58 raw, 58 unique, 10 already archived, 48 fresh, **16 in / 32 out**.
+  11 Sep: PubMed 12+1 (connector 14), Europe PMC 27, Crossref-ISSN 64, OpenAlex 429.
+  105 raw, 95 unique, 28 already archived, 67 fresh, **10 in / 28 newly out** (32 further
+  exclusions suppressed as already logged under 10 Sep — `_rej_0911.py` now dedupes the
+  ledger by DOI, which the overlapping window made necessary).
+- **`run_all.py --post` does NOT author `build/digest.tex`.** The first 10 Sep build silently
+  recompiled the *9 Sep* narrative against 10 Sep figures — correct plots, stale masthead,
+  stale metric strip, stale prose. Caught only in proof. The narrative sections are
+  hand-authored per issue; `--post` compiles whatever is already in `build/`. **Always write
+  `build/digest.tex` before calling `--post`, and always proof page 1.**
+- New: **`_tex_entries.py <date>`** emits the `\band`/`\paperentry` block straight from
+  `state/corpus/<date>.json` with LaTeX escaping. The paper-level digest had been
+  hand-transcribed, which is a fabrication surface for DOIs and numbers. Use it from now on.
+- **check_dois.py earned its keep.** Two connector-surfaced records (`envint.2026.110514`
+  Brisbane PNC, `envint.2026.110515` Japan intergenerational) were screened as net-new on
+  PMID and both had already shipped 8/9 Sep *via Crossref with an empty `pmid`*. Gate failed
+  the build with DUPLICATE-DOI; both removed, 12 papers -> 10, 8 effects -> 4.
+  **LESSON: match connector records against the corpus by DOI, not PMID** — Crossref reaches
+  Elsevier well before PubMed assigns an identifier.
+- Proof caught one layout defect on **both** issues: a single trailing bullet orphaned onto
+  a near-empty page 2. Fixed by trimming the exec-brief list, not by `\clearpage` tricks.
+  Proof also caught one unverified superlative ("flattest distribution the week has
+  produced") — checked against `state/corpus/*.json`, 11 Sep's 0.20 max-cluster share
+  *ties* 6 and 7 Sep, so the claim was rewritten as a tie. Sixth consecutive issue where a
+  superlative or quantifier failed its check; keep checking every one.
+- Map additions, made in the same edit as the records using them: geo `Cyprus`, `Tanzania`,
+  `Kuwait` (all three real study sites that would otherwise have inflated
+  Global / multi-region); designs `Heterogeneous kinetics experiment`,
+  `Comparative field monitoring (built environment)`, `Case-crossover + difference-in-differences`.
+  Geo and design diagnostics silent after the edit. DOI gate 26/26, 0 fail 0 warn.
+- Consensus nil on both days, verified by Crossref `created` date (all hits 2019--2025).
+  Trial watch: 0 PM/air-pollution registrations or updates across 10--11 Sep against 2,269
+  registry-wide — topical zero, not an outage.
+- `metrics.csv` 362 rows, 0 malformed — fourth consecutive issue confirming the KNOWN DEFECT
+  note in the task file is **stale**.
+- Still open: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split;
+  `state/corpus/2026-08-03.json` still carries a 6-element `LIFECOURSE`. **Weekly rollup is
+  due tomorrow (Sat 12 Sep, window 6--12 Sep) and `templates/weekly.tex` DOES now exist —
+  but `plots_weekly.py` and the weekly narrative still need authoring per the same rule
+  above.** `.git/lk.*` continues to grow (mount EPERM); needs manual cleanup locally.
