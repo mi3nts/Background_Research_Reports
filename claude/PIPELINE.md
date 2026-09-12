@@ -2352,3 +2352,29 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   due tomorrow (Sat 12 Sep, window 6--12 Sep) and `templates/weekly.tex` DOES now exist —
   but `plots_weekly.py` and the weekly narrative still need authoring per the same rule
   above.** `.git/lk.*` continues to grow (mount EPERM); needs manual cleanup locally.
+
+## Run 2026-09-12 03:06 CDT — no-op by the 22:00 rule
+
+- Local time at start **03:06 CDT**, i.e. before 22:00, so the newest buildable date is
+  `today - 1` = **2026-09-11**, which `last_run.json` already records as `last_entry_date`.
+  No owed day, no backfill gap, nothing to harvest. **Did not open 12 Sep.** No connector
+  queries were issued — the window would have been ~3 h of a 23 h day.
+- **W37 weekly (6–12 Sep) deliberately deferred to tonight's 23:00 run.** The Saturday
+  corollary requires the Saturday's own daily before the Sun–Sat window closes; building it
+  now would pool 6 days and freeze the 12 Sep records out of every rollup.
+- Verification pass instead of a build: `git` 0 ahead / 0 behind `origin/main`, tree clean;
+  `build_manifest.py` revalidates **daily 47 / weekly 6 / monthly 2 / yearly 0**, manifest OK,
+  mirror refreshed 0 PDFs (already current); `metrics.csv` 363 rows, **0 malformed** — fifth
+  consecutive issue confirming the KNOWN DEFECT note in the task file is **stale**.
+- **Corrects the stale warning at the end of the 11 Sep entry:** `plots_weekly.py` is present
+  and healthy, not "still needing authoring". Smoke-tested over the last complete week
+  (30 Aug–5 Sep, 150 records, 7 issues) into a scratch figdir — all 10 figures emitted,
+  exit 0, nothing written under `claude/`. Only the weekly **narrative** is hand-authored,
+  as for the daily. Tonight: write `build/weekly.tex` before `--post`, and proof page 1.
+- W37 stands at **105 papers / 42 effects over 6 days** pre-12 Sep. Subtopic tally via
+  `corpus` needs `PMRW_START`/`PMRW_END` plus a reload — a bare import after setting the env
+  returned 105 records all keyed `?`, because `corpus` was already imported at module scope.
+  Read subtopics from `state/corpus/*.json` directly in the weekly script.
+- Still open, unchanged: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic
+  split; `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (outside the W37 window, so it
+  cannot affect tonight's weekly); `.git/lk.*` accumulation, mount EPERM, manual cleanup.
