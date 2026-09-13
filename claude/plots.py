@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, collections
+import os, collections, textwrap
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -482,6 +482,17 @@ design_group.update({
     "Mesoscale simulation + campaign validation": "Modelling / inventory",
     "Matched case-control + DLNM": "Observational - cross-sectional",
 })
+# 2026-09-12 issue: only TWO new labels, because 16 of the 21 records were deliberately
+# written onto design strings the map already owned (Multi-instrument field evaluation,
+# Prospective cohort (mixtures), Case-control (registry), Satellite remote sensing,
+# Data-fusion / ML surrogate model, Toxicological (in vitro), ...). That is the right
+# default: the fall-through defect recurred five times precisely because every issue
+# invented fresh wording for designs the archive already had a canonical name for.
+# Canonicalise on write; only register a label when no existing one is honest.
+design_group.update({
+    "Birth-cohort sub-study with indoor measurement": "Observational - cohort",
+    "Personal monitoring + microenvironment model": "Measurement campaign",
+})
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):
@@ -711,6 +722,11 @@ geo_group = {
     "Cyprus": "Middle East & N. Africa", "Tanzania": "Sub-Saharan Africa",
     "Kuwait": "Middle East & N. Africa",
     "Iraq": "Middle East & N. Africa",
+    # added 2026-09-12: Benin (Cotonou-Lake Nokoue-Porto-Novo 1 km screening corridor)
+    # and Lithuania (Vilnius grey-green XGBoost-SHAP). Both are single real study sites;
+    # unmapped they would have pushed the Global / multi-region bar from 7 to 9 and made
+    # an unusually well-localised day look unlocatable.
+    "Benin": "Sub-Saharan Africa", "Lithuania": "Europe",
     # added 2026-08-24: an ACP kinetic-modelling paper whose "field site" is a pooled
     # set of field and chamber growth-rate datasets across several continents. It is
     # genuinely multi-region rather than unlocatable, so it is named explicitly here
@@ -987,7 +1003,19 @@ if not LIFECOURSE:
         "f6: LIFECOURSE missing for this issue. Write it via corpus.save(..., "
         "lifecourse=[...]) -- refusing to render placeholder life-course counts.")
 stage_hits = [d["n"] for d in LIFECOURSE]
-stage_note = [d["note"] for d in LIFECOURSE]
+# Re-wrap every note line to the column width. A daily issue writes notes already broken
+# to fit, but a rollup POOLS the notes of every issue in the range, and those pooled lines
+# routinely run 60-90 characters -- at five columns across 8.4in they then overprint their
+# neighbours. Caught on the W37 weekly (2026-09-12), where the infancy, adolescence and
+# working-age notes collided into unreadable overlap. Re-wrapping is a correctness fix, not
+# a redesign: the same text, held inside its own column.
+_LC_COLS = 18 if BIG else 24
+def _wrap_note(note):
+    out = []
+    for line in (note or "").split("\n"):
+        out.extend(textwrap.wrap(line, _LC_COLS) or [""])
+    return "\n".join(out)
+stage_note = [_wrap_note(d["note"]) for d in LIFECOURSE]
 fig, ax = plt.subplots(figsize=SZ(8.4, 2.75))
 xs = np.arange(len(stages))
 ax.plot(xs, [0] * len(xs), color=GRID, lw=3, zorder=1, solid_capstyle="round")

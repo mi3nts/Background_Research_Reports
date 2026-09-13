@@ -2378,3 +2378,55 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Still open, unchanged: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic
   split; `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (outside the W37 window, so it
   cannot affect tonight's weekly); `.git/lk.*` accumulation, mount EPERM, manual cleanup.
+
+## Run 2026-09-12 23:05 CDT — daily 12 Sep + W37 weekly (6–12 Sep)
+
+- 22:00 rule satisfied (23:05 start), `last_entry_date` 2026-09-11, one owed day, no gap.
+  Daily **21 in scope / 23 excluded**, 5 effects, 10 pp, 0 errors, 4 overfull hboxes at
+  1.18 pt (the standing sub-visual table-cell warning). Weekly **126 records / 47 effects**,
+  33 pp, 0 errors. DOI gate 21/21, **0 fail 0 warn**.
+- **PubMed was effectively absent and the no-term control proves it.** Health axis 1,
+  sensing axis 0; the connector returned exactly the same 1 and 0 — first fully concordant
+  run in either direction. Registry-wide only **26 records** carried EDAT 2026-09-12 against
+  1,135 on 8 Sep. Europe PMC (17) and Crossref-by-ISSN (28) supplied 20 of the 21 records.
+  **All 23 exclusions came from the Crossref leg** — the highest bycatch concentration logged.
+- **Canonicalise design labels on write.** 16 of 21 records were deliberately written onto
+  design strings `design_group` already owned; only 2 new labels were registered. The
+  fall-through defect recurred five times because each issue invented fresh wording for
+  designs that already had canonical names. Geo gained Benin and Lithuania (both real sites;
+  unmapped they would have pushed Global / multi-region from 7 to 9).
+- **`plots.py` f6 collided at rollup scale.** Pooled LIFECOURSE notes run 60–90 chars per
+  line; across five columns they overprinted their neighbours into unreadable overlap on the
+  W37 weekly. Fixed by re-wrapping every note line to the column width (`_LC_COLS`, 18 under
+  `BIG`, 24 otherwise) — same text, held inside its own column. Caught only by looking at the
+  rendered page, as every figure defect in this archive has been.
+- **`--post` does not author `build/digest.tex` and does not update state.** Both confirmed
+  again: `update_state.py <date>` had to be run explicitly, and without it the weekly's w1
+  trend rendered over **6 issues instead of 7**. Run `update_state.py` before any rollup that
+  includes the day just built.
+- **Entries must be inline in `digest.tex`, never `\input`.** `mkdigest.py` builds the rollup
+  digest by parsing `issues/digest_*.tex` for `\paperentry`; an `\input{entries}` would have
+  made all 21 of today's records invisible to every future rollup. `_tex_entries.py` output is
+  pasted in, not included.
+- **Proof caught three false claims, all checkable counts.** (1) f4 said two cells reaching 3
+  was "the first time this week" — 8 Sep had cells of 4 and 3. (2) The weekly forest caption
+  said six estimates cross the null; four strictly cross, two have `lo` exactly 1.00, and the
+  gym ORs it named carry **no CI at all** (7 estimates in the week have none). (3) The weekly
+  called Sub-Saharan Africa at 7 the region's strongest week; it **ties** 2–8 Aug, and is only
+  a record as a *share* (5.6%). Seventh consecutive issue where a superlative failed its check.
+- Orphan-page fix took four passes: trimming one exec-brief bullet did not clear a single
+  spilled line because the text reflowed each time. What worked was cutting **two full lines
+  from the bullet that straddled the break**, not shaving sentences elsewhere.
+- **Trial watch: the first genuine zero week.** 0 PM/air-pollution registrations or updates
+  across 6–12 Sep against **4,413 registry-wide** — five active weekdays inside the window, so
+  unlike the structural weekend zeros established 5 Sep this is topical. 12 Sep alone was
+  0 of 0 registry-wide, consistent with Saturday behaviour. `trials.json` 26 trials, 12 windows.
+- Site UI: the three features the task file asks for (week-view per-type buttons, month-view
+  count badge + picker popup, homepage category-grouped "All reports" modal) were already
+  built and are in `index.dc.html`. **Today is the first day carrying two reports on one cell**,
+  so it is the first live exercise of all three.
+- `metrics.csv` 373 rows, 0 malformed — sixth consecutive issue confirming the KNOWN DEFECT
+  note in the task file is **stale**. Still open, unchanged: no first-author affiliation field;
+  `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element
+  `LIFECOURSE` (will corrupt the September monthly); 20 records on the abstract retry list,
+  half of them in Sensing. `.git/lk.*` accumulation, mount EPERM, manual cleanup.

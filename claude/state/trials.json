@@ -621,6 +621,16 @@
    "kept": 0,
    "note": "STRUCTURAL zero, not a topical one. The control query with NO search term also returns 0 studies updated registry-wide on 2026-09-05, and the same holds for Sat 2026-08-29 and Sun 2026-08-30, against 973 (Wed 09-02), 1001 (Thu 09-03) and 983 (Fri 09-04) on the intervening weekdays. ClinicalTrials.gov posts no updates at weekends, so EVERY Saturday and Sunday daily issue will report a trial zero for calendar reasons alone. Previous runs recorded weekend zeros as topical nulls; they are not. Verified across six dates this run.",
    "rollup": "W36 weekly (2026-08-30..2026-09-05): 1 new interventional registration in the period (NCT07805824, 4 Sep), 2 updates (NCT04153539, NCT05016271); NCT07797413 carried in the August monthly."
+  },
+  {
+   "window": "2026-09-06..2026-09-12",
+   "queried": "2026-09-12 (W37 weekly rollup; no daily window had been logged for 06-11 Sep)",
+   "source": "ClinicalTrials.gov MCP connector, search_trials + no-term control",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR household air pollution' x AREA[LastUpdatePostDate]RANGE[2026-09-06,2026-09-12]",
+   "hits": 0,
+   "kept": 0,
+   "note": "TOPICAL zero for a full week, the first this watch has recorded. The no-term control over the same 7-day window returns 4,413 studies updated registry-wide, so this is not the structural weekend zero documented on 2026-09-05 -- five active weekdays sit inside the window and none carried a PM or air-pollution record. analyze_endpoints not run (nothing to run it on). The 2026-09-12 daily separately recorded a single-day registry-wide zero (0 of 0), consistent with the established Saturday behaviour.",
+   "rollup": "W37 weekly (2026-09-06..2026-09-12): 0 new registrations, 0 updates. trials.json unchanged at 26 trials."
   }
  ],
  "NCT05867381": {
