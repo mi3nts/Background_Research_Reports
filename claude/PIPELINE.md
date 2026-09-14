@@ -2430,3 +2430,59 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element
   `LIFECOURSE` (will corrupt the September monthly); 20 records on the abstract retry list,
   half of them in Sensing. `.git/lk.*` accumulation, mount EPERM, manual cleanup.
+
+## Run 2026-09-13 (built 2026-09-14 15:31 CDT) — daily 13 Sep
+
+- 22:00 rule: run started 15:31, so the newest buildable date was 13 Sep. `last_entry_date`
+  was 2026-09-12, one owed day, no gap, no rollup owed (W38 closes Sat 19 Sep).
+  **21 in scope**, 5 effects, 10 pp, 0 errors, **0 overfull hboxes**. DOI gate 21/21 after
+  the removals below.
+- **Sunday with normal deposit volume and almost no topical yield — the inverse of 12 Sep.**
+  Registry-wide EDAT 13 Sep was **4,593** (12 Sep has since backfilled 26 -> 131). Health
+  axis returned 8 on the harvester and 10 on the connector; sensing axis 0 and 2, both
+  already in the health set. Europe PMC 75, Crossref-by-ISSN 7, arXiv 60 with none in
+  window, OpenAlex HTTP 429. Scarcity here is **topical, not infrastructural**.
+- **The DOI gate caught two duplicates the PMID index structurally could not.** The Nigerian
+  auditorium IAQ study and the China county ageing panel both shipped 12 Sep via the
+  Crossref leg, which deposits before PubMed and so records **no PMID**; they returned today
+  on the PubMed leg with PMIDs, and `seen.json["pmid"]` had nothing to match. Screening must
+  check every candidate DOI against `seen.json` directly, not just the identifier the
+  current source happens to supply. Their removal emptied **Occupational & indoor** and
+  **Other clinical endpoints** — 5th issue of 50 with both empty.
+- A third duplicate (Sci Adv, India winter PM2.5 predictability, shipped 09 Sep) was caught
+  by the pre-summary DOI check when the PMC deposit re-surfaced it on the EPMC leg.
+- **Consensus sweep returned a clean zero.** Ten 2026 low-cost-sensor calibration papers,
+  **all ten already in the corpus** by exact or near-exact title. First fully saturated
+  recall check on the axis PubMed cannot index. Trial watch: 0 registrations or updates.
+- **Editing the mk script with a `\n\n` boundary regex silently deleted two adjacent
+  records.** Removing the two duplicates by index arithmetic took the advocacy and
+  habit-locked-in entries with them (23 -> 19, not 21). Caught only because the subtopic
+  tally was re-read afterwards. Delete records by rewriting the list, never by slicing text.
+- **`plots.py` f5 tick collision at wide CI range.** The 4.09 (1.06--15.79) microplastics
+  estimate stretched the log axis so 0.8/0.9/1/1.1/1.25/1.5 all landed in its first eighth
+  and overprinted as "1 1.11.2". Fixed with a thinning pass: keep 1.0 unconditionally, then
+  require 6% of the axis log-range between kept ticks. Same class as the f6 fix on 12 Sep,
+  and again found only by looking at the rendered page.
+- Two new design labels registered (`Prospective tissue biomonitoring series`,
+  `Qualitative / ethnographic study`), two new endpoint aliases folded into `Other clinical`
+  (`Dermatological`, `Immune / mucosal`). Every other label reused the archive, per the
+  12 Sep canonicalise-on-write rule.
+- **Proof caught three false claims, all checkable.** (1) f3 caption said "China leads with
+  five" — Global / multi-region also has five. (2) f5 caption said precision spans "two
+  orders of magnitude"; interval width ratio is 14, just over one. (3) The provenance box
+  said 28 tracked Crossref journals; `JOURNALS` holds 25. **Eighth consecutive issue where a
+  superlative or a count failed its check.**
+- Orphan fix took three passes. Shaving the executive brief cleared the page-2 orphan, but
+  the page-8 orphan (one entry alone) was cleared by a `\clearpage` before the Burden band,
+  not by trimming — the four Burden entries fill page 8 exactly. Trimming would have pushed
+  three summaries below the 90-word floor.
+- **One published interval fails arithmetic.** IPF-PRO reports OR 1.22 (95% CI 1.14--1.47);
+  on the log scale the bounds sit 0.068 below and 0.186 above the estimate, a factor of 2.7
+  where a conditional-logistic interval should be near-symmetric. Recorded in the entry and
+  the brief; needs checking against the published table before citation.
+- `metrics.csv` 381 rows, **0 malformed** — seventh consecutive issue confirming the KNOWN
+  DEFECT note in the task file is **stale**. Still open, unchanged: no first-author
+  affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split (both bars present again
+  today); `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the September
+  monthly); abstract retry list gained `10.1016/j.atmosres.2026.109322`.
+  `.git/lk.*` accumulation, mount EPERM, manual cleanup.

@@ -1,0 +1,361 @@
+{
+ "date": "2026-09-13",
+ "entry_window": "2026-09-13 -> 2026-09-13",
+ "PAPERS": [
+  {
+   "pmid": "42730644",
+   "doi": "10.1093/annalsats/aaoag285",
+   "journal": "Ann Am Thorac Soc",
+   "short": "IPF acute PM2.5 hospitalisation 2026",
+   "title": "Short-term air pollution exposure and hospitalizations in idiopathic pulmonary fibrosis: data from the IPF-PRO Registry.",
+   "sub": "Respiratory & allergic",
+   "design": "Time-stratified case-crossover",
+   "pm": "Daily PM2.5 at the nearest regulatory monitor, lags 0-6",
+   "geo": "United States",
+   "endpoint": "Respiratory",
+   "tier": "A",
+   "n": "Case-crossover on respiratory hospitalisations among IPF-PRO Registry patients at 46 US sites. Each 5 ug/m3 higher PM2.5 on lag day 0 raised the odds of respiratory hospitalisation 22% (95% CI 14% to 47%); lags 1-6 were null, and there was no effect modification by age, sex, Social Vulnerability Index, MUC5B genotype, telomere length or antifibrotic use. The same-day-only signal is biologically plausible for a fibrotic lung with no reserve, but the reported interval is not symmetric about the point estimate on the log scale (0.07 below, 0.19 above), which suggests a transcription or rounding error somewhere in the reporting chain and should be checked against the published table. Exposure is monitor-based, not personal, so Berkson error will attenuate. Nearest-monitor assignment is exactly the resolution a dense low-cost network would replace."
+  },
+  {
+   "pmid": "42728615",
+   "doi": "10.1186/s12940-026-01335-2",
+   "journal": "Environ Health",
+   "short": "CHARLS neurodegenerative composite 2026",
+   "title": "The association of long-term air pollution with a composite neurodegenerative risk score among Chinese elderly: evidence from the CHARLS.",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort (CHARLS)",
+   "pm": "2012-2015 mean PM2.5, PM10, NO2 and O3 gridded to residence",
+   "geo": "China",
+   "endpoint": "Neuro / cognitive",
+   "tier": "B",
+   "n": "CHARLS middle-aged and older adults, outcome a composite of grip strength, CES-D-10, MMSE and IADL at 2015 follow-up adjusted for the 2011 baseline score. Only PM2.5 tracked the composite: adjusted beta 0.010 (95% CI 0.008-0.016) and ordered-logit OR 1.52 (95% CI 1.01-2.31) for a higher risk grade, confined to the 60-74 stratum. PM10, NO2 and O3 were null, and neither hs-CRP nor WBC modified the effect, which undercuts the systemic-inflammation pathway the authors set out to test. The composite is not a validated neurodegeneration instrument and mixes motor, affective and cognitive domains, so the estimate is not interpretable as dementia risk; a three-year exposure contrast is also short for a neurodegenerative endpoint."
+  },
+  {
+   "pmid": "42730965",
+   "doi": "10.1007/s10067-026-08398-z",
+   "journal": "Clin Rheumatol",
+   "short": "Hyperuricemia low-concentration Korea 2026",
+   "title": "Long-term exposure to ambient air pollution and an increased risk of hyperuricemia.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Retrospective cross-sectional (health screening)",
+   "pm": "Annual mean PM2.5, PM10, NO2, SO2 and CO from CMAQ at residential address",
+   "geo": "South Korea",
+   "endpoint": "Metabolic",
+   "tier": "B",
+   "n": "Health-screening series of 20,117 Korean adults (2015-2019), 15.3% hyperuricaemic. All five pollutants were associated with hyperuricaemia per IQR: PM2.5 OR 1.06 (95% CI 1.01-1.10), PM10 1.15 (1.08-1.21), NO2 1.07 (1.00-1.14), SO2 1.13 (1.07-1.19), CO 1.06 (1.01-1.11), with adjustment for eGFR so the signal is not simply renal clearance. PM10 outperforming PM2.5 is unusual and points at a coarse-fraction or resuspended-dust component rather than combustion aerosol. Cross-sectional design with a single serum urate measurement cannot establish temporality, and CMAQ assignment at address gives no indoor or commuting contribution - the exposure error that street-scale sensing exists to reduce."
+  },
+  {
+   "pmid": "42729232",
+   "doi": "10.3389/fimmu.2026.1903043",
+   "journal": "Front Immunol",
+   "short": "e-waste children mucosal immunity 2026",
+   "title": "iNOS/Arg-1 balance and sIgA levels are associated with intestinal mucosal immune defense in children chronically exposed to air pollutants and lead.",
+   "sub": "Mechanistic toxicology",
+   "design": "Cross-sectional + ML",
+   "pm": "Estimated average daily doses of PM2.5, PM10, NO2, SO2 and CO plus blood Pb",
+   "geo": "China",
+   "endpoint": "Immune / mucosal",
+   "tier": "B",
+   "n": "238 children aged 3-6 from the Guiyu e-waste area and the Haojiang reference area. Guiyu children carried higher blood Pb and higher estimated daily doses of all five pollutants, and showed lower iNOS, higher Arg-1 and IL-4, and a lower iNOS/Arg-1 ratio - an M2-skewed macrophage profile. BKMR linked the mixture inversely to the iNOS/Arg-1 ratio, but serum sIgA did not differ between areas and was not associated with the mixture; only a non-linear iNOS-sIgA relation emerged. The headline endpoint is therefore null and the abstract leads with the secondary. Pb and combustion aerosol co-vary almost perfectly across these two sites, so the design cannot attribute anything to particles specifically; network toxicology adds no empirical weight."
+  },
+  {
+   "pmid": "42730946",
+   "doi": "10.1007/s10661-026-15885-y",
+   "journal": "Environ Monit Assess",
+   "short": "Firozabad size-segregated lung deposition 2026",
+   "title": "Seasonal variation of particulate matter deposition in human lungs through different exposure pathways in an industrial city.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Deposition sampling",
+   "pm": "Size-segregated PM1.0, PM2.5 and PM10 with metal speciation",
+   "geo": "India",
+   "endpoint": "Carcinogenic risk",
+   "tier": "B",
+   "n": "Two-season sampling in the Firozabad glass-industry belt: mean PM1.0 77.14, PM2.5 105.40 and PM10 277.64 ug/m3, winter about 1.2x summer. Modelled pulmonary-region deposition fractions were highest for infants and children (78-79% for PM1.0 and PM2.5), and total regional deposition was near-identical for nasal and oral breathing (16.67-16.68%) - a suspiciously exact agreement that suggests the two pathways were run with the same default ventilation parameters rather than route-specific ones. Cr exceeded the 1e-4 carcinogenic benchmark in both seasons and both age groups; Ni and Co dominated non-carcinogenic risk. Deposition is modelled, not measured, and no personal or activity data were collected."
+  },
+  {
+   "pmid": "42731249",
+   "doi": "10.1016/j.healthplace.2026.103736",
+   "journal": "Health Place",
+   "short": "Montreal smoke advisory mobility 2026",
+   "title": "Urban mobility responses to wildfire smoke-related air quality advisories in Montreal, Canada.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Retrospective time series",
+   "pm": "Wildfire-smoke air quality advisory days, 2022-2025",
+   "geo": "Canada",
+   "endpoint": "None (behaviour)",
+   "tier": "B",
+   "n": "Time-series forecasting against four Montreal mobility streams - bike-share, metro, bus and recreational running - with counterfactuals controlling season, weather, holidays and events. Advisory days shifted travel from active to enclosed modes: bike-share fell, bus and metro rose, running did not move, and the effect varied by neighbourhood. This matters for exposure assessment because mode substitution changes both ventilation rate and microenvironment concentration in opposite directions, so an ambient-monitor exposure metric mis-specifies dose on exactly the days it matters most. The abstract reports no effect magnitudes or intervals, only significance, and advisory issuance is a coarse proxy for smoke concentration; running data are self-selected app users."
+  },
+  {
+   "pmid": "42732152",
+   "doi": "10.12688/openreseurope.22919.1",
+   "journal": "Open Res Eur",
+   "short": "Covenant of Mayors co-benefit tool 2026",
+   "title": "A tool to maximize air quality co-benefits while planning local climate actions: application to the Covenant of Mayors initiative.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Tool / software",
+   "pm": "PM2.5, NOx, SO2, NH3 and VOC emission changes from city climate action plans",
+   "geo": "Europe",
+   "endpoint": "Emissions / policy",
+   "tier": "B",
+   "n": "JRC tool translating residential-building and transport mitigation actions in city climate action plans into emission changes for five pollutants, applied to 531 plans from 494 European and neighbouring cities. Most greenhouse-gas actions are synergistic with air quality, but two trade-offs are quantified as risks: transport fuel switching can raise ammonia, and promoting solid biomass for residential heating raises primary PM2.5 - the failure mode that has repeatedly turned European heating decarbonisation into a local PM problem. The tool maps actions to emission factors and does not run dispersion, so nothing here is a concentration or an exposure; city-reported plans are also self-declared and not verified against realised emissions."
+  },
+  {
+   "pmid": "42730957",
+   "doi": "10.1007/s40572-026-00563-5",
+   "journal": "Curr Environ Health Rep",
+   "short": "Clean air advocacy data approaches 2026",
+   "title": "Examining Data-Driven Approaches for Clean Air Advocacy in a Changing Climate: a Scoping Review.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Scoping review",
+   "pm": "Low-cost sensor, satellite and modelled air quality data used for advocacy",
+   "geo": "Global / multi-region",
+   "endpoint": "None (monitoring)",
+   "tier": "B",
+   "n": "Fifty studies from 41 countries and over 100 cities, sorted into five approaches: sensor-based monitoring, modelling, digital platforms and visualisation, community-centred approaches, and lived-experience assessment. 86% combined at least two. The review's operational finding for network builders is that low-cost monitoring has changed data availability far faster than it has changed governance: projects generate evidence but rarely outlive their funding cycle, and open-data formats are not standardised enough for community data to enter policy processes reliably. Scoping reviews do not grade evidence quality, so a single-site pilot and a multi-city network count equally here; no quantitative synthesis of advocacy outcomes is attempted, and publication bias toward successful campaigns is unaddressed."
+  },
+  {
+   "pmid": "42729863",
+   "doi": "10.1016/j.ese.2026.100757",
+   "journal": "Environ Sci Ecotechnol",
+   "short": "Habit-locked household emissions 2026",
+   "title": "Habit-locked-in carbon-air-pollutant emissions dominate China's household footprints.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Emission inventory / decomposition",
+   "pm": "Household-driven PM2.5, NOx, SO2 and CO2 from consumption-based accounting",
+   "geo": "China",
+   "endpoint": "Emissions / policy",
+   "tier": "B",
+   "n": "Consumption-based accounting decomposed into emissions locked in by behavioural inertia versus those driven by demand growth. Roughly 84% of China's household-driven CO2, PM2.5, NOx and SO2 is habit-locked, rising to about 97% for food and 84-86% for residential expenditure; per-capita habit-locked emissions peak in East and North China, with 32-53% originating in Nei Mongol and Shandong production systems. Under business-as-usual, habit-locked CO2 peaks near 2030 while habit-locked air pollutants already decline. Pairing carbon-neutrality policy with attenuated consumption inertia yields a further 1285 Mt CO2, 218 kt PM2.5, 729 kt SO2 and 126 kt NOx of abatement. The locked-in share depends entirely on how inertia is parameterised, which the abstract does not expose."
+  },
+  {
+   "pmid": "42710861",
+   "doi": "10.1093/ije/dyag162",
+   "journal": "Int J Epidemiol",
+   "short": "Zero-filling DLM bias 2026",
+   "title": "Gestational misalignment with fixed exposure windows: the potential dangers of zero-filling in distributed lag models",
+   "sub": "Exposure assessment & modelling",
+   "design": "Method / algorithm",
+   "pm": "Weekly gestational PM2.5 exposure histories of unequal length",
+   "geo": "United States",
+   "endpoint": "None (methods)",
+   "tier": "A",
+   "n": "Distributed lag models require equal-length exposure histories, and perinatal analyses routinely pad short gestations with zeroes to the maximum length. The authors show analytically that zero-filling manufactures an association between gestational age and late-pregnancy exposure, introducing confounding absent from the observed data. In simulation, zero-filling produced the largest bias, worst coverage and highest RMSE of all approaches tested; applied to a Colorado birth cohort it produced implausibly strong late-pregnancy effects that adjustment for gestational age attenuated. Carrying the last pre-birth value forward, using observed post-birth exposures, or truncating at 37 weeks eliminated the bias. This invalidates a common analysis choice across the critical-window literature, and the fix is trivial. Simulations are the authors' own generative model."
+  },
+  {
+   "doi": "10.3390/cancers18172746",
+   "journal": "Cancers",
+   "short": "Prenatal PM childhood NHL Spain 2026",
+   "title": "Exposure to Particulate Matter (PM) During Pregnancy and Non-Hodgkin Lymphomas in Children",
+   "sub": "Reproductive & developmental",
+   "design": "Case-control (registry)",
+   "pm": "Prenatal PM2.5 and PM10 from a random-forest exposure model, by trimester",
+   "geo": "Spain",
+   "endpoint": "Cancer",
+   "tier": "B",
+   "n": "Population-based case-control study across Spain (2009-2016) with 289 incident non-Hodgkin lymphoma cases from the Spanish Childhood Tumor Registry against a base population of 3,682,038 children under 15. Continuous prenatal PM2.5 was associated with higher NHL odds and PM10 more weakly; tertile analyses put the PM2.5 signal in the third trimester, and PM10 in the first and second trimesters among children diagnosed before age five. The abstract reports no odds ratios or intervals at all, only directions, so effect size cannot be judged from it. With 289 cases split across three tertiles and three trimesters the trimester-specific cells are small, and random-forest exposure surfaces at residential level carry error that is itself spatially structured."
+  },
+  {
+   "doi": "10.3390/jcm15176503",
+   "journal": "J Clin Med",
+   "short": "Thoracic tissue microplastics malignancy 2026",
+   "title": "Microplastics in Human Thoracic Tissues: Increased Burden in Patients with Lung Malignancy",
+   "sub": "Respiratory & allergic",
+   "design": "Prospective tissue biomonitoring series",
+   "pm": "Tissue microplastic particle counts by confocal micro-Raman spectroscopy",
+   "geo": "Greece",
+   "endpoint": "Cancer",
+   "tier": "B",
+   "n": "Fifty adults undergoing thoracic surgery for suspected malignancy; 62 particles were recovered from 50 specimens, with microplastics detected in 32 patients (64%). Fragments made up 97%, median burden one particle per specimen. Detection was more frequent in primary lung malignancy than in metastatic or benign disease (81.8% vs 50.0%, p = 0.020), and the association held after adjusting for age and smoking, OR 4.09 (95% CI 1.06-15.79). Particles in mediastinal nodes were smaller, consistent with size-dependent translocation. The interval spans an order of magnitude on 50 patients and the lower bound is barely above unity; reverse causation is unaddressed, since tumour tissue architecture may retain particles rather than particles causing tumours. Contamination control is described but blank counts are not given."
+  },
+  {
+   "doi": "10.3390/cells15171522",
+   "journal": "Cells",
+   "short": "UPM instillation reproduction null 2026",
+   "title": "Repeated Short-Term Intratracheal Exposure to Urban Particulate Matter Has No Apparent Adverse Effects on Female Reproductive Outcomes in Mice",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal experiment",
+   "pm": "Intratracheal urban PM instillation, 40-200 mg/kg over one month",
+   "geo": "South Korea",
+   "endpoint": "Reproductive",
+   "tier": "B",
+   "n": "A clean null worth recording. Repeated intratracheal urban PM in female mice produced robust dose-dependent pulmonary inflammation - CD45+, F4/80+ and Ly6G+ infiltration, Il-6, Il-1b, Tnfa, Col1a1 and Tgfb1 induction - with no detectable effect on oocyte recovery, fertilisation competence, gestation length, litter size or postnatal pup development, and no measurable inflammatory transcript in ovary or uterus. Direct exposure of two-cell embryos in vitro did not impair blastocyst formation, though benzanthracene alone slightly reduced it. The result argues against a systemic-inflammation route from lung to ovary at these doses. Intratracheal bolus at 40-200 mg/kg is far above any ambient-equivalent deposited dose and bypasses the nasal and upper-airway deposition that governs real inhalation."
+  },
+  {
+   "doi": "10.3390/s26175519",
+   "journal": "Sensors",
+   "short": "LLM-compiled adaptive sampling policies 2026",
+   "title": "Agentic LLM Compilation of Adaptive Sampling Policies for Low-Power IoT Sensing",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Algorithm development",
+   "pm": "Beijing PM2.5 series used as the benchmark signal for duty-cycled sampling",
+   "geo": "China",
+   "endpoint": "None (algorithm)",
+   "tier": "A",
+   "n": "Directly relevant to battery-limited PM nodes. A generator LLM proposes adaptive-sampling policies as a handful of thresholds and integer periods under 100 bytes, a deterministic evaluator scores each exactly on the recorded trace, and an optimiser LLM refines over eight rounds; no weights are fitted and the model sees only eight summary statistics, never the raw series. Benchmarked on the Beijing PM2.5 series against classical baselines, budget-matched random search, NSGA-II and ParEGO on the same grammar, the loop beat zero-shot generation and random search (pooled Wilcoxon p < 1e-5): at a 0.20 duty cycle mean RMSE 21.79 vs 25.09, at 0.30 15.98 vs 20.57. Gains narrow at the tightest budgets, bounded by signal curvature. Single dataset, offline compilation only."
+  },
+  {
+   "doi": "10.3390/ijms27177615",
+   "journal": "Int J Mol Sci",
+   "short": "PM diabetic kidney MR transcriptomics 2026",
+   "title": "Particulate Matter Exposure and Diabetic Kidney Dysfunction: Insights from Integrated Transcriptomic and Bioinformatics Analyses",
+   "sub": "Mechanistic toxicology",
+   "design": "Mendelian randomisation + TWAS",
+   "pm": "PM2.5-10 coarse-fraction genetic instruments",
+   "geo": "Global / multi-region",
+   "endpoint": "Renal",
+   "tier": "C",
+   "n": "Bidirectional Mendelian randomisation put PM2.5-10 causally upstream of lower eGFR, more strongly in diabetes, with no reverse causality. Transcriptomic integration yielded 168 genes shared between PM response and diabetic kidney disease, enriched for AGE-RAGE, IL-17, TNF and PI3K-Akt signalling; seven feature genes (AVPI1, DUSP1, FOSB, JUNB, PDK2, TPPP3, VIM) supported diagnostic models across training and external cohorts, with VIM localised to interstitial and fibrotic regions and TPPP3 to podocytes. The MR instrument set for coarse PM is weak and geographically confounded in UK Biobank-derived GWAS, which is the standard objection to air-pollution MR. Everything after the MR step is in silico pattern matching with no experimental validation, and the sanguinarine docking result is speculative."
+  },
+  {
+   "doi": "10.3390/ijms27177624",
+   "journal": "Int J Mol Sci",
+   "short": "Pollutant mixtures atherosclerosis 2026",
+   "title": "A Perfect Storm of Pollutants: Environmental Mixtures in the Pathogenesis of Atherosclerosis",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Narrative review",
+   "pm": "PM in mixtures with toxic metals, pesticides, PAHs and endocrine disruptors",
+   "geo": "Global / multi-region",
+   "endpoint": "Cardiovascular",
+   "tier": "C",
+   "n": "Structured narrative review of 37 studies on how co-exposure to particulate matter, metals, pesticides, PAHs and endocrine-disrupting chemicals converges on atherogenesis. The mechanistic through-line is oxidative stress, endothelial dysfunction, chronic inflammation and lipid dysregulation feeding monocyte recruitment, foam-cell formation, smooth-muscle remodelling and plaque instability, with epigenetic changes in DNA methylation and non-coding RNA proposed as the long-term susceptibility carrier. The authors note that additive, synergistic and antagonistic interactions cannot be predicted from single-agent data and argue for mixture-based risk assessment. As a narrative review with no protocol, search strategy or quality appraisal, the 37 studies are a selected rather than systematic sample, and the human evidence cited is predominantly associative."
+  },
+  {
+   "doi": "10.3390/ijms27177573",
+   "journal": "Int J Mol Sci",
+   "short": "PM skin AhR-Nrf2 framework 2026",
+   "title": "Particulate Matter-Induced Skin Injury: A Dual-Pathway AhR-Nrf2 Framework for Epidermal Homeostasis and Therapeutic Targeting",
+   "sub": "Mechanistic toxicology",
+   "design": "Mechanistic review",
+   "pm": "PM-bound reactive oxygen species, transition metals and PAHs",
+   "geo": "Taiwan",
+   "endpoint": "Dermatological",
+   "tier": "C",
+   "n": "Review proposing that PM-induced skin barrier damage is best read as coordinated AhR and Nrf2 signalling rather than two separate pathways. Transition metals generate ROS through Fenton chemistry while PAHs are metabolised via AhR in keratinocytes, amplifying oxidative stress; Nrf2 then induces HO-1 and other antioxidant enzymes, and sustained PM exposure is argued to exhaust that compensation, degrading barrier protein expression and raising inflammatory cytokines. The dual-pathway framing is a reasonable organising device and identifies AhR-Nrf2 crosstalk as a therapeutic target, but it is a hypothesis assembled from single-pathway studies rather than a test of coordination, and the review does not distinguish which effects are PM-specific from those common to any oxidant or PAH source."
+  },
+  {
+   "pmid": "42712130",
+   "doi": "10.1111/1467-9566.70260",
+   "journal": "Sociol Health Illn",
+   "short": "Atmospheric infrastructures Czech activism 2026",
+   "title": "Cities as Atmospheric Infrastructures: An Analysis of Activist Responses to Respiratory Illness in the Czech Republic",
+   "sub": "Burden, policy & mitigation",
+   "design": "Qualitative / ethnographic study",
+   "pm": "Urban air pollution as the object of civic mobilisation",
+   "geo": "Czech Republic",
+   "endpoint": "Respiratory",
+   "tier": "C",
+   "n": "Proposes 'atmospheric infrastructures' to hold together two things usually analysed apart: the city as a physical producer of the air residents breathe, and the city as a social infrastructure that makes collective response possible. Grounded in Czech air-pollution activism, where organisers frame respiratory health as a citizenship claim, fight for the health of the city rather than of individuals, and treat civic education as equal in weight to protest. The framing is directly useful to anyone deploying community sensor networks, because it names why data alone rarely mobilises and why the collective rather than individual framing carries. This is conceptual and interpretive work from a single national context; no exposure or health measurements are involved and no generalisability is claimed."
+  },
+  {
+   "doi": "10.1016/j.atmosres.2026.109322",
+   "journal": "Atmos Res",
+   "short": "Rural wintertime SIA metal catalysis 2026",
+   "title": "Important role of acidity-regulated metal catalysis in rural wintertime secondary inorganic aerosol formation in the North China Plain",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Rural wintertime secondary inorganic aerosol in PM2.5",
+   "geo": "China",
+   "endpoint": "None (aerosol chemistry)",
+   "tier": "C",
+   "n": "Crossref deposit of 13 September with no abstract released, so only the claim in the title is verifiable here: that transition-metal-catalysed oxidation, modulated by aerosol acidity, is a significant route to secondary inorganic aerosol in the rural North China Plain in winter. If sustained, this bears on low-cost optical sensing, because the sulfate and nitrate produced by this route are strongly hygroscopic and drive the humidity-dependent bias that every nephelometric PM sensor inherits, and because rural residential coal burning supplies both the metals and the acidity. Placed on the abstract retry list; no design, sample or effect size can be assessed until the record deposits, and the record should be revisited rather than cited."
+  },
+  {
+   "pmid": "42729778",
+   "doi": "10.1021/acsomega.6c04326",
+   "journal": "ACS Omega",
+   "short": "Organic aerosol self-diffusion MD 2026",
+   "title": "Predicting the Self-Diffusion Coefficient of Atmospheric Organic Aerosol Components via Molecular Dynamics Simulations.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Modelling / inventory",
+   "pm": "Particle-phase self-diffusion of atmospheric organic components",
+   "geo": "Not applicable",
+   "endpoint": "None (aerosol physics)",
+   "tier": "C",
+   "n": "Molecular dynamics estimates of self-diffusion coefficients for atmospherically relevant organics in the particle phase, with three tiers of method: direct simulation at 298 K for mobile species, high-temperature simulation with WLF or VFT extrapolation for less mobile ones (oxomalonic, tartronic and cis-pinonic acids, dihydroxyacetone), and 420 K only for species too immobile to converge. Mobility falls in the order -COOH > -OH > C=O for monofunctional compounds, and multiple or adjacent polar groups suppress it further through dense hydrogen-bond networks. Molecular weight and elemental ratios correlate with D only within chemical families. Relevant because particle viscosity governs gas-particle partitioning and water uptake, and so the hygroscopic growth that biases optical sensors. Pure simulation, no measured diffusivities for validation."
+  },
+  {
+   "pmid": "42730738",
+   "doi": "10.1016/j.jacasi.2026.07.034",
+   "journal": "JACC Asia",
+   "short": "Western Pacific stroke burden 2026",
+   "title": "Stroke Burden, Trends, and Inequalities in the Western Pacific Region, 1990-2021: A Population-Based Study.",
+   "sub": "Burden, policy & mitigation",
+   "design": "GBD secondary analysis",
+   "pm": "Ambient particulate matter attributable fraction of stroke DALYs",
+   "geo": "Global / multi-region",
+   "endpoint": "Cardiovascular",
+   "tier": "C",
+   "n": "GBD 2021 across 31 Western Pacific countries and areas: 34.56 million prevalent stroke cases (95% UI 32.11-37.21) and 64.53 million DALYs in 2021. Age-standardised DALY rates roughly halved from 4,155.11 to 2,326.92 per 100,000 while absolute DALYs rose, driven by ageing (219.51%) and population growth (70.27%); lower-SDI countries carried the larger absolute inequality. Environmental exposures accounted for 43.78% of stroke DALYs with ambient particulate matter the single largest contributor at 22.22%. That fraction is a modelled comparative-risk-assessment output resting on exposure-response functions imported from cohorts largely outside the region, and GBD uncertainty intervals do not propagate the uncertainty in those functions, so 22.22% should be read as an order of magnitude rather than an estimate."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Respiratory hospitalisation, IPF\nper 5 ug/m3 PM2.5, lag 0",
+   "exposure": "Short-term PM2.5",
+   "est": 1.22,
+   "lo": 1.14,
+   "hi": 1.47,
+   "metric": "OR",
+   "src": "IPF-PRO Registry 2026"
+  },
+  {
+   "label": "Hyperuricemia\nper IQR PM2.5",
+   "exposure": "Long-term PM2.5",
+   "est": 1.06,
+   "lo": 1.01,
+   "hi": 1.1,
+   "metric": "OR",
+   "src": "Korea screening 20,117 2026"
+  },
+  {
+   "label": "Hyperuricemia\nper IQR PM10",
+   "exposure": "Long-term PM10",
+   "est": 1.15,
+   "lo": 1.08,
+   "hi": 1.21,
+   "metric": "OR",
+   "src": "Korea screening 20,117 2026"
+  },
+  {
+   "label": "Higher neurodegenerative\nrisk grade, PM2.5",
+   "exposure": "Long-term PM2.5",
+   "est": 1.52,
+   "lo": 1.01,
+   "hi": 2.31,
+   "metric": "OR",
+   "src": "CHARLS 2026"
+  },
+  {
+   "label": "Microplastic detection,\nprimary lung malignancy",
+   "exposure": "Tissue microplastic burden",
+   "est": 4.09,
+   "lo": 1.06,
+   "hi": 15.79,
+   "metric": "OR",
+   "src": "Greek thoracic series n=50 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 2,
+   "note": "289 NHL cases in\n3.68M Spanish births;\nzero-filling bias in\ngestational DLMs"
+  },
+  {
+   "n": 1,
+   "note": "238 children aged 3-6,\ne-waste vs reference,\nM2-skewed macrophage\nprofile"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 3,
+   "note": "20,117 Korean adults,\nurate; 50 thoracic\nsurgical patients;\nIPF-PRO case-crossover"
+  },
+  {
+   "n": 1,
+   "note": "CHARLS 60-74 stratum\ncarries the whole\nPM2.5 signal; no other\n65+ record this window"
+  }
+ ]
+}

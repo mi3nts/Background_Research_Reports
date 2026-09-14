@@ -1,0 +1,384 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{13 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-09-13\;\;\textcolor{Amber}{\textbar}\;\;Entry window 13 September 2026\;\;%
+ \textcolor{Amber}{\textbar}\;\;21 records screened in scope\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{21}{RECORDS IN SCOPE\\(3 DUPLICATES BLOCKED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{OF 10 SUBTOPIC\\CLUSTERS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{TOPICAL PUBMED HITS\\FROM 4{,}593 DEPOSITS}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{EFFECT ESTIMATES\\EXTRACTED}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{FIELD MEASUREMENT\\CAMPAIGN}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Zero-filling gestational exposure histories manufactures
+the late-pregnancy critical window it is used to detect.}\\[1.4mm]
+\footnotesize
+Distributed lag models need every subject's exposure history to be the same length, and
+pregnancies are not. The standard workaround --- pad short gestations out to the maximum
+length with zeroes --- is shown by Leung, Neophytou and Wilson (\textit{Int J Epidemiol})
+to be actively harmful. They demonstrate analytically that zero-filling induces an
+association between gestational age and late-pregnancy exposure that does not exist in
+the observed data, importing confounding rather than handling missingness. In simulation
+it produced \textbf{the largest bias, the worst interval coverage and the highest RMSE}
+of every approach tested; applied to a Colorado birth cohort it returned implausibly
+strong late-pregnancy effects that adjusting for gestational age partly dissolved. Three
+alternatives --- carrying the last pre-birth value forward, using observed post-birth
+exposures, and truncating at 37 weeks --- eliminated the bias outright. The practical
+reading: a substantial share of published third-trimester ``critical windows'' for
+PM$_{2.5}$ may be an artefact of the padding step, and the correction costs nothing.
+Today's other perinatal record, a Spanish case--control of prenatal PM and childhood
+non-Hodgkin lymphoma, places its PM$_{2.5}$ signal in exactly that third trimester ---
+and reports no intervals at all, so it cannot be checked against this warning.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{A Sunday with normal deposit volume but almost no topical yield.}
+PubMed carried 4{,}593 records with a 13 September entry date --- a fully normal weekday-scale
+figure, and 35$\times$ the 131 that eventually landed on 12 September. Of those 4{,}593,
+the health-axis query returned \textbf{10} and the sensing-axis query \textbf{2}, both of
+which the health query had already found. The scarcity is topical, not infrastructural,
+which is the opposite diagnosis to the one the 12 September issue had to make.
+
+\item \textbf{The DOI gate caught two duplicates the PMID index could not.} Both the
+Nigerian auditorium IAQ study and the China county ageing panel shipped on 12 September
+through the Crossref-by-ISSN leg, which deposits before PubMed and therefore carries no
+PMID. They arrived today on the PubMed leg with PMIDs attached, and \texttt{seen.json}'s
+PMID index had nothing to match. Only the DOI comparison stopped them. Screening must
+check candidate DOIs against \texttt{seen.json} directly rather than relying on the
+identifier the current source happens to supply.
+
+\item \textbf{One record in twenty-one generated new ambient measurements.} The
+size-segregated sampling campaign in the Firozabad glass belt is the day's only
+measurement campaign; a single animal experiment is the only other primary data
+collection. The remaining nineteen are models, reviews, registry linkage and secondary
+analysis. The \textit{Sensing, forecasting \& instrumentation} cluster is the clearest
+case: all four of its records are algorithmic, simulated or synthesised, and none
+involved an instrument.
+
+\item \textbf{The most transferable sensing result is about power budgets, not accuracy.}
+An agentic LLM loop compiles adaptive-sampling policies --- a handful of thresholds and
+integer periods, under 100 bytes, fitting microcontroller-class hardware --- and beats
+budget-matched random search on the Beijing PM$_{2.5}$ series, mean RMSE 21.79 against
+25.09 at a 0.20 duty cycle and 15.98 against 20.57 at 0.30. The LLM never sees the raw
+series, only eight summary statistics, so nothing is memorised. This is directly usable
+for battery-limited nodes, with the caveat of a single benchmark dataset.
+
+\item \textbf{One published interval does not survive an arithmetic check.} The IPF-PRO
+case-crossover reports 22\% higher odds of respiratory hospitalisation per
+5\,$\mu$g/m$^3$ PM$_{2.5}$ at lag 0 with a 95\% CI of 14\% to 47\%. On the log scale the
+bounds sit 0.068 below and 0.186 above the point estimate --- a factor of 2.7, where a
+conditional-logistic interval should be near-symmetric. Either the point estimate or a
+bound is mis-transcribed. The other four extracted estimates are symmetric to within
+rounding.
+
+\item \textbf{Two clean nulls, both worth keeping.} Repeated intratracheal urban PM gave
+female mice dose-dependent pulmonary inflammation with no effect on oocyte recovery,
+fertilisation, gestation, litter size or pup development --- evidence against a
+lung-to-ovary inflammatory route at these doses. Separately, the e-waste paediatric
+study's serum sIgA endpoint was null; its abstract leads with a secondary result.
+
+\item \textbf{Occupational/indoor and other-clinical are both empty, the fifth such
+issue in fifty.} Each lost its only candidate to the duplicate gate.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 21 in-scope records, single-label by dominant
+contribution. Three clusters tie at four --- mechanistic toxicology, burden/policy, and
+sensing/forecasting --- with exposure assessment at three. \textit{Occupational \& indoor}
+and \textit{Other clinical endpoints} are both empty; each had exactly one candidate and
+both were removed as duplicates of 12 September records.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. Cross-sectional observational work and
+modelling/inventory tie at five each, reviews contribute three, and there is exactly one
+measurement campaign and one toxicology experiment in the whole issue. Right --- health
+endpoint. Records carrying no human health endpoint are the largest category at eight
+(38\%): two aerosol-physics and chemistry records, two methods/algorithm records, two
+emissions-and-policy records, one monitoring synthesis and one behavioural outcome.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. PM$_{2.5}$ alone is the exposure in seven records and
+joint with PM$_{10}$ in five; the unspeciated/emissions bucket holds eight, inflated
+today by reviews and emission-accounting work that never name a size fraction. Neither
+ultrafine particles nor size-resolved number distributions appear at all, and the single
+composition record measures tissue microplastics rather than ambient speciation.
+Right --- geography. China and the global/multi-region bucket tie at five; Europe
+follows with four (Spain, Greece, the Czech Republic and the EU-wide Covenant of Mayors
+sample). South Asia contributes one and sub-Saharan Africa none.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed; counts are non-exclusive. The working-age band is
+the busiest at three, the in-utero window carries two (the Spanish lymphoma case--control
+and the gestational distributed-lag methods paper), and no record this window addresses
+adolescence.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. The structural feature
+worth naming is the \textit{Sensing, forecasting \& instrumentation} row: its four
+records split across modelling, review and metadata-only, with nothing in the
+measurement-campaign column. The one measurement campaign in the issue sits in
+\textit{Exposure assessment}, and the one toxicology experiment in
+\textit{Mechanistic toxicology}. No cell exceeds two.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{All five quantitative effect estimates in the corpus, on a common logarithmic
+axis. \textbf{Exposure contrasts are not mutually comparable}: the IPF estimate is per
+5\,$\mu$g/m$^3$ at lag 0, the two hyperuricaemia estimates are per interquartile range,
+the CHARLS estimate is an ordered-logit odds of a higher composite risk grade, and the
+microplastic estimate is a detection odds ratio against a tissue particle count rather
+than an airborne concentration. All five exclude the null, which reflects reporting
+selection as much as anything. Interval width spans a factor of fourteen, from the
+20{,}117-participant Korean screening series (1.01--1.10) to the 50-patient Greek
+thoracic series (1.06--15.79). The IPF interval is not symmetric about its point
+estimate on this axis --- see the executive brief.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{CHARLS neurodegenerative composite 2026}
+{The association of long-term air pollution with a composite neurodegenerative risk score among Chinese elderly: evidence from the CHARLS.}
+{Environ Health}
+{CHARLS middle-aged and older adults, outcome a composite of grip strength, CES-D-10, MMSE and IADL at 2015 follow-up adjusted for the 2011 baseline score. Only PM$_{2.5}$ tracked the composite: adjusted beta 0.010 (95\% CI 0.008-0.016) and ordered-logit OR 1.52 (95\% CI 1.01-2.31) for a higher risk grade, confined to the 60-74 stratum. PM$_{10}$, NO$_2$ and O$_3$ were null, and neither hs-CRP nor WBC modified the effect, which undercuts the systemic-inflammation pathway the authors set out to test. The composite is not a validated neurodegeneration instrument and mixes motor, affective and cognitive domains, so the estimate is not interpretable as dementia risk; a three-year exposure contrast is also short for a neurodegenerative endpoint.}
+{10.1186/s12940-026-01335-2}
+
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{Hyperuricemia low-concentration Korea 2026}
+{Long-term exposure to ambient air pollution and an increased risk of hyperuricemia.}
+{Clin Rheumatol}
+{Health-screening series of 20,117 Korean adults (2015-2019), 15.3\% hyperuricaemic. All five pollutants were associated with hyperuricaemia per IQR: PM$_{2.5}$ OR 1.06 (95\% CI 1.01-1.10), PM$_{10}$ 1.15 (1.08-1.21), NO$_2$ 1.07 (1.00-1.14), SO$_2$ 1.13 (1.07-1.19), CO 1.06 (1.01-1.11), with adjustment for eGFR so the signal is not simply renal clearance. PM$_{10}$ outperforming PM$_{2.5}$ is unusual and points at a coarse-fraction or resuspended-dust component rather than combustion aerosol. Cross-sectional design with a single serum urate measurement cannot establish temporality, and CMAQ assignment at address gives no indoor or commuting contribution - the exposure error that street-scale sensing exists to reduce.}
+{10.1007/s10067-026-08398-z}
+
+\paperentry{Pollutant mixtures atherosclerosis 2026}
+{A Perfect Storm of Pollutants: Environmental Mixtures in the Pathogenesis of Atherosclerosis}
+{Int J Mol Sci}
+{Structured narrative review of 37 studies on how co-exposure to particulate matter, metals, pesticides, PAHs and endocrine-disrupting chemicals converges on atherogenesis. The mechanistic through-line is oxidative stress, endothelial dysfunction, chronic inflammation and lipid dysregulation feeding monocyte recruitment, foam-cell formation, smooth-muscle remodelling and plaque instability, with epigenetic changes in DNA methylation and non-coding RNA proposed as the long-term susceptibility carrier. The authors note that additive, synergistic and antagonistic interactions cannot be predicted from single-agent data and argue for mixture-based risk assessment. As a narrative review with no protocol, search strategy or quality appraisal, the 37 studies are a selected rather than systematic sample, and the human evidence cited is predominantly associative.}
+{10.3390/ijms27177624}
+
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{IPF acute PM$_{2.5}$ hospitalisation 2026}
+{Short-term air pollution exposure and hospitalizations in idiopathic pulmonary fibrosis: data from the IPF-PRO Registry.}
+{Ann Am Thorac Soc}
+{Case-crossover on respiratory hospitalisations among IPF-PRO Registry patients at 46 US sites. Each 5 $\mu$g\,m$^{-3}$ higher PM$_{2.5}$ on lag day 0 raised the odds of respiratory hospitalisation 22\% (95\% CI 14\% to 47\%); lags 1-6 were null, and there was no effect modification by age, sex, Social Vulnerability Index, MUC5B genotype, telomere length or antifibrotic use. The same-day-only signal is biologically plausible for a fibrotic lung with no reserve, but the reported interval is not symmetric about the point estimate on the log scale (0.07 below, 0.19 above), which suggests a transcription or rounding error somewhere in the reporting chain and should be checked against the published table. Exposure is monitor-based, not personal, so Berkson error will attenuate. Nearest-monitor assignment is exactly the resolution a dense low-cost network would replace.}
+{10.1093/annalsats/aaoag285}
+
+\paperentry{Thoracic tissue microplastics malignancy 2026}
+{Microplastics in Human Thoracic Tissues: Increased Burden in Patients with Lung Malignancy}
+{J Clin Med}
+{Fifty adults undergoing thoracic surgery for suspected malignancy; 62 particles were recovered from 50 specimens, with microplastics detected in 32 patients (64\%). Fragments made up 97\%, median burden one particle per specimen. Detection was more frequent in primary lung malignancy than in metastatic or benign disease (81.8\% vs 50.0\%, p = 0.020), and the association held after adjusting for age and smoking, OR 4.09 (95\% CI 1.06-15.79). Particles in mediastinal nodes were smaller, consistent with size-dependent translocation. The interval spans an order of magnitude on 50 patients and the lower bound is barely above unity; reverse causation is unaddressed, since tumour tissue architecture may retain particles rather than particles causing tumours. Contamination control is described but blank counts are not given.}
+{10.3390/jcm15176503}
+
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Prenatal PM childhood NHL Spain 2026}
+{Exposure to Particulate Matter (PM) During Pregnancy and Non-Hodgkin Lymphomas in Children}
+{Cancers}
+{Population-based case-control study across Spain (2009-2016) with 289 incident non-Hodgkin lymphoma cases from the Spanish Childhood Tumor Registry against a base population of 3,682,038 children under 15. Continuous prenatal PM$_{2.5}$ was associated with higher NHL odds and PM$_{10}$ more weakly; tertile analyses put the PM$_{2.5}$ signal in the third trimester, and PM$_{10}$ in the first and second trimesters among children diagnosed before age five. The abstract reports no odds ratios or intervals at all, only directions, so effect size cannot be judged from it. With 289 cases split across three tertiles and three trimesters the trimester-specific cells are small, and random-forest exposure surfaces at residential level carry error that is itself spatially structured.}
+{10.3390/cancers18172746}
+
+\band{Mechanistic toxicology\hfill 4 records}{Violet}
+
+\paperentry{e-waste children mucosal immunity 2026}
+{iNOS/Arg-1 balance and sIgA levels are associated with intestinal mucosal immune defense in children chronically exposed to air pollutants and lead.}
+{Front Immunol}
+{238 children aged 3-6 from the Guiyu e-waste area and the Haojiang reference area. Guiyu children carried higher blood Pb and higher estimated daily doses of all five pollutants, and showed lower iNOS, higher Arg-1 and IL-4, and a lower iNOS/Arg-1 ratio - an M2-skewed macrophage profile. BKMR linked the mixture inversely to the iNOS/Arg-1 ratio, but serum sIgA did not differ between areas and was not associated with the mixture; only a non-linear iNOS-sIgA relation emerged. The headline endpoint is therefore null and the abstract leads with the secondary. Pb and combustion aerosol co-vary almost perfectly across these two sites, so the design cannot attribute anything to particles specifically; network toxicology adds no empirical weight.}
+{10.3389/fimmu.2026.1903043}
+
+\paperentry{UPM instillation reproduction null 2026}
+{Repeated Short-Term Intratracheal Exposure to Urban Particulate Matter Has No Apparent Adverse Effects on Female Reproductive Outcomes in Mice}
+{Cells}
+{A clean null worth recording. Repeated intratracheal urban PM in female mice produced robust dose-dependent pulmonary inflammation - CD45+, F4/80+ and Ly6G+ infiltration, Il-6, Il-1b, Tnfa, Col1a1 and Tgfb1 induction - with no detectable effect on oocyte recovery, fertilisation competence, gestation length, litter size or postnatal pup development, and no measurable inflammatory transcript in ovary or uterus. Direct exposure of two-cell embryos in vitro did not impair blastocyst formation, though benzanthracene alone slightly reduced it. The result argues against a systemic-inflammation route from lung to ovary at these doses. Intratracheal bolus at 40-200 mg/kg is far above any ambient-equivalent deposited dose and bypasses the nasal and upper-airway deposition that governs real inhalation.}
+{10.3390/cells15171522}
+
+\paperentry{PM diabetic kidney MR transcriptomics 2026}
+{Particulate Matter Exposure and Diabetic Kidney Dysfunction: Insights from Integrated Transcriptomic and Bioinformatics Analyses}
+{Int J Mol Sci}
+{Bidirectional Mendelian randomisation put PM$_{2.5}$-10 causally upstream of lower eGFR, more strongly in diabetes, with no reverse causality. Transcriptomic integration yielded 168 genes shared between PM response and diabetic kidney disease, enriched for AGE-RAGE, IL-17, TNF and PI3K-Akt signalling; seven feature genes (AVPI1, DUSP1, FOSB, JUNB, PDK2, TPPP3, VIM) supported diagnostic models across training and external cohorts, with VIM localised to interstitial and fibrotic regions and TPPP3 to podocytes. The MR instrument set for coarse PM is weak and geographically confounded in UK Biobank-derived GWAS, which is the standard objection to air-pollution MR. Everything after the MR step is in silico pattern matching with no experimental validation, and the sanguinarine docking result is speculative.}
+{10.3390/ijms27177615}
+
+\paperentry{PM skin AhR-Nrf2 framework 2026}
+{Particulate Matter-Induced Skin Injury: A Dual-Pathway AhR-Nrf2 Framework for Epidermal Homeostasis and Therapeutic Targeting}
+{Int J Mol Sci}
+{Review proposing that PM-induced skin barrier damage is best read as coordinated AhR and Nrf2 signalling rather than two separate pathways. Transition metals generate ROS through Fenton chemistry while PAHs are metabolised via AhR in keratinocytes, amplifying oxidative stress; Nrf2 then induces HO-1 and other antioxidant enzymes, and sustained PM exposure is argued to exhaust that compensation, degrading barrier protein expression and raising inflammatory cytokines. The dual-pathway framing is a reasonable organising device and identifies AhR-Nrf2 crosstalk as a therapeutic target, but it is a hypothesis assembled from single-pathway studies rather than a test of coordination, and the review does not distinguish which effects are PM-specific from those common to any oxidant or PAH source.}
+{10.3390/ijms27177573}
+
+\band{Exposure assessment \& modelling\hfill 3 records}{Clay}
+
+\paperentry{Firozabad size-segregated lung deposition 2026}
+{Seasonal variation of particulate matter deposition in human lungs through different exposure pathways in an industrial city.}
+{Environ Monit Assess}
+{Two-season sampling in the Firozabad glass-industry belt: mean PM$_{1}$.0 77.14, PM$_{2.5}$ 105.40 and PM$_{10}$ 277.64 $\mu$g\,m$^{-3}$, winter about 1.2x summer. Modelled pulmonary-region deposition fractions were highest for infants and children (78-79\% for PM$_{1}$.0 and PM$_{2.5}$), and total regional deposition was near-identical for nasal and oral breathing (16.67-16.68\%) - a suspiciously exact agreement that suggests the two pathways were run with the same default ventilation parameters rather than route-specific ones. Cr exceeded the 1e-4 carcinogenic benchmark in both seasons and both age groups; Ni and Co dominated non-carcinogenic risk. Deposition is modelled, not measured, and no personal or activity data were collected.}
+{10.1007/s10661-026-15885-y}
+
+\paperentry{Montreal smoke advisory mobility 2026}
+{Urban mobility responses to wildfire smoke-related air quality advisories in Montreal, Canada.}
+{Health Place}
+{Time-series forecasting against four Montreal mobility streams - bike-share, metro, bus and recreational running - with counterfactuals controlling season, weather, holidays and events. Advisory days shifted travel from active to enclosed modes: bike-share fell, bus and metro rose, running did not move, and the effect varied by neighbourhood. This matters for exposure assessment because mode substitution changes both ventilation rate and microenvironment concentration in opposite directions, so an ambient-monitor exposure metric mis-specifies dose on exactly the days it matters most. The abstract reports no effect magnitudes or intervals, only significance, and advisory issuance is a coarse proxy for smoke concentration; running data are self-selected app users.}
+{10.1016/j.healthplace.2026.103736}
+
+\paperentry{Zero-filling DLM bias 2026}
+{Gestational misalignment with fixed exposure windows: the potential dangers of zero-filling in distributed lag models}
+{Int J Epidemiol}
+{Distributed lag models require equal-length exposure histories, and perinatal analyses routinely pad short gestations with zeroes to the maximum length. The authors show analytically that zero-filling manufactures an association between gestational age and late-pregnancy exposure, introducing confounding absent from the observed data. In simulation, zero-filling produced the largest bias, worst coverage and highest RMSE of all approaches tested; applied to a Colorado birth cohort it produced implausibly strong late-pregnancy effects that adjustment for gestational age attenuated. Carrying the last pre-birth value forward, using observed post-birth exposures, or truncating at 37 weeks eliminated the bias. This invalidates a common analysis choice across the critical-window literature, and the fix is trivial. Simulations are the authors' own generative model.}
+{10.1093/ije/dyag162}
+
+\band{Sensing, forecasting \& instrumentation\hfill 4 records}{Amber}
+
+\paperentry{Clean air advocacy data approaches 2026}
+{Examining Data-Driven Approaches for Clean Air Advocacy in a Changing Climate: a Scoping Review.}
+{Curr Environ Health Rep}
+{Fifty studies from 41 countries and over 100 cities, sorted into five approaches: sensor-based monitoring, modelling, digital platforms and visualisation, community-centred approaches, and lived-experience assessment. 86\% combined at least two. The review's operational finding for network builders is that low-cost monitoring has changed data availability far faster than it has changed governance: projects generate evidence but rarely outlive their funding cycle, and open-data formats are not standardised enough for community data to enter policy processes reliably. Scoping reviews do not grade evidence quality, so a single-site pilot and a multi-city network count equally here; no quantitative synthesis of advocacy outcomes is attempted, and publication bias toward successful campaigns is unaddressed.}
+{10.1007/s40572-026-00563-5}
+
+\paperentry{LLM-compiled adaptive sampling policies 2026}
+{Agentic LLM Compilation of Adaptive Sampling Policies for Low-Power IoT Sensing}
+{Sensors}
+{Directly relevant to battery-limited PM nodes. A generator LLM proposes adaptive-sampling policies as a handful of thresholds and integer periods under 100 bytes, a deterministic evaluator scores each exactly on the recorded trace, and an optimiser LLM refines over eight rounds; no weights are fitted and the model sees only eight summary statistics, never the raw series. Benchmarked on the Beijing PM$_{2.5}$ series against classical baselines, budget-matched random search, NSGA-II and ParEGO on the same grammar, the loop beat zero-shot generation and random search (pooled Wilcoxon p < 1e-5): at a 0.20 duty cycle mean RMSE 21.79 vs 25.09, at 0.30 15.98 vs 20.57. Gains narrow at the tightest budgets, bounded by signal curvature. Single dataset, offline compilation only.}
+{10.3390/s26175519}
+
+\paperentry{Rural wintertime SIA metal catalysis 2026}
+{Important role of acidity-regulated metal catalysis in rural wintertime secondary inorganic aerosol formation in the North China Plain}
+{Atmos Res}
+{\textsc{metadata only.} Crossref deposit of 13 September with no abstract released, so only the claim in the title is verifiable here: that transition-metal-catalysed oxidation, modulated by aerosol acidity, is a significant route to secondary inorganic aerosol in the rural North China Plain in winter. If sustained, this bears on low-cost optical sensing, because the sulfate and nitrate produced by this route are strongly hygroscopic and drive the humidity-dependent bias that every nephelometric PM sensor inherits, and because rural residential coal burning supplies both the metals and the acidity. Placed on the abstract retry list; no design, sample or effect size can be assessed until the record deposits, and the record should be revisited rather than cited.}
+{10.1016/j.atmosres.2026.109322}
+
+\paperentry{Organic aerosol self-diffusion MD 2026}
+{Predicting the Self-Diffusion Coefficient of Atmospheric Organic Aerosol Components via Molecular Dynamics Simulations.}
+{ACS Omega}
+{Molecular dynamics estimates of self-diffusion coefficients for atmospherically relevant organics in the particle phase, with three tiers of method: direct simulation at 298 K for mobile species, high-temperature simulation with WLF or VFT extrapolation for less mobile ones (oxomalonic, tartronic and cis-pinonic acids, dihydroxyacetone), and 420 K only for species too immobile to converge. Mobility falls in the order -COOH > -OH > C=O for monofunctional compounds, and multiple or adjacent polar groups suppress it further through dense hydrogen-bond networks. Molecular weight and elemental ratios correlate with D only within chemical families. Relevant because particle viscosity governs gas-particle partitioning and water uptake, and so the hygroscopic growth that biases optical sensors. Pure simulation, no measured diffusivities for validation.}
+{10.1021/acsomega.6c04326}
+
+\clearpage
+
+\band{Burden, policy \& mitigation\hfill 4 records}{Coral}
+
+\paperentry{Covenant of Mayors co-benefit tool 2026}
+{A tool to maximize air quality co-benefits while planning local climate actions: application to the Covenant of Mayors initiative.}
+{Open Res Eur}
+{JRC tool translating residential-building and transport mitigation actions in city climate action plans into emission changes for five pollutants, applied to 531 plans from 494 European and neighbouring cities. Most greenhouse-gas actions are synergistic with air quality, but two trade-offs are quantified as risks: transport fuel switching can raise ammonia, and promoting solid biomass for residential heating raises primary PM$_{2.5}$ - the failure mode that has repeatedly turned European heating decarbonisation into a local PM problem. The tool maps actions to emission factors and does not run dispersion, so nothing here is a concentration or an exposure; city-reported plans are also self-declared and not verified against realised emissions.}
+{10.12688/openreseurope.22919.1}
+
+\paperentry{Habit-locked household emissions 2026}
+{Habit-locked-in carbon-air-pollutant emissions dominate China's household footprints.}
+{Environ Sci Ecotechnol}
+{Consumption-based accounting decomposed into emissions locked in by behavioural inertia versus those driven by demand growth. Roughly 84\% of China's household-driven CO$_2$, PM$_{2.5}$, NOx and SO$_2$ is habit-locked, rising to about 97\% for food and 84-86\% for residential expenditure; per-capita habit-locked emissions peak in East and North China, with 32-53\% originating in Nei Mongol and Shandong production systems. Under business-as-usual, habit-locked CO$_2$ peaks near 2030 while habit-locked air pollutants already decline. Pairing carbon-neutrality policy with attenuated consumption inertia yields a further 1285 Mt CO$_2$, 218 kt PM$_{2.5}$, 729 kt SO$_2$ and 126 kt NOx of abatement. The locked-in share depends entirely on how inertia is parameterised, which the abstract does not expose.}
+{10.1016/j.ese.2026.100757}
+
+\paperentry{Atmospheric infrastructures Czech activism 2026}
+{Cities as Atmospheric Infrastructures: An Analysis of Activist Responses to Respiratory Illness in the Czech Republic}
+{Sociol Health Illn}
+{Proposes 'atmospheric infrastructures' to hold together two things usually analysed apart: the city as a physical producer of the air residents breathe, and the city as a social infrastructure that makes collective response possible. Grounded in Czech air-pollution activism, where organisers frame respiratory health as a citizenship claim, fight for the health of the city rather than of individuals, and treat civic education as equal in weight to protest. The framing is directly useful to anyone deploying community sensor networks, because it names why data alone rarely mobilises and why the collective rather than individual framing carries. This is conceptual and interpretive work from a single national context; no exposure or health measurements are involved and no generalisability is claimed.}
+{10.1111/1467-9566.70260}
+
+\paperentry{Western Pacific stroke burden 2026}
+{Stroke Burden, Trends, and Inequalities in the Western Pacific Region, 1990-2021: A Population-Based Study.}
+{JACC Asia}
+{GBD 2021 across 31 Western Pacific countries and areas: 34.56 million prevalent stroke cases (95\% UI 32.11-37.21) and 64.53 million DALYs in 2021. Age-standardised DALY rates roughly halved from 4,155.11 to 2,326.92 per 100,000 while absolute DALYs rose, driven by ageing (219.51\%) and population growth (70.27\%); lower-SDI countries carried the larger absolute inequality. Environmental exposures accounted for 43.78\% of stroke DALYs with ambient particulate matter the single largest contributor at 22.22\%. That fraction is a modelled comparative-risk-assessment output resting on exposure-response functions imported from cohorts largely outside the region, and GBD uncertainty intervals do not propagate the uncertainty in those functions, so 22.22\% should be read as an order of magnitude rather than an estimate.}
+{10.1016/j.jacasi.2026.07.034}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{13--13 September 2026}, continuous with the previous issue; no gap.
+Legs run: \textbf{PubMed} E-utilities on \texttt{[Date - Entry]}, two independent queries
+(health axis 8 hits, sensing axis 0) plus the PubMed connector on the same window
+(health 10, sensing 2); \textbf{Europe PMC} on \texttt{CREATION\_DATE} (75);
+\textbf{Crossref} scoped by journal ISSN for the titles PubMed does not index
+(7 deposits across 25 tracked journals, including \textit{Atmos.\ Meas.\ Tech.}\ and
+\textit{Atmos.\ Chem.\ Phys.}, both of which returned nothing on a Sunday);
+\textbf{arXiv} relevance query (60 entries, none inside the window);
+\textbf{OpenAlex} returned HTTP 429 and remains unusable for date-windowed retrieval.
+A \textbf{Consensus} recall sweep on low-cost PM sensor calibration, drift, co-location,
+PurpleAir/Plantower characterisation and humidity correction returned ten 2026 papers,
+\textbf{all ten already in the corpus} by exact or near-exact title --- a clean negative
+on the axis PubMed structurally cannot cover.
+Deduplication ran on PMID, then lower-cased DOI, then a title/author/year signature;
+three records were blocked as already shipped, two of them visible only on the DOI key.
+Clinical-trial registry watch: \textbf{zero} PM or air-pollution registrations or updates
+dated 13 September, consistent with the structural weekend pattern.
+Subtopic, design, particle-metric and geography labels are assigned from title, abstract,
+keywords and MeSH; single-label by dominant contribution, and therefore a judgement
+rather than a controlled vocabulary.
+Effect estimates are transcribed from abstracts with heterogeneous exposure contrasts ---
+see the forest-plot caption. One record (\textit{Atmos.\ Res.}, acidity-regulated metal
+catalysis) had no abstract deposited and is on the retry list; its entry states only what
+the title supports.
+All DOIs were checked to resolve and to agree with the PMID's own PubMed record before
+this issue was built. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

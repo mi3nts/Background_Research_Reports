@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, collections, textwrap
+import os, collections, textwrap, math
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -493,6 +493,15 @@ design_group.update({
     "Birth-cohort sub-study with indoor measurement": "Observational - cohort",
     "Personal monitoring + microenvironment model": "Measurement campaign",
 })
+# Added 2026-09-13. Two designs with no honest existing label: surgical-specimen
+# particle biomonitoring (not imaging, not in vitro, not a cohort follow-up), and
+# ethnographic fieldwork on air-pollution activism (a Review label would have filed
+# primary qualitative data as secondary synthesis). Everything else in this issue
+# reused an archive label, per the canonicalise-on-write rule above.
+design_group.update({
+    "Prospective tissue biomonitoring series": "Observational - cross-sectional",
+    "Qualitative / ethnographic study": "Observational - cross-sectional",
+})
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):
@@ -536,6 +545,10 @@ ENDPOINT_CANON = {
     "None (monitoring)": "No health endpoint",
     "Epigenetic ageing": "Epigenetic ageing",
     "Toxicological (in vitro)": "Toxicological (in vitro)",
+    # added 2026-09-13: two organ systems with no bar of their own, folded into
+    # "Other clinical" rather than each opening a single-record category.
+    "Dermatological": "Other clinical",
+    "Immune / mucosal": "Other clinical",
 }
 def canon_ep(e):
     """Canonicalise an endpoint label.
@@ -963,6 +976,18 @@ for _ci, E in enumerate(_CHUNKS):
     ax.set_xlim(_glo / _pad, _ghi * _pad)
     _cand = [0.5, 0.8, 0.9, 1.0, 1.1, 1.25, 1.5, 2, 3, 5, 9]
     _tk = [t for t in _cand if _glo / _pad <= t <= _ghi * _pad]
+    # Thin the near-null ticks when the axis spans a wide ratio. 2026-09-13: an issue
+    # whose widest interval ran to 15.79 kept 0.8/0.9/1/1.1/1.25/1.5 inside the first
+    # eighth of the axis and the labels overprinted into "1 1.11.2". Keep 1.0 (the null
+    # line) unconditionally, then require every other tick to sit at least 6% of the
+    # axis log-range from the last one kept. Narrow axes are unaffected because the
+    # dense candidates are then genuinely far apart in log space.
+    _span = math.log10((_ghi * _pad) / (_glo / _pad)) or 1.0
+    _keep, _last = [], None
+    for t in _tk:
+        if t == 1.0 or _last is None or (math.log10(t) - math.log10(_last)) / _span >= 0.06:
+            _keep.append(t); _last = t
+    _tk = _keep
     ax.set_xticks(_tk); ax.set_xticklabels([("%g" % t) for t in _tk])
     ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
     ax.set_yticks(y)
