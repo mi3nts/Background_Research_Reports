@@ -351,6 +351,28 @@ design_group.update({
     "Multi-omics regional evidence synthesis": "Review / synthesis",
     "Seasonal field sampling + filtration test": "Measurement campaign",
 })
+# 2026-09-14 issue: sixteen labels coined this issue, added in the same edit that wrote
+# them onto records, per the standing rule. The diagnostic fired on all sixteen because
+# this day's corpus is instrument- and atmospheric-chemistry-heavy and the existing map
+# was built for clinical epidemiology.
+design_group.update({
+    "Matched difference-in-differences, satellite AOD": "Modelling / inventory",
+    "Numerical / CFD instrument model": "Modelling / inventory",
+    "Co-location calibration campaign": "Sensor co-location",
+    "Ablation study, time-based validation": "Sensor co-location",
+    "Spaceborne HSRL case study with trajectory modelling": "Measurement campaign",
+    "Repeated-measures monitoring, mixed-effects models": "Measurement campaign",
+    "Long-term continuous sensing plus targeted chemical sampling": "Measurement campaign",
+    "Systematic synthesis with inhalation hazard prioritisation": "Review / synthesis",
+    "Cross-sectional typology construction, PCA and rank correlation": "Observational - cross-sectional",
+    "Physical emission model, numerical sensitivity analysis": "Modelling / inventory",
+    "Satellite time-series analysis": "Modelling / inventory",
+    "Controlled burn plus 29 m3 chamber ageing, PTR-MS": "Chamber / laboratory",
+    "Descriptive burden analysis, GBD 2021": "Ecological",
+    "Spatial statistics plus BenMAP health impact assessment": "Modelling / inventory",
+    "Systematic review and three-level random-effects meta-analysis": "Review / synthesis",
+    "Narrative review, technical and toxicological": "Review / synthesis",
+})
 # 2026-08-26 issue.
 design_group.update({
     "Interlaboratory comparison": "Measurement campaign",

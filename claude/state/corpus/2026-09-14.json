@@ -1,0 +1,290 @@
+{
+ "date": "2026-09-14",
+ "entry_window": "2026-09-14 -> 2026-09-14",
+ "PAPERS": [
+  {
+   "pmid": "42735330",
+   "doi": "10.1073/pnas.2605467123",
+   "journal": "Proc Natl Acad Sci U S A",
+   "short": "Embassy monitor shutdown, 46 cities 2026",
+   "title": "Air pollution after the shutdown of US embassy monitoring.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Matched difference-in-differences, satellite AOD",
+   "pm": "Real-time satellite aerosol optical depth, calibrated to pre-shutdown embassy PM2.5",
+   "geo": "Global / multi-region",
+   "endpoint": "Air quality / concentration",
+   "tier": "A",
+   "n": "The 2025 suspension of the US embassy air-quality programme is used as a natural experiment on what happens when a trusted monitoring node disappears. Across 46 cities matched to same-country controls, AOD shows no differential pre-trend and then rises 24-33% once reporting stops; calibrating AOD to concurrent embassy PM2.5 gives a PM-equivalent increase of about 1.9 ug/m3 under the authors' conservative translation, with alternatives spanning 1.5 to 16.3 ug/m3. That order-of-magnitude spread is the paper's weak point and it is the calibration step, not the DiD, that carries it; no confidence interval is reported for the headline effect. Effects are largest where no substitute data existed, which is the direct argument for dense low-cost networks as monitoring infrastructure rather than supplement."
+  },
+  {
+   "pmid": null,
+   "doi": "10.5194/amt-19-5815-2026",
+   "journal": "Atmos Meas Tech",
+   "short": "sMCPC supersaturation model 2026",
+   "title": "Performance modeling of a small mixing-type condensation particle counter.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Numerical / CFD instrument model",
+   "pm": "Particle number, critical activation diameter Dp,50",
+   "geo": "Not applicable (laboratory / numerical)",
+   "endpoint": "Instrument performance",
+   "tier": "A",
+   "n": "A validated CFD model of a small mixing-type condensation particle counter resolves turbulent flow, temperature and species transport in the particle channel, with Kelvin, non-continuum and latent-heat terms in the growth calculation. Raising the saturator-cooler temperature difference dT raises the supersaturation ratio and lowers the critical activation diameter Dp,50; raising total flow Qg suppresses the supersaturation ratio and pushes its peak downstream, and both dT and vapour fraction steepen the Dp,50 counting-efficiency slope. Everything is numerical, so counting efficiency against a reference CPC is asserted through the validation case rather than measured across the swept parameter space. Design-space guidance of exactly this kind is what a portable ultrafine node in a distributed network needs before field deployment."
+  },
+  {
+   "pmid": null,
+   "doi": "10.1007/s44408-026-00146-x",
+   "journal": "Aerosol Air Qual Res",
+   "short": "PurpleAir Raleigh and Delhi 2026",
+   "title": "Evaluating and Calibrating Low-Cost Air Quality Sensors in Contrasting Aerosol Regimes.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Co-location calibration campaign",
+   "pm": "PurpleAir PA-II PM2.5 against Federal Equivalent Method reference",
+   "geo": "United States; India",
+   "endpoint": "Sensor bias / accuracy",
+   "tier": "A",
+   "n": "PA-II units were co-located with FEM monitors for two to four weeks in Raleigh, North Carolina and Delhi, India, deliberately spanning a clean and a heavily loaded aerosol regime. A model taking PA PM2.5, temperature and relative humidity as inputs holds mean absolute bias within 12% hourly and 6% daily. The headline is the negative result: the authors conclude that pre-deployment calibration specific to the location or region is required before PA data are fit for scientific use, i.e. a single transferable correction does not exist. Two to four weeks is short relative to the seasonal cycle in either city, so drift and seasonal aerosol-composition change are outside what this design can see. Connector-sourced; outside the 14 Sep entry window."
+  },
+  {
+   "pmid": null,
+   "doi": "10.3390/chemosensors14070154",
+   "journal": "Chemosensors",
+   "short": "Feature engineering without co-location 2026",
+   "title": "Machine Learning-Based Calibration of Low-Cost PM2.5 Sensors Using Location-Specific Environmental Covariates and Feature Engineering Strategies.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Ablation study, time-based validation",
+   "pm": "Low-cost PM2.5 sensor in an outdoor residential setting",
+   "geo": "Turkiye",
+   "endpoint": "Sensor bias / accuracy",
+   "tier": "B",
+   "n": "An ablation design separates the contribution of location-specific environmental covariates, auxiliary gaseous pollutants and feature engineering to calibration of a single outdoor residential PM2.5 sensor, validated on a leakage-safe time-based split. Feature engineering helped in every configuration: raw PM2.5 plus engineered features raised Random Forest test R2 from 0.724 to 0.847 and cut RMSE from 6.96 to 5.19 ug/m3. Humidity interaction terms and cyclic time encodings carried most of the importance. One sensor at one site is the obvious limit, and the residual 5.19 ug/m3 RMSE is large against typical ambient means. The framing matters for network operators: the claim is that useful correction is reachable where continuous co-location is not operationally feasible. Connector-sourced; outside the entry window."
+  },
+  {
+   "pmid": null,
+   "doi": "10.5194/acp-26-12953-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Aeolus transatlantic smoke, Sep 2020",
+   "title": "Characterization of aerosol properties during a huge transatlantic smoke transport event using Aeolus observations in synergy with multi-platform data.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Spaceborne HSRL case study with trajectory modelling",
+   "pm": "Aerosol extinction and backscatter from ALADIN; AOD",
+   "geo": "Global / multi-region",
+   "endpoint": "Air quality / concentration",
+   "tier": "B",
+   "n": "ALADIN, a spaceborne high-spectral-resolution lidar, retrieves extinction and backscatter directly rather than by assumed lidar ratio, and is used here to follow a September 2020 western-US smoke plume to Europe. Mean extinction was near 200 Mm-1 across selected cross-sections and AOD fell from 0.54 to 0.33 along the path; the layer rose from about 4.4 km over the US to above 6 km over Europe and arrived above cloud. Lidar ratios first fell then rose, which the authors attribute to ageing. A single event constrains generality, and above-cloud layers are exactly the geometry in which surface monitors and passive AOD retrievals disagree most - the relevance to any satellite-to-surface PM2.5 fusion scheme is that this plume was invisible at ground level."
+  },
+  {
+   "pmid": "42735367",
+   "doi": "10.1080/15459624.2026.2722264",
+   "journal": "J Occup Environ Hyg",
+   "short": "Fire-station diesel, 3 stations 2026",
+   "title": "Characterization of diesel-related pollutant migration in fire stations using low-cost direct-reading monitors.",
+   "sub": "Occupational & indoor",
+   "design": "Repeated-measures monitoring, mixed-effects models",
+   "pm": "Minute-level PM size fractions, NO2, VOCs and CO2 from direct-reading low-cost monitors, 7 days per station",
+   "geo": "United States",
+   "endpoint": "Air quality / concentration",
+   "tier": "A",
+   "n": "Low-cost direct-reading monitors were deployed for seven consecutive days at fixed engine-bay and adjacent occupied locations in three fire stations, with minute data aggregated to daily means and fitted by hierarchical mixed-effects models. Coarse PM, NO2, VOCs and CO2 were significantly associated with engine activity, distance from exhaust source and station identity, but the direction of association varied by pollutant - and PM2.5 and PM1 showed no significant association with any of them. Measurable concentrations beyond the bays indicate either migration or shared indoor sources, which this design cannot separate. Three stations and daily aggregation of minute data throw away the transient peaks that dominate diesel exposure; the null on the fine fractions is more likely a resolution artefact than an absence."
+  },
+  {
+   "pmid": null,
+   "doi": "10.3390/atmos17090895",
+   "journal": "Atmosphere",
+   "short": "Hospital IAQ, 1.79M records 2023-2025",
+   "title": "Toward Integrated Hospital IAQ Monitoring: Continuous Sensing and Targeted Chemical Characterization.",
+   "sub": "Occupational & indoor",
+   "design": "Long-term continuous sensing plus targeted chemical sampling",
+   "pm": "CO2, PM2.5, PM10, formaldehyde, T, RH, TVOC from low-cost sensors; June 2023 - December 2025",
+   "geo": "Europe",
+   "endpoint": "Air quality / concentration",
+   "tier": "A",
+   "n": "Thirty months of continuous low-cost sensor monitoring across hospital microenvironments yielded 1.79 million raw records, 1.42 million retained indoor measurements and 264,311 hourly aggregates, paired with targeted VOC and aldehyde sampling. Distinct recurrent IAQ signatures emerged per area: CO2 tracked occupancy and ventilation demand, while formaldehyde sensor response was persistent and seasonal in a pattern consistent with indoor sources plus ventilation heterogeneity. Chemical sampling attributed area-specific profiles to cleaning, laboratory work and materials. The formaldehyde inference rests on a low-cost electrochemical channel with known cross-sensitivity, and the campaign sampling is too sparse to validate it continuously. The retained fraction - 79% of raw records - is the most useful number here for anyone sizing a long-horizon deployment."
+  },
+  {
+   "pmid": null,
+   "doi": "10.1021/acs.est.6c06332",
+   "journal": "Environ Sci Technol",
+   "short": "Indoor OCEC hazard synthesis 2026",
+   "title": "Organic Contaminants of Emerging Concern (OCECs) in Indoor Air: A Perspective on Global Distribution and Hazard Burden.",
+   "sub": "Occupational & indoor",
+   "design": "Systematic synthesis with inhalation hazard prioritisation",
+   "pm": "Airborne concentrations of 130+ compounds across seven OCEC classes",
+   "geo": "Global / multi-region",
+   "endpoint": "Air quality / concentration",
+   "tier": "B",
+   "n": "Seven OCEC classes spanning over 130 compounds are synthesised across residences, offices, schools and commercial spaces. Microenvironments separate cleanly: phthalate alternatives dominate residential air up to 2.08e4 ng/m3, PFAS schools up to 230 ng/m3, organophosphate esters offices up to 159 ng/m3, and commercial spaces carry both PFAS to 316 ng/m3 and alternative halogenated flame retardants. The United States, Germany, Sweden and China rank highest on inhalation hazard, and the authors state plainly that this may reflect monitoring intensity rather than contamination. Microplastics were excluded from the hazard index because units and toxicity metrics are irreconcilable - a candid admission that the particulate fraction of indoor emerging contaminants is currently unquantifiable on a common scale."
+  },
+  {
+   "pmid": "42735314",
+   "doi": "10.1073/pnas.2422760122",
+   "journal": "Proc Natl Acad Sci U S A",
+   "short": "Portland segregation typologies, 342 tracts 2026",
+   "title": "Beyond redlining: Gentrification, displacement, disadvantages, and exclusivity predict urban environmental and health inequities.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Cross-sectional typology construction, PCA and rank correlation",
+   "pm": "Tract-level pollution exposure among 104 environmental, hazard and health variables",
+   "geo": "United States",
+   "endpoint": "Air quality / concentration",
+   "tier": "B",
+   "n": "Four contemporary segregation typologies were derived by PCA on 2010 and 2020 ACS and Census data for 342 Portland tracts and compared against historical HOLC zones across 104 environmental and health variables. HOLC grade predicted persistent exclusivity in the urban core but not injustice elsewhere; persistently disadvantaged tracts, often outside HOLC boundaries altogether, carried the highest pollution and hazard exposure and the worst health and disability outcomes. Exclusive neighbourhoods had more canopy and better preventive care yet more air pollution - a genuinely awkward result the authors do not fully resolve. Everything is ecological and cross-sectional, so no individual-level inference survives. The practical message for exposure design is that a single historical redlining layer is an inadequate stratifier for siting monitors."
+  },
+  {
+   "pmid": null,
+   "doi": "10.3390/atmos17090891",
+   "journal": "Atmosphere",
+   "short": "Monte Carlo wind erosion PM, Sardinia 2026",
+   "title": "Refinement and Quantitative Evaluation of a Monte Carlo Model for Wind-Driven PM Emissions from Industrial Granular Materials.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Physical emission model, numerical sensitivity analysis",
+   "pm": "PM emission mass from saltation-driven sandblasting of granular surfaces",
+   "geo": "Europe",
+   "endpoint": "Emission flux",
+   "tier": "B",
+   "n": "A saltation-and-sandblasting emission model for wind erosion of granular industrial stockpiles is given its first quantitative evaluation, with the Monte Carlo impact count fixed rather than run to convergence. Applied to lead and zinc sulphide concentrates at a Sardinian plant, cutting simulated impacts from 10,000 to 500 changed the median emission by a small relative difference while cutting cost twentyfold, and the revised model reproduced emission magnitude, sandblasting efficiency and their dependence on wind friction velocity. Validation is internal and physical-consistency based - no measured emission flux is compared against, which is the central weakness. Fugitive stockpile emission is precisely the source class that regulatory networks miss and fenceline low-cost arrays are increasingly asked to capture."
+  },
+  {
+   "pmid": "42735649",
+   "doi": "10.1016/j.scitotenv.2026.182240",
+   "journal": "Sci Total Environ",
+   "short": "Southern Hemisphere fire trend 2003-2022",
+   "title": "Characteristics and trend of the wildfire activity in the Southern Hemisphere (2003-2022).",
+   "sub": "Exposure assessment & modelling",
+   "design": "Satellite time-series analysis",
+   "pm": "MODIS Active Fire detections as a proxy for biomass-burning PM source strength",
+   "geo": "Global / multi-region",
+   "endpoint": "Emission flux",
+   "tier": "B",
+   "n": "Two decades of MODIS active-fire detections are used to characterise wildfire activity across Southern Africa, South America and Oceania. Seasonality is strongly heterogeneous between continents: Southern Africa shows a stable 20-week May-October season with low inter-annual variability, South America a 14-week July-October season with high variability, and Oceania no clear season at all, which the authors read as co-existing fire regimes. Active-fire counts are a detection proxy, not emitted mass - they are insensitive to smouldering and biased by overpass timing and cloud, so no PM emission inventory follows directly. The abstract's stated period (2004-2024) disagrees with the title's (2003-2022) and should be checked against the paper before citation."
+  },
+  {
+   "pmid": null,
+   "doi": "10.5194/acp-26-12977-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Savannah and boreal fire vapour ageing 2026",
+   "title": "Organic vapors from Savannah and European Boreal fire emissions: insights from photochemical and dark aging.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Controlled burn plus 29 m3 chamber ageing, PTR-MS",
+   "pm": "Organic vapour emission factors, SOA precursors",
+   "geo": "Global / multi-region",
+   "endpoint": "Emission flux",
+   "tier": "B",
+   "n": "Controlled burns of understudied African savannah and European boreal fuels were sampled by high-resolution PTR-MS and aged photochemically and in the dark in a 29 m3 Teflon chamber. Total primary organic-vapour emission factors ranged 69-161 g/kg across fuel types. Photochemical ageing depleted furanics, phenolics and oxygenated aromatics and enriched carbonyls and small O-containing species, whereas dark low-NOx ageing produced almost no compositional change; hierarchical clustering attributed 73% of group-level compositional variance to oxidation regime. Chamber burns of prepared fuels do not reproduce the moisture, combustion phase or dilution of a real fire, so the emission factors are upper-bound laboratory values. The regime dependence matters for any smoke PM2.5 forecast that assumes a fixed secondary-aerosol yield downwind."
+  },
+  {
+   "pmid": "42734442",
+   "doi": "10.4103/mgr.MEDGASRES-D-25-00188",
+   "journal": "Med Gas Res",
+   "short": "PM stroke burden GBD 1990-2021",
+   "title": "Ambient particulate matter pollution and stroke burden.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Descriptive burden analysis, GBD 2021",
+   "pm": "GBD ambient particulate matter pollution risk-factor exposure",
+   "geo": "Global / multi-region",
+   "endpoint": "Cerebrovascular",
+   "tier": "B",
+   "n": "GBD 2021 estimates of stroke deaths and DALYs attributable to ambient particulate matter are decomposed by region, sex and socio-demographic index from 1990 to 2021, with EAPC trends and concentration and slope indices of inequality. Absolute deaths rose 107% and DALYs 101% while age-standardised rates fell - the familiar decomposition of ageing and population growth against declining risk. Middle-SDI locations carry 46% of the burden and exceed high-SDI on both age-standardised measures; the concentration index suggests improving relative inequality while the slope index worsened against 1990, and the paper does not reconcile the two. GBD attributable burden is a modelled quantity resting on the exposure surface and the chosen concentration-response function, so this is not independent epidemiological evidence."
+  },
+  {
+   "pmid": "42733031",
+   "doi": "10.1007/s10661-026-15911-z",
+   "journal": "Environ Monit Assess",
+   "short": "Central China BenMAP 2017-2024",
+   "title": "Assessment of the spatiotemporal evolution of PM2.5 and its health and economic effects in Central China based on spatial statistics and BenMAP.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Spatial statistics plus BenMAP health impact assessment",
+   "pm": "Ground monitors and the Tracking Air Pollution in China (TAP) reanalysis, 2017-2024",
+   "geo": "China",
+   "endpoint": "All-cause mortality",
+   "tier": "B",
+   "n": "PM2.5 across Henan, Hubei and Hunan is analysed with global Moran's I, centroid migration and BenMAP, with Henan taken forward for health and economic valuation over 2017-2023. Spatial clustering is strong and stable (Moran's I 0.524-0.738, all p<0.001), high-value clusters sit in Henan and around Wuhan and Changsha, and the concentration centroid moved only 2.86-24.37 km per year. The authors explicitly reject a persistent southwestward migration because most displacements fall below their noise threshold - a welcome negative result in a literature prone to over-reading centroid drift. Attributable premature deaths declined with a late rebound, but rising value of a statistical life meant monetised benefit grew more slowly than health benefit. BenMAP outputs inherit the CRF and baseline-rate assumptions entirely."
+  },
+  {
+   "pmid": "42734163",
+   "doi": "10.1080/09603123.2026.2734444",
+   "journal": "Int J Environ Health Res",
+   "short": "Heat-COPD meta, 36 studies 2026",
+   "title": "Heat exposure and its impact on COPD morbidity and mortality: a systematic review and meta-analysis.",
+   "sub": "Respiratory & allergic",
+   "design": "Systematic review and three-level random-effects meta-analysis",
+   "pm": "Co-exposure only: air-pollution adjustment tested as a moderator",
+   "geo": "Global / multi-region",
+   "endpoint": "Respiratory",
+   "tier": "B",
+   "n": "Thirty-six observational studies of heat and COPD are pooled in a three-level model that handles non-independent estimates. Heat raised overall COPD risk (RR 1.15, 95% CI 1.09-1.21), with mortality (1.26, 1.18-1.34) well above morbidity (1.05, 1.01-1.09). Heat-wave and threshold definitions gave RR 1.21 against 1.05 for continuous temperature metrics, and the continuous metrics were also the least heterogeneous - so the definitional choice, not the biology, drives much of the spread. The finding relevant here is negative: adjusting for air pollution did not substantially change the estimates, which argues against PM confounding of heat-COPD associations but says nothing about interaction. Publication bias and exposure-misclassification assessments are not reported in the abstract."
+  },
+  {
+   "pmid": "42733604",
+   "doi": "10.1016/j.isci.2026.117462",
+   "journal": "iScience",
+   "short": "Scrap tire valorization risks 2026",
+   "title": "Is recycling sustainable: The promise and risks of scrap tire valorization.",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review, technical and toxicological",
+   "pm": "Process emissions: VOCs, PAHs, heavy metals, microplastics, 6PPD-quinone",
+   "geo": "Global / multi-region",
+   "endpoint": "Air quality / concentration",
+   "tier": "C",
+   "n": "Roughly 1.5 billion end-of-life tires accumulate annually, and this review argues that the three dominant valorization routes - devulcanization, pyrolysis and mechanical grinding - each release hazardous species including VOCs, PAHs, heavy metals, microplastics and 6PPD-quinone. It is a qualitative synthesis: no emission factors, exposure concentrations or dose-response relationships are given, so the risk claim is directional only and the paper cannot be used to rank routes quantitatively. Its value for this digest is the explicit call for high-fidelity monitoring of recycling facilities, which is a fenceline low-cost-network application with essentially no published deployment literature. Tire wear is already a leading non-exhaust PM source; tire reprocessing as a second, point-source pathway is comparatively unmeasured."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "COPD risk, any outcome\nheat exposure",
+   "exposure": "Heat (PM-adjusted)",
+   "est": 1.15,
+   "lo": 1.09,
+   "hi": 1.21,
+   "metric": "RR",
+   "src": "36-study meta-analysis 2026"
+  },
+  {
+   "label": "COPD mortality\nheat exposure",
+   "exposure": "Heat (PM-adjusted)",
+   "est": 1.26,
+   "lo": 1.18,
+   "hi": 1.34,
+   "metric": "RR",
+   "src": "36-study meta-analysis 2026"
+  },
+  {
+   "label": "COPD morbidity\nheat exposure",
+   "exposure": "Heat (PM-adjusted)",
+   "est": 1.05,
+   "lo": 1.01,
+   "hi": 1.09,
+   "metric": "RR",
+   "src": "36-study meta-analysis 2026"
+  },
+  {
+   "label": "Local AOD after embassy\nmonitoring halt (lower bound\nof 24-33%; no CI reported)",
+   "exposure": "Monitoring withdrawal",
+   "est": 1.24,
+   "lo": null,
+   "hi": null,
+   "metric": "ratio",
+   "src": "46 cities, DiD 2026"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "No preconception or\nin-utero record in\nthis window"
+  },
+  {
+   "n": 0,
+   "note": "Schools appear only as\nan OCEC microenvironment,\nnot as a child cohort"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 2,
+   "note": "3 fire stations, 7 days\neach; hospital staff areas\nacross 264,311 hourly\nobservations"
+  },
+  {
+   "n": 1,
+   "note": "COPD meta-analysis\nis the only age-skewed\nclinical record; 65+ not\nreported separately"
+  }
+ ]
+}

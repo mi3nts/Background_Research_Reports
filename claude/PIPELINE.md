@@ -2486,3 +2486,62 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   today); `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the September
   monthly); abstract retry list gained `10.1016/j.atmosres.2026.109322`.
   `.git/lk.*` accumulation, mount EPERM, manual cleanup.
+
+## Run 2026-09-14 (built 2026-09-15 17:4x CDT) — daily 14 Sep
+
+- 22:00 rule: run started 17:46, so the newest buildable date was 14 Sep. `last_entry_date`
+  was 2026-09-13, one owed day, no gap, no rollup owed (W38 closes Sat 19 Sep).
+  **16 in scope**, 4 effects, 9 pp, 0 errors, **0 overfull hboxes**. DOI gate 0 fail / 1 warn.
+- **A Monday at half volume, and the scarcity is on the health axis only.** Registry-wide
+  EDAT 14 Sep **2,375** against 4,593 on 13 Sep (13 Sep has not backfilled since). Both
+  PubMed queries returned **8 unique candidates**, the sensing query's 2 already inside the
+  health set; 2 were screened out and **none carried a new PM exposure-response estimate**.
+  Two supplementary connector queries on wildfire/UFP/traffic x cardiometabolic endpoints
+  returned literally 0. Europe PMC 3, Crossref-by-ISSN 54 deposits / 14 in scope, arXiv 60
+  with none in window, OpenAlex HTTP 429 again.
+- **The DOI gate caught two duplicates that title screening structurally cannot.** Both
+  Consensus hits — Ginsburg global PurpleAir and the Bogota T640X calibration — shipped on
+  29 Jul and 3 Aug under **rewritten titles** (one a paraphrase, one entirely different:
+  "Machine- and deep-learning calibration of low-cost PM10/PM2.5 nodes against a T640X
+  reference"). A title-normalised index cannot match either. Removed by rewriting the
+  PAPERS list, per the 13 Sep rule — never by index arithmetic on text.
+- **Six in-scope records verified and deliberately held**, kept OUT of `seen.json`: no
+  abstract exists in Crossref, Europe PMC, Scholar Gateway or Consensus. Five are same-day
+  Elsevier/T&F deposits (APR, Build Environ, Environ Int, Atmos Environ, AS&T Spider-MAGIC);
+  the sixth is RSC *ES: Atmos*, which deposits a **207-character truncated abstract** that
+  carries the gap statement and no result — a new failure mode, distinct from the Elsevier
+  silence. Priority pickup is the AS&T Spider-MAGIC/OPS evaluation, a tier-A instrument paper.
+- **Sixteen design labels coined and added to `plots.py` in the same edit.** The f2
+  diagnostic fired on all sixteen because `design_group` was built for clinical epidemiology
+  and this corpus is instrument and atmospheric-chemistry work. 8 of 16 records carry no
+  PMID; a PubMed-only watch would have shipped a six-record issue.
+- **Proof caught three counts, all checkable, and two layout faults.** (1) f2 caption said
+  twelve records carry no health endpoint; it is **thirteen** (7 air-quality + 3 emission
+  flux + 3 sensor/instrument), and "two sensor or instrument performance" was three.
+  (2) f3 caption said eight global/multi-region; the chart reads **nine** because the
+  "Not applicable (laboratory / numerical)" sMCPC record folds into that bucket. (3) f4
+  caption said the modelling cells split between two rows; they occupy **three** —
+  Burden also holds one (BenMAP). **Ninth consecutive issue where a count or superlative
+  failed its check.**
+- Layout: a `\clearpage` before the Occupational band stranded two entries on a 15%-full
+  page 6; removing it filled the page but orphaned the Respiratory band header at the
+  bottom. Fixed by moving the `\clearpage` to before the Respiratory band — the clean
+  break, not text shaving, because trimming the Liu entry would have pushed it below the
+  90-word floor. 10 pp -> 9 pp.
+- **EFFECTS contains no PM exposure estimate with a CI** — the three interval-bearing
+  estimates are heat exposure from the COPD meta-analysis, and the embassy effect has no
+  interval. Thirteenth issue of fifty in this position; stated in the forest caption rather
+  than papered over.
+- Trial watch: **first topical hit since the W37 zero week.** NCT07817836 (IDEA, Univ. of
+  Pavia, n=151, observational, personal passive samplers over 5 working days) accumulated,
+  `trials.json` now **27 trials, 14 windows**. Its brief summary names PM2.5 but **every
+  registered personal-exposure outcome is gas-phase or VOC** — no PM2.5 measure exists in
+  the protocol; recorded in the entry. The 13 Sep window was also backfilled here as a
+  structural Sunday zero (no-term control returns 0 registry-wide); it had been logged in
+  PIPELINE.md on 13 Sep but never written to `trials.json`.
+- `metrics.csv` 386 rows, **0 malformed** — eighth consecutive issue confirming the KNOWN
+  DEFECT note in the task file is **stale**. Still open, unchanged: no first-author
+  affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split (neither present today);
+  `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the September
+  monthly); abstract retry list gained six DOIs. `.git/lk.*` accumulation, mount EPERM,
+  manual cleanup.

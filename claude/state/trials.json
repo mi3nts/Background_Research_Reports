@@ -18,525 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": [
-  {
-   "nct_id": "NCT05160948",
-   "title": "Assessing Changes in Knowledge, Behavior, and Attitude Regarding Air Pollution After Receiving Personal Air Monitoring Results",
-   "status": "COMPLETED",
-   "study_type": "OBSERVATIONAL",
-   "phase": null,
-   "conditions": [
-    "Environmental Exposure"
-   ],
-   "interventions": [
-    "Informational Report"
-   ],
-   "sponsor": "Children's Hospital Medical Center, Cincinnati",
-   "enrollment": 105,
-   "start_date": "2021-11-10",
-   "primary_completion_date": "2022-11-10",
-   "seen_window": "2026-07-31..2026-08-01",
-   "note": "Personal-monitor result feedback as a behavioural intervention. Directly relevant to the distributed-sensing use case: does returning personal PM data change behaviour. Observational, so analyze_endpoints not run."
-  },
-  {
-   "nct_id": "NCT07634952",
-   "title": "Innovative Solutions Across the MEDiterranean ... Outdoor Workers",
-   "status": "RECRUITING",
-   "sponsor": "University of Cyprus",
-   "enrollment": 102,
-   "interventions": [
-    "Heat + air pollution mitigation intervention"
-   ],
-   "start_date": "2026-05-01",
-   "primary_completion_date": "2027-07-31",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07629518",
-   "title": "Democratizing Access to Cleaner Residential Air",
-   "status": "NOT_YET_RECRUITING",
-   "sponsor": "Douglas Brugge",
-   "enrollment": 66,
-   "interventions": [
-    "Portable HEPA purifier vs sham"
-   ],
-   "start_date": "2026-09",
-   "primary_completion_date": "2028-05",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07540000",
-   "title": "INTERLUNG: community-based respiratory health intervention, Bhaktapur, Nepal",
-   "status": "NOT_YET_RECRUITING",
-   "sponsor": "Johns Hopkins University",
-   "enrollment": 800,
-   "interventions": [
-    "CHW-delivered multi-component respiratory intervention"
-   ],
-   "start_date": "2026-08-10",
-   "primary_completion_date": "2030-04-01",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07118189",
-   "title": "Resilient KPNC Community in the Face of Wildfire Smoke",
-   "status": "ACTIVE_NOT_RECRUITING",
-   "sponsor": "Kaiser Permanente",
-   "enrollment": 20,
-   "interventions": [
-    "N95 masks + indoor air cleaner"
-   ],
-   "start_date": "2025-10-07",
-   "primary_completion_date": "2026-12-31",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07606859",
-   "title": "MEDiterranean climate-health resilience (hypertensive 65+)",
-   "status": "RECRUITING",
-   "sponsor": "University of Cyprus",
-   "enrollment": 102,
-   "interventions": [
-    "Heat + air pollution mitigation intervention"
-   ],
-   "start_date": "2026-05-01",
-   "primary_completion_date": "2027-07-31",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07609433",
-   "title": "MEDiterranean climate-health resilience (pregnant women)",
-   "status": "RECRUITING",
-   "sponsor": "University of Cyprus",
-   "enrollment": 102,
-   "interventions": [
-    "Heat + air pollution mitigation intervention"
-   ],
-   "start_date": "2026-05-01",
-   "primary_completion_date": "2027-07-31",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07196436",
-   "title": "ERV + air cleaner for mold control and asthma in low-income housing",
-   "status": "RECRUITING",
-   "sponsor": "UT Arlington",
-   "enrollment": 80,
-   "interventions": [
-    "ERV and portable air cleaner, both sham-controlled"
-   ],
-   "start_date": "2025-10-10",
-   "primary_completion_date": "2028-01-31",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07047430",
-   "title": "Airports, Air Quality, and Asthma (AAA)",
-   "status": "RECRUITING",
-   "sponsor": "University of Washington",
-   "enrollment": 60,
-   "interventions": [
-    "HEPA vs non-HEPA portable air cleaner"
-   ],
-   "start_date": "2024-06-01",
-   "primary_completion_date": "2026-06-01",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT06376994",
-   "title": "Multi-Center Clean Air RCT in COPD",
-   "status": "RECRUITING",
-   "sponsor": "JHSPH Center for Clinical Trials",
-   "enrollment": 770,
-   "interventions": [
-    "Air cleaner vs sham"
-   ],
-   "start_date": "2024-05-24",
-   "primary_completion_date": "2029-08-31",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07344987",
-   "title": "Randomized crossover of IAQ improvement in interstitial lung disease",
-   "status": "NOT_YET_RECRUITING",
-   "sponsor": "Peking Union Medical College",
-   "enrollment": 100,
-   "interventions": [
-    "Purifier with vs without filter"
-   ],
-   "start_date": "2026-03",
-   "primary_completion_date": "2026-12",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT06070428",
-   "title": "PATHFINDER: portable air cleaners in heart failure",
-   "status": "RECRUITING",
-   "sponsor": "Henry Ford Health System",
-   "enrollment": 400,
-   "interventions": [
-    "PAC at discharge vs PAC without filter"
-   ],
-   "start_date": "2023-12-18",
-   "primary_completion_date": "2027-06",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07116460",
-   "title": "Cost-effective air filtration + PM monitoring in low-income housing",
-   "status": "RECRUITING",
-   "sponsor": "Columbia University",
-   "enrollment": 55,
-   "interventions": [
-    "Austin Air cleaner"
-   ],
-   "start_date": "2026-01-30",
-   "primary_completion_date": "2028-04",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT07536178",
-   "title": "Lungs on Fire: controlled woodsmoke exposure, Canada",
-   "status": "NOT_YET_RECRUITING",
-   "sponsor": "University of British Columbia",
-   "enrollment": 24,
-   "interventions": [
-    "Lodgepole pine woodsmoke vs filtered air"
-   ],
-   "start_date": "2026-04-01",
-   "primary_completion_date": "2029-08-31",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT06534385",
-   "title": "Clean Air Study: HEPA purifiers in rural Alaska homes",
-   "status": "RECRUITING",
-   "sponsor": "Alaska Native Tribal Health Consortium",
-   "enrollment": 15,
-   "interventions": [
-    "Air purifier"
-   ],
-   "start_date": "2024-11-25",
-   "primary_completion_date": "2026-04-01",
-   "study_type": "INTERVENTIONAL",
-   "seen_window": "2026-08-02",
-   "note": "Added by the 2026-08-02 trial sweep; surface in the weekly rollup."
-  },
-  {
-   "nct_id": "NCT05874479",
-   "title": "Reducing AIR Pollution Exposure to Lower Blood PRESSURE Among New York City Public Housing Residents",
-   "status": "RECRUITING",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "Blood Pressure"
-   ],
-   "interventions": [
-    "Active portable air cleaner",
-    "Sham portable air cleaner"
-   ],
-   "sponsor": "NYU Langone Health",
-   "enrollment": 440,
-   "start_date": "2023-12-20",
-   "primary_completion_date": "2027-09",
-   "seen_window": "2026-08-03..2026-08-03",
-   "note": "Sham-controlled portable-air-cleaner RCT with a blood-pressure endpoint in public housing; registration updated in this window, already held as a top-level record from the 2026-07-29 run."
-  },
-  {
-   "nct_id": "NCT07111208",
-   "title": "Noise and/or Ultrafine Particulate Matter Induced Cerebral and Cardiovascular Damage (MARKOPOLO) and Lifestyle Intervention to Attenuate Cardiovascular Health Risk (METSGREEN)",
-   "status": "RECRUITING",
-   "study_type": "INTERVENTIONAL",
-   "phase": [
-    "NA"
-   ],
-   "conditions": [
-    "Cardiovascular Diseases",
-    "Metabolic Syndrome",
-    "Air Pollution Exposure",
-    "Environmental Exposure",
-    "Health Behavior Change"
-   ],
-   "interventions": [
-    "Green Space Activity Group - Daily Physical Activity",
-    "Mediterranean Diet Group - Dietary Intervention"
-   ],
-   "sponsor": "Regina Grazuleviciene",
-   "enrollment": 180,
-   "start_date": "2025-10-24",
-   "primary_completion_date": "2026-07",
-   "locations_count": 2,
-   "first_seen": "2026-08-04",
-   "note": "Only UFP-exposure interventional registration in the sweep not already in state. Connector exposes no last-update-date filter, so this is a relevance sweep, not a true window query."
-  },
-  {
-   "nct_id": "NCT07479420",
-   "title": "Cluster-randomised trial of HEPA versus ionisation/plasma air cleaners on microbial and physicochemical markers in primary school classrooms",
-   "status": "COMPLETED",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "Airborne Microorganisms",
-    "Particulate Matter (PM)"
-   ],
-   "interventions": [
-    "HEPA filter air cleaners",
-    "Ionization or plasma air cleaners"
-   ],
-   "sponsor": "Lidwien Smit",
-   "enrollment": 180,
-   "start_date": "2023-12-06",
-   "primary_completion_date": "2025-05-01",
-   "seen_window": "2026-08-07",
-   "note": "Head-to-head air-cleaning technology comparison rather than active-vs-sham; PM and bioaerosol endpoints.",
-   "endpoints": {
-    "primary": [
-     "Airborne bacteria/virus presence and concentration in classroom air (12 wk/school)",
-     "Classroom PM concentration (11 wk/school)"
-    ],
-    "secondary": [
-     "Parent-reported respiratory symptoms (to 12 mo)",
-     "Student absenteeism (12 wk/school)"
-    ],
-    "note": "Primaries are air-quality measurements, not health outcomes; health sits in the secondaries. The cleanest design in the current watch for linking a filtration intervention to a measured PM change."
-   }
-  },
-  {
-   "nct_id": "NCT05994937",
-   "title": "Glycemic and Cardiometabolic Biomarker Improvements Associated With Reduction in Air Pollution Exposure",
-   "status": "COMPLETED",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "PreDiabetes"
-   ],
-   "interventions": [
-    "PAC with HEPA filter intact",
-    "PAC with HEPA filter removed"
-   ],
-   "sponsor": "NYU Langone Health",
-   "enrollment": 150,
-   "start_date": "2023-12-26",
-   "primary_completion_date": "2026-03-16",
-   "seen_window": "2026-08-07",
-   "note": "Sham-controlled portable air cleaner; primary completion 2026-03-16 with no results posted yet - watch for posting."
-  },
-  {
-   "nct_id": "NCT06197477",
-   "title": "Development of Novel Assessments for Indoor Air Quality Monitoring and Impact on Children's Health - Cohorts in Schools & Biomarkers of Exposure",
-   "status": "UNKNOWN",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "Cognition"
-   ],
-   "interventions": [
-    "OurAir SQ 1750 mobile air purification system",
-    "Sham intervention"
-   ],
-   "sponsor": "Hasselt University",
-   "enrollment": 900,
-   "start_date": "2023-11-20",
-   "primary_completion_date": "2025-12",
-   "seen_window": "2026-08-07",
-   "note": "Largest school-based sham-controlled purifier trial in state (n=900); cognition primary endpoint; status UNKNOWN past primary completion.",
-   "endpoints": {
-    "primary": [
-     "Change in Correct Detection, continuous Performance Test",
-     "Change in correct substitutions, Symbol Digit Modalities Test",
-     "Change in Memory Span Task score",
-     "Change in Signal Detection Test score"
-    ],
-    "secondary": [],
-    "note": "Four cognitive primaries and NO secondary endpoints - no respiratory or biomarker outcome despite 'biomarkers of exposure' in the title. Multiplicity across four co-primaries is unaddressed in the registration."
-   }
-  },
-  {
-   "nct_id": "NCT05368493",
-   "first_seen": "2026-08-08",
-   "title": "Prenatal Air Pollution and Neurodevelopment: a Longitudinal Neuroimaging Study of Mechanisms and Early Risk for ADHD in Puerto Rican Children",
-   "status": "ENROLLING_BY_INVITATION",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "sponsor": "New York State Psychiatric Institute",
-   "enrollment": 182,
-   "interventions": [
-    "MRI task"
-   ],
-   "conditions": [
-    "Pollution; Exposure",
-    "Neurodevelopmental Disorders"
-   ],
-   "start_date": "2023-01-23",
-   "primary_completion_date": "2028-06-01",
-   "note": "Only registration updated in the 2026-08-02..08 window. Labelled INTERVENTIONAL but the only intervention is an MRI task - it is an observational neuroimaging cohort with a registry misclassification. Exposure is modelled prenatal ambient PM, not measured."
-  },
-  {
-   "nct_id": "NCT05338242",
-   "title": "Monitoring Environmental Exposures and Behavioral Change",
-   "status": "COMPLETED",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "Risk Reduction",
-    "Environmental Exposure",
-    "Risk Behavior, Health"
-   ],
-   "interventions": [
-    "Real-Time Exposure Feedback"
-   ],
-   "sponsor": "University of Utah",
-   "enrollment": 30,
-   "start_date": "2022-07-28",
-   "primary_completion_date": "2024-03-25",
-   "last_update_posted": "2026-08-25",
-   "seen_window": "2026-08-22..2026-08-26",
-   "note": "Status moved to COMPLETED in this window. Real-time personal exposure feedback as the intervention itself, n=30 \u2014 the same behaviour-change axis as NCT05160948 but with a live feedback loop rather than a post-hoc report. Directly relevant to distributed low-cost PM sensing: it tests whether the display, not the measurement, is what changes exposure. n=30 is far too small for a behavioural endpoint and there is no sham-display arm, so any effect is confounded with participation."
-  },
-  {
-   "nct_id": "NCT06247059",
-   "title": "Reducing Respiratory Virus Transmission in Bangladeshi Classrooms",
-   "status": "WITHDRAWN",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "SARS-CoV2 Infection",
-    "Influenza Viral Infections",
-    "Respiratory Viral Infection"
-   ],
-   "interventions": [
-    "Box Fan",
-    "UV Germicidal Irradiation Lamp Unit",
-    "Combined: Box Fan and UV Germicidal Irradiation Lamp Units"
-   ],
-   "sponsor": "Stanford University",
-   "enrollment": 0,
-   "start_date": "2025-10",
-   "primary_completion_date": "2026-09",
-   "last_update_posted": "2026-08-24",
-   "seen_window": "2026-08-22..2026-08-26",
-   "note": "WITHDRAWN at enrollment 0, no reason posted. Box-fan (Corsi-Rosenthal-class) and UVGI arms in low-resource classrooms; the endpoint was viral transmission, not PM, but it is the only registered trial of DIY filtration at classroom scale this watch has tracked. Its withdrawal removes the one prospective test of whether cheap box-fan units deliver measurable benefit in the settings that most need them."
-  },
-  {
-   "nct_id": "NCT07797413",
-   "title": "Savannah Environmental Nutrition Study (SENS) Food as Prevention: A Community-Based Nutrition Intervention to Reduce Air Pollution-Related Inflammation and Oxidative Stress in Residents Near the Port of Savannah",
-   "status": "NOT_YET_RECRUITING",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "Air Pollution Exposure",
-    "Oxidative Stress",
-    "Airway Inflammation"
-   ],
-   "interventions": [
-    "Antioxidant- and Nutrient-Rich Food-Based Nutrition Intervention"
-   ],
-   "sponsor": "Georgia Southern University",
-   "enrollment": 20,
-   "start_date": "2026-09-01",
-   "primary_completion_date": "2027-04-30",
-   "last_update_posted": "2026-08-31",
-   "seen_window": "2026-08-31",
-   "endpoints": {
-    "primary": [
-     "Participant retention rate (>=80% target), baseline to week 12"
-    ],
-    "secondary": [
-     "Change in FeNO (ppb, NIOX Mini)",
-     "Change in exhaled-breath-condensate H2O2 (uM, Amplex Red)",
-     "Change in systolic and diastolic BP",
-     "Change in resting heart rate",
-     "Change in HbA1c",
-     "Recruitment/accrual rate (>=70% target)",
-     "Intervention delivery fidelity and adherence"
-    ]
-   },
-   "note": "Feasibility trial; primary endpoint is retention, not a health outcome. FeNO and EBC H2O2 are the airway-inflammation and oxidative-stress markers. No PM exposure measurement is registered - proximity to the Port of Savannah is the exposure proxy."
-  },
-  {
-   "nct_id": "NCT04153539",
-   "title": "Acute Health Effects of Traffic-Related Air Pollution Exposure Among Healthy Young Adults: A Randomized, Crossover Trial",
-   "status": "ACTIVE_NOT_RECRUITING",
-   "study_type": "INTERVENTIONAL",
-   "phase": "NA",
-   "conditions": [
-    "Cardiovascular System",
-    "Respiratory System"
-   ],
-   "interventions": [
-    "Walking along a busy road",
-    "Walking in a traffic-free park"
-   ],
-   "sponsor": "Fudan University",
-   "enrollment": 69,
-   "start_date": "2019-10-09",
-   "primary_completion_date": "2019-12-08",
-   "last_update_posted": "2026-09-02",
-   "seen_window": "2026-09-01..2026-09-02",
-   "primary_outcomes": [
-    "Changes in FEV1",
-    "Blood Pressure",
-    "Heart Rate Variability Parameters"
-   ],
-   "note": "Pre-existing registration; this window carried a record UPDATE, not a new registration, so analyze_endpoints was not run."
-  },
-  {
-   "nct_id": "NCT07805824",
-   "title": "Effects of Workplace Heat and Air Pollution Mitigation on Gingival Melanogenesis in Restaurant Oven Workers: A Cluster Randomized Controlled Trial",
-   "status": "COMPLETED",
-   "study_type": "INTERVENTIONAL",
-   "phase": "PHASE4",
-   "conditions": [
-    "Gingival Pigmentation",
-    "Occupational Heat Exposure",
-    "Occupational Air Pollution Exposure"
-   ],
-   "interventions": [
-    "Workplace Heat and Air Pollution Mitigation Package",
-    "Delayed Workplace Heat and Air Pollution Mitigation Package"
-   ],
-   "sponsor": "Salah M. Ibrahim (University of Kufa, Najaf, Iraq)",
-   "enrollment": 200,
-   "start_date": "2026-01-01",
-   "primary_completion_date": "2026-01-01",
-   "completion_date": "2026-06-30",
-   "last_update_posted": "2026-09-04",
-   "seen_window": "2026-09-04..2026-09-04",
-   "primary_outcomes": [
-    "Change From Baseline in Objective Gingival Melanin Index at Week 24"
-   ],
-   "secondary_outcomes": [
-    "Change From Baseline in Personal PM2.5 Exposure at Week 24 (gravimetric + real-time)"
-   ],
-   "note": "NEW registration (first posted 2026-09-04), flagged in the 2026-09-03 run log as belonging to this window. analyze_endpoints RUN: 1 primary, 1 secondary, 0 other. DATA-QUALITY FLAGS: labelled PHASE4 with no drug; start_date == primary_completion_date == 2026-01-01 while status is COMPLETED; the public detailed_description still contains the submitter's own pre-submission checklist ('confirm the exact first-participant enrollment date, the official protocol ID, and whether a formal Data Monitoring Committee was actually appointed'). Endpoint design usable; timeline fields not. Cluster-randomised, 20 restaurants, 24 weeks, delayed-intervention comparator."
-  }
- ],
+ "trials": 27,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -568,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -631,6 +113,24 @@
    "kept": 0,
    "note": "TOPICAL zero for a full week, the first this watch has recorded. The no-term control over the same 7-day window returns 4,413 studies updated registry-wide, so this is not the structural weekend zero documented on 2026-09-05 -- five active weekdays sit inside the window and none carried a PM or air-pollution record. analyze_endpoints not run (nothing to run it on). The 2026-09-12 daily separately recorded a single-day registry-wide zero (0 of 0), consistent with the established Saturday behaviour.",
    "rollup": "W37 weekly (2026-09-06..2026-09-12): 0 new registrations, 0 updates. trials.json unchanged at 26 trials."
+  },
+  {
+   "window": "2026-09-13 -> 2026-09-13",
+   "queried": "2026-09-15 (backfilled; the 13 Sep daily recorded the zero in PIPELINE.md but never wrote it here)",
+   "source": "ClinicalTrials.gov MCP connector, search_trials + no-term control",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR household air pollution' x AREA[LastUpdatePostDate]RANGE[2026-09-13,2026-09-13]",
+   "hits": 0,
+   "kept": 0,
+   "note": "STRUCTURAL zero. The no-term control over the same single day also returns 0 studies updated registry-wide, consistent with the weekend behaviour established 2026-09-05. 13 Sep was a Sunday."
+  },
+  {
+   "window": "2026-09-14 -> 2026-09-14",
+   "queried": "2026-09-15",
+   "source": "ClinicalTrials.gov MCP connector, search_trials + get_trial_details + no-term control",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR household air pollution' x AREA[LastUpdatePostDate]RANGE[2026-09-14,2026-09-14]",
+   "hits": 1,
+   "kept": 1,
+   "note": "First topical hit since the W37 zero week. No-term control returns 1,024 registry-wide updates for this Monday, so the registry is fully active. NCT07817836 (IDEA, University of Pavia) is an observational exposome study with personal passive sampling, n=151; accumulated at 27 trials. analyze_endpoints not run -- it is observational and already COMPLETED, not a new interventional registration. Surface in the W38 weekly (2026-09-13..2026-09-19), noting the absent PM2.5 outcome measure."
   }
  ],
  "NCT05867381": {
@@ -777,7 +277,7 @@
   "start_date": "2026-09-15",
   "last_update": "2026-08-12",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
+   "Pre-bronchodilator FEV₁ Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },
@@ -806,5 +306,25 @@
    "Based on combined exposures from all 3 organ systems and randomization design, repeat primary and secondary endpoint responses of Stage 1."
   ],
   "window": "2026-08-08..2026-08-22"
+ },
+ "NCT07817836": {
+  "first_seen": "2026-09-14",
+  "title": "Urban Exposome and Biological Age (IDEA) - impact of air quality and work stress in Pavia on inflammatory cytokines and DNA methylation",
+  "status": "COMPLETED",
+  "study_type": "OBSERVATIONAL",
+  "phase": null,
+  "sponsor": "University of Pavia",
+  "collaborators": [
+   "Istituti Clinici Scientifici Maugeri SpA"
+  ],
+  "enrollment": 151,
+  "interventions": null,
+  "conditions": [
+   "Healthy Adult Participants"
+  ],
+  "start_date": "2024-11-21",
+  "primary_completion_date": "2025-10-30",
+  "completion_date": "2025-11-17",
+  "note": "Outdoor urban workers (police, taxi drivers, dustmen) vs indoor office controls, personal passive diffusion samplers worn 5 consecutive working days. Primary outcome is blood DNA methylation; secondary is epigenetic-clock biological age; leukocyte telomere length and serum CCL2/CXCL8/CXCL10 among the others. CAVEAT for this watch: the brief summary names PM2.5 among the exposures, but EVERY listed personal-exposure outcome measure is gas-phase or VOC (O3, NO2, SO2, benzene, toluene, ethylbenzene, xylenes, naphthalene, C9 aromatics) -- there is no registered PM2.5 outcome. Treat as an exposome record with no particulate endpoint until the publication says otherwise. analyze_endpoints not run: observational, not a new interventional registration."
  }
 }
