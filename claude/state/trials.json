@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 27,
+ "trials": 28,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -131,6 +131,15 @@
    "hits": 1,
    "kept": 1,
    "note": "First topical hit since the W37 zero week. No-term control returns 1,024 registry-wide updates for this Monday, so the registry is fully active. NCT07817836 (IDEA, University of Pavia) is an observational exposome study with personal passive sampling, n=151; accumulated at 27 trials. analyze_endpoints not run -- it is observational and already COMPLETED, not a new interventional registration. Surface in the W38 weekly (2026-09-13..2026-09-19), noting the absent PM2.5 outcome measure."
+  },
+  {
+   "window": "2026-09-15 -> 2026-09-15",
+   "queried": "2026-09-16",
+   "source": "ClinicalTrials.gov MCP connector, search_trials + analyze_endpoints",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5' x AREA[LastUpdatePostDate]RANGE[2026-09-15,2026-09-15]",
+   "hits": 1,
+   "kept": 1,
+   "note": "NCT07713264 (VISIONS, Stanford, interventional, n=50, outdoor workers). analyze_endpoints run per protocol: all three registered endpoints are psychosocial scales, no PM or air-quality measure. Accumulated; surface in W38 weekly."
   }
  ],
  "NCT05867381": {
@@ -277,7 +286,7 @@
   "start_date": "2026-09-15",
   "last_update": "2026-08-12",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV₁ Z-score at 40 months"
+   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },
@@ -326,5 +335,36 @@
   "primary_completion_date": "2025-10-30",
   "completion_date": "2025-11-17",
   "note": "Outdoor urban workers (police, taxi drivers, dustmen) vs indoor office controls, personal passive diffusion samplers worn 5 consecutive working days. Primary outcome is blood DNA methylation; secondary is epigenetic-clock biological age; leukocyte telomere length and serum CCL2/CXCL8/CXCL10 among the others. CAVEAT for this watch: the brief summary names PM2.5 among the exposures, but EVERY listed personal-exposure outcome measure is gas-phase or VOC (O3, NO2, SO2, benzene, toluene, ethylbenzene, xylenes, naphthalene, C9 aromatics) -- there is no registered PM2.5 outcome. Treat as an exposome record with no particulate endpoint until the publication says otherwise. analyze_endpoints not run: observational, not a new interventional registration."
- }
+ },
+ "NCT07713264": {
+  "first_seen": "2026-09-15",
+  "title": "VISIONS: Voices Illuminating Solutions for Outdoor Workers Needs and Safety",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": [
+   "NA"
+  ],
+  "sponsor": "Stanford University",
+  "enrollment": 50,
+  "conditions": [
+   "Air Pollution Exposure"
+  ],
+  "interventions": [
+   "Receive education on heat and air quality health risks",
+   "Participate in Photovoice and climate health risk education"
+  ],
+  "start_date": "2026-09-25",
+  "primary_completion_date": "2028-12-31",
+  "locations_count": 1,
+  "endpoints_analyzed": true,
+  "primary_endpoint": "Change in self-efficacy, Individual Community-Related Empowerment (ICRE) 18-item scale, baseline / post-activity / 6 months",
+  "secondary_endpoints": [
+   "Social Cohesion and Self-Efficacy scale (6 items)",
+   "Climate Change Hope Scale (11 items)"
+  ],
+  "note": "Registered under condition Air Pollution Exposure but NO air-quality, PM or exposure outcome measure exists in the protocol -- every registered endpoint is a psychosocial scale (empowerment, social cohesion, climate hope). Second consecutive topical hit whose PM framing is not carried by any measured PM variable (cf. NCT07817836, 14 Sep). Surface in the W38 weekly with that caveat."
+ },
+ "windows_count": 15,
+ "stored_records": 11,
+ "counter_note": "DEFECT 2026-09-15: d['trials'] is a running tally (28) that does NOT equal the number of stored NCT records (11). Earlier runs incremented the counter without persisting every record. Reconcile before the W38 weekly consumes this file."
 }

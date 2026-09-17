@@ -524,6 +524,15 @@ design_group.update({
     "Prospective tissue biomonitoring series": "Observational - cross-sectional",
     "Qualitative / ethnographic study": "Observational - cross-sectional",
 })
+# 2026-09-15: one new label. The Nat Microbiol pneumococcal study fits no archive design
+# -- it is neither a cohort nor an acute time-series but a Bayesian spatiotemporal model
+# over 19 years of national surveillance jointly with 4,350 pathogen genomes, and the
+# estimand is a lag structure that varies by serotype. Filing it under "Ecological panel"
+# would have hidden the genomic stratification that is the whole result. Every other
+# record this issue reused an archive label, per the canonicalise-on-write rule above.
+design_group.update({
+    "Bayesian spatiotemporal model": "Modelling / inventory",
+})
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):

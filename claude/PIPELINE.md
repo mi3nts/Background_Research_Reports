@@ -2545,3 +2545,71 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the September
   monthly); abstract retry list gained six DOIs. `.git/lk.*` accumulation, mount EPERM,
   manual cleanup.
+
+## Run 2026-09-15 (built 2026-09-16 19:3x--20:0x CDT) — daily 15 Sep
+
+- 22:00 rule: run started 19:31 on 16 Sep, so the newest buildable date was 15 Sep.
+  `last_entry_date` was 2026-09-14, one owed day, no gap, no rollup owed (W38 closes Sat
+  19 Sep). **22 in scope**, 9 effects, 12 pp, 0 errors, **0 overfull hboxes**.
+- **`--post` compiled a stale `build/digest.tex` and then overwrote the authored issue
+  file with it.** The first `--post` shipped a PDF carrying 14 Sep prose under 15 Sep
+  figures, and `cp build/digest.tex issues/digest_<date>.tex` destroyed the file authored
+  into `issues/`. `run_all.py:15` states the contract plainly — **author into
+  `build/digest.tex`, never into `issues/`**; `issues/` is an output, not an input. The
+  11 Sep note ("--post does not author digest.tex") understated this: it does not merely
+  fail to author, it actively clobbers. Recovered by re-authoring; 25 min lost.
+- **The DOI gate caught three Consensus duplicates that title screening called new** —
+  Yaqoob IEEE Access, Zhivkov Atmosphere (Sofia transfer), and Gómez Sensors (Bogotá
+  T640X). The last is the **second consecutive issue** removing that same record: it
+  shipped 3 Aug under a rewritten title, was removed 14 Sep, and Consensus re-surfaced it
+  again today. Consensus recall on this axis is now 4/10 title-duplicates + 3/10
+  DOI-duplicates = **7 of 10 already held**; only 2 were net-new (Wathore AAQR, Komiljon).
+- **First issue in weeks whose forest plot is carried by PM.** 9 interval-bearing
+  estimates, **8 of them PM exposure-response** — breaking the 13-of-50 run of PM-less
+  forest plots. Lancet Oncol wildfire vs non-wildfire per-1 µg/m3 HRs (1.0782 vs 1.0171)
+  are non-overlapping; recorded with the caveat that median wildfire PM2.5 is 0.28 µg/m3
+  against 8.11, so the per-unit coefficient is extrapolated and the per-SD ordering
+  reverses. Both scales stated in the entry rather than the flattering one alone.
+- **Proof caught one count and two near-blank pages.** (1) f2 caption said five endpoint
+  classes hold one record each; the chart reads **six**. **Tenth consecutive issue where a
+  count or superlative failed its check** — the check is now the single highest-yield step
+  in the run. (2) Page 7 held the Lahore entry alone (92% empty) from a `\clearpage` before
+  the Sensing band; removed, and Lahore + the 4 Sensing records now fill the page.
+  (3) Page 2 held 1--3 orphan lines of the exec brief. Three rounds of line-shaving each
+  removed exactly as many lines as the reflow gave back — **shaving does not converge on an
+  orphan; take the structural break**. Fixed with a `\clearpage` after the Signal box:
+  p1 = masthead + metrics + signal, p2 = the whole brief. Same lesson as 13/14 Sep.
+- Geography **tied**, not led: China 7 and Global/multi-region 7. Caption written as a tie
+  after the 13 Sep failure of exactly this claim.
+- **`trials.json` counter defect found.** `d["trials"]` read 27 while only **11 NCT
+  records** are actually stored — earlier runs incremented the tally without persisting the
+  record. Restored to 28 (+1 for NCT07713264) and added `stored_records` and
+  `counter_note` keys. **Reconcile before the W38 weekly consumes this file.**
+- Trial watch: NCT07713264 (VISIONS, Stanford, interventional, n=50, outdoor workers).
+  `analyze_endpoints` run: all three endpoints are psychosocial scales (ICRE empowerment,
+  social cohesion, climate hope) and **no PM or air-quality measure exists in the
+  protocol** — second consecutive topical hit whose PM framing no measured variable carries.
+- **arXiv broke in a new way: HTTP 406 Not Acceptable, empty body.** Distinct from the
+  empty-`submittedDate` behaviour logged 28 Jul; the unfiltered relevance query itself now
+  fails, so the leg contributed nothing. Likely a UA/Accept-header rejection — worth one
+  fix attempt next run. OpenAlex HTTP 429 again. Europe PMC 40 (mostly off-topic MDPI),
+  Crossref-by-ISSN 57, PubMed 30 unique across both legs and both clients (connector found
+  4 the harvester missed, harvester 7 the connector missed — **neither client alone is
+  sufficient**).
+- **`update_state.py` defaults to today, not the issue date.** Run bare it looked for
+  `corpus/2026-09-16.json` and crashed; `metrics.csv` had no 15 Sep rows until it was
+  re-run as `update_state.py 2026-09-15`. Pass the date explicitly. After the fix:
+  **396 rows, 0 malformed** — ninth consecutive issue confirming the KNOWN DEFECT note in
+  the task file is **stale**.
+- 4 records **held** (kept out of `seen.json`): MoAE low-cost sensor calibration
+  (`10.1016/j.atmosenv.2026.122358`, tier-A pickup), CTM-InMAP Punjab, SW-Europe dust/sea
+  salt, Build Environ breathing-zone sensor placement. All four same-day Elsevier deposits
+  with no abstract in Crossref, EPMC, Semantic Scholar, Consensus or Scholar Gateway.
+  Scholar Gateway returned **entirely off-topic Wiley content** for a targeted title query
+  — its corpus appears Wiley-only and it is not a general abstract-recovery route.
+- One new design label (`Bayesian spatiotemporal model`), registered in `plots.py` in the
+  same edit; every other label reused the archive. Still open: no first-author affiliation
+  field; `ENDPOINT_CANON` Cancer/Oncologic split (only Cancer present today);
+  `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the September
+  monthly); `trials.json` counter vs stored-record mismatch. `.git/lk.*` now ~132 files,
+  still undeletable (mount EPERM) — wants manual cleanup on a local checkout.
