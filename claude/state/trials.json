@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 28,
+ "trials": 12,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -140,6 +140,15 @@
    "hits": 1,
    "kept": 1,
    "note": "NCT07713264 (VISIONS, Stanford, interventional, n=50, outdoor workers). analyze_endpoints run per protocol: all three registered endpoints are psychosocial scales, no PM or air-quality measure. Accumulated; surface in W38 weekly."
+  },
+  {
+   "window": "2026-09-16 -> 2026-09-16",
+   "queried": "2026-09-17",
+   "source": "ClinicalTrials.gov MCP connector, search_trials + analyze_endpoints",
+   "filter": "condition='air pollution OR particulate matter OR wildfire smoke OR household air pollution' x AREA[LastUpdatePostDate]RANGE[2026-09-16,2026-09-16]",
+   "hits": 2,
+   "kept": 1,
+   "note": "2 hits. NCT07540000 (INTERLUNG, Johns Hopkins, Bhaktapur Nepal, PHASE4, n=800) was already stored from an earlier window and is a re-post, not a new registration; analyze_endpoints re-run confirms the endpoint set is unchanged and is entirely spirometric (pre-BD FEV1 z-score at 40 months, powered for 0.25 SD) plus SGRQ -- a genuine respiratory-outcome trial, the strongest in the accumulated set. NCT07793123 (Robertet SA, oral antioxidant vs placebo, skin radiance, n=60) is new and kept, but is air-pollution-adjacent only: no PM variable is measured. Third consecutive topical hit with no measured PM. Surface both in the W38 weekly (2026-09-13..09-19)."
   }
  ],
  "NCT05867381": {
@@ -286,7 +295,7 @@
   "start_date": "2026-09-15",
   "last_update": "2026-08-12",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
+   "Pre-bronchodilator FEV₁ Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },
@@ -364,7 +373,38 @@
   ],
   "note": "Registered under condition Air Pollution Exposure but NO air-quality, PM or exposure outcome measure exists in the protocol -- every registered endpoint is a psychosocial scale (empowerment, social cohesion, climate hope). Second consecutive topical hit whose PM framing is not carried by any measured PM variable (cf. NCT07817836, 14 Sep). Surface in the W38 weekly with that caveat."
  },
- "windows_count": 15,
- "stored_records": 11,
- "counter_note": "DEFECT 2026-09-15: d['trials'] is a running tally (28) that does NOT equal the number of stored NCT records (11). Earlier runs incremented the counter without persisting every record. Reconcile before the W38 weekly consumes this file."
+ "windows_count": 16,
+ "stored_records": 12,
+ "counter_note": "RECONCILED 2026-09-16. d['trials'] was a running tally (28) that had drifted from the number of persisted NCT records because earlier runs incremented it without writing the record. Both keys are now set to the actual count of stored NCT objects (12) and must be derived, never incremented, from here on. The 17 lost records are not recoverable from this file; the 15 window entries in d['windows'] are the audit trail of what was queried, and their 'kept' fields are the authoritative per-window counts.",
+ "NCT07793123": {
+  "first_seen": "2026-09-16",
+  "title": "Randomized Double-Blind Placebo-Controlled Trial Evaluating the Effect of an Oral Antioxidant Dietary Supplement on Skin Radiance in Women Exposed to Urban Air Pollution",
+  "status": "ACTIVE_NOT_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": [
+   "NA"
+  ],
+  "sponsor": "Robertet SA",
+  "enrollment": 60,
+  "conditions": [
+   "Healthy Women"
+  ],
+  "interventions": [
+   "Antioxidant Supplement",
+   "Placebo"
+  ],
+  "start_date": "2026-08-31",
+  "primary_completion_date": "2026-12",
+  "locations_count": 1,
+  "endpoints_analyzed": true,
+  "primary_endpoint": "Skin radiance by glossymeter, Day 0 to Day 90",
+  "secondary_endpoints": [
+   "Skin radiance (glossymeter D30; clinical scoring D0/30/90)",
+   "Skin homogeneity (VISIA CR5, chromameter)",
+   "Transepidermal water loss (Tewameter)",
+   "Skin glycation (AGEscanner)",
+   "Skin IL-8 assay"
+  ],
+  "note": "Third consecutive topical hit whose PM framing no measured variable carries. 'Urban air pollution' is an eligibility descriptor for the enrolled women, not an exposure that is measured, assigned or contrasted: every one of the eight endpoints is a dermatological or biophysical skin measure, there is no PM2.5 or AQI covariate, and the randomisation is on supplement vs placebo, not on exposure. Industry sponsor (Robertet SA, a fragrance and botanical-extract house); n=60, single site, 90 days. Record as an air-pollution-adjacent cosmetic-efficacy trial, not as PM evidence."
+ }
 }

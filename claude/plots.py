@@ -533,6 +533,27 @@ design_group.update({
 design_group.update({
     "Bayesian spatiotemporal model": "Modelling / inventory",
 })
+# 2026-09-16: five new labels, four of them because the causal-inference wing of the
+# burden literature has no archive label that survives contact with the method. An
+# instrumental-variable time-series pooled by random-effects meta-analysis and an
+# augmented synthetic control with ML weather normalisation are both quasi-experimental
+# designs over routinely collected data, but filing either under the existing
+# "Quasi-experimental (difference-in-differences)" would assert a DiD estimand that
+# neither paper uses; "Ecological" is the honest group for both. "Theoretical / physical
+# model" is the first purely analytical derivation in the archive -- no data are
+# generated, only evaluated against published observations -- and belongs with
+# Modelling / inventory rather than with any measurement group. "Randomised controlled
+# trial" is the plain label the archive somehow lacked: it held
+# "Cluster-randomised controlled trial" and "Randomised crossover chamber" but not the
+# unqualified parallel-arm case. "Biomonitoring + source apportionment" pairs a passive
+# biological sampler with receptor modelling and is a measurement campaign at heart.
+design_group.update({
+    "Instrumental-variable time-series + random-effects meta-analysis": "Ecological",
+    "Augmented synthetic control + weather normalisation": "Ecological",
+    "Theoretical / physical model": "Modelling / inventory",
+    "Randomised controlled trial": "Trial / intervention",
+    "Biomonitoring + source apportionment": "Measurement campaign",
+})
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):
@@ -771,6 +792,12 @@ geo_group = {
     # unmapped they would have pushed the Global / multi-region bar from 7 to 9 and made
     # an unusually well-localised day look unlocatable.
     "Benin": "Sub-Saharan Africa", "Lithuania": "Europe",
+    # added 2026-09-16: Israel (Haifa Bay industrial vs Tel Aviv control EBC
+    # biomonitoring). The archive carried Turkiye, Iran, Kuwait and Iraq into the
+    # Middle East & N. Africa group but never Israel, so this record would have been
+    # dropped into Global / multi-region and inflated that bar from 9 to 10 on a day
+    # when every single-site record is genuinely locatable.
+    "Israel": "Middle East & N. Africa",
     # added 2026-08-24: an ACP kinetic-modelling paper whose "field site" is a pooled
     # set of field and chamber growth-rate datasets across several continents. It is
     # genuinely multi-region rather than unlocatable, so it is named explicitly here

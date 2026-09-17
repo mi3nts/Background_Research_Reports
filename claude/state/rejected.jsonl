@@ -1258,3 +1258,35 @@
 {"issue": "2026-09-15", "doi": "10.3390/ijms27177839", "title": "Molecular Characterization of the Air Microbiome in a Zoological Garden", "reason": "out-of-scope", "note": "Bioaerosol microbiology; PM reported only as a site descriptor."}
 {"issue": "2026-09-15", "doi": "10.1155/ina/8884299", "title": "Adaptive Screening Stations: Transforming 20-Foot Shipping Containers for Contamination Control", "reason": "out-of-scope", "note": "Ventilation and pressure-differential design; no particulate measurement."}
 {"issue": "2026-09-15", "doi": "10.5194/acp-26-13001-2026", "title": "Efficient formation of aqueous secondary organic aerosols from OH reaction with fenchol, borneol, menthol", "reason": "out-of-scope", "note": "Aqueous-phase reaction kinetics; no ambient PM, monitoring or exposure link."}
+{"date": "2026-09-16", "doi": "10.3389/fpubh.2026.1882030", "title": "Ambient PM2.5 and hemorrhagic stroke, Yancheng", "reason": "duplicate: DOI in seen.json"}
+{"date": "2026-09-16", "doi": "10.1371/journal.pone.0347073", "title": "LASSO reduced-form CMAQ, South Korea", "reason": "duplicate: DOI in seen.json"}
+{"date": "2026-09-16", "doi": "10.1016/j.canep.2026.103232", "title": "Ambient PM2.5 and cancer incidence, Nigeria", "reason": "duplicate: DOI in seen.json"}
+{"date": "2026-09-16", "doi": "10.3390/s26175519", "title": "Agentic LLM adaptive sampling, low-power IoT", "reason": "duplicate: DOI in seen.json"}
+{"date": "2026-09-16", "doi": "10.2147/jaa.s483101", "title": "Extreme cold and paediatric asthma visits", "reason": "duplicate: DOI in seen.json"}
+{"date": "2026-09-16", "doi": "10.1136/jech-2025-225491", "title": "Environmental exposure and suicide, SR/MA", "reason": "duplicate: DOI in seen.json"}
+{"date": "2026-09-16", "doi": "10.3389/fpubh.2026.1940025", "title": "Spatiotemporal urban PM10 and population exposure", "reason": "duplicate: DOI in seen.json"}
+{"date": "2026-09-16", "doi": "10.1016/s1470-2045(26)00295-0", "title": "Wildfire PM2.5 and lung-cancer survival", "reason": "duplicate: DOI in seen.json (shipped 2026-09-15)"}
+{"date": "2026-09-16", "doi": "", "title": "Wildland fire emission sampling at Fishlake National Forest using a UAS", "reason": "out of window: EPMC AGR record, pubYear 2021 retro-indexed into a 2026-09-16 CREATION_DATE window"}
+{"date": "2026-09-16", "doi": "", "title": "Toward refined estimates of ambient PM2.5 exposure: outdoor-to-indoor transport model", "reason": "out of window: EPMC AGR record, pubYear 2014 retro-indexed into a 2026-09-16 CREATION_DATE window"}
+{"date": "2026-09-16", "doi": "10.1021/acs.est.6c00095", "title": "Vertical aerosol structure matters: improving the AOD-PM2.5 link", "reason": "out of window: Crossref created 2026-05-08; Consensus has no entry-date filter"}
+{"date": "2026-09-16", "doi": "10.1016/j.scitotenv.2026.181915", "title": "Winter inversions and summer smoke: season-dependent PM2.5 modelling, Montana", "reason": "out of window: Crossref created 2026-05-27, issued 2026-07"}
+{"date": "2026-09-16", "doi": "10.5194/egusphere-2025-5824", "title": "Synergistic fusion of AOD over India, UK vs RK-ML", "reason": "out of window: egusphere preprint created 2025-12-23"}
+{"date": "2026-09-16", "doi": "10.1371/journal.pclm.0000780", "title": "City-scale calibration of a low-cost PM2.5 network, Bucharest", "reason": "duplicate: shipped 2026-08-30 (Blaga et al.)"}
+{"date": "2026-09-16", "doi": "", "title": "Recalibration of low-cost O3 and PM2.5 sensors, Augsburg", "reason": "duplicate: title match in corpus 2026-08-05"}
+{"date": "2026-09-16", "doi": "", "title": "Enhancing accuracy of indoor air quality sensors via AutoML calibration", "reason": "duplicate: title match in corpus 2026-08-01"}
+{"date": "2026-09-16", "doi": "", "title": "Global and regional calibration of PurpleAir sensors", "reason": "duplicate: title match in corpus 2026-07-29 / 2026-08-02"}
+{"date": "2026-09-16", "doi": "", "title": "Evaluating and calibrating low-cost air quality sensors in contrasting aerosol regimes", "reason": "duplicate: title match in corpus 2026-09-14"}
+{"date": "2026-09-16", "doi": "", "title": "Development of a high-resolution PM2.5 model in Taiwan using LCS and satellite", "reason": "duplicate: title match in corpus 2026-07-26"}
+{"date": "2026-09-16", "doi": "", "title": "Enhancing PM2.5 exposure assessment: urban-rural balanced framework, China", "reason": "duplicate: title match in corpus 2026-07-29 / 2026-08-02"}
+{"date": "2026-09-16", "doi": "10.1016/j.atmosenv.2026.122359", "title": "Long-term black carbon quantification and sources, Moscow", "reason": "held: same-day Elsevier deposit, no abstract in Crossref/EPMC/Semantic Scholar; tier-A candidate for re-pickup"}
+{"date": "2026-09-16", "doi": "10.1016/j.apr.2026.103200", "title": "Hybrid imputation + multi-target random forest AQ forecasting in data-constrained settings", "reason": "held: same-day Elsevier deposit, no abstract anywhere; core sensing relevance, re-pickup"}
+{"date": "2026-09-16", "doi": "10.1016/j.buildenv.2026.115268", "title": "Indoor CO2 heterogeneity and the impact of sensor location on IAQ classification", "reason": "held: same-day Elsevier deposit, no abstract; sensor-siting relevance, re-pickup"}
+{"date": "2026-09-16", "doi": "10.2166/wst.2026.264", "title": "Coal fly ash for heavy metal removal in contaminated waters", "reason": "off scope: aqueous sorbent chemistry, no airborne PM"}
+{"date": "2026-09-16", "doi": "10.2166/wst.2026.245", "title": "N2O modeling in wastewater treatment", "reason": "off scope: not airborne PM"}
+{"date": "2026-09-16", "doi": "10.1007/s10661-026-15819-8", "title": "Andrographis paniculata responses to atmospheric dust stress", "reason": "off scope: plant physiology, no exposure or monitoring endpoint"}
+{"date": "2026-09-16", "doi": "10.1099/jmm.0.002203", "title": "Influenza A and respiratory viruses vs acute respiratory presentations", "reason": "off scope: viral surveillance, air pollution not an exposure variable"}
+{"date": "2026-09-16", "doi": "10.1016/j.envpol.2026.129166", "title": "Transport of aged microplastics in river confluence zones", "reason": "off scope: aquatic transport"}
+{"date": "2026-09-16", "doi": "10.3390/atmos17090900", "title": "RETRACTED: comparison of recently proposed causes of climate change", "reason": "excluded: retraction notice"}
+{"date": "2026-09-16", "doi": "", "title": "Corrigendum to prenatal/childhood air pollution and brain connectivity", "reason": "excluded: corrigendum, not a primary record"}
+{"date": "2026-09-16", "doi": "10.3390/s26010280", "title": "Laboratory evaluation of ARMIE, a portable SPS30-based low-cost sensor node", "reason": "out of window: Crossref created 2026-01-02; Consensus has no entry-date filter"}
+{"date": "2026-09-16", "doi": "10.1002/met.70228", "title": "Transferability of ML calibration models for low-cost PM2.5 sensors across African cities", "reason": "out of window: Crossref created 2026-08-22, issued 2026-07"}

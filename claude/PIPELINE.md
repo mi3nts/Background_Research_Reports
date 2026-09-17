@@ -2613,3 +2613,69 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the September
   monthly); `trials.json` counter vs stored-record mismatch. `.git/lk.*` now ~132 files,
   still undeletable (mount EPERM) — wants manual cleanup on a local checkout.
+
+## 2026-09-16 — 21 records, window 2026-09-16 → 2026-09-16 (12 pp)
+- Legs: PubMed 16 unique (health 15 / sensing 1); **the local harvester was a strict
+  superset of the connector this run (16 vs 14)**, reversing the 15 Sep finding that
+  neither client alone was sufficient — so "run both" is still right, but the asymmetry
+  flips run to run and is not a property of either client. Europe PMC 56. Crossref-by-ISSN
+  **66**, and it carried all four remote-sensing records (2×AMT, ACP, Atmosphere) — the
+  single highest-value leg today and the whole justification for the by-journal design.
+  OpenAlex HTTP 429 again.
+- **arXiv 406 is not a header problem.** Three variants tested in one shot — HTTPS with an
+  Atom `Accept`, a browser UA, and plain HTTP — **all three returned 406 identically**.
+  That closes the "worth one fix attempt" item from 15 Sep: the leg cannot be repaired in
+  `harvest.py` and should be routed through a connector
+  (`…paper-search-mcp…_search_arxiv` is available and untested) or retired.
+- **Europe PMC AGRICOLA retro-indexes — new source defect.** Two AGR records returned
+  inside a `CREATION_DATE:[2026-09-16 TO 2026-09-16]` window resolve to **pubYear 2021
+  (Fishlake UAS emission sampling) and 2014 (Hodas outdoor-to-indoor transport model)**.
+  Both were on-topic enough to have been summarised on title alone. **A pubYear check is
+  now mandatory on every AGR record before it is read.** The MED/PMC/PPR sources in the
+  same response were all correctly dated.
+- **Consensus yield was zero for the first time.** 20 records over two sweeps: **7 already
+  in the archive** on a title grep against `state/corpus/`, and **all 5 that survived
+  title screening failed a Crossref `created` check** — 2026-01-02 (ARMIE/SPS30),
+  2026-05-08 (Rogozovsky ES&T vertical structure), 2026-05-27 (Swanson STOTEN Montana),
+  2026-08-22 (Adong African transferability), 2025-12-23 (Gouda India AOD fusion, still an
+  egusphere preprint). Consensus has no entry-date filter, so **date-check every result
+  before summarising**; the 15 Sep observation that recall is degrading is now a zero.
+- **Proof caught three caption errors and one orphan — eleventh consecutive issue where a
+  count or claim failed its check.** (1) f1 said five bands hold a single record; the chart
+  reads three-hold-one and three-hold-two. (2) f4 asserted the *Exposure assessment* row
+  carries no health endpoint — it carries exactly one (Fireman, Haifa EBC, respiratory) —
+  and that mechanistic toxicology is wholly experimental, which is false this issue
+  (1 of its 2 is a systematic review). Both were archive boilerplate pasted forward
+  without re-checking against today's corpus: **standing observations must be re-verified,
+  not inherited.** (3) f5 said four of six estimates cross unity; three do.
+  (4) The *Neuro / mental health* band header rendered alone at the foot of p8 — fixed with
+  a `\clearpage`, not by shaving.
+- **Four intra-digest `\clearpage`s removed** after the first build produced 13 pages with
+  four half-empty ones; 12 pages now, body pages at 5.6–5.9k chars against 2.9–4.8k before.
+  Separately, removing the `\clearpage` *after the Signal box* was tested and reverted —
+  it left a 237-char orphan page. Keep that one.
+- `\band{…}{Musk}` failed the first compile: **`Musk` is a `plots.py` SUBCOL name, not a
+  preamble colour.** `mktable.BANDCOL` maps both measurement-side bands to `Amber`.
+  Band colours come from `BANDCOL`, never from `SUBCOL`.
+- Five new design labels (IV time-series + RE meta-analysis; augmented synthetic control +
+  weather normalisation; theoretical / physical model; randomised controlled trial;
+  biomonitoring + source apportionment) and one geography key (**Israel** → Middle East &
+  N. Africa) registered in `plots.py` in the same edit as the records. The archive had
+  `Cluster-randomised controlled trial` but not the plain parallel-arm label.
+- **`trials.json` reconciled.** `d["trials"]` (28) replaced by the derived count of
+  persisted NCT records (**12**); counter must be derived, never incremented, from here.
+  The 17 lost records are unrecoverable from this file — `d["windows"]` (16 entries, with
+  `kept` per window) is the audit trail. Window 2026-09-16: 2 hits, 1 kept. NCT07793123
+  (Robertet SA, oral antioxidant vs placebo, skin radiance, n=60) is the **third
+  consecutive topical hit with no measured PM variable** — all 8 endpoints dermatological.
+- 3 records **held** (out of `seen.json`): Moscow long-term BC (`…atmosenv.2026.122359`),
+  APR hybrid-imputation multi-target RF (`…apr.2026.103200`), BuildEnv indoor CO2
+  sensor-siting (`…buildenv.2026.115268`). Same-day Elsevier deposits, no abstract in
+  Crossref/EPMC/Semantic Scholar — **second consecutive issue losing tier-A candidates to
+  this pattern**. Semantic Scholar returned an empty body for all three, so it is not a
+  recovery route for same-day Elsevier either.
+- `metrics.csv` 405 rows, 0 malformed — tenth consecutive issue confirming the KNOWN DEFECT
+  note in the task file is stale. Still open: no first-author affiliation field;
+  `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element
+  `LIFECOURSE` (will corrupt the September monthly); `.git/lk.*` ~132 files, undeletable
+  (mount EPERM), wants manual cleanup on a local checkout.
