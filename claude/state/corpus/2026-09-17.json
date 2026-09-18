@@ -1,0 +1,318 @@
+{
+ "date": "2026-09-17",
+ "entry_window": "2026-09-17 -> 2026-09-17",
+ "PAPERS": [
+  {
+   "pmid": "42753438",
+   "doi": "10.1016/j.jhazmat.2026.143612",
+   "journal": "J Hazard Mater",
+   "short": "Zhang et al. 2026",
+   "title": "Adaptive robotic sensing for exposure-oriented mapping of hazardous airborne particle dispersion in indoor environments.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Adaptive mobile-robot sampling + CFD validation",
+   "pm": "PM2.5 mapped by a mobile optical sensor on a robot; Kernel DM+V field reconstruction",
+   "geo": "Laboratory",
+   "endpoint": "Instrument performance",
+   "tier": "A",
+   "n": "CFD virtual sampling plus a full-scale mechanically ventilated aerosol release. The claim worth taking is the region-of-interest one: adaptive sampling cut normalised reconstruction error in the high-concentration ROI to 9.5% at 65 points against 18.3% for uniform scanning, and cut mean error at four fixed reference locations from 59.7% to 34.3% in the physical experiment. Note the honest counter-result the authors report - optimised uniform scanning beat adaptive sampling on final global NRMSE (2.5% vs 3.0%), so the gain is purely in plume localisation, not in field-wide accuracy. Single ventilation condition, single room, no repeat releases, so the 34.3% figure has no dispersion around it. Directly relevant to mobile-node deployment: it quantifies what a moving sensor buys over a fixed sparse array for exactly the transient indoor plume case fixed networks miss."
+  },
+  {
+   "pmid": "42746047",
+   "doi": "10.3389/fbioe.2026.1871869",
+   "journal": "Front Bioeng Biotechnol",
+   "short": "Front Bioeng 2026",
+   "title": "Bionic breathing-type airway exposure system for inhalation exposure studies.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Laboratory instrument development",
+   "pm": "Branch-level particle deposition in a CT-derived airway replica under programmed breathing waveforms",
+   "geo": "Laboratory",
+   "endpoint": "Instrument performance",
+   "tier": "B",
+   "n": "A 3D-printed trachea-to-G3 airway replica with millisecond breathing control (five waveforms, oral/nasal/combined routes), CO2 exchange and multi-zone exposure interfaces. Validation recovers the expected right-dominant airflow split (right main bronchus 51.6+/-0.1% vs left 48.4+/-0.1%) and separates deposition by breathing pattern (large-loop 78.0+/-1.6% vs small-loop 61.7+/-1.3%). BEAS-2B cells showed dose-dependent cytotoxicity; hiPSC-derived lung models gave selective inflammatory responses. The weakness is that airflow-split fidelity is a low bar - it follows from the geometry, not the dynamics - and no comparison against in vivo human deposition data is offered, so anatomical realism is asserted rather than demonstrated. For sensing work it matters as a dosimetry bench: it converts a measured mass concentration into a branch-resolved deposited dose."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1007/s44408-026-00167-6",
+   "journal": "Aerosol Air Qual Res",
+   "short": "AAQR 2026",
+   "title": "A Sensor-Driven State-Space Framework for PM2.5-Informed Natural Ventilation Opportunities Under Coupled Pollution-Thermal-Humidity Constraints.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Monitoring-record analysis",
+   "pm": "Trailing 24-h mean PM2.5 from AirGradient low-cost nodes via OpenAQ, threshold 15 ug/m3 (WHO 2021 24-h AQG)",
+   "geo": "Southeast Asia",
+   "endpoint": "None (monitoring)",
+   "tier": "A",
+   "n": "Four residential communities - Kuala Lumpur, Bogor, Singapore and Palmerston (AU) - over 1 Jan to 1 Feb 2026, 724-744 hourly bins each. Crossing a sustained-PM2.5 screen with a T-RH envelope (24-30 C, RH <=65%) shows the two constraints are close to anti-correlated: clean-hour fractions were 14.5 / 34.3 / 30.8 / 97.4%, while standalone thermal feasibility ran 97.0 / 71.5 / 98.5 / 20.6%. The site with clean air has almost no comfortable hours and vice versa. Limits are real - one month, one season, four sites, uncalibrated AirGradient data taken as-is with no co-location against reference monitors, and fixed rather than locally derived thresholds. Still the most directly usable result of the issue for LCS network design: it turns a raw sensor feed into an actionable control signal."
+  },
+  {
+   "pmid": "42750753",
+   "doi": "10.1038/s44528-026-00030-5",
+   "journal": "Commun Health",
+   "short": "Xia et al. 2026",
+   "title": "Short-term associations between air pollution and nocturnal cough frequency.",
+   "sub": "Respiratory & allergic",
+   "design": "Multi-city time-series + random-effects meta-analysis",
+   "pm": "City-day ambient PM2.5, daily mean",
+   "geo": "Global / multi-region",
+   "endpoint": "Respiratory",
+   "tier": "A",
+   "n": "Nightly cough counts inferred by an AI cough detector from Sleep Cycle audio, aggregated to city-day across 32 cities in 12 countries over ~500 days. Each 10 ug/m3 PM2.5 was associated with a 2.4% rise in nocturnal cough frequency (RR 1.024, 95% CI 1.013-1.035), with a non-linear exposure-response showing increases at low concentrations and a visible excursion during a wildfire episode. Two threats dominate: the cough detector's accuracy is never validated against a clinical reference in this paper, so outcome misclassification is unquantified, and Sleep Cycle users are a self-selected smartphone-owning population whose composition varies by city. Relevant as proof that a consumer sensor stream can act as a population respiratory endpoint alongside a PM network."
+  },
+  {
+   "pmid": "42754519",
+   "doi": "10.3904/kjim.2025.423",
+   "journal": "Korean J Intern Med",
+   "short": "Korean J Intern Med 2026",
+   "title": "Health effects of air pollution on chronic respiratory diseases.",
+   "sub": "Respiratory & allergic",
+   "design": "Narrative review",
+   "pm": "Outdoor and indoor air pollutants, life-course framing; no single exposure metric",
+   "geo": "Not stated",
+   "endpoint": "Respiratory",
+   "tier": "C",
+   "n": "Narrative synthesis of the epidemiological evidence tying air pollution to incidence, exacerbation and mortality across asthma, COPD, interstitial lung disease and lung cancer, then a section on non-pharmacological exposure-reduction measures at individual and societal level. No search strategy, no inclusion criteria, no quantitative pooling, so it cannot be read as evidence in its own right - the value is the intervention section, which is the part least covered by the recent primary literature. Included as a reference point for what the field currently treats as settled rather than for any new estimate. The interventions discussed (purifiers, mask use, activity rescheduling) all presuppose exposure information at a spatial resolution regulatory networks do not provide."
+  },
+  {
+   "pmid": "42754193",
+   "doi": "10.1016/j.envpol.2026.129182",
+   "journal": "Environ Pollut",
+   "short": "Hubei Memory & Aging 2026",
+   "title": "Associations between compound heat exposure and cognitive impairment and the potential mediating role of plasma sphingolipid metabolism.",
+   "sub": "Neuro / mental health",
+   "design": "Repeated-measures cohort + metabolite mediation",
+   "pm": "ERA5-Land hourly temperature, CMDSC humidity; PM2.5 and O3 from the Tracking Air Pollution dataset as covariates",
+   "geo": "China",
+   "endpoint": "Cognitive",
+   "tier": "B",
+   "n": "3,617 non-dementia adults aged 65+ in the Hubei Memory and Aging Cohort, repeatedly assessed 2016-2025. Excess cumulative temperature in heatwaves was linearly related to cognitive impairment for daytime-only, nighttime-only and compound heatwaves; temperature-humidity indices gave near-U-shaped curves with Humidexmean best fitting (OR 2.18, 95% CI 1.31-3.64). Among 77 plasma sphingolipid measures, only the ceramide C22:0 / sphingomyelin C26:0 ratio mediated, and at -14.3% - a suppression effect, not an explanatory pathway, which the abstract soft-pedals. PM2.5 enters only as a covariate, so this is a heat paper that adjusts for particles rather than a PM paper. Testing 77 metabolites for a single mediation signal invites a multiplicity problem that is not addressed."
+  },
+  {
+   "pmid": "42746256",
+   "doi": "10.1016/j.bbih.2026.101317",
+   "journal": "Brain Behav Immun Health",
+   "short": "Corrigendum 2026",
+   "title": "Corrigendum to 'Prenatal and childhood air pollution exposure, cellular immune biomarkers, and brain connectivity in early adolescence'.",
+   "sub": "Neuro / mental health",
+   "design": "Metadata only (no abstract)",
+   "pm": "Corrects 10.1016/j.bbih.2024.100799; original exposure was modelled prenatal and childhood PM2.5",
+   "geo": "Not stated (metadata only)",
+   "endpoint": "Neurodevelopmental",
+   "tier": "C",
+   "n": "Corrigendum notice only; the record carries no abstract beyond the pointer to the 2024 article it corrects, and the deposited text does not state which results changed. Logged rather than summarised because the corrected paper sits squarely on a line this digest tracks - modelled early-life PM2.5 against immune biomarkers and adolescent brain connectivity - and because a correction to that specific inference chain is worth flagging to anyone citing the 2024 original. No effect estimate can be extracted from the notice, and the direction and magnitude of the correction remain unknown until the corrected version is read directly. Treat any citation of the 2024 estimates as provisional until then."
+  },
+  {
+   "pmid": "42754186",
+   "doi": "10.1016/j.annepidem.2026.110291",
+   "journal": "Ann Epidemiol",
+   "short": "Nelin et al. 2026",
+   "title": "Associations of short-term changes in air pollution with spontaneous preterm birth: A time-stratified case-crossover analysis.",
+   "sub": "Reproductive & developmental",
+   "design": "Time-stratified case-crossover + DLNM",
+   "pm": "Daily high-resolution modelled PM2.5, week before delivery, three lag parameterisations",
+   "geo": "United States",
+   "endpoint": "Reproductive",
+   "tier": "A",
+   "n": "A well-powered null: 109,735 spontaneous preterm births in Michigan (2003-2020) and 5,321 in metropolitan Philadelphia (2008-2020), analysed with nested daily lags, averaged lags and DLNMs, all temperature-adjusted, with likelihood ratio tests comparing linear-lag and DLNM fits. No significant association emerged in either cohort under any specification, with point estimates near null and narrow intervals - the narrowness is what makes this informative rather than merely underpowered. The exposure is modelled, not measured, so non-differential error at the residential address would bias exactly toward this result, and the authors do not quantify that error. Case-crossover also removes only time-invariant confounding. Worth pairing with the positive short-term literature rather than reading alone."
+  },
+  {
+   "pmid": "42753436",
+   "doi": "10.1016/j.jhazmat.2026.143550",
+   "journal": "J Hazard Mater",
+   "short": "COPDB Beijing 2026",
+   "title": "Associations between air pollution and cardiorespiratory function and metabolic indicators: New insights into mixture exposures.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Panel study",
+   "pm": "Continuously measured PM2.5, UFP and accumulation-mode counts, SO2/NO/NO2/O3, and PM2.5 carbon, metal and water-soluble ion components",
+   "geo": "China",
+   "endpoint": "Metabolic",
+   "tier": "A",
+   "n": "112 older adults in the Beijing COPDB study across 410 follow-up visits. Single-pollutant BKMR flagged SO2 and UFPs for fasting blood glucose, PM2.5 Ca2+ for heart rate, and O3 and UFPs for reduced peak expiratory flow. The novel step is removing those pollutants and re-fitting: the residual mixture associations got stronger, with the gaseous group over a 14-day window tied to a 19.1% FBG increase (10.8-27.4%) and a 16.0% PEF decrease (8.7-23.3%). That is a real warning about single-pollutant screening, but the design invites it - dropping the strongest predictors and finding the rest matter more is partly a collinearity artefact, and n=112 with 410 visits is thin for pairwise interactions across a dozen-plus exposures. Component-resolved measurement is the strength."
+  },
+  {
+   "pmid": "42751656",
+   "doi": "10.1093/jrsssc/qlag047",
+   "journal": "J R Stat Soc Ser C Appl Stat",
+   "short": "Multi-Tree 2026",
+   "title": "Multi-Tree Model for Precision Environmental Health with Longitudinally Assessed Mixture Exposure.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Method / algorithm",
+   "pm": "Weekly-average gestational PM2.5 and maximum daily temperature, distributed-lag structure",
+   "geo": "United States",
+   "endpoint": "Birth weight for gestational age z-score",
+   "tier": "B",
+   "n": "A Bayesian ensemble of tree triplets - two interacting binary tree types - that estimates individualised and subgroup distributed-lag effects for mixture exposures assessed repeatedly, with built-in modifier selection over a high-dimensional candidate set. Applied to Colorado birth registry data it recovers a PM2.5-birth weight association concentrated in mothers under 25 with low income. The applied finding is the weaker half: effect-modification by maternal age and income is already well established, so it functions as a sanity check rather than a discovery, and no interval is reported for the subgroup estimate in the abstract. The methodological contribution is the part worth using - most distributed-lag mixture methods return one population-average curve, and this returns a per-individual one."
+  },
+  {
+   "pmid": "42754200",
+   "doi": "10.1016/j.envpol.2026.129161",
+   "journal": "Environ Pollut",
+   "short": "Sichuan Basin 2026",
+   "title": "Topographic Modulation of High-Temperature Ozone Suppression: Core-Periphery Threshold Structure in the Sichuan Basin.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Observational + ML",
+   "pm": "Hourly O3 from 22 city monitoring stations, 2020-2024, with ERA5 meteorology",
+   "geo": "China",
+   "endpoint": "Air quality / concentration",
+   "tier": "C",
+   "n": "High-temperature suppression - ozone flattening or falling under extreme heat rather than rising with the usual climate penalty - appeared in 16 of 18 analysed Sichuan Basin cities. The critical suppression temperature fell from 36.8 C in the basin interior to 33.8 C at the periphery, and the decline rate above it reached -9.65 ug/m3/C in the inner zone, about 2.1x the outer. SHAP attributions put boundary-layer ventilation ahead of cloud and circulation terms. Ozone, not PM, so it sits at the edge of scope; included because the same basin ventilation structure governs PM accumulation and because the threshold-by-topography result is a caution against fitting a single regional temperature response. Five years of data and a closed basin limit transfer elsewhere."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-13083-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "ORACLES 4STAR 2026",
+   "title": "Subseasonal and spatial variability of biomass burning aerosol radiative properties observed over the Southeast Atlantic during ORACLES.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Aircraft measurement campaign",
+   "pm": "4STAR sky-scan retrievals of single scattering albedo and absorption Angstrom exponent for biomass burning aerosol above cloud",
+   "geo": "Sub-Saharan Africa",
+   "endpoint": "None (aerosol physics)",
+   "tier": "B",
+   "n": "All three ORACLES deployment months (2016-2018) of 4STAR sky-scans over the Southeast Atlantic smoke-over-stratocumulus regime. Single scattering albedo rises through the burning season - the plume brightens - and the absorption Angstrom exponent analysis gives no evidence of a brown carbon contribution, so the authors attribute it to composition change rather than a change of aerosol type. Comparison against a 30-year climatology from 31 southern African AERONET sites shows the same seasonal direction over land and sea. Sampling is the caveat the paper handles well: the September SSA dip is shown to be an artefact of 2016's more southerly flight tracks. Three campaign years cannot separate a seasonal cycle from interannual variability, which they concede."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-13121-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Delhi N2O5 2026",
+   "title": "Enhanced nocturnal N2O5-ClNO2 chemistry in Delhi.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field campaign",
+   "pm": "Nocturnal N2O5 and ClNO2 mixing ratios; particulate chloride 4.7 ug/m3 nighttime mean",
+   "geo": "India",
+   "endpoint": "None (aerosol chemistry)",
+   "tier": "B",
+   "n": "Early-spring 2023 measurements in Delhi against a winter 2019 baseline. Nocturnal N2O5 and ClNO2 averaged 13 and 80 ppt, roughly double 2019, and the authors attribute this to nighttime NO falling from 124+/-25 to 44+/-9 ppb, which removes the main N2O5 sink. Particulate chloride at 4.7 ug/m3 is among the highest reported anywhere and drives efficient N2O5-to-ClNO2 conversion, raising NO3 and Cl radical production and organic oxidation. The comparison is the weak joint - different seasons (spring vs winter) and different years are confounded, so the NO-decline explanation competes with a straightforward seasonal one. Matters for PM because this chemistry feeds nitrate and secondary organic mass, the fraction low-cost optical sensors systematically mishandle under high humidity."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129167",
+   "journal": "Environ Pollut",
+   "short": "China NOx isotopes 2026",
+   "title": "Driving factors of atmospheric nitrogen oxides emissions and pollution in China.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "delta15N of particulate and precipitation nitrate across eight Chinese regions, 2001-2022",
+   "geo": "China",
+   "endpoint": "None (source apportionment)",
+   "tier": "C",
+   "n": "Twenty-two years of nitrate isotope data put fossil-fuel combustion at ~53% of national NOx and non-fossil sources (biomass burning, microbial N cycling) at 47%. The paper is unusually candid about what it cannot resolve: regional source-fraction differences 'lack statistical significance', and the isotope-derived NOx trend is a non-significant 7% decline (p=0.19), which the authors say precludes robust inference of emission-deposition decoupling - even though a 35% post-2011 drop in surface NO2 against only 19% less nitrate deposition is the headline. A NOy deposition saturation threshold of 15.0 kg N/ha/yr is proposed. Relevant to PM as nitrate is a major secondary component; the saturation claim rests on a fitted inflection with no uncertainty stated."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129177",
+   "journal": "Environ Pollut",
+   "short": "PRD limona ketone 2026",
+   "title": "Ground-gridded observations of high concentrations of ambient limona ketone suggest overlooked limonene oxidation in subtropical megacities.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Kinetic model + field validation",
+   "pm": "Limona ketone as an observational constraint on limonene oxidation; secondary organic aerosol precursor chemistry",
+   "geo": "China",
+   "endpoint": "None (formation chemistry)",
+   "tier": "C",
+   "n": "Large-scale gridded plus intensive diurnal measurements of limona ketone across the Pearl River Delta found unusually high concentrations during spring and autumn ozone episodes. A parameterised inversion using the product as a constraint implies more limonene precursor than inventories carry, with a pronounced nighttime enhancement; modelled production is OH-dominated while the loss pathway shifts from OH by day to the nitrate radical at night. The inference is indirect by construction - precursor abundance is inverted from a product, so it inherits every error in the assumed yield and loss rates, and the authors only claim the nocturnal enhancement is robust 'across plausible parameter ranges' rather than quantifying it. Episode-specific sampling limits it further. Matters as biogenic SOA is an under-constrained part of urban PM mass."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c02914",
+   "journal": "Environ Sci Technol",
+   "short": "US net-zero multi-model 2026",
+   "title": "A Multi-Model Assessment of the Air Quality and Health Impacts of U.S. Energy Decarbonization.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Model intercomparison",
+   "pm": "Modelled ambient PM2.5 from energy-sector precursor emissions under net-zero scenarios to 2050",
+   "geo": "United States",
+   "endpoint": "Mortality / longevity",
+   "tier": "A",
+   "n": "Three independent US energy system models (US-REGEN, GCAM-USA, REPEAT) run to 2050 agree on direction but not magnitude: PM2.5-attributable mortality rates fall 28-73% against 2017 under net-zero, despite population growth and ageing. The spread is the result. It tracks how each model allocates CO2 mitigation across sectors, with carbon dioxide removal deployment in 2050 varying threefold and setting how much residual fossil combustion - and therefore precursor emission - remains. A sensitivity analysis shows plausible increases in non-energy emissions, wildfire in particular, can offset the energy-sector benefit outright. Concentration-response functions are shared across the three models, so the reported spread understates total uncertainty: model structure varies, epidemiological input does not."
+  },
+  {
+   "pmid": "42750359",
+   "doi": "10.1002/advs.77778",
+   "journal": "Adv Sci",
+   "short": "EOTBL cancer 2026",
+   "title": "Global Burden and Temporal Trends of Early-Onset Tracheal, Bronchial, and Lung Cancer: An Analysis of GLOBOCAN 2022 and GBD 2023 Data.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Ecological (GLOBOCAN secondary analysis)",
+   "pm": "Ambient particulate matter pollution as a GBD comparative-risk-assessment attributable risk factor",
+   "geo": "Global / multi-region",
+   "endpoint": "Cancer",
+   "tier": "B",
+   "n": "Early-onset tracheal, bronchial and lung cancer caused 137,705 incident cases and 72,646 deaths globally in 2022, with the highest incidence in Eastern Asia and in High-HDI settings, but disproportionate mortality in Medium- and Low-HDI regions - the familiar detection-versus-survival split. The PM-relevant claim is that ambient particulate pollution emerges as a leading attributable risk in rapidly developing economies such as China, where active smoking dominates in countries like Russia. That attribution is GBD machinery, not new observation: it inherits GBD's exposure surfaces and its concentration-response assumptions wholesale, and no uncertainty interval accompanies the risk-factor ranking here. Registry coverage is also weakest in exactly the Low-HDI regions carrying the mortality burden."
+  },
+  {
+   "pmid": "42750629",
+   "doi": "10.4081/monaldi.2026.4216",
+   "journal": "Monaldi Arch Chest Dis",
+   "short": "Campania review 2026",
+   "title": "Air pollution and chronic respiratory diseases: a narrative review including a case study in Campania (Italy).",
+   "sub": "Burden, policy & mitigation",
+   "design": "Narrative review",
+   "pm": "Regional PM2.5, PM10, NO2 and O3 concentrations 2015-2024 against national averages",
+   "geo": "Italy",
+   "endpoint": "Respiratory",
+   "tier": "C",
+   "n": "Narrative review of mechanism (oxidative stress, chronic inflammation, epithelial damage, airway remodelling) attached to a Campania case study, one of the Italian regions most persistently above national average. Between 2015 and 2024 national PM10 and PM2.5 fell slightly while Campania stayed high, with measurable respiratory impact and marked intra-regional disparity that the authors tie to socioeconomic gradient. Closing sections argue for machine learning and satellite-based forecasting to improve monitoring, and for environmental justice targeting. No systematic search, no pooled estimate, and the regional numbers are cited rather than re-analysed. Included for the inequality framing and because the monitoring-gap argument it makes is the case for dense low-cost networks in exactly such regions."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Nocturnal cough frequency\nper 10 ug/m3 PM2.5",
+   "exposure": "Ambient PM2.5",
+   "est": 1.024,
+   "lo": 1.013,
+   "hi": 1.035,
+   "metric": "RR",
+   "src": "32 cities, 12 countries, ~500 d"
+  },
+  {
+   "label": "Cognitive impairment\nper Humidexmean (compound heat)",
+   "exposure": "Compound heat",
+   "est": 2.18,
+   "lo": 1.31,
+   "hi": 3.64,
+   "metric": "OR",
+   "src": "3,617 adults 65+, Hubei"
+  },
+  {
+   "label": "Fasting blood glucose\ngaseous mixture, 14-d window",
+   "exposure": "Gaseous pollutant mixture",
+   "est": 1.191,
+   "lo": 1.108,
+   "hi": 1.274,
+   "metric": "Ratio",
+   "src": "112 adults, 410 visits, Beijing"
+  },
+  {
+   "label": "Peak expiratory flow\ngaseous mixture, 14-d window",
+   "exposure": "Gaseous pollutant mixture",
+   "est": 0.84,
+   "lo": 0.767,
+   "hi": 0.913,
+   "metric": "Ratio",
+   "src": "112 adults, 410 visits, Beijing"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 3,
+   "note": "115,056 spontaneous\npreterm births; Colorado\ngestational PM2.5 vs\nbirth weight; BBI-H\nprenatal arm"
+  },
+  {
+   "n": 1,
+   "note": "Childhood arm of the\nBBI-H corrigendum only\n- no primary\npaediatric record"
+  },
+  {
+   "n": 1,
+   "note": "Early-adolescent brain\nconnectivity, via the\nsame corrigendum; no\nprimary record"
+  },
+  {
+   "n": 0,
+   "note": "No working-age or\noccupational record\nin this window"
+  },
+  {
+   "n": 2,
+   "note": "3,617 Hubei adults 65+;\n112 older adults over\n410 visits, Beijing\nCOPDB panel"
+  }
+ ]
+}

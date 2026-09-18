@@ -554,6 +554,17 @@ design_group.update({
     "Randomised controlled trial": "Trial / intervention",
     "Biomonitoring + source apportionment": "Measurement campaign",
 })
+# 2026-09-17 issue: three design strings written in the same edit as the records that
+# use them. Only three, because the other fourteen labels this issue were rewritten to
+# reuse names the archive already owned -- the 2026-09-15 log's "invented fresh wording
+# for designs the archive already had a canonical name for" failure, caught before the
+# build this time by diffing the issue's design set against design_group up front.
+design_group.update({
+    "Adaptive mobile-robot sampling + CFD validation": "Measurement campaign",
+    "Repeated-measures cohort + metabolite mediation": "Observational - cohort",
+    "Multi-city time-series + random-effects meta-analysis": "Observational - acute",
+})
+
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
 def dgrp(d):
