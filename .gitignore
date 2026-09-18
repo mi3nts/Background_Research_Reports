@@ -49,3 +49,4 @@ claude/_mk_*.py
 claude/_screen_*.py
 claude/_fetchabs_*.py
 claude/_rej_*.py
+.git/lk_trash/

@@ -2679,3 +2679,65 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element
   `LIFECOURSE` (will corrupt the September monthly); `.git/lk.*` ~132 files, undeletable
   (mount EPERM), wants manual cleanup on a local checkout.
+
+## 2026-09-18 — 17 records, window 2026-09-18 → 2026-09-18 (10 pp); + 2026-09-17 state close-out
+- **The 17 Sep run had built its PDF and corpus but never closed out.** `seen.json`,
+  `metrics.csv`, `last_run.json` and this log were all untouched, and nothing was
+  committed. Ran `update_state.py 2026-09-17` first (18 records registered) and committed
+  that issue separately before harvesting today — otherwise today's screen would have
+  re-admitted the whole 17 Sep corpus. **Check `last_entry_date` against the newest
+  `state/corpus/*.json` at the start of every run**; they disagreed by one day here.
+- Legs: PubMed 3 (local harvester); the PubMed connector returned 4 PMIDs of which 3 were
+  already in the local harvest, so the connector added **one** record net. Europe PMC 44.
+  Crossref-by-ISSN 24 and again the highest-value leg — AMT, ACP and four ES&T records.
+  OpenAlex 429, arXiv 406, both unchanged.
+- **Europe PMC PMC source retro-indexes too — the AGRICOLA defect is not AGR-specific.**
+  Four PMC-sourced records arrived inside a `CREATION_DATE:[2026-09-18 TO 2026-09-18]`
+  window with firstPublicationDate 2025-07-23, 2026-01-01, 2026-07-17 and 2026-08-28.
+  All four were on-topic enough to have been summarised on title alone. `_screen_0918.py`
+  still only gates AGR on pubYear; **the month gate was applied by hand this run and
+  should be moved into the screen script**: drop any abstract-less PMC record whose
+  firstPublicationDate precedes the issue month, the same rule the arXiv leg already uses.
+- **New abstract-recovery route: EPMC `fullTextXML`.** Two records that returned
+  `abstractText` of length 0 from EPMC `resultType=core` had full abstracts in
+  `/{PMCID}/fullTextXML` under `.//abstract` — Ghana mining (PMC13583179) and the cement
+  meta-analysis (PMC13581693), plus CCL22 (PMC13582549) on a looser title query. Same
+  route also yields the **DOI** for PMC records that carry none in `core`
+  (`article-id[@pub-id-type="doi"]`), which cleared three `check_dois.py` NO-DOI failures.
+  Add this as step 2.5 in `_fetchabs`, before the Crossref fallback.
+- **The same-day-deposit abstract gap is no longer Elsevier-only.** Four records carried as
+  `Metadata only (no abstract)`: a **BMC** deposit (Part Fibre Toxicol, hESC osteogenic
+  differentiation), an **ACS** deposit (ES&T Perspective), and the usual two Elsevier
+  (Atmos Environ, Build Environ). Crossref, EPMC core, EPMC fullTextXML and the BMC
+  landing page all returned nothing for the BMC one.
+- **Consensus zero for the second consecutive issue.** 10 results: 5 already in the
+  archive on a title grep, and all 5 survivors failed the Crossref `created` check
+  (2026-01-17 to 2026-06-15). **Scholar Gateway returned entirely off-topic Wiley content
+  for a targeted abstract query — third confirmation** that its corpus is Wiley-only and
+  it is not an abstract-recovery route. Stop querying it for that purpose.
+- **Proof caught two caption errors — twelfth consecutive issue where a count failed its
+  check.** (1) f2 said "Respiratory outcomes lead with three": the panel plots the
+  **canonicalised** endpoint, and `ENDPOINT_CANON` collapses Aerosol chemistry, Emissions
+  / policy, Source / policy and Not applicable into `No health endpoint`, which is **9 of
+  17** — more than half the issue, not a third. **Write f2-right captions against the
+  canonical bucket, never against the raw `endpoint` strings.** (2) f3 attributed the four
+  unlocatable records to "three same-day deposits and one bioinformatic analysis"; it is
+  two metadata-only deposits, one bioinformatic analysis and one industrial modelling
+  paper that never names its plant.
+- **Two intra-digest `\clearpage`s removed** after the first build produced 11 pages with
+  three 40%-empty ones; 10 pages now, body pages 5.4–6.7k chars against 3.9–4.8k before.
+  No band header orphaned. Masthead said "PubMed entry window" on a run whose records come
+  mostly from Crossref and EPMC — changed to "Entry window".
+- Six design labels and one geography key (**Hungary** → Europe) registered in `plots.py`
+  in the same edit as the records. `Self-controlled design` is the one the archive
+  genuinely lacked — a within-person contrast applied to a *2-year average* exposure.
+- **`.git` had five stale lock files**, not just `index.lock`: `HEAD.lock`,
+  `packed-refs.lock`, `REBASE_HEAD.lock`, `objects/maintenance.lock`. `git commit` reports
+  only the first one it hits, so clearing `index.lock` alone still failed. Move
+  `$(find .git -name '*.lock')` aside as a set before any git operation on this mount.
+- `metrics.csv` 419 rows, 0 malformed — eleventh consecutive issue confirming the KNOWN
+  DEFECT note in the task file is stale. Still open: no first-author affiliation field;
+  `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element
+  `LIFECOURSE` (will corrupt the September monthly); PMC month gate not yet in
+  `_screen_*.py`; `.git/lk.*` ~132 files plus a new `lk_trash/`, undeletable (mount
+  EPERM), wants manual cleanup on a local checkout.

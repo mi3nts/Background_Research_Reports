@@ -1,0 +1,322 @@
+{
+ "date": "2026-09-18",
+ "entry_window": "2026-09-18 -> 2026-09-18",
+ "PAPERS": [
+  {
+   "pmid": "42754883",
+   "doi": "10.1186/s12940-026-01334-3",
+   "journal": "Environ Health",
+   "short": "Kim et al. 2026",
+   "title": "Residential indoor air monitoring to assess long-term exposure to air pollution in susceptible populations for epidemiology: overview and early findings.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Long-term indoor monitoring campaign",
+   "pm": "Indoor and matched outdoor PM2.5 plus 36 chemical components, RTI MicroPEM, 5-day runs in each of four seasons, hourly resolution",
+   "geo": "South Korea",
+   "endpoint": "No health endpoint",
+   "tier": "A",
+   "n": "130 older adults with idiopathic pulmonary fibrosis, Seoul Metropolitan Area, 2021-23. Indoor hourly PM2.5 averaged 14.90 ug/m3 (SD 36.12) against 20.44 (61.63) outdoors, higher in winter (20.17) than summer (11.19) and by day than night, with hourly patterns that contrast rather than track outdoors. Infiltration factors from median indoor/outdoor ratios of sulfur, nickel and iron were 51-70%. Source contrasts were large: pets 24.09 vs 13.35, humidifiers 19.19 vs 13.16, smokers 16.76 vs 11.79, cooking 15.14 vs 10.96 ug/m3. Standard deviations exceed every mean, so the distribution is episodic and a seasonal mean is a poor summary; five days per season is also thin support for a long-term exposure claim, and no health estimate is reported yet. The transferable piece for distributed sensing is the non-contact protocol - instruments redeployed by postal mail for repeat visits, which is how an unattended network is actually serviced at scale."
+  },
+  {
+   "pmid": "42754610",
+   "doi": "10.1038/s41467-026-76974-7",
+   "journal": "Nat Commun",
+   "short": "Zhang et al. 2026",
+   "title": "Cardiopulmonary hospitalization risks from wildfire-specific and non-wildfire PM2.5 in 20 US states.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Self-controlled design",
+   "pm": "Two-year average wildfire-specific vs non-wildfire PM2.5, modelled and source-separated, per 1 ug/m3",
+   "geo": "USA",
+   "endpoint": "Cardiorespiratory",
+   "tier": "A",
+   "n": "Twenty US states, 2006-19, self-controlled. Per 1 ug/m3, wildfire-specific PM2.5 carried higher cardiopulmonary hospitalisation risk than non-wildfire PM2.5 across every outcome: 10% for heart failure to 16% for asthma, against 4.7% for COPD to 8.5% for hypertension. Associations were stronger among minorities, metropolitan residents, those with fewer years of education and more deprived communities. The toxicity contrast is the contribution - equal mass is not equal hazard, which undercuts the mass-only exposure metric every regulatory network and every low-cost sensor reports. Two limits matter. No confidence intervals are given in the abstract for any of the eight headline risks, so precision cannot be judged from the published summary. And wildfire-specific PM2.5 is itself a modelled quantity; the toxicity difference is therefore conditional on a smoke attribution step whose own error is not propagated into these estimates."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/amt-19-5951-2026",
+   "journal": "Atmos Meas Tech",
+   "short": "Bai et al. 2026",
+   "title": "Role of low-level jet evolution in vertical aerosol redistribution: a Doppler wind lidar study over East China.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Remote sensing / lidar retrieval",
+   "pm": "Coherent Doppler wind lidar backscatter, spectral width and shear profiles against surface PM10",
+   "geo": "China",
+   "endpoint": "No health endpoint",
+   "tier": "A",
+   "n": "Two dust episodes over Hefei. In April 2021 the northwesterly low-level-jet core descended from 2.5 km to 0.3 km then re-ascended to 1.0 km while surface PM10 peaked at 410 ug/m3, accompanied by vertical wind shear above 0.04 s-1 and increased spectral width at the lower jet interface and a downward shift of the enhanced-backscatter layer. In March 2022 a stable jet core and persistent lower-tropospheric stability held aerosol aloft; the PM10 peak came at 16:00 LT, about 8 h after inferred frontal onset. Two redistribution regimes, then: rapid downward mixing during jet descent, versus delayed surface impact from a decoupled elevated layer. This is mechanism illustration from two cases, not climatology, and the inertial-oscillation attribution rests on hodograph rotation alone. It is also the cleanest statement of why a surface-only sensor network can read clean air for hours while a loaded layer sits directly overhead."
+  },
+  {
+   "pmid": "42754785",
+   "doi": "10.1007/s11356-026-38237-2",
+   "journal": "Environ Sci Pollut Res Int",
+   "short": "San Juan-Reyes et al. 2026",
+   "title": "Short-term effects of ambient air pollution exposure on respiratory hospitalizations among children in the State of Mexico.",
+   "sub": "Respiratory & allergic",
+   "design": "Case-crossover",
+   "pm": "Daily PM2.5, PM10, CO, NO2 and O3 from fixed monitoring stations; primary window lag 1-7 cumulative",
+   "geo": "Mexico",
+   "endpoint": "Respiratory",
+   "tier": "B",
+   "n": "266 children under five hospitalised for respiratory disease at one regional IMSS hospital in the Toluca Valley Metropolitan Zone during 2023, analysed by matched case-crossover with conditional logistic regression adjusted for temperature and humidity. PM2.5 was associated with admission for viral pneumonia, bacterial pneumonia and asthma; CO with bronchiolitis; municipality-level associations were heterogeneous, concentrated in San Mateo Atenco, Metepec and Calimaya. The abstract reports direction only - not one odds ratio, confidence interval or unit appears anywhere - so the effect size is unverifiable from the published summary. 266 events split across four diagnoses, five pollutants, several lag windows and three municipalities is also thin, and exposure comes entirely from fixed stations with no personal or indoor component in a valley where indoor sources are likely to dominate a young child's dose."
+  },
+  {
+   "pmid": "42751338",
+   "doi": "10.2147/copd.s627458",
+   "journal": "Int J Chron Obstruct Pulmon Dis",
+   "short": "Chen et al. 2026",
+   "title": "Residential Green and Blue Space, the Natural Environment, Genetic Susceptibility, and Incident COPD.",
+   "sub": "Respiratory & allergic",
+   "design": "Prospective cohort",
+   "pm": "Residential green space, blue space and natural environment at 300 m and 1000 m buffers; no PM term reported",
+   "geo": "UK",
+   "endpoint": "Respiratory",
+   "tier": "B",
+   "n": "385,502 UK Biobank participants. At the 1000 m buffer, higher green space gave HR 0.87 (95% CI 0.83-0.92) and higher natural-environment exposure HR 0.83 (0.78-0.87) for incident COPD; blue space was weak and inconsistent. A COPD polygenic risk score did not modify either association on the multiplicative or the additive scale, and the natural-environment association held across every genetic stratum. The absence of gene-environment interaction argues the protective signal is not running through a genetically susceptible subgroup. The inferential problem is what is missing: no air-pollution term is reported. Residential greenness is inversely correlated with traffic PM2.5 and NO2 almost everywhere, so an unadjusted greenness-COPD association is a plausible restatement of a pollution-COPD association, and nothing in the abstract separates them."
+  },
+  {
+   "pmid": "",
+   "doi": "10.64898/2026.09.15.26363130",
+   "journal": "medRxiv (preprint)",
+   "short": "Temporao et al. 2026",
+   "title": "Daily associations between outdoor air pollution and sleep quality.",
+   "sub": "Neuro / mental health",
+   "design": "Panel study with ambulatory EEG",
+   "pm": "Daytime outdoor PM2.5, NO2 and O3 aggregated from city monitoring stations; same-day and previous-day",
+   "geo": "Hungary",
+   "endpoint": "Neuro / mental health",
+   "tier": "B",
+   "n": "Budapest Sleep, Traits and Experiences Study: seven days per participant with daily activity and sleep-quality reports plus home EEG giving sleep efficiency, %REM, onset latency and total sleep time. Linear mixed models with a participant random intercept adjusted for age, sex, BMI, education, weekday, season, temperature, physical activity, screen exposure and travel. Day-1 ozone predicted lower day-2 sleep efficiency and poorer perceived quality, surviving multiple-comparison correction, multi-pollutant models and sensitivity analyses for depression, insomnia and chronotype. No robust day-to-night association emerged for PM2.5 or NO2 - a null worth recording. The result is however confounded with exposure-model quality: city-aggregated station data give near-zero within-city contrast, and misclassification is far worse for spatially heterogeneous PM2.5 than for ozone. The pollutant that survived is the one the exposure metric measures best. Sample size is not stated."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3389/fpubh.2026.1887654",
+   "journal": "Front Public Health",
+   "short": "Khan et al. 2026",
+   "title": "Exposure to cement industry emissions and respiratory health outcomes: a global systematic review and meta-analysis from 2000 to 2025.",
+   "sub": "Occupational & indoor",
+   "design": "Systematic review + random-effects meta-analysis",
+   "pm": "Cement dust and cement-plant emissions, occupational and residential; no harmonised gravimetric metric across studies",
+   "geo": "Global / multi-region",
+   "endpoint": "Respiratory",
+   "tier": "B",
+   "n": "Eighteen observational studies published 2000-2025, registered as PROSPERO CRD420251268913. Random-effects pooling gave standardised mean differences of -0.71 for FEV1, -0.56 for FVC and -0.57 for FEV1/FVC in exposed groups; chronic cough was significantly more common, while other respiratory symptoms were elevated but not significant. Occupational exposure produced greater FEV1 impairment than residential exposure, which is the expected dose ordering and the most reassuring internal check available. Reporting is the weakness: no confidence interval, no I-squared and no prediction interval accompanies any pooled estimate in the abstract, so neither precision nor between-study heterogeneity can be assessed. SMDs pooled across studies using different spirometry reference equations and no common dust metric also cannot be read as a dose-response."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-13175-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Yu et al. 2026",
+   "title": "Continental pollutants modulate organic nitrogen and light absorption of marine organic aerosols over East Asian marginal seas.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field campaign / shipborne",
+   "pm": "Shipboard aerosol organic nitrogen, water-soluble and water-insoluble fractions, ON/OC ratio and light absorption over three seasons",
+   "geo": "China",
+   "endpoint": "Aerosol chemistry",
+   "tier": "B",
+   "n": "Shipboard sampling over the Yellow and Bohai Seas in spring, summer and autumn. Aerosol organic nitrogen averaged 0.35 +/- 0.25 ug N m-3, 4-60% of total nitrogen depending on season and highest in autumn. Anthropogenic secondary pollutants - aged biomass burning and secondary nitrate - supplied 36-76% of ON, 46-83% of the water-soluble and 39-89% of the water-insoluble fraction; in spring dust accounted for 55% of ON and above 80% during a dust episode, while summer carried a marine biogenic component. Organic-aerosol light absorption rose with both ON concentration and ON/OC ratio, so absorption capability per unit carbon increased with nitrogen enrichment rather than tracking mass. Three cruises give no annual coverage and the apportionment is receptor modelling on a small campaign. The sensing consequence is direct: an optical instrument calibrated on one absorption regime is misapplied when composition shifts under continental outflow."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c09135",
+   "journal": "Environ Sci Technol",
+   "short": "Huang et al. 2026",
+   "title": "Interpretable Spatiotemporal Coupling Network for Robust Emission Prediction and Implicit Mechanism Mining in Sludge Gasification.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Deep-learning forecasting",
+   "pm": "Continuous industrial stack monitoring of PM, SO2 and NOx from a sludge-gasification plant, with feature-level optimal time lags",
+   "geo": "Not stated",
+   "endpoint": "Emissions / policy",
+   "tier": "B",
+   "n": "PISTC-Net couples a directed process topology with per-feature optimal time lags. On industrial-scale data it reached R2 of 91.18% for SO2, 80.37% for NOx and 78.09% for PM. Under stress tests simulating abrupt sensor failure it continued to track emission trajectories by exploiting learned process inertia, and its hierarchical attention shifted from upstream thermochemical zones for SO2 to whole-process attention for PM, flagging disturbance propagation 5-8 minutes before emission peaks. PM is the worst-predicted of the three species, and that is the informative result: particle formation runs through nucleation, condensation and agglomeration paths that a topology-plus-lag representation captures least well, whereas gas-phase sulfur is nearly a mass balance. Single plant, no external validation site, and interpretability is inferred from attention maps, which are a saliency artefact rather than a causal readout. The sensor-failure robustness is the reusable part."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c10086",
+   "journal": "Environ Sci Technol",
+   "short": "Massimi et al. 2026",
+   "title": "Urban Green Walls under Traffic Stress: Linking the Elemental Composition of Particulate Matter Deposition to Plant Physiological and Gene Expression Responses.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Biomonitoring + source apportionment",
+   "pm": "Multi-elemental fractionation of PM deposited on green-wall foliage - insoluble, soluble and whole-leaf fractions - with SEM-EDS, over one year",
+   "geo": "Italy",
+   "endpoint": "Source / policy",
+   "tier": "B",
+   "n": "A nine-species green wall at a high-traffic urban site, followed for a year. PCA on the insoluble fraction of Al, Cr, Cs, Fe, Mn, Mo, Rb, Sb, Sn, Ti and Zn identified Photinia x fraseri as the highest and most stable retainer of non-exhaust traffic particles and Pteris vittata as the lowest and least stable, with SEM-EDS showing up to 100-fold higher retention in the former. The methodological finding is the one that travels: only insoluble elements traced deposition reliably, because soluble and whole-leaf fractions are dominated by endogenous pools of nutrients and of tracers such as Cs and Rb, so conventional whole-leaf digestion overestimates deposition. Photinia showed marked seasonal physiological and transcriptional modulation; Pteris did not. One wall at one site, with no paired ambient PM mass measurement, so species are ranked against each other but no removal flux is quantified and no air-quality benefit can be inferred."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1002/hsr2.73246",
+   "journal": "Health Sci Rep",
+   "short": "Assan et al. 2026",
+   "title": "Evaluation of Ambient Air Particulate Matter, Urine Arsenic Levels and the Effect on Residents Health in an Artisanal Mining Community and an Incorporated Mining Community in Ghana.",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional (comparative community)",
+   "pm": "Ambient PM2.5 and PM10 by Modular Air Quality System; urinary arsenic by atomic absorption spectrophotometry",
+   "geo": "Ghana",
+   "endpoint": "Other clinical",
+   "tier": "C",
+   "n": "65 residents each from an artisanal and an incorporated mining community in Ghana, all resident at least five years. PM2.5 in the artisanal community and PM10 in the incorporated community exceeded the thresholds the authors cite; more artisanal residents fell in the at-risk band for kidney disease by urinary albumin-creatinine ratio (p = 0.006), while the incorporated community showed poorer general health status. Several problems limit this to descriptive value. n = 130 total, analysis is chi-square on dichotomised uACR with no confounder adjustment and no exposure-response, and neither PM concentrations nor urinary arsenic levels are numerically reported in the abstract despite being the two measured exposures. The 35 and 70 ug/m3 figures quoted as WHO standards are the 2005-era interim targets, not the 2021 guideline values of 15 and 45 ug/m3 for 24-hour PM2.5 and PM10, so the exceedance framing understates how far these communities sit above guidance."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3389/fpubh.2026.1906298",
+   "journal": "Front Public Health",
+   "short": "Gao et al. 2026",
+   "title": "Integrative transcriptomic analysis identifies CCL22-associated immune signatures in air pollution-related atopic dermatitis.",
+   "sub": "Mechanistic toxicology",
+   "design": "Integrative transcriptomics + murine validation",
+   "pm": "No measured PM; pollutant-associated gene sets taken from a toxicogenomic database and intersected with atopic-dermatitis transcriptomes",
+   "geo": "Not stated",
+   "endpoint": "Other clinical",
+   "tier": "C",
+   "n": "Shared pollutant-atopic dermatitis targets were enriched in cytokine and chemokine signalling, pattern-recognition receptor activity, IL-17 signalling and Toll-like receptor pathways. A framework over 15 algorithms and 175 combinations selected plsRglm + AdaBoost, reporting AUC 0.963 in training and 1.000, 0.909 and 0.966 in three validation cohorts, and yielding a ten-gene signature (CCL22, CCL5, CSF2, F2RL1, HRH4, ICAM1, IFNG, IL10, IL17A, IL18). CCL22 was upregulated in lesional samples, localised to dendritic cells and macrophages by single-cell data, and confirmed in DNFB-induced murine dermatitis. The exposure link is the weak joint: no particulate matter was measured or administered anywhere in the study, so air pollution enters only as a database annotation. An AUC of exactly 1.000 in a validation cohort indicates leakage or overfitting rather than performance, and DNFB is a contact hapten, not a particle. Hypothesis-generating only."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c06509",
+   "journal": "Environ Sci Technol",
+   "short": "Sunyer-Caldu 2026",
+   "title": "Beyond Blood and Urine: Decoding the Human Chemical Exposome across Matrices and Time.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Perspective / framework proposal",
+   "pm": "No measured PM; air positioned as one external matrix within a multi-matrix exposome design",
+   "geo": "Global / multi-region",
+   "endpoint": "Not applicable",
+   "tier": "C",
+   "n": "A Perspective arguing that high-resolution mass spectrometry can now profile thousands of chemical features per sample while study design has not kept pace - no investigation has yet combined external source monitoring, multi-matrix internal biomonitoring and toxicokinetic normalisation inside one longitudinal framework. Three elements are proposed: multi-matrix sampling extending beyond blood and urine to accumulation archives, developmental matrices and external media; a Unified Exposure Scale placing heterogeneous matrices on a common toxicokinetically normalised dosimetric axis; and a two-track hazard-prioritisation pipeline for uncharacterised features. No data and no validation. The Unified Exposure Scale is also circular at the point it matters most, since it needs toxicokinetic parameters that do not exist for the molecular dark matter it is meant to rank. Logged for how air monitoring is being positioned inside the Global Human Exposome Project."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1186/s12989-026-00701-9",
+   "journal": "Part Fibre Toxicol",
+   "short": "Vera-Colon et al. 2026",
+   "title": "Exposure to airborne fine particulate matter disrupts human embryonic stem cell osteogenic differentiation.",
+   "sub": "Mechanistic toxicology",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM composition, dose and collection route not recoverable from metadata",
+   "geo": "Not stated",
+   "endpoint": "Toxicological (in vitro)",
+   "tier": "C",
+   "n": "Metadata only. BMC deposited this DOI on 18 September with no abstract, and Crossref, Europe PMC core, Europe PMC fullTextXML and the publisher landing page all returned nothing on per-DOI retry - the first time this issue's gap has appeared on a BMC rather than an Elsevier deposit. Carried on title because skeletal development is an endpoint the PM literature has barely touched and a human-embryonic-stem-cell osteogenic model would be a genuinely new mechanistic line rather than another airway or endothelial assay. No finding is asserted here: neither the particle source, the dose, the exposure duration nor the direction of the reported disruption is verifiable from metadata. On the retry list for a later issue."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosenv.2026.122366",
+   "journal": "Atmos Environ",
+   "short": "Kalluri et al. 2026",
+   "title": "Long-term (2008-2024) analysis of black carbon aerosols over a semi-arid rain-shadow region in southern peninsular India: trends, wavelet analysis, machine learning approaches and source regions.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Black carbon, presumably aethalometer-derived; instrument, wavelength set and trend magnitudes not recoverable",
+   "geo": "India",
+   "endpoint": "Aerosol chemistry",
+   "tier": "C",
+   "n": "Metadata only; the expected same-day Elsevier deposit gap, with no abstract in Crossref, Europe PMC or PubMed on per-DOI retry. Carried on title because a 17-year single-site black-carbon record in a semi-arid rain-shadow setting is exactly the kind of long baseline that trend detection needs and that South Asian networks mostly lack, and because absorption-coefficient records are what constrain the optical-to-mass conversion every filter- and scattering-based instrument depends on. No trend, no magnitude and no source attribution is asserted here; the title names the methods, not the results. On the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115281",
+   "journal": "Build Environ",
+   "short": "Krajnc Pogacnik et al. 2026",
+   "title": "Selective real-time monitoring of respiratory droplets for indoor air safety in educational environments.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Respiratory-droplet detection; sensing principle, size range and selectivity mechanism not recoverable",
+   "geo": "Not stated",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Metadata only - Elsevier same-day deposit, abstract absent from Crossref, Europe PMC and PubMed on per-DOI retry. Retained because selective real-time discrimination of respiratory droplets against a background of ambient particles is the hard problem for any optical counter deployed indoors: a scattering sensor reports total number in a size bin and cannot by itself tell exhaled aerosol from resuspended dust, so any claimed selectivity mechanism is worth reading. Whether that selectivity is optical, chemical or inferential is not recoverable from the title, and no performance claim is asserted. On the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c05073",
+   "journal": "Environ Sci Technol",
+   "short": "Godri Pollitt 2026",
+   "title": "Beyond Inhalation: Air as an Integrative Matrix for Exposome Research.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "No measured PM; air framed as an exposome sampling matrix",
+   "geo": "Global / multi-region",
+   "endpoint": "Not applicable",
+   "tier": "C",
+   "n": "Metadata only. ACS deposited this DOI on 18 September without an abstract and no text was recoverable from Crossref, Europe PMC or PubMed on per-DOI retry. Carried because it is the second air-as-exposome-matrix Perspective in this same issue, alongside Sunyer-Caldu, which makes the pair an editorial signal rather than a coincidence: air sampling is being argued into the exposome programme as an integrative matrix rather than merely an inhalation route. No argument or claim is asserted here beyond what the title states. On the retry list."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Incident COPD\nhigher green space, 1000 m buffer",
+   "exposure": "Residential green space",
+   "est": 0.87,
+   "lo": 0.83,
+   "hi": 0.92,
+   "metric": "HR",
+   "src": "385,502 UK Biobank"
+  },
+  {
+   "label": "Incident COPD\nhigher natural environment, 1000 m",
+   "exposure": "Residential natural environment",
+   "est": 0.83,
+   "lo": 0.78,
+   "hi": 0.87,
+   "metric": "HR",
+   "src": "385,502 UK Biobank"
+  },
+  {
+   "label": "Asthma hospitalisation\nper 1 ug/m3 wildfire PM2.5",
+   "exposure": "Wildfire-specific PM2.5",
+   "est": 1.16,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "20 US states, 2006-19"
+  },
+  {
+   "label": "Heart failure hospitalisation\nper 1 ug/m3 wildfire PM2.5",
+   "exposure": "Wildfire-specific PM2.5",
+   "est": 1.1,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "20 US states, 2006-19"
+  },
+  {
+   "label": "Hypertension hospitalisation\nper 1 ug/m3 non-wildfire PM2.5",
+   "exposure": "Non-wildfire PM2.5",
+   "est": 1.085,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "20 US states, 2006-19"
+  },
+  {
+   "label": "COPD hospitalisation\nper 1 ug/m3 non-wildfire PM2.5",
+   "exposure": "Non-wildfire PM2.5",
+   "est": 1.047,
+   "lo": null,
+   "hi": null,
+   "metric": "RR",
+   "src": "20 US states, 2006-19"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "No prenatal or\ninfant-specific\nrecord; the Toluca\nseries includes\nunder-1s untabulated"
+  },
+  {
+   "n": 1,
+   "note": "266 children under 5\nhospitalised for\nrespiratory disease,\nToluca Valley"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent\nrecord in this\nwindow"
+  },
+  {
+   "n": 4,
+   "note": "385,502 UK Biobank;\n18-study cement-dust\nworker meta-analysis;\n130 Ghanaian miners;\nBudapest sleep panel"
+  },
+  {
+   "n": 1,
+   "note": "130 older adults with\nidiopathic pulmonary\nfibrosis, Seoul\nindoor monitoring"
+  }
+ ]
+}

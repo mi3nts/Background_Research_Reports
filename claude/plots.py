@@ -447,6 +447,20 @@ design_group.update({
 design_group.update({
     "Mendelian randomisation + TWAS": "Modelling / inventory",
 })
+# 2026-09-18 issue. Five labels written in the same edit as the records that use them.
+# "Self-controlled design" is the one the archive genuinely lacked: it carried
+# "Case-crossover" and "Time-stratified case-crossover" but no self-controlled design
+# applied to a *long-term* (2-year average) exposure, which is what the Nat Commun
+# wildfire record is. It groups with the acute designs because the identification
+# strategy is the same within-person contrast, not because the exposure window is short.
+design_group.update({
+    "Self-controlled design": "Observational - acute",
+    "Long-term indoor monitoring campaign": "Measurement campaign",
+    "Panel study with ambulatory EEG": "Observational - acute",
+    "Cross-sectional (comparative community)": "Observational - cross-sectional",
+    "Integrative transcriptomics + murine validation": "Experimental / toxicology",
+    "Perspective / framework proposal": "Review / synthesis",
+})
 # 2026-09-01 issue.
 design_group.update({
     "Aircraft measurement campaign": "Measurement campaign",
@@ -809,6 +823,11 @@ geo_group = {
     # dropped into Global / multi-region and inflated that bar from 9 to 10 on a day
     # when every single-site record is genuinely locatable.
     "Israel": "Middle East & N. Africa",
+    # added 2026-09-18: Hungary (Budapest 7-day ambulatory-EEG sleep panel). The archive
+    # carried Poland, Czech Republic, Bulgaria, Albania and Lithuania into Europe but
+    # never Hungary; unmapped, the only European record of the issue would have landed
+    # in Global / multi-region and left the Europe bar empty.
+    "Hungary": "Europe",
     # added 2026-08-24: an ACP kinetic-modelling paper whose "field site" is a pooled
     # set of field and chamber growth-rate datasets across several continents. It is
     # genuinely multi-region rather than unlocatable, so it is named explicitly here
