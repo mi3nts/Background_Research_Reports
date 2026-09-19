@@ -50,3 +50,8 @@ claude/_screen_*.py
 claude/_fetchabs_*.py
 claude/_rej_*.py
 .git/lk_trash/
+
+# per-issue scratch, same convention as _mk_/_screen_/_fetchabs_ above (added 2026-09-18 pm)
+claude/_authorpm.py
+claude/_pickup_*.py
+claude/issues/_*.bak

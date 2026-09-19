@@ -1,6 +1,6 @@
 {
  "date": "2026-09-18",
- "entry_window": "2026-09-18 -> 2026-09-18",
+ "entry_window": "2026-09-18 -> 2026-09-18 (full day; re-harvested 23:0x after a 10:33 partial run)",
  "PAPERS": [
   {
    "pmid": "42754883",
@@ -239,6 +239,188 @@
    "endpoint": "Not applicable",
    "tier": "C",
    "n": "Metadata only. ACS deposited this DOI on 18 September without an abstract and no text was recoverable from Crossref, Europe PMC or PubMed on per-DOI retry. Carried because it is the second air-as-exposome-matrix Perspective in this same issue, alongside Sunyer-Caldu, which makes the pair an editorial signal rather than a coincidence: air sampling is being argued into the exposome programme as an integrative matrix rather than merely an inhalation route. No argument or claim is asserted here beyond what the title states. On the retry list."
+  },
+  {
+   "pmid": "42759687",
+   "doi": "10.1016/j.biochi.2026.09.011",
+   "journal": "Biochimie",
+   "short": "Dulong et al. 2026",
+   "title": "Effects of fine particulate matter on neuroblastoma cell line: metabolic and lipid deregulations and their consequences on the onset of neurological diseases.",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "PM2.5, in vitro dosing; no harmonised mass concentration or duration reported",
+   "geo": "Global",
+   "endpoint": "Toxicological (in vitro)",
+   "tier": "C",
+   "n": "Narrative review built around the SH-SY5Y human neuroblastoma line as an in vitro neurodegeneration model. The proposed cascade runs mitochondrial damage to ER stress to oxidative stress to calcium dyshomeostasis to lipid dysregulation, converging on apoptosis and autophagy-dependent ferroptosis, with lipid peroxidation advanced as the emerging driver. No pooled estimate, no exposure-response and no dose metric: the review does not harmonise PM2.5 mass, source or exposure duration across the studies it assembles, and the in vitro doses it draws on generally sit far above ambient, so the chain is qualitative. It also concedes the in vitro-to-human translation gap it is built on. For distributed sensing the implication is specific - every mechanism it privileges is composition-dependent (redox-active metals, organic carbon), which a mass-only network cannot resolve."
+  },
+  {
+   "pmid": "42759460",
+   "doi": "10.1016/j.ecoenv.2026.120816",
+   "journal": "Ecotoxicol Environ Saf",
+   "short": "Wu et al. 2026",
+   "title": "Beta-carotene alleviates PM2.5-induced pulmonary fibrosis via suppression of the Frizzled5-mediated Wnt5a/Ca2+ pathway.",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal exposure study + in vitro receptor overexpression",
+   "pm": "Intratracheal PM2.5 instillation; dose, source and treatment concentration not reported",
+   "geo": "China",
+   "endpoint": "Respiratory / allergic",
+   "tier": "C",
+   "n": "C57BL/6 mice given intratracheal PM2.5, paired with BEAS-2B human bronchial epithelial cells carrying Fzd5 overexpression. Instillation produced fibrosis, oxidative stress and calcium dyshomeostasis - more mitochondria-associated ER membranes, altered IP3R, STIM1, ORAI1 and SERCA2 - with activation of a Wnt5a/Fzd5/Ca2+ axis. Dietary beta-carotene reversed these changes, and Fzd5 overexpression abolished the protection, identifying Fzd5 as the mediating receptor. No instilled dose, particle source, treatment concentration, effect size or CI is reported for any endpoint, so potency cannot be placed against ambient exposure. Intratracheal instillation also bypasses the deposition physics a sensor-derived exposure metric is meant to approximate."
+  },
+  {
+   "pmid": "42758941",
+   "doi": "10.1080/10934529.2026.2734478",
+   "journal": "J Environ Sci Health A",
+   "short": "Raju et al. 2026",
+   "title": "Investigations of black carbon aerosol sources and strengths over a rural-valley location in Haryana, India.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Multi-year aethalometer monitoring + source apportionment",
+   "pm": "Equivalent black carbon, seven-wavelength AE33, 880 nm; annual and seasonal means in ug/m3",
+   "geo": "India",
+   "endpoint": "Aerosol chemistry",
+   "tier": "B",
+   "n": "Three years of seven-wavelength AE33 aethalometer measurements (January 2020 to December 2022) at Panchgaon, a rural Aravali valley site at 285 m AMSL in northwest India. Annual means: eBC 4.06 +/- 2.15 ug/m3, fossil-fuel eBCff 3.10 +/- 2.40 ug/m3, biomass-burning eBCbb 1.42 +/- 1.19 ug/m3, with eBCff carrying 68% of absorption at 880 nm. Winter maxima (eBCff 4.19, eBCbb 2.51 ug/m3) and monsoon minima (1.90, 0.52 ug/m3) track boundary-layer height and wet scavenging. The aethalometer-model split rests on assumed absorption Angstrom exponents that are never reported, and the eBCff/eBCbb ratio of 3.02 +/- 3.80 has a standard deviation larger than its mean - the apportionment is unstable. A three-year reference-grade absorption record at a rural South Asian site is exactly the co-location anchor low-cost networks there lack."
+  },
+  {
+   "pmid": "42757949",
+   "doi": "10.1161/jaha.126.049936",
+   "journal": "J Am Heart Assoc",
+   "short": "Chiang et al. 2026",
+   "title": "Ambient Carbon Monoxide as a Delayed Trigger of Acute Aortic Dissection: A Time-Stratified Case-Crossover Study in a Tropical Industrial Metropolis.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Case-crossover",
+   "pm": "PM2.5, PM10, CO, NO2, O3, SO2 from 24 fixed stations; lags 0-3 d, per 1 ppm and per IQR",
+   "geo": "Taiwan",
+   "endpoint": "Cardiovascular",
+   "tier": "B",
+   "n": "Time-stratified case-crossover of 798 emergency-department-confirmed acute aortic dissections, 2018-2021, exposures assigned from 24 monitoring stations, conditional logistic regression across lags 0-3 adjusted for meteorology. No pollutant was associated on the event day. At 2-day lag each 1 ppm CO increment carried a 2.67-fold risk (95% CI 1.207-5.900) and each IQR increment of 0.19 ppm raised risk 113% (95% CI 1.075-4.239); PM2.5, PM10, NO2, O3 and SO2 showed nothing at any lag. Two problems: a 1 ppm contrast is roughly five IQRs, so the headline number extrapolates past the observed range, and with six pollutants across four lags the one surviving association is not multiplicity-corrected. Relevant negatively - station-assigned PM at this network density returned nulls a denser deployment might resolve."
+  },
+  {
+   "pmid": "42755937",
+   "doi": "10.1016/j.bpsgos.2026.100790",
+   "journal": "Biol Psychiatry Glob Open Sci",
+   "short": "Morrel et al. 2026",
+   "title": "Outdoor Air Pollution, Perivascular Space Morphology, and Cognition in Preadolescence.",
+   "sub": "Neuro / mental health",
+   "design": "Cross-sectional cohort imaging + weighted quantile sum regression",
+   "pm": "Annual-average PM2.5, O3, NO2 and 15 PM2.5 components, spatiotemporal models at residence",
+   "geo": "USA",
+   "endpoint": "Cognitive",
+   "tier": "A",
+   "n": "Cross-sectional analysis of 6,949 nine- to ten-year-olds in the Adolescent Brain Cognitive Development study. Perivascular space (PVS) count and volume came from T1- and T2-weighted MRI, cognition from NIH Toolbox. Zinc, ammonium and bromine were positively associated with regional PVS count; higher count in five regions tracked poorer cognition; calcium, Zn and NH4+ were associated with poorer cognition (FDR-corrected p < 0.01); frontal-lobe PVS count mediated the Zn-total-cognition association (p < 0.01); and weighted quantile sum PM2.5 mixtures predicted higher temporal and cingulate PVS with poorer working memory and crystallised intelligence. Cross-sectional design cannot order exposure, PVS and cognition, and no effect sizes are reported - only significance. The component-specific pattern is the point for sensing: speciation, not mass, carries the signal."
+  },
+  {
+   "pmid": "42751714",
+   "doi": "10.3389/ftox.2026.1814795",
+   "journal": "Front Toxicol",
+   "short": "Kou et al. 2026",
+   "title": "Pollutants regulate changes in pathological markers of neurodegenerative diseases: a new perspective in environmental toxicology.",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "Air pollutants treated as one class alongside metals and POPs; no exposure metric",
+   "geo": "Global",
+   "endpoint": "Neurological",
+   "tier": "C",
+   "n": "Review organised around core neurodegenerative pathological markers - amyloid-beta, tau, alpha-synuclein, TDP-43 - rather than around individual pollutants, detailing how air pollutants, metals and persistent organic pollutants modulate the generation, aggregation, propagation and toxicity of each, under a proposed pollutants-pathogenic links-neural network failure framework. No quantitative synthesis, no effect estimates, no exposure metric and no study-quality appraisal; it reorganises existing mechanistic claims rather than adding evidence, and air pollutants are treated as a single undifferentiated class. The one useful implication for measurement is that marker-level convergence makes pollutant class, not PM mass, the exposure variable worth resolving."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c08621",
+   "journal": "Environ Sci Technol",
+   "short": "Sun et al. 2026",
+   "title": "Nonlinear Nitrate Formation Governed by Aerosol Water and VOC-Sensitive Oxidation in a Humid Urban Basin.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field observations + box model + thermodynamic equilibrium",
+   "pm": "Wintertime PM2.5 composition, NO2, Ox and aerosol liquid water content",
+   "geo": "China",
+   "endpoint": "Aerosol chemistry",
+   "tier": "B",
+   "n": "Wintertime field observations in a humid, topographically confined Chinese urban basin, combined with a box model and thermodynamic calculations. Nitrate became the dominant PM2.5 component during pollution episodes, co-varying with NO2, Ox and aerosol liquid water content (ALWC). Pathway-resolved modelling split formation almost evenly between daytime OH+NO2 (52%) and nighttime heterogeneous N2O5 hydrolysis (46%), the latter rising sharply during episodes. Binning regressions located thresholds at RH 87% and ALWC 76.5 ug/m3 above which formation efficiency rose abruptly; VOCs exerted slightly stronger control than NOx, with oxygenated VOCs and alkenes dominant. One site, one winter, one box model - the thresholds are not validated out of sample. The RH threshold is directly load-bearing for sensor correction: it is the same humidity range where optical LCS bias diverges."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c06525",
+   "journal": "Environ Sci Technol",
+   "short": "Zhao et al. 2026",
+   "title": "Unveiling the Importance of Organic Hydroxy Acids-Related Autoxidation Pathway in Isoprene Secondary Organic Aerosol Formation.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Year-long regional tracer measurements + box model",
+   "pm": "PM2.5-phase isoprene SOA tracers, six iHOM species, ng/m3, nine sites",
+   "geo": "China",
+   "endpoint": "Aerosol chemistry",
+   "tier": "B",
+   "n": "Year-long PM2.5 measurements at nine Pearl River Delta sites quantifying six isoprene-derived highly oxygenated molecules (iHOMs). Annual mean 2.69 +/- 3.52 ng/m3, higher in summer and autumn, dominated by methyltartaric acids (71%). Particle-phase tracer shares for the HOM, HMML and IEPOX pathways were 10%, 11% and 79%; box-modelled gas-phase intermediates gave 25%, 22% and 53%, so IEPOX dominates isoprene SOA in the polluted PRD with the other two non-negligible in winter. Pathway partitioning tracked the ISOPO2 isomer split - the HOM route from delta-ISOPO2 (6.5 +/- 3.0%), IEPOX and HMML from beta-ISOPO2. The standard deviation exceeds the mean, so the annual average describes episodes rather than a typical day, and tracer-to-SOA scaling relies on chamber yields measured well above ambient. These are nanogram-level organics - the composition layer no optical network sees."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1038/s41370-026-00976-2",
+   "journal": "J Expo Sci Environ Epidemiol",
+   "short": "Frueh et al. 2026",
+   "title": "Source apportionment of volatile organic compounds in a Philadelphia fenceline community: results from THRIVEair.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Community passive-sampler campaign + PMF source apportionment",
+   "pm": "38 VOCs, one-week integrated passive thermal-desorption tubes, 20 sites, 12 months",
+   "geo": "USA",
+   "endpoint": "None (monitoring)",
+   "tier": "A",
+   "n": "Year-long community-designed VOC campaign in South Philadelphia run with Philly Thrive, collecting one-week integrated passive thermal-desorption samples of 38 VOCs at 20 sites from July 2023 to June 2024 around a former oil refinery under redevelopment. Concentrations were higher in industrial than non-industrial and high- than low-traffic areas. Benzene, the community's declared concern, was low overall (median 1.21 ug/m3, range 0.31-9.05), while (m,p)-xylenes emerged as the industrial-area pollutant of concern; toluene:benzene and xylene:ethylbenzene ratios were higher at industrial and high-traffic sites, indicating fresher emissions, and PMF apportioned sources. One-week integration resolves none of the short plumes fenceline residents actually report. The design is the template distributed PM networks should copy: community-set siting and a declared pollutant of concern rather than compliance checking."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.amjmed.2026.09.003",
+   "journal": "Am J Med",
+   "short": "Fleming & Fleming 2026",
+   "title": "Tire Wear Pollution and Cardiovascular Risk.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Metadata only (no abstract)",
+   "pm": "Tire-wear (non-exhaust) particles; no exposure metric retrievable",
+   "geo": "Global",
+   "endpoint": "Cardiovascular",
+   "tier": "C",
+   "n": "Metadata only (no abstract). Elsevier deposited title and authorship on 18 September with nothing in Crossref, Europe PMC core, Europe PMC fullTextXML or the OpenAlex per-work record. The title places it as a commentary linking tire-wear particle pollution to cardiovascular risk. Logged because the class matters for measurement: non-exhaust emissions now dominate traffic PM in fleets with modern aftertreatment, and tire wear differs from combustion PM in both size distribution and composition - a combination that mass-only optical sensors and exhaust-derived emission factors each mis-handle. Carried forward for pickup when the abstract appears."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosenv.2026.122368",
+   "journal": "Atmos Environ",
+   "short": "Konon et al. 2026",
+   "title": "Seasonal Variation in Volatile Organic Compound Emissions and Secondary Organic Aerosol Formation from Unconventional Oil and Gas Development.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "VOC emissions and SOA formation potential; no quantities retrievable",
+   "geo": "USA",
+   "endpoint": "Aerosol chemistry",
+   "tier": "C",
+   "n": "Metadata only (no abstract). Same-day Elsevier deposit; nothing in Crossref, Europe PMC core, Europe PMC fullTextXML or the OpenAlex per-work record. Title indicates a seasonally resolved measurement campaign of VOC emissions from unconventional oil and gas development and the secondary organic aerosol those emissions form. In scope as a PM precursor study: SOA is the fraction of basin PM2.5 that no emission inventory of primary particles captures, and seasonality in the precursor flux propagates straight into any exposure model built on annual-average emission factors. Carried forward for pickup."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129164",
+   "journal": "Environ Pollut",
+   "short": "Dou et al. 2026",
+   "title": "Volatile organic compounds in Chengdu: Functional zone disparities and four-year dynamics in a basin city of Southwest China.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Ambient VOCs by functional zone, four-year record; no quantities retrievable",
+   "geo": "China",
+   "endpoint": "Aerosol chemistry",
+   "tier": "C",
+   "n": "Metadata only (no abstract). Same-day Elsevier deposit; no abstract in Crossref, Europe PMC core, Europe PMC fullTextXML or the OpenAlex per-work record. Title indicates a four-year ambient VOC record for Chengdu resolved by urban functional zone, in the same Sichuan Basin whose humidity-driven nitrate chemistry the Sun et al. record in this issue models. In scope as precursor monitoring: functional-zone contrasts are the spatial scale distributed networks are built to resolve, and a four-year baseline is long enough to separate trend from meteorological variability. Carried forward for pickup."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115282",
+   "journal": "Build Environ",
+   "short": "Ikeda et al. 2026",
+   "title": "Characterizing layout-dependent breathing-zone contaminant concentration in office spaces with mixing ventilation using an occupant-to-exhaust distance metric.",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Breathing-zone contaminant concentration under mixing ventilation; no quantities retrievable",
+   "geo": "Japan",
+   "endpoint": "None (monitoring)",
+   "tier": "C",
+   "n": "Metadata only (no abstract). Same-day Elsevier deposit; nothing in Crossref, Europe PMC core, Europe PMC fullTextXML or the OpenAlex per-work record. Title indicates a modelling study deriving breathing-zone contaminant concentration in mixing-ventilated offices from an occupant-to-exhaust distance metric. In scope for sensor siting specifically: it is a claim that indoor concentration is a predictable function of geometry, which is the assumption every single-point indoor monitor makes implicitly and almost never tests. Carried forward for pickup."
   }
  ],
  "EFFECTS": [
@@ -295,28 +477,37 @@
    "hi": null,
    "metric": "RR",
    "src": "20 US states, 2006-19"
+  },
+  {
+   "label": "Acute aortic dissection\nper IQR (0.19 ppm) CO, 2-day lag",
+   "exposure": "Ambient carbon monoxide",
+   "est": 2.13,
+   "lo": 1.075,
+   "hi": 4.239,
+   "metric": "OR",
+   "src": "798 cases, case-crossover"
   }
  ],
  "LIFECOURSE": [
   {
    "n": 0,
-   "note": "No prenatal or\ninfant-specific\nrecord; the Toluca\nseries includes\nunder-1s untabulated"
+   "note": "No prenatal or\ninfant-specific\nrecord in this\nwindow"
   },
   {
    "n": 1,
    "note": "266 children under 5\nhospitalised for\nrespiratory disease,\nToluca Valley"
   },
   {
-   "n": 0,
-   "note": "No adolescent\nrecord in this\nwindow"
+   "n": 1,
+   "note": "6,949 ABCD\npreadolescents aged\n9-10; MRI perivascular\nspace + cognition"
   },
   {
-   "n": 4,
-   "note": "385,502 UK Biobank;\n18-study cement-dust\nworker meta-analysis;\n130 Ghanaian miners;\nBudapest sleep panel"
+   "n": 5,
+   "note": "385,502 UK Biobank;\n18-study cement-dust\nmeta-analysis;\n130 Ghanaian miners;\nBudapest sleep panel;\n798 aortic dissections"
   },
   {
    "n": 1,
-   "note": "130 older adults with\nidiopathic pulmonary\nfibrosis, Seoul\nindoor monitoring"
+   "note": "130 older adults with\nidiopathic pulmonary\nfibrosis, Seoul indoor\nmonitoring campaign"
   }
  ]
 }

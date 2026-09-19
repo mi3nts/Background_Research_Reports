@@ -43,7 +43,7 @@ for sub in ORDER:
     if not grp:
         continue
     rows.append(
-        r"\multicolumn{6}{@{}l@{}}{\cellcolor{Mist}\textsf{\textbf{\textcolor{%s}{%s}}}}\\[0.6mm]"
+        r"\multicolumn{6}{@{}l@{}}{\cellcolor{Mist}\textsf{\textbf{\textcolor{%s}{%s}}}}\\*[0.6mm]"
         % (BANDCOL[sub], esc(sub)))
     for p in sorted(grp, key=lambda d: d["short"]):
         # 2026-08-11: this was `.replace(" 2026b","").replace(" 2026","")`, which

@@ -2741,3 +2741,42 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `LIFECOURSE` (will corrupt the September monthly); PMC month gate not yet in
   `_screen_*.py`; `.git/lk.*` ~132 files plus a new `lk_trash/`, undeletable (mount
   EPERM), wants manual cleanup on a local checkout.
+
+## 2026-09-18 pm — issue rebuilt to cover the full window; 30 records (13 recovered), 13 pp
+- **The 22:00 rule was violated by the morning run and this is the recovery.** That run built
+  18 Sep at 10:33 CDT against ~10.5 h of a 23 h window. Re-harvesting the *same* window at
+  23:0x returned PubMed 12 (was 3), Europe PMC 46 (was 44), Crossref-by-ISSN 53 (was 24) —
+  so the gap was real, not theoretical. 102 raw → 97 unique → 25 already carried → 72 fresh
+  → **13 admitted**, appended to `state/corpus/2026-09-18.json` (17 → 30). The PDF, register,
+  figures and manifest entry were rebuilt in place; no morning record was removed. **When a
+  day is opened early, re-harvest and rebuild it — do not roll the remainder into the next issue.**
+- **PMC/AGRICOLA month gate moved into the screen script** (`_screen_0918pm.py`), closing the
+  open item from the morning log. 9 retro-index artefacts dropped at source this run.
+- **New abstract route tested and FAILED — do not retry.** The OpenAlex *per-work* endpoint
+  (`/works/doi:<doi>`) is free even though the date filter is paid, but it returns
+  `abstract_inverted_index` only where the publisher deposited one to Crossref. Zero recovery
+  on 4 held Elsevier/T&F records. Route is dead for same-day deposits; noted so no future run
+  spends time on it. 8 of 30 records are carried on metadata alone — the largest design bucket.
+- **PubMed connector added 0 net records but exposed a dedup near-miss:** 3 of its 12 PMIDs were
+  unseen on the PMID key, and 2 of those are records the morning pass had already admitted from
+  Europe PMC *without a PMID*. Only the DOI key caught them. PMID-first dedup alone would have
+  double-admitted two records in one issue. Consensus: zero for the third consecutive issue
+  (all 5 non-archive survivors failed the Crossref `created` check, incl. a 1,013-sensor global
+  PurpleAir calibration deposited 15 June).
+- **AST gap found in the archive:** `10.1080/02786826.2026.2723263` (created 2026-09-11) is in
+  the JOURNALS ISSN list but appears in no cache and no issue — the 11 Sep by-ISSN leg missed it.
+  Logged `held` alongside the Spider-MAGIC record (still abstract-less on retry). **Audit the
+  by-ISSN leg against `api.crossref.org/journals/<issn>` for the last fortnight on the next run.**
+- Proof caught two layout defects, both fixed generally rather than per-issue: a `\clearpage`
+  after the run-note box left page 2 ~80% empty (removed), and the longtable band header for
+  *Exposure assessment & modelling* orphaned at the foot of p.12 — `mktable.py` now emits the
+  band row with `\\*`, which forbids a break after any band header from here on. 13 pp, 0 LaTeX
+  errors, 0 overfull boxes, DOI gate 0 fail / 0 warn on all 30.
+- 8 design labels registered in `plots.py` in the same edit as the records. The 4 evening
+  metadata-only records were first given designs inferred from their titles; that is an
+  assertion the source does not support, so they were normalised to `Metadata only (no abstract)`.
+- `metrics.csv` 419 rows, 0 malformed — twelfth consecutive issue confirming the KNOWN DEFECT
+  note in the task file is stale. Still open: no first-author affiliation field; `ENDPOINT_CANON`
+  Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the
+  September monthly); 13 held abstract-less records awaiting pickup; `.git` lock/temp debris
+  (undeletable, mount EPERM) wants manual cleanup on a local checkout.

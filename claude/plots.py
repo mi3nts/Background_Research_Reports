@@ -109,6 +109,18 @@ save(fig, "f1_subtopics.png")
 
 # ---------------------------------------------------------------- 2. design donut + tier bar
 design_group = {
+    # 2026-09-18 (evening recovery run): eight labels coined with the records that
+    # carry them, per the standing rule. Four of the five measurement-campaign keys
+    # are precursor/absorption monitoring rather than PM mass -- they still belong in
+    # "Measurement campaign", which is a design bucket, not a pollutant bucket.
+    "Animal exposure study + in vitro receptor overexpression": "Experimental / toxicology",
+    "Community passive-sampler campaign + PMF source apportionment": "Measurement campaign",
+    "Cross-sectional cohort imaging + weighted quantile sum regression": "Observational - cross-sectional",
+    "Field observations + box model + thermodynamic equilibrium": "Modelling / inventory",
+    "Multi-year aethalometer monitoring + source apportionment": "Measurement campaign",
+    "Multi-year urban VOC monitoring": "Measurement campaign",
+    "Seasonal emissions measurement campaign": "Measurement campaign",
+    "Year-long regional tracer measurements + box model": "Measurement campaign",
     # 2026-08-31: nine labels coined this issue. Added in the same edit that wrote
     # them onto records, per the standing rule.
     "Machine-learning exposure model + meta-analysis + risk index": "Modelling / inventory",
