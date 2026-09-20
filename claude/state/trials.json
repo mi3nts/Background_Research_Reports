@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -149,6 +149,15 @@
    "hits": 2,
    "kept": 1,
    "note": "2 hits. NCT07540000 (INTERLUNG, Johns Hopkins, Bhaktapur Nepal, PHASE4, n=800) was already stored from an earlier window and is a re-post, not a new registration; analyze_endpoints re-run confirms the endpoint set is unchanged and is entirely spirometric (pre-BD FEV1 z-score at 40 months, powered for 0.25 SD) plus SGRQ -- a genuine respiratory-outcome trial, the strongest in the accumulated set. NCT07793123 (Robertet SA, oral antioxidant vs placebo, skin radiance, n=60) is new and kept, but is air-pollution-adjacent only: no PM variable is measured. Third consecutive topical hit with no measured PM. Surface both in the W38 weekly (2026-09-13..09-19)."
+  },
+  {
+   "window": "2026-09-13..2026-09-19",
+   "queried": "2026-09-20",
+   "source": "ClinicalTrials.gov MCP connector, search_trials",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR household air pollution' x AREA[LastUpdatePostDate]RANGE[2026-09-13,2026-09-19]",
+   "registrations_or_updates": 5,
+   "new_to_state": 0,
+   "note": "Weekly reconciliation sweep for the W38 rollup. All 5 in-window records were already captured by the daily sweeps (NCT07540000 INTERLUNG, NCT07793123 Robertet, NCT07713264 VISIONS, NCT07817836 Pavia); the fifth, NCT02820402 Project Viva, is a 1999 birth cohort whose air-pollution work is secondary and is deliberately not stored. Zero new to state, which is the first clean reconciliation - the daily leg is now ahead of the weekly sweep rather than behind it."
   }
  ],
  "NCT05867381": {
@@ -295,7 +304,7 @@
   "start_date": "2026-09-15",
   "last_update": "2026-08-12",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV₁ Z-score at 40 months"
+   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },

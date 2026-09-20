@@ -1,0 +1,418 @@
+{
+ "date": "2026-09-19",
+ "entry_window": "2026-09-19 -> 2026-09-19",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c09293",
+   "journal": "Environ Sci Technol",
+   "short": "Chen et al. 2026",
+   "title": "A Quasi-Michaelis-Menten Mechanism Explains the Nonlinear Relationship between Transition Metals and PM2.5 Oxidative Potential Measured by the Dithiothreitol (DTT) Assay.",
+   "sub": "Mechanistic toxicology",
+   "design": "Laboratory metrology",
+   "pm": "OP-DTT on laboratory single-metal and Cu-Mn mixture solutions and on 62 ambient PM2.5 filter samples",
+   "geo": "China",
+   "endpoint": "No health endpoint",
+   "tier": "A",
+   "n": "62 ambient PM2.5 samples, Beijing, one year, plus laboratory standards. The authors derive a quasi-Michaelis-Menten scheme for DTT, transition metals and oxygen, and the resulting Cu and Mn equations reproduce both the saturating single-metal response and the antagonism seen in Cu-Mn mixtures. A three-term model on water-soluble Cu, Mn and WSOC - WSOC entered linearly - accounts for 98.6% of measured OP-DTT. The weakness is that 98.6% is an in-sample fit on 62 filters from one city with no held-out set and no cross-site test, so the coefficients are calibration, not validation. Still, this is the most directly useful result of the day for sensing: it says OP-DTT is a saturating, not additive, function of composition, so any attempt to infer toxicity-weighted PM from a low-cost mass or optical channel must carry a nonlinear composition term or it will systematically overstate hazard in metal-rich air."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c04742",
+   "journal": "Environ Sci Technol",
+   "short": "Melssen Pfahl et al. 2026",
+   "title": "Renoxification via Reduction of Inorganic Nitrate by Photoacids in Aerosols.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chamber / laboratory",
+   "pm": "Nebulised gallic acid plus nitrate aerosol, UV-visible irradiation, NOy and HONO yields across pH",
+   "geo": "Laboratory",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "Chamber study, no human subjects. Catechol and related phenols directly reduce particulate nitrate to HONO and NO under UV-visible light; nebulised gallic acid with nitrate produced 23 times more NOy than nitrate photolysis alone. HONO formation persisted at pH 8, above the pKa of HONO, implicating the phenols as photoacids rather than as bulk acidifiers. The limitation is the usual one for chamber aerosol chemistry - gallic acid at nebuliser concentrations is a proxy for a biomass-burning phenol pool that is far more heterogeneous, and no ambient measurement anchors the 23-fold enhancement. Relevance to distributed sensing is indirect but real: a smoke plume that renoxifies this efficiently generates ozone downwind, so a PM-only network mis-reports the health burden of the same plume hours later and tens of kilometres away."
+  },
+  {
+   "pmid": "42762900",
+   "doi": "10.1016/j.jtha.2026.09.022",
+   "journal": "J Thromb Haemost",
+   "short": "Fang et al. 2026",
+   "title": "Venous Thrombosis and Air Pollution: A Systematic Review and Meta-Analysis of 1.4 Million Adult Patients.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Systematic review + random-effects meta-analysis",
+   "pm": "Long-term (>=1 y average) and short-term PM2.5, PM10 and gaseous pollutants, per 10 ug/m3",
+   "geo": "Global",
+   "endpoint": "Cardiovascular",
+   "tier": "A",
+   "n": "23 studies, >1.4 million venous thrombotic events, searched to 1 July 2025. Long-term particle exposure was associated with VTE - RR 1.0804 (95% CI 1.0015-1.1656) per 10 ug/m3 PM2.5 and 1.0369 (1.0260-1.0479) per 10 ug/m3 PM10 - while short-term particle exposure and every gaseous metric were null. The PM2.5 lower bound sits at 1.0015, so the headline association is barely separated from the null and rests on a handful of long-term cohorts; PM10, with the far tighter interval, is the more defensible estimate despite being the cruder metric. The projected 98,233 events averted by meeting the 5 ug/m3 WHO guideline is a linear no-threshold extrapolation well below the exposure range of the contributing studies and should be read as illustrative. The long-short contrast is the useful signal: chronic annual mean, not the daily excursion a dense sensor network resolves best, is what carries the thrombotic risk here."
+  },
+  {
+   "pmid": "42763183",
+   "doi": "10.3760/cma.j.cn112338-20251103-00783",
+   "journal": "Zhonghua Liu Xing Bing Xue Za Zhi",
+   "short": "Huang et al. 2026",
+   "title": "Association between air pollution exposure and metabolic dysfunction-associated steatotic liver disease in adults in China.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Observational - cross-sectional",
+   "pm": "PM2.5, PM10, NO2 and warm-season O3, per 1 SD; weighted environmental risk score for the mixture",
+   "geo": "China",
+   "endpoint": "Metabolic",
+   "tier": "A",
+   "n": "23,806 adults, China Kadoorie Biobank third resurvey, mean age 65.3 (SD 9.1); 13,428 with MASLD of whom 2,457 had significant fibrosis. Per 1 SD: PM2.5 OR 1.27 (95% CI 1.05-1.53), PM10 1.77 (1.36-2.31), NO2 1.20 (1.08-1.33), warm-season O3 1.53 (1.20-1.95). One unit of the mixture score gave 40% higher MASLD odds (18-65%) and 42% higher fibrosis odds (1-100%) - the fibrosis interval touching unity makes that second estimate uninformative. PM2.5 was non-linear (P=0.007), flat at low concentration and steepening above it. The design is cross-sectional, so reverse causation from residential sorting by health status is unaddressed, and the reported PAFs of 25.4-66.4% are causal-language attached to a single-timepoint contrast and should not be quoted as avoidable burden."
+  },
+  {
+   "pmid": "42763186",
+   "doi": "10.3760/cma.j.cn112338-20260118-00051",
+   "journal": "Zhonghua Liu Xing Bing Xue Za Zhi",
+   "short": "Li et al. 2026",
+   "title": "Joint effects of short term exposure to heat and ozone on circulatory disease mortality in Beijing-Tianjin-Hebei region and surrounding areas.",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Time-series",
+   "pm": "Daily maximum 8-h O3 (mean 138.4 +/- 57.5 ug/m3) and daily mean temperature, warm season",
+   "geo": "China",
+   "endpoint": "Cardiovascular",
+   "tier": "B",
+   "n": "59 counties, warm seasons 2013-18, median 4 circulatory deaths per county-day. Independently, each 10 ug/m3 of O3 raised circulatory mortality 0.16% (95% CI 0.02-0.31%) and a P75-to-P99 temperature rise raised it 21.43% (16.32-26.76%). The interaction is the finding: heat-associated mortality rose from 9.93% (2.52-17.89%) at 65 ug/m3 O3 to 27.17% (20.48-34.23%) at 214 ug/m3, and the O3 coefficient only became significant above roughly the 89th temperature percentile, peaking at 0.92% circulatory and 1.26% cerebrovascular at P99. Ozone is not PM, but the structure transfers directly: a pollutant coefficient estimated as a main effect is an average over a temperature distribution and will be wrong at both tails. Four deaths per county-day is thin, and the counties are not independent - regional synoptic episodes drive heat and O3 together, so the product term partly encodes shared meteorology rather than biological synergy."
+  },
+  {
+   "pmid": "42763192",
+   "doi": "10.3760/cma.j.cn112338-20251218-00906",
+   "journal": "Zhonghua Liu Xing Bing Xue Za Zhi",
+   "short": "Tang et al. 2026",
+   "title": "Analysis on epidemiology trends of chronic obstructive pulmonary disease in residents aged 40 years and above in Hubei Province, 2014-2024.",
+   "sub": "Respiratory & allergic",
+   "design": "Cross-sectional survey",
+   "pm": "Self-reported occupational dust and harmful-gas exposure; household coal heating fuel use",
+   "geo": "China",
+   "endpoint": "Respiratory",
+   "tier": "B",
+   "n": "China COPD surveillance, Hubei, waves 2014-15, 2019-20 and 2024, complex weighted sampling. Prevalence in adults 40+ fell 12.5% (95% CI 10.1-14.8) to 10.7% (7.8-13.6) to 8.1% (5.8-10.5), but the trend test was null (t=-2.06, P=0.079) - the point estimates drop by a third and the study still cannot reject a flat line, which is what three waves and intervals this wide buy you. Occupational dust exposure, household coal heating and respiratory symptom rates all fell significantly over the same decade while protective-equipment use rose, so the particulate exposure story is consistent even where the outcome trend is not. Adjusted risks: rural 1.38 (1.06-1.81), male 3.45 (1.80-6.61), age 70+ 8.43 (4.51-15.73), current smoker 2.48 (1.75-3.52). The protective BMI gradient (obese OR 0.07) is almost certainly reverse causation from advanced disease, not a benefit of adiposity."
+  },
+  {
+   "pmid": "",
+   "doi": "10.12688/wellcomeopenres.14830.4",
+   "journal": "Wellcome Open Res",
+   "short": "Shriyan et al. 2026",
+   "title": "Ambient and Indoor Air Pollution in Pregnancy and the risk of Low birth weight and Ensuing Effects in Infants (APPLE): A cohort study in Bangalore, South India.",
+   "sub": "Reproductive & developmental",
+   "design": "Study protocol",
+   "pm": "Paired indoor and ambient PM10, PM2.5 and CO during pregnancy, nested in the MAASTHI cohort",
+   "geo": "India",
+   "endpoint": "Reproductive",
+   "tier": "C",
+   "n": "516 pregnant women recruited before 18 weeks in Bangalore urban slums, infants followed to age one. This is a protocol, not a result - no effect estimate is reported, and it is a fourth-version revision of a design first posted years ago, so its appearance in this window is a deposit event rather than new evidence. Carried because the measurement plan is the relevant part: paired indoor and ambient PM10, PM2.5 and CO in solid-fuel slum households is exactly the setting where a fixed regulatory monitor is furthest from personal exposure, and where a low-cost indoor node earns its keep. The planned mediation analysis of LBW on infant adiposity is ambitious for n=516 and will be underpowered for anything but a large effect."
+  },
+  {
+   "pmid": "42756454",
+   "doi": "10.46234/ccdcw2026.179",
+   "journal": "China CDC Wkly",
+   "short": "Han et al. 2026",
+   "title": "Environmental Mixture-Health Associations: Current Analytical Practice and Reporting Recommendations.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Review / synthesis",
+   "pm": "Not applicable; the unit of analysis is the mixture-modelling study",
+   "geo": "Global",
+   "endpoint": "No health endpoint",
+   "tier": "A",
+   "n": "97 original mixture-exposure studies in four high-impact journals, 2021-25. Median sample size 729 (IQR 396-1,992) and median 9 exposures (IQR 6-15); BKMR in 80.4%, WQS 36.1%, quantile g-computation 30.9%, with 42.3% running at least two methods. 88.7% used internal (biomarker) exposures and only 67.4% of those stated a detection-rate threshold; feature reduction was reported in 25.8%. Post-hoc variable-importance, interaction and nonlinearity testing appeared in 80-90% of papers, which with median n=729 and 9 correlated exposures is a multiple-comparison problem the field is not reporting. The review is descriptive and the four-journal frame is not the literature, so prevalence figures are upper bounds on best practice. The checklist matters here because PM component mixtures are the archetypal case and, as the frailty and MASLD records in this same issue show, component-level claims are being made routinely without the preprocessing documentation this paper finds missing."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103205",
+   "journal": "Atmos Pollut Res",
+   "short": "Atmos Pollut Res 2026",
+   "title": "Canyons and Canopies: Effects of building configuration and green infrastructure on urban air quality.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from the deposited record",
+   "geo": "Not stated",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Crossref deposit of 19 September with no abstract; Semantic Scholar has not indexed the DOI and the OpenAlex per-work route returns no inverted index, the same dead end logged on 18 September. Carried on title and venue alone. Nothing is asserted about the method, the domain or the direction of the green-infrastructure effect, because the record does not support it. Flagged for pickup: street-canyon geometry crossed with canopy cover is directly a siting question for a distributed network - it determines whether two nodes a block apart are measuring the same air - so this is worth re-fetching once the abstract appears."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129201",
+   "journal": "Environ Pollut",
+   "short": "Environ Pollut 2026",
+   "title": "Underlying Surface Heterogeneity Modulates Meteorological Drivers of PM2.5 and O3 Pollution in the Sichuan Basin.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from the deposited record",
+   "geo": "China",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Crossref deposit of 19 September, abstract absent from the deposit and not yet indexed anywhere queried. Carried on title and venue. The claim in the title - that land-surface heterogeneity modulates how meteorology drives PM2.5 and O3 - is the kind of effect that breaks a spatially stationary land-use regression, and the Sichuan Basin is the standard stagnation test case, but no magnitude, period or model class can be stated from what was deposited. Held for pickup."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.jaerosci.2026.106898",
+   "journal": "J Aerosol Sci",
+   "short": "J Aerosol Sci 2026",
+   "title": "High-efficiency plasma-near-passage unipolar aerosol charger for sub-10 nm particles.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from the deposited record",
+   "geo": "Not stated",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "The only instrumentation record in the window and the one whose missing abstract costs most. Crossref deposit of 19 September with no abstract; not indexed by Semantic Scholar, and the OpenAlex per-work fallback is dead for same-day deposits. No charging efficiency, particle loss fraction or flow rate can be quoted, so none is. Context, not content: sub-10 nm extrinsic charging efficiency is the binding constraint on any mobility-sizing instrument at the ultrafine end, and the published state of the art for this class sits well below unity at 5 nm, so a genuine 'high-efficiency' claim here would matter to anyone trying to put size distribution rather than mass on a distributed node. Priority pickup on the next run."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envint.2026.110528",
+   "journal": "Environ Int",
+   "short": "Environ Int 2026",
+   "title": "Portable HEPA air filtration effects on particulate matter, radioactivity, and chemical constituents in occupied buildings.",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from the deposited record",
+   "geo": "Not stated",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Crossref deposit of 19 September, abstract not deposited and not recoverable from any queried index. Carried on title and venue. The title's three-endpoint framing - particulate mass, radioactivity and chemical constituents from the same intervention - is unusual and would speak to whether HEPA removal efficiency is constituent-dependent, which is the question a mass-only sensor cannot answer when validating a filtration intervention. No reduction fraction, building count or study design is asserted here. Held for pickup."
+  },
+  {
+   "pmid": "42761509",
+   "doi": "10.3389/fpubh.2026.1929586",
+   "journal": "Front Public Health",
+   "short": "Ma et al. 2026",
+   "title": "Association between combined occupational exposure to coal dust and noise and high-frequency hearing loss among workers: a cross-sectional study.",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional survey",
+   "pm": "Job-category coal dust exposure, dichotomous, combined with occupational noise; no gravimetric metric",
+   "geo": "China",
+   "endpoint": "Auditory",
+   "tier": "B",
+   "n": "1,187 workers examined in Baiyin City in 2023: 276 noise-only, 911 noise plus coal dust. High-frequency hearing loss prevalence 35.5% vs 46.8% (P<0.001), with the characteristic 4 kHz notch and little speech-frequency involvement; adjusted OR for combined versus noise-alone exposure 1.620 (95% CI 1.198-2.190, P=0.002). The inference is weak in a specific way: exposure is a job label, not a measured dust concentration or a measured noise dose, so the combined group may simply work louder jobs and the OR then encodes noise intensity rather than a dust interaction. A cross-sectional design in a workforce also selects out the already-deafened. It is carried because dust-noise co-exposure is common and because it is a reminder that a sensor network characterising an industrial site is measuring only one of two correlated hazards."
+  },
+  {
+   "pmid": "42761144",
+   "doi": "10.3389/fpubh.2026.1926373",
+   "journal": "Front Public Health",
+   "short": "Hu et al. 2026",
+   "title": "Analysis of carbon fiber dust exposure status and related occupational health risk factors among workers during the molding process of carbon fiber products.",
+   "sub": "Occupational & indoor",
+   "design": "Observational - cross-sectional",
+   "pm": "Workplace carbon fibre dust measurement at molding workstations, ICMM quantitative risk tiering",
+   "geo": "China",
+   "endpoint": "Occupational",
+   "tier": "B",
+   "n": "955 molding-line workers across 30 carbon-fibre firms in Shenzhen. Dust exposure was identified for 8.38% of employees and varied by post; ICMM tiering returned 3 tolerable, 36 potential, 37 high, 2 very high and 2 intolerable workstation risks. Elevated risk was associated with years of prior frontline work (OR 5.018, 95% CI 2.728-9.231) and grinding-shop employment (3.111, 1.123-8.624); protective were high prevention awareness (0.739, 0.595-0.919) and tertiary education (0.131, 0.024-0.699). The outcome is a risk score, not disease, so every OR describes exposure classification rather than health. The education coefficient spans an order of magnitude on 955 workers and should be treated as noise. Carbon fibre is a rising industrial aerosol with fibre morphology that mass-based instruments handle badly - worth tracking as a sensing gap."
+  },
+  {
+   "pmid": "42763185",
+   "doi": "10.3760/cma.j.cn112338-20251220-00911",
+   "journal": "Zhonghua Liu Xing Bing Xue Za Zhi",
+   "short": "Liu et al. 2026",
+   "title": "Association of exposure to fine particulate matter and its components with frailty in middle-aged and older adults in Beijing-Tianjin-Hebei region and surrounding areas.",
+   "sub": "Other clinical endpoints",
+   "design": "Observational - cross-sectional",
+   "pm": "Superstation PM2.5 and speciated components, lag0-90 to lag0-180 day moving averages; 90-day mean 53.92 +/- 10.51 ug/m3",
+   "geo": "China",
+   "endpoint": "Other clinical",
+   "tier": "A",
+   "n": "1,875 adults across ten cities, mean age 64.95 (SD 13.42), 49.4% men, deficit-accumulation frailty index mean 0.15 (SD 0.09). An IQR rise in 90-day PM2.5 was associated with a 1.30% higher frailty index (95% CI 0.29-2.31%), strongest at lag0-90. Components: OC 3.63% (1.17-6.09), Cu 1.50% (0.76-2.24), Ca 1.35% (0.51-2.20), EC 0.83% (0.45-1.21) per IQR. Two problems. Exposure is assigned from the nearest superstation, so within-city gradient is entirely unmodelled and the IQR is a between-city contrast wearing individual-level clothing - precisely the misassignment a dense network exists to fix. And the components are collinear combustion tracers; the OC-over-EC ordering is not evidence that organic carbon is the causal fraction. No subgroup modification was detected on any of six strata, which at n=1,875 is uninformative rather than reassuring."
+  },
+  {
+   "pmid": "42760629",
+   "doi": "10.1111/jgs.70720",
+   "journal": "J Am Geriatr Soc",
+   "short": "Kim et al. 2026",
+   "title": "Extreme Temperatures, Elevated PM2.5, and Acute Care Events Among Dual-Eligible Nursing Facility Residents.",
+   "sub": "Other clinical endpoints",
+   "design": "Panel study",
+   "pm": "Daily outdoor PM2.5 dichotomised at >9 ug/m3; extreme heat and extreme cold day indicators",
+   "geo": "USA",
+   "endpoint": "Multi-system",
+   "tier": "A",
+   "n": "24,784,081 facility-days from 24,760 nursing facilities in 47 states plus DC, Medicare-Medicaid linked claims 2017-20. On elevated-PM2.5 days ED visits rose 0.020 (95% CI 0.013-0.027) and hospitalisations 0.017 (0.012-0.022) per 1,000 resident-days; extreme heat gave 0.022 (0.003-0.041) and 0.025 (0.011-0.039), extreme cold 0.014 (0.001-0.027) hospitalisations. Effect sizes are tiny in absolute terms and the intervals for heat and cold nearly touch zero; what carries the paper is 24.8 million facility-days and a fixed-effects design that removes time-invariant facility confounding. The exposure is the weak link - an outdoor county-level value dichotomised at 9 ug/m3, applied to a population that is almost entirely indoors, with no measurement of the HVAC infiltration the authors themselves identify as the mechanism. The policy asymmetry is the point: nursing facilities are regulated on indoor temperature and not at all on indoor PM."
+  },
+  {
+   "pmid": "42760653",
+   "doi": "10.1097/md.0000000000050614",
+   "journal": "Medicine (Baltimore)",
+   "short": "Huang et al. 2026",
+   "title": "Secondhand smoke exposure in never-smokers: A cross-sectional and prospective cohort study of chronic kidney disease prevalence and all-cause mortality in affected patients.",
+   "sub": "Other clinical endpoints",
+   "design": "Retrospective cohort",
+   "pm": "Serum cotinine as a biomarker of secondhand smoke particulate exposure, graded moderate/heavy",
+   "geo": "USA",
+   "endpoint": "Renal",
+   "tier": "B",
+   "n": "13,276 never-smoking adults, NHANES 1999-2020, with 1,630 CKD cases followed for mortality. Moderate SHS exposure was associated with CKD prevalence (OR 1.37, 95% CI 1.07-1.76). Among those with CKD, moderate and heavy exposure carried all-cause mortality HRs of 2.03 (1.23-3.36) and 1.80 (1.11-2.93); each doubling of cotinine gave HR 1.04 (1.01-1.08). The non-monotonic ordering - moderate exceeding heavy for mortality, and heavy not associated with prevalence - undercuts a dose-response reading and points to residual confounding by household socioeconomic position. Cotinine is a good internal dose marker for the nicotine fraction and a poor one for the particulate fraction, which is the exposure of interest here; the two dissociate across ventilation conditions in a way an indoor PM sensor would resolve and a serum assay cannot."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1038/s41370-026-00978-0",
+   "journal": "J Expo Sci Environ Epidemiol",
+   "short": "Odiko et al. 2026",
+   "title": "Environmental lead exposure and clinical infectious respiratory disease in a sample of urban and disadvantaged children.",
+   "sub": "Other clinical endpoints",
+   "design": "Retrospective cohort",
+   "pm": "Blood lead concentration; lead is a PM-borne metal but no airborne measurement is made",
+   "geo": "USA",
+   "endpoint": "Respiratory infection",
+   "tier": "B",
+   "n": "13,221 children aged 14 and under, Temple University Health System, Philadelphia, 2010-20; 28% above the CDC 3.5 ug/dL action level. Streptococcal pharyngitis was associated with BLC >=3.5 ug/dL (aOR 2.74, 95% CI 1.92-3.90) and, almost identically, with BLC 1-3.4 ug/dL (2.45, 1.75-3.44); frequent strep showed the same pattern. Croup was null. That the two lead strata give the same estimate is the problem - a genuine dose-response should separate them, and the flatness suggests both strata are marking the same underlying thing, most plausibly housing age and healthcare contact frequency, neither of which is adjusted for beyond insurance type. Outcome ascertainment is ICD-coded within one health system, so a child who is screened for lead is also a child who is seen more often. The 'no safe level' conclusion is not supported by a contrast this flat."
+  },
+  {
+   "pmid": "42757019",
+   "doi": "10.4103/sjopt.sjopt_286_24",
+   "journal": "Saudi J Ophthalmol",
+   "short": "Alhalwani et al. 2025",
+   "title": "Correlations of CO, SO2, PM10, NO2, and O3 with dry eye disease in Saudi Arabia.",
+   "sub": "Other clinical endpoints",
+   "design": "Observational exposure study",
+   "pm": "Daily PM10, SO2, NO2, O3 and CO from three fixed monitoring stations in Jeddah",
+   "geo": "Saudi Arabia",
+   "endpoint": "Ocular",
+   "tier": "C",
+   "n": "492 dry eye disease diagnoses at King Abdulaziz Medical City, Jeddah, 2017-18, against three monitoring stations. Adjusted ORs reached significance only for SO2 (1.182) and CO (1.162); PM10, the particulate metric, was not associated. The reported SO2 interval is 0.908-1.111 with P=0.021, which is internally inconsistent - an interval spanning unity cannot accompany that P value - and that error is in the published abstract, so the estimate should not be used. Three monitors for a city of four million gives essentially no exposure contrast within Jeddah, and a clinic case series with no non-DED comparison group cannot support an odds ratio at all as described. Carried at tier C as a record of the ocular-surface literature only; the finding that PM10 was null here should not be read as evidence against a particulate effect."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1007/s44408-026-00166-7",
+   "journal": "Aerosol Air Qual Res",
+   "short": "Aerosol Air Qual Res 2026",
+   "title": "Association Between Air Pollution and Psoriasis-Related Outcomes: A Systematic Review and Meta-analysis.",
+   "sub": "Other clinical endpoints",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from the deposited record",
+   "geo": "Not stated",
+   "endpoint": "Dermatological",
+   "tier": "C",
+   "n": "Springer deposit of 19 September without an abstract; not yet indexed by Semantic Scholar. Carried on title and venue only. No pooled estimate, study count, heterogeneity statistic or pollutant metric is asserted, because none was deposited. Noted as the fourth systematic review or meta-analysis in a single day's window - alongside the venous thrombosis, climate-burden and ischaemic stroke reviews screened out or admitted above - which is itself a signal worth watching in the weekly rollup. Held for pickup."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Venous thromboembolism\nper 10 ug/m3 long-term PM2.5",
+   "exposure": "Long-term PM2.5",
+   "est": 1.0804,
+   "lo": 1.0015,
+   "hi": 1.1656,
+   "metric": "RR",
+   "src": "23 studies, 1.4M events"
+  },
+  {
+   "label": "Venous thromboembolism\nper 10 ug/m3 long-term PM10",
+   "exposure": "Long-term PM10",
+   "est": 1.0369,
+   "lo": 1.026,
+   "hi": 1.0479,
+   "metric": "RR",
+   "src": "23 studies, 1.4M events"
+  },
+  {
+   "label": "MASLD\nper 1 SD PM2.5",
+   "exposure": "Annual PM2.5",
+   "est": 1.27,
+   "lo": 1.05,
+   "hi": 1.53,
+   "metric": "OR",
+   "src": "23,806 China Kadoorie Biobank"
+  },
+  {
+   "label": "MASLD\nper 1 SD PM10",
+   "exposure": "Annual PM10",
+   "est": 1.77,
+   "lo": 1.36,
+   "hi": 2.31,
+   "metric": "OR",
+   "src": "23,806 China Kadoorie Biobank"
+  },
+  {
+   "label": "MASLD\nper 1 SD NO2",
+   "exposure": "Annual NO2",
+   "est": 1.2,
+   "lo": 1.08,
+   "hi": 1.33,
+   "metric": "OR",
+   "src": "23,806 China Kadoorie Biobank"
+  },
+  {
+   "label": "MASLD\nper 1 SD warm-season O3",
+   "exposure": "Warm-season O3",
+   "est": 1.53,
+   "lo": 1.2,
+   "hi": 1.95,
+   "metric": "OR",
+   "src": "23,806 China Kadoorie Biobank"
+  },
+  {
+   "label": "High-frequency hearing loss\ncoal dust + noise vs noise alone",
+   "exposure": "Coal dust co-exposure",
+   "est": 1.62,
+   "lo": 1.198,
+   "hi": 2.19,
+   "metric": "OR",
+   "src": "1,187 Baiyin workers"
+  },
+  {
+   "label": "CKD prevalence\nmoderate secondhand smoke",
+   "exposure": "Secondhand smoke (cotinine)",
+   "est": 1.37,
+   "lo": 1.07,
+   "hi": 1.76,
+   "metric": "OR",
+   "src": "13,276 NHANES never-smokers"
+  },
+  {
+   "label": "All-cause mortality in CKD\nmoderate secondhand smoke",
+   "exposure": "Secondhand smoke (cotinine)",
+   "est": 2.03,
+   "lo": 1.23,
+   "hi": 3.36,
+   "metric": "HR",
+   "src": "1,630 NHANES CKD cases"
+  },
+  {
+   "label": "Streptococcal pharyngitis\nblood lead >= 3.5 ug/dL",
+   "exposure": "Blood lead",
+   "est": 2.74,
+   "lo": 1.92,
+   "hi": 3.9,
+   "metric": "OR",
+   "src": "13,221 Philadelphia children"
+  },
+  {
+   "label": "COPD prevalence\nrural vs urban residence",
+   "exposure": "Rural residence (solid fuel, dust)",
+   "est": 1.38,
+   "lo": 1.06,
+   "hi": 1.81,
+   "metric": "OR",
+   "src": "Hubei COPD surveillance"
+  },
+  {
+   "label": "COPD prevalence\ncurrent smoker",
+   "exposure": "Active smoking",
+   "est": 2.48,
+   "lo": 1.75,
+   "hi": 3.52,
+   "metric": "OR",
+   "src": "Hubei COPD surveillance"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "516 Bangalore slum\npregnancies, paired\nindoor/ambient PM\n(APPLE protocol)"
+  },
+  {
+   "n": 1,
+   "note": "13,221 Philadelphia\nchildren <=14,\nblood lead and\nrespiratory infection"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent-\nspecific record in\nthis window"
+  },
+  {
+   "n": 5,
+   "note": "23,806 China Kadoorie;\n1,187 Baiyin workers;\n955 Shenzhen carbon-\nfibre workers; 13,276\nNHANES; 1.4M VTE events"
+  },
+  {
+   "n": 3,
+   "note": "1,875 BTH adults\n(frailty index);\n24.8M nursing-facility\ndays; Hubei COPD\nsurveillance 40+"
+  }
+ ]
+}

@@ -148,6 +148,12 @@ design_group = {
     "Case-crossover": "Observational - acute",
     "Panel study": "Observational - acute",
     "Prospective cohort": "Observational - cohort",
+    # added 2026-09-19 with the APPLE Bangalore record. A published protocol has a real
+    # study architecture even though it reports no result, so it belongs with the cohorts
+    # in f2 rather than in "Metadata only" (which means the record itself is unreadable).
+    # The absence of a finding is carried by the tier-C label and the entry text, not by
+    # the design bucket.
+    "Study protocol": "Observational - cohort",
     "Prospective cohort (mixtures)": "Observational - cohort",
     "Nationwide cohort": "Observational - cohort",
     "Registry cohort + geospatial": "Observational - cohort",
@@ -1056,7 +1062,14 @@ for _ci, E in enumerate(_CHUNKS):
     # label; 0.55 gives ~17pt and is legible.
     # The 4.6in floor exists to leave room for the legend; on a one- or two-row issue it
     # leaves the panel 80% empty instead (2026-08-21). Lower the floor for tiny panels.
-    _fh = max(3.1 if len(E) <= 2 else 4.6, (0.55 if (_S and _E) else 0.30) * len(E) + 1.9)
+    # DEFECT, found 2026-09-19. The daily pitch of 0.30in/row was tuned when a daily
+    # issue carried 5-7 estimates; at 12 it produced two-line y-labels touching their
+    # neighbours. The rollup path already uses 0.55 because it is also wider (10.2in),
+    # so the binding quantity is pitch AFTER the panel is scaled to \linewidth. Raise
+    # the daily pitch once the row count passes 8. Small issues keep 0.30 and are
+    # unaffected, so this cannot reintroduce the 2026-08-21 "80% empty panel" defect.
+    _pitch = 0.55 if (_S and _E) else (0.30 if len(E) <= 8 else 0.44)
+    _fh = max(3.1 if len(E) <= 2 else 4.6, _pitch * len(E) + 1.9)
     fig, ax = plt.subplots(figsize=((10.2 if (_S and _E) else 8.0), _fh))
     y = np.arange(len(E))
     for i, e in enumerate(E):

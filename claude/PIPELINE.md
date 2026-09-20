@@ -2780,3 +2780,54 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (will corrupt the
   September monthly); 13 held abstract-less records awaiting pickup; `.git` lock/temp debris
   (undeletable, mount EPERM) wants manual cleanup on a local checkout.
+
+## Run 2026-09-19 (built 2026-09-20 00:06 CDT) — daily 19 Sep + W38 weekly
+
+- **Missed Saturday, recovered.** The 19 Sep scheduled run never fired; this run executed at
+  00:06 CDT on 20 Sep, six minutes after the window closed — the best possible position under
+  the 22:00 rule. 68 raw (PubMed 10 / 0, EPMC 29, Crossref-ISSN 30; OpenAlex 429, arXiv 406)
+  → 1 retro-index dropped → 67 unique → 7 already carried → 60 fresh → **20 admitted**, 11 pp,
+  0 errors, 0 overfull. DOI gate 20/20. `last_entry_date` = 2026-09-19.
+- **No 20 Sep issue, deliberately.** A 20 Sep harvest was run in the same pass and returned
+  **0 on all six legs** — the window had elapsed for six minutes. Building it would have
+  consumed the date via `last_entry_date` and permanently lost the day. Leaving the date open
+  means the next run harvests `last_entry_date + 1` = 20 Sep in full, no gap. **Rule: never
+  open a date whose window has not substantially elapsed; a null issue is not free, it spends
+  the date.**
+- **One record rejected specifically for having no DOI** (*J Testing and Evaluation*, toxic
+  metals in e-cannabinoid aerosols) — on topic but unlinkable. First rejection on that ground.
+- **Semantic Scholar tested as an abstract-recovery route and FAILED — do not retry.** Per-DOI
+  `graph/v1/paper/DOI:` returned **404 on all five** held same-day deposits (Elsevier, ACS,
+  Springer); it has not ingested them. With the OpenAlex per-work failure logged 18 Sep, the
+  two cheapest recovery routes are now both closed. **Only a deferred retry (re-query a week
+  after first sight) can work.** Retry list now 18 records.
+- Proof caught three defects, all fixed generally: (1) the `\clearpage` before *Corpus
+  analytics* left p2 ~75% empty — **this is a regression of the 18 Sep fix, re-introduced by
+  authoring the issue from the template rather than from the previous issue**; (2) the f2b
+  caption asserted "eleven distinct clinical endpoints" against a chart that canonicalises to
+  six groups — captions must be written **after** looking at the rendered figure, never from
+  the corpus counts; (3) forest y-labels collided at 12 rows, so `plots.py` now raises the
+  daily row pitch 0.30 → 0.44 above 8 rows (rollups unaffected; small issues keep 0.30 so the
+  2026-08-21 empty-panel defect cannot return).
+- **W38 weekly built** (13–19 Sep, 7 issues, 148 records, 41 pp, 0 errors). Two rollup-layout
+  defects fixed in the same pass: f6 moved from after the two tall forest panels into the
+  whitespace under f3 (p4 was ~55% empty), and the `\clearpage` after the heatmap dropped so
+  the venues section fills p7. `mv` of an existing PDF fails EPERM on this mount — the rollup's
+  idempotence check then silently skips; **rebuild by running the steps and `cp` over the
+  output**, which does work.
+- **Two prior rollup tests answered this week.** *Exposure* 20 → **38** (the 12 Sep rollup
+  predicted mid-20s; it overshot the pre-collapse level, so the 20 was a sampling floor).
+  *Occupational & indoor* held above the pre-surge max a third week, so on this watch's own
+  stated criteria the indoor turn is now a trend.
+- **Metadata-only fell 16% → 10% of the week** (Sensing 10 → 4), caused by the 18 Sep PMC/
+  AGRICOLA month gate *rejecting* retro-indexed records, **not** by recovering withheld ones.
+  Do not read it as a publisher change.
+- **Trial watch: first clean reconciliation.** 5 in-window records, **0 new to state** — the
+  daily sweep is now ahead of the weekly sweep. `trials.json` 12 trials, 14 windows.
+- `metrics.csv` 428 rows, 0 malformed — **thirteenth** consecutive issue confirming the KNOWN
+  DEFECT note in the task file is stale. `update_state.py` had not been run for 19 Sep before
+  the rollup, so `plots_weekly.py` saw 6 issues not 7 — **run `update_state.py <date>` before
+  any rollup that includes that date.** Still open: no first-author affiliation field;
+  `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element
+  `LIFECOURSE` (will corrupt the September monthly, due 30 Sep); `.git` lock/temp debris,
+  mount EPERM, manual cleanup on a local checkout.

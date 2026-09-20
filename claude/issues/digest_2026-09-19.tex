@@ -1,0 +1,421 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{19 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-09-19\;\;\textcolor{Amber}{\textbar}\;\;Entry window 19 September 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;20 records screened in scope\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{20}{RECORDS IN SCOPE\\(48 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{12}{EFFECT ESTIMATES\\ALL 12 WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- signal of day
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}PM$_{2.5}$ oxidative potential saturates rather than
+adds --- so a toxicity-weighted particle metric cannot be a linear function of composition.}\\[1.4mm]
+\footnotesize
+Chen et al.\ (\textit{Environ Sci Technol}) propose a \textbf{quasi-Michaelis--Menten}
+mechanism for the dithiothreitol assay, in which DTT, transition metals and oxygen form a
+saturating catalytic cycle rather than a set of independent additive contributions. The
+derived copper and manganese equations reproduce the nonlinear single-metal
+concentration--response \textit{and} the \textbf{antagonism of Cu--Mn mixtures}, which a
+linear model cannot represent at all. On \textbf{62 ambient PM$_{2.5}$ samples} collected
+over one year in Beijing, a three-term model --- water-soluble Cu, water-soluble Mn, and
+WSOC entered linearly --- accounted for \textbf{98.6\% of measured OP$_{\mathrm{DTT}}$}.
+
+The number to distrust is the 98.6\%. It is an in-sample fit on 62 filters from a single
+city, with no held-out set and no second site, so those coefficients are a calibration and
+not a validation; metal-poor or biomass-dominated aerosol elsewhere may well need a
+different parameterisation. The \textit{mechanism}, though, does not depend on the fit
+quality, and it is the part that bites for distributed sensing. Oxidative potential is the
+leading candidate for a health-weighted alternative to particle mass, and the entire
+appeal of inferring it from a dense low-cost network rests on being able to map an optical
+or mass channel onto toxicity. This result says that mapping is \textbf{saturating and
+non-additive in the metals}: a linear surrogate trained where Cu and Mn are low will
+overstate hazard where they are high, and will not reproduce mixture antagonism at any
+concentration. Any OP proxy built on a mass-only node needs a nonlinear composition term
+it currently has no way to measure.
+\end{keybox}
+
+\vspace{3mm}
+
+% -------------------------------------------------------------- exec brief
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{The largest venous-thrombosis synthesis to date, and its PM$_{2.5}$ estimate
+barely clears the null.} Fang et al.\ (\textit{J Thromb Haemost}) pooled \textbf{23 studies
+and more than 1.4 million venous thrombotic events}. Long-term particle exposure was
+associated with VTE --- \textbf{RR 1.0804 (95\% CI 1.0015--1.1656)} per
+10\,$\mu$g/m$^3$ PM$_{2.5}$ and \textbf{1.0369 (1.0260--1.0479)} per 10\,$\mu$g/m$^3$
+PM$_{10}$ --- while \textbf{short-term particle exposure and every gaseous metric were
+null}. A lower bound of 1.0015 is a hair's breadth from unity; PM$_{10}$, the cruder
+metric, is here the better-supported one. The long-versus-short contrast is the part worth
+carrying: the risk sits in the chronic annual mean, not in the daily excursion a dense
+network is best at resolving.
+\item \textbf{Two mixture analyses on the same day, and the methods review that indicts
+both.} Huang et al.\ (\textit{Zhonghua Liu Xing Bing Xue Za Zhi}) report an elastic-net
+mixture score across PM$_{2.5}$, PM$_{10}$, NO$_2$ and warm-season O$_3$ against MASLD in
+\textbf{23,806 China Kadoorie Biobank} participants; Liu et al.\ attribute frailty to
+\textbf{OC, EC, Ca and Cu} components in 1,875 adults. Han et al.\ (\textit{China CDC
+Wkly}), reviewing \textbf{97 mixture studies}, find a median sample size of \textbf{729}
+against a median \textbf{9 correlated exposures}, with 80--90\% of papers running post-hoc
+variable-importance, interaction and nonlinearity tests and most failing to document
+preprocessing or justify method choice. The component-ranking claims in this issue are
+exactly the genre that review says is under-reported.
+\item \textbf{A 24.8-million-facility-day panel finds PM effects where regulation does not
+look.} Kim et al.\ (\textit{J Am Geriatr Soc}) link Medicare--Medicaid claims from
+\textbf{24,760 nursing facilities} across 47 states with facility fixed effects. Elevated
+PM$_{2.5}$ days raised ED visits \textbf{0.020 (95\% CI 0.013--0.027)} and hospitalisations
+\textbf{0.017 (0.012--0.022)} per 1,000 resident-days. The absolute magnitudes are tiny
+and the exposure is a county-level outdoor value dichotomised at 9\,$\mu$g/m$^3$ applied
+to a population that is almost never outdoors --- the HVAC infiltration the authors name
+as the mechanism is nowhere measured. The policy asymmetry is the finding:
+\textbf{nursing facilities are regulated on indoor temperature and not at all on indoor
+particles}.
+\item \textbf{Heat and ozone are strongly synergistic, which is a warning about every
+main-effect pollutant coefficient.} Li et al.\ (59 counties, warm seasons 2013--18) show
+heat-associated circulatory mortality rising from \textbf{9.93\% (2.52--17.89)} at
+65\,$\mu$g/m$^3$ O$_3$ to \textbf{27.17\% (20.48--34.23)} at 214\,$\mu$g/m$^3$, with the
+O$_3$ coefficient reaching significance only above roughly the 89th temperature
+percentile. Ozone is not PM, but the structural lesson transfers directly: a pollutant
+coefficient estimated as a main effect is an average over a temperature distribution and
+is wrong at both tails.
+\item \textbf{Every extractable effect estimate carries a confidence interval --- a first
+in this archive.} All \textbf{12} estimates in the forest plot report bounds, against 3 of
+7 in the previous issue. That is a property of today's record mix (clinical epidemiology
+and meta-analysis, rather than the modelling and instrumentation papers that usually
+report point values) and not a change in reporting practice, but it makes this the first
+issue in which precision can be read off the figure without caveat.
+\item \textbf{Five of twenty records assert no finding, and one of them is the only
+instrumentation paper in the window.} The abstract-free same-day deposit problem landed on
+\textbf{J Aerosol Sci 10.1016/j.jaerosci.2026.106898}, a sub-10\,nm unipolar aerosol
+charger --- the single most relevant record of the day for distributed sizing and the one
+that cannot be summarised. Semantic Scholar returns 404 for all five DOIs (not yet
+indexed) and the OpenAlex per-work route remains dead, as logged on 18 September. All five
+are flagged for pickup rather than paraphrased.
+\end{itemize}
+
+\vspace{3mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Run note --- a missed Saturday, and why there is
+no 20 September issue}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The scheduled run for \textbf{19 September} did not fire; this issue is the recovery and
+covers the whole of that day, continuous with the 18 September window and leaving no gap.
+The run executed at \textbf{00:06 CDT on 20 September}, which is to say immediately after
+the 19 September window closed --- the best possible position under the 22:00 rule adopted
+on 19 August. A harvest of \textbf{20 September} was attempted in the same run and returned
+\textbf{zero records on all six legs}, as it must: that window had elapsed for six minutes.
+No 20 September issue was built and \texttt{last\_entry\_date} is left at 19 September, so
+the next run opens on 20 September in full. Building a null issue for a six-minute window
+would have consumed the date and permanently lost the day.\par}
+\end{keybox}
+
+\vspace{3mm}
+
+% ==================================================================== ANALYTICS
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 20 in-scope records; eight of the ten bands are
+populated. The distribution is inverted relative to recent issues: \textit{Other clinical
+endpoints} is the largest band at \textbf{six} --- frailty, acute-care utilisation, renal
+disease, paediatric respiratory infection, ocular surface and psoriasis, none of which has
+a band of its own --- followed by \textit{Exposure assessment \& modelling} at four, then
+\textit{Cardiovascular \& metabolic} and \textit{Occupational \& indoor} at three each.
+\textit{Sensing, forecasting \& instrumentation} holds a \textbf{single} record and that
+record is metadata-only. \textit{Neuro / mental health} and \textit{Burden, policy \&
+mitigation} are empty.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture. Observational epidemiology dominates for the first
+time in several issues: \textbf{five cross-sectional}, three cohort and two acute designs,
+\textbf{ten of twenty} in total. \textit{Metadata only} is second at five. Chamber and
+laboratory work contributes two, evidence synthesis two, and measurement campaigns
+\textbf{one}. Right --- health endpoint, canonicalised. \textbf{``No health endpoint'' is
+seven of twenty}, the lowest share in recent issues. The remaining thirteen fall into six
+canonical groups, and the largest of them is the residual one: \textbf{``Other clinical''
+holds five} records drawn from five unrelated organ systems --- frailty, renal disease,
+hearing, ocular surface and skin --- none of which has a bar of its own. Respiratory and
+cardiovascular reach two each; metabolic, reproductive, occupational and multi-system are
+singletons. The dispersion, not the ordering, is the structural feature of this window.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. \textbf{Unspeciated PM or emissions terms cover 13 of
+20}, and as usual that bar is heterogeneous: it absorbs the five metadata-only records,
+the aerosol-chemistry chamber study, the occupational dust records where exposure is a job
+label rather than a concentration, and the two studies whose particulate exposure is
+indexed by a biomarker (serum cotinine, blood lead) rather than measured in air.
+PM$_{2.5}$ alone accounts for three, joint PM$_{2.5}$ + PM$_{10}$ three, PM$_{10}$ alone
+one. Right --- geographic provenance. \textbf{China is eight of twenty}, the single
+largest bar and close to half the issue; the \textit{Global / multi-region} bar of seven
+again overstates reach, since \textbf{four of those seven are records whose study location
+is simply not recoverable} from the deposit.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed; counts are non-exclusive. Working-age adulthood
+carries five and older adulthood three, but the notable entries are at the young end:
+\textbf{the prenatal window is occupied} by the APPLE protocol's 516 Bangalore slum
+pregnancies with paired indoor and ambient PM, and childhood by \textbf{13,221
+Philadelphia children} in the blood-lead and respiratory-infection cohort. Puberty and
+adolescence is again empty. Note that the prenatal entry is a protocol reporting no
+result, so the window is occupied by a measurement plan rather than by evidence.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. Two features. First, the
+measurement side of the issue has collapsed to \textbf{five records across the
+\textit{Sensing} and \textit{Exposure assessment} rows combined}, and three of those five
+are metadata-only --- the instrumentation literature is present in this window almost
+entirely as titles. Second, \textit{Other clinical endpoints} is the only row with
+meaningful spread, occupying four separate architecture columns; every other populated row
+sits in one or two. As in every previous issue, \textbf{no cell anywhere in the matrix
+links an instrument to a clinical endpoint}.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{All \textbf{12} extractable effect estimates on a common logarithmic axis, and for
+the first time in this archive \textbf{every one reports a confidence interval}. Two
+features are worth reading. The four MASLD odds ratios per 1\,SD span
+\textbf{1.20 (NO$_2$) to 1.77 (PM$_{10}$)} from a single cross-sectional study, so their
+apparent ordering is a within-study comparison of collinear pollutants and not a ranking
+of hazard. And the two venous-thrombosis risk ratios sit closest to the null of anything
+plotted --- \textbf{PM$_{2.5}$ at 1.0804 with a lower bound of 1.0015} --- despite resting
+on the largest evidence base here. Exposure contrasts are not mutually comparable: per
+10\,$\mu$g/m$^3$, per 1\,SD, per exposure category, per blood-lead stratum. Read direction
+and precision, never relative magnitude.}
+
+\clearpage
+
+% ==================================================================== DIGEST
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Cardiovascular \& metabolic\hfill 3 records}{Teal}
+
+\paperentry{Fang et al. 2026}
+{Venous Thrombosis and Air Pollution: A Systematic Review and Meta-Analysis of 1.4 Million Adult Patients.}
+{J Thromb Haemost}
+{23 studies, >1.4 million venous thrombotic events, searched to 1 July 2025. Long-term particle exposure was associated with VTE - RR 1.0804 (95\% CI 1.0015-1.1656) per 10 $\mu$g\,m$^{-3}$ PM$_{2.5}$ and 1.0369 (1.0260-1.0479) per 10 $\mu$g\,m$^{-3}$ PM$_{10}$ - while short-term particle exposure and every gaseous metric were null. The PM$_{2.5}$ lower bound sits at 1.0015, so the headline association is barely separated from the null and rests on a handful of long-term cohorts; PM$_{10}$, with the far tighter interval, is the more defensible estimate despite being the cruder metric. The projected 98,233 events averted by meeting the 5 $\mu$g\,m$^{-3}$ WHO guideline is a linear no-threshold extrapolation well below the exposure range of the contributing studies and should be read as illustrative. The long-short contrast is the useful signal: chronic annual mean, not the daily excursion a dense sensor network resolves best, is what carries the thrombotic risk here.}
+{10.1016/j.jtha.2026.09.022}
+
+\paperentry{Huang et al. 2026}
+{Association between air pollution exposure and metabolic dysfunction-associated steatotic liver disease in adults in China.}
+{Zhonghua Liu Xing Bing Xue Za Zhi}
+{23,806 adults, China Kadoorie Biobank third resurvey, mean age 65.3 (SD 9.1); 13,428 with MASLD of whom 2,457 had significant fibrosis. Per 1 SD: PM$_{2.5}$ OR 1.27 (95\% CI 1.05-1.53), PM$_{10}$ 1.77 (1.36-2.31), NO$_2$ 1.20 (1.08-1.33), warm-season O$_3$ 1.53 (1.20-1.95). One unit of the mixture score gave 40\% higher MASLD odds (18-65\%) and 42\% higher fibrosis odds (1-100\%) - the fibrosis interval touching unity makes that second estimate uninformative. PM$_{2.5}$ was non-linear (P=0.007), flat at low concentration and steepening above it. The design is cross-sectional, so reverse causation from residential sorting by health status is unaddressed, and the reported PAFs of 25.4-66.4\% are causal-language attached to a single-timepoint contrast and should not be quoted as avoidable burden.}
+{10.3760/cma.j.cn112338-20251103-00783}
+
+\paperentry{Li et al. 2026}
+{Joint effects of short term exposure to heat and ozone on circulatory disease mortality in Beijing-Tianjin-Hebei region and surrounding areas.}
+{Zhonghua Liu Xing Bing Xue Za Zhi}
+{59 counties, warm seasons 2013-18, median 4 circulatory deaths per county-day. Independently, each 10 $\mu$g\,m$^{-3}$ of O$_3$ raised circulatory mortality 0.16\% (95\% CI 0.02-0.31\%) and a P75-to-P99 temperature rise raised it 21.43\% (16.32-26.76\%). The interaction is the finding: heat-associated mortality rose from 9.93\% (2.52-17.89\%) at 65 $\mu$g\,m$^{-3}$ O$_3$ to 27.17\% (20.48-34.23\%) at 214 $\mu$g\,m$^{-3}$, and the O$_3$ coefficient only became significant above roughly the 89th temperature percentile, peaking at 0.92\% circulatory and 1.26\% cerebrovascular at P99. Ozone is not PM, but the structure transfers directly: a pollutant coefficient estimated as a main effect is an average over a temperature distribution and will be wrong at both tails. Four deaths per county-day is thin, and the counties are not independent - regional synoptic episodes drive heat and O$_3$ together, so the product term partly encodes shared meteorology rather than biological synergy.}
+{10.3760/cma.j.cn112338-20260118-00051}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Tang et al. 2026}
+{Analysis on epidemiology trends of chronic obstructive pulmonary disease in residents aged 40 years and above in Hubei Province, 2014-2024.}
+{Zhonghua Liu Xing Bing Xue Za Zhi}
+{China COPD surveillance, Hubei, waves 2014-15, 2019-20 and 2024, complex weighted sampling. Prevalence in adults 40+ fell 12.5\% (95\% CI 10.1-14.8) to 10.7\% (7.8-13.6) to 8.1\% (5.8-10.5), but the trend test was null (t=-2.06, P=0.079) - the point estimates drop by a third and the study still cannot reject a flat line, which is what three waves and intervals this wide buy you. Occupational dust exposure, household coal heating and respiratory symptom rates all fell significantly over the same decade while protective-equipment use rose, so the particulate exposure story is consistent even where the outcome trend is not. Adjusted risks: rural 1.38 (1.06-1.81), male 3.45 (1.80-6.61), age 70+ 8.43 (4.51-15.73), current smoker 2.48 (1.75-3.52). The protective BMI gradient (obese OR 0.07) is almost certainly reverse causation from advanced disease, not a benefit of adiposity.}
+{10.3760/cma.j.cn112338-20251218-00906}
+
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Shriyan et al. 2026}
+{Ambient and Indoor Air Pollution in Pregnancy and the risk of Low birth weight and Ensuing Effects in Infants (APPLE): A cohort study in Bangalore, South India.}
+{Wellcome Open Res}
+{516 pregnant women recruited before 18 weeks in Bangalore urban slums, infants followed to age one. This is a protocol, not a result - no effect estimate is reported, and it is a fourth-version revision of a design first posted years ago, so its appearance in this window is a deposit event rather than new evidence. Carried because the measurement plan is the relevant part: paired indoor and ambient PM$_{10}$, PM$_{2.5}$ and CO in solid-fuel slum households is exactly the setting where a fixed regulatory monitor is furthest from personal exposure, and where a low-cost indoor node earns its keep. The planned mediation analysis of LBW on infant adiposity is ambitious for n=516 and will be underpowered for anything but a large effect.}
+{10.12688/wellcomeopenres.14830.4}
+
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Chen et al. 2026}
+{A Quasi-Michaelis-Menten Mechanism Explains the Nonlinear Relationship between Transition Metals and PM$_{2.5}$ Oxidative Potential Measured by the Dithiothreitol (DTT) Assay.}
+{Environ Sci Technol}
+{62 ambient PM$_{2.5}$ samples, Beijing, one year, plus laboratory standards. The authors derive a quasi-Michaelis-Menten scheme for DTT, transition metals and oxygen, and the resulting Cu and Mn equations reproduce both the saturating single-metal response and the antagonism seen in Cu-Mn mixtures. A three-term model on water-soluble Cu, Mn and WSOC - WSOC entered linearly - accounts for 98.6\% of measured OP-DTT. The weakness is that 98.6\% is an in-sample fit on 62 filters from one city with no held-out set and no cross-site test, so the coefficients are calibration, not validation. Still, this is the most directly useful result of the day for sensing: it says OP-DTT is a saturating, not additive, function of composition, so any attempt to infer toxicity-weighted PM from a low-cost mass or optical channel must carry a nonlinear composition term or it will systematically overstate hazard in metal-rich air.}
+{10.1021/acs.est.6c09293}
+
+\band{Exposure assessment \& modelling\hfill 4 records}{Clay}
+
+\paperentry{Melssen Pfahl et al. 2026}
+{Renoxification via Reduction of Inorganic Nitrate by Photoacids in Aerosols.}
+{Environ Sci Technol}
+{Chamber study, no human subjects. Catechol and related phenols directly reduce particulate nitrate to HONO and NO under UV-visible light; nebulised gallic acid with nitrate produced 23 times more NOy than nitrate photolysis alone. HONO formation persisted at pH 8, above the pKa of HONO, implicating the phenols as photoacids rather than as bulk acidifiers. The limitation is the usual one for chamber aerosol chemistry - gallic acid at nebuliser concentrations is a proxy for a biomass-burning phenol pool that is far more heterogeneous, and no ambient measurement anchors the 23-fold enhancement. Relevance to distributed sensing is indirect but real: a smoke plume that renoxifies this efficiently generates ozone downwind, so a PM-only network mis-reports the health burden of the same plume hours later and tens of kilometres away.}
+{10.1021/acs.est.6c04742}
+
+\paperentry{Han et al. 2026}
+{Environmental Mixture-Health Associations: Current Analytical Practice and Reporting Recommendations.}
+{China CDC Wkly}
+{97 original mixture-exposure studies in four high-impact journals, 2021-25. Median sample size 729 (IQR 396-1,992) and median 9 exposures (IQR 6-15); BKMR in 80.4\%, WQS 36.1\%, quantile g-computation 30.9\%, with 42.3\% running at least two methods. 88.7\% used internal (biomarker) exposures and only 67.4\% of those stated a detection-rate threshold; feature reduction was reported in 25.8\%. Post-hoc variable-importance, interaction and nonlinearity testing appeared in 80-90\% of papers, which with median n=729 and 9 correlated exposures is a multiple-comparison problem the field is not reporting. The review is descriptive and the four-journal frame is not the literature, so prevalence figures are upper bounds on best practice. The checklist matters here because PM component mixtures are the archetypal case and, as the frailty and MASLD records in this same issue show, component-level claims are being made routinely without the preprocessing documentation this paper finds missing.}
+{10.46234/ccdcw2026.179}
+
+\paperentry{Atmos Pollut Res 2026}
+{Canyons and Canopies: Effects of building configuration and green infrastructure on urban air quality.}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Crossref deposit of 19 September with no abstract; Semantic Scholar has not indexed the DOI and the OpenAlex per-work route returns no inverted index, the same dead end logged on 18 September. Carried on title and venue alone. Nothing is asserted about the method, the domain or the direction of the green-infrastructure effect, because the record does not support it. Flagged for pickup: street-canyon geometry crossed with canopy cover is directly a siting question for a distributed network - it determines whether two nodes a block apart are measuring the same air - so this is worth re-fetching once the abstract appears.}
+{10.1016/j.apr.2026.103205}
+
+\paperentry{Environ Pollut 2026}
+{Underlying Surface Heterogeneity Modulates Meteorological Drivers of PM$_{2.5}$ and O$_3$ Pollution in the Sichuan Basin.}
+{Environ Pollut}
+{\textsc{metadata only.} Crossref deposit of 19 September, abstract absent from the deposit and not yet indexed anywhere queried. Carried on title and venue. The claim in the title - that land-surface heterogeneity modulates how meteorology drives PM$_{2.5}$ and O$_3$ - is the kind of effect that breaks a spatially stationary land-use regression, and the Sichuan Basin is the standard stagnation test case, but no magnitude, period or model class can be stated from what was deposited. Held for pickup.}
+{10.1016/j.envpol.2026.129201}
+
+\band{Sensing, forecasting \& instrumentation\hfill 1 record}{Amber}
+
+\paperentry{J Aerosol Sci 2026}
+{High-efficiency plasma-near-passage unipolar aerosol charger for sub-10 nm particles.}
+{J Aerosol Sci}
+{\textsc{metadata only.} The only instrumentation record in the window and the one whose missing abstract costs most. Crossref deposit of 19 September with no abstract; not indexed by Semantic Scholar, and the OpenAlex per-work fallback is dead for same-day deposits. No charging efficiency, particle loss fraction or flow rate can be quoted, so none is. Context, not content: sub-10 nm extrinsic charging efficiency is the binding constraint on any mobility-sizing instrument at the ultrafine end, and the published state of the art for this class sits well below unity at 5 nm, so a genuine 'high-efficiency' claim here would matter to anyone trying to put size distribution rather than mass on a distributed node. Priority pickup on the next run.}
+{10.1016/j.jaerosci.2026.106898}
+
+\band{Occupational \& indoor\hfill 3 records}{Amber}
+
+\paperentry{Environ Int 2026}
+{Portable HEPA air filtration effects on particulate matter, radioactivity, and chemical constituents in occupied buildings.}
+{Environ Int}
+{\textsc{metadata only.} Crossref deposit of 19 September, abstract not deposited and not recoverable from any queried index. Carried on title and venue. The title's three-endpoint framing - particulate mass, radioactivity and chemical constituents from the same intervention - is unusual and would speak to whether HEPA removal efficiency is constituent-dependent, which is the question a mass-only sensor cannot answer when validating a filtration intervention. No reduction fraction, building count or study design is asserted here. Held for pickup.}
+{10.1016/j.envint.2026.110528}
+
+\paperentry{Ma et al. 2026}
+{Association between combined occupational exposure to coal dust and noise and high-frequency hearing loss among workers: a cross-sectional study.}
+{Front Public Health}
+{1,187 workers examined in Baiyin City in 2023: 276 noise-only, 911 noise plus coal dust. High-frequency hearing loss prevalence 35.5\% vs 46.8\% (P<0.001), with the characteristic 4 kHz notch and little speech-frequency involvement; adjusted OR for combined versus noise-alone exposure 1.620 (95\% CI 1.198-2.190, P=0.002). The inference is weak in a specific way: exposure is a job label, not a measured dust concentration or a measured noise dose, so the combined group may simply work louder jobs and the OR then encodes noise intensity rather than a dust interaction. A cross-sectional design in a workforce also selects out the already-deafened. It is carried because dust-noise co-exposure is common and because it is a reminder that a sensor network characterising an industrial site is measuring only one of two correlated hazards.}
+{10.3389/fpubh.2026.1929586}
+
+\paperentry{Hu et al. 2026}
+{Analysis of carbon fiber dust exposure status and related occupational health risk factors among workers during the molding process of carbon fiber products.}
+{Front Public Health}
+{955 molding-line workers across 30 carbon-fibre firms in Shenzhen. Dust exposure was identified for 8.38\% of employees and varied by post; ICMM tiering returned 3 tolerable, 36 potential, 37 high, 2 very high and 2 intolerable workstation risks. Elevated risk was associated with years of prior frontline work (OR 5.018, 95\% CI 2.728-9.231) and grinding-shop employment (3.111, 1.123-8.624); protective were high prevention awareness (0.739, 0.595-0.919) and tertiary education (0.131, 0.024-0.699). The outcome is a risk score, not disease, so every OR describes exposure classification rather than health. The education coefficient spans an order of magnitude on 955 workers and should be treated as noise. Carbon fibre is a rising industrial aerosol with fibre morphology that mass-based instruments handle badly - worth tracking as a sensing gap.}
+{10.3389/fpubh.2026.1926373}
+
+\band{Other clinical endpoints\hfill 6 records}{Slate}
+
+\paperentry{Liu et al. 2026}
+{Association of exposure to fine particulate matter and its components with frailty in middle-aged and older adults in Beijing-Tianjin-Hebei region and surrounding areas.}
+{Zhonghua Liu Xing Bing Xue Za Zhi}
+{1,875 adults across ten cities, mean age 64.95 (SD 13.42), 49.4\% men, deficit-accumulation frailty index mean 0.15 (SD 0.09). An IQR rise in 90-day PM$_{2.5}$ was associated with a 1.30\% higher frailty index (95\% CI 0.29-2.31\%), strongest at lag0-90. Components: OC 3.63\% (1.17-6.09), Cu 1.50\% (0.76-2.24), Ca 1.35\% (0.51-2.20), EC 0.83\% (0.45-1.21) per IQR. Two problems. Exposure is assigned from the nearest superstation, so within-city gradient is entirely unmodelled and the IQR is a between-city contrast wearing individual-level clothing - precisely the misassignment a dense network exists to fix. And the components are collinear combustion tracers; the OC-over-EC ordering is not evidence that organic carbon is the causal fraction. No subgroup modification was detected on any of six strata, which at n=1,875 is uninformative rather than reassuring.}
+{10.3760/cma.j.cn112338-20251220-00911}
+
+\paperentry{Kim et al. 2026}
+{Extreme Temperatures, Elevated PM$_{2.5}$, and Acute Care Events Among Dual-Eligible Nursing Facility Residents.}
+{J Am Geriatr Soc}
+{24,784,081 facility-days from 24,760 nursing facilities in 47 states plus DC, Medicare-Medicaid linked claims 2017-20. On elevated-PM$_{2.5}$ days ED visits rose 0.020 (95\% CI 0.013-0.027) and hospitalisations 0.017 (0.012-0.022) per 1,000 resident-days; extreme heat gave 0.022 (0.003-0.041) and 0.025 (0.011-0.039), extreme cold 0.014 (0.001-0.027) hospitalisations. Effect sizes are tiny in absolute terms and the intervals for heat and cold nearly touch zero; what carries the paper is 24.8 million facility-days and a fixed-effects design that removes time-invariant facility confounding. The exposure is the weak link - an outdoor county-level value dichotomised at 9 $\mu$g\,m$^{-3}$, applied to a population that is almost entirely indoors, with no measurement of the HVAC infiltration the authors themselves identify as the mechanism. The policy asymmetry is the point: nursing facilities are regulated on indoor temperature and not at all on indoor PM.}
+{10.1111/jgs.70720}
+
+\paperentry{Huang et al. 2026}
+{Secondhand smoke exposure in never-smokers: A cross-sectional and prospective cohort study of chronic kidney disease prevalence and all-cause mortality in affected patients.}
+{Medicine (Baltimore)}
+{13,276 never-smoking adults, NHANES 1999-2020, with 1,630 CKD cases followed for mortality. Moderate SHS exposure was associated with CKD prevalence (OR 1.37, 95\% CI 1.07-1.76). Among those with CKD, moderate and heavy exposure carried all-cause mortality HRs of 2.03 (1.23-3.36) and 1.80 (1.11-2.93); each doubling of cotinine gave HR 1.04 (1.01-1.08). The non-monotonic ordering - moderate exceeding heavy for mortality, and heavy not associated with prevalence - undercuts a dose-response reading and points to residual confounding by household socioeconomic position. Cotinine is a good internal dose marker for the nicotine fraction and a poor one for the particulate fraction, which is the exposure of interest here; the two dissociate across ventilation conditions in a way an indoor PM sensor would resolve and a serum assay cannot.}
+{10.1097/md.0000000000050614}
+
+\paperentry{Odiko et al. 2026}
+{Environmental lead exposure and clinical infectious respiratory disease in a sample of urban and disadvantaged children.}
+{J Expo Sci Environ Epidemiol}
+{13,221 children aged 14 and under, Temple University Health System, Philadelphia, 2010-20; 28\% above the CDC 3.5 ug/dL action level. Streptococcal pharyngitis was associated with BLC >=3.5 ug/dL (aOR 2.74, 95\% CI 1.92-3.90) and, almost identically, with BLC 1-3.4 ug/dL (2.45, 1.75-3.44); frequent strep showed the same pattern. Croup was null. That the two lead strata give the same estimate is the problem - a genuine dose-response should separate them, and the flatness suggests both strata are marking the same underlying thing, most plausibly housing age and healthcare contact frequency, neither of which is adjusted for beyond insurance type. Outcome ascertainment is ICD-coded within one health system, so a child who is screened for lead is also a child who is seen more often. The 'no safe level' conclusion is not supported by a contrast this flat.}
+{10.1038/s41370-026-00978-0}
+
+\paperentry{Alhalwani et al. 2025}
+{Correlations of CO, SO$_2$, PM$_{10}$, NO$_2$, and O$_3$ with dry eye disease in Saudi Arabia.}
+{Saudi J Ophthalmol}
+{492 dry eye disease diagnoses at King Abdulaziz Medical City, Jeddah, 2017-18, against three monitoring stations. Adjusted ORs reached significance only for SO$_2$ (1.182) and CO (1.162); PM$_{10}$, the particulate metric, was not associated. The reported SO$_2$ interval is 0.908-1.111 with P=0.021, which is internally inconsistent - an interval spanning unity cannot accompany that P value - and that error is in the published abstract, so the estimate should not be used. Three monitors for a city of four million gives essentially no exposure contrast within Jeddah, and a clinic case series with no non-DED comparison group cannot support an odds ratio at all as described. Carried at tier C as a record of the ocular-surface literature only; the finding that PM$_{10}$ was null here should not be read as evidence against a particulate effect.}
+{10.4103/sjopt.sjopt_286_24}
+
+\paperentry{Aerosol Air Qual Res 2026}
+{Association Between Air Pollution and Psoriasis-Related Outcomes: A Systematic Review and Meta-analysis.}
+{Aerosol Air Qual Res}
+{\textsc{metadata only.} Springer deposit of 19 September without an abstract; not yet indexed by Semantic Scholar. Carried on title and venue only. No pooled estimate, study count, heterogeneity statistic or pollutant metric is asserted, because none was deposited. Noted as the fourth systematic review or meta-analysis in a single day's window - alongside the venous thrombosis, climate-burden and ischaemic stroke reviews screened out or admitted above - which is itself a signal worth watching in the weekly rollup. Held for pickup.}
+{10.1007/s44408-026-00166-7}
+
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{19 September 2026}, single day, continuous with the previous issue.
+The scheduled run for that date did not fire and this issue is the recovery, built at
+\textbf{00:06 CDT on 20 September} --- six minutes after the window closed, so the day is
+complete rather than partial. Legs run: \textbf{PubMed} E-utilities on the health and
+instrumentation axes as separate queries (\textbf{10} health, \textbf{0} sensing);
+\textbf{Europe PMC} \texttt{CREATION\_DATE} (\textbf{29}); \textbf{Crossref by ISSN}
+(\textbf{30}, again the highest-yield leg). \textbf{OpenAlex} returned HTTP 429 and
+\textbf{arXiv} HTTP 406, both known-broken legs carried in the source-status table.
+\textbf{One} Europe PMC record was dropped at source as a retro-index artefact.
+The remaining \textbf{68} raw records deduplicated to \textbf{67}, of which \textbf{7} were
+already carried in a previous issue, leaving \textbf{60} fresh candidates of which
+\textbf{20 were admitted} and 40 rejected as off-topic --- the rejected set is dominated by
+the aquatic-toxicology, PFAS and microplastics-in-food literature that shares journals with
+this field but not its subject. One record was rejected specifically for carrying
+\textbf{no DOI} (\textit{J Testing and Evaluation}, toxic metals in electronic cannabinoid
+delivery aerosols): on topic, but unlinkable and unverifiable, and the DOI gate exists
+precisely to stop that shipping.
+\textbf{Five records are carried on metadata alone} and assert no finding. Recovery was
+attempted for all five through PubMed \texttt{efetch}, Crossref, Europe PMC and
+\textbf{Semantic Scholar}; Semantic Scholar returned \textbf{404 on all five DOIs}, having
+not yet indexed same-day deposits, and the free OpenAlex per-work endpoint remains dead for
+this purpose as established on 18 September. All \textbf{20} DOIs were resolved against
+Crossref before build (0 fail, 0 warn).
+Subtopic, design, particle-metric and geography labels are assigned from title, abstract,
+keywords and MeSH; assignment is single-label by dominant contribution and is a judgement,
+not a controlled vocabulary. One new design label (\textit{Study protocol}) was registered
+in \texttt{plots.py} in the same edit that wrote it onto a record. Effect estimates are
+transcribed verbatim and use heterogeneous exposure contrasts --- see the forest-plot
+caption. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}
