@@ -596,6 +596,16 @@ design_group.update({
     "Repeated-measures cohort + metabolite mediation": "Observational - cohort",
     "Multi-city time-series + random-effects meta-analysis": "Observational - acute",
 })
+# 2026-09-20 issue. One coined label, plus a latent defect found while diffing this
+# issue's design set against the map: eight archived records (2026-08 onward) carry the
+# bare string "Metadata only" rather than the canonical "Metadata only (no abstract)",
+# and the bare form was never mapped, so it has been falling through to "Other / mixed"
+# in every f2a since. Alias it rather than rewriting the archived records, so the
+# historical corpus stays byte-stable and the correction is visible in this diff.
+design_group.update({
+    "Instrumental-variable panel analysis": "Ecological",
+    "Metadata only": "Metadata only",
+})
 
 design_group.update({v: v for v in set(design_group.values())})
 _design_unmapped = set()
@@ -869,6 +879,14 @@ GEO_ALIAS = {
 }
 GEO_SUBSTR = [
     ("united states", "USA"), ("u.s.", "USA"), (" usa", "USA"), ("america", "USA"),
+    # added 2026-09-20: "Utah, California, Nevada, Idaho, Colorado (USA)" matched no
+    # needle because " usa" is anchored on a leading space and the string has "(USA)".
+    # Bare US state names are added for the same reason - a multi-state site list is
+    # the normal way a US monitoring-network paper states its geography, and until now
+    # every one of them has been silently counted as "Global / multi-region".
+    ("(usa", "USA"), ("(u.s", "USA"),
+    ("utah", "USA"), ("california", "USA"), ("nevada", "USA"), ("idaho", "USA"),
+    ("colorado", "USA"), ("illinois", "USA"), ("texas", "USA"), ("new york", "USA"),
     ("united kingdom", "UK"), ("england", "UK"), ("london", "UK"), ("scotland", "UK"),
     # added 2026-08-08: "Birmingham, UK" fell through because no needle matched the
     # bare country abbreviation. Anchor on the separator so "UKraine"-style false
@@ -940,7 +958,15 @@ GEO_SUBSTR = [
 # intent, not by accident, so they must not trip the unmapped warning.
 GEO_NONGEO = ("chamber", "laboratory", "lab ", "n/a", "not stated", "not applicable",
               "method", "synthetic", "simulation", "in vitro", "in silico", "deposit",
-              "computational", "no site", "theoretical", "modelled only")
+              "computational", "no site", "theoretical", "modelled only",
+              # added 2026-09-20: metadata-only records state their geography as
+              # "Not recoverable from metadata". That is an absence of information,
+              # not a claim of global scope, but it lands in the same fallback bucket
+              # as a chamber study either way - routing it through GEO_NONGEO at least
+              # stops it tripping the unmapped diagnostic every issue the Crossref leg
+              # carries the day. If metadata-only stays above ~20% of a period, the
+              # fallback bucket needs splitting; flagged for the monthly.
+              "not recoverable")
 _geo_unmapped = set()
 def geo_of(g):
     g = (g or "").strip()
@@ -1105,8 +1131,15 @@ for _ci, E in enumerate(_CHUNKS):
     ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
     ax.set_yticks(y)
     def _clip(x, n):
-        x = str(x)
-        return x if len(x) <= n else x[:n - 1].rstrip(" ,;-") + "\u2026"
+        # DEFECT, found 2026-09-20: `label` is a two-line string and the budget was
+        # applied to the whole thing, newline included, so a long first line ate the
+        # second line's budget and the clip landed mid-metric -- three rows all read
+        # "per 1 SD PM..." and PM2.5 could not be told from PM10 in the label. Clip
+        # each line against the budget separately; the exposure line below disambiguated
+        # this issue by luck, not by design.
+        parts = str(x).split("\n")
+        return "\n".join(p if len(p) <= n else p[:n - 1].rstrip(" ,;-") + "\u2026"
+                         for p in parts)
     # Long y-labels blow up the figure width under bbox_inches="tight", which then forces
     # the whole panel to be scaled down to \linewidth and undoes the extra height.
     ax.set_yticklabels([f"{_clip(e['label'], 46)}\n{_clip(e['exposure'], 26)}  |  "

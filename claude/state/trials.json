@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 12,
+ "trials": 13,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -158,6 +158,12 @@
    "registrations_or_updates": 5,
    "new_to_state": 0,
    "note": "Weekly reconciliation sweep for the W38 rollup. All 5 in-window records were already captured by the daily sweeps (NCT07540000 INTERLUNG, NCT07793123 Robertet, NCT07713264 VISIONS, NCT07817836 Pavia); the fifth, NCT02820402 Project Viva, is a 1999 birth cohort whose air-pollution work is secondary and is deliberately not stored. Zero new to state, which is the first clean reconciliation - the daily leg is now ahead of the weekly sweep rather than behind it."
+  },
+  {
+   "window": "2026-09-20..2026-09-20",
+   "registrations_or_updates": 1,
+   "new_to_state": 1,
+   "note": "Exact-day LastUpdatePostDate filter returned 0; widened to 18-21 Sep and found one observational record."
   }
  ],
  "NCT05867381": {
@@ -415,5 +421,26 @@
    "Skin IL-8 assay"
   ],
   "note": "Third consecutive topical hit whose PM framing no measured variable carries. 'Urban air pollution' is an eligibility descriptor for the enrolled women, not an exposure that is measured, assigned or contrasted: every one of the eight endpoints is a dermatological or biophysical skin measure, there is no PM2.5 or AQI covariate, and the randomisation is on supplement vs placebo, not on exposure. Industry sponsor (Robertet SA, a fragrance and botanical-extract house); n=60, single site, 90 days. Record as an air-pollution-adjacent cosmetic-efficacy trial, not as PM evidence."
+ },
+ "NCT05423665": {
+  "first_seen": "2026-09-20",
+  "title": "Speckle Tracking Echocardiography as a Tool for Early Diagnosis of Impaired Fetal Growth in Twin Pregnancies",
+  "status": "RECRUITING",
+  "study_type": "OBSERVATIONAL",
+  "phase": null,
+  "sponsor": "University Hospital, Ghent",
+  "enrollment": 360,
+  "interventions": [
+   "sample collection"
+  ],
+  "conditions": [
+   "Fetal Growth Restriction",
+   "Cardiac Remodeling, Ventricular",
+   "Placental Insufficiency",
+   "Air Pollution"
+  ],
+  "start_date": "2023-06-22",
+  "primary_completion_date": "2027-02-01",
+  "note": "Observational; air pollution listed as a condition alongside fetal growth restriction in twins. Not interventional, so analyze_endpoints not run."
  }
 }

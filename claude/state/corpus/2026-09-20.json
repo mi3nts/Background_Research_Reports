@@ -1,0 +1,252 @@
+{
+ "date": "2026-09-20",
+ "entry_window": "2026-09-20 -> 2026-09-20",
+ "PAPERS": [
+  {
+   "pmid": "42761995",
+   "doi": "10.1016/j.apr.2025.102779",
+   "journal": "Atmos Pollut Res",
+   "short": "Kaur et al. 2025",
+   "title": "Long-term PM2.5 source apportionment at 12 sites in the western United States from 2000-2020.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "Speciated PM2.5 (CSN/IMPROVE), Positive Matrix Factorization and Chemical Mass Balance jointly",
+   "geo": "Utah, California, Nevada, Idaho, Colorado (USA)",
+   "endpoint": "None (exposure)",
+   "tier": "A",
+   "n": "Twelve monitoring sites, twenty years, five to eight resolved factors per site. PM2.5 fell at ten of twelve sites (-0.38 to -0.037 ug/m3 per year; no decline at Boise or Commerce City), and the decline is carried by secondary ammonium nitrate, ammonium sulfate and the two EC-rich factors - exactly the sources NOx, SO2 and mobile-source rules targeted. EC-rich fell despite rising vehicle miles travelled, isolating per-vehicle emission control rather than reduced activity. Winter OC-rich, the biomass-burning proxy, showed the largest seasonal decline. Dust rose at most sites. The weakness is the one the authors set out to address and only partly do: CSN speciation methods changed within the record, so a factor's 20-year trajectory is partly an instrument trajectory, and reconciling PMF with CMB constrains but does not eliminate that. For distributed sensing the finding that matters is compositional: the shrinking part of western PM2.5 is the secondary and combustion mass an optical sensor sees reasonably well, while the growing part is dust, which nephelometric low-cost sensors under-report because coarse mineral particles scatter poorly at their sampling cut. Network bias against dust therefore worsens over time."
+  },
+  {
+   "pmid": "42761727",
+   "doi": "10.1520/jte20250320",
+   "journal": "J Test Eval",
+   "short": "Thomas et al. 2026",
+   "title": "Procedural Challenges in the Analysis of Toxic Metals in Electronic Cannabinoid Delivery System Aerosols Produced for Vaping Cannabinoids.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Method review",
+   "pm": "Aerosol trapping media for ICP-MS determination of metals in e-cigarette and cannabis vaping aerosol",
+   "geo": "United States (ASTM D37.08 work group)",
+   "endpoint": "None (instrument)",
+   "tier": "B",
+   "n": "No subjects; a white paper reviewing ten years of trapping approaches. The central problem is that metal constituents sit in the ug/g range, so the trap itself and the sample-preparation consumables contribute more metal than the aerosol does unless materials are chosen against a metals blank - media validated for organic constituents are simply wrong here. The second constraint is mechanical: several otherwise-clean media impose enough airflow resistance that the device will not puff-activate, so the aerosol never forms. No quantitative inter-method comparison is offered, which is the paper's limitation - it maps the failure modes without ranking the survivors. The transferable point for distributed sensing is that sampling-substrate blank, not detector sensitivity, sets the floor for any trace-metal PM measurement, which is the same constraint that governs filter-based reference sampling behind a low-cost network. Note: this record was rejected from the 19 Sep issue for carrying no DOI; the DOI has since been registered."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115292",
+   "journal": "Build Environ",
+   "short": "Build Environ 2026 (subway)",
+   "title": "Spatiotemporal distribution characteristics of multiple air pollutants within subway stations",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from metadata",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (monitoring)",
+   "tier": "B",
+   "n": "Metadata only: the Crossref deposit carries no abstract and neither Crossref nor Europe PMC had text at the time of screening, so nothing beyond the title is asserted here. Subway microenvironments are the highest-concentration routine PM exposure most urban commuters encounter - platform PM2.5 commonly runs several-fold above street level and is Fe-dominated from rail-wheel-brake wear - so a spatiotemporal characterisation across a station is directly relevant to fixed-versus-personal monitor siting. Held for a deferred re-query once the publisher releases the abstract; the record is carried now rather than dropped so the DOI is on the ledger."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envint.2026.110529",
+   "journal": "Environ Int",
+   "short": "Environ Int 2026 (button mfg)",
+   "title": "Plastic button manufacturing as an under-recognized source of airborne multi-pollutant mixtures: process-resolved characterization",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from metadata",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (exposure)",
+   "tier": "B",
+   "n": "Metadata only; no abstract in the Crossref deposit or Europe PMC at screening. The title claims a process-resolved characterisation, which in occupational aerosol work normally means emissions resolved to individual unit operations rather than a shift-average - the design that actually supports a control recommendation. Small-scale plastics fabrication is a plausible unrecognised source of mixed particulate and VOC exposure precisely because it sits below the size threshold at which most jurisdictions require monitoring. No effect size is claimed here because none is available. On the deferred re-query list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115290",
+   "journal": "Build Environ",
+   "short": "Build Environ 2026 (cleanroom)",
+   "title": "Multi-objective ventilation optimization in non-unidirectional cleanrooms: an integrated RSM-NSGA-II-TOPSIS approach",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from metadata",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (modelling)",
+   "tier": "C",
+   "n": "Metadata only. The title names a response-surface plus genetic-algorithm plus TOPSIS pipeline applied to non-unidirectional cleanroom ventilation, which is a simulation-optimisation study, not a measurement one; the objectives in this literature are almost always particle count against fan energy. Relevance to this watch is narrow but real - cleanroom control is the upper bound on what mechanical ventilation can do to particle number indoors, and the trade-off surface is the same one that governs filtration interventions in ordinary buildings at far lower air-change rates. Carried at tier C on the strength of the venue and the topic, with no finding asserted."
+  },
+  {
+   "pmid": "42763387",
+   "doi": "10.1186/s12889-026-29307-8",
+   "journal": "BMC Public Health",
+   "short": "Kwon & Kim 2026",
+   "title": "Mortality and morbidity consequences of particulate matter in South Korea: evidence from transboundary air pollution.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Instrumental-variable panel analysis",
+   "pm": "Local monitored PM2.5, instrumented by wind direction interacted with upwind Chinese monitor levels",
+   "geo": "South Korea",
+   "endpoint": "Mortality / longevity",
+   "tier": "A",
+   "n": "Mortality 2015-2022, morbidity 2016-2019, national. The instrument is the useful part: local PM2.5 is endogenous to local economic activity, so the authors instrument it with transboundary transport - wind direction crossed with upwind Chinese monitors - which shifts Korean PM2.5 without plausibly acting on Korean health through any other channel. A 1 ug/m3 increase raises 65+ mortality by 0.17% and respiratory hospitalisations by 5.1%; acute upper-respiratory visits rise 1.2%. The observed 5.58 ug/m3 national decline over 2015-2022 is valued at USD 14.14 billion on avoided life-years alone. Two weaknesses: the exclusion restriction fails if the same synoptic conditions that import Chinese PM independently affect health (cold-air outbreaks, humidity), which the abstract does not address; and the monetisation counts only life-years, so it is a floor, not an estimate. No confidence intervals are reported for the elasticities, so none are plotted. The design is worth borrowing: for any dense sensor network sited in a downwind receptor region, upwind transport is a ready-made instrument for exposure."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5334/aogh.5437",
+   "journal": "Ann Glob Health",
+   "short": "Ann Glob Health 2026 (disclosure)",
+   "title": "Disclosure without accountability: Air pollution reporting by major South African industrial companies.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from metadata",
+   "geo": "South Africa",
+   "endpoint": "Emissions / policy",
+   "tier": "C",
+   "n": "Metadata only; Europe PMC held no abstract at screening. The title states the finding as a thesis - corporate air-pollution reporting that discloses without enabling accountability - which in the self-reported-emissions literature usually means figures are published at an aggregation or cadence that cannot be checked against any independent measurement. South Africa's Highveld is one of the few heavily industrialised regions where that gap is measurable, because ambient monitoring exists alongside the disclosures. This is precisely the gap independent low-cost networks are deployed to close, so the record is carried despite being unreadable. Deferred re-query."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1007/s44408-026-00168-5",
+   "journal": "Aerosol Air Qual Res",
+   "short": "Aerosol Air Qual Res 2026 (IAQ education)",
+   "title": "Cross-national Evaluation of STEM-Based Indoor Air Quality (IAQ) Education for Sustainable Development",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not recoverable from metadata",
+   "geo": "Cross-national (countries not recoverable from metadata)",
+   "endpoint": "Emissions / policy",
+   "tier": "C",
+   "n": "Metadata only. A cross-national evaluation of STEM-delivered indoor air quality education; no sample, instrument or outcome is recoverable from the deposit. Logged at tier C because low-cost sensor deployments in schools are the standard vehicle for exactly this kind of programme, and whether the measurement component changes behaviour or only knowledge is an open question this watch has no evidence on either way. Nothing is claimed here. Deferred re-query."
+  },
+  {
+   "pmid": "42763704",
+   "doi": "10.18332/tid/230940",
+   "journal": "Tob Induc Dis",
+   "short": "Huang et al. 2026",
+   "title": "Global, regional, and 204 countries burden of disease attributed to secondhand smoke-related COPD, 1990-2021: A secondary data analysis of the Global Burden of Disease Study 2021.",
+   "sub": "Respiratory & allergic",
+   "design": "Descriptive burden analysis, GBD 2021",
+   "pm": "Secondhand tobacco smoke as a fine-particulate exposure, GBD comparative risk assessment",
+   "geo": "Global, 204 countries",
+   "endpoint": "Respiratory",
+   "tier": "B",
+   "n": "GBD 2021 secondary analysis, 1990-2021, with an ARIMA projection to 2031. Age-standardised mortality for secondhand-smoke-attributable COPD roughly halved, 11.36 (95% UI 4.52-18.55) to 5.87 (2.29-9.72) per 100,000, and ASDR fell 234.01 (93.58-380.47) to 120.94 (47.2-197.93) - yet absolute deaths rose, the familiar ageing-and-population-growth divergence that makes rate-only reporting misleading. China carries the largest absolute mortality (117,388; 47,776-195,915), Papua New Guinea the highest rates. The SDI relationship is non-linear with an inflection at SDI 0.42. The binding limitation is inherited, not introduced: GBD secondhand-smoke exposure is modelled from survey-reported household and workplace smoking, not measured particulate or cotinine, so the uncertainty intervals understate exposure misclassification and every country contrast partly reflects differing survey quality. An ARIMA extrapolation on a modelled series compounds that. Relevant here because secondhand smoke is the one fine-particulate exposure with an intervention that works, and it anchors the indoor end of the PM dose-response."
+  },
+  {
+   "pmid": "42761574",
+   "doi": "10.3389/ftox.2026.1908508",
+   "journal": "Front Toxicol",
+   "short": "Messina et al. 2026",
+   "title": "Organ-specific apoptotic pathways induced by micro- and nanoplastics: a systematic review of in vitro toxicological evidence.",
+   "sub": "Mechanistic toxicology",
+   "design": "Systematic review (PRISMA)",
+   "pm": "Micro- and nanoplastic particles across cell and organoid models (airborne fraction not separated)",
+   "geo": "Not applicable (literature synthesis)",
+   "endpoint": "Toxicological (in vitro)",
+   "tier": "B",
+   "n": "Eighty in vitro studies, PECOS framing, PRISMA reporting, search run 6 September 2024. Apoptosis recurs across gastrointestinal, hepatic, pulmonary, renal, reproductive, placental, neural, cardiovascular, dermal and haematological models, and the mechanisms converge: oxidative stress, mitochondrial depolarisation, ER stress, calcium dysregulation, MAPK and PI3K/AKT signalling, Bcl-2 family shifts and caspase activation, with ferroptotic and autophagic crosstalk. Particle size and surface chemistry modulate potency. Two limitations bound the inference hard. First, the search predates a fast-moving literature by two years. Second - and this is the one that matters for inhalation - the included work is overwhelmingly polystyrene spheres at mass doses far above any modelled human airway deposition, so the review establishes that these pathways can be engaged, not that they are engaged at ambient airborne microplastic levels. No dose-response anchor to a measured air concentration appears anywhere in the synthesis, which is the gap the monitoring side would have to fill."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1038/s41370-026-00905-3",
+   "journal": "J Expo Sci Environ Epidemiol",
+   "short": "Eick et al. 2026",
+   "title": "Prenatal exposure to aromatic amines and associations with infant cognition in the ECHO.CA.IL cohorts",
+   "sub": "Reproductive & developmental",
+   "design": "Prospective birth cohort (mixtures)",
+   "pm": "Second-trimester urinary aniline, o/m-toluidine, 4-chloroaniline, o-anisidine, 4,4'-methylenedianiline, cotinine",
+   "geo": "Illinois and California, USA",
+   "endpoint": "Neuro / cognitive",
+   "tier": "C",
+   "n": "N=250 across two pooled prospective birth cohorts (IKIDS and Chemicals in Our Bodies). Six aromatic amines were detected in over half of second-trimester urine samples; infant visual recognition memory was measured by infrared eye tracking at 7.5 months, with log-transformed individual analytes and a molar sum entered in linear regressions and child sex examined as a modifier. The relevance to a PM watch is indirect and worth stating plainly: aromatic amines are combustion and tobacco-smoke products, cotinine is measured alongside them, so urinary AAs partly index particulate-bound combustion exposure rather than only consumer-product contact - but the study makes no air measurement and cannot separate the two routes. At N=250 with six correlated analytes and a sex-interaction analysis, this is hypothesis-generating; any single-analyte association at this sample size is underpowered for the multiplicity involved. Carried at tier C for the exposure biomarker panel, not for the cognitive estimate."
+  },
+  {
+   "pmid": "42764052",
+   "doi": "10.1016/j.envres.2026.125689",
+   "journal": "Environ Res",
+   "short": "Zhu et al. 2026",
+   "title": "Long-term exposure to particulate matter and survival among patients with gastric cancer: A hospital-based cohort study.",
+   "sub": "Other clinical endpoints",
+   "design": "Retrospective cohort",
+   "pm": "36-month pre-surgery residential PM2.5, PM10 and PM2.5-10 from the ChinaHighAirPollutants (CHAP) reanalysis",
+   "geo": "Zhejiang, China",
+   "endpoint": "Cancer",
+   "tier": "A",
+   "n": "4,441 stage I-III gastric cancer patients resected 2012-2022, median follow-up 3.83 years, 1,318 deaths (919 gastric-cancer-specific). Per 1-SD increase, all-cause mortality HRs were 1.15 (95% CI 1.06-1.25) for PM2.5, 1.14 (1.06-1.24) for PM10 and 1.12 (1.03-1.21) for the coarse fraction; gastric-cancer-specific subdistribution HRs were larger - 1.31 (1.20-1.44), 1.28 (1.17-1.40) and 1.17 (1.07-1.28) - with Fine-Gray models treating non-gastric deaths as competing events, which is the right handling and is often skipped in this literature. Counterfactual PAFs under lower historical exposure are reported. The inference is threatened most by exposure assignment: CHAP is a 1 km satellite-and-model reanalysis assigned at the residential address, so measurement error is spatially structured, and pre-index exposure is a proxy for decades of residence and occupation that the 36-month window does not capture. Reverse causation is limited by the pre-surgery window but not eliminated - sicker patients may relocate. That the cause-specific effect exceeds the all-cause effect is internally coherent but unusual enough to want replication outside Zhejiang."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "All-cause mortality\nper 1 SD PM2.5",
+   "exposure": "36-month pre-index PM2.5",
+   "est": 1.15,
+   "lo": 1.06,
+   "hi": 1.25,
+   "metric": "HR",
+   "src": "4,441 Zhejiang gastric cancer patients"
+  },
+  {
+   "label": "All-cause mortality\nper 1 SD PM10",
+   "exposure": "36-month pre-index PM10",
+   "est": 1.14,
+   "lo": 1.06,
+   "hi": 1.24,
+   "metric": "HR",
+   "src": "4,441 Zhejiang gastric cancer patients"
+  },
+  {
+   "label": "All-cause mortality\nper 1 SD coarse PM2.5-10",
+   "exposure": "36-month pre-index coarse PM",
+   "est": 1.12,
+   "lo": 1.03,
+   "hi": 1.21,
+   "metric": "HR",
+   "src": "4,441 Zhejiang gastric cancer patients"
+  },
+  {
+   "label": "Gastric-cancer death\nper 1 SD PM2.5",
+   "exposure": "36-month pre-index PM2.5",
+   "est": 1.31,
+   "lo": 1.2,
+   "hi": 1.44,
+   "metric": "sHR",
+   "src": "919 cancer deaths, Fine-Gray"
+  },
+  {
+   "label": "Gastric-cancer death\nper 1 SD PM10",
+   "exposure": "36-month pre-index PM10",
+   "est": 1.28,
+   "lo": 1.17,
+   "hi": 1.4,
+   "metric": "sHR",
+   "src": "919 cancer deaths, Fine-Gray"
+  },
+  {
+   "label": "Gastric-cancer death\nper 1 SD coarse PM2.5-10",
+   "exposure": "36-month pre-index coarse PM",
+   "est": 1.17,
+   "lo": 1.07,
+   "hi": 1.28,
+   "metric": "sHR",
+   "src": "919 cancer deaths, Fine-Gray"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "250 ECHO.CA.IL\npregnancies, urinary\naromatic amines,\ninfant VRM at 7.5 mo"
+  },
+  {
+   "n": 0,
+   "note": "No childhood-\nspecific record in\nthis window"
+  },
+  {
+   "n": 0,
+   "note": "No adolescent-\nspecific record in\nthis window"
+  },
+  {
+   "n": 1,
+   "note": "4,441 Zhejiang\ngastric cancer\nresections, 36-mo\npre-index PM"
+  },
+  {
+   "n": 1,
+   "note": "South Korea 65+\nmortality elasticity,\nwind-instrumented\nPM2.5"
+  }
+ ]
+}

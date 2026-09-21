@@ -2831,3 +2831,44 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `ENDPOINT_CANON` Cancer/Oncologic split; `state/corpus/2026-08-03.json` 6-element
   `LIFECOURSE` (will corrupt the September monthly, due 30 Sep); `.git` lock/temp debris,
   mount EPERM, manual cleanup on a local checkout.
+
+## Run 2026-09-20 (built 2026-09-21 12:44 CDT) — daily 20 Sep
+
+- Backfill of the Sunday the 19 Sep run deliberately left open. 36 raw (PubMed 3 health /
+  **0 sensing**, EPMC 23, Crossref-ISSN 13; OpenAlex 429, arXiv 406) → 3 EPMC retro-index
+  dropped → 35 unique → 4 already carried → 31 fresh → **12 admitted**, 8 pp, 0 errors,
+  1 overfull hbox (the 5.5pt masthead `\foreach`, cosmetic, present in every issue).
+  DOI gate 12/12. `last_entry_date` = 2026-09-20. **21 Sep not opened** — run executed at
+  12:44 CDT, nine hours of deposits outstanding, per the 22:00 rule.
+- **The PubMed sensing leg returned literally zero**, so with OpenAlex and arXiv both down
+  the instrumentation axis rested entirely on Crossref-by-ISSN, which deposits titles
+  without abstracts. **5 of 12 records are metadata-only** — including the two most useful
+  titles of the day (subway-station pollutants, plastic-button airborne mixtures). Semantic
+  Scholar was **not** retried, per the 19 Sep finding. Retry list now 23 records.
+- `10.1520/jte20250320` (vape aerosol metals) **admitted after being rejected on 19 Sep for
+  having no DOI** — the publisher registered one within the day. First record recovered
+  from a DOI-gate rejection; worth re-checking DOI-less rejects on the next run rather than
+  treating that rejection class as final.
+- **Three defects fixed, all found by diffing this issue against the maps before building.**
+  (1) `"Metadata only"` — the bare string, carried by **8 archived records** since August —
+  was never mapped and had been falling through to *Other / mixed* in every f2a since.
+  Aliased rather than rewriting the archive. (2) `GEO_SUBSTR` matched `" usa"` on a leading
+  space, so `"...(USA)"` and bare US state lists have been silently counted as
+  *Global / multi-region*; `(usa`, `(u.s` and eight state names added. (3) The forest-plot
+  `_clip` applied one 46-char budget to a **two-line** label, so a long first line ate the
+  metric off the second — three rows read `per 1 SD PM…` and PM2.5 could not be told from
+  PM10. Now clips per line.
+- Proof caught the `\clearpage` before *Paper-level digest* leaving p5 ~60% empty on a
+  12-record issue. Replaced with `\vspace{4mm}`; 9 pp → 8 pp. **The clearpage is right for
+  a 20-record issue and wrong for a 12-record one — check the rendered page, do not inherit
+  it.** p2/p3 still carry ~30% gaps from unbreakable figure+caption blocks; within normal.
+- Trial watch: exact-day `LastUpdatePostDate` returned 0, widened to 18–21 Sep and found
+  **1 new** (NCT05423665, observational twin-pregnancy study listing air pollution as a
+  condition). `trials.json` 13 trials, 18 windows.
+- `metrics.csv` 436 rows, 0 malformed — **fourteenth** consecutive issue confirming the
+  KNOWN DEFECT note in the task file is stale; it should be struck. Site UI needs no change
+  (multi-report picker, cadence tags, month badges, category archive all verified 16 Aug).
+  Still open: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split;
+  `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (**will corrupt the September
+  monthly, due 30 Sep — fix before then**); `.git` lock/temp debris, mount EPERM, manual
+  cleanup on a local checkout.
