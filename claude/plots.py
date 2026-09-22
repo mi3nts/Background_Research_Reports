@@ -346,6 +346,26 @@ design_group = {
     "Chamber + aircraft": "Chamber / laboratory",
     "Systematic review": "Review / synthesis",
     "Burden estimation": "Modelling / inventory",
+    # added 2026-09-21, in the same edit as the records that carry them. Thirteen
+    # labels, which is the largest single-issue batch since 23 Aug -- an 18-record
+    # issue drawn from four legs will coin new granular names. None of them is a new
+    # kind of study; all thirteen reach an existing group. Note the five
+    # abstract-less records were NOT given bespoke "Metadata only - <topic>" labels:
+    # they use the canonical "Metadata only (no abstract)" so they pool into one
+    # honest slice instead of fragmenting the donut into five singletons.
+    "Community-based longitudinal cohort, linear mixed-effects": "Observational - cohort",
+    "Population-wide administrative linkage, cross-sectional": "Observational - cross-sectional",
+    "Intensive field campaign, PMF source apportionment": "Measurement campaign",
+    "Multi-year satellite and ground observational synthesis": "Measurement campaign",
+    "Operational NWP sensitivity experiments with observational evaluation": "Modelling / inventory",
+    "Eddy covariance flux measurement, method development": "Measurement campaign",
+    "Narrative synthesis of randomized controlled trials": "Review / synthesis",
+    "Ecological momentary assessment with mobile sensing, multimodal deep learning": "Observational - acute",
+    "Repeated field measurement with CFD simulation": "Measurement campaign",
+    "Laboratory formulation and mechanism study with underground field trial": "Chamber / laboratory",
+    "Materials synthesis and bench filtration characterization": "Chamber / laboratory",
+    "Materials synthesis with simulated dynamic filtration testing": "Chamber / laboratory",
+    "In vitro long-read transcriptomics, dose-response": "Experimental / toxicology",
 }
 # DEFECT, found 2026-08-22: "Literature review" mapped to "Tool / software", which is
 # not a plausible typo of "Review / synthesis" -- it put a review in the software slice
@@ -654,6 +674,18 @@ ENDPOINT_CANON = {
     # "Other clinical" rather than each opening a single-record category.
     "Dermatological": "Other clinical",
     "Immune / mucosal": "Other clinical",
+    # added 2026-09-21. This axis is a CATEGORY axis, and these four records had been
+    # written with the study's full outcome list as the endpoint string. Unmapped, they
+    # passed through verbatim: "Asthma and COPD symptoms, peak flow, quality of life,
+    # spirometry" is 62 characters, the wspace compensation caps at 1.05, and the label
+    # grew straight out of its own axes and printed across the architecture donut in the
+    # left panel. Folded onto the categories they belong to rather than opening four
+    # single-record bars. The wrap added below is the belt to this braces: a future
+    # unmapped long label is now clipped instead of colliding.
+    "Asthma and COPD symptoms, peak flow, quality of life, spirometry": "Respiratory",
+    "Ultrasound fetal growth trajectories": "Reproductive",
+    "Momentary self-reported stress": "Neuro / mental health",
+    "Isoform-level transcriptome remodelling": "Toxicological (in vitro)",
 }
 def canon_ep(e):
     """Canonicalise an endpoint label.
@@ -696,7 +728,18 @@ ax1.set_title("Study architecture", pad=2)
 
 
 ep_items = sorted(ep.items(), key=lambda kv: kv[1])
-ax2.barh([k for k, _ in ep_items], [v for _, v in ep_items],
+# Defensive wrap, added 2026-09-21 alongside the four ENDPOINT_CANON entries that
+# caused the collision. Canonicalising fixes the labels we know about; this makes an
+# unmapped long label degrade to two wrapped lines (then an ellipsis) instead of
+# printing across the neighbouring panel, which is how the defect reached a proof.
+def _epwrap(k, width=30):
+    lines = textwrap.wrap(str(k), width) or [str(k)]
+    if len(lines) > 2:
+        lines = lines[:2]
+        lines[1] = lines[1][:width - 1].rstrip(" ,;-") + "…"
+    return "\n".join(lines)
+
+ax2.barh([_epwrap(k) for k, _ in ep_items], [v for _, v in ep_items],
          color=[SEQ[i % len(SEQ)] for i in range(len(ep_items))][::-1],
          height=0.62, zorder=3)
 for i, (_, v) in enumerate(ep_items):
@@ -966,7 +1009,14 @@ GEO_NONGEO = ("chamber", "laboratory", "lab ", "n/a", "not stated", "not applica
               # stops it tripping the unmapped diagnostic every issue the Crossref leg
               # carries the day. If metadata-only stays above ~20% of a period, the
               # fallback bucket needs splitting; flagged for the monthly.
-              "not recoverable")
+              "not recoverable",
+              # added 2026-09-21: two filter-media records state their setting as
+              # "Bench (<application>)" - a bench challenge rig standing in for a
+              # barn and for a baghouse. The application is the paper's motivation,
+              # not its study site, so this is the same case as "chamber". Safe as a
+              # bare substring: it sits AFTER GEO_SUBSTR in geo_of, so a real site
+              # that happens to contain the word still resolves to its country first.
+              "bench")
 _geo_unmapped = set()
 def geo_of(g):
     g = (g or "").strip()
@@ -1055,33 +1105,66 @@ save(fig, "f4_heatmap.png")
 # At 62 pooled estimates a single panel is unreadable however tall it gets, because the
 # page caps its height. Split into equal panels of <=32 rows, each rendered on its own
 # page by the document. Daily issues (few estimates) still get exactly one panel.
-_ALL = sorted(EFFECTS, key=lambda d: d["est"])
-_MAXROWS = 32 if (_S and _E) else 999
-_CHUNKS = [_ALL[i:i + _MAXROWS] for i in range(0, len(_ALL), _MAXROWS)] or [[]]
-
 colmap = collections.defaultdict(lambda: SLATE, {"HR": TEAL, "OR": CLAY, "IRR": VIOLET,
           "RR-equiv": SAGE, "RR": SAGE, "beta": SKY, "%": AMBER, "r": DEEP})
 def _hasci(e):
     return e.get("lo") is not None and e.get("hi") is not None and e["hi"] > e["lo"]
 
-# a common x-range across panels so the eye can compare them
-_glo = min([e["lo"] for e in _ALL if e.get("lo") is not None] + [e["est"] for e in _ALL] + [1.0])
-_ghi = max([e["hi"] for e in _ALL if e.get("hi") is not None] + [e["est"] for e in _ALL] + [1.0])
-# DEFECT, found 2026-08-21. The axis auto-scaled to the data, so an issue whose only
-# estimate was RR 1.011 (1.010-1.013) produced a panel spanning 1.5% in which the point
-# sat two-thirds of the way from the null line to the right edge. Nothing about the
-# figure was false and everything about it read as a large effect. Enforce a minimum
-# span of 1.6x in log space (roughly 0.79-1.27 around the null) so that a near-null
-# estimate is *drawn* near the null. Issues with genuinely wide estimates are unaffected.
-_MINSPAN = 1.6
-if _ALL and _ghi / _glo < _MINSPAN:
-    _mid = (_glo * _ghi) ** 0.5
-    _half = _MINSPAN ** 0.5
-    _glo, _ghi = min(_glo, _mid / _half), max(_ghi, _mid * _half)
+# DEFECT, found 2026-09-21. This panel was written for ratio measures and only ever
+# fed ratio measures, so three ratio assumptions were load-bearing and invisible:
+# a log x-axis, a null line hardcoded at 1.0, and a geometric-mean span floor. The
+# 21 Sep issue carried the first difference-scale estimates in the watch's history
+# (two SD-scale betas, both negative) and `(_glo * _ghi) ** 0.5` returned a COMPLEX
+# number, which is why the build died in a comparison rather than at the axis.
+# Note colmap has had a "beta" entry since the palette was written - the colour was
+# anticipated, the axis was not. Estimates are now partitioned by scale, and each
+# scale gets its own panel with its own axis, null and tick rule. A ratio metric
+# whose lower bound is <= 0 is treated as difference-scale defensively, because a
+# log axis cannot draw it whatever the metric name claims.
+_RATIO_METRICS = {"HR", "OR", "RR", "RR-equiv", "IRR"}
+def _scale_of(e):
+    if e["metric"] not in _RATIO_METRICS:
+        return "diff"
+    vals = [e["est"]] + [e[k] for k in ("lo", "hi") if e.get(k) is not None]
+    return "ratio" if all(v > 0 for v in vals) else "diff"
+
+_MAXROWS = 32 if (_S and _E) else 999
+_CHUNKS, _AXES = [], []
+for _sc in ("ratio", "diff"):                    # ratio first: the historical panel
+    _grp = sorted([e for e in EFFECTS if _scale_of(e) == _sc], key=lambda d: d["est"])
+    if not _grp:
+        continue
+    _null = 1.0 if _sc == "ratio" else 0.0
+    _lo = min([e["lo"] for e in _grp if e.get("lo") is not None] + [e["est"] for e in _grp] + [_null])
+    _hi = max([e["hi"] for e in _grp if e.get("hi") is not None] + [e["est"] for e in _grp] + [_null])
+    # DEFECT, found 2026-08-21. The axis auto-scaled to the data, so an issue whose only
+    # estimate was RR 1.011 (1.010-1.013) produced a panel spanning 1.5% in which the point
+    # sat two-thirds of the way from the null line to the right edge. Nothing about the
+    # figure was false and everything about it read as a large effect. Enforce a minimum
+    # span of 1.6x in log space (roughly 0.79-1.27 around the null) so that a near-null
+    # estimate is *drawn* near the null. Issues with genuinely wide estimates are unaffected.
+    # The difference-scale arm enforces the same principle additively: the axis must reach
+    # at least 1.6x the largest absolute effect on both sides of zero, so a large negative
+    # beta cannot be drawn hard against the panel edge and a small one cannot be inflated.
+    if _sc == "ratio":
+        _MINSPAN = 1.6
+        if _hi / _lo < _MINSPAN:
+            _mid, _half = (_lo * _hi) ** 0.5, _MINSPAN ** 0.5
+            _lo, _hi = min(_lo, _mid / _half), max(_hi, _mid * _half)
+    else:
+        _reach = 1.6 * max([abs(v) for e in _grp
+                            for v in ([e["est"]] + [e[k] for k in ("lo", "hi")
+                                                    if e.get(k) is not None])] or [1.0])
+        _lo, _hi = min(_lo, -_reach), max(_hi, _reach)
+    for i in range(0, len(_grp), _MAXROWS):
+        _CHUNKS.append(_grp[i:i + _MAXROWS]); _AXES.append((_sc, _null, _lo, _hi))
+if not _CHUNKS:
+    _CHUNKS, _AXES = [[]], [("ratio", 1.0, 1.0, 1.0)]
 
 for _ci, E in enumerate(_CHUNKS):
     if not E:
         continue
+    _sc, _null, _glo, _ghi = _AXES[_ci]
     _fs = (8.6 if (_S and _E) else (7.4 if len(E) <= 20 else 6.6))
     # Row pitch has to beat the label height AFTER the page scales the panel to
     # \linewidth. 0.30in/row rendered at ~11pt of page space for an 8.6pt two-line
@@ -1109,26 +1192,45 @@ for _ci, E in enumerate(_CHUNKS):
                 else f"{e['est']:.4g} (no CI reported)")
         ax.text(1.025, i, _lbl, transform=ax.get_yaxis_transform(which="grid"),
                 fontsize=_fs, va="center", ha="left", color=SLATE, family="monospace")
-    ax.axvline(1.0, color=CORAL, lw=1.1, ls="--", zorder=2)
-    ax.set_xscale("log")
-    _pad = (_ghi / _glo) ** 0.10
-    ax.set_xlim(_glo / _pad, _ghi * _pad)
-    _cand = [0.5, 0.8, 0.9, 1.0, 1.1, 1.25, 1.5, 2, 3, 5, 9]
-    _tk = [t for t in _cand if _glo / _pad <= t <= _ghi * _pad]
-    # Thin the near-null ticks when the axis spans a wide ratio. 2026-09-13: an issue
-    # whose widest interval ran to 15.79 kept 0.8/0.9/1/1.1/1.25/1.5 inside the first
-    # eighth of the axis and the labels overprinted into "1 1.11.2". Keep 1.0 (the null
-    # line) unconditionally, then require every other tick to sit at least 6% of the
-    # axis log-range from the last one kept. Narrow axes are unaffected because the
-    # dense candidates are then genuinely far apart in log space.
-    _span = math.log10((_ghi * _pad) / (_glo / _pad)) or 1.0
-    _keep, _last = [], None
-    for t in _tk:
-        if t == 1.0 or _last is None or (math.log10(t) - math.log10(_last)) / _span >= 0.06:
-            _keep.append(t); _last = t
-    _tk = _keep
-    ax.set_xticks(_tk); ax.set_xticklabels([("%g" % t) for t in _tk])
-    ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
+    ax.axvline(_null, color=CORAL, lw=1.1, ls="--", zorder=2)
+    if _sc == "ratio":
+        ax.set_xscale("log")
+        _pad = (_ghi / _glo) ** 0.10
+        ax.set_xlim(_glo / _pad, _ghi * _pad)
+        _cand = [0.5, 0.8, 0.9, 1.0, 1.1, 1.25, 1.5, 2, 3, 5, 9]
+        _tk = [t for t in _cand if _glo / _pad <= t <= _ghi * _pad]
+        # Thin the near-null ticks when the axis spans a wide ratio. 2026-09-13: an issue
+        # whose widest interval ran to 15.79 kept 0.8/0.9/1/1.1/1.25/1.5 inside the first
+        # eighth of the axis and the labels overprinted into "1 1.11.2". Keep 1.0 (the null
+        # line) unconditionally, then require every other tick to sit at least 6% of the
+        # axis log-range from the last one kept. Narrow axes are unaffected because the
+        # dense candidates are then genuinely far apart in log space.
+        _span = math.log10((_ghi * _pad) / (_glo / _pad)) or 1.0
+        _keep, _last = [], None
+        for t in _tk:
+            if t == 1.0 or _last is None or (math.log10(t) - math.log10(_last)) / _span >= 0.06:
+                _keep.append(t); _last = t
+        _tk = _keep
+        ax.set_xticks(_tk); ax.set_xticklabels([("%g" % t) for t in _tk])
+        ax.get_xaxis().set_minor_formatter(plt.NullFormatter())
+    else:
+        # Difference scale: linear axis, null at zero, symmetric so the sign of an
+        # effect is read off which side of the dashed line the point falls, not off
+        # the number. Ticks are chosen on a 1/2/2.5/5 decade ladder rather than the
+        # fixed ratio candidates, which are meaningless here.
+        _pad = 0.10 * (_ghi - _glo)
+        _x0, _x1 = _glo - _pad, _ghi + _pad
+        ax.set_xlim(_x0, _x1)
+        _raw = (_x1 - _x0) / 6.0
+        _dec = 10 ** math.floor(math.log10(_raw)) if _raw > 0 else 1.0
+        _step = next((m * _dec for m in (1, 2, 2.5, 5, 10) if m * _dec >= _raw), 10 * _dec)
+        _t, _tk = math.ceil(_x0 / _step) * _step, []
+        while _t <= _x1 + 1e-9:
+            _tk.append(round(_t, 10)); _t += _step
+        if _null not in _tk:
+            _tk = sorted(_tk + [_null])
+        ax.set_xticks(_tk)
+        ax.set_xticklabels([("%g" % t) for t in _tk])
     ax.set_yticks(y)
     def _clip(x, n):
         # DEFECT, found 2026-09-20: `label` is a two-line string and the budget was
@@ -1144,7 +1246,9 @@ for _ci, E in enumerate(_CHUNKS):
     # the whole panel to be scaled down to \linewidth and undoes the extra height.
     ax.set_yticklabels([f"{_clip(e['label'], 46)}\n{_clip(e['exposure'], 26)}  |  "
                         f"{_clip(e['src'].split(' (')[0], 24)}" for e in E], fontsize=_fs)
-    ax.set_xlabel("Effect estimate (log scale); dashed line = null")
+    ax.set_xlabel("Effect estimate (%s); dashed line = null (%g)"
+                  % ("log scale, ratio measures" if _sc == "ratio"
+                     else "linear scale, difference measures", _null))
     ax.set_ylim(-0.7, len(E) - 0.3)
     _ttl = "Quantitative associations reported in %s corpus" % ("the period's" if (_S and _E) else "today's")
     if len(_CHUNKS) > 1:

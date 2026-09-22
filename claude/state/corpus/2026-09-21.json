@@ -1,0 +1,300 @@
+{
+ "date": "2026-09-21",
+ "entry_window": "2026-09-21 -> 2026-09-21",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "doi": "10.1038/s41370-026-00966-4",
+   "journal": "J Expo Sci Environ Epidemiol",
+   "short": "Tamire et al. 2026",
+   "title": "Prenatal fine particulate matter (PM2.5) exposure differentially impairs fetal skeletal and soft-tissue growth: a longitudinal study in rural Butajira, Ethiopia.",
+   "sub": "Reproductive & developmental",
+   "design": "Community-based longitudinal cohort, linear mixed-effects",
+   "pm": "Repeated 24-h personal PM2.5, Atmotube Pro wearable monitor, at ~20, ~30 and ~36 weeks gestation",
+   "geo": "Rural Butajira, Ethiopia",
+   "endpoint": "Ultrasound fetal growth trajectories",
+   "tier": "A",
+   "n": "Pregnant women recruited at or before 24 weeks, followed over three visits, March-June 2025. An IQR rise of 27.0 ug/m3 in personal PM2.5 was associated with a 0.43 SD fall in femur length (beta -0.43, 95% CI -0.51 to -0.35) and a 0.17 SD fall in abdominal circumference (-0.17, -0.21 to -0.13); head circumference and biparietal diameter showed no significant association under either concurrent or lagged exposure. The dissociation is the finding - skeletal and soft-tissue growth respond while cranial growth is spared, which is the brain-sparing pattern and argues against a purely nutritional confounder. Three weaknesses bite. The exposure contrast is enormous by design (an IQR of 27 ug/m3 implies a biomass-cooking population far outside the range of the cohorts these coefficients will be compared against), the sample is small and the paper does not report n in the abstract, and three 24-h samples cannot represent a 16-week gestational window - classical measurement error that, being non-differential, biases toward null and so does not explain the femur result. Directly relevant to distributed sensing: the exposure instrument is a consumer-grade optical wearable, and effect sizes this large resting on three wearable-days per pregnancy is exactly the design low-cost sensing makes newly affordable in LMIC settings - and exactly where sensor humidity and biomass-smoke calibration error, unreported here, would propagate straight into beta."
+  },
+  {
+   "pmid": "42766892",
+   "doi": "10.1016/j.healthplace.2026.103732",
+   "journal": "Health Place",
+   "short": "Ireland Census linkage 2026",
+   "title": "Ambient air pollution at home, work and school: Evidence from Ireland.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Population-wide administrative linkage, cross-sectional",
+   "pm": "EPA modelled annual ambient PM2.5, PM10, NO2 and O3 assigned to residential and to work/school address",
+   "geo": "Republic of Ireland (2022 Census of Population)",
+   "endpoint": "None (exposure contrast)",
+   "tier": "A",
+   "n": "Whole-population census microdata linked to Irish EPA pollutant surfaces at two addresses per person. Mean annual PM2.5, PM10 and - most sharply - NO2 are higher at the work, school or college address than at the residence, while O3 runs the other way, the expected NOx-titration signature of the same urban gradient. The socioeconomic result inverts the usual assumption: among workers the residential-to-workplace contrast is *larger* for more advantaged groups, because advantaged workers commute into dense urban cores from cleaner suburbs. Residence-only assignment therefore does not simply add noise, it adds noise correlated with socioeconomic position, which is the one thing an exposure proxy must not do in a study adjusting for it. Limits: both endpoints are modelled ambient surfaces at an address, so nothing here captures infiltration, indoor sources or time-activity weighting, and the paper measures the size of a bias without estimating its effect on any health coefficient. For network design this is the strongest argument yet that siting density should follow daytime population rather than residential population."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-13227-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Sonipat ACSM campaign 2026",
+   "title": "Chemical characterization and source apportionment of carbonaceous aerosols during post-monsoon biomass burning and Diwali at an upwind site of Delhi.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Intensive field campaign, PMF source apportionment",
+   "pm": "Composition-based PM2.5 (ToF-ACSM non-refractory PM2.5 plus multi-wavelength Aethalometer eBC)",
+   "geo": "Sonipat, Haryana, India (upwind receptor for Delhi-NCR)",
+   "endpoint": "None (exposure)",
+   "tier": "B",
+   "n": "25 October to 15 November 2023, spanning two severe haze episodes and Diwali. Composition-based PM2.5 exceeded 300 ug/m3 in both episodes; organic aerosol was 65% of non-refractory PM2.5 with a daily mean near 140 ug/m3, and oxygenated OA was 57-60% of total OA, reaching 42.8 ug/m3 of more-oxidised OOA at peak haze - so the haze is substantially aged secondary mass, not fresh plume. Biomass- or solid-fuel eBC was ~78% of campaign-integrated eBC. The authors are honest that this split is sensitive to the assumed absorption Angstrom exponent pair, which is the paper's real limitation: the headline 78% is a function of a prior, and the sensitivity range is not propagated into the PMF factors. Single site, single season, three weeks. The result that matters upstream of a sensor network is that the mass is already loaded before the air reaches Delhi, so an urban-only network measures an urban increment on a large regional background and will misattribute regional transport to local sources unless it has an upwind anchor."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1039/d6ea00109b",
+   "journal": "Environ Sci Atmos",
+   "short": "W. India BC-dust 2026",
+   "title": "Seasonal Variability and Interactions of Black Carbon and Mineral Dust over Semi-Arid Western India: Satellite and Ground-Based Observations.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Multi-year satellite and ground observational synthesis",
+   "pm": "Columnar and surface black carbon with mineral dust loading, satellite retrievals against ground stations",
+   "geo": "Semi-arid western India",
+   "endpoint": "None (exposure)",
+   "tier": "C",
+   "n": "Only the opening of the abstract was deposited, so the design is legible but the numbers are not: the study characterises seasonal co-variation of anthropogenic black carbon and natural mineral dust in a semi-arid region where both are large, using satellite retrievals alongside ground-based observations. No effect sizes, retrieval-validation statistics or station counts are recoverable from the deposit, and nothing is claimed here beyond scope. Flagged for retry rather than summarised further. The reason to carry it at all is the mixing problem it addresses: BC and dust are the two components that most degrade low-cost optical PM sensing in arid regions, BC because it absorbs rather than scatters and dust because its coarse mode falls outside a nephelometric sensor's effective cut, and a seasonal climatology of their interaction is the calibration prior a regional network would need."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103198",
+   "journal": "Atmos Pollut Res",
+   "short": "China aerosol vertical 2026",
+   "title": "Spatiotemporal Dynamics and Vertical Distribution of Aerosols in China: Insights from Multi-Source Evidence from 2000 to 2022.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - column and vertically resolved aerosol from multiple platforms, 2000-2022",
+   "geo": "China (national)",
+   "endpoint": "None (exposure)",
+   "tier": "C",
+   "n": "Metadata-only record: Elsevier deposited title, journal and DOI without an abstract, and no abstract was recoverable from Crossref, Europe PMC or PubMed. A 23-year national synthesis of aerosol vertical structure is potentially a tier-A input to satellite-to-surface PM2.5 reconstruction - vertical profile shape is the dominant structural uncertainty when converting AOD to surface concentration - but nothing about method, platform mix or findings can be stated from the deposit, and inferring a design from a title is how this watch would start manufacturing results. Carried as a placeholder and added to the retry list; if the abstract appears it should be re-screened on its merits rather than admitted on the strength of its title."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosres.2026.109334",
+   "journal": "Atmos Res",
+   "short": "Athens NPF 2026",
+   "title": "The influence of air mass origin and ammonia emissions on new particle formation at a Mediterranean urban site (Athens, Greece).",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - new particle formation events, ammonia, back-trajectory air-mass origin",
+   "geo": "Athens, Greece",
+   "endpoint": "None (exposure)",
+   "tier": "C",
+   "n": "Metadata-only record; Elsevier deposit carried no abstract and none was recoverable. The topic is squarely in scope - ammonia-mediated new particle formation is the ultrafine source that governs urban particle *number*, and number is precisely the metric that mass-calibrated low-cost sensors do not measure and that regulatory PM2.5 mass does not capture. Whether this paper quantifies nucleation rates, growth rates or only classifies event days cannot be determined from the deposit. Retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-13189-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "AIRWISE Delhi 2026",
+   "title": "Improving aerosol-radiation interactions in the operational forecasting system - AIRWISE.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Operational NWP sensitivity experiments with observational evaluation",
+   "pm": "Species-resolved complex refractive indices driving aerosol-radiation interaction in an operational forecast",
+   "geo": "Delhi, India (October 2023 - January 2024)",
+   "endpoint": "None (forecast skill)",
+   "tier": "B",
+   "n": "Replacing globally prescribed refractive indices with Delhi-specific values inside the operational AIRWISE system cut surface downwelling shortwave by up to ~80 W/m2 instantaneously (~43 W/m2 diurnally) during a severe post-monsoon episode, and monthly mean SWDOWN by 25-37 W/m2, a quarter to a third of total clear-sky aerosol-radiation interaction. The meteorological response is coherent and the right sign: surface temperature -0.2 C, near-surface wind -0.4 m/s, boundary layer height -200 m, daytime humidity +3-4%, and consequently higher PM2.5 - the shallower, calmer boundary layer traps the aerosol that caused the dimming. Validated against WiFEX surface radiation at Delhi airport with 62% (December) and 35% (January) bias reduction. Limits: one city, one season, refractive indices tuned where they are evaluated, and radiation bias reduction does not demonstrate PM2.5 forecast skill improvement, which is the operational claim a reader will assume. Relevant because the feedback runs the wrong way for forecasting: getting optics right makes the pollution episode worse, so a network assimilating into a model with generic refractive indices inherits a systematic low bias during exactly the episodes that matter."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-13213-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Urban OOM flux 2026",
+   "title": "Urban surface-atmosphere fluxes of selected pptv-level oxygenated organic molecules (OOMs) from eddy covariance observations.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Eddy covariance flux measurement, method development",
+   "pm": "Iodide-adduct CIMS eddy covariance fluxes of 16 oxygenated organic molecules (SOA precursors)",
+   "geo": "Central China megacity, hottest month",
+   "endpoint": "None (instrument/flux)",
+   "tier": "B",
+   "n": "First urban eddy covariance measurement of OOM surface-atmosphere exchange at pptv level, and the contribution is as much methodological as observational - the paper works through how mass spectral integration time and water vapour variation corrupt flux retrieval at low signal-to-noise, which is the reason these fluxes had not been measured. Sixteen OOMs resolved into deposition-dominated, emission-dominated and bidirectional classes. Campaign-mean deposition was 4.6 umol/m2/d, 16.3% of HNO3 deposition and 2.2x the OOM emission flux, so the urban surface is a net sink. Formic acid dominated both directions (66.2% of deposition, 84.9% of emission), which means the 16-species budget is really a formic acid budget plus minor terms. One site, one month, hottest season - the seasonal extreme most favourable to the photochemistry being measured, so these are upper bounds. Bears on sensing indirectly but concretely: SOA formed from these precursors is secondary mass a low-cost optical sensor sees only after it has condensed, with a lag and a hygroscopicity that no dry-mass calibration captures."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1080/02786826.2026.2731025",
+   "journal": "Aerosol Sci Technol",
+   "short": "Low-cutoff cyclone method 2026",
+   "title": "An improved method for measuring the penetration efficiency of low cutoff cyclones.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - penetration efficiency measurement for low cut-point cyclone inlets",
+   "geo": "Not recoverable",
+   "endpoint": "None (instrument)",
+   "tier": "B",
+   "n": "Metadata-only record: Taylor & Francis deposited no abstract, the landing page is bot-blocked, and neither Crossref nor a Consensus sweep of 2026 cyclone-characterisation work surfaced it. This is the most directly relevant instrumentation title of the window and the least legible. Low-cutoff cyclone penetration efficiency is the calibration that defines what a size-selective inlet actually admits, and an error there propagates into every downstream gravimetric or optical measurement behind that inlet - including the reference samplers that low-cost sensor networks are co-located against, where an inlet cut error becomes a systematic multiplicative bias in the correction factor rather than added noise. Top of the retry list; worth a manual full-text pull rather than waiting on the deposit."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103203",
+   "journal": "Atmos Pollut Res",
+   "short": "Medellin MABI eBC 2026",
+   "title": "Multi-wavelength spectral attribution of equivalent black carbon in Medellin, Colombia (2010-2023): Disentangling fossil fuel and biomass burning using the MABI instrument.",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - Multi-wavelength Absorption Black carbon Instrument, spectral source attribution, 14-year record",
+   "geo": "Medellin, Colombia",
+   "endpoint": "None (instrument)",
+   "tier": "C",
+   "n": "Metadata-only record; no abstract deposited or recoverable. A 14-year multi-wavelength absorption record with fossil-versus-biomass attribution would be an unusually long instrument series for a Latin American city, and the same absorption-Angstrom-exponent dependence the Sonipat paper in this issue flags as its principal uncertainty applies here, so the two would be worth reading against each other once the text is available. Nothing further can be said without it; retry list."
+  },
+  {
+   "pmid": "42764252",
+   "doi": "10.1080/17476348.2026.2735502",
+   "journal": "Expert Rev Respir Med",
+   "short": "HEPA RCT synthesis 2026",
+   "title": "HEPA air filtration for asthma and COPD: lessons from randomized controlled trials.",
+   "sub": "Respiratory & allergic",
+   "design": "Narrative synthesis of randomized controlled trials",
+   "pm": "Portable HEPA filtration as intervention; indoor PM2.5 as the mediating exposure",
+   "geo": "Multi-country trial evidence (PubMed and Scopus to 5 May 2026)",
+   "endpoint": "Asthma and COPD symptoms, peak flow, quality of life, spirometry",
+   "tier": "A",
+   "n": "The consistent finding across trials is the one that should worry anyone who equates exposure reduction with clinical benefit: portable HEPA reliably and substantially lowers indoor PM2.5, but clinical effects are heterogeneous. Several asthma trials improved symptoms, peak flow or quality of life - concentrated in highly symptomatic or higher-exposure subgroups - while most spirometric endpoints moved little or not at all. COPD evidence is thin and only suggestive. The authors attribute the gap to trial design rather than to absent efficacy, and list the specific failures: short follow-up, almost no adult studies, device specifications unreported, adherence unmeasured, no economic evaluation, and near-total absence of low-resource settings. That list is itself the contribution. Being a narrative rather than systematic synthesis with no pooled estimate and no formal risk-of-bias assessment, it cannot bound the effect, and the subgroup pattern it highlights is exactly the pattern selective reporting produces. For a sensing programme the actionable point is that unmeasured adherence and unreported device spec are measurement problems a logging sensor inside the intervention arm would largely solve."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c09466",
+   "journal": "Environ Sci Technol",
+   "short": "Hong Kong momentary stress 2026",
+   "title": "An Explainable Multi-Modal Deep Learning Framework for Investigating the Influences of Dynamic Environmental Exposure on Momentary Stress.",
+   "sub": "Neuro / mental health",
+   "design": "Ecological momentary assessment with mobile sensing, multimodal deep learning",
+   "pm": "Min-level mobile sensor PM2.5 alongside noise, temperature, humidity, greenery, street-view and remote-sensing imagery",
+   "geo": "Hong Kong",
+   "endpoint": "Momentary self-reported stress",
+   "tier": "B",
+   "n": "4,342 momentary stress reports against 125,440 minute-level environmental exposure records; the model reaches 78.26% accuracy and 0.828 AUC-ROC. Two results are worth extracting from the architecture. First, exposure in the preceding 25 minutes dominates prediction, which is a direct empirical argument for minute-resolution mobile monitoring over daily or residential-annual assignment for acute endpoints. Second, the explainability analysis recovers thresholds rather than slopes - 25 ug/m3 for PM2.5, 55 dBA noise, 32 C, 40-70% humidity, 25% greenery visibility - consistent with nonlinearity that a linear exposure-response term would average away. The weaknesses are structural and serious: stress is self-reported into the same phone that carries the sensors, so reporting and exposure share a device and a context; the design is correlational with no within-person randomisation of exposure; the thresholds are read off a gradient-based attribution of a black-box model, not estimated with uncertainty, so they should be treated as hypotheses; and PM2.5 co-varies with noise and temperature in ways a deep model can blend invisibly. Still the clearest current demonstration of what wearable-grade PM sensing buys over address-based assignment."
+  },
+  {
+   "pmid": "42766552",
+   "doi": "10.1093/annweh/wxag082",
+   "journal": "Ann Work Expo Health",
+   "short": "JP laboratory exposure 2026",
+   "title": "Assessment of personal exposure and spatial concentration variability in a small-scale chemical laboratory.",
+   "sub": "Occupational & indoor",
+   "design": "Repeated field measurement with CFD simulation",
+   "pm": "Paired fixed-point area sampling and personal passive sampling, plus computational fluid dynamics",
+   "geo": "Japan (university teaching laboratory, 2024 and 2025 campaigns)",
+   "endpoint": "None (exposure metric comparison)",
+   "tier": "B",
+   "n": "Personal exposure concentrations ran consistently higher than co-located area measurements, mean values roughly an order of magnitude greater, reproduced across two independent measurement years. CFD then explains the gap mechanically: concentration varies strongly with height, so a fixed sampler placed away from the breathing zone of a person leaning over their own source cannot recover personal exposure, whatever its precision. The timing is regulatory - Japan makes personal exposure measurement mandatory from October 2026 - and the paper is effectively a demonstration that the outgoing area-based system was biased low by roughly 10x in this setting. Narrow and honest about it: one small teaching laboratory, student experiments rather than production work, passive samplers for vapour-phase analytes rather than PM. The 10x should not be transported to other geometries. It generalises to distributed PM sensing as a siting argument with a number attached - a fixed node samples the room, a person samples their own plume, and near a source the two differ by an order of magnitude, not a percentage."
+  },
+  {
+   "pmid": "42766046",
+   "doi": "10.1007/s10653-026-03491-3",
+   "journal": "Environ Geochem Health",
+   "short": "SAA wetting agent 2026",
+   "title": "High-efficiency 'SAA' wetting agent for coal mine dust control: from preparation and mechanism to field application.",
+   "sub": "Occupational & indoor",
+   "design": "Laboratory formulation and mechanism study with underground field trial",
+   "pm": "Respirable coal dust; median particle size D50 and dust suppression rate",
+   "geo": "China (3-1802 working face, deep coal seam)",
+   "endpoint": "None (dust control efficacy)",
+   "tier": "C",
+   "n": "A three-component surfactant blend (sodium gluconate, AEO-3, AES) lowers surface tension and contact angle on coal, raises oxygen-containing surface functional groups, and agglomerates micron-scale dust - D50 rose 22.58% over untreated. In a purpose-built simulation rig the suppression rate was 71.50%, 2.17x conventional water mist, and the formulation was then taken underground on a real working face. The mechanism-to-field arc is the strength; the evaluation is the weakness. A suppression rate measured in the authors' own custom rig has no external calibration, the field test reports no control shift or personal sampling, and no respirable-fraction or silica-specific result is given, which is what determines pneumoconiosis risk - agglomerating dust into coarser particles raises D50 partly by removing mass from exactly the respirable size range the health endpoint cares about, so the health-relevant efficacy is almost certainly different from 71.5% and is not reported. Relevant to occupational sensing as a reminder that a mass-based sensor reads an agglomeration intervention as a larger improvement than the lung sees."
+  },
+  {
+   "pmid": "42767080",
+   "doi": "10.1016/j.jcis.2026.141640",
+   "journal": "J Colloid Interface Sci",
+   "short": "ZCND aerogel filter 2026",
+   "title": "Biomimetic dual-network nanofibrous aerogels with robust interfacial assembly for multifunctional air filtration.",
+   "sub": "Occupational & indoor",
+   "design": "Materials synthesis and bench filtration characterization",
+   "pm": "PM1, PM2.5 and PM10 filtration efficiency, pressure drop, dust-holding capacity under controlled humidity",
+   "geo": "Bench (livestock housing application)",
+   "endpoint": "None (filtration performance)",
+   "tier": "C",
+   "n": "A zein/curcumin nanofibre plus down-fibre aerogel reached 99.51%, 99.74% and 99.93% efficiency for PM1, PM2.5 and PM10 at 27.39 Pa pressure drop, with 335.85 g/m2 dust-holding capacity, and - the result that distinguishes it - retained 98.67% PM1 efficiency after 12 h at 90% relative humidity. It also adsorbs ammonia (104.95 cm3/g), shows visual NH3 sensing, is antibacterial, and biodegrades in soil burial faster than commercial media. The target is livestock housing, where PM, NH3 and bioaerosol co-occur and humidity is chronically high, so the multifunctionality is matched to a real setting rather than assembled for novelty. Standard caveats for this literature apply and are not minor: bench aerosol challenge under controlled conditions, no barn deployment, 12 h is not a service life, and nothing on mechanical durability under pulse cleaning or cost at scale. Noted here mainly because humidity-resistant PM1 capture is the same physical problem, inverted, that defeats nephelometric low-cost sensors in barns - both fail when water condenses on the particle, one by fouling and one by over-reading."
+  },
+  {
+   "pmid": "42766668",
+   "doi": "10.1371/journal.pone.0354604",
+   "journal": "PLoS One",
+   "short": "CSE HASMC isoforms 2026",
+   "title": "A comprehensive full-length transcriptome landscape of cigarette smoke-exposed HASMCs reveals extensive remodeling of mRNA isoforms and regulatory networks.",
+   "sub": "Mechanistic toxicology",
+   "design": "In vitro long-read transcriptomics, dose-response",
+   "pm": "Cigarette smoke extract 0.2-0.8% on human aortic smooth muscle cells (combustion-aerosol surrogate)",
+   "geo": "In vitro",
+   "endpoint": "Isoform-level transcriptome remodelling",
+   "tier": "C",
+   "n": "Oxford Nanopore long-read sequencing of human aortic smooth muscle cells at 0.6% cigarette smoke extract, the midpoint of a biphasic viability curve (0.2% mildly proliferative, 0.4-0.8% progressively cytotoxic). 11,222 novel transcripts; 1,866 transcripts up in ferroptosis and cell division pathways, 493 down in oxidative phosphorylation and glutathione metabolism, 1,753 alternative polyadenylation events remodelling 3'UTRs, and 269 alternative splicing events hitting cell-cycle regulators and transcription factors including CREM, FOSL1 and HBP1. The claim is that high-dose cytotoxicity is executed post-transcriptionally rather than through differential gene expression alone, and the isoform resolution is what makes that visible - a short-read study would have reported the pathway shifts and missed the 3'UTR remodelling entirely. Admitted at tier C with an explicit caveat: cigarette smoke extract is not ambient PM, the cell line is not a vessel, a single 0.6% dose is not a dose-response for the mechanism claimed, and no particle mass or size metric is reported, so nothing here is transferable to an ambient exposure-response coefficient. Carried for the ferroptosis and glutathione-depletion axis, which recurs in ambient PM vascular toxicology and is worth tracking."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosres.2026.109343",
+   "journal": "Atmos Res",
+   "short": "N fertilizer NH3-PM2.5 2026",
+   "title": "Integrating nitrogen fertilizer management for mitigating agricultural ammonia emissions and PM2.5 pollution.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - agricultural NH3 emissions and secondary inorganic PM2.5 response",
+   "geo": "Not recoverable",
+   "endpoint": "None (mitigation)",
+   "tier": "C",
+   "n": "Metadata-only record; no abstract deposited or recoverable from any leg. Agricultural ammonia is the control lever with the best cost-per-microgram in most secondary-inorganic-dominated airsheds and the one least often regulated, so a fertilizer-management framing is squarely in scope for the burden and mitigation track. Whether the paper is a modelling assessment, a field trial or a policy review is not determinable from the deposit. Retry list. Note it sits alongside the Athens new-particle-formation record in this same issue - two independent ammonia-centred papers deposited the same day, both illegible, which is a coverage gap rather than a coincidence worth reading into."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c08122",
+   "journal": "Environ Sci Technol",
+   "short": "PPS antifouling filter 2026",
+   "title": "Robust and Self-Cleaning Fluorine-Free Superhydrophobic PPS Filters for High-Humidity Flue Gas Filtration.",
+   "sub": "Burden, policy & mitigation",
+   "design": "Materials synthesis with simulated dynamic filtration testing",
+   "pm": "Industrial flue-gas dust; cleaning cycle, residual pressure drop, quality factor under humid conditions",
+   "geo": "Bench (industrial flue gas application)",
+   "endpoint": "None (emission control performance)",
+   "tier": "C",
+   "n": "Light-induced covalent grafting of a triple-cross-linked low-surface-energy network onto polyphenylene sulfide fibre membranes produces a fluorine-free antifouling bag-filter medium. Against the unmodified control it extends mean pulse-jet cleaning cycle to 550.84 s, lowers mean residual pressure drop to 280.69 Pa and raises quality factor to 0.044 /Pa under simulated humid dynamic filtration. The fluorine-free part is the policy-relevant part - PTFE-based antifouling treatments are the incumbent and are under PFAS restriction, so a non-fluorinated substitute that survives wet dust addresses a regulatory constraint on stationary-source PM control rather than just an engineering one. Bench-scale, simulated flue gas, no capture-efficiency-versus-size curve reported and no coating-lifetime data beyond the test campaign, so durability - the property the whole design targets - is demonstrated over hours rather than the months a baghouse runs. Tier C and upstream of this watch's usual scope; carried under mitigation because primary PM emission control determines the ambient field every downstream sensor measures."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Femur length\nper IQR (27.0 ug/m3) PM2.5",
+   "exposure": "Personal 24-h PM2.5, repeated",
+   "est": -0.43,
+   "lo": -0.51,
+   "hi": -0.35,
+   "metric": "beta (SD)",
+   "src": "Butajira, Ethiopia pregnancies"
+  },
+  {
+   "label": "Abdominal circumference\nper IQR (27.0 ug/m3) PM2.5",
+   "exposure": "Personal 24-h PM2.5, repeated",
+   "est": -0.17,
+   "lo": -0.21,
+   "hi": -0.13,
+   "metric": "beta (SD)",
+   "src": "Butajira, Ethiopia pregnancies"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "preconception /\nin utero:\nButajira personal\nPM2.5 pregnancies"
+  },
+  {
+   "n": 0,
+   "note": "childhood:\nno child-specific\nrecord this window"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno record this\nwindow"
+  },
+  {
+   "n": 3,
+   "note": "working age:\nJapan laboratory\npersonal sampling,\ncoal face dust,\nHong Kong EMA"
+  },
+  {
+   "n": 0,
+   "note": "older adults:\nno age-stratified\nrecord this window"
+  }
+ ]
+}

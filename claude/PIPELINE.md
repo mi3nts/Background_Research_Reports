@@ -2872,3 +2872,58 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `state/corpus/2026-08-03.json` 6-element `LIFECOURSE` (**will corrupt the September
   monthly, due 30 Sep — fix before then**); `.git` lock/temp debris, mount EPERM, manual
   cleanup on a local checkout.
+
+## Run 2026-09-21 (built 2026-09-22 00:40-01:55 CDT) — daily 21 Sep
+
+- Window 21 Sep, opened at 23:15 CDT per the 22:00 rule, continuous with 20 Sep. 47 raw
+  (PubMed 6 health / **0 sensing again**, EPMC 5, Crossref-ISSN 36; OpenAlex 429, arXiv 406)
+  → 0 retro-index drops → 46 unique → 1 already carried → 45 fresh → **18 admitted**,
+  27 rejected (all logged), 10 pp, **0 errors, 0 overfull/underfull** — first issue with a
+  clean box log. DOI gate 18/18. `last_entry_date` = 2026-09-21. **22 Sep not opened**: the
+  run crossed midnight during the build and the day was minutes old.
+- **`run_all.py --post` does NOT author `digest.tex`.** It refreshes figures, table rows and
+  preamble and recompiles whatever tex sits in `build/`. The first build of this issue
+  therefore shipped **the 20 Sep issue's prose under a 21 Sep filename** and was caught only
+  by rasterising page 1. Author `build/digest.tex` (masthead date, metric strip, signal,
+  bullets, captions, provenance) **before** running `--post`; `_tex_entries.py <date>`
+  emits the `\band`/`\paperentry` block from the corpus so entry bodies, journals and DOIs
+  are not hand-transcribed. Worth adding a guard that fails the build when `\DIGESTDATE`
+  disagrees with `--date`.
+- **Forest plot had a latent ratio-scale assumption; this issue was the first to trip it.**
+  Every effect carried since July has been HR/OR/RR, so a log axis, a null hardcoded at
+  1.0 and a geometric span floor were load-bearing and invisible. Two negative SD-scale
+  betas made `(lo*hi)**0.5` return a **complex number** and the build died in a comparison.
+  Estimates are now partitioned by scale, each panel drawing its own axis, null and tick
+  ladder; a ratio metric with lo ≤ 0 routes to the difference panel. `colmap` has had a
+  `beta` entry since the palette was written — the colour was anticipated, the axis was not.
+- **Three more map defects, all found by proofing the render, not the log.** (1) Four
+  records carried a study's full outcome list as `endpoint`; unmapped, a 62-char label grew
+  out of f2b and printed **across the architecture donut** (the wspace compensation caps at
+  1.05). Canonicalised onto existing categories, plus a defensive 2-line wrap so a future
+  unmapped label clips instead of colliding. (2) Two `Bench (<application>)` geo labels →
+  `GEO_NONGEO`. (3) 13 new design labels registered in the same edit as the records.
+  The five abstract-less records use the canonical `Metadata only (no abstract)` rather than
+  bespoke `Metadata only - <topic>` strings, so they pool into one slice.
+- **Two captions asserted numbers the figures contradicted** — f2b ("eleven real / three
+  blank", actually **9 / 5**) and f4 ("two cells hold two", actually **four**, and only two
+  of them are the metadata-only pair). Both were written from the corpus before the figure
+  existed. Recompute caption counts from `state/corpus/<date>.json` after the figures build.
+  The inherited `\clearpage` before f4 left p4 ~65% empty at 18 records — replaced with
+  `\vspace{4mm}`, 11 pp → 10 pp. Third issue running that this clearpage needed rejudging.
+- **Metadata-only fell 42% → 28%** (5 of 18) with **no change on the retrieval side** —
+  Copernicus and ACS deposited full abstracts where Elsevier and T&F did not. Retry list
+  **28**. The tier-A record (Butajira, `10.1038/s41370-026-00966-4`) deposited with **no
+  abstract and no PMID**; its effect sizes came from the publisher landing page, which is
+  the only reason this issue has a forest plot. One ACS DOI warned NOT-IN-CROSSREF on the
+  first pass and cleared within the same run.
+- **`state/corpus/2026-08-03.json` 6-element `LIFECOURSE` fixed** ahead of the 30 Sep
+  monthly — the overflow "not life-course specific" bucket (n=19) dropped, all 57 issues now
+  conform. `_lifecourse_range` sizes its accumulator from the first in-range issue, so that
+  record could have widened every pooled strip whose window opened on it. `2026-07-27` still
+  carries no `LIFECOURSE`; it is skipped cleanly and is a gap, not a corruption.
+- Trial watch: 1 hit (NCT05423665), **0 new** — second consecutive clean reconciliation.
+  `trials.json` 13 trials, 19 windows. `metrics.csv` 444 rows, 0 malformed — **fifteenth**
+  consecutive issue confirming the KNOWN DEFECT note in the task file is stale; strike it.
+  Still open: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split;
+  `2026-07-27` missing `LIFECOURSE`; no `\DIGESTDATE`-vs-`--date` build guard; `.git`
+  lock/temp debris, mount EPERM, manual cleanup on a local checkout.
