@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -171,6 +171,13 @@
    "hits": 1,
    "new": 0,
    "note": "Single hit NCT05423665, already captured 2026-09-20. Second consecutive clean reconciliation - the daily sweep is now ahead of the registry."
+  },
+  {
+   "window": "2026-09-21..2026-09-23",
+   "field": "LastUpdatePostDate",
+   "hits": 1,
+   "new": 0,
+   "note": "Issue 2026-09-22. Single hit NCT05423665 again, already captured. Third consecutive clean reconciliation. COATED-AIR (design paper, Eur Heart J Cardiovasc Pharmacother, PMID 42772753) has no NCT in its abstract - look up its registration for the W39 weekly."
   }
  ],
  "NCT05867381": {
@@ -317,7 +324,7 @@
   "start_date": "2026-09-15",
   "last_update": "2026-08-12",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV₁ Z-score at 40 months"
+   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },

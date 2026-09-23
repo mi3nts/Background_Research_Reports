@@ -841,6 +841,7 @@ geo_group = {
     "Ghana": "Sub-Saharan Africa", "Uganda": "Sub-Saharan Africa",
     "Nigeria": "Sub-Saharan Africa", "Kenya": "Sub-Saharan Africa",
     "Ethiopia": "Sub-Saharan Africa",
+    "DR Congo": "Sub-Saharan Africa",
     "Poland": "Europe", "Romania": "Europe", "Netherlands": "Europe",
     "Slovakia": "Europe", "Italy": "Europe",
     "Turkiye": "Middle East & N. Africa", "India": "South Asia",
@@ -990,6 +991,9 @@ GEO_SUBSTR = [
     ("cyprus", "Cyprus"), ("tanzania", "Tanzania"), ("kuwait", "Kuwait"),
     ("albania", "Albania"), ("elbasan", "Albania"),
     ("iraq", "Iraq"), ("mesopotamia", "Iraq"),
+    # added 2026-09-22 from the unmapped diagnostic: the MUTOTO household-air-pollution
+    # record in Bukavu. A real site with no needle; named directly rather than hopped.
+    ("congo", "DR Congo"), ("bukavu", "DR Congo"),
     # added 2026-08-12: a GBD paper whose study setting is the whole of Asia had no
     # needle. MUST stay last in this list - "asia" is a substring of "malaysia" and of
     # "east asia"/"south asia", all of which have their own earlier needles, so the

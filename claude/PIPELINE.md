@@ -2927,3 +2927,21 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   Still open: no first-author affiliation field; `ENDPOINT_CANON` Cancer/Oncologic split;
   `2026-07-27` missing `LIFECOURSE`; no `\DIGESTDATE`-vs-`--date` build guard; `.git`
   lock/temp debris, mount EPERM, manual cleanup on a local checkout.
+
+## Run 2026-09-22 (built 2026-09-23 11:05-11:30 CDT) — daily 22 Sep
+
+- Window 22 Sep, continuous with 21 Sep. **23 Sep not opened** (11:05 CDT, 22:00 rule). Harvest 84 raw
+  (PubMed 10 health / **0 sensing, third day running**, EPMC 16 → 1 AGR/PMC month-gate drop, Crossref-ISSN 59;
+  OpenAlex 429, arXiv 406) → 81 unique → 2 carried → 79 fresh. PubMed connector (`[EDAT]` same day, health 18 +
+  sensing 5) returned **11 PMIDs the harvester's PubMed legs missed, 9 new to every leg, 3 admitted** (APEAL
+  *Thorax*, COATED-AIR design, synbiotic RCT) — the connector leg is load-bearing, not a cross-check. Consensus
+  3 hits, all carried/rejected in Jul–Aug. 88 screened → **23 admitted / 65 rejected** (all logged), 11 pp,
+  0 errors, DOI gate 23/23. All ten subtopic bands populated; all five life-course windows populated.
+- **Metadata-only 2 of 23 (9%)**, down from 28%; retry list 30. One flagged backfill (catechol BrC,
+  Crossref-created 20 Aug, surfaced via a 22 Sep PMC deposit; EPMC `firstPublicationDate` said 22 Sep, so the
+  month gate cannot catch this class — check Crossref `created` for PMC-sourced records with no DOI).
+- One geo needle added (`congo`/`bukavu` → DR Congo → Sub-Saharan Africa). No new design labels.
+- Proof: no layout defects; the inherited `\vspace{4mm}` spacing held at 23 records. Captions recomputed from the
+  rendered figures (Global/multi-region 13 = 11 non-geographic + 2 real multi-region).
+- Trial watch 0 new (third clean reconciliation); COATED-AIR NCT to look up for W39. `metrics.csv` 453 rows,
+  0 malformed. Still open: no `\DIGESTDATE`-vs-`--date` guard; `2026-07-27` missing `LIFECOURSE`; `.git` debris.
