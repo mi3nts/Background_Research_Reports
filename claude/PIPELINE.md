@@ -2987,3 +2987,12 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   `ENDPOINT_CANON` Cancer/Oncologic split; `2026-07-27` missing `LIFECOURSE`; no
   `\DIGESTDATE`-vs-`--date` build guard; proofing rasters now written to gitignored
   `claude/build/proof/` (mount EPERM, manual cleanup on a local checkout) along with `.git` debris.
+
+## Run 2026-09-24 (built 2026-09-25 11:20-11:45 CDT) — daily 24 Sep
+
+- Window 24 Sep, continuous with 23 Sep. **25 Sep not opened** (22:00 rule). Harvest 81 raw (PubMed 18 health / **1 sensing** — first non-zero in five days, and it was a proteomics paper; EPMC 11; Crossref-ISSN 51; OpenAlex 429, arXiv 406) → 78 unique → 9 carried → 69 fresh. PubMed connector (health 25, sensing 0, broad 18; 38 unique) → 12 screened, 11 appended, 1 seen; **6 admitted** incl. tier-A ATVB LA–Beijing panel. 80 screened → **35 admitted / 45 rejected** (all logged), 13 pp, 0 errors, 0 overfull/underfull, DOI gate 35/35 (1 warn: AJPH DOI unregistered but matches PubMed).
+- **`nohup python3 run_all.py --harvest &` does NOT survive a device_bash call** — the process died after the PubMed legs with an empty log. Remaining legs re-run in the foreground by importing `harvest.py` functions (EPMC ~60 s, Crossref-ISSN ~120 s). Run the harvest leg-by-leg under the 180 s cap instead of backgrounding.
+- Metadata-only 7 of 35 (20%); Semantic Scholar tried as a 4th route and 404'd on all seven (not yet indexed). Retry list 44.
+- Geography: three needles added (`nepal`/`kathmandu`, `jordan`, and `"usa ("` — a label that *starts* with "USA (" matched neither `" usa"` nor `"(usa"`). Abstracts that name no country now get `Not stated (...)` rather than a country inferred from author affiliation (6 records this issue).
+- Proof caught one defect: "Corpus register" heading orphaned at the foot of p10 → `\clearpage` before the register. Two prose claims corrected before shipping (connector admitted 6 not 8; "connector out-contributes PubMed leg" was false and removed).
+- Consensus 10 hits, 0 new (8 archived/rejected, 2 fail Crossref `created`: Kaur AMT Feb 2026, Jambi Lingkar Aug 2026). Trial watch 0 PM-relevant, 0 new; `trials.json` 22 windows. `metrics.csv` 473 rows, 0 malformed.

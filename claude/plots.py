@@ -890,6 +890,8 @@ geo_group = {
     # Global / multi-region bar -- the 2026-08-03 failure mode.
     "Cyprus": "Middle East & N. Africa", "Tanzania": "Sub-Saharan Africa",
     "Kuwait": "Middle East & N. Africa",
+    # added 2026-09-24 from the unmapped diagnostic (Kathmandu hybrid network, Jordan network).
+    "Nepal": "South Asia", "Jordan": "Middle East & N. Africa",
     "Iraq": "Middle East & N. Africa",
     # added 2026-09-12: Benin (Cotonou-Lake Nokoue-Porto-Novo 1 km screening corridor)
     # and Lithuania (Vilnius grey-green XGBoost-SHAP). Both are single real study sites;
@@ -1001,6 +1003,10 @@ GEO_SUBSTR = [
     # added 2026-09-22 from the unmapped diagnostic: the MUTOTO household-air-pollution
     # record in Bukavu. A real site with no needle; named directly rather than hopped.
     ("congo", "DR Congo"), ("bukavu", "DR Congo"),
+    # added 2026-09-24: Kathmandu Valley and Jordan records; and "USA (Atlanta)" /
+    # "USA (older-adult households)" - a LEADING "usa" had no needle (" usa" and "(usa"
+    # both need a preceding character). Anchored as "usa (" to avoid matching inside words.
+    ("nepal", "Nepal"), ("kathmandu", "Nepal"), ("jordan", "Jordan"), ("usa (", "USA"),
     # added 2026-08-12: a GBD paper whose study setting is the whole of Asia had no
     # needle. MUST stay last in this list - "asia" is a substring of "malaysia" and of
     # "east asia"/"south asia", all of which have their own earlier needles, so the
