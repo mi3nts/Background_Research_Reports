@@ -178,6 +178,13 @@
    "hits": 1,
    "new": 0,
    "note": "Issue 2026-09-22. Single hit NCT05423665 again, already captured. Third consecutive clean reconciliation. COATED-AIR (design paper, Eur Heart J Cardiovasc Pharmacother, PMID 42772753) has no NCT in its abstract - look up its registration for the W39 weekly."
+  },
+  {
+   "window": "2026-09-20..2026-09-24",
+   "field": "LastUpdatePostDate",
+   "hits": 1,
+   "new": 0,
+   "note": "Issue 2026-09-23. Single hit NCT05423665 again, already captured. Fourth consecutive clean reconciliation - the daily sweep stays ahead of the weekly. COATED-AIR NCT still to look up for the W39 weekly (26 Sep)."
   }
  ],
  "NCT05867381": {
@@ -402,7 +409,7 @@
   ],
   "note": "Registered under condition Air Pollution Exposure but NO air-quality, PM or exposure outcome measure exists in the protocol -- every registered endpoint is a psychosocial scale (empowerment, social cohesion, climate hope). Second consecutive topical hit whose PM framing is not carried by any measured PM variable (cf. NCT07817836, 14 Sep). Surface in the W38 weekly with that caveat."
  },
- "windows_count": 19,
+ "windows_count": 21,
  "stored_records": 13,
  "counter_note": "RECONCILED 2026-09-16. d['trials'] was a running tally (28) that had drifted from the number of persisted NCT records because earlier runs incremented it without writing the record. Both keys are now set to the actual count of stored NCT objects (12) and must be derived, never incremented, from here on. The 17 lost records are not recoverable from this file; the 15 window entries in d['windows'] are the audit trail of what was queried, and their 'kept' fields are the authoritative per-window counts.",
  "NCT07793123": {

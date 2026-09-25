@@ -628,6 +628,13 @@ design_group.update({
 })
 
 design_group.update({v: v for v in set(design_group.values())})
+
+# added 2026-09-23 with the records that use it: a CFD dust-field study validated
+# against a 1:4 scaled physical model. Sibling of "Numerical / CFD instrument model".
+design_group.update({
+    "CFD simulation + scaled-model validation": "Modelling / inventory",
+})
+
 _design_unmapped = set()
 def dgrp(d):
     if d not in design_group:

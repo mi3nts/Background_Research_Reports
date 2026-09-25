@@ -2945,3 +2945,45 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
   rendered figures (Global/multi-region 13 = 11 non-geographic + 2 real multi-region).
 - Trial watch 0 new (third clean reconciliation); COATED-AIR NCT to look up for W39. `metrics.csv` 453 rows,
   0 malformed. Still open: no `\DIGESTDATE`-vs-`--date` guard; `2026-07-27` missing `LIFECOURSE`; `.git` debris.
+
+## Run 2026-09-23 (built 2026-09-24 20:5x-21:1x CDT) — daily 23 Sep
+
+- Window 23 Sep, continuous with 22 Sep. **24 Sep not opened** (22:00 rule; run started 20:44 CDT).
+  Harvest 81 raw (PubMed 14 health / **0 sensing, fourth day running**, EPMC 2, Crossref-ISSN 65;
+  OpenAlex 429, arXiv 406) → 0 retro-index drops → 80 unique → 1 carried → 79 fresh. **PubMed
+  connector on three axes** (health 17, sensing 2, broad aerosol/air-quality 51) returned **9 PMIDs
+  no harvester leg had**: 6 appended, **2 merged onto Crossref records carrying no PMID — the DOI
+  key again, second time in six days**, 1 already seen. 85 screened → **27 admitted / 58 rejected**
+  (all logged), 12 pp, **0 errors, 0 overfull/underfull**. DOI gate 27/27. `last_entry_date` = 2026-09-23.
+- **Metadata-only regressed to 7 of 27 (26%)** from 9% — purely a deposit artefact: five *Atmos
+  Environ*, one *Environ Int*, one *Aerosol Sci Technol*. The AS&T record (real-time EC monitors vs
+  diesel PM) is the day's most watch-relevant title and `doi.org` returned **403** to the fetch, so
+  it ships listed, not summarised. Retry list **37**.
+- **New abstract route that WORKS: the publisher landing page.** Part Fibre Toxicol
+  (`10.1186/s12989-026-00703-7`) returned nothing from Crossref, EPMC and PubMed efetch; the
+  Springer article page carried the full abstract. BMC/Springer redirects through
+  `link.springer.com` and the direct `*.biomedcentral.com` URL serves a JS shell — follow the
+  redirect. Elsevier and T&F landing pages still yield nothing (403/empty meta). **Add as step 2.6
+  in `_fetchabs`, after EPMC fullTextXML.**
+- **PubMed connector sensing-axis query threw an upstream `API_ERROR`** on the first phrasing
+  (long boolean with quoted vendor names) and worked when reworded to a short OR-list. Keep
+  connector queries short; a failed connector query is silent recall loss, not an error the
+  harvest summary shows.
+- One new design label registered in `plots.py` in the same edit as its record
+  (*CFD simulation + scaled-model validation*). **No new geography needles needed** — first issue
+  in three weeks with none.
+- Proof caught three defects, all in captions/prose and all fixed before shipping: an unsourced
+  **"$40"** price attached to the SPS30 in the signal headline (the paper states no cost — removed;
+  **never attach a number the source does not carry, even a plausible one**), an f2a caption that
+  said "three groups of three" then contradicted itself with five, and an f4 caption claiming two
+  cells hold two when three do. Layout needed no change: the provenance-box-only final page is the
+  house ending (22 Sep did the same), and p2's ~30% gap is the unbreakable f2 block.
+- Consensus 10 hits, **0 new** (all archived or failing the Crossref `created` check, incl. the
+  Ginsburg PurpleAir calibration rejected 18 Sep); a second Consensus query was **rate-limited** and
+  is recorded as not-run, not as a null. Trial watch 1 hit (NCT05423665), **0 new — fourth
+  consecutive clean reconciliation**; `trials.json` 13 trials, 21 windows.
+- `metrics.csv` 462 rows, 0 malformed — **sixteenth** consecutive issue confirming the KNOWN DEFECT
+  note in the task file is stale; strike it. Still open: no first-author affiliation field;
+  `ENDPOINT_CANON` Cancer/Oncologic split; `2026-07-27` missing `LIFECOURSE`; no
+  `\DIGESTDATE`-vs-`--date` build guard; proofing rasters now written to gitignored
+  `claude/build/proof/` (mount EPERM, manual cleanup on a local checkout) along with `.git` debris.
