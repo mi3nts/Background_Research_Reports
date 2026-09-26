@@ -718,9 +718,14 @@ ep = collections.Counter(canon_ep(p["endpoint"]) for p in PAPERS)
 # (in vitro proxy)"), which is what happened in the first weekly build. Scale the gap
 # with the longest label instead of pinning it.
 _eplab = max((len(k) for k in ep), default=10)
+# 2026-09-25: the donut legend also grows rightwards past ax1 when an architecture label is
+# long ("Experimental / toxicology  (2)", 29 chars) and collided with a 22-char endpoint
+# label ("Sensor bias / accuracy") at the bottom of ax2. Widen the gap for that too.
+_lglab = max((len("%s  (%d)" % (k, v)) for k, v in dg_items), default=10)
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=SZ(9.0, max(4.3, 0.30 * len(ep) + 1.6)),
                                gridspec_kw={"width_ratios": [1.0, 1.0],
-                                            "wspace": min(1.05, 0.42 + 0.021 * max(0, _eplab - 16))})
+                                            "wspace": min(1.20, 0.42 + 0.021 * max(0, _eplab - 16)
+                                                          + 0.03 * max(0, _lglab - 26))})
 w = [v for _, v in dg_items]
 lab = [k for k, _ in dg_items]
 wedges, _ = ax1.pie(w, colors=SEQ[:len(w)], startangle=90, radius=0.86,
@@ -913,6 +918,10 @@ geo_group = {
     # set of field and chamber growth-rate datasets across several continents. It is
     # genuinely multi-region rather than unlocatable, so it is named explicitly here
     # instead of arriving in the fallback bucket through GEO_NONGEO.
+    # added 2026-09-25: GBD 2021 stroke-attribution re-cut over 39 countries/territories of
+    # the Americas. Written without the word "America" on purpose - the ("america","USA")
+    # needle would otherwise file a hemispheric GBD analysis as a US study.
+    "Western Hemisphere, 39 countries and territories (GBD 2021)": "Global / multi-region",
     "Global / multi-region": "Global / multi-region",
 }
 # Same closure for geography. On 2026-08-05 only four of the thirteen group names were
