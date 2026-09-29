@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 14,
+ "trials": 16,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -199,6 +199,13 @@
    "hits": 0,
    "new": 1,
    "note": "Issue 2026-09-25. Condition (air pollution/PM/HAP) and asthma x purifier/ERV/HEPA queries from 24 Sep returned 0. New trial NCT07196436 (AIRVAC) captured by linking the day's PLoS One protocol paper; analyze_endpoints run. COATED-AIR NCT still to look up for W39."
+  },
+  {
+   "window": "2026-09-26..2026-09-29",
+   "field": "LastUpdatePostDate",
+   "hits": 1,
+   "new": 2,
+   "note": "29 Sep backfill run (issues 26-28 Sep). Condition query (air pollution/PM/PM2.5/wildfire smoke, updates 26-29 Sep) -> 1 hit, HAPIN NCT02944682 (completed; registry update). COATED-AIR resolved to NCT06541691 by condition+intervention search; analyze_endpoints run. For the W39 weekly."
   }
  ],
  "NCT05867381": {
@@ -514,5 +521,43 @@
    ]
   },
   "note": "Found via the PLoS One protocol paper, not the LastUpdatePostDate sweep. analyze_endpoints: registry lists spirometry AND ACT as co-primary; the published protocol names asthma control as primary and pulmonary function as secondary - a registry/protocol primary-endpoint discrepancy. Enrollment 80 households-scale for 4 arms (~20/arm) with sham controls. No PM2.5 exposure endpoint registered despite low-cost + research-grade PM monitoring in the protocol."
+ },
+ "NCT06541691": {
+  "first_seen": "2026-09-29",
+  "title": "Coated or Chewable Aspirin in Patients with Established Atherosclerotic Disease and a Hybrid Strategy to Mitigate the Adverse Effects of Air Pollution: the COATED-AIR Randomized Clinical Trial",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Rajaie Cardiovascular Medical and Research Center",
+  "enrollment": 3000,
+  "interventions": [
+   "Enteric-coated aspirin",
+   "Plain aspirin",
+   "Hybrid strategy"
+  ],
+  "conditions": [
+   "Atherosclerotic Cardiovascular Disease"
+  ],
+  "start_date": "2024-03-06",
+  "primary_completion_date": "2026-03-30",
+  "note": "Matched to the 22 Sep design paper. analyze_endpoints: primary for the 2nd (air-pollution) randomisation = composite non-fatal ischaemic stroke, type I MI, acute limb event or CV death, 30 mo; no PM exposure or adherence endpoint registered, so mitigation uptake is unmeasured. Registry still RECRUITING six months past its listed primary completion date - stale record."
+ },
+ "NCT02944682": {
+  "first_seen": "2026-09-29",
+  "title": "Household Air Pollution and Health: A Multi-country LPG Intervention Trial (HAPIN)",
+  "status": "COMPLETED",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Emory University",
+  "enrollment": 6704,
+  "interventions": [
+   "Liquefied petroleum gas (LPG) cookstove"
+  ],
+  "conditions": [
+   "Infant, Low Birth Weight"
+  ],
+  "start_date": "2018-05-07",
+  "primary_completion_date": "2025-06-30",
+  "note": "Registry record updated in the 26-29 Sep window; completed trial, main results already published (not new evidence). Recorded for continuity."
  }
 }

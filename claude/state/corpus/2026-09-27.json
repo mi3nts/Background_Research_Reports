@@ -1,0 +1,104 @@
+{
+ "date": "2026-09-27",
+ "entry_window": "2026-09-27 -> 2026-09-27",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "doi": "10.64898/2026.09.23.26363783",
+   "journal": "medRxiv (preprint)",
+   "short": "Bloomberg et al. 2026",
+   "title": "Associations of individual exposure to particulate matter with next-day physical activity and sedentary behaviour in older adults: a micro-longitudinal study",
+   "sub": "Exposure assessment & modelling",
+   "design": "Panel study",
+   "pm": "Personal air-quality monitors (waking hours, 5 days) vs area-level PM2.5/PM10",
+   "geo": "UK",
+   "endpoint": "None (behaviour)",
+   "tier": "A",
+   "n": "Micro-longitudinal preprint: 67 UK adults aged 50-85 wore personal air-quality monitors (waking hours) and 24-h accelerometers for five days (304 person-days). Within-person mixed models: a higher-than-usual day (+1 IQR, i.e. +2.6 ug/m3 PM2.5 above the person's mean) was followed by 8 min less light activity (95% CI -14 to -2) and 483 fewer steps (-855 to -82); for PM10 (+2.8 ug/m3), 8 min less LPA (-13 to -3), 8 min more sedentary time (0 to 15) and 412 fewer steps. No MVPA association, and none with area-level PM. Not peer reviewed; the monitor model and any calibration are not stated; a 2.6 ug/m3 contrast is within typical optical-sensor error, so residual weather or illness confounding of day-to-day behaviour is the main threat. Relevance: high - the association exists only in personal-sensor exposure, not area estimates."
+  },
+  {
+   "pmid": "42801340",
+   "doi": "10.1007/s10653-026-03506-z",
+   "journal": "Environ Geochem Health",
+   "short": "Shahadat et al. 2026",
+   "title": "Spatiotemporal variability, trends, and health risk assessment of ambient PM2.5 and PM10 in Bangladesh during 2018-2025.",
+   "sub": "Exposure assessment & modelling",
+   "design": "Monitoring-record analysis",
+   "pm": "16 DoE continuous monitoring stations, PM2.5 and PM10, 2018-2025",
+   "geo": "Bangladesh (national, 16 stations)",
+   "endpoint": "Carcinogenic risk",
+   "tier": "B",
+   "n": "Analysis of 2018-2025 PM2.5 and PM10 from the 16 Department of Environment continuous stations in Bangladesh, with seasonal Mann-Kendall trends and ELCR/HQ risk indices. Every station exceeded national standards and WHO guidelines every year. Network annual mean PM2.5 fell from 91.54 to 77.64 ug/m3 (-15.2%) and PM10 from 155.7 to 132.3 (-15.0%), non-monotonically, rebounding after the 2020 minimum; winter/monsoon ratios were ~4.2 (PM2.5) and 3.0 (PM10). Most seasonal trends were not significant. The authors note kriging performed poorly and was used only for display - 16 stations cannot map a country of 170 million. ELCR applied to PM2.5 mass is a screening construct, not an epidemiological risk. Relevance: the station-data quality control is undescribed, and this network is exactly what low-cost sensor densification in Bangladesh would calibrate against."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envint.2026.110539",
+   "journal": "Environ Int",
+   "short": "Wang et al. 2026",
+   "title": "Environmental exposures and mental health: longitudinal results from the German National Cohort (NAKO)",
+   "sub": "Neuro / mental health",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - environmental exposures and mental health in NAKO (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 27 Sep with no abstract; Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates longitudinal analyses of environmental exposures and mental health in the German National Cohort; which exposures (air pollution, noise, greenness, heat) are included cannot be stated. NAKO's size (~200,000) makes it a priority retry. Nothing about exposure metric, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title."
+  },
+  {
+   "pmid": "42802003",
+   "doi": "10.1016/j.envres.2026.125789",
+   "journal": "Environ Res",
+   "short": "Liu et al. 2026",
+   "title": "Spatiotemporal Contamination Characteristics, Bacterial Community Structure, and Airflow-Mediated Transport of Bacterial Aerosols in a Pediatric Emergency Consulting Room.",
+   "sub": "Occupational & indoor",
+   "design": "Repeated field measurement with CFD simulation",
+   "pm": "Size-resolved culturable bacterial aerosol (Andersen-type stages), CFD deposition",
+   "geo": "China (paediatric hospital)",
+   "endpoint": "Infection",
+   "tier": "C",
+   "n": "One paediatric emergency consulting room: culturable airborne and surface bacteria, high-throughput sequencing and CFD of aerosol transport and deposition. Airborne culturable counts differed little between locations (well-mixed small room), surface deposition was heterogeneous, and 73.47% of bacterial aerosol was below 3.3 um; Staphylococcus was the core genus. CFD placed the consultation desk and floor at 79.71% of deposited particles, with high-risk zones around occupants. One room, culturable fraction only (typically <1% of total bacteria), and sampling duration and counts are not in the abstract. Relevance: marginal; bioaerosol is invisible to optical PM sensors, so ventilation decisions here need culture or fluorescence methods."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Next-day light PA (min)\nper +1 IQR personal PM2.5",
+   "exposure": "Personal PM2.5, +2.6 ug/m3 above own mean",
+   "est": -8.0,
+   "lo": -14.0,
+   "hi": -2.0,
+   "metric": "beta",
+   "src": "67 UK adults 50-85, 304 days"
+  },
+  {
+   "label": "Next-day light PA (min)\nper +1 IQR personal PM10",
+   "exposure": "Personal PM10, +2.8 ug/m3 above own mean",
+   "est": -8.0,
+   "lo": -13.0,
+   "hi": -3.0,
+   "metric": "beta",
+   "src": "67 UK adults 50-85, 304 days"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record this\nissue"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\npaediatric ED\nbioaerosol"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno record this\nissue"
+  },
+  {
+   "n": 1,
+   "note": "working age:\nUK monitor panel\n(from age 50)"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nUK monitor panel\n(to age 85)"
+  }
+ ]
+}

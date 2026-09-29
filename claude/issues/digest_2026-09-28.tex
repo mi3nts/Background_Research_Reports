@@ -1,0 +1,313 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{28 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-09-28\;\;\textcolor{Amber}{\textbar}\;\;Entry window 28 September 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;15 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{15}{RECORDS IN SCOPE\\(120 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A year after the Maui wildland--urban interface
+fire, 1,400 adults carry urinary metal burdens far above US reference levels, and the mixture
+index tracks abnormal spirometry --- a hazard that PM$_{2.5}$ mass monitoring would not have
+registered.}\\[1.4mm]
+\footnotesize
+Maunakea and colleagues (\textit{PNAS}, tier A) enrolled \textbf{1,400 adults 6--18 months} after the
+August 2023 Maui fires and measured \textbf{24 urinary metals} and spirometry at the same visit.
+Relative to US reference values, antimony was \textbf{40-fold}, manganese \textbf{3.8-fold}, barium
+\textbf{2.3-fold} and arsenic \textbf{2.2-fold} higher, clustering in the most affected areas. Per
+quantile of the WQS positive-mixture index (driven by As, Cd, Cu), the odds of FVC, FEV$_1$,
+FEV$_1$/FVC and FEF$_{25-75}$ below the lower limit of normal were \textbf{1.71, 1.53, 1.83 and 1.84}.
+\textbf{Why it is the signal:} a WUI fire burns buildings, vehicles and treated materials, and what
+it leaves behind is a metal-rich ash that resuspends for months; mass-based PM$_{2.5}$ sensors
+record smoke days, not this. The inference has real gaps --- cross-sectional, no pre-fire baseline,
+no CIs in the abstract, arsenic partly dietary and cadmium partly from smoking, and \textbf{no air
+or dust measurement} ties the burden to the fire. \textbf{The operational rule:} after structure
+fires, add filter-based metal speciation (or XRF on sensor-co-located filters) and resuspension
+monitoring for months, rather than standing down when the optical PM$_{2.5}$ series returns to
+baseline.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Indoor and occupational records dominated: six of fifteen.} Coal-mine dust and NO$_2$ led
+a BKMR/Qgcomp mixture associated with metabolic syndrome in Chinese miners; Benin City classrooms
+ran \textbf{11.2--81.4\,$\mu$g\,m$^{-3}$} PM$_{2.5}$ with cough in \textbf{58.2\,\%} of pupils while
+every HQ stayed below 1; a Beijing Metro study used CFD to place measurement points before sampling;
+a scoping review inventoried questionnaires paired with low-cost IAQ sensors.
+
+\item \textbf{A controlled wood-smoke exposure model for calves.} 24 pre-weaned Holsteins, 6\,h at
+\textbf{238\,$\mu$g\,m$^{-3}$} vs \textbf{9.9}: lower respiratory rate, higher tidal volume, more BALF
+granulocytes, macrophages and NK cells. A rare controlled dose in agricultural smoke work.
+
+\item \textbf{No PM association survived in a microtia case-only study} (589 patients): only an
+inverse SO$_2$ association in males passed FDR, with address at registration standing in for
+gestational weeks 5--9.
+
+\item \textbf{Five of fifteen are metadata-only}, including the \textit{JAMA Netw Open} Singapore
+PM$_{2.5}$--asthma/COPD ED study (PubMed carries only a one-line summary), an \textit{AS\&T}
+differential mobility analyser geometry paper, and a \textit{QJM} decomposition of the PM$_{2.5}$
+NCD burden into ageing versus epidemiological change. All go on the retry list.
+
+\item \textbf{Harvest state.} Europe PMC \textbf{75} (mostly MDPI noise), Crossref-ISSN \textbf{49},
+PubMed health \textbf{10} / sensing \textbf{1}. Seven Europe PMC records had already been screened
+out on 26 September and were rejected again under the same reasons; the Bangladesh network paper
+reappeared via Europe PMC and was dropped as already in the 27 September issue. \textbf{Scholar
+Gateway failed} with an identity error, so the JAMA numbers could not be recovered from full text.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 27 September issue (built earlier on this run) closed with \texttt{last\_entry\_date}
+at 27 September. This issue collects \textbf{28 September in full}, continuous with it, and closes
+the three-day backfill of 26--28 September. The run started at about 17:40 CDT on 29 September,
+so under the 22:00 rule \textbf{29 September is not opened}; it and the \textbf{September monthly}
+(30 September) fall to the next runs.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 15 in-scope records. \textbf{Seven of ten bands
+populated}; \textit{Occupational \& indoor} leads with \textbf{six}. \textit{Cardiovascular},
+\textit{Neuro} and \textit{Other clinical} are empty.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: \textbf{metadata only five}, measurement
+campaigns, cross-sectional observational and reviews \textbf{three} each, one experimental. Right ---
+endpoint: \textit{no health endpoint} takes \textbf{eight} (five missing abstracts, three non-health
+records); \textit{respiratory} \textbf{three} (Maui, calves, the IL-20 review); occupational,
+irritant symptoms, metabolic and congenital anomaly one each.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: unspeciated / emissions \textbf{seven} (metal
+biomonitoring, dusts, smoke and metadata-only records), PM$_{2.5}$ only \textbf{four}, PM$_{2.5}$ +
+PM$_{10}$ \textbf{three}, size-resolved one (the DMA). Right --- geography: North America
+\textbf{four} (Maui, the calf study, OR nurses, Greenland fjords binned geographically), China
+\textbf{three}, and one each for Singapore, South Korea, France and Nigeria; four not recoverable or
+multi-region.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: in utero one (microtia, weeks 5--9), childhood and
+adolescence one each (Benin City primary and secondary schools), working age three (coal miners,
+OR nurses, Maui adults), older adults none.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the 15 records.
+\textit{Occupational \& indoor} spreads across four architectures; metadata-only records sit in
+four different bands.}
+
+\vspace{2mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}\textbf{No forest plot this issue.} No admitted
+abstract reports a PM effect estimate with a confidence interval: the Maui ORs are per quantile of a
+urinary metal mixture index and carry no CI in the abstract; the Benin City classroom OR is crude and
+without CI; the microtia study reports p- and q-values only. The f5 panel is absent by design, not by
+build failure.\par}
+
+\vspace{4mm}
+
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{Maunakea et al. 2026}
+{Climate-amplified wildland-urban interface disasters create persistent internal metal mixtures associated with pulmonary impairment.}
+{Proc Natl Acad Sci U S A}
+{1,400 adults enrolled 6-18 months after the August 2023 Maui wildland-urban interface fires had 24 urinary metals and spirometry at the same visit. Burdens exceeded US reference levels - antimony 40-fold, manganese 3.8, barium 2.3, arsenic 2.2 - highest in the most affected areas. In WQS models each quantile of the positive mixture index (driven by As, Cd, Cu) raised the odds of FVC, FEV1, FEV1/FVC and FEF25-75 below LLN (OR 1.71, 1.53, 1.83, 1.84; CIs not in the abstract). Cross-sectional, no pre-fire baseline, urinary metals partly dietary (As) and smoking-related (Cd), and no air measurement links the burden to smoke or ash. Relevance: air PM mass would not have captured this; WUI smoke needs metal speciation, not just optical PM$_{2.5}$.}
+{10.1073/pnas.2613208123}
+
+\paperentry{Kulkarni et al. 2026}
+{Short-Term Exposure to PM$_{2.5}$ and Emergency Department Visits for Asthma and Chronic Obstructive Pulmonary Disease.}
+{JAMA Netw Open}
+{\textsc{metadata only.} Metadata-only record: PubMed carries only the one-line plain-language summary - a cohort study of short-term PM$_{2.5}$ and asthma- and COPD-related emergency department visits in Singapore (Duke-NUS / SGH authors). No estimate, lag, exposure source or sample size is deposited; Crossref and Europe PMC returned nothing and Scholar Gateway failed with an identity error. This watch does not infer results from a title. Priority retry: Singapore's transboundary-haze PM$_{2.5}$ is a clean natural experiment, and a tropical-humidity city is where sensor-derived exposure would be most biased.}
+{10.1001/jamanetworkopen.2026.36306}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Bae et al. 2026}
+{Exposure to ambient air pollutants during early gestation and phenotypic variation in non-syndromic microtia.}
+{J Plast Reconstr Aesthet Surg}
+{Single-centre case-only study of 589 patients (625 ears) with non-syndromic microtia, relating spatiotemporally modelled exposure in gestational weeks 5-9 to bilateral involvement and anatomical severity. O$_3$ was nominally associated with bilateral involvement; PM$_{10}$, SO$_2$ and CO showed nominal inverse associations; after FDR only an inverse SO$_2$ - left-ear severity association in males survived, plus an SO$_2$ ear-side interaction. No PM association survives. Address at clinical registration (often years after gestation) misclassifies embryonic exposure, and without unaffected controls nothing can be said about occurrence. Relevance: low; a multiplicity-driven null for PM.}
+{10.1016/j.bjps.2026.09.003}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Kamyabi et al. 2026}
+{A novel controlled wood smoke exposure model to evaluate physiological responses to smoke-derived air pollution in dairy calves.}
+{J Dairy Sci}
+{24 pre-weaned Holstein bull calves were randomised to 6 h in purpose-built enclosures with wood smoke (PM$_{2.5}$ 238.44 +/- 62.97 $\mu$g\,m$^{-3}$) or clean air (9.94 +/- 4.50), with CO$_2$, CO, temperature and RH similar. Smoke-exposed calves had lower respiratory rate (17.50 vs 21.52 breaths/min) and higher tidal volume (0.90 vs 0.75 L), unchanged minute ventilation; BALF showed more granulocytes, CD68+ macrophages and NK cells, and circulating neutrophils fell. A single 6-h exposure with necropsy immediately after cannot address recovery or repeated smoke days; fresh wood smoke differs from aged wildfire plumes. Relevance: the enclosure PM$_{2.5}$ record gives a controlled dose, rare in agricultural wildfire work, and the design transfers to sensor-guided barn ventilation trials.}
+{10.3168/jds.2026-29100}
+
+\paperentry{Driencourt et al. 2026}
+{The impact of post-exposure Streptococcus pneumoniae infections on pulmonary immunity: The role of air pollution and IL-20 cytokines in respiratory infections.}
+{Rev Mal Respir}
+{French-language short review framing the experimental programme on how PM$_{2.5}$ alters pulmonary immunity to Streptococcus pneumoniae, with IL-20-family cytokines as the candidate mediator. The abstract restates burden figures (>9 million deaths globally, 48,000 in France) and oxidative-stress/inflammation mechanisms, and reports no data. Relevance: low; flags IL-20 cytokines as a mechanistic target for PM-infection susceptibility studies.}
+{10.1016/j.rmr.2026.07.009}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 1 record}{Clay}
+
+\paperentry{Surdu et al. 2026}
+{Summertime Aerosol Composition in Southern Greenlandic Fjords: Impacts of Sources and New Particle Formation Events}
+{Environ Sci Technol}
+{First aerosol composition measurements in the fjords near Narsaq, South Greenland, from two summer ship campaigns using nanoelectromechanical-systems FTIR. Median organic matter was 1.1 $\mu$g\,m$^{-3}$, above High Arctic and mid-latitude coastal sites; PMF split the aerosol into primary marine (53\%) and MSA-bearing secondary marine (47\%) factors, amines exceeded open-ocean levels, and NPF events shifted composition toward secondary material. Campaign length and sample counts are not in the abstract, and two summers cannot separate interannual bloom timing from sampling differences. Relevance: marginal for health; NEMS-FTIR is a low-mass, high-time-resolution composition method that could pair with network optical sensors at supersites.}
+{10.1021/acs.est.6c09104}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Zhou et al. 2026}
+{Effects of geometrical parameters on eccentric cylindrical differential mobility analyzer}
+{Aerosol Sci Technol}
+{\textsc{metadata only.} Metadata-only record: Taylor \& Francis deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates a study of how geometry affects the performance of an eccentric cylindrical differential mobility analyser. Relevant to compact mobility sizers - the reference against which low-cost ultrafine and size-resolving sensors are characterised. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list.}
+{10.1080/02786826.2026.2734523}
+
+\paperentry{Wang et al. 2026}
+{Artificial intelligence for atmospheric chemistry: from observation to process understanding}
+{npj Clim Atmos Sci}
+{\textsc{metadata only.} Metadata-only record: Springer Nature deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates a review or perspective on AI from atmospheric observation to process understanding. Of interest only if it covers sensor-network calibration or PM retrieval. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list.}
+{10.1038/s41612-026-01559-6}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 6 records}{Amber}
+
+\paperentry{Wang et al. 2026}
+{Mixed Exposure to Underground Air Pollutants and Metabolic Syndrome in Coal Miners: A Cross-Sectional Study Integrating Multi-Pollutant Models and Urinary Metabolomics.}
+{Toxics}
+{Cross-sectional study of underground coal miners with logistic regression, BKMR and Qgcomp for coal dust, CO, CO$_2$ and NO$_2$, plus untargeted urinary metabolomics. Each pollutant was associated with metabolic syndrome; the mixture was positively associated in BKMR and Qgcomp, with coal dust and NO$_2$ contributing most - dust tracking central obesity and hypertension, NO$_2$ glucose and triglycerides. >113 metabolites differed; acylcarnitines tracked dust and leukotrienes NO$_2$. The abstract gives no n, no effect sizes and no exposure-measurement method; healthy-worker and shift-work confounding are unaddressed. Relevance: adds a metabolic endpoint to respirable coal dust, which is measured underground by personal dust monitors that low-cost sensors cannot yet replace.}
+{10.3390/toxics14090746}
+
+\paperentry{Eghomwanre \& Akharame 2026}
+{Spatio-temporal assessment of classroom air quality and thermal comfort as determinants of respiratory health risks in urban pre-tertiary institutions.}
+{Environ Sci Pollut Res Int}
+{Ten weeks of classroom monitoring (PM$_{2.5}$, PM$_{10}$, CO, CO$_2$, thermal indices) in six primary and secondary schools in Benin City, with modified BMRC respiratory questionnaires. PM$_{2.5}$ ranged 11.2-81.4 and PM$_{10}$ 20.1-138.6 $\mu$g\,m$^{-3}$; CO$_2$ peaked at 729.3 ppm; THI 28.3-30.1. HQs were all <1, yet cough (58.2\%), phlegm (32.5\%) and chest pain (26.7\%) were common; higher PM was associated with cough (p<0.001) and chest pain (crude OR 2.74), while poor sanitation predicted phlegm (aOR 5.54, 95\% CI 1.35-22.80). Instrument type, calibration and student n are not in the abstract, and the PM ORs are crude. Relevance: West African classroom data are scarce; this is the setting where a school sensor network would be the only monitoring.}
+{10.1007/s11356-026-38254-1}
+
+\paperentry{Gulzar et al. 2026}
+{PAHs Exposure, Health Risk Evaluation, and Renal Associations by Household Fuel Type in Rural Residents of Northwestern China}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates PAH exposure, risk assessment and renal associations by household fuel type among rural residents of northwestern China. Pairs with the 25 Sep household solid-fuel records; retry for the exposure matrix (air, urine) and renal endpoint. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list.}
+{10.1016/j.atmosenv.2026.122388}
+
+\paperentry{Liu et al. 2026}
+{Research on Comprehensive Evaluation of Air Quality in Underground Stations of Urban Rail Transit Systems}
+{Atmosphere}
+{One island-platform Beijing Metro station: CFD of airflow for train absent, arriving and departing was used to place measurement points, then handheld instruments measured CO$_2$, PM$_{2.5}$, PM$_{10}$ and TVOC at morning and evening peaks, combined in an entropy-weighted index. Retention zones formed at the platform centre and escalator entrances under low-frequency ventilation; piston flow improved mixing but imported tunnel air; PM tracked outdoor inputs with some internal contribution. No concentrations, instrument models or sampling durations are in the abstract. Relevance: CFD-guided siting is directly transferable to placing fixed low-cost PM nodes in stations, where iron-rich wear particles bias optical readings.}
+{10.3390/atmos17100938}
+
+\paperentry{Yu et al. 2026}
+{Development of a Qualitative Questionnaire for Indoor Air Quality Monitoring: A Scoping Review of Subjective Assessments in Studies Using Low-Cost Sensors}
+{Atmosphere}
+{Scopus-only scoping review (281 records, 35 included) of questionnaires used alongside low-cost IAQ sensors in homes and workplaces, grouping items into five domains - demographics, symptoms, perception, building/occupancy, monitored pollutants - and proposing a structured questionnaire. A single database and no appraisal of questionnaire validity limit it to an item inventory; no psychometric testing of the proposed tool is reported. Relevance: moderate for deployment design - pairing sensor time series with standardised perception items is how sensor data become usable for SBS-type outcomes.}
+{10.3390/atmos17100943}
+
+\paperentry{Dennis \& Ball 2026}
+{Strategies to Improve Compliance With Smoke Safety.}
+{AORN J}
+{Nursing practice review on surgical-smoke evacuation compliance: smoke from energy-based devices carries toxic gases, particulate matter and potentially viable cells; perioperative nurses report twice the general-population incidence of respiratory problems; barriers are education, equipment and culture; recommended strategies are gap analysis, training, leadership support and legislation. No exposure measurement or new data. Relevance: low; OR smoke is a high-concentration ultrafine source for which real-time particle counters would make evacuation compliance auditable.}
+{10.1002/aorn.70159}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Lorences Noguera \& Cardenas-Duran 2026}
+{Disentangling Population Ageing from Epidemiological Change in the Rising Burden of PM$_{2.5}$-Attributable Non-Communicable Disease}
+{QJM}
+{\textsc{metadata only.} Metadata-only record: Oxford University Press deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates a decomposition of the rising PM$_{2.5}$-attributable NCD burden into population ageing versus epidemiological change; an author response to correspondence was deposited the same day. The ageing-versus-exposure split is the same point the 25 Sep Wan et al. ES\&T projection made for China. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list.}
+{10.1093/qjmed/hcag257}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{28 September 2026}, single day, continuous with the 27 September issue.
+Harvester legs run leg-by-leg: \textbf{PubMed} health \textbf{10}, sensing \textbf{1}; \textbf{Europe
+PMC} \textbf{75}; \textbf{Crossref by ISSN} \textbf{49}; \textbf{arXiv} no entry dated 28 September;
+\textbf{OpenAlex} 0. 135 raw deduplicated to \textbf{133}, \textbf{12} already carried, \textbf{121}
+fresh; the \textbf{PubMed connector} (\texttt{[EDAT]} 26--28 September, three axes, bucketed by entrez
+date) placed \textbf{25} PMIDs on this day: 14 appended, 1 PMID merged onto an existing DOI record.
+\textbf{135} candidates screened, \textbf{15 admitted}, \textbf{120 rejected} with logged reasons
+(dominated by MDPI pharmaceutics, food and materials papers from Europe PMC, \textit{Measurement
+Science and Technology} engineering, and gas-phase or ozone-only records under standing precedent).
+Consensus and ClinicalTrials.gov were swept once for the backfill (see the 26 September issue).
+\textbf{Scholar Gateway} returned an identity error and contributed nothing. \textbf{Five records are
+carried on metadata alone}. DOI gate: \textbf{0 fail, 0 warn} after one PMID mis-keyed at authoring
+was caught by the gate and corrected (the \textit{QJM} record). Greenland geography needle added
+(binned with North America geographically). Abstracts remain the copyright of their respective
+publishers.\par}
+\end{keybox}
+
+\end{document}

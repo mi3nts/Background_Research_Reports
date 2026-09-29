@@ -1,0 +1,239 @@
+{
+ "date": "2026-09-28",
+ "entry_window": "2026-09-28 -> 2026-09-28",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "doi": "10.1080/02786826.2026.2734523",
+   "journal": "Aerosol Sci Technol",
+   "short": "Zhou et al. 2026",
+   "title": "Effects of geometrical parameters on eccentric cylindrical differential mobility analyzer",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - eccentric cylindrical DMA geometry (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Taylor & Francis deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates a study of how geometry affects the performance of an eccentric cylindrical differential mobility analyser. Relevant to compact mobility sizers - the reference against which low-cost ultrafine and size-resolving sensors are characterised. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1038/s41612-026-01559-6",
+   "journal": "npj Clim Atmos Sci",
+   "short": "Wang et al. 2026",
+   "title": "Artificial intelligence for atmospheric chemistry: from observation to process understanding",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - AI in atmospheric chemistry observation and process studies (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "C",
+   "n": "Metadata-only record: Springer Nature deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates a review or perspective on AI from atmospheric observation to process understanding. Of interest only if it covers sensor-network calibration or PM retrieval. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c09104",
+   "journal": "Environ Sci Technol",
+   "short": "Surdu et al. 2026",
+   "title": "Summertime Aerosol Composition in Southern Greenlandic Fjords: Impacts of Sources and New Particle Formation Events",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field campaign / shipborne",
+   "pm": "NEMS-FTIR aerosol composition from two research vessels; PMF; number size distributions",
+   "geo": "Greenland (Narsaq fjords)",
+   "endpoint": "None (aerosol chemistry)",
+   "tier": "C",
+   "n": "First aerosol composition measurements in the fjords near Narsaq, South Greenland, from two summer ship campaigns using nanoelectromechanical-systems FTIR. Median organic matter was 1.1 ug/m3, above High Arctic and mid-latitude coastal sites; PMF split the aerosol into primary marine (53%) and MSA-bearing secondary marine (47%) factors, amines exceeded open-ocean levels, and NPF events shifted composition toward secondary material. Campaign length and sample counts are not in the abstract, and two summers cannot separate interannual bloom timing from sampling differences. Relevance: marginal for health; NEMS-FTIR is a low-mass, high-time-resolution composition method that could pair with network optical sensors at supersites."
+  },
+  {
+   "pmid": "42804639",
+   "doi": "10.1073/pnas.2613208123",
+   "journal": "Proc Natl Acad Sci U S A",
+   "short": "Maunakea et al. 2026",
+   "title": "Climate-amplified wildland-urban interface disasters create persistent internal metal mixtures associated with pulmonary impairment.",
+   "sub": "Respiratory & allergic",
+   "design": "Observational - cross-sectional",
+   "pm": "24 urinary metals 6-18 months after the Aug 2023 Maui WUI fires (internal dose, not air)",
+   "geo": "USA (Maui, Hawaii)",
+   "endpoint": "Respiratory",
+   "tier": "A",
+   "n": "1,400 adults enrolled 6-18 months after the August 2023 Maui wildland-urban interface fires had 24 urinary metals and spirometry at the same visit. Burdens exceeded US reference levels - antimony 40-fold, manganese 3.8, barium 2.3, arsenic 2.2 - highest in the most affected areas. In WQS models each quantile of the positive mixture index (driven by As, Cd, Cu) raised the odds of FVC, FEV1, FEV1/FVC and FEF25-75 below LLN (OR 1.71, 1.53, 1.83, 1.84; CIs not in the abstract). Cross-sectional, no pre-fire baseline, urinary metals partly dietary (As) and smoking-related (Cd), and no air measurement links the burden to smoke or ash. Relevance: air PM mass would not have captured this; WUI smoke needs metal speciation, not just optical PM2.5."
+  },
+  {
+   "pmid": "42804208",
+   "doi": "10.1001/jamanetworkopen.2026.36306",
+   "journal": "JAMA Netw Open",
+   "short": "Kulkarni et al. 2026",
+   "title": "Short-Term Exposure to PM2.5 and Emergency Department Visits for Asthma and Chronic Obstructive Pulmonary Disease.",
+   "sub": "Respiratory & allergic",
+   "design": "Metadata only (no abstract)",
+   "pm": "Short-term ambient PM2.5 (details not deposited)",
+   "geo": "Singapore",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: PubMed carries only the one-line plain-language summary - a cohort study of short-term PM2.5 and asthma- and COPD-related emergency department visits in Singapore (Duke-NUS / SGH authors). No estimate, lag, exposure source or sample size is deposited; Crossref and Europe PMC returned nothing and Scholar Gateway failed with an identity error. This watch does not infer results from a title. Priority retry: Singapore's transboundary-haze PM2.5 is a clean natural experiment, and a tropical-humidity city is where sensor-derived exposure would be most biased."
+  },
+  {
+   "pmid": "42804969",
+   "doi": "10.1016/j.bjps.2026.09.003",
+   "journal": "J Plast Reconstr Aesthet Surg",
+   "short": "Bae et al. 2026",
+   "title": "Exposure to ambient air pollutants during early gestation and phenotypic variation in non-syndromic microtia.",
+   "sub": "Reproductive & developmental",
+   "design": "Observational - cross-sectional",
+   "pm": "Modelled PM2.5, PM10, O3, NO2, SO2, CO at gestational weeks 5-9 (address at registration)",
+   "geo": "South Korea (single centre)",
+   "endpoint": "Congenital anomaly",
+   "tier": "C",
+   "n": "Single-centre case-only study of 589 patients (625 ears) with non-syndromic microtia, relating spatiotemporally modelled exposure in gestational weeks 5-9 to bilateral involvement and anatomical severity. O3 was nominally associated with bilateral involvement; PM10, SO2 and CO showed nominal inverse associations; after FDR only an inverse SO2 - left-ear severity association in males survived, plus an SO2 ear-side interaction. No PM association survives. Address at clinical registration (often years after gestation) misclassifies embryonic exposure, and without unaffected controls nothing can be said about occurrence. Relevance: low; a multiplicity-driven null for PM."
+  },
+  {
+   "pmid": "42805369",
+   "doi": "10.3168/jds.2026-29100",
+   "journal": "J Dairy Sci",
+   "short": "Kamyabi et al. 2026",
+   "title": "A novel controlled wood smoke exposure model to evaluate physiological responses to smoke-derived air pollution in dairy calves.",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal experiment",
+   "pm": "6-h wood smoke in enclosures: PM2.5 238.44 +/- 62.97 vs 9.94 +/- 4.50 ug/m3",
+   "geo": "USA",
+   "endpoint": "Respiratory",
+   "tier": "B",
+   "n": "24 pre-weaned Holstein bull calves were randomised to 6 h in purpose-built enclosures with wood smoke (PM2.5 238.44 +/- 62.97 ug/m3) or clean air (9.94 +/- 4.50), with CO2, CO, temperature and RH similar. Smoke-exposed calves had lower respiratory rate (17.50 vs 21.52 breaths/min) and higher tidal volume (0.90 vs 0.75 L), unchanged minute ventilation; BALF showed more granulocytes, CD68+ macrophages and NK cells, and circulating neutrophils fell. A single 6-h exposure with necropsy immediately after cannot address recovery or repeated smoke days; fresh wood smoke differs from aged wildfire plumes. Relevance: the enclosure PM2.5 record gives a controlled dose, rare in agricultural wildfire work, and the design transfers to sensor-guided barn ventilation trials."
+  },
+  {
+   "pmid": "42805834",
+   "doi": "10.1016/j.rmr.2026.07.009",
+   "journal": "Rev Mal Respir",
+   "short": "Driencourt et al. 2026",
+   "title": "The impact of post-exposure Streptococcus pneumoniae infections on pulmonary immunity: The role of air pollution and IL-20 cytokines in respiratory infections.",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "Traffic-derived PM2.5 (conceptual)",
+   "geo": "France",
+   "endpoint": "Respiratory infection",
+   "tier": "C",
+   "n": "French-language short review framing the experimental programme on how PM2.5 alters pulmonary immunity to Streptococcus pneumoniae, with IL-20-family cytokines as the candidate mediator. The abstract restates burden figures (>9 million deaths globally, 48,000 in France) and oxidative-stress/inflammation mechanisms, and reports no data. Relevance: low; flags IL-20 cytokines as a mechanistic target for PM-infection susceptibility studies."
+  },
+  {
+   "pmid": "42797665",
+   "doi": "10.3390/toxics14090746",
+   "journal": "Toxics",
+   "short": "Wang et al. 2026",
+   "title": "Mixed Exposure to Underground Air Pollutants and Metabolic Syndrome in Coal Miners: A Cross-Sectional Study Integrating Multi-Pollutant Models and Urinary Metabolomics.",
+   "sub": "Occupational & indoor",
+   "design": "Observational - cross-sectional",
+   "pm": "Underground coal dust, CO, CO2, NO2 (job-exposure assignment; method not in abstract)",
+   "geo": "China (coal mines)",
+   "endpoint": "Metabolic",
+   "tier": "B",
+   "n": "Cross-sectional study of underground coal miners with logistic regression, BKMR and Qgcomp for coal dust, CO, CO2 and NO2, plus untargeted urinary metabolomics. Each pollutant was associated with metabolic syndrome; the mixture was positively associated in BKMR and Qgcomp, with coal dust and NO2 contributing most - dust tracking central obesity and hypertension, NO2 glucose and triglycerides. >113 metabolites differed; acylcarnitines tracked dust and leukotrienes NO2. The abstract gives no n, no effect sizes and no exposure-measurement method; healthy-worker and shift-work confounding are unaddressed. Relevance: adds a metabolic endpoint to respirable coal dust, which is measured underground by personal dust monitors that low-cost sensors cannot yet replace."
+  },
+  {
+   "pmid": "42804077",
+   "doi": "10.1007/s11356-026-38254-1",
+   "journal": "Environ Sci Pollut Res Int",
+   "short": "Eghomwanre & Akharame 2026",
+   "title": "Spatio-temporal assessment of classroom air quality and thermal comfort as determinants of respiratory health risks in urban pre-tertiary institutions.",
+   "sub": "Occupational & indoor",
+   "design": "Comparative field monitoring (built environment)",
+   "pm": "Classroom PM2.5, PM10, CO, CO2 and thermal indices, six schools, 10 weeks",
+   "geo": "Nigeria (Benin City)",
+   "endpoint": "Respiratory / irritant symptoms",
+   "tier": "B",
+   "n": "Ten weeks of classroom monitoring (PM2.5, PM10, CO, CO2, thermal indices) in six primary and secondary schools in Benin City, with modified BMRC respiratory questionnaires. PM2.5 ranged 11.2-81.4 and PM10 20.1-138.6 ug/m3; CO2 peaked at 729.3 ppm; THI 28.3-30.1. HQs were all <1, yet cough (58.2%), phlegm (32.5%) and chest pain (26.7%) were common; higher PM was associated with cough (p<0.001) and chest pain (crude OR 2.74), while poor sanitation predicted phlegm (aOR 5.54, 95% CI 1.35-22.80). Instrument type, calibration and student n are not in the abstract, and the PM ORs are crude. Relevance: West African classroom data are scarce; this is the setting where a school sensor network would be the only monitoring."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosenv.2026.122388",
+   "journal": "Atmos Environ",
+   "short": "Gulzar et al. 2026",
+   "title": "PAHs Exposure, Health Risk Evaluation, and Renal Associations by Household Fuel Type in Rural Residents of Northwestern China",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - household-fuel PAH exposure and renal indicators (by title)",
+   "geo": "China (northwestern, rural)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates PAH exposure, risk assessment and renal associations by household fuel type among rural residents of northwestern China. Pairs with the 25 Sep household solid-fuel records; retry for the exposure matrix (air, urine) and renal endpoint. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17100938",
+   "journal": "Atmosphere",
+   "short": "Liu et al. 2026",
+   "title": "Research on Comprehensive Evaluation of Air Quality in Underground Stations of Urban Rail Transit Systems",
+   "sub": "Occupational & indoor",
+   "design": "Repeated field measurement with CFD simulation",
+   "pm": "Handheld PM2.5, PM10, CO2, TVOC at CFD-selected points; one island-platform station",
+   "geo": "China (Beijing Metro)",
+   "endpoint": "None (monitoring)",
+   "tier": "C",
+   "n": "One island-platform Beijing Metro station: CFD of airflow for train absent, arriving and departing was used to place measurement points, then handheld instruments measured CO2, PM2.5, PM10 and TVOC at morning and evening peaks, combined in an entropy-weighted index. Retention zones formed at the platform centre and escalator entrances under low-frequency ventilation; piston flow improved mixing but imported tunnel air; PM tracked outdoor inputs with some internal contribution. No concentrations, instrument models or sampling durations are in the abstract. Relevance: CFD-guided siting is directly transferable to placing fixed low-cost PM nodes in stations, where iron-rich wear particles bias optical readings."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17100943",
+   "journal": "Atmosphere",
+   "short": "Yu et al. 2026",
+   "title": "Development of a Qualitative Questionnaire for Indoor Air Quality Monitoring: A Scoping Review of Subjective Assessments in Studies Using Low-Cost Sensors",
+   "sub": "Occupational & indoor",
+   "design": "Scoping review",
+   "pm": "Studies pairing low-cost IAQ sensors with occupant questionnaires",
+   "geo": "Global / multi-region (review)",
+   "endpoint": "None (methods)",
+   "tier": "C",
+   "n": "Scopus-only scoping review (281 records, 35 included) of questionnaires used alongside low-cost IAQ sensors in homes and workplaces, grouping items into five domains - demographics, symptoms, perception, building/occupancy, monitored pollutants - and proposing a structured questionnaire. A single database and no appraisal of questionnaire validity limit it to an item inventory; no psychometric testing of the proposed tool is reported. Relevance: moderate for deployment design - pairing sensor time series with standardised perception items is how sensor data become usable for SBS-type outcomes."
+  },
+  {
+   "pmid": "42804516",
+   "doi": "10.1002/aorn.70159",
+   "journal": "AORN J",
+   "short": "Dennis & Ball 2026",
+   "title": "Strategies to Improve Compliance With Smoke Safety.",
+   "sub": "Occupational & indoor",
+   "design": "Narrative review",
+   "pm": "Surgical smoke (particles, gases) from energy-based devices",
+   "geo": "USA",
+   "endpoint": "Occupational",
+   "tier": "C",
+   "n": "Nursing practice review on surgical-smoke evacuation compliance: smoke from energy-based devices carries toxic gases, particulate matter and potentially viable cells; perioperative nurses report twice the general-population incidence of respiratory problems; barriers are education, equipment and culture; recommended strategies are gap analysis, training, leadership support and legislation. No exposure measurement or new data. Relevance: low; OR smoke is a high-concentration ultrafine source for which real-time particle counters would make evacuation compliance auditable."
+  },
+  {
+   "pmid": "42803469",
+   "doi": "10.1093/qjmed/hcag257",
+   "journal": "QJM",
+   "short": "Lorences Noguera & Cardenas-Duran 2026",
+   "title": "Disentangling Population Ageing from Epidemiological Change in the Rising Burden of PM2.5-Attributable Non-Communicable Disease",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - PM2.5-attributable NCD burden decomposition (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "C",
+   "n": "Metadata-only record: Oxford University Press deposited title, authors and DOI on 28 Sep with no abstract; PubMed efetch, Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates a decomposition of the rising PM2.5-attributable NCD burden into population ageing versus epidemiological change; an author response to correspondence was deposited the same day. The ageing-versus-exposure split is the same point the 25 Sep Wan et al. ES&T projection made for China. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list."
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "preconception /\nin utero:\nmicrotia weeks\n5-9"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nBenin City\nclassrooms"
+  },
+  {
+   "n": 1,
+   "note": "adolescence:\nBenin City\nsecondary schools"
+  },
+  {
+   "n": 3,
+   "note": "working age:\ncoal miners,\nOR nurses, Maui"
+  },
+  {
+   "n": 0,
+   "note": "older adults:\nno age-specific\nrecord this issue"
+  }
+ ]
+}

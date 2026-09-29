@@ -1,0 +1,219 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{27 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-09-27\;\;\textcolor{Amber}{\textbar}\;\;Entry window 27 September 2026 (full day, Sunday)\;\;%
+ \textcolor{Amber}{\textbar}\;\;4 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{RECORDS IN SCOPE\\(7 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A personal-monitor panel in older adults finds a
+next-day activity deficit after higher-than-usual PM exposure --- and no association at all when
+the same days are scored with area-level PM.}\\[1.4mm]
+\footnotesize
+Bloomberg and colleagues (\textit{medRxiv}, tier A, not peer reviewed) had \textbf{67 UK adults aged
+50--85} wear personal air-quality monitors and 24-h accelerometers for five days (\textbf{304
+person-days}). Within-person, a day \textbf{+1 IQR above the person's own mean} --- only
+\textbf{+2.6\,$\mu$g\,m$^{-3}$} PM$_{2.5}$ --- was followed by \textbf{8 min less light activity
+(95\,\% CI $-$14 to $-$2)} and \textbf{483 fewer steps ($-$855 to $-$82)}; PM$_{10}$ gave the same
+LPA deficit and \textbf{8 min more sedentary time}. MVPA did not move, and \textbf{area-level PM
+estimates produced no association}. \textbf{Why it is the signal:} the contrast is small enough to
+sit inside the error band of an uncalibrated optical sensor, yet it is the personal series, not
+the modelled area series, that carries the within-person signal --- the pattern expected if
+area estimates smear the day-to-day variance that behaviour responds to. The weaknesses: monitor
+model and calibration are not stated, weather and minor illness drive both indoor PM and
+next-day activity, and the reverse pathway (being indoors more raises personal PM) is only
+partly handled by the next-day lag. \textbf{The operational rule:} in short-term panel designs,
+the personal sensor is not a noisier version of the area estimate but a different exposure; report
+both, and report the sensor's co-location performance so the contrast can be judged against it.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Sunday window, thin by construction.} PubMed returned \textbf{4} health records and
+\textbf{0} on the sensing axis; Europe PMC \textbf{1}, Crossref-ISSN \textbf{2}, arXiv \textbf{1}
+(off-topic engine control). Four records were admitted.
+
+\item \textbf{Bangladesh's regulatory network reports a 15\,\% decline.} Shahadat et al.\ (16 DoE
+stations, 2018--2025): network PM$_{2.5}$ \textbf{91.54 $\rightarrow$ 77.64\,$\mu$g\,m$^{-3}$},
+PM$_{10}$ \textbf{155.7 $\rightarrow$ 132.3}, non-monotonic after the 2020 minimum, every station
+above national standards every year, winter/monsoon ratio \textbf{$\sim$4.2} for PM$_{2.5}$. Kriging
+was abandoned for prediction because 16 stations cannot support it.
+
+\item \textbf{NAKO mental-health results arrived without an abstract.} The German National Cohort
+longitudinal environmental-exposure paper (\textit{Environ Int}) is carried metadata-only and goes
+to the top of the retry list.
+
+\item \textbf{Bioaerosol in a paediatric emergency room.} 73.47\,\% of culturable bacterial
+aerosol was below 3.3\,$\mu$m, and CFD put 79.71\,\% of deposition on the desk and floor ---
+a fraction optical PM sensors cannot distinguish.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 26 September issue (built earlier on this run) closed with \texttt{last\_entry\_date}
+at 26 September. This issue collects \textbf{27 September in full}, continuous with it. Built on the
+\textbf{29 September backfill run}; \textbf{28 September} follows as its own issue on the same run,
+and \textbf{29 September is not opened} under the 22:00 rule. Sunday is not a weekly trigger under
+the Saturday rule: the W39 weekly closed on 26 September.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the four in-scope records: \textit{Exposure assessment
+\& modelling} \textbf{two} (UK personal-monitor panel, Bangladesh network), \textit{Neuro / mental
+health} and \textit{Occupational \& indoor} \textbf{one} each. Seven bands are empty.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: two measurement campaigns (Bangladesh network,
+hospital bioaerosol), one acute observational panel, one metadata-only deposit. Right --- endpoint:
+\textit{no health endpoint} \textbf{two} (the behaviour panel and the metadata-only record),
+\textit{infection} one, and \textit{oncologic} one (the Bangladesh ELCR screen).}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ + PM$_{10}$ \textbf{two}, size-resolved
+bioaerosol \textbf{one}, unspeciated \textbf{one}. Right --- geography: UK, Bangladesh, China, and one
+metadata-only record binned as not recoverable.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: the UK panel spans working age and older adults (50--85)
+and is counted in both; the paediatric ED study counts in childhood.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the four records; four occupied
+cells, each a singleton; \textit{Exposure} splits between measurement campaign and acute observational.}
+
+\vspace{2mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{\textbf{Two difference-scale estimates from one preprint.} Next-day light physical
+activity, minutes, per +1 IQR within-person deviation in personal PM$_{2.5}$ (\textbf{$-$8, $-$14
+to $-$2}) and PM$_{10}$ (\textbf{$-$8, $-$13 to $-$3}). Same 67 participants and days; not
+independent. Step-count estimates are on a different scale and are given in the digest text.}
+
+\vspace{4mm}
+
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Wang et al. 2026}
+{Environmental exposures and mental health: longitudinal results from the German National Cohort (NAKO)}
+{Environ Int}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 27 Sep with no abstract; Crossref, Europe PMC and the publisher landing page returned nothing. The title indicates longitudinal analyses of environmental exposures and mental health in the German National Cohort; which exposures (air pollution, noise, greenness, heat) are included cannot be stated. NAKO's size (\textasciitilde{}200,000) makes it a priority retry. Nothing about exposure metric, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title.}
+{10.1016/j.envint.2026.110539}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 2 records}{Clay}
+
+\paperentry{Bloomberg et al. 2026}
+{Associations of individual exposure to particulate matter with next-day physical activity and sedentary behaviour in older adults: a micro-longitudinal study}
+{medRxiv (preprint)}
+{Micro-longitudinal preprint: 67 UK adults aged 50-85 wore personal air-quality monitors (waking hours) and 24-h accelerometers for five days (304 person-days). Within-person mixed models: a higher-than-usual day (+1 IQR, i.e. +2.6 $\mu$g\,m$^{-3}$ PM$_{2.5}$ above the person's mean) was followed by 8 min less light activity (95\% CI -14 to -2) and 483 fewer steps (-855 to -82); for PM$_{10}$ (+2.8 $\mu$g\,m$^{-3}$), 8 min less LPA (-13 to -3), 8 min more sedentary time (0 to 15) and 412 fewer steps. No MVPA association, and none with area-level PM. Not peer reviewed; the monitor model and any calibration are not stated; a 2.6 $\mu$g\,m$^{-3}$ contrast is within typical optical-sensor error, so residual weather or illness confounding of day-to-day behaviour is the main threat. Relevance: high - the association exists only in personal-sensor exposure, not area estimates.}
+{10.64898/2026.09.23.26363783}
+
+\paperentry{Shahadat et al. 2026}
+{Spatiotemporal variability, trends, and health risk assessment of ambient PM$_{2.5}$ and PM$_{10}$ in Bangladesh during 2018-2025.}
+{Environ Geochem Health}
+{Analysis of 2018-2025 PM$_{2.5}$ and PM$_{10}$ from the 16 Department of Environment continuous stations in Bangladesh, with seasonal Mann-Kendall trends and ELCR/HQ risk indices. Every station exceeded national standards and WHO guidelines every year. Network annual mean PM$_{2.5}$ fell from 91.54 to 77.64 $\mu$g\,m$^{-3}$ (-15.2\%) and PM$_{10}$ from 155.7 to 132.3 (-15.0\%), non-monotonically, rebounding after the 2020 minimum; winter/monsoon ratios were \textasciitilde{}4.2 (PM$_{2.5}$) and 3.0 (PM$_{10}$). Most seasonal trends were not significant. The authors note kriging performed poorly and was used only for display - 16 stations cannot map a country of 170 million. ELCR applied to PM$_{2.5}$ mass is a screening construct, not an epidemiological risk. Relevance: the station-data quality control is undescribed, and this network is exactly what low-cost sensor densification in Bangladesh would calibrate against.}
+{10.1007/s10653-026-03506-z}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Liu et al. 2026}
+{Spatiotemporal Contamination Characteristics, Bacterial Community Structure, and Airflow-Mediated Transport of Bacterial Aerosols in a Pediatric Emergency Consulting Room.}
+{Environ Res}
+{One paediatric emergency consulting room: culturable airborne and surface bacteria, high-throughput sequencing and CFD of aerosol transport and deposition. Airborne culturable counts differed little between locations (well-mixed small room), surface deposition was heterogeneous, and 73.47\% of bacterial aerosol was below 3.3 um; Staphylococcus was the core genus. CFD placed the consultation desk and floor at 79.71\% of deposited particles, with high-risk zones around occupants. One room, culturable fraction only (typically <1\% of total bacteria), and sampling duration and counts are not in the abstract. Relevance: marginal; bioaerosol is invisible to optical PM sensors, so ventilation decisions here need culture or fluorescence methods.}
+{10.1016/j.envres.2026.125789}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{27 September 2026} (Sunday), single day, continuous with the 26 September
+issue. Harvester legs run leg-by-leg: \textbf{PubMed} health \textbf{4}, sensing \textbf{0};
+\textbf{Europe PMC} \textbf{1}; \textbf{Crossref by ISSN} \textbf{2}; \textbf{arXiv} \textbf{1} entry
+dated 27 September (off-topic); \textbf{OpenAlex} 0. The \textbf{PubMed connector} (\texttt{[EDAT]}
+26--28 September, three axes, bucketed by entrez date) placed \textbf{6} PMIDs on this day, \textbf{5}
+appended. \textbf{11} candidates screened, \textbf{4 admitted}, \textbf{7 rejected} with logged reasons
+(one had already been rejected on 26 September). \textbf{Consensus} and \textbf{ClinicalTrials.gov}
+were swept once for the whole 26--28 September backfill and are reported in the 26 September issue
+(0 new records; one trial update). \textbf{Scholar Gateway} returned an identity error
+(\texttt{Could not resolve user identity}) and contributed nothing this run. One record carried on
+metadata alone. DOI gate: \textbf{0 fail, 0 warn}. Abstracts remain the copyright of their
+respective publishers.\par}
+\end{keybox}
+
+\end{document}

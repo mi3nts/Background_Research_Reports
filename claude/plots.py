@@ -859,6 +859,8 @@ geo_group = {
     "Turkiye": "Middle East & N. Africa", "India": "South Asia",
     "South Africa": "Sub-Saharan Africa", "Mexico": "Latin America",
     "Lebanon": "Middle East & N. Africa", "Bangladesh": "South Asia",
+    "Angola": "Sub-Saharan Africa", "Chile": "Latin America",  # 2026-09-29
+    "Greenland": "North America",  # 2026-09-29, geographic not political binning
     "Sri Lanka": "South Asia",  # 2026-08-30: fell through to Global / multi-region
     "Kazakhstan": "Central Asia", "Greece": "Europe", "Bulgaria": "Europe",
     "Norway": "Europe", "Taiwan": "East Asia (ex-China)",
@@ -1016,6 +1018,11 @@ GEO_SUBSTR = [
     # "USA (older-adult households)" - a LEADING "usa" had no needle (" usa" and "(usa"
     # both need a preceding character). Anchored as "usa (" to avoid matching inside words.
     ("nepal", "Nepal"), ("kathmandu", "Nepal"), ("jordan", "Jordan"), ("usa (", "USA"),
+    # added 2026-09-29 (26 Sep backfill): Luanda, Temuco and Karaganda records fell through.
+    ("angola", "Angola"), ("luanda", "Angola"), ("chile", "Chile"), ("temuco", "Chile"),
+    ("kazakhstan", "Kazakhstan"), ("karaganda", "Kazakhstan"),
+    # Greenland: geographically North American (Danish realm); binned with North America 2026-09-29
+    ("greenland", "Greenland"),
     # added 2026-08-12: a GBD paper whose study setting is the whole of Asia had no
     # needle. MUST stay last in this list - "asia" is a substring of "malaysia" and of
     # "east asia"/"south asia", all of which have their own earlier needles, so the

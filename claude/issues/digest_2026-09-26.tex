@@ -1,0 +1,385 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{26 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-09-26\;\;\textcolor{Amber}{\textbar}\;\;Entry window 26 September 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;23 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{23}{RECORDS IN SCOPE\\(109 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}The exposure metric that carried the signal in a
+cystic-fibrosis pilot was time above 35\,$\mu$g\,m$^{-3}$ indoors --- a quantity only a continuous
+sensor can produce --- while the period mean was null.}\\[1.4mm]
+\footnotesize
+Zhang and colleagues (\textit{Respir Med}) put real-time PM$_{2.5}$ sensors in the homes of adults
+with cystic fibrosis for \textbf{4--11 days} and drew one multiplex cytokine panel per person. The
+\textbf{mean} PM$_{2.5}$ over the monitoring period was unrelated to any cytokine; the
+\textbf{percentage of monitoring time above 35\,$\mu$g\,m$^{-3}$} correlated moderately and
+significantly with \textbf{PDGF-AA/BB}, with non-significant positive trends for IL-7 and IL-8.
+\textbf{Why it is the signal:} indoor PM$_{2.5}$ is dominated by short cooking and cleaning
+episodes, and a filter-integrated mean folds those peaks into a number that can sit well below
+any threshold; the exceedance metric preserves them. The weaknesses are real --- sample size and
+sensor model are not in the abstract, correlations are Spearman across a cytokine panel with no
+multiplicity control, and one blood draw cannot fix timing --- so this is a hypothesis, not a
+result. The Durban MACE paper in the same issue shows the opposite failure: categorical ETS and
+biomass-fuel proxies carried large ORs while the \emph{measured} indoor PM$_{2.5}$ is not reported
+at all. \textbf{The operational rule:} when a panel study deploys continuous sensors, pre-specify
+an exceedance or peak metric alongside the mean, and report the measured-PM model even when it
+is null.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Non-exhaust iron behaved as a brake, not an accelerator, on cellular superoxide.} Shen
+et al.\ (\textit{ES\&T}) find brake-wear particles induce slight superoxide below
+\textbf{10\,$\mu$g\,mL$^{-1}$} and suppress it dose-dependently above; Fe$^{2+}$ and Fe$^{3+}$
+suppress organic-induced superoxide via the labile iron pool and direct quenching. Ghio et al.\
+(\textit{Pathogens}) argue the reverse direction for TB --- particles sequester host iron. Both
+are mechanistic; neither measures hydroxyl radical, the Fe-driven species.
+
+\item \textbf{A cell-based oxidative-activity assay was characterised on filter substrates.}
+Tzagkaroulaki et al.\ (\textit{Toxics}) report PTFE-vs-quartz zero-intercept slopes of
+\textbf{0.90} (mass-normalised) and \textbf{0.99} (volume-normalised), R$^2$\,$\approx$\,0.99, over
+\textbf{eight} matched pairs, and a monotonic SRM\,2584 response only at the 60-min readout.
+Fluorescence did not track PM mass in field samples.
+
+\item \textbf{Two pooled or cohort estimates, both with unstated increments.} CHARLS (8,792 adults,
+2011--2020): incident CVD \textbf{HR 1.09 (1.03--1.16)} for PM$_{2.5}$ and \textbf{1.07
+(1.04--1.10)} for PM$_{10}$. An osteoporosis meta-analysis of \textbf{48 studies}: PM$_{2.5}$
+\textbf{OR 1.24 (1.02--1.51)}, PM$_{10}$ \textbf{1.17 (0.96--1.42)}, with extreme heterogeneity.
+Neither abstract states the contrast, so the forest panel is a display, not a synthesis.
+
+\item \textbf{Composition records from under-sampled places.} 116 daily speciated PM$_{10}$ samples
+from \textbf{Luanda} tie aqueous-extract toxicity to a Zn/Pb/Cd metallurgy and scrap-burning PMF
+factor ($\rho$\,=\,0.63--0.78); \textbf{Temuco} wood-smoke season averaged \textbf{75.0}
+PM$_{2.5}$ / \textbf{87.7} PM$_{10}$\,$\mu$g\,m$^{-3}$; \textbf{Nanchang} WSIIs show the control
+problem shifting since 2019 from sulfate to wintertime nitrate.
+
+\item \textbf{Harvest state.} Europe PMC is back (\textbf{45} records after the 25 September
+HTTP\,503); arXiv now answers (148\,kB) but carried no entry dated 26 September. The PubMed
+connector's broad axis bucketed \textbf{77} PMIDs to this day by entrez date; most were
+`aerosolised'/`carbon black' noise, and \textbf{5} of the admissions came only from the connector.
+\textbf{No tier-A record} this issue and \textbf{two} Elsevier deposits carried on metadata alone.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 25 September issue closed with \texttt{last\_entry\_date} at 25 September. This issue
+collects \textbf{26 September in full}, continuous with it. The scheduled runs for 26, 27 and 28
+September did not fire; this issue was built on the \textbf{29 September backfill run at about
+17:40 CDT}, which also builds 27 and 28 September as separate issues. Under the standing 22:00
+rule \textbf{29 September is not opened}. The \textbf{W39 weekly} (20--26 September) is built on
+the same run and filed under 26 September.\par}
+\end{keybox}
+
+\vspace{3mm}
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 23 in-scope records. \textbf{Nine of ten bands are
+populated; \textit{Burden, policy \& mitigation} is empty.} \textit{Exposure assessment \&
+modelling} and \textit{Mechanistic toxicology} lead with \textbf{six} each; \textit{Sensing}
+holds a single metadata-only deposit.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- study architecture across seven groups: measurement
+campaigns and experimental toxicology \textbf{five} each, reviews \textbf{four}, cross-sectional
+\textbf{three}, cohort, modelling and metadata only \textbf{two} each. Right --- health endpoint:
+the non-health categories (bioaerosol, aerosol chemistry, missing abstracts) and a long tail of
+clinical endpoints with one or two records each.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: \textit{PM$_{2.5}$ only} \textbf{9},
+\textit{PM$_{2.5}$ + PM$_{10}$} \textbf{6}, unspeciated \textbf{6}, PM$_{10}$ only and optical
+\textbf{one} each. Right --- geography: \textbf{Global / multi-region holds eleven}, of which only
+reviews are truly multi-region; the rest are laboratory studies, metadata-only deposits and one
+abstract naming no country. China \textbf{four}, Europe \textbf{three}, Sub-Saharan Africa
+\textbf{two} (Luanda, Durban), and one each for Latin America, Central Asia and Southeast Asia.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows addressed; counts are non-exclusive. In utero two (GDM
+case-control, Durban prenatal PM$_{2.5}$), childhood one (Durban), adolescence none, working age
+four (coal miners, CF adults, cyclists, MetS adults), older adults two (CHARLS $\geq$45, dementia
+review).}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation for the 23 records. The
+densest cells are \textit{Mechanistic toxicology} $\times$ experimental (\textbf{five}) and
+\textit{Exposure} $\times$ measurement campaign (\textbf{three}); most other occupied cells are
+singletons.}
+
+\vspace{2mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{\textbf{Four ratio-scale estimates from two studies, on unstated contrasts --- not a
+synthesis.} The CHARLS incident-CVD HRs (PM$_{2.5}$ \textbf{1.09}, PM$_{10}$ \textbf{1.07}) are
+single-pollutant and the increment is not given in the abstract; the osteoporosis ORs
+(PM$_{2.5}$ \textbf{1.24}, PM$_{10}$ \textbf{1.17}, CI crossing 1) pool incommensurate
+contrasts under extreme heterogeneity. Read magnitudes as indicative only.}
+
+\vspace{4mm}
+
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Neuro / mental health\hfill 2 records}{Deep}
+
+\paperentry{Huang et al. 2026}
+{Environmental Pollution, Biomarkers, and Dementia: An Evidence Review.}
+{Int J Mol Sci}
+{Searched PubMed and Embase for 2020-2026 epidemiology on air pollution, environmental chemicals and dementia, with mechanistic evidence for plausibility. Long-term PM$_{2.5}$, NO$_2$ and black carbon were associated with higher dementia risk; PM$_{10}$ and ozone were inconclusive; phthalates, bisphenols, Pb, Cd and PFOS were linked to poorer cognition. No pooled estimate, no risk-of-bias assessment and no count of included studies in the abstract, so it adds nothing to the existing meta-analyses. Relevance: low; the BC signal is the one piece that points at a metric low-cost absorption sensors can supply.}
+{10.3390/ijms27188224}
+
+\paperentry{Curzio et al. 2026}
+{The Exposome-Brain Axis: A Scoping Review of Biological Biomarkers in Environmental Neurotoxicity, Neuroinflammation, and Neurodegeneration.}
+{Toxics}
+{PRISMA-ScR review (PubMed, Scopus, WoS, Embase, no date limit) of 52 human observational studies linking environmental exposures to objective neurobiological markers. PM$_{2.5}$, metals, agrochemicals and POPs were associated with changes in NfL, GFAP, sTREM2, tau and amyloid-beta, with vulnerability windows from early-life DNA methylation onward. Scoping design: no appraisal, no pooling, and PM is one exposure class among many, so the PM-specific evidence base is not separable from the abstract. Relevance: low; flags plasma NfL/GFAP as candidate short-latency outcomes for sensor-exposure panels.}
+{10.3390/toxics14090817}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{Wang et al. 2026}
+{Long-Term Air Pollution Exposure, Cardiovascular Disease, and Cardiometabolic Risk Factors in Middle-Aged and Older Chinese Adults: A Prospective Cohort Study.}
+{Bioengineering (Basel)}
+{CHARLS adults aged >=45: cross-sectional analysis of 7,420 at 2011 baseline and a prospective analysis of 8,792 followed to 2020, with CHAP-derived exposures and a GBD burden component. Incident CVD HRs were 1.09 (95\% CI 1.03-1.16) for PM$_{2.5}$, 1.07 (1.04-1.10) for PM$_{10}$, 1.12 (1.00-1.24) for NO$_2$ and 1.08 (0.93-1.27) for O$_3$; exposure was also associated with hypertension, diabetes, dyslipidaemia, obesity and TyG indices. The abstract does not state the exposure increment, CVD is self-reported physician diagnosis in CHARLS, and a random forest with AUC 0.656 adds nothing. This is at least the fourth CHARLS PM-CVD paper in this watch in two months, so overlap of sample and outcome definition should be assumed. Relevance: low; single-pollutant model on 1-km reanalysis.}
+{10.3390/bioengineering13090958}
+
+\paperentry{Dzhambov et al. 2026}
+{Residential exposures associated with adiposity and proinflammatory markers in obese adults with metabolic syndrome: a cross-sectional study}
+{Arh Hig Rada Toksikol}
+{90 obese adults with metabolic syndrome in Bulgaria (2023-2024) had serum IL-6, TNF-a, CRP and adipokines, and adiposity measures, linked to residential NO$_2$, PM$_{2.5}$, PM$_{10}$, Lden noise, domestic solid-fuel burning and greenness. Per 10 $\mu$g\,m$^{-3}$ NO$_2$, IL-6 was 41.63\% higher (95\% CI 8.16-85.46), CRP 37.80\% (5.89-79.32) and visceral fat 7.52\% (1.30-14.12); time in nature lowered TNF-a and raised adiponectin. The PM$_{2.5}$ and PM$_{10}$ associations were 'largely null, inconsistent, or occasionally protective' and are not quantified. n=90 with many exposures and outcomes and no multiplicity control; cross-sectional. Relevance: a PM null in a small, narrow-contrast sample - uninformative either way.}
+{10.2478/aiht-2026-77-4124}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{Zhang et al. 2026}
+{Associations between household particulate matter and inflammatory cytokines in cystic fibrosis.}
+{Respir Med}
+{Pilot in adults with cystic fibrosis: 4-11 days of in-home PM$_{2.5}$ monitoring with real-time sensors, then multiplex serum cytokines. Two metrics were compared - mean PM$_{2.5}$ and percentage of monitoring time above 35 $\mu$g\,m$^{-3}$. The mean was unrelated to any cytokine; percentage of time above 35 correlated moderately and significantly with PDGF-AA/BB, with non-significant positive trends for IL-7 and IL-8. Sample size, sensor model and any calibration are not in the abstract; Spearman correlations across a cytokine panel with no multiplicity correction; one blood draw per person. Relevance: high in kind - it is the peak-exceedance metric, only obtainable from continuous sensors, that carried the signal, not the mean a filter would give.}
+{10.1016/j.rmed.2026.109180}
+
+\paperentry{Johansson et al. 2026}
+{Associations Between Indoor Air Pollution and Asthma, Allergic Rhinitis and Eczema in a Cohort of Children in Durban, South Africa}
+{Indoor Air}
+{Cross-sectional analysis of 300 children from the MACE birth cohort in Durban with indoor PM$_{2.5}$ measurements, ISAAC interviews and a household walkthrough. ETS exposure was associated with doctor-diagnosed asthma (aOR 3.51, 95\% CI 1.20-10.30) and allergic rhinitis (aOR 21.58, 2.80-166.38); biomass fuel use with rhinitis score (aOR 4.97, 1.13-21.95) and eczema score (aOR 6.61, 1.48-29.60). The abstract reports no estimate for measured indoor or prenatal PM$_{2.5}$, which suggests it was null. CIs spanning two orders of magnitude show very few cases; exposure categories are self-reported. Relevance: the measured-PM result is what this watch needs, and it is absent - the categorical proxies carried the association.}
+{10.1155/ina/8341339}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Wang et al. 2026}
+{Associations of ASIC2, IKZF3, and GSDMB Variants with Gestational Diabetes Mellitus and Their Interactions with Environmental Exposures Among Pregnant Women.}
+{Biomolecules}
+{Case-control study of 1,564 pregnant women genotyped for ASIC2 rs12450465, IKZF3 rs2060941 and GSDMB rs2305479, with gene-environment interaction tests for PM$_{2.5}$, O$_3$ and urinary MIBP. The T-T-T haplotype was associated with GDM (OR 1.741, 95\% CI 1.208-2.509; FDR p 0.0133) and, in the 289 with MIBP, OR 2.980 (1.378-6.446). Interaction signals surviving FDR mainly involved O$_3$, not PM$_{2.5}$; primary analyses were covariate-unadjusted. Candidate-gene interaction testing in one sample without replication is weak evidence, and exposure assignment is not described. Relevance: low; no PM$_{2.5}$ main effect or robust interaction is reported.}
+{10.3390/biom16091373}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 6 records}{Violet}
+
+\paperentry{Tzagkaroulaki et al. 2026}
+{An A549 Cell-Based Approach Using Repeated Fluorescence Readouts for Assessing Reactive Oxygen Species Activity of Atmospheric Particulate Matter.}
+{Toxics}
+{Method-performance characterisation of an A549/DCFH-DA ROS assay read repeatedly from 15 min to 6 h, using zymosan and NIST SRM 2584 controls, CV and signal-to-noise. At 60 min the SRM response rose across 0.02, 0.05 and 0.10 mg/mL (descriptive R2 0.90); earlier readouts were non-monotonic. Eight matched PTFE-quartz filter pairs gave zero-intercept slopes of 0.90 (mass-normalised) and 0.99 (volume-normalised), R2 \textasciitilde{}0.99. Field samples showed DCFH-DA fluorescence did not track PM mass. Three concentrations and eight pairs are thin, and DCFH-DA is prone to auto-oxidation artefacts. Relevance: the filter-substrate equivalence is useful for networks archiving PTFE filters from reference co-location sites for oxidative-potential follow-up.}
+{10.3390/toxics14090789}
+
+\paperentry{Shen et al. 2026}
+{A Brake on Toxicity: Iron Suppresses Organic-Induced Superoxide Generation in Macrophages}
+{Environ Sci Technol}
+{Macrophages were exposed to brake-wear particles (BWPs), highway PM$_{2.5}$, and Fe alone or mixed with isoprene SOA or 9,10-phenanthrenequinone. BWPs slightly induced cellular superoxide below 10 ug/mL and suppressed it dose-dependently above; highway PM$_{2.5}$ did neither. Fe2+ and Fe3+ suppressed baseline and organic-induced superoxide, which the authors attribute to replenishment of the labile iron pool (relieving organic-induced iron deficiency and NADPH oxidase activity) plus direct chemical quenching. In vitro doses are not related to deposited lung dose, and superoxide is one ROS endpoint - Fe drives hydroxyl radical via Fenton chemistry, which this does not address. Relevance: undermines simple 'more Fe, more toxicity' weighting in composition-based exposure metrics for non-exhaust PM.}
+{10.1021/acs.est.6c06554}
+
+\paperentry{Pei et al. 2026}
+{Deciphering Allergenic Components Responsible for Differential Sensitization Potentials of Source-Specific Atmospheric Particulate Matter}
+{Environ Sci Technol}
+{h-CLAT and keratinocyte-dendritic cell co-culture tests of three reference materials: urban PM 1648a, coal fly ash 2693 and diesel particles 2975. 1648a raised CD54 in THP-1 monoculture via TNF-a and IL-1b; KC co-culture amplified DC activation for all three (CD86, CD54) through IL-1b and extracellular ATP. AhR signalling in HaCaT was required; amorphous silica drove 1648a's CD54 response, while soot and magnetite, with silica, raised CD86; PAHs acted synergistically. SRMs are aged bulk dusts, not size-fractionated ambient PM$_{2.5}$, and doses are not in the abstract. Relevance: low for sensing; identifies silica and soot as the sensitising components, both separable only by composition, not mass.}
+{10.1021/acs.est.6c08887}
+
+\paperentry{Lang et al. 2026}
+{Particulate matter selectively promotes macropinocytosis and malignant transformation-associated phenotypes in p53-impaired epithelial cells.}
+{Environ Toxicol Pharmacol}
+{Murine mammary and hamster respiratory epithelial cells with intact or impaired p53 were exposed acutely and repeatedly to a European certified reference PM$_{2.5}$. PM$_{2.5}$ activated oxidative- and cellular-stress pathways in all models, but p53-impaired cells adapted with enhanced macropinocytosis and better growth under nutrient limitation, and repeated exposure increased anchorage-independent growth in a transformed mammary line. Rodent lines, a single reference material, and doses not stated in the abstract; soft-agar growth in an already transformed line is a promotion, not initiation, readout. Relevance: low; mechanistic support for PM as a tumour promoter in p53-deficient tissue.}
+{10.1016/j.etap.2026.105177}
+
+\paperentry{Song et al. 2026}
+{Lung Toxicity Induced by Co-Exposure to Particulate Matter and Indoor Microorganisms in Mice.}
+{Toxicol Lett}
+{C57BL/6 mice received PM combined with dominant indoor airborne microorganisms by intratracheal instillation for two weeks. PM with the fungus Bjerkandera adusta increased lung eosinophil infiltration beyond either agent alone, with synergistic upregulation of C3 and IL-3; PM with Bifidobacterium infantis produced histopathology suggestive of fibrogenesis and synergistic collagen-gene induction. The PM type, dose and group sizes are not in the abstract, and instillation delivers a bolus unlike inhalation. Relevance: low for sensing; argues that indoor PM mass alone under-describes hazard where bioaerosol load is high.}
+{10.1016/j.toxlet.2026.113207}
+
+\paperentry{Ghio et al. 2026}
+{Iron, Tuberculosis, and Particle-Related Exposures Including Smoking.}
+{Pathogens}
+{Mechanistic review from the EPA group proposing that particles - cigarette smoke, air pollution, biomass smoke, silica - complex host iron and induce a functional iron deficiency in the respiratory tract, which favours M. tuberculosis because of its many iron-acquisition pathways, explaining the epidemiological association of particle exposures with TB. A hypothesis-driven synthesis without systematic search or new data. It pairs, with opposite sign, with the Shen et al. finding in this issue that exogenous Fe relieves organic-induced iron deficiency in macrophages. Relevance: low; conceptual.}
+{10.3390/pathogens15090982}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 6 records}{Clay}
+
+\paperentry{Ningombam et al. 2026}
+{Assessment of global aerosol burden over land and oceans using ground-based, satellite, and reanalysis data}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 26 Sep with no abstract; Crossref, PubMed efetch, Europe PMC and the publisher landing page returned nothing. The title indicates a global land/ocean aerosol-burden comparison across ground-based photometry, satellite retrievals and reanalysis. Retry priority: the reanalysis-versus-photometer bias by region is what decides whether reanalysis AOD is a usable prior for satellite-to-surface PM$_{2.5}$ fusion. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list; re-screen on its merits when the abstract appears.}
+{10.1016/j.atmosenv.2026.122370}
+
+\paperentry{Mainka \& Mainka 2026}
+{Modelled Physical Activity Benefits and PM$_{2.5}$ Risks in Two Urban Cyclists.}
+{Toxics}
+{Re-analysis of 162 previously published cycling trips by two commuters in Gliwice, each treated as a hypothetical five-day-a-week habit and compared with resting for the same time at the concurrent station concentration, using assumed ventilation and published dose-response functions. Median net RR was 0.840 (16.0\% relative risk reduction; 95\% UI 0.792-0.892 when the epidemiological coefficients were varied); the median break-even concentration was 196.7 $\mu$g\,m$^{-3}$, and a +/-10\% personal-concentration error flipped the sign of the dose increment on 12 trips without pushing net RR above 1. Everything is modelled, n=2, and the personal PM$_{2.5}$ came from uncalibrated optical monitors, as the authors state. Relevance: a worked example of how sensor error propagates into risk-benefit claims - here it does not change the conclusion.}
+{10.3390/toxics14090836}
+
+\paperentry{da Silva et al. 2026}
+{Chemical Regimes and PMF-Resolved Sources Linked to Acute PM$_{10}$ Ecotoxicity in Luanda, Angola.}
+{Toxics}
+{116 daily PM$_{10}$ samples from Luanda (27 Jun-5 Nov 2023) were speciated, clustered by centred log-ratio composition and apportioned by PMF, with aqueous extracts tested in the Microtox Aliivibrio fischeri assay. TU15 ranged 0.84-8.54; only 3 samples were below 1. A metal-enriched regime (Zn, Pb, Cd) had the highest mean TU15 (4.22), matching a PMF non-ferrous metallurgy / scrap-burning factor that correlated most with toxicity (rho 0.63 for TU15, 0.78 for dTU), then a Ni-rich metallurgical factor (rho 0.51); marine aerosol was inversely associated. Bacterial bioluminescence of water extracts is not a human-relevant endpoint and misses insoluble fractions; correlations are univariate. Relevance: one of very few speciated PM$_{10}$ records from sub-Saharan Africa - baseline for any sensor network sited there.}
+{10.3390/toxics14090773}
+
+\paperentry{Guo et al. 2026}
+{Seasonal Formation, Sources, and Long-Term Evolution of PM$_{2.5}$-Bound Water-Soluble Inorganic Ions in Nanchang, China: The Increasing Importance of Wintertime Nitrate.}
+{Toxics}
+{Day and night PM$_{2.5}$ samples in summer and winter in Nanchang were analysed for nine water-soluble inorganic ions with source-apportionment, trajectory and fire-hotspot analyses, and set against 2009-2026 records. WSIIs averaged 8.01 +/- 3.58 $\mu$g\,m$^{-3}$ in summer and 23.97 +/- 9.42 in winter (57.0\% and 50.3\% of PM$_{2.5}$); SNA made up 82.0\% and 76.4\% of WSIIs, sulfate leading in summer and nitrate in winter, with nitrate formation favoured at night. Since 2019 the control problem has moved from sulfate to wintertime nitrate. Two seasonal campaigns at one site; campaign length is not in the abstract. Relevance: a rising ammonium-nitrate fraction is the composition shift that most inflates humidity-driven optical-sensor overestimation - calibrations fitted in the sulfate era will drift.}
+{10.3390/toxics14090828}
+
+\paperentry{Qin et al. 2026}
+{Seasonal Variation of Airborne Bacteria and Potential Pathogens Adhere to Fine and Coarse Particles in a Coastal City.}
+{Microorganisms}
+{Size-resolved airborne bacterial communities on PM$_{2.5}$ and PM$_{10}$ in Qingdao were profiled by 16S sequencing across seasons. Staphylococcus, Lactobacillus, Escherichia-Shigella and Klebsiella dominated everywhere; Staphylococcus was enriched in autumn (LEfSe LDA > 3.5). Summer and autumn communities diverged, but particle-size groups did not differ significantly; Chao and Shannon indices were higher on PM$_{10}$ than PM$_{2.5}$, significant only in autumn. The abstract gives no sample count or sampling duration, pathogen potential is predicted from 16S taxonomy (not viability or virulence), and no PM mass is reported. Relevance: marginal; optical sensors cannot distinguish biological particles, so this fraction sits unresolved inside every coastal PM$_{2.5}$ reading.}
+{10.3390/microorganisms14091924}
+
+\paperentry{Liu et al. 2026}
+{Airborne Bacterial and Eukaryotic Communities in Temuco, Chile, a City Dominated by Residential Wood Combustion.}
+{Life (Basel)}
+{First characterisation of airborne eukaryotic communities alongside bacteria in Temuco, a city whose PM is dominated by residential wood burning. Mean PM$_{2.5}$ and PM$_{10}$ were 75.0 and 87.7 $\mu$g\,m$^{-3}$, PM$_{2.5}$ exceeding the Chilean 50 $\mu$g\,m$^{-3}$ standard; nitrate (5.6), sulfate (2.6) and K+ (2.6 $\mu$g\,m$^{-3}$) were the main ions. Clostridium, Hymenobacter and Sphingomonas led the bacteria; Coriolopsis (41.0\%) and Hyphodontia (26.9\%) the eukaryotes. Communities varied more by season than size fraction, and RDA loaded SO4 (0.71) among the drivers. Sample numbers and averaging periods are not in the abstract, and the ion-community correlations are descriptive. Relevance: a PM$_{2.5}$/PM$_{10}$ ratio of \textasciitilde{}0.86 confirms a fine-mode smoke aerosol - the regime where optical sensors track reference best if humidity is corrected.}
+{10.3390/life16091433}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 1 record}{Amber}
+
+\paperentry{Anwer et al. 2026}
+{Artificial Intelligence in Sand and Dust Storm Research: A Systematic and Bibliometric Review (1990-2025)}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 26 Sep with no abstract; Crossref, PubMed efetch, Europe PMC and the publisher landing page returned nothing. The title indicates a systematic and bibliometric review of AI methods in sand and dust storm research over 1990-2025. Of interest only if it tabulates forecast skill against PM$_{10}$ observations; bibliometric reviews usually do not. Nothing about data, method, sample size or estimates can be stated from the deposit, and this watch does not infer a method from a title. On the retry list; re-screen on its merits when the abstract appears.}
+{10.1016/j.atmosenv.2026.122387}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Perfilyeva et al. 2026}
+{Genetic Susceptibility to Impaired Lung Function in Underground Coal Miners from Kazakhstan.}
+{Genes (Basel)}
+{GWAS of six spirometric traits (FVC, FEV1, FEV1/FVC, MEF25/50/75) in 186 underground coal miners from the Karaganda basin, adjusted for age, mining exposure, BMI, smoking and population structure, with imputation. No variant reached genome-wide significance; recurrent suggestive signals at PRKCB, FANCE and UBTD1 across correlated traits. n=186 is grossly underpowered for GWAS, dust exposure is years-in-mining rather than measured, and there is no replication cohort. Relevance: low; underscores that occupational cohorts in Central Asia still lack any measured respirable-dust exposure.}
+{10.3390/genes17091021}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 2 records}{Slate}
+
+\paperentry{Leonforte et al. 2026}
+{Environmental Contaminants and Osteoporosis-Related Outcomes: A Systematic Review and Meta-Analysis.}
+{Toxics}
+{PRISMA review (PubMed, Scopus, WoS; 2016-Apr 2026; PROSPERO CRD420261460078) of 48 studies and 4,510,868 participants on environmental contaminants and BMD/osteoporosis, REML random-effects pooling where >=3 studies existed. Air pollutants were the most consistent class. PM$_{2.5}$ was associated with osteoporosis (OR 1.24, 95\% CI 1.02-1.51) and PM$_{10}$ more weakly (OR 1.17, 0.96-1.42). The authors report extreme heterogeneity and sensitivity to influential studies; the abstract gives no exposure increment, so the ORs pool incommensurate contrasts. Relevance: low for sensing; a musculoskeletal endpoint that is starting to accumulate PM evidence.}
+{10.3390/toxics14090790}
+
+\paperentry{Ali et al. 2026}
+{The Impact of Polycyclic Aromatic Hydrocarbons Exposure from Seasonal Biomass Burning on Oxidative Stress and Genotoxicity Biomarkers in Patients with Diabetes and Hypertension.}
+{Toxics}
+{152 adults in Chiang Mai (88 healthy, 35 diabetes, 15 hypertension, 14 both) sampled before (December) and after (May) the burning season. Urinary 1-OHP rose from 0.21 +/- 0.50 to 0.87 +/- 1.25 umol/mol creatinine and serum 8-OHdG from 51.04 +/- 24.90 to 66.08 +/- 27.82 pg/mL (both p<0.001), with the rise significant in diabetic and hypertensive groups; MDA did not change overall (6.09 to 6.00 nmol/mL). No ambient PM was measured, so season is the exposure and every other seasonal change is confounded; subgroups of 14-35 are small. Relevance: a reusable design - adding low-cost PM$_{2.5}$ at participants' homes would turn the pre/post contrast into a dose-response.}
+{10.3390/toxics14090771}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{26 September 2026}, single day, continuous with the previous issue.
+Harvester legs, run leg-by-leg in the foreground: \textbf{PubMed} E-utilities on the health and
+instrumentation axes as separate queries (\textbf{12} health, \textbf{2} sensing);
+\textbf{Europe PMC} \texttt{CREATION\_DATE} (\textbf{45}); \textbf{Crossref by ISSN}
+(\textbf{26}); \textbf{OpenAlex} 0 (date filter still paywalled); \textbf{arXiv} relevance query
+answered (148\,kB) but no entry was dated 26 September after the window gate. Connector sweeps:
+the \textbf{PubMed connector} over \texttt{[EDAT]} 26--28 September on three axes --- health (40
+PMIDs), sensing (2), broad aerosol/air-quality (97) --- bucketed by entrez date, \textbf{77} to
+this day, \textbf{63} appended after dedup. \textbf{Consensus} on low-cost PM$_{2.5}$ calibration,
+humidity correction and co-location: 10 hits, all archived, previously rejected or outside the
+window (\textbf{0 new}). \textbf{ClinicalTrials.gov}, updates posted 26--29 September: one hit,
+the completed HAPIN LPG trial (NCT02944682), recorded for the weekly trial watch.
+The \textbf{85} harvester records deduplicated to \textbf{82}, \textbf{13} already carried,
+leaving \textbf{69}; with 63 connector records, \textbf{132} candidates were screened,
+\textbf{23 admitted} and \textbf{109 rejected}, every rejection logged with a reason (most are
+connector noise: inhaled-drug formulations, carbon-black materials, food science). Two records
+previously rejected on 25 September resurfaced through Europe PMC and were rejected again under the
+same reasons. \textbf{Two records are carried on metadata alone}; recovery was attempted through
+PubMed \texttt{efetch}, Crossref, Europe PMC and publisher landing pages. DOI gate:
+\textbf{0 fail, 2 warn} (two MDPI \textit{Toxics} DOIs not yet deposited but matching PubMed).
+Geography needles added for Angola, Chile and Kazakhstan. Labels are single-assignment
+judgements, not a controlled vocabulary; where an abstract names no country, geography is recorded
+as not stated. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

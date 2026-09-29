@@ -1,0 +1,323 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{26 September 2026}
+\newcommand{\PERIODSTART}{20 September 2026}
+\newcommand{\PERIODEND}{26 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Teal] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ WEEKLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Week in Review\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Week ending \DIGESTDATE}\;\;\textcolor{Teal}{\textbar}\;\;\mbox{\PERIODSTART{} to \PERIODEND}\;\;
+ \textcolor{Teal}{\textbar}\;\;\mbox{162 records pooled from 7 daily issues}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{162}{RECORDS POOLED\\(162 UNIQUE DOIs)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{33\%}{MEASUREMENT SIDE\\(54 RECORDS)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{SUBTOPICS\\ACTIVE}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{31}{POOLED EFFECT\\ESTIMATES (31 WITH A CI)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{34}{ABSTRACT-FREE\\(21\% OF WEEK)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- week in one box
+\section*{\sffamily\bfseries\color{Deep}The week in one paragraph}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}The biggest week in the series by volume, and the worst
+since August for missing abstracts: 162 records, 34 of them (21\,\%) carried on metadata alone
+--- double last week's rate. The measurement side fell to a series-low third of the week while
+\textit{Occupational \& indoor} nearly doubled; the indoor turn named a trend last week is now
+the week's dominant movement.}\\[1.4mm]
+\footnotesize
+\textbf{Scale.} \textbf{162 records} over seven issues on daily totals of \textbf{12}, 18, 23, 27,
+\textbf{35}, 24 and 23 --- a 2.9$\times$ range, wider than last week's 1.9$\times$ because Sunday
+20 September returned 12. Against recent rollups: 162 after 148, 126, 150, 109 and 112 --- the
+highest weekly total recorded. All \textbf{ten} subtopics are populated.
+
+\textbf{The measurement side fell to 33\,\%.} \textit{Exposure assessment \& modelling} eased
+38 $\rightarrow$ \textbf{34} and \textit{Sensing} fell 27 $\rightarrow$ \textbf{20}, so the
+measurement-side share reads 47, 54, 40, 44, \textbf{33\,\%} across five weeks --- the lowest in the
+series. It is not a contraction of the instrumentation literature: \textbf{21 of the 54
+measurement-side records are metadata-only} (12 in \textit{Exposure}, 9 in \textit{Sensing}), and
+the same Elsevier and ACS deposit pattern that hollowed out those rows also drove the total up. The
+share will be re-read when the retry list clears.
+
+\textbf{\textit{Occupational \& indoor} 12 $\rightarrow$ 22.} Last week this watch said the
+indoor turn had qualified as a trend and asked whether any of it would move from chambers and
+models into occupied buildings with health outcomes. \textbf{Some did.} The 25 September issue
+carried a \textbf{948-home} year-round rural heating study (annual mean
+\textbf{109\,$\pm$\,207\,$\mu$g\,m$^{-3}$}) and a Xuanwei stove intervention; 24 September a
+purifier crossover with mitochondrial DNA methylation outcomes; 26 September a cystic-fibrosis
+home-sensor pilot in which \textbf{time above 35\,$\mu$g\,m$^{-3}$}, not the mean, carried the
+cytokine signal. Occupied-building work with a biological outcome now exists; none of it is yet
+randomised with a clinical endpoint except the \textbf{AIRVAC} protocol entering the registry.
+
+\textbf{Abstract-free doubled, and one reason was an outage.} \textbf{34 of 162 (21\,\%)}
+against 15 of 148 (10\,\%). Europe PMC returned HTTP\,503 for the whole 25 September run, removing
+both a harvest leg and the second abstract-recovery route, and Elsevier's same-day deposits
+without abstracts continued. The deferred-retry pass named as the only remaining fix in the last
+two rollups is \textbf{still not built}, and the held list has grown past forty.
+
+\textbf{Fewer estimates, all with intervals.} \textbf{31 pooled estimates}, one per 5.2 records
+(series 2.9, 4.4, 2.7, 3.1, \textbf{5.2} --- the sparsest week), but \textbf{31 of 31 carry a CI},
+the first complete week. Only the 25 September issue reported none.
+\end{keybox}
+
+\clearpage
+
+% -------------------------------------------------------------- trend
+\section*{\sffamily\bfseries\color{Deep}Subtopic trend and inflection}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}, seven issues.
+Daily totals 12, 18, 23, 27, 35, 24 and 23 --- a 2.9$\times$ range. The Sunday low (20 September)
+returns after a week's absence; the 35-record Thursday (24 September) carried the CHARLS
+constituent and purifier-methylation records and is a complete day, not a double build. Four of
+the week's seven issues were built late (the 22:00 rule deferred each by up to a day), none left a
+gap.}
+
+\footnotesize
+\textbf{Expanding.} \textit{Occupational \& indoor} \textbf{12 $\rightarrow$ 22} is the week's
+largest movement (above). \textit{Mechanistic toxicology} \textbf{14 $\rightarrow$ 20} continues a
+third week of recovery, led by nitrated-PM inflammation, size-resolved constituent toxicity and
+the iron--superoxide results. \textit{Cardiovascular \& metabolic} \textbf{11 $\rightarrow$ 15} and
+\textit{Burden, policy \& mitigation} \textbf{13 $\rightarrow$ 17} both rise;
+\textit{Reproductive \& developmental} \textbf{5 $\rightarrow$ 8} leaves the bottom of the table
+for the first time in this series, carried by the Butajira fetal-biometry cohort, the Chengdu
+monitor-versus-satellite preterm analysis, the Chiang Rai placental microscopy and the Shenzhen
+Birth Cohort profile.
+
+\vspace{1.2mm}
+\textbf{Contracting.} \textit{Sensing} \textbf{27 $\rightarrow$ 20} and \textit{Exposure}
+\textbf{38 $\rightarrow$ 34}, both inflated in metadata-only share; \textit{Respiratory \&
+allergic} \textbf{13 $\rightarrow$ 10}. \textit{Neuro} (7 $\rightarrow$ 8) and \textit{Other
+clinical} (8 $\rightarrow$ 8) hold.
+
+\vspace{1.2mm}
+\textbf{The inflection worth naming.} \textbf{Black carbon led the constituent weighting in both
+cardiovascular constituent analyses of the week} --- CHARLS incident stroke (per IQR BC \textbf{HR
+1.77, 1.54--2.03}, above PM$_{2.5}$ mass at 1.55) on 24 September, and the Kailuan heart-failure
+cohort (BC \textbf{40.2--48.7\,\%} of the mixture weight) on 25 September. Two independent Chinese
+cohorts, two cardiovascular outcomes, one constituent. For a sensor watch this is the most
+actionable signal of the month: BC is the one health-leading constituent that a low-cost node can
+measure (filter-based absorption), and mass-only networks cannot see it. The test for next week is
+whether a non-Chinese cohort shows the same ordering.
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Study architecture over the pooled week. \textbf{\textit{Metadata only} is the largest
+single group at 34}, ahead of \textit{Measurement campaign} (29) and \textit{Experimental /
+toxicology} (20) --- the first week since August in which the missing-abstract bucket leads.
+Primary observational epidemiology (cohort 16, cross-sectional 14, acute 5, ecological 5) totals
+\textbf{40}. \textbf{Four} interventional records, against one last week: the AIRVAC and COATED-AIR
+trial designs, the Xuanwei stove intervention and a synbiotic RCT.}
+
+\clearpage
+
+% -------------------------------------------------------------- pooled analytics
+\section*{\sffamily\bfseries\color{Deep}Pooled analytics}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Pooled subtopic distribution, \textbf{all ten bands populated}. \textit{Exposure} 34 and
+\textit{Sensing} 20 put the measurement side at \textbf{54 of 162 (33\,\%)}. \textit{Occupational
+\& indoor} at 22 is now the largest health-side band, ahead of \textit{Mechanistic toxicology} and
+\textit{Sensing} at 20 and \textit{Burden} at 17.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2b_endpoint.png}
+\figcap{Health endpoint over the pooled week, canonicalised. \textbf{``No health endpoint''
+pools 78 of 162 (48\,\%)} --- missing abstracts (24) plus exposure, instrument, chemistry and
+emission records --- up from 41\,\% last week, the abstract gap showing through. Among human
+outcomes, \textbf{respiratory leads at 13}, cardiovascular 10, mortality/longevity 5, then a run of
+labels at 4 (cerebrovascular, inflammatory biomarkers, occupational, reproductive, neuro/cognitive,
+other clinical).}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. \textbf{PM$_{2.5}$ alone 65 of 162}, unspeciated PM or emissions
+61, joint PM$_{2.5}$ + PM$_{10}$ 19. The tail: optical properties 6, \textbf{composition 4},
+PM$_{10}$ alone 3, \textbf{size-resolved 2 and ultrafine 1}, bioaerosol 1. Right --- geography.
+\textit{Global / multi-region} 66 overstates reach, as every week, pooling reviews, laboratory
+studies and unrecoverable metadata-only records. \textbf{China 40} is the largest single-country
+bar, then Europe 14, North America 12 and East Asia (ex-China) 8; Sub-Saharan Africa reached
+\textbf{5} (Luanda, Durban, Butajira among them).}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows across the pooled week; counts non-exclusive. Working age
+\textbf{19}, preconception / in utero \textbf{10} and older adults \textbf{10}, infancy 6.
+\textbf{Adolescence 3} --- still the weakest window, carried by APEAL spirometry, a synbiotic
+RCT and the AIRVAC protocol (also counted in childhood).}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\vspace{1mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{All \textbf{31} pooled estimates, ratio and difference scales in separate panels.
+\textbf{Not mutually comparable and not meta-analysed}: contrasts include per-IQR, per-SD,
+per-10 and per-1\,$\mu$g\,m$^{-3}$, per-doubling, dichotomised and unstated increments, on HR,
+sHR, OR, RR and RR-equivalent scales; heterogeneity is structural, so no $I^2$ is reported.
+Readable points: \textbf{the largest ratio is the least precise} --- \textbf{OR 4.78
+(1.61--14.29)} per doubling of same-day PM$_{2.5}$ for type A aortic dissection, from
+\textbf{40 cases}; \textbf{the tightest interval is the smallest effect} --- 0.9977
+(0.9972--0.9983) scholar publications per 1\,$\mu$g\,m$^{-3}$ annual PM$_{2.5}$; three CHARLS
+analyses (stroke $\times$2, CVD) share participants and are not independent; and the Taiwan COPD
+case-control shows the exposure-window dependence directly (1-month OR 1.252, 12-month 1.642,
+same cases). The difference panel carries the Butajira fetal-biometry deficits (femur length
+\textbf{$-$0.43\,SD} per IQR) and the Bangkok rhinitis VAS slope.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ architecture, pooled. The densest cell is \textit{Mechanistic
+toxicology} $\times$ \textit{Experimental} (\textbf{14}), then \textit{Exposure} $\times$
+\textit{Measurement campaign} (13), \textit{Exposure} $\times$ \textit{Metadata only} (12) and
+\textit{Sensing} $\times$ \textit{Metadata only} (9) --- the last two are the abstract gap
+concentrated on the measurement side. The standing finding survives a ninth week: of the
+\textbf{54} measurement-side records, \textbf{4 carry any outcome label and 1 observes a human
+outcome} (the PMRI ecological mortality preprint); two are modelled risk indices and one is an
+ecotoxicity assay.}
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- venues + trials
+\section*{\sffamily\bfseries\color{Deep}Venues, trial watch, and what the pipeline did}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Venues.} A three-way tie at \textbf{9} --- \textit{Environ Sci Technol}, \textit{Environ
+Pollut}, \textit{Atmos Environ} --- then \textit{Atmos Pollut Res} and \textit{Toxics} at 7,
+\textit{Atmos Chem Phys}, \textit{Environ Health (Wash)} and \textit{Front Public Health} at 5.
+The leading venue holds 6\,\%. \textit{Atmos Environ} and \textit{Atmos Pollut Res} are the main
+sources of metadata-only records (Elsevier same-day deposits). \textbf{Preprints supplied 6}, up
+from 2, all labelled.
+
+\vspace{1.5mm}
+\textbf{Recurring authors.} Unchanged: surname frequency is a naming artefact, and \textbf{no
+repeat-group cluster is claimed}. The one real repeat is a \emph{dataset}, not a group: CHARLS
+supplied three separate PM--cardiometabolic papers in the week.
+
+\vspace{1.5mm}
+\textbf{Trial watch --- one new trial, one resolved, one update.} \textbf{NCT07196436 (AIRVAC)}
+entered on 25 September via its \textit{PLoS One} protocol: four arms, active or sham energy
+recovery ventilator $\times$ active or sham portable air cleaner, $>$80 Dallas--Fort Worth asthma
+households; \texttt{analyze\_endpoints} shows \textbf{spirometry and ACT as co-primary} in the
+registry against ACT alone in the protocol. The \textbf{COATED-AIR} design paper (22 September) was
+resolved to \textbf{NCT06541691} ($n$=3,000, Tehran): the air-pollution randomisation's primary is a
+composite of non-fatal ischaemic stroke, type I MI, acute limb events or CV death over 30 months,
+with \textbf{no registered exposure or adherence endpoint}, so whether the mask-and-alert package
+changes anyone's PM dose will not be known; the record still reads \textit{recruiting} six months
+after its listed primary completion. \textbf{NCT02944682 (HAPIN)}, the completed multi-country LPG
+trial, posted a registry update. \textbf{NCT05423665} reappeared twice and was already held.
+\texttt{trials.json} now holds \textbf{16 trials}.
+
+\vspace{1.5mm}
+\textbf{What the harvesting legs did.} \textbf{The PubMed connector was load-bearing every day},
+adding PMIDs the harvester's two PubMed queries missed and supplying admissions on each issue. The
+harvester's \textbf{PubMed sensing query returned 0 on 20--23 September} and 1, 5 and 2 on the last
+three days. \textbf{Crossref-by-ISSN} remained the highest-yield leg on weekdays. \textbf{Europe PMC
+was down for the 25 September run} (HTTP\,503) and back with 45 records on 26 September.
+\textbf{OpenAlex} contributed nothing all week (429 / paywalled date filter). \textbf{arXiv}
+returned HTTP\,406 through 25 September and was answering again by the 29 September run (no entry
+dated inside the window). \textbf{Consensus} returned the right literature and \textbf{0 new}
+records every day, for the fifth consecutive week. \textbf{Scholar Gateway} failed with an identity
+error on its first attempt this week. Proofing caught caption and prose miscounts, one unsourced
+number and orphaned headings on several days; all were fixed before shipping.
+
+\vspace{2mm}
+% -------------------------------------------------------------- gaps
+\section*{\sffamily\bfseries\color{Deep}Open gaps}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{The abstract-retry pass, third week running.} 21\,\% of the week shipped without an
+abstract, and the most watch-relevant titles are disproportionately among them (a year-long
+personal PM/CO$_2$ monitor pilot, Korean station-relocation discontinuities, an AS\&T real-time EC
+monitor comparison, a DMA geometry paper, the NAKO mental-health cohort). This is now the single
+largest loss of signal in the pipeline.
+
+\item \textbf{Black carbon is leading cardiovascular constituent analyses; the watch has no BC
+sensing record this week with a health link.} The two constituent cohorts use modelled BC; none of
+the week's absorption-measurement records (Beijing lensing apportionment, Italian 10-year eBC
+trends) touches an outcome.
+
+\item \textbf{One of 54 measurement-side records observes a human outcome}, ninth consecutive
+week.
+
+\item \textbf{Ultrafine and size-resolved number: 3 of 162}, the same share as last week, despite
+a real-time ultrafine size-distribution paper on 22 September.
+
+\item \textbf{Pipeline defects carried forward}: no first-author affiliation field; the
+\texttt{Cancer}/\texttt{Oncologic} split in \texttt{ENDPOINT\_CANON}; no \texttt{\textbackslash
+DIGESTDATE}-vs-\texttt{--date} build guard; the 2026-07-27 corpus missing \texttt{LIFECOURSE};
+\texttt{.git} debris on the delete-restricted mount. \texttt{metrics.csv} continues clean (csv.writer,
+500 rows, 0 malformed).
+\end{itemize}
+
+\clearpage
+
+% -------------------------------------------------------------- digest
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the week by subtopic}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Every record that appeared in a daily issue
+keeps that issue's critical summary verbatim; nothing here is re-written or re-assessed.
+Records surfaced without an abstract are shown as such. Ordered by subtopic, then by the
+date of the issue that first carried the record.\par}
+
+\input{digest_body}
+
+% -------------------------------------------------------------- register
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Period \textbf{20--26 September 2026}, Sunday to Saturday, \textbf{seven daily issues},
+\textbf{162 records}, \textbf{162 unique DOIs}, no record without a DOI. This rollup is
+\textbf{aggregation only}: it re-reads \texttt{state/corpus/*.json}, \texttt{state/metrics.csv} and
+\texttt{state/trials.json} over the period and \textbf{queries no literature API}; every record was
+gated by \texttt{check\_dois.py} at daily-issue time. The only live queries made for this issue were
+the ClinicalTrials.gov reconciliation (COATED-AIR resolution and \texttt{analyze\_endpoints}), which
+are state maintenance. Tier mix: \textbf{25 A, 64 B, 73 C}. The W39 weekly was due on the 26
+September run; that run and those for 27 and 28 September did not fire, and the rollup was built
+on the \textbf{29 September backfill run} after the 26 September daily issue, which it includes.
+Effect estimates are transcribed verbatim from the daily issues on heterogeneous contrasts and are
+\textbf{not} meta-analysed. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}
