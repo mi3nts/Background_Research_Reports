@@ -3014,3 +3014,8 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **Scholar Gateway broken**: `INVALID_QUERY: Could not resolve user identity from CONNECT` — needs reconnection. Consensus 10 hits, 0 new. Rejected records resurface via EPMC on later days (7 on 28 Sep) — `rejected.jsonl` is not in the dedup key set; consider adding.
 - New `_assemble_0929.py` builds `digest.tex` from `issues_prose/<date>.py` + corpus entries, with conditional page breaks before bands and before "Corpus analytics" (orphaned headings on 26/27 Sep first renders). Geo needles: Angola, Chile, Kazakhstan, Greenland (→ North America, geographic).
 - Trials: COATED-AIR resolved to **NCT06541691** (no exposure endpoint; stale 'recruiting'); HAPIN NCT02944682 update; `trials.json` 16 trials. September monthly due with the 30 Sep issue.
+
+## Run 2026-09-29 daily (built 30 Sep 04:13Z / 23:13 CDT 29 Sep; shipped 30 Sep 13:55 CDT)
+
+- The 23:00 run for 29 Sep built the issue (window 29 Sep, 22 admitted: 3 A / 11 B / 8 C, 9 effects, 10 pp, 0 overfull) and updated state + manifest but **stopped before proof/commit** — no run-log entry, nothing pushed. The 30 Sep 13:55 CDT firing (before 22:00 → newest buildable = 29 Sep = `last_entry_date`) proofed all 10 pages (clean: no orphaned headings, forest labels clear), validated the manifest + mirror, and committed/pushed it. No new harvest.
+- 30 Sep daily and the **September monthly** are left to the 30 Sep 23:00 run (22:00 rule). Scholar Gateway reconnection still outstanding.
