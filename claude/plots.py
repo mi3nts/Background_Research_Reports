@@ -627,6 +627,13 @@ design_group.update({
     "Metadata only": "Metadata only",
 })
 
+# 2026-09-30 issue: three coined labels, the rest of the issue reuses archived names.
+design_group.update({
+    "Cohort proteomics + mediation + Mendelian randomization": "Observational - cohort",
+    "Statistical model": "Modelling / inventory",
+    "Test-cycle development + dynamometer testing": "Chamber / laboratory",
+})
+
 design_group.update({v: v for v in set(design_group.values())})
 
 # added 2026-09-23 with the records that use it: a CFD dust-field study validated
@@ -851,6 +858,7 @@ geo_group = {
     "Brazil": "Latin America", "Argentina": "Latin America", "Australia": "Oceania",
     "Thailand": "Southeast Asia", "Vietnam": "Southeast Asia",
     "Ghana": "Sub-Saharan Africa", "Uganda": "Sub-Saharan Africa",
+    "Cote d'Ivoire": "Sub-Saharan Africa",
     "Nigeria": "Sub-Saharan Africa", "Kenya": "Sub-Saharan Africa",
     "Ethiopia": "Sub-Saharan Africa",
     "DR Congo": "Sub-Saharan Africa",
@@ -961,6 +969,7 @@ GEO_SUBSTR = [
     ("taiwan", "Taiwan"), ("japan", "Japan"),
     ("thailand", "Thailand"), ("chiang mai", "Thailand"), ("vietnam", "Vietnam"),
     ("india", "India"), ("bangladesh", "Bangladesh"),
+    ("ivoire", "Cote d'Ivoire"),  # 2026-09-30
     ("nigeria", "Nigeria"), ("ile-ife", "Nigeria"), ("south africa", "South Africa"),
     ("southern africa", "South Africa"), ("kenya", "Kenya"), ("ghana", "Ghana"),
     ("ethiopia", "Ethiopia"), ("addis ababa", "Ethiopia"),

@@ -1,0 +1,426 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{30 September 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Coral] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Coral}%
+ MONTHLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ September 2026\;\;\textcolor{Coral}{\textbar}\;\;Entry window 1--30 September 2026, 30 daily issues\;\;%
+ \textcolor{Coral}{\textbar}\;\;622 records pooled\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{622}{RECORDS POOLED\\(30 DAILY ISSUES)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{148}{EXPOSURE ASSESSMENT\\(24\%), LARGEST BAND}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{173}{EFFECT ESTIMATES\\FROM 93 SOURCES}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{143}{TIER-A\\RECORDS (23\%)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{98}{METADATA-ONLY\\RECORDS (16\%)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% ------------------------------------------------------------ signal of month
+\section*{\sffamily\bfseries\color{Deep}Signal of the month}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}September settled one question at population scale: per
+unit mass, fire-sourced PM$_{2.5}$ is more lethal than background PM$_{2.5}$, and the excess sits
+in its carbonaceous fraction --- the part a mass-reporting optical network does not resolve.}\\[1.4mm]
+\footnotesize
+Three large, methodologically independent studies landed inside sixteen days. Su et al.\
+(\textit{Lancet Oncol}, 15 Sep) followed 414,016 SEER--Medicare lung-cancer patients: per
+1\,$\mu$g\,m$^{-3}$, death HR \textbf{1.078} (1.064--1.092) for wildfire against \textbf{1.017}
+(1.015--1.019) for non-wildfire PM$_{2.5}$. Ju et al.\ (\textit{Lancet Planet Health}, 16 Sep), with
+instrumental-variable models across 1,366 communities in ten countries, found landscape-fire
+particles are \textbf{19.0\,\%} of ambient PM$_{2.5}$ mass but \textbf{30.6\,\%} of the attributable deaths,
+and that conventional time-series estimates understate the fire effect by more than half. Jin et
+al.\ (\textit{ES\&T}, 30 Sep) split smoke PM$_{2.5}$ by composition in 77.5 million Medicare
+beneficiaries: HR \textbf{1.032} per 1\,$\mu$g\,m$^{-3}$ for smoke mass and \textbf{1.087} for smoke carbon,
+with the carbon fraction carrying most of the 22,420 attributable deaths a year.
+\textbf{The common caveat is arithmetic}: chronic smoke exposure is small and narrow (median
+0.28\,$\mu$g\,m$^{-3}$ in Su et al.), so ``per 1\,$\mu$g\,m$^{-3}$'' coefficients extrapolate across most
+of their own range, and on the IQR scale the ranking can reverse. The direction, though, now holds
+across a cancer cohort, a multi-country IV design and a composition-resolved national cohort.
+Kaur et al.'s twenty-year western-US source apportionment (\textit{Atmos Pollut Res}, 20 Sep) adds
+the measurement side: the mass that is disappearing is secondary sulfate and nitrate, which
+optical sensors see well, while the share from residential-wood and fire combustion is rising.
+\textbf{The month's verdict: for health-relevant exposure in fire-affected regions, a network
+that adds an absorption or BC channel buys more than one that adds sensor density.}
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed in September}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Calibration moved from ``does it fit'' to ``is the fit honest''.} Sahin et al.\
+(\textit{Atmosphere}, 29 Sep) showed six ML calibrators reaching R$^2$ 0.86--0.89 under random
+splits and near or below zero under chronological hold-out, with validation design explaining
+\textbf{63--91\,\%} of the R$^2$ spread and algorithm choice 3.6--10.6\,\%. Kaur, Mangin \& Kelly
+(\textit{Aerosol Sci Technol}, 3 Sep) showed Plantower's PMSX003N fixes dust (PM$_{2.5}$ slope
+1.85--1.91 vs 0.15 for the PMS5003T) by re-binning $>$1\,$\mu$m particles, which is the same mechanism
+that makes it over-read in humid air. Khalili Hollo et al.\ (\textit{ACS Environ Au}, 25 Sep) put
+fifty Atmotubes and five QuantAQ units through four co-locations in two years: unit response
+\textbf{drifted between co-locations}, 5--11\,\% of wearables were dead at any comparison, and RH
+correction cut RMSE 42--50\,\%. Together these define the operating rule: temporally blocked
+validation, re-co-location rather than a single pre-deployment fit, and slope reported with RMSE.
+
+\item \textbf{Neither side of the co-location is stationary.} Zhou et al.\ (\textit{PNAS}, 14 Sep)
+used the 2025 suspension of the US embassy monitoring programme as a natural experiment: local
+satellite AOD rose \textbf{24--33\,\%} after the monitors went dark, most where no substitute data
+existed --- monitoring changed behaviour, not just the record. A Korean analysis (25 Sep) is
+titled on step changes in the regulatory PM record when stations relocate, and a mobile monitor
+250\,m from a regulatory station published a different AQI colour one time in ten (7 Sep).
+
+\item \textbf{August's prediction (1) was met.} A field evaluation of three community-priced
+condensation particle counters at an urban regulatory station (\textit{Aerosol Sci Technol},
+12 Sep) gave \textbf{R$^2>0.99$} against a research-grade CPC with a 3\,\% inter-unit CV over four
+months. The Partector 2 Pro matched SMPS/CPC number concentration within $\pm$10\,\% but under-sized
+by up to 28\,\% (\textit{J Occup Environ Hyg}, 15 Sep), and a six-channel electro-inertial sizer
+reproduced SMPS distributions within 10\,\% over a 16-day rooftop deployment (Le et al.,
+\textit{Meas Sci Technol}, 22 Sep). None ran longer than one season, so drift is still unmeasured.
+\textbf{Prediction (2) --- an ageing term inside an operational network correction --- was not
+met}; the Denver campaign corrects drift by re-co-location, not by a modelled ageing term.
+
+\item \textbf{Epidemiological method got sharper.} Leung, Neophytou \& Wilson (\textit{Int J
+Epidemiol}, 13 Sep) proved that zero-filling gestational exposure histories in distributed-lag
+models \emph{manufactures} the late-pregnancy window it is used to detect. A 115,056-birth
+analysis returned an informative null for short-term PM$_{2.5}$ and spontaneous preterm birth (17
+Sep). In the Sichuan Basin, excess cardiorespiratory mortality per 10\,$\mu$g\,m$^{-3}$ rose from 0.4\,\%
+to \textbf{1.4\,\%} as concentrations fell, handing back about \textbf{19\,\%} of the Clean Air Action's
+avoided deaths (6 Sep) --- the supralinear low-concentration slope showing up as a policy number.
+
+\item \textbf{Personal and continuous metrics carried signals area metrics missed.} Time above
+35\,$\mu$g\,m$^{-3}$ indoors, not the period mean, carried the cystic-fibrosis pilot signal (26
+Sep); a personal-monitor panel in older adults found a next-day activity deficit of about 8 min per
+IQR that area PM did not reproduce (27 Sep); and a third of indoor PM$_{2.5}$ variance sat between
+homes after full adjustment (8 Sep). Against that, \textbf{two African maternal cohorts} (21--22
+Sep) rested exposure on uncorrected consumer optical sensors in biomass smoke --- the cheapest
+sensor in the hardest aerosol.
+
+\item \textbf{Composition outran mass across the toxicology band.} Brake dust as a catalyst
+(10 Sep), saturating rather than additive oxidative potential (19 Sep), \textit{p}-phenylenediamine
+antioxidants in open waste burning at 11.5\,$\mu$g\,g$^{-1}$ PM$_{2.5}$ (29 Sep) and tyre-related
+chemicals in Leipzig roadside PM$_{10}$ (30 Sep). None of these is visible to a mass sensor.
+
+\item \textbf{Occupational \& indoor nearly doubled} (37 $\rightarrow$ 72 records) and
+\textbf{Cardiovascular \& metabolic doubled} (23 $\rightarrow$ 46), while \textbf{Sensing fell} from
+140 to 116 (25\,\% $\rightarrow$ 19\,\%) as the AMT/ACP Crossref channel delivered 32 records against
+48 in August. Exposure assessment (148, 24\,\%) is now the largest band.
+\end{itemize}
+
+\clearpage
+
+% ==================================================================== FIGURES
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics --- September 2026}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic distribution across all 622 pooled records; all ten subtopics populated.
+\textit{Exposure assessment \& modelling} 148 (24\,\%) and \textit{Sensing, forecasting \&
+instrumentation} 116 (19\,\%) together hold 43\,\%, down from August's 48\,\%. \textit{Occupational \&
+indoor} 72, \textit{Mechanistic toxicology} and \textit{Burden, policy \& mitigation} 55 each,
+\textit{Cardiovascular \& metabolic} 46, \textit{Respiratory \& allergic} 44, \textit{Neuro / mental
+health} 30, \textit{Reproductive \& developmental} 29, \textit{Other clinical} 27. Single-label
+assignment by dominant contribution.}
+
+\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Records per Sunday--Saturday week by subtopic across the 30 September issues (the
+first and last weeks are partial): 120 for 1--5 Sep, then 126, 148 and 162, and 66 for 27--30 Sep.
+Daily volume ranged from 4 (27 Sep, a Sunday) to 38 (3 Sep) and tracks publisher deposit timing, so
+week totals are the readable unit. Volume rose through the month; the 26--28 Sep issues were built
+late as a backfill but each kept its own entry-date window. This panel replaces the July-era
+``what the daily cadence missed'' chart, which had no meaning once every day had its own issue and
+was shipped with a stale July legend in the August monthly.}
+
+\vspace{3mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Study architecture. Measurement campaigns 118, metadata-only 98, modelling/inventory 88,
+reviews 65, cohorts 61, experimental/toxicology 59, cross-sectional 48, acute designs 33,
+chamber/laboratory 22, ecological 18. \textbf{Metadata-only rose from 12\,\% in August to 16\,\%},
+almost all Elsevier deposits without abstracts, while Scholar Gateway (the full-text route)
+has been disconnected since 29 Sep. \textbf{Trials or interventions: 8 records in 622} --- double
+August's four, still about 1\,\%.}
+
+\clearpage
+
+%% f2b_endpoint.png is DELIBERATELY OMITTED again (2026-10-01). ENDPOINT_CANON now exists,
+%% but at month scale it still returns 48 categories; the figure is 3958x5843 px and would
+%% render ~48 rows at an illegible size on one page. Distribution given as text.
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Health endpoint distribution --- reported as
+text, not as a figure}\\[1.2mm]
+\footnotesize
+\texttt{ENDPOINT\_CANON} now exists (August's 144 raw strings collapse to a bounded map), but at
+month scale it still yields \textbf{48 categories}, so the pooled chart would be 48 rows at an
+unreadable size. \textbf{303 records (49\,\%) carry no human health endpoint} --- instrument,
+exposure, emissions and atmospheric-process work plus the metadata-only records. Of the
+remainder: \textbf{respiratory 66, cardiovascular 33, other clinical 23, neuro 28} (cognitive 17,
+mental health 11), \textbf{cancer 26} (still split as ``Oncologic'' 15 and ``Cancer'' 11 --- the open
+canonicalisation defect), reproductive 17, mortality 18, metabolic 11, in-vitro toxicological 12,
+neurodevelopmental 6, cerebrovascular 6, with the balance in one- to five-record categories.
+\textbf{Fix still owed:} merge Cancer/Oncologic and the two neuro labels, and cap the map at
+$\sim$20 categories so f2b can return at rollup scale.
+\end{keybox}
+
+\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. Unspeciated PM or emissions 243, PM$_{2.5}$ alone 202, PM$_{2.5}$ with
+PM$_{10}$ 84, optical properties 30, composition/speciation 19, PM$_{10}$ alone 13, \textbf{ultrafine
+10 and size-resolved number 8} (3\,\% together, against 4\,\% in August), composite indices 8,
+bioaerosol 5. Right --- geography. Global / multi-region 190 (inflated by metadata-only records with
+no recoverable site), \textbf{China 165 (27\,\%)}, Europe 76, North America 68, East Asia ex-China 38,
+South Asia 25, \textbf{Sub-Saharan Africa 22} (16 in August), Middle East \& N.\ Africa 13, Southeast
+Asia 9, Latin America 9 (13 in August), Oceania 4, polar/remote 2, Central Asia 1.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study-architecture cross-tabulation. The dense cells are the expected
+ones --- sensing $\times$ measurement campaign, exposure $\times$ modelling and metadata-only. The
+informative absences are unchanged: the trial column is nearly empty in every health subtopic, and
+the sensing and exposure rows contribute almost nothing to the effect-estimate pool.}
+
+\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows across the month (non-exclusive; only records with an identifiable
+human window): in utero 41, infancy/childhood 35, adolescence 10, working age 77, older adults 40.
+\textbf{Adolescence remains the thinnest window}, as in July and August.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{\FIGDIR/f5_forest.png}
+\figcap{Quantitative effect estimates extracted across September, panel 1 of 6. \textbf{This is not a
+meta-analysis and no pooled summary is drawn.} Contrasts are not commensurable (per 1, per 10, per
+IQR, per doubling, threshold, quartile, fuel-type and occupational contrasts) and the outcome scale
+mixes OR, HR, RR, IRR, PR, sHR and ratio-of-means across unrelated diseases, so
+\textbf{heterogeneity is not estimable and none is reported}. Of 173 estimates, 161 carry a CI on a
+ratio or difference scale: \textbf{132 exclude the null in the harmful direction, 10 in the
+protective direction and 19 cross it.}}
+
+\clearpage
+\noindent\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\FIGDIR/f5_forest_2.png}
+\figcap{Effect estimates, panel 2 of 6. Same caveats as panel 1.}
+\clearpage
+\noindent\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\FIGDIR/f5_forest_3.png}
+\figcap{Effect estimates, panel 3 of 6. Same caveats as panel 1.}
+\clearpage
+\noindent\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\FIGDIR/f5_forest_4.png}
+\figcap{Effect estimates, panel 4 of 6. Same caveats as panel 1.}
+\clearpage
+\noindent\includegraphics[width=\linewidth,height=0.86\textheight,keepaspectratio]{\FIGDIR/f5_forest_5.png}
+\figcap{Effect estimates, panel 5 of 6. Same caveats as panel 1.}
+\clearpage
+\noindent\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{\FIGDIR/f5_forest_6.png}
+\figcap{Effect estimates, panel 6 of 6. None of the ten estimates below the null is a protective
+PM effect: four are protective \emph{co-exposures} (greenness against VTE, green space and natural
+environment against COPD, exercise against mortality) and six are harms on a decreasing scale
+(peak-flow ratio, femur length, abdominal circumference, two next-day activity betas, and
+scholarly output per $\mu$g\,m$^{-3}$). The largest
+ratios (OR 4.78 for type A aortic dissection per doubling of same-day PM$_{2.5}$; OR 4.09 for
+microplastic detection in lung malignancy) come from small case series with wide intervals.}
+
+\clearpage
+
+\section*{\sffamily\bfseries\color{Deep}Emerging, fading, and recurring}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Emerging.} \textbf{(i) Source-specific potency as the default framing for fire PM} ---
+see the signal box; three large designs agree on direction. \textbf{(ii) Validation honesty in
+sensor calibration} --- temporally blocked hold-outs (Sahin et al.), stratified error reporting
+across AQI bins (the Vishakhapatnam co-location, 15 Sep), and repeated co-location to track drift
+(Khalili Hollo et al.). \textbf{(iii) Community-cost particle-number instruments} reaching
+reference agreement (cCPC, Partector 2 Pro, electro-inertial sizer). \textbf{(iv) Monitoring as an
+intervention} --- the embassy-shutdown natural experiment is the first record in this corpus that
+treats a monitor's existence as the exposure. \textbf{(v) Continuous-sensor-only metrics}
+(time-above-threshold, next-day personal exposure) carrying signals that means and area estimates
+miss.
+
+\vspace{2mm}
+\textbf{Fading.} Two complete months are still too few to call anything fading, and no decline
+is asserted. The observation carried from August stands: \textbf{single-pollutant time-series
+studies} continue to report PM as a weak term once co-pollutants enter the model --- the Japanese
+cancer-mortality series (30 Sep) lost significance after NO$_2$ or SO$_2$ adjustment. The share of
+\textit{Sensing} fell from 25\,\% to 19\,\%, but that tracks the Crossref AMT/ACP channel (48
+$\rightarrow$ 32 records), not the literature.
+
+\vspace{2mm}
+\textbf{Recurring groups and venues.} \textbf{No author-cluster analysis is possible} --- the corpus
+has no affiliation field (open since 15 August), so surname repeats in a China-heavy corpus are not
+investigator clusters. Venue concentration is supportable: \textit{Environ Sci Technol} 46,
+\textit{Environ Pollut} 36, \textit{Front Public Health} 28, \textit{Atmosphere} 26, \textit{Atmos
+Environ} 24, \textit{Atmos Chem Phys} 23, \textit{Atmos Pollut Res} 15, \textit{Environ Res} 14,
+\textit{J Hazard Mater} 13, \textit{Indoor Air} 12, \textit{Atmos Meas Tech} 9. \textit{ES\&T}
+displaced \textit{ACP} as the largest venue. \textbf{Most-cited work of the period is not reported}:
+citation counts on records days to weeks old measure indexing lag, not influence. The month's
+highest-venue records were Su et al.\ (\textit{Lancet Oncol}), Ju et al.\ (\textit{Lancet Planet
+Health}) and Zhou et al.\ (\textit{PNAS}).
+
+\clearpage
+
+% ------------------------------------------------------------------ trial watch
+\section*{\sffamily\bfseries\color{Deep}Trial registry watch}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+Daily registry sweeps (\texttt{LastUpdatePostDate} windows) ran through September; \texttt{state/trials.json} holds
+\textbf{16 trials}, \textbf{seven} of them first seen in September (the August rollup reported 24; the
+difference is not reconciled in the run log --- see defect (vi)). The recurring finding of August hardened into a pattern: \textbf{registrations framed
+around air pollution that register no exposure measurement.}
+
+\vspace{1.5mm}
+\textbf{NCT07817836} (IDEA, Pavia, observational, $n$=151): urban outdoor workers vs office controls,
+personal passive sampling, but no PM$_{2.5}$ outcome measure. \textbf{NCT07713264} (VISIONS, Stanford,
+interventional, $n$=50, outdoor workers): \texttt{analyze\_endpoints} shows three psychosocial scales
+and no air-quality measure. \textbf{NCT07793123} (interventional, $n$=60, placebo-controlled): the
+third consecutive topical hit whose PM framing no measured variable carries. \textbf{NCT05423665}
+(observational, $n$=360) lists air pollution as a condition beside fetal growth restriction.
+\textbf{NCT07196436} (AIRVAC, energy-recovery ventilation plus air cleaner, $n$=80) was found through
+its protocol paper rather than the sweep; registry co-primaries are spirometry and asthma control,
+the protocol primary is asthma control alone. \textbf{NCT06541691} (COATED-AIR, $n$=3,000) has no
+exposure endpoint and a stale recruiting status. \textbf{NCT02944682} (HAPIN, $n$=6,704, LPG
+intervention) posted a registry update; main results are published.
+
+\vspace{1.5mm}
+Published trial-class records rose to \textbf{8} in 622, the most instrument-relevant being the
+protocol for a Dutch primary-school trial (NCT07479420) randomising \textbf{180 classrooms in 29
+schools} to HEPA, ionisation/plasma or no cleaner (9 Sep) and a smoke-free-home RCT. The 30 Sep
+sweep returned one observational COPD-exacerbation cohort (CAN-EXACT, NCT07850648), screened out:
+environmental factors appear only inside a generic secondary measure. \textbf{The interventional
+evidence base for personal and household PM reduction is still thickening in the registry faster
+than in the literature, and the registry entries increasingly omit the exposure they claim to
+target.}
+
+\vspace{4mm}
+
+% -------------------------------------------------------------------- open gaps
+\section*{\sffamily\bfseries\color{Deep}Open gaps and read on direction}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Gaps in the literature}\\[1.2mm]
+\footnotesize
+\textbf{(i) Composition is where the health signal is, and networks report mass.} Fire-carbon
+potency, oxidative-potential saturation and quinone-forming antioxidants all argue for absorption,
+BC or OP channels; no September record deployed one at network scale with a field calibration.
+\textbf{(ii) Drift is measured but not modelled.} Denver shows drift between co-locations; no record
+places an ageing term inside an operational correction (August's prediction 2, re-issued).
+\textbf{(iii) Ultrafine instruments now pass co-location but have no long-term record}: every
+September PN validation ran for a season or less.
+\textbf{(iv) Low-cost sensors in biomass smoke without correction} underpin new maternal-health
+cohorts in Sub-Saharan Africa --- the region whose share of the corpus is growing (22 records) and
+whose aerosol is the worst case for optical sensing.
+\textbf{(v) Trials without exposure measurement.} Eight trial-class records; registry entries
+increasingly name air pollution without measuring it.
+\end{keybox}
+
+\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Gaps and defects this pipeline creates}\\[1.2mm]
+\footnotesize
+\textbf{(i) No duplicates this month.} 622 records, \textbf{622 unique DOIs}; the
+\texttt{DUPLICATE-DOI} hard-fail added on 1 September held for all 30 issues.
+\textbf{(ii) 98 records (16\,\%) are metadata-only}, up from 12\,\%. They are counted but carry no
+assessed content. The rise tracks Elsevier deposit practice and the loss of Scholar Gateway
+(``could not resolve user identity'' since 29 Sep; needs reconnection).
+\textbf{(iii) Endpoint canonicalisation is incomplete} (48 categories; Cancer/Oncologic split).
+\textbf{(iv) No affiliation field} --- no author or institution clusters.
+\textbf{(v) Source legs.} OpenAlex returned 429/403 all month; Europe PMC was down for the whole 25
+Sep run (HTTP 503); arXiv returned 406 from mid-September and recovered on 29 Sep; Consensus
+returned \textbf{0 new} records on every September sweep. Three daily runs (26--28 Sep) did not fire
+and were backfilled day by day on 29 Sep, each with its own window.
+\textbf{(vi) Trial-list continuity.} \texttt{trials.json} lists 16 trials against the 24 the August
+rollup reported; earlier entries appear to have been dropped without a log line. To audit before
+the October rollup.
+\end{keybox}
+
+\vspace{3mm}
+
+\footnotesize
+\textbf{Read on direction.} August's read was that the two halves of the field were optimising
+different objective functions --- sensing on how far a PM$_{2.5}$ mass correction transfers,
+epidemiology on toxicity and number. September narrows that gap from both sides. Epidemiology
+supplied the strongest population-scale evidence yet that source and composition, not mass, set
+potency; instrumentation supplied the first community-cost particle counters with reference
+agreement and, more usefully, a set of papers that make calibration claims auditable (blocked
+validation, re-co-location, stratified error). \textbf{What has not moved is deployment}: no network
+in the corpus yet measures the fraction the epidemiology now points to.
+\textbf{Falsifiable predictions for October:}
+(1) a low-cost network with an absorption/BC or particle-number channel and a field calibration of
+at least one full season appears; and
+(2) at least one sensor-calibration paper reports a temporally blocked or prospective hold-out as
+its primary metric, citing the validation-leakage argument. If (2) fails, random-split R$^2$ remains
+the field's reporting norm and should be discounted by default.
+
+\clearpage
+
+% ==================================================================== DIGEST
+%% MANDATORY, same contract as the daily and the weekly (formalised 2026-08-02).
+%% Full summaries are lifted VERBATIM from issues/digest_*.tex by mkdigest.py.
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the month by subtopic}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2mm}
+
+\footnotesize
+Every pooled record appears below. Records that carry a full assessed summary have it lifted
+verbatim from the daily issue that first published it; a title-only or extractive entry is
+\textbf{not an assessment} and the absence of criticism is not approval. Metadata-only records are a
+pointer to a DOI and nothing more.
+
+\vspace{3mm}
+
+\input{digest_body}
+
+\clearpage
+
+% ==================================================================== TABLE
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register --- September 2026}
+\vspace{-1.5mm}{\color{Coral}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{3mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Pure aggregation over \texttt{state/corpus/2026-09-*.json} (30 daily issues, entry windows 1--30
+September 2026, contiguous), \texttt{state/metrics.csv} and \texttt{state/trials.json}. No API was
+re-queried and no DOI re-resolved; every record passed the DOI gate at daily-issue time. Figures are
+pooled re-renders of the daily set; the forest panels catalogue estimates and do not pool them.
+Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

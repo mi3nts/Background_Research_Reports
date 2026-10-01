@@ -34,7 +34,11 @@ body += "\n" + M.FOREST + "\n\n\\vspace{4mm}\n\n"
 ent = subprocess.run(["python3", "_tex_entries.py", D], capture_output=True, text=True, check=True).stdout
 # keep a band heading with its first entry (orphaned band at a page foot, 26 Sep proof):
 # conditional break = break here if < ~10 lines remain, otherwise no effect.
-ent = ent.replace("\\band{", "\\par\\vskip 0pt plus 10\\baselineskip\\penalty-200\\vskip 0pt plus -10\\baselineskip\n\\band{")
+_k = ent.find("\\band{") + 1   # 2026-09-30: no conditional break before the FIRST band - it
+# pushed the first band off the page and left "Paper-level digest" orphaned at the foot.
+ent = ent[:_k] + ent[_k:].replace("\\band{", "\\par\\vskip 0pt plus 10\\baselineskip\\penalty-200\\vskip 0pt plus -10\\baselineskip\n\\band{")
+# 2026-09-30 proof: "Paper-level digest" orphaned at the foot of p4 under the forest plot.
+body += "\\par\\vskip 0pt plus 24\\baselineskip\\penalty-200\\vskip 0pt plus -24\\baselineskip\n"
 body += (sec("Paper-level digest") + "{\\fontsize{7.4}{9}\\selectfont\\color{Slate}Ordered by cluster. Each entry gives the\n"
          "methodological core and the finding that matters, not an abstract paraphrase. Records\n"
          "marked \\textit{metadata only} carry no recoverable abstract and assert no finding.\\par}\n\n" + ent)

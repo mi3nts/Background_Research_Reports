@@ -206,6 +206,15 @@
    "hits": 1,
    "new": 2,
    "note": "29 Sep backfill run (issues 26-28 Sep). Condition query (air pollution/PM/PM2.5/wildfire smoke, updates 26-29 Sep) -> 1 hit, HAPIN NCT02944682 (completed; registry update). COATED-AIR resolved to NCT06541691 by condition+intervention search; analyze_endpoints run. For the W39 weekly."
+  },
+  {
+   "window": "2026-09-30 -> 2026-09-30",
+   "queried": "2026-10-01",
+   "source": "ClinicalTrials.gov MCP connector, search_trials + analyze_endpoints",
+   "filter": "condition='air pollution OR particulate matter' x AREA[LastUpdatePostDate]RANGE[2026-09-30,2026-09-30]",
+   "hits": 1,
+   "kept": 0,
+   "note": "NCT07850648 (CAN-EXACT, McGill, observational COPD-exacerbation cohort, n=125, not yet recruiting). analyze_endpoints: primaries are exacerbation rate and diagnostic markers; environmental factors only inside a generic secondary risk-factor measure, no PM or air-quality measurement. Not added."
   }
  ],
  "NCT05867381": {

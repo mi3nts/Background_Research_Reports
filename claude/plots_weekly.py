@@ -88,6 +88,46 @@ if not BATCH and len(dates) <= 10:
     print("weekly trend figure written for %s..%s over %d issues" % (START, END, len(dates)))
     raise SystemExit
 
+# MONTHLY WITHOUT A BACKFILL BATCH (added 2026-10-01). From August onward every day in a
+# month is its own daily issue, so the caught-vs-missed panel below degenerated into one
+# bar series under a stale July legend ("five daily issues (27-31 Jul)") - which the
+# August monthly shipped and the September proof caught. Plot Sunday-Saturday week
+# totals per subtopic instead, as stacked bars: the question at month scale is how
+# subtopic mix moved week to week, and week totals are steadier than day totals.
+if not BATCH:
+    import datetime as _dt
+    def _wk(d):
+        x = _dt.date.fromisoformat(d)
+        return (x - _dt.timedelta(days=(x.weekday() + 1) % 7)).isoformat()
+    weeks = sorted({_wk(d) for d in dates})
+    W = {(w, s): sum(M[(d, s)] for d in dates if _wk(d) == w) for w in weeks for s in subs}
+    lab = []
+    for w in weeks:
+        ds = [d for d in dates if _wk(d) == w]
+        lab.append("%s to %s\n(%d issues)" % (ds[0][5:], ds[-1][5:], len(ds)))
+    fig, ax = plt.subplots(figsize=(11.0, 6.4))
+    x = np.arange(len(weeks)); bottom = np.zeros(len(weeks))
+    for s in subs:
+        v = np.array([W[(w, s)] for w in weeks], dtype=float)
+        ax.bar(x, v, bottom=bottom, width=0.62, color=SUBCOL.get(s, DEEP), label=s, zorder=3,
+               edgecolor="white", linewidth=0.6)
+        bottom += v
+    for xi, t in zip(x, bottom):
+        ax.text(xi, t + max(bottom) * 0.012, "%d" % t, ha="center", va="bottom",
+                fontsize=11, fontweight="bold", color=DEEP)
+    ax.set_xticks(x); ax.set_xticklabels(lab, fontsize=10.5)
+    ax.set_ylabel("Records", fontsize=11.5)
+    ax.set_ylim(0, max(bottom) * 1.12)
+    ax.set_title("Records per Sunday-Saturday week, by subtopic (%s to %s)" % (START, END), pad=12)
+    ax.yaxis.grid(True, color=GRID, lw=0.7, zorder=0); ax.set_axisbelow(True)
+    for sp in ("top", "right"):
+        ax.spines[sp].set_visible(False)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=3, fontsize=9.6, frameon=False)
+    fig.tight_layout()
+    save(fig, "w1_subtopic_trend.png")
+    print("monthly week-bucket figure written for %s..%s over %d issues" % (START, END, len(dates)))
+    raise SystemExit
+
 caught = np.array([sum(M[(d, s)] for d in DAILY) for s in subs], dtype=float)
 missed = np.array([sum(M[(d, s)] for d in BATCH) for s in subs], dtype=float)
 order = np.argsort(caught + missed)
