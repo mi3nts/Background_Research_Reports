@@ -3027,3 +3027,11 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **September monthly** (`Monthly_2026-09-30.pdf`, 146 pp): 622 records / 622 unique DOIs (DUPLICATE-DOI gate held all month), 173 effects from 93 sources, metadata-only 16% (Aug 12%). August prediction (1) met (cCPC R2>0.99, 12 Sep); (2) not met. f2b omitted again (ENDPOINT_CANON yields 48 categories at month scale).
 - **Defect fixed:** `plots_weekly.py` had no regime for a batch-free month — it drew the July "what the daily cadence missed" chart with a stale "27-31 Jul" legend, which the **August monthly shipped**. New third regime: Sunday–Saturday stacked week totals. Weekly regime unchanged (checked on W39 range).
 - Open: `trials.json` holds 16 trials vs 24 reported in the August monthly — entries dropped without a log line, audit before October rollup. Scholar Gateway still "Could not resolve user identity" (needs user reconnection). CAN-EXACT NCT07850648 screened, not added. Consensus 10 hits, 0 new.
+
+## Run 2026-10-02 (09:32-10:0x CDT) — daily 1 Oct
+
+- 22:00 rule: newest buildable = 1 Oct; 2 Oct left to the next run, W40 weekly to the Sat 3 Oct 23:00 run. Harvest leg-by-leg: PubMed 34 health / 3 sensing, EPMC 17, Crossref-ISSN 55, arXiv 0 dated 1 Oct, OpenAlex 429 → 104 unique → 11 carried → 93 fresh; PubMed connector (EDAT 1 Oct) 15 unique, 2 appended (`_conn_1002.py`). **95 screened → 30 admitted / 65 rejected** (logged), 12 pp, 2 effects (both from one cohort), 2 tier A, 6 metadata-only (20%), DOI gate 0/0, 0 overfull/underfull.
+- **Defect fixed — month-boundary gate:** `_screen_0929.py` dropped EPMC PPR/PMC records with `firstPublicationDate` < 1st of the issue month; on a 1st-of-month issue that discarded 5 medRxiv/Research Square preprints posted 29–30 Sep (all 5 admitted after the fix). Gate now floors at `min(month start, D-7)`.
+- `plots.py`: design label `In vitro` → Experimental / toxicology. No new geo needles.
+- **trials.json audit closed:** the 16-vs-24 gap is the drifted tally already documented in `counter_note` (16 Sep); `stored_records`/`windows_count` had drifted again (13/22) — all counters re-derived (16 NCT, 26 windows). Trial watch 0 hits for 1–2 Oct.
+- Consensus 10 hits, 0 new (all archived/rejected). Scholar Gateway still "Could not resolve user identity" — needs user reconnection.

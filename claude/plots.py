@@ -641,6 +641,10 @@ design_group.update({v: v for v in set(design_group.values())})
 design_group.update({
     "CFD simulation + scaled-model validation": "Modelling / inventory",
 })
+# 2026-10-02 (1 Oct issue): cell-culture-only toxicology record (corneal spheroids).
+design_group.update({
+    "In vitro": "Experimental / toxicology",
+})
 
 _design_unmapped = set()
 def dgrp(d):

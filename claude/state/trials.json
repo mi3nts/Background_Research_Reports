@@ -215,6 +215,15 @@
    "hits": 1,
    "kept": 0,
    "note": "NCT07850648 (CAN-EXACT, McGill, observational COPD-exacerbation cohort, n=125, not yet recruiting). analyze_endpoints: primaries are exacerbation rate and diagnostic markers; environmental factors only inside a generic secondary risk-factor measure, no PM or air-quality measurement. Not added."
+  },
+  {
+   "window": "2026-10-01 -> 2026-10-01",
+   "queried": "2026-10-02",
+   "source": "ClinicalTrials.gov MCP connector, search_trials",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5' x AREA[LastUpdatePostDate]RANGE[2026-10-01,2026-10-02]",
+   "hits": 0,
+   "kept": 0,
+   "note": "no registrations updated in window"
   }
  ],
  "NCT05867381": {
@@ -439,9 +448,9 @@
   ],
   "note": "Registered under condition Air Pollution Exposure but NO air-quality, PM or exposure outcome measure exists in the protocol -- every registered endpoint is a psychosocial scale (empowerment, social cohesion, climate hope). Second consecutive topical hit whose PM framing is not carried by any measured PM variable (cf. NCT07817836, 14 Sep). Surface in the W38 weekly with that caveat."
  },
- "windows_count": 22,
- "stored_records": 13,
- "counter_note": "RECONCILED 2026-09-16. d['trials'] was a running tally (28) that had drifted from the number of persisted NCT records because earlier runs incremented it without writing the record. Both keys are now set to the actual count of stored NCT objects (12) and must be derived, never incremented, from here on. The 17 lost records are not recoverable from this file; the 15 window entries in d['windows'] are the audit trail of what was queried, and their 'kept' fields are the authoritative per-window counts.",
+ "windows_count": 26,
+ "stored_records": 16,
+ "counter_note": "RECONCILED 2026-09-16. d['trials'] was a running tally (28) that had drifted from the number of persisted NCT records because earlier runs incremented it without writing the record. Both keys are now set to the actual count of stored NCT objects (12) and must be derived, never incremented, from here on. The 17 lost records are not recoverable from this file; the 15 window entries in d['windows'] are the audit trail of what was queried, and their 'kept' fields are the authoritative per-window counts. AUDITED 2026-10-02: the 16-vs-24 gap flagged on 1 Oct is this same drift - the August monthly's 24 came from the pre-reconciliation tally. stored_records (13) and windows_count (23) had drifted again; all three counters re-derived from the file (16 NCT objects, 26 windows).",
  "NCT07793123": {
   "first_seen": "2026-09-16",
   "title": "Randomized Double-Blind Placebo-Controlled Trial Evaluating the Effect of an Oral Antioxidant Dietary Supplement on Skin Radiance in Women Exposed to Urban Air Pollution",
