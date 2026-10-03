@@ -3035,3 +3035,10 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - `plots.py`: design label `In vitro` → Experimental / toxicology. No new geo needles.
 - **trials.json audit closed:** the 16-vs-24 gap is the drifted tally already documented in `counter_note` (16 Sep); `stored_records`/`windows_count` had drifted again (13/22) — all counters re-derived (16 NCT, 26 windows). Trial watch 0 hits for 1–2 Oct.
 - Consensus 10 hits, 0 new (all archived/rejected). Scholar Gateway still "Could not resolve user identity" — needs user reconnection.
+
+## Run 2026-10-03 (14:50-15:1x CDT) — daily 2 Oct
+
+- 22:00 rule: newest buildable = 2 Oct; **3 Oct daily and the W40 weekly (27 Sep–3 Oct) left to the next run** (Sat 23:00 or later). Harvest leg-by-leg: PubMed 6 health / 1 sensing, EPMC 31, Crossref-ISSN 40, arXiv 0 dated 2 Oct, OpenAlex 429 → 76 unique → 9 carried → 67 fresh; PubMed connector (EDAT 2 Oct) 7 PMIDs, 4 appended (`_conn_1003.py`). **71 screened → 15 admitted / 56 rejected** (logged), 9 pp, 3 effects (one case-control), 2 tier A, 1 metadata-only (7%, series low), DOI gate 0/0, 0 overfull/underfull. Abstract retry recovered 7 of 10 via EPMC.
+- `plots.py`: geo keys + needles for Burkina Faso, Croatia, Middle East. Satellite record written with the existing label "Satellite time-series analysis" rather than a new design key.
+- Trial watch 0 hits (LastUpdatePostDate 2–3 Oct); `trials.json` 16 NCT / 27 windows (derived). Consensus 10 hits, 0 new (Kumpika 2026, Ginsburg 2026 already archived/rejected). Scholar Gateway still "Could not resolve user identity" — needs user reconnection.
+- Proof contact sheet written to `build/_proof_sheet.png` (gitignored scratch; mount is delete-restricted).

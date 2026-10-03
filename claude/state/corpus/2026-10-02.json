@@ -1,0 +1,267 @@
+{
+ "date": "2026-10-02",
+ "entry_window": "2026-10-02 -> 2026-10-02",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c05375",
+   "journal": "Environ Sci Technol",
+   "short": "Sheidaei et al. 2026",
+   "title": "A Multi-Stage Deep Learning Framework for Daily PM2.5 Estimation at 100 m Resolution Across the Contiguous United States, 2000-2024",
+   "sub": "Exposure assessment & modelling",
+   "design": "Machine-learning model",
+   "pm": "Daily PM2.5 surface, 100 m, from gap-filled MAIAC-type AOD + meteorology + geospatial predictors",
+   "geo": "USA (contiguous)",
+   "endpoint": "None (exposure surface)",
+   "tier": "A",
+   "n": "Three-stage pipeline: a reanalysis-informed U-Net fills missing satellite AOD, a bidirectional LSTM refines its temporal structure and terrain downscales it to 100 m; a multistream network then predicts daily PM2.5 over >766 million cells for 2000-2024. Site-held-out validation: R2 = 0.82, RMSE = 2.85 ug/m3, MAE = 1.84 ug/m3; spatial R2 0.94, temporal R2 0.78. Limitation: the 100 m detail comes from downscaled AOD and land-use covariates, not from 100 m observations - validation sites are regulatory monitors, which cannot test sub-kilometre gradients near roads or smoke plumes; the temporal R2 (0.78) is the binding figure for short-term epidemiology, and performance during wildfire days is not reported. Relevance: high - a 25-year 100 m baseline is the natural prior that dense low-cost networks should be fused against, and the place their residuals are informative."
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-10743669/v1",
+   "journal": "Research Square (preprint)",
+   "short": "Mielnik et al. 2026",
+   "title": "Comparing geospatial interpolation techniques for estimating ambient PM2.5 mass concentrations from sugarcane burning in South Florida",
+   "sub": "Exposure assessment & modelling",
+   "design": "Statistical model",
+   "pm": "Daily PM2.5 from a dense low-cost sensor network (46 sites), IDW vs kriging",
+   "geo": "USA (Florida, Everglades Agricultural Area)",
+   "endpoint": "None (exposure surface)",
+   "tier": "A",
+   "n": "Low-cost sensors at 46 locations (8 Jun 2024 - 1 Dec 2025) spanning burn and non-burn seasons in the Everglades Agricultural Area; IDW and kriging variants compared by leave-one-out cross-validation for 24 h PM2.5. Daily R2 ranged 0-0.99; IDW won on most days, and a per-day best-model ensemble was most robust. Smoke presence raised estimated PM2.5 by 1.65 ug/m3 (SE 0.13), concentrated inland near burn areas; the coast was cleanest. Limitation: sensor type, calibration and humidity correction are not stated in the abstract - in smoke, optical sensor bias is composition-dependent, so interpolation error and sensor error are confounded; LOOCV on a network this sparse rewards smoothness; preprint. Relevance: high - a direct test of how far a rural LCS network can be stretched into a health-study exposure surface for an episodic agricultural source."
+  },
+  {
+   "pmid": "42825987",
+   "doi": "10.1007/s10661-026-15929-3",
+   "journal": "Environ Monit Assess",
+   "short": "Akhtar et al. 2026",
+   "title": "Spatiotemporal characteristics of ozone and PM2.5 pollution in Jilin City: insights from observations in 2020 and 2023",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport model",
+   "pm": "Warm-season PM2.5 and O3, 3 km WRF-CMAQ + surface monitors, met-normalised",
+   "geo": "China (Jilin City)",
+   "endpoint": "None (air quality)",
+   "tier": "C",
+   "n": "WRF-CMAQ at 3 km plus surface observations compare May-July 2020 (COVID low-emission baseline) with 2023 in a petrochemical city in Northeast China. Meteorology explains ~35% of O3 variability (temperature-dominated) but <1% of PM2.5; PM2.5 rose in May and fell sharply in July, staying high in Huadian, Chuanying and Jiaohe. Limitation, stated by the authors: emissions and meteorology both changed between the two years, so attribution is associational, and O3 is systematically underestimated; <1% explained PM2.5 variance means the chosen predictors simply do not describe PM2.5 here. Relevance: low - mid-size industrial cities are under-monitored, but this adds two seasons, not a method."
+  },
+  {
+   "pmid": "42825965",
+   "doi": "10.1007/s10661-026-15986-8",
+   "journal": "Environ Monit Assess",
+   "short": "Vukic et al. 2026",
+   "title": "Integrated assessment of road and maritime traffic impacts on urban air quality and noise in a port-city environment",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "Short-duration low-cost PM2.5/PM10 and CO at 10 sites; vessel and vehicle counts",
+   "geo": "Croatia (Split)",
+   "endpoint": "None (air quality)",
+   "tier": "B",
+   "n": "Ten sites in Split, Apr-Sep 2024: 154 port and 66 road short-duration observations of PM2.5, PM10, CO, traffic counts and (road only) noise. Port means exceeded road means (PM2.5 14.77 vs 11.64; PM10 18.25 vs 14.70 ug/m3) but not significantly (p = 0.22, 0.23). Vessel count was weakly associated with PM10 (R2 = 0.082) and stayed positively associated with port PM2.5/PM10 in cluster-robust models; wind speed lowered PM. Limitation: spot measurements with uncalibrated low-cost sensors, no reference co-location, and vessel count ignores engine type, berth time and fuel - the R2 says ship numbers are a poor proxy for ship emissions. Relevance: moderate - the authors frame LCS correctly as screening-level; port sources need continuous nodes with plume-resolving time resolution, not spot visits."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129258",
+   "journal": "Environ Pollut",
+   "short": "Nassir et al. 2026",
+   "title": "A multi-sensor satellite assessment of air quality during the 2026 Middle East Conflict across nine regional countries",
+   "sub": "Exposure assessment & modelling",
+   "design": "Satellite time-series analysis",
+   "pm": "AOD (MODIS MAIAC), TROPOMI/OMI NO2, SO2, CO, CH4; CAMS PM2.5 (indeterminate)",
+   "geo": "Middle East (nine countries)",
+   "endpoint": "None (air quality; exploratory NO2 burden)",
+   "tier": "B",
+   "n": "A dual-baseline design (14-month annual and seasonally matched prior year) applied to the 39-day 2026 conflict period across nine countries (~217 million people). Domain-mean anomalies: NO2 -15.1%, SO2 -45.6%, CO -8.6%, AOD -19.6%, CH4 +0.37% (noise), ordered by atmospheric lifetime - the signature of an emission change; cold spots sit over Iranian, Kuwaiti and Qatari hydrocarbon fields. The NO2 burden estimate (-7,849; 95% CI -35,641 to +13,551) crosses zero, and the PM2.5 burden is called indeterminate because dust and anthropogenic aerosol cannot be separated at CAMS resolution. Limitation: 39 days, no surface PM validation; a wind reversal is documented. Relevance: moderate - an honest statement that column AOD cannot apportion PM in dust-dominated regions without ground speciation."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17100971",
+   "journal": "Atmosphere",
+   "short": "Yan et al. 2026",
+   "title": "Baseline Determination for Threshold-Based Interpretation and Groups of Single-Particle Aerosol Fluorescence Measurements",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Laboratory sampler validation",
+   "pm": "Single-particle fluorescence (SwisensPoleno Jupiter), bioaerosol 10-30 um",
+   "geo": "Ireland (laboratory + ambient case studies)",
+   "endpoint": "None (instrument)",
+   "tier": "B",
+   "n": "Tests deionised water, NaCl and SiO2 as low-fluorescence baselines for the SwisensPoleno Jupiter and compares mu+3sigma, P99 and MAD thresholds. NaCl gives the broadest baseline (mu+3sigma upper thresholds ~52.0, 39.3, 38.2 x10^-3 a.u. across excitation sources, vs 6.6/10.1/3.1 for H2O and 12.1/9.1/2.6 for SiO2), and the effect persists within a shared 10-30 um size range; baseline choice changes the fraction of fluorescence-positive particles in both test materials and summer/winter ambient data. P99 tracks mu+3sigma; MAD diverges. Limitation: one instrument model, and no ground truth for which threshold best recovers biological particles. Relevance: moderate - fluorescence-positive counts from different networks are not comparable unless baseline material and threshold rule are reported, which is a metadata standard LCS bioaerosol channels lack."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.estlett.6c00755",
+   "journal": "Environ Sci Technol Lett",
+   "short": "Yang et al. 2026",
+   "title": "Development and Diagnosis of a Temporal-Context U-Net Deep Learning Surrogate Model for CMAQ Particulate Nitrate over China",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "Hourly surface particulate nitrate, CMAQ emulation (July/December 2011-2020)",
+   "geo": "China (national)",
+   "endpoint": "None (model)",
+   "tier": "B",
+   "n": "An attention U-Net takes the target hour, the previous 2 h and a 96 h summary to emulate CMAQ surface nitrate over China; it beats baseline surrogates, especially at high concentrations. Emission-reduction tests reproduce the direction of July national-mean nitrate decreases but underestimate their magnitude, and agreement is poor for January NOx responses outside training months. Residuals correlate with CMAQ NH3 and particle H+, and adding them helps. Limitation: it emulates a model, not the atmosphere - CMAQ's own nitrate biases are inherited - and the weak emission-response skill is exactly what a policy surrogate needs. Relevance: moderate - nitrate is the PM component optical sensors misread most under humidity, and fast surrogates are a route to composition-aware calibration."
+  },
+  {
+   "pmid": "42825885",
+   "doi": "10.1007/s12035-026-06232-w",
+   "journal": "Mol Neurobiol",
+   "short": "Saveleva et al. 2026",
+   "title": "Urban PM0.2 Affects Astrocytes by Inducing Xenobiotic and Oxidative Stress Responses",
+   "sub": "Mechanistic toxicology",
+   "design": "In vitro exposure",
+   "pm": "Urban ambient PM0.2 (aerodynamic diameter <0.2 um), 50 ug/ml, 24 h",
+   "geo": "Not stated (laboratory)",
+   "endpoint": "Astrocyte transcriptome/proteome",
+   "tier": "B",
+   "n": "Primary astrocytes exposed to collected urban PM0.2 at 50 ug/ml for 24 h: 2,217 mRNAs altered, with strong induction of xenobiotic metabolism (CYP genes, Ahrr), Nrf2 oxidative stress responses and glutathione detoxification (GST superfamily, Nqo1); 354 proteins nominally changed, 142 concordant with mRNA. Reanalysis of published data shows microglia go pro-inflammatory while astrocytes go detoxification/antioxidant. Limitation: one dose, one time point, 50 ug/ml is orders above any plausible brain dose, no particle-free extract control for organics vs core; proteomics is labelled exploratory. Relevance: low-moderate - reinforces that ultrafine/quasi-ultrafine number, not PM2.5 mass, is the metric for neuro endpoints, which most LCS do not resolve."
+  },
+  {
+   "pmid": "42825333",
+   "doi": "10.1080/17476348.2026.2740205",
+   "journal": "Expert Rev Respir Med",
+   "short": "Ferreira Vicente et al. 2026",
+   "title": "Pulmonary black carbon accumulation: mechanisms, health impacts, and environmental sources",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "Black carbon: sources, tissue retention, label-free optical detection",
+   "geo": "Not stated (review)",
+   "endpoint": "Multi-system (review)",
+   "tier": "C",
+   "n": "Narrative review (searches to June 2026) of BC sources, physicochemistry, exposure assessment, biodistribution and tissue retention, with emphasis on tissue-based biomonitoring and label-free optical detection, and of respiratory, cardiovascular, neurological, developmental, metabolic and immune associations. The argument: tissue BC load could bridge external exposure estimates and biologically effective dose. Limitation: narrative, no quantitative synthesis or risk-of-bias assessment; tissue BC integrates an unknown exposure history, so it is a cumulative dose marker, not a validation of any particular exposure model. Relevance: low-moderate - internal BC dose is a possible ground truth for personal aethalometer and network-derived BC exposure."
+  },
+  {
+   "pmid": "42825890",
+   "doi": "10.1007/s12098-026-06363-x",
+   "journal": "Indian J Pediatr",
+   "short": "Kukshal et al. 2026",
+   "title": "Maternal Exposure to Air Pollution During Early Pregnancy and Congenital Heart Disease: An Exploratory Case-Control Analysis from Delhi NCR",
+   "sub": "Reproductive & developmental",
+   "design": "Case-control",
+   "pm": "Periconceptional PM2.5, PM10, NO2, CO, SO2, O3, AQI at geocoded residence",
+   "geo": "India (Delhi NCR)",
+   "endpoint": "Congenital heart disease (incl. VSD)",
+   "tier": "B",
+   "n": "1,556 participants (1,115 CHD cases, 441 controls) with residential exposure at conception and one month either side; multinomial regression, Bonferroni-corrected. Post-conception PM10 was associated with all CHD (AOR 3.36, 2.05-5.52) and VSD (AOR 4.35, 2.41-7.83); preconception PM10 with simple CHD (2.82, 1.69-4.71); 'poor AQI' gave AORs of 2.5-4.0. Limitation: the PM10 contrast (per unit or category) is not given in the abstract; cases outnumber controls 2.5:1, implying hospital controls; Delhi-NCR monitor density makes residence-level contrasts small relative to city-wide covariance; ORs of 3-4 for an environmental exposure are far above the literature and suggest selection or confounding by SES. Relevance: moderate - a case for dense sensing where between-residence contrasts are the identifying variation."
+  },
+  {
+   "pmid": "",
+   "doi": "10.64898/2026.09.28.26364238",
+   "journal": "medRxiv (preprint)",
+   "short": "Rivera-Mariani et al. 2026",
+   "title": "Inflammatory Burden, Structural Exposure, and Racial Disparities in Incident Heart Failure: Evidence from the Multi-Ethnic Study of Atherosclerosis",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort",
+   "pm": "PM2.5 and NO2 as co-adjustment in a geocoded subcohort (not the exposure of interest)",
+   "geo": "USA (MESA)",
+   "endpoint": "Incident heart failure",
+   "tier": "C",
+   "n": "6,785 MESA participants followed ~16 years (485 HF events). IL-6, D-dimer, CRP and fibrinogen each predicted HF (HR 1.13-1.20 per SD); a composite index gave HR 1.25 (1.12-1.39); biomarker adjustment reduced the Black-White log-hazard gap by 57.5%. Associations were robust to PM2.5/NO2 co-adjustment in a geocoded subcohort. Limitation for this watch: air pollution is a sensitivity covariate only - no PM effect estimate is reported, and 'structural exposure' is inferred from a null interaction, not measured; single baseline biomarkers; preprint. Relevance: low - admitted because it tests whether PM explains part of an inflammatory pathway and reports that it does not change the estimates."
+  },
+  {
+   "pmid": "42824637",
+   "doi": "10.1016/j.toxrep.2026.102344",
+   "journal": "Toxicol Rep",
+   "short": "Zouma et al. 2026",
+   "title": "Pulmonary function assessment of a community exposed to air pollution in an industrial area in Ouagadougou, Burkina Faso",
+   "sub": "Respiratory & allergic",
+   "design": "Observational - cross-sectional",
+   "pm": "Residence in an industrial area vs control district (no PM measured in abstract)",
+   "geo": "Burkina Faso (Ouagadougou)",
+   "endpoint": "Spirometry, respiratory symptoms",
+   "tier": "C",
+   "n": "146 industrial-area residents vs 146 controls (Nioko 2), Nov-Dec 2023, with ATS/ERS spirometry. Symptom prevalence was higher in the industrial area (lower airway 89% vs 64%); pre-bronchodilator FEV1 %pred and FET% were lower (p = 0.002); restrictive defects were more common (OR 1.70, p = 0.035, no CI given), especially in women. Limitation: exposure is residence only - no PM or gas measurement, unadjusted univariate OR, and occupation, biomass cooking and socioeconomic differences between districts are uncontrolled. Relevance: moderate - West African industrial districts have essentially no PM monitoring; this is the kind of study a few calibrated nodes would turn from a residence contrast into an exposure-response."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103223",
+   "journal": "Atmos Pollut Res",
+   "short": "Charres et al. 2026",
+   "title": "Insights into the organic and toxicological characteristics of PM10 from indoor and outdoor settings in a school environment",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - indoor/outdoor school PM10 organic speciation and toxicity (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "C",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 2 Oct with no abstract; Europe PMC and Semantic Scholar returned nothing and Scholar Gateway is still disconnected. The title describes organic and toxicological characterisation of indoor and outdoor PM10 at a school; the author list (Cipoli, Vicente, Evtyugina) is the Aveiro aerosol group, but this watch does not infer location or method from authorship. Relevance: potentially high - indoor/outdoor school PM composition is what classroom low-cost sensors cannot report. On the retry list."
+  },
+  {
+   "pmid": "42819718",
+   "doi": "10.7759/cureus.115533",
+   "journal": "Cureus",
+   "short": "Parthiban et al. 2026",
+   "title": "Ocular Surface Disorders in Traffic Police Officers in the Union Territory of Puducherry, India: A Cross-Sectional Study",
+   "sub": "Occupational & indoor",
+   "design": "Observational - cross-sectional",
+   "pm": "Occupational traffic exposure (>1 year field duty); no PM measured",
+   "geo": "India (Puducherry)",
+   "endpoint": "Dry eye, conjunctival squamous metaplasia",
+   "tier": "C",
+   "n": "106 traffic police examined with OSDI, Schirmer, TBUT, tear meniscus height and conjunctival impression cytology: Nelson grade 1-3 metaplasia in 83%, dry-eye symptoms in 78%; grade associated with years of field duty, OSDI and TBUT (chi-square p<0.05). Limitation: no unexposed comparison group, no exposure measurement, UV and pollution are inseparable, and years of service is collinear with age; the authors' 'clear exposure-outcome relationship' is not supported by this design. Relevance: low - a case for wearable PM monitoring in traffic-police cohorts, which would make this question answerable."
+  },
+  {
+   "pmid": "42822630",
+   "doi": "10.1016/j.envres.2026.125824",
+   "journal": "Environ Res",
+   "short": "Yang et al. 2026b",
+   "title": "Process-resolved characterization and plant-level inventory of multi-pollutant emissions from China's coking industry",
+   "sub": "Burden, policy & mitigation",
+   "design": "Modelling / inventory",
+   "pm": "Size-segregated stack PM, ions, trace elements; plant-level inventory 2012-2024, projections to 2050",
+   "geo": "China (national, 307 plants)",
+   "endpoint": "None (emissions)",
+   "tier": "B",
+   "n": "Stack measurements at coal charging, coke-oven flue gas, dry quenching and pushing in two plants (total PM 3.12-37.72 mg/m3; sulfate 28-59% of ions; As and Cd enriched in PM2.5; the condensable fraction carries 44.5-57.4% of trace elements in flue gas) feed a 307-plant inventory for 2012-2024. 2022 national emissions: 159.8 kt PM, 66.6 kt SO2, 82.3 kt NOx, 838.3 kt VOCs, 4.24 kt PAHs, 707.6 t trace elements; BACT cuts PM to 15.5 kt by 2050. Limitation: two plants anchor factors for 307; fugitive emissions, flagged as a priority, are the least measured; condensable PM is operationally defined. Relevance: moderate - condensables are invisible to stack filters but appear as ambient PM2.5 downwind, where fence-line sensor networks see them."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "All CHD, post-conception\nPM10 (contrast n.s.)",
+   "exposure": "Residential PM10, month after conception",
+   "est": 3.36,
+   "lo": 2.05,
+   "hi": 5.52,
+   "metric": "OR",
+   "src": "1,115 cases / 441 controls, Delhi NCR"
+  },
+  {
+   "label": "VSD, post-conception\nPM10 (contrast n.s.)",
+   "exposure": "Residential PM10, month after conception",
+   "est": 4.35,
+   "lo": 2.41,
+   "hi": 7.83,
+   "metric": "OR",
+   "src": "1,115 cases / 441 controls, Delhi NCR"
+  },
+  {
+   "label": "Simple CHD, preconception\nPM10 (contrast n.s.)",
+   "exposure": "Residential PM10, month before conception",
+   "est": 2.82,
+   "lo": 1.69,
+   "hi": 4.71,
+   "metric": "OR",
+   "src": "1,115 cases / 441 controls, Delhi NCR"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "preconception /\nin utero:\nDelhi CHD"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nschool PM10\n(metadata only)"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno age-specific\nrecord"
+  },
+  {
+   "n": 1,
+   "note": "working age:\ntraffic police"
+  },
+  {
+   "n": 0,
+   "note": "older adults:\nno age-specific\nrecord"
+  }
+ ]
+}

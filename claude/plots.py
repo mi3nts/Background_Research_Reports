@@ -872,6 +872,7 @@ geo_group = {
     "South Africa": "Sub-Saharan Africa", "Mexico": "Latin America",
     "Lebanon": "Middle East & N. Africa", "Bangladesh": "South Asia",
     "Angola": "Sub-Saharan Africa", "Chile": "Latin America",  # 2026-09-29
+    "Burkina Faso": "Sub-Saharan Africa", "Croatia": "Europe", "Middle East": "Middle East & N. Africa",  # 2026-10-02
     "Greenland": "North America",  # 2026-09-29, geographic not political binning
     "Sri Lanka": "South Asia",  # 2026-08-30: fell through to Global / multi-region
     "Kazakhstan": "Central Asia", "Greece": "Europe", "Bulgaria": "Europe",
@@ -954,6 +955,7 @@ GEO_ALIAS = {
     "United Kingdom": "UK", "Korea": "South Korea",
 }
 GEO_SUBSTR = [
+    ("burkina faso", "Burkina Faso"), ("croatia", "Croatia"), ("middle east", "Middle East"),  # 2026-10-02
     ("united states", "USA"), ("u.s.", "USA"), (" usa", "USA"), ("america", "USA"),
     # added 2026-09-20: "Utah, California, Nevada, Idaho, Colorado (USA)" matched no
     # needle because " usa" is anchored on a leading space and the string has "(USA)".
