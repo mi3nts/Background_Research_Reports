@@ -1,0 +1,228 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{4 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-04\;\;\textcolor{Amber}{\textbar}\;\;Entry window 4 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;5 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RECORDS IN SCOPE\\(8 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A Saturday of five records, and the two strongest are both
+about air-cleaning controls --- one measured properly, one not measured at all.}\\[1.4mm]
+\footnotesize
+Blackley and colleagues (\textit{Ann.\ Work Expo.\ Health}, tier A) evaluated five high-volume suction
+systems during \textbf{51} real dental procedures, with direct-reading number and mass instruments (PM$_4$
+respirable, PM$_{10}$ thoracic) beside the dentist and in the hallway. The estimand is the one that matters
+and is almost never used: a system counts as effective only when the \textbf{95\,\% lower confidence limit
+of the procedure-to-background ratio is $\le$1} --- that is, when the control returns the air to background
+\textit{against the instrument's own noise}, not when it produces a quotable percentage reduction.
+Against that, Rees and colleagues report the qualitative arm of \textbf{AFRI-c}, the care-home HEPA cluster
+RCT that found \textbf{no reduction in respiratory infections}: units were accepted, maintenance was light,
+cost was judged prohibitive sector-wide --- and \textbf{runtime, filter loading and achieved air-change
+rate were never measured}. \textbf{Why it matters for sensing:} a filtration null without exposure
+verification cannot distinguish ``filtration does not work'' from ``the filters were off''. One logging
+low-cost node per room is the cheap repair to a trial design that otherwise cannot fail informatively.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Road dust is a live microbial reservoir.} 16S metabarcoding of dust from nine sites in three
+Philippine metros: alpha diversity does not differ between cities (Kruskal--Wallis $p>0.05$) but composition
+does (PERMANOVA \textbf{R$^2$ = 0.466}, $p$ = 0.004), with \textit{Paracoccus} rising toward the most
+metal-laden site and correlating with cobalt and nickel. Dust is a reservoir, not an exposure --- nothing
+here measures what resuspends.
+
+\item \textbf{The atmospheric mycobiome by aircraft.} Seasonal flights joined to vegetation-productivity and
+meteorological data find fungal diversity declining with altitude and with productivity, decomposers and
+pathogens dominant, and \textbf{over 40\,\%} of taxa putative plant or animal pathogens. Amplicon relative
+abundance is not concentration and viability is untested.
+
+\item \textbf{Review, not evidence.} A \textit{Carcinogenesis} narrative review maps early-onset lung-cancer
+mechanisms --- mutational signatures, telomere and mitochondrial dysfunction, CXCL13/IL-1$\beta$
+inflammation, PD-L1 and CD47--SIRP$\alpha$ immune evasion, microbiome disruption --- and calls single-study
+biomarkers validated. Useful as a list of mediators a cohort with \textit{measured} personal exposure
+could test.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 3 October issue closed with \texttt{last\_entry\_date} at 3 October. This issue collects
+\textbf{4 October in full}, continuous with it. It is a Saturday, and the volume is a series low: 13 fresh
+candidates, \textbf{5 admitted}. Harvest and screening were completed on the 6 October run and cached;
+this run authored from that cache without re-querying. Dailies for 5--8 October and the W40 weekly
+(27 September--3 October) remain owed and follow in this backfill.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 5 in-scope records. \textbf{Four of ten bands populated}:
+\textit{Occupational \& indoor} two (both air-cleaning controls), and one each for \textit{Exposure
+assessment}, \textit{Sensing} and \textit{Mechanistic toxicology}. No clinical-endpoint band is populated
+--- the one cancer record is a mechanistic review, not a study of people.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: \textbf{three} measurement campaigns (the dental
+operatories, the road-dust survey and the aircraft bioaerosol flights) and \textbf{two} filed as review /
+synthesis (the narrative review and the qualitative arm nested in the AFRI-c trial). Right --- \textbf{all
+five} records report no measured health endpoint, including the HEPA record, whose trial endpoint lives in
+the parent RCT and not in this paper.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: unspeciated PM in the two intervention records,
+PM$_{10}$ only in the dust survey (reported as a reservoir), bioaerosol in the aircraft campaign, and
+PM$_{2.5}$ + PM$_{10}$ in the review. The dental study is the only record reporting a respirable (PM$_4$)
+cut. Right --- geography: Europe two, and one each for North America, Southeast Asia and
+global / multi-region.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: working age two (dental providers, care-home staff) and older
+adults one (care-home residents under HEPA filtration). No record addresses in utero, childhood or
+adolescence --- a consequence of a day dominated by occupational and environmental-survey work.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the 5 records. Measurement campaigns spread
+across occupational, exposure and sensing; the two review-type records sit in occupational and mechanistic
+toxicology. Every occupied cell holds a single record except occupational measurement.}
+
+\vspace{2mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}\textbf{No forest plot this issue.} No admitted
+abstract reports a PM effect estimate with a confidence interval. The dental study's estimand is a
+procedure-to-background concentration ratio with a 95\,\% lower confidence limit, reported per system in
+the full text rather than in the abstract; the AFRI-c qualitative arm reports no effect measure, and the
+remaining three records report none. The f5 panel is absent by design, not by build failure.\par}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Gao et al. 2026}
+{Air pollution and early-onset lung cancer: from environmental carcinogenesis to early intervention strategies}
+{Carcinogenesis}
+{Narrative review of mechanisms linking air pollution to early-onset lung cancer: genomic instability (DNA damage, telomere dysfunction, mitochondrial impairment, mutational signatures), epigenetic dysregulation, a tumour-promoting niche through CXCL13 and IL-1beta, immune evasion via PD-L1 and CD47-SIRPalpha, and respiratory-gut microbiome disruption, closing with candidate biomarkers and chemopreventive targets. Limitation: no systematic search or evidence grading, the 99\%-above-guideline and >14\%-of-lung-cancer-deaths framing is quoted rather than re-derived, and the biomarkers are called 'validated' on the strength of single studies. Relevance: low as evidence, moderate as a map of which mediators a cohort with measured personal exposure could actually test.}
+{10.1093/carcin/bgag070}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 1 record}{Clay}
+
+\paperentry{Balabat et al. 2026}
+{Urban Road Dust as a Microbial Hotspot: Spatial Variation of Bacterial Communities and Metal Associations in the Philippines}
+{World J Microbiol Biotechnol}
+{Road dust from nine sites across three metropolitan areas profiled by 16S rRNA metabarcoding with PICRUSt2 functional prediction and trace-metal pollution indices. Proteobacteria and Actinobacteria dominated everywhere with a persistent core of Paracoccus, Acinetobacter, Kocuria and Deinococcus; alpha diversity did not differ between cities (Kruskal-Wallis p>0.05) but composition did (PERMANOVA R2=0.466, p=0.004). Paracoccus rose toward the most metal-laden Cagayan de Oro site and correlated with cobalt and nickel alongside raised predicted denitrification. Limitation: three sites per city, no replication within site, PICRUSt2 infers function rather than measuring it, and road dust is a reservoir - nothing here shows what becomes airborne or is inhaled. Relevance: low-moderate - the resuspended coarse fraction that low-cost optical nodes do see is biologically non-inert.}
+{10.1007/s11274-026-05307-z}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 1 record}{Amber}
+
+\paperentry{Metris and Metris 2026}
+{Fungus above us: exploring the atmospheric mycobiome by aircraft}
+{PeerJ}
+{Aircraft bioaerosol sampling across seasons, sequenced and joined to vegetation-productivity and meteorological data. Diversity fell with altitude and with increasing vegetation productivity; decomposers and pathogens dominated, with over 40\% of taxa putative plant or animal pathogens (Neoascochyta, Cladosporium, Alternaria, Penicillium among the abundant genera); guild composition shifted with productivity and surface wind. Limitation: a small number of flight tracks stand in for a continent, relative abundance from amplicon data is not concentration, and viability is untested - 'pathogen' here is taxonomic assignment, not infectivity. Relevance: moderate - aircraft campaigns set the vertical context that ground bioaerosol sensors, which cannot resolve taxa at all, are implicitly assuming.}
+{10.7717/peerj.21746}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Blackley et al. 2026}
+{Aerosol mitigation efficiency of high-volume suction systems during aerosol-generating dental procedures with patients}
+{Ann Work Expo Health}
+{Five commercial high-volume suction systems - standard HVE, three intraoral systems and one modified HVE - measured during real crown preparations (n=26) and ultrasonic scaling (n=25), with direct-reading instruments near the dentist and in the hallway. Procedure-to-background concentration ratios were modelled with covariates (suction flow rate, procedure duration, tooth location, scaler type and quadrant); a system counted as effective only when the 95\% lower confidence limit of the ratio was <=1, i.e. indistinguishable from background. Limitation: unblinded single-site evaluation with modest per-system n, patients differ across procedures, and the short-duration ratio design cannot speak to a full clinical day. Relevance: high - this is the design a sensing group should copy. The estimand is 'did the control return the air to background', tested against the instrument's own noise, rather than a percentage reduction quoted without a comparison.}
+{10.1093/annweh/wxag081}
+
+\paperentry{Rees et al. 2026}
+{Lessons learned from using high efficiency particulate air (HEPA) filtration units in care homes: interviews with care home staff, residents and relatives from the AFRI-c trial}
+{NIHR Open Res}
+{Reflexive thematic analysis of interviews with 25 staff, 20 residents and 12 relatives inside the AFRI-c pragmatic cluster RCT, whose main result was that HEPA units did not reduce respiratory infections. Units became normalised but were judged unsuitable for some residents; lockable settings and wall fixing were asked for; cost was seen as prohibitive sector-wide, raising an equity concern that filtration would reach only residents who can pay. Maintenance burden was minor. Limitation: qualitative, post hoc, and conducted among people who already knew the trial was running; no measurement of unit runtime, filter loading or achieved air-change rate - which is the missing variable that would explain a null. Relevance: high - a filtration null without exposure verification is the standing weakness of this trial literature, and a logging low-cost PM node in each room is the cheap fix.}
+{10.3310/nihropenres.13993.1}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{4 October 2026}, single day, continuous with the 3 October issue. Harvest
+and screening for this day were completed on the \textbf{6 October} run and cached
+(\texttt{cache/2026-10-04/\_fresh.json}); this run authored from that cache without re-querying.
+\textbf{13} fresh candidates after cross-day deduplication --- a Saturday, and the lowest daily volume of
+the series. \textbf{5 admitted}, \textbf{8 rejected} with logged reasons. \textbf{No record carried on
+metadata alone}, the first such issue since 27 September: the Crossref-ISSN leg returned nothing dated
+4 October, and Elsevier does not deposit at weekends. \textbf{Consensus} returned 10 calibration hits,
+\textbf{0 new}. \textbf{Scholar Gateway} fails with \texttt{ACCESS\_DENIED}. \textbf{ClinicalTrials.gov}:
+no PM or air-pollution registration updated in the window beyond EPIC-AIR (\texttt{NCT07500948}), carried
+from the 3 October issue. DOI gate: \textbf{0 fail, 0 warn}. Abstracts remain the copyright of their
+respective publishers.\par}
+\end{keybox}
+
+\end{document}

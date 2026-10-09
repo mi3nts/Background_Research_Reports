@@ -1,0 +1,183 @@
+{
+ "date": "2026-10-06",
+ "entry_window": "2026-10-06 -> 2026-10-06",
+ "PAPERS": [
+  {
+   "pmid": "42838330",
+   "doi": "10.1016/j.envpol.2026.129269",
+   "journal": "Environ Pollut",
+   "short": "Wang et al. 2026c",
+   "title": "Long-Term Air Pollution Exposure and Brain Structural Decline: A Longitudinal Analysis",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort",
+   "pm": "Residential PM2.5 and PM10 from high-resolution spatiotemporal models",
+   "geo": "Not stated in abstract (middle-aged and older adult imaging cohort)",
+   "endpoint": "Grey matter volume, white matter hyperintensity progression",
+   "tier": "B",
+   "n": "4,276 middle-aged and older adults with repeated brain MRI; global, grey- and white-matter volumes and white-matter hyperintensity burden regressed on modelled residential PM2.5 and PM10 in fully adjusted multivariable models. Higher long-term particulate exposure was associated with accelerated global and regional grey-matter loss and greater WMH progression, which the authors read as both a neurodegenerative and a cerebrovascular pathway. Limitation: the abstract gives no effect sizes, no confidence intervals, no exposure contrast and does not name the cohort or country - unusual for a quantitative imaging analysis, and it makes the result unassessable as reported; repeat-MRI subsamples are also selected for survival and compliance. Relevance: moderate - brain structure is the mediator between the UFP dementia-mortality signal and clinical disease, but this record cannot be entered as an effect estimate."
+  },
+  {
+   "pmid": "42836291",
+   "doi": "10.19191/ep26.4-5.s1.a1030.092",
+   "journal": "Epidemiol Prev",
+   "short": "Ranzi et al. 2026",
+   "title": "Atlante Aria e Salute: methods for estimating the health impacts of air pollution and national application",
+   "sub": "Burden, policy & mitigation",
+   "design": "Health impact model",
+   "pm": "Modelled annual PM2.5 and NO2 at 1x1 km, random forest over monitors, satellite and covariates, 2016-2024",
+   "geo": "Italy (national, municipality level)",
+   "endpoint": "Natural, cardiovascular, respiratory and lung-cancer mortality",
+   "tier": "B",
+   "n": "Methodological description of the Air and Health Atlas, an interactive national platform. PM2.5 and NO2 are modelled at 1 km with random forests, converted to population-weighted exposure at municipality level against 2021 census blocks, and combined with provincial death-certificate rates through HRAPIE-2 concentration-response functions against the 5 ug/m3 WHO counterfactual; 2019 is shown as an illustration, with pronounced north-south gradients. Limitation: population-weighted exposure at municipality scale cannot capture within-municipality contrast, the random-forest surface is validated against the same monitors that train it, and HRAPIE-2 functions are transferred from other populations. Relevance: high - this is the operational template a low-cost network would be asked to improve, and the 1 km population-weighted step is exactly where added density pays."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1155/ina/5050009",
+   "journal": "Indoor Air",
+   "short": "Othman et al. 2026",
+   "title": "Impact of Urban Land Use on Indoor Air Quality: Quantifying Ambient Particle Infiltration and Asthma Risk in Naturally Ventilated School Buildings",
+   "sub": "Occupational & indoor",
+   "design": "Field measurement",
+   "pm": "Paired indoor-outdoor 24 h PM2.5 and PM1 with infiltration factor, 10 schools across five land-use classes",
+   "geo": "Malaysia (Klang Valley)",
+   "endpoint": "Asthma risk (modelled)",
+   "tier": "A",
+   "n": "Ten primary schools stratified by land use (high-traffic, industrial, residential, mixed industrial/high-traffic, mixed industrial/port) with paired indoor-outdoor PM2.5 and PM1. Indoor maxima were at mixed industrial/port schools (24 h PM2.5 35.33 +/- 9.25, PM1 23.79 +/- 5.87 ug/m3); outdoor maxima at high-traffic schools (34.50 +/- 20.64 and 23.78 +/- 13.09); land-use class differences were significant (p<0.05) and the mean infiltration factor exceeded 0.6. Limitation: ten buildings across five classes is two per class, so the land-use contrast is confounded with building; Finf estimated from indoor-outdoor ratios without an independent air-change measurement absorbs any indoor source into the infiltration term. Relevance: high - Finf > 0.6 in naturally ventilated classrooms means outdoor network data is a usable proxy for children's exposure in this climate, which is the assumption most school studies make without testing."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17100977",
+   "journal": "Atmosphere",
+   "short": "Mukhamediyarov et al. 2026",
+   "title": "Elemental Composition, Sources, and Health Risks of Ambient PM2.5 in Ust-Kamenogorsk (Oskemen) and Pavlodar, Kazakhstan",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "PM2.5 elemental composition by ICP-OES and ICP-MS with PCA source resolution",
+   "geo": "Kazakhstan (Ust-Kamenogorsk, Pavlodar)",
+   "endpoint": "Non-carcinogenic and carcinogenic inhalation risk (modelled)",
+   "tier": "C",
+   "n": "PCA separates a non-ferrous metallurgical profile in Ust-Kamenogorsk from coal fly ash, ferrous metallurgy and petrochemicals in Pavlodar. The risk arithmetic then reports cumulative hazard indices exceeding 1 by more than 500-fold, driven by Zn (HQinh 304.7) and Al (129.5), and carcinogenic risks for Cr and As up to 9x the 1e-4 threshold. Limitation: a hazard quotient of 300 for zinc is a sign that the reference concentration is being misapplied, not that residents are inhaling a toxic zinc dose - EPA inhalation RfCs do not exist for several of these elements and the substitutes used are oral values scaled by default breathing rates; sampling duration and n are not stated. Relevance: moderate for the Central Asian composition data, which is genuinely scarce; the risk numbers should not be propagated."
+  },
+  {
+   "pmid": "42837936",
+   "doi": "10.1016/j.marpolbul.2026.120437",
+   "journal": "Mar Pollut Bull",
+   "short": "Loh et al. 2026",
+   "title": "Seasonal characteristics of submicron aerosols in the coastal atmosphere of southeastern Korea: Influence of urban-port outflow",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Long-term field measurement campaign",
+   "pm": "PM1 mass, composition and size distribution by HR-ToF-AMS, four seasons, with PMF",
+   "geo": "South Korea (Geoje Island, downwind of Busan)",
+   "endpoint": "None (aerosol characterisation)",
+   "tier": "B",
+   "n": "Seasonal HR-ToF-AMS measurement at a coastal receptor site southwest of Busan, winter 2021 to autumn 2022. PM1 ranged 4.23-10.0 ug/m3; PMF resolved five organic factors including hydrocarbon-like, oxidised primary (OPOA), two oxygenated and biomass-burning. Ultrafine growth events were frequent, most in autumn, when OPOA reached 36% alongside elevated black carbon under north-easterly transport from the port. Limitation: one receptor site with no upwind reference, so 'port influence' rests on wind sector rather than on a source-resolved tracer, and AMS does not measure refractory sea salt or dust - the submicron mass is non-refractory by construction. Relevance: high - growth events at 4-10 ug/m3 of mass are invisible to a mass-reporting network, which is the recurring theme of this week's issues."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-14015-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Dai et al. 2026",
+   "title": "Cross-phase partitioning of sulfur-nitrogen ratios and aerosol mixing-state evolution based on single-particle observations",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Long-term field measurement campaign",
+   "pm": "Single-particle aerosol mass spectrometry with gas-, particle- and number-based S/N ratios",
+   "geo": "China (Yangzhou, eastern China)",
+   "endpoint": "None (aerosol chemistry)",
+   "tier": "B",
+   "n": "SPA-MS through winter and summer emission-control periods and matched normal periods, with three sulfur-to-nitrogen metrics (gas gSNR, particle pSNR, number-based nSNR) analysed by causal inference plus interpretable machine learning. Control periods cut NOx while SO2 stayed roughly flat, raising gSNR, lifting pSNR by about 57% across particle classes and expanding mean vacuum aerodynamic diameter by 27%; enrichment was greatest in particles containing both black and organic carbon and least in BC-free inorganic particles. Limitation: emission-control periods are confounded with season and meteorology, and 'causal inference' on an observational time series with co-varying controls is a strong label for what remains an association. Relevance: high - a 27% diameter shift under a control policy is a direct change in the optical cross-section a nephelometric sensor measures, i.e. a calibration drift caused by policy rather than by hardware."
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-10517753/v1",
+   "journal": "Research Square (preprint)",
+   "short": "Zhao et al. 2026e",
+   "title": "Thermal-oxygen evolution and atmospheric pollutant emission characteristics during the vertical propagation of underground coal fires",
+   "sub": "Burden, policy & mitigation",
+   "design": "Chamber / laboratory",
+   "pm": "PM2.5, PM10 and TSP with CO2, CO, CH4 and C2H6 through a simulated burn cycle",
+   "geo": "China (laboratory, physical similarity simulation)",
+   "endpoint": "None (emissions)",
+   "tier": "C",
+   "n": "A scaled physical-similarity rig run from ignition to burnout with continuous monitoring at six depths. Thermal-oxygen evolution split into incubation, rapid heating, intensive reaction, rapid cooling and burnout; the upper layers burned out while the middle sustained reaction and the deepest was oxygen-limited; surface response lagged the seam. Particulate matter and light hydrocarbons were released early (CH4 and C2H6 concentrated in the first 40-60 h, at background by ~80 h) while CO2 and CO dominated later. Limitation: a similarity-scaled rig reproduces sequence, not magnitude - emission factors from it cannot be transferred to a real coal fire, and no scaling validation is offered; preprint. Relevance: moderate - the early-PM, late-CO sequence is a usable detection signature for surface sensor arrays over suspected underground fires."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosenv.2026.122398",
+   "journal": "Atmos Environ",
+   "short": "Wang et al. 2026d",
+   "title": "Physics-inspired inductive spatiotemporal kriging for PM2.5 with satellite gradient constraints",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - inductive spatiotemporal kriging for PM2.5 under satellite gradient constraints (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "A",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 6 Oct with no abstract. By title, this is the central methodological problem of a sparse network - interpolating to unmonitored locations - attacked inductively (so that new sensors can be added without retraining) and constrained by satellite gradients rather than by a stationarity assumption. The Everglades record in the 2 October issue measured exactly how badly ordinary kriging and IDW fail day to day; this is the proposed repair. Relevance: high, the highest of any metadata-only record in this backfill; flagged for a full-text read as soon as the abstract appears."
+  },
+  {
+   "pmid": "42837547",
+   "doi": "10.1364/ao.597069",
+   "journal": "Appl Opt",
+   "short": "Zhang et al. 2026e",
+   "title": "Full field of view temporal calibration for the directional polarimetric camera onboard the GaoFen-5 (02) satellite based on a data reconstruction method",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - on-orbit temporal calibration of a directional polarimetric camera (by title)",
+   "geo": "China (GaoFen-5 (02) mission)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: PubMed indexed title, authors and DOI on 6 Oct; Applied Optics deposited no abstract and the retry leg recovered none. By title, a full-field-of-view temporal calibration for the DPC instrument, correcting on-orbit response drift by data reconstruction. Polarimetric retrievals are the satellite side of aerosol loading, and a drifting on-orbit calibration propagates straight into the AOD that surface PM2.5 models are trained against - the same class of problem as field drift in a ground sensor, at a different scale. Relevance: moderate-high; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1080/02786826.2026.2737177",
+   "journal": "Aerosol Sci Technol",
+   "short": "Sharma et al. 2026",
+   "title": "Characterization of carbonaceous particles generated from three flame modes using a single burner to enable properties-based exposure studies",
+   "sub": "Mechanistic toxicology",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - carbonaceous particles from three flame modes on one burner (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Taylor & Francis deposited title, authors and DOI on 6 Oct with no abstract. By title, a single burner operated in three flame modes to generate carbonaceous particles of controlled and differing properties, explicitly to support properties-based rather than mass-based exposure studies. That framing is the open problem behind every toxicology record in this backfill: dose expressed as mass hides composition, and a generator that varies one property at a time is how it gets separated. Relevance: high; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129300",
+   "journal": "Environ Pollut",
+   "short": "Yadav et al. 2026",
+   "title": "The dual role of atmospheric HULIS in inducing climate forcing and oxidative stress in the northwestern Himalayas",
+   "sub": "Mechanistic toxicology",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - humic-like substances, light absorption and oxidative potential (by title)",
+   "geo": "India (northwestern Himalayas)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 6 Oct with no abstract. By title, HULIS measured for both light absorption (brown-carbon forcing) and oxidative stress, in a high-altitude Himalayan setting. HULIS is the fraction that links the optical property a low-cost sensor responds to with the oxidative potential that toxicology implicates, so a single study reporting both is more useful than two reporting one each. Relevance: high; on the retry list."
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nKlang Valley\nschool PM2.5"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno age-specific\nrecord"
+  },
+  {
+   "n": 0,
+   "note": "working age:\nno age-specific\nrecord"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nbrain MRI\ncohort"
+  }
+ ]
+}

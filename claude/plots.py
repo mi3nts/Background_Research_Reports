@@ -646,6 +646,10 @@ design_group.update({
     "In vitro": "Experimental / toxicology",
 })
 # 2026-10-07 run (3 Oct issue): engine-bench emissions record; two-sample MR without TWAS.
+# 2026-10-09 run (4 Oct issue): qualitative process evaluation nested in a filtration RCT.
+design_group.update({
+    "Qualitative study (within RCT)": "Review / synthesis",
+})
 design_group.update({
     "Engine dynamometer testing": "Chamber / laboratory",
     "Two-sample Mendelian randomisation": "Modelling / inventory",

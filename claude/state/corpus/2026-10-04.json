@@ -1,0 +1,99 @@
+{
+ "date": "2026-10-04",
+ "entry_window": "2026-10-04 -> 2026-10-04",
+ "PAPERS": [
+  {
+   "pmid": "42830401",
+   "doi": "10.1093/annweh/wxag081",
+   "journal": "Ann Work Expo Health",
+   "short": "Blackley et al. 2026",
+   "title": "Aerosol mitigation efficiency of high-volume suction systems during aerosol-generating dental procedures with patients",
+   "sub": "Occupational & indoor",
+   "design": "Field measurement",
+   "pm": "Direct-reading number and mass concentrations, PM4 (respirable) and PM10 (thoracic), with size distribution",
+   "geo": "USA (NIOSH, clinical dental operatories)",
+   "endpoint": "None (occupational exposure mitigation)",
+   "tier": "A",
+   "n": "Five commercial high-volume suction systems - standard HVE, three intraoral systems and one modified HVE - measured during real crown preparations (n=26) and ultrasonic scaling (n=25), with direct-reading instruments near the dentist and in the hallway. Procedure-to-background concentration ratios were modelled with covariates (suction flow rate, procedure duration, tooth location, scaler type and quadrant); a system counted as effective only when the 95% lower confidence limit of the ratio was <=1, i.e. indistinguishable from background. Limitation: unblinded single-site evaluation with modest per-system n, patients differ across procedures, and the short-duration ratio design cannot speak to a full clinical day. Relevance: high - this is the design a sensing group should copy. The estimand is 'did the control return the air to background', tested against the instrument's own noise, rather than a percentage reduction quoted without a comparison."
+  },
+  {
+   "pmid": "42829485",
+   "doi": "10.3310/nihropenres.13993.1",
+   "journal": "NIHR Open Res",
+   "short": "Rees et al. 2026",
+   "title": "Lessons learned from using high efficiency particulate air (HEPA) filtration units in care homes: interviews with care home staff, residents and relatives from the AFRI-c trial",
+   "sub": "Occupational & indoor",
+   "design": "Qualitative study (within RCT)",
+   "pm": "HEPA filtration units as the intervention; no PM measured in this component",
+   "geo": "United Kingdom (care homes, AFRI-c cluster RCT)",
+   "endpoint": "Acceptability and implementation",
+   "tier": "B",
+   "n": "Reflexive thematic analysis of interviews with 25 staff, 20 residents and 12 relatives inside the AFRI-c pragmatic cluster RCT, whose main result was that HEPA units did not reduce respiratory infections. Units became normalised but were judged unsuitable for some residents; lockable settings and wall fixing were asked for; cost was seen as prohibitive sector-wide, raising an equity concern that filtration would reach only residents who can pay. Maintenance burden was minor. Limitation: qualitative, post hoc, and conducted among people who already knew the trial was running; no measurement of unit runtime, filter loading or achieved air-change rate - which is the missing variable that would explain a null. Relevance: high - a filtration null without exposure verification is the standing weakness of this trial literature, and a logging low-cost PM node in each room is the cheap fix."
+  },
+  {
+   "pmid": "42828642",
+   "doi": "10.1007/s11274-026-05307-z",
+   "journal": "World J Microbiol Biotechnol",
+   "short": "Balabat et al. 2026",
+   "title": "Urban Road Dust as a Microbial Hotspot: Spatial Variation of Bacterial Communities and Metal Associations in the Philippines",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "Road dust (resuspendable coarse reservoir): 16S V3-V4 metabarcoding, trace metals, pollution indices",
+   "geo": "Philippines (Metro Manila, Cebu, Cagayan de Oro)",
+   "endpoint": "None (microbial community)",
+   "tier": "C",
+   "n": "Road dust from nine sites across three metropolitan areas profiled by 16S rRNA metabarcoding with PICRUSt2 functional prediction and trace-metal pollution indices. Proteobacteria and Actinobacteria dominated everywhere with a persistent core of Paracoccus, Acinetobacter, Kocuria and Deinococcus; alpha diversity did not differ between cities (Kruskal-Wallis p>0.05) but composition did (PERMANOVA R2=0.466, p=0.004). Paracoccus rose toward the most metal-laden Cagayan de Oro site and correlated with cobalt and nickel alongside raised predicted denitrification. Limitation: three sites per city, no replication within site, PICRUSt2 infers function rather than measuring it, and road dust is a reservoir - nothing here shows what becomes airborne or is inhaled. Relevance: low-moderate - the resuspended coarse fraction that low-cost optical nodes do see is biologically non-inert."
+  },
+  {
+   "pmid": "42829701",
+   "doi": "10.7717/peerj.21746",
+   "journal": "PeerJ",
+   "short": "Metris and Metris 2026",
+   "title": "Fungus above us: exploring the atmospheric mycobiome by aircraft",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field measurement",
+   "pm": "Airborne fungal bioaerosol, aircraft sampling 2022-2023 with remote-sensing and meteorological covariates",
+   "geo": "Europe (aircraft surveys; United Kingdom-based)",
+   "endpoint": "None (bioaerosol composition)",
+   "tier": "B",
+   "n": "Aircraft bioaerosol sampling across seasons, sequenced and joined to vegetation-productivity and meteorological data. Diversity fell with altitude and with increasing vegetation productivity; decomposers and pathogens dominated, with over 40% of taxa putative plant or animal pathogens (Neoascochyta, Cladosporium, Alternaria, Penicillium among the abundant genera); guild composition shifted with productivity and surface wind. Limitation: a small number of flight tracks stand in for a continent, relative abundance from amplicon data is not concentration, and viability is untested - 'pathogen' here is taxonomic assignment, not infectivity. Relevance: moderate - aircraft campaigns set the vertical context that ground bioaerosol sensors, which cannot resolve taxa at all, are implicitly assuming."
+  },
+  {
+   "pmid": "42830393",
+   "doi": "10.1093/carcin/bgag070",
+   "journal": "Carcinogenesis",
+   "short": "Gao et al. 2026",
+   "title": "Air pollution and early-onset lung cancer: from environmental carcinogenesis to early intervention strategies",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "Ambient and household PM2.5/PM10 with PAH, metal and VOC components (review)",
+   "geo": "Global",
+   "endpoint": "Early-onset lung cancer (mechanistic)",
+   "tier": "C",
+   "n": "Narrative review of mechanisms linking air pollution to early-onset lung cancer: genomic instability (DNA damage, telomere dysfunction, mitochondrial impairment, mutational signatures), epigenetic dysregulation, a tumour-promoting niche through CXCL13 and IL-1beta, immune evasion via PD-L1 and CD47-SIRPalpha, and respiratory-gut microbiome disruption, closing with candidate biomarkers and chemopreventive targets. Limitation: no systematic search or evidence grading, the 99%-above-guideline and >14%-of-lung-cancer-deaths framing is quoted rather than re-derived, and the biomarkers are called 'validated' on the strength of single studies. Relevance: low as evidence, moderate as a map of which mediators a cohort with measured personal exposure could actually test."
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 0,
+   "note": "childhood:\nno age-specific\nrecord"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno age-specific\nrecord"
+  },
+  {
+   "n": 2,
+   "note": "working age:\ndental staff,\ncare-home staff"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\ncare-home\nresidents (HEPA)"
+  }
+ ]
+}

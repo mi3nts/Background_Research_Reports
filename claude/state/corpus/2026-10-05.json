@@ -1,0 +1,239 @@
+{
+ "date": "2026-10-05",
+ "entry_window": "2026-10-05 -> 2026-10-05",
+ "PAPERS": [
+  {
+   "pmid": "42832702",
+   "doi": "10.1097/ede.0000000000002054",
+   "journal": "Epidemiology",
+   "short": "Batisse et al. 2026",
+   "title": "Long-term exposure to ultrafine particles and mortality from neurodegenerative diseases: a population-based cohort study",
+   "sub": "Neuro / mental health",
+   "design": "Retrospective cohort",
+   "pm": "High-resolution UFP number concentration and UFP size at residential postal code, 3-year moving average",
+   "geo": "Canada (Montreal and Toronto)",
+   "endpoint": "Dementia, Parkinson's disease, ALS mortality",
+   "tier": "A",
+   "n": "2.1 million adults in the Canadian Census Health and Environment Cohorts, 2001-2019, 19 million person-years and 20,560 neurodegenerative deaths. Per 10,000 particles/cm3 of UFP number, dementia mortality HR 1.22 (95% CI 1.17-1.27), strengthened after adjustment for UFP size; positive for every dementia subtype, largest for vascular dementia. Models were run with and without inverse-probability censoring weights for competing events and adjusted for co-pollutants. Limitation: postal-code exposure from a land-use-regression UFP surface, no mobility or indoor time, and cause of death on the death certificate under-ascribes dementia; UFP number and NO2 share the traffic gradient, so co-pollutant adjustment cannot fully separate them. Relevance: high - UFP is unregulated and unmeasured by every optical low-cost node, which sees mass, not number; this is the strongest current argument for CPC-class instruments in dense networks."
+  },
+  {
+   "pmid": "42831997",
+   "doi": "10.1007/s00439-026-02875-w",
+   "journal": "Hum Genet",
+   "short": "Tian et al. 2026",
+   "title": "Annual average exposure to ambient air pollution, polygenic risk, and incidence of major chronic diseases: a large-scale prospective cohort study",
+   "sub": "Other clinical endpoints",
+   "design": "Prospective cohort",
+   "pm": "Annual PM2.5, PM10, NO2, NOx at residence from land-use regression",
+   "geo": "United Kingdom (UK Biobank)",
+   "endpoint": "Cardiovascular, respiratory, neurodegenerative, hypertension, diabetes incidence",
+   "tier": "A",
+   "n": "313,534 UK Biobank participants with LUR annual pollutant estimates and weighted polygenic risk scores for each of five disease groups; Cox models with RERI and AP for additive interaction. PM2.5 carried the strongest association, HR 1.22 per 5 ug/m3 (95% CI 1.19-1.26); high genetic risk acted independently (diabetes HR 1.77 per SD of PRS), with significant additive interaction between high PRS and high PM2.5 for neurodegenerative disease (RERI 0.14) and diabetes (RERI 0.21). Limitation: UK Biobank is a healthy-volunteer cohort with a narrow PM2.5 range, the LUR surface is a single baseline-era estimate carried forward, and five outcomes with four pollutants invites selective emphasis - the interaction terms are modest and not corrected for multiplicity. Relevance: moderate - gene-environment interaction raises the value of resolving exposure well at the individual level, which is the case for personal rather than ambient monitoring."
+  },
+  {
+   "pmid": "42832616",
+   "doi": "10.1080/09603123.2026.2733112",
+   "journal": "Int J Environ Health Res",
+   "short": "Howlett-Downing and Wichmann 2026",
+   "title": "Triangulating health risks of PM2.5 and trace elements in Pretoria: evidence from health risk assessment, case-crossover, and concentration-response function analyses",
+   "sub": "Respiratory & allergic",
+   "design": "Time-stratified case-crossover",
+   "pm": "Sampled PM2.5 mass and PM2.5-bound trace elements, Apr 2017 - Feb 2020",
+   "geo": "South Africa (Pretoria)",
+   "endpoint": "Respiratory hospital admissions (ICD-10 J00-J99)",
+   "tier": "B",
+   "n": "Three methods applied to the same secondary dataset: hazard quotients, a case-crossover analysis and concentration-response functions. Hazard quotients exceeded unity in adults, children and infants; the case-crossover OR was 1.027 (95% CI 1.006-1.049) per 10 ug/m3 PM2.5. Meeting the South African standard would avert 158 admissions annually, rising to 342 and 748 under the WHO daily and annual guidelines; element-specific functions give 110-608. Limitation: the three methods are not independent evidence - they re-use one exposure series from a small number of sampling days, and summing element-specific attributable cases double-counts the mass they are part of; hazard quotients are screening-level and not comparable to epidemiological risk. Relevance: moderate - Southern African monitoring is thin, and a saturation low-cost network would resolve the within-city contrast this design cannot."
+  },
+  {
+   "pmid": "42833334",
+   "doi": "10.1016/j.envpol.2026.129270",
+   "journal": "Environ Pollut",
+   "short": "Chang et al. 2026",
+   "title": "Wintertime vertical stratification of air pollutants and meteorological associations within an urban forest canopy in Shenyang, China",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Long-term field measurement campaign",
+   "pm": "PM2.5, PM10 with O3, NO2, SO2, CO and meteorology at 1.5, 10 and 20 m",
+   "geo": "China (Shenyang)",
+   "endpoint": "None (vertical profile)",
+   "tier": "B",
+   "n": "A three-level monitoring mast inside an urban forest in a cold-climate northern Chinese city through the winter heating season. PM2.5 and PM10 were generally higher at 10 and 20 m than at pedestrian level, O3 and CO higher at 1.5 m, and NO2 and SO2 peaked mid-canopy; relative humidity and wind speed dominated the statistical and machine-learning associations, but height-dependently. Limitation: one site, one winter, no replication mast and no flux measurement, so the inversion of the usual near-ground maximum is described rather than explained - and at wintertime humidity, uncorrected optical PM readings are themselves height-correlated through the humidity profile. Relevance: high - siting guidance for low-cost networks assumes a well-mixed layer below canopy height; this is direct evidence that the 1.5 m reading is not the 20 m reading."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-13885-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Mei et al. 2026",
+   "title": "Synthesis of the tethered balloon system and other TRACER campaign measurements elucidates aerosol property profiles",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Long-term field measurement campaign",
+   "pm": "Vertical profiles of aerosol number concentration and size distribution; CCN inferred by kappa-Koehler",
+   "geo": "USA (Houston, Texas)",
+   "endpoint": "None (aerosol profile)",
+   "tier": "B",
+   "n": "149 tethered-balloon flights over greater Houston in summer during the DOE ARM TRACER campaign, with back-trajectory k-means clustering into marine, mixed and urban/long-range air masses. Profiles vary strongly with cluster, modulated by boundary-layer depth and coastal circulation; the marine cluster had CCN at 0.8% supersaturation below 1,000 cm-3, urban and mixed clusters higher. Limitation: one coastal city, one summer, and CCN is inferred from size distribution under an assumed kappa rather than measured, so composition heterogeneity propagates straight into the activated fraction; tethered-balloon sampling is intermittent and fair-weather-biased. Relevance: high - this is the measurement that exposes the central fiction of a surface network, namely that a 2 m reading represents the column a satellite retrieval sees."
+  },
+  {
+   "pmid": "42832517",
+   "doi": "10.1371/journal.pone.0359706",
+   "journal": "PLoS One",
+   "short": "Ketsakorn and Chaiyadej 2026",
+   "title": "Probabilistic health risk assessment of respirable dust exposure among stone carvers in Thailand using average daily dose and Monte Carlo simulation",
+   "sub": "Occupational & indoor",
+   "design": "Observational - cross-sectional",
+   "pm": "Personal respirable dust, NIOSH 7601, 8-h TWA across five task groups",
+   "geo": "Thailand",
+   "endpoint": "Incremental lifetime cancer risk (modelled)",
+   "tier": "C",
+   "n": "Personal sampling across mining, cutting, splitting, knocking and carving, with a 10,000-iteration Monte Carlo ILCR using US EPA exposure parameters. Mean respirable dust was below both the Thai OEL and the TLV everywhere, highest in carving at 0.051 mg/m3; ILCR stayed under 1e-6, highest in carving at 3.3e-7. Limitation: respirable dust mass is the wrong metric for a silica hazard - no crystalline silica fraction is reported, and an EPA inhalation-unit-risk framework applied to a mixed mineral dust produces a number with no established exposure-response behind it; small sample, one season. Relevance: low-moderate - the task-level contrast is exactly what a wearable logging monitor resolves and a single shift-average sample does not."
+  },
+  {
+   "pmid": "42832150",
+   "doi": "10.1007/s11356-026-38275-w",
+   "journal": "Environ Sci Pollut Res Int",
+   "short": "Chavan and Lataye 2026",
+   "title": "Application of Openair package in R programming and PCA: unveiling air quality dynamics and meteorological influences",
+   "sub": "Exposure assessment & modelling",
+   "design": "Monitoring-record analysis",
+   "pm": "2023 CAAQMS records: PM10, PM2.5 with six co-pollutants and four meteorological variables",
+   "geo": "India (Nagpur)",
+   "endpoint": "None (air quality baseline)",
+   "tier": "C",
+   "n": "A full year of regulatory monitoring data for a tier-2 Indian city analysed with openair and PCA. Winter AQI reached 492 (severe) in February with monsoon improvement; varimax PCA gave two components explaining 73.1% of variance, read as anthropogenic combustion (PM, NO2) and photochemistry (O3, temperature); PM2.5 and PM10 exceeded CPCB standards on 27-29 days per winter month. Limitation: descriptive reanalysis of one station-year with no source apportionment, no receptor model and no validation - PCA components here are correlation structure, not sources, and the policy recommendations do not follow from the analysis. Relevance: low as method, moderate as a reminder that tier-2 cities have one regulatory station and no spatial information at all."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17100974",
+   "journal": "Atmosphere",
+   "short": "Zhao et al. 2026b",
+   "title": "Pollution Characteristics, Influencing Factors and Health Risk Assessments of Mercury in Atmospheric PM2.5 from Xinxiang, China",
+   "sub": "Burden, policy & mitigation",
+   "design": "Source apportionment",
+   "pm": "PM2.5-bound mercury with OC/EC, water-soluble ions and trace elements, full-year 2015 sampling",
+   "geo": "China (Xinxiang, Henan)",
+   "endpoint": "Non-carcinogenic hazard index (modelled)",
+   "tier": "C",
+   "n": "Year-long filter sampling gives an annual mean PM2.5-bound Hg of 0.399 ng/m3, significantly higher in winter (p<0.001) and in the heating than the non-heating period, positively correlated with SO2, CO, PM2.5, OC, EC, Cl-, Zn and Ca and negatively with temperature, O3 and V - a coal-combustion signature. Hazard index 2.06e-3 (children) and 8.46e-4 (adults), both far below 1, with ingestion the dominant modelled pathway. Limitation: the samples are from 2015 and describe an emissions regime two major control phases out of date; an ingestion-dominant pathway for an airborne metal is an artefact of the EPA soil-oriented default parameters. Relevance: low - logged as a composition time point, not as a risk estimate."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.jaerosci.2026.106903",
+   "journal": "J Aerosol Sci",
+   "short": "Hazelwood et al. 2026",
+   "title": "Size-Resolved Particle Dry Deposition Velocities in a Controlled Spherical Chamber: Effects of Turbulence, Surface Complexity, and Particle Physicochemical Properties",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - size-resolved dry deposition velocity in a controlled chamber (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 5 Oct with no abstract. By title, a chamber determination of size-resolved dry deposition velocity against turbulence intensity, surface complexity and particle physicochemical properties. Deposition velocity is the term that sets indoor particle loss rates and therefore the inferred air-change rate in every filtration study that does not measure one, and it is the largest uncertainty in indoor-outdoor infiltration models. Relevance: potentially high; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103230",
+   "journal": "Atmos Pollut Res",
+   "short": "Zhao et al. 2026c",
+   "title": "Spatial Heterogeneity and Multi-scale Statistical Associations of Urban Air Pollution Revealed by Interpretable Machine Learning in Shenzhen, China",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - multi-scale spatial heterogeneity via interpretable ML (by title)",
+   "geo": "China (Shenzhen)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: title, authors and DOI deposited 5 Oct with no abstract. By title, an interpretable machine-learning treatment of intra-urban spatial heterogeneity at several scales in Shenzhen. Scale dependence of the predictor set is the question that decides how dense a network has to be before adding nodes stops buying information, so the result matters more than the method. Relevance: potentially high; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103226",
+   "journal": "Atmos Pollut Res",
+   "short": "Hopke et al. 2026",
+   "title": "Characterization of PM Pollution Episodes in Kuwait",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - PM episode characterisation (by title)",
+   "geo": "Kuwait",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: title, authors and DOI deposited 5 Oct with no abstract. By title, a characterisation of PM pollution episodes in Kuwait. Dust-dominated Gulf environments are where optical low-cost sensors fail hardest - coarse mineral dust sits outside the calibrated size and refractive-index range of nephelometric nodes - and the episode statistics are the input any regional network design needs. Relevance: potentially high; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129296",
+   "journal": "Environ Pollut",
+   "short": "Shi et al. 2026",
+   "title": "Compositional transition and coupled formation pathways of PM2.5 pollution in a typical industrial city: An empirical study based on Handan, China",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - PM2.5 compositional transition and coupled formation pathways (by title)",
+   "geo": "China (Handan, Hebei)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "C",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 5 Oct with no abstract. By title, an empirical account of how PM2.5 composition in a heavily industrial Hebei city has shifted and how its formation pathways couple. A compositional transition from primary to secondary is the slow change that silently alters the relationship between an optical sensor's scattering signal and gravimetric mass over years of a network's life. Relevance: moderate; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115364",
+   "journal": "Build Environ",
+   "short": "Zhao et al. 2026d",
+   "title": "Behavior-resolved bioaerosol exposure modeling reveals scale-dependent occupational risk in pediatric wards",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - behaviour-resolved bioaerosol exposure model in hospital wards (by title)",
+   "geo": "China (by journal and author affiliation; not asserted)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 5 Oct with no abstract. By title, a bioaerosol exposure model in paediatric wards resolved by occupant behaviour, reporting scale-dependent occupational risk. Behaviour-resolved models are the class of work that decides whether a fixed room monitor can stand in for a worker's exposure at all, and the paediatric ward is a setting where that substitution is routinely assumed. Relevance: potentially high; on the retry list."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Dementia mortality\nUFP number (per 10,000 cm-3)",
+   "exposure": "Residential UFP number concentration, 3-yr mean",
+   "est": 1.22,
+   "lo": 1.17,
+   "hi": 1.27,
+   "metric": "HR",
+   "src": "2.1 M adults, CanCHEC Montreal + Toronto"
+  },
+  {
+   "label": "Chronic disease incidence\nPM2.5 (per 5 ug/m3)",
+   "exposure": "Annual PM2.5 at residence, land-use regression",
+   "est": 1.22,
+   "lo": 1.19,
+   "hi": 1.26,
+   "metric": "HR",
+   "src": "313,534 participants, UK Biobank"
+  },
+  {
+   "label": "Respiratory admissions\nPM2.5 (per 10 ug/m3)",
+   "exposure": "Daily PM2.5, case-crossover",
+   "est": 1.027,
+   "lo": 1.006,
+   "hi": 1.049,
+   "metric": "OR",
+   "src": "Pretoria, Apr 2017 - Feb 2020"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\npaediatric ward\n(metadata only)"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno age-specific\nrecord"
+  },
+  {
+   "n": 1,
+   "note": "working age:\nstone carvers\n(personal RD)"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nUFP dementia\nmortality"
+  }
+ ]
+}

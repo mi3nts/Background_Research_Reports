@@ -1,0 +1,283 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{6 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-06\;\;\textcolor{Amber}{\textbar}\;\;Entry window 6 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;11 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{11}{RECORDS IN SCOPE\\(61 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}An emission-control policy moved mean particle diameter by
+27\,\% --- which is a calibration drift no sensor firmware will ever report.}\\[1.4mm]
+\footnotesize
+Dai and colleagues (\textit{ACP}) ran single-particle aerosol mass spectrometry through winter and summer
+emission-control periods in Yangzhou against matched normal periods, defining sulfur-to-nitrogen ratios in
+the gas phase, the particle phase and by particle number. Cutting NO$_x$ while SO$_2$ stayed flat raised
+the gas-phase ratio, lifted the particle-phase ratio by \textbf{$\sim$57\,\%} across particle classes, and
+expanded mean vacuum aerodynamic diameter by \textbf{27\,\%}. Enrichment was largest in particles carrying
+both black and organic carbon, least in BC-free inorganic particles.
+\textbf{Caveat:} control periods are confounded with season and meteorology, and ``causal inference'' is a
+strong label for an observational series with co-varying controls.
+\textbf{Why it matters for sensing:} a nephelometric node's mass estimate is a fixed assumption about size
+distribution and refractive index wrapped around a scattering measurement. A 27\,\% shift in mean diameter
+changes the scattering cross-section per unit mass directly --- so a network calibrated before an emission
+control reads differently after it, with no hardware change and nothing in the diagnostics to show for it.
+Co-location drift studies attribute this to the sensor. It is not the sensor.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Infiltration above 0.6 in naturally ventilated classrooms.} Ten Klang Valley primary schools
+across five land-use classes: indoor 24\,h PM$_{2.5}$ peaked at mixed industrial/port schools
+(\textbf{35.33\,$\pm$\,9.25}\,$\mu$g\,m$^{-3}$), outdoor at high-traffic schools (34.50\,$\pm$\,20.64), with
+mean \textbf{F$_{\textrm{inf}}$ $>$ 0.6}. Two buildings per class confounds land use with building, and
+F$_{\textrm{inf}}$ from indoor--outdoor ratios absorbs any indoor source --- but if it holds, outdoor
+network data is a usable proxy for children's exposure in this climate.
+
+\item \textbf{Brain structure, without numbers.} 4,276 adults with repeated MRI: higher long-term PM$_{2.5}$
+and PM$_{10}$ associated with accelerated grey-matter loss and greater white-matter-hyperintensity
+progression. The abstract reports \textit{no} effect size, interval, exposure contrast, cohort name or
+country, so the record is logged and cannot be entered as an estimate.
+
+\item \textbf{Italy's national attributable-burden platform.} PM$_{2.5}$ and NO$_2$ modelled at 1\,km by
+random forest for 2016--2024, population-weighted to municipality level against the 2021 census, and run
+through HRAPIE-2 functions to the WHO 5\,$\mu$g\,m$^{-3}$ counterfactual. The surface is validated against
+the monitors that train it, and municipality-scale population weighting erases the within-city contrast ---
+which is precisely the gap a dense network fills.
+
+\item \textbf{Port outflow at 4--10\,$\mu$g\,m$^{-3}$.} Four seasons of HR-ToF-AMS at a coastal receptor
+downwind of Busan: five PMF organic factors, frequent ultrafine growth events, and oxidised primary organic
+aerosol reaching \textbf{36\,\%} in autumn under north-easterly port transport. Growth events at that mass
+loading are invisible to a mass-reporting network.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 5 October issue closed with \texttt{last\_entry\_date} at 5 October. This issue collects
+\textbf{6 October in full}, continuous with it, and is the last day covered by the cached harvest. Harvest
+and screening were completed on the 6 October run; this run authored from that cache without re-querying.
+\textbf{Dailies for 7 and 8 October have not yet been harvested} and the W40 weekly (27 September--3
+October) is still owed; both follow.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 11 in-scope records. \textbf{Six of ten bands populated};
+\textit{Sensing} leads with three, \textit{Burden}, \textit{Exposure assessment} and \textit{Mechanistic
+toxicology} two each, and one each for \textit{Neuro} and \textit{Occupational \& indoor}. The measurement
+side holds 8 of 11 records --- the highest share of the backfill.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: \textbf{four} measurement campaigns (the AMS receptor
+site, the single-particle series, the school indoor--outdoor survey and the Kazakh elemental sampling),
+\textbf{four} metadata-only deposits, and one each for the imaging cohort, the national health-impact
+model and the coal-fire laboratory rig. Right --- only two records report a health endpoint, and one of
+those (the brain-imaging cohort) reports it without a number.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ only \textbf{four}, unspeciated PM or
+emissions three, PM$_{2.5}$ + PM$_{10}$ jointly two, and one each for size-resolved number distribution
+(the submicron AMS record) and optical properties (the HULIS deposit). Right --- geography: China and
+global / not stated \textbf{three} each, and one each for Europe, Southeast Asia, Central Asia, East Asia
+excluding China, and South Asia --- Kazakhstan is the first Central Asian record since 29 September.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: childhood one (the Klang Valley school measurement) and older
+adults one (the repeated-MRI cohort). In utero, adolescence and working age have no record --- a day
+dominated by atmospheric measurement rather than by population studies.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the 11 records. Measurement campaigns occupy
+sensing, exposure and occupational; the metadata-only block spans sensing, exposure and mechanistic
+toxicology; burden holds the only two modelling-type records, one national and one at bench scale.}
+
+\vspace{2mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}\textbf{No forest plot this issue.} No admitted
+abstract reports a PM effect estimate with a confidence interval. The brain-imaging cohort is the only
+record with an epidemiological estimand, and its abstract reports direction without magnitude, interval or
+exposure contrast; the Kazakh hazard quotients and the Italian attributable fractions are risk-assessment
+outputs, not estimated associations, and are excluded from the panel by the same rule that has excluded
+them all series. The f5 panel is absent by design, not by build failure.\par}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Wang et al. 2026c}
+{Long-Term Air Pollution Exposure and Brain Structural Decline: A Longitudinal Analysis}
+{Environ Pollut}
+{4,276 middle-aged and older adults with repeated brain MRI; global, grey- and white-matter volumes and white-matter hyperintensity burden regressed on modelled residential PM$_{2.5}$ and PM$_{10}$ in fully adjusted multivariable models. Higher long-term particulate exposure was associated with accelerated global and regional grey-matter loss and greater WMH progression, which the authors read as both a neurodegenerative and a cerebrovascular pathway. Limitation: the abstract gives no effect sizes, no confidence intervals, no exposure contrast and does not name the cohort or country - unusual for a quantitative imaging analysis, and it makes the result unassessable as reported; repeat-MRI subsamples are also selected for survival and compliance. Relevance: moderate - brain structure is the mediator between the UFP dementia-mortality signal and clinical disease, but this record cannot be entered as an effect estimate.}
+{10.1016/j.envpol.2026.129269}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Sharma et al. 2026}
+{Characterization of carbonaceous particles generated from three flame modes using a single burner to enable properties-based exposure studies}
+{Aerosol Sci Technol}
+{\textsc{metadata only.} Metadata-only record: Taylor \& Francis deposited title, authors and DOI on 6 Oct with no abstract. By title, a single burner operated in three flame modes to generate carbonaceous particles of controlled and differing properties, explicitly to support properties-based rather than mass-based exposure studies. That framing is the open problem behind every toxicology record in this backfill: dose expressed as mass hides composition, and a generator that varies one property at a time is how it gets separated. Relevance: high; on the retry list.}
+{10.1080/02786826.2026.2737177}
+
+\paperentry{Yadav et al. 2026}
+{The dual role of atmospheric HULIS in inducing climate forcing and oxidative stress in the northwestern Himalayas}
+{Environ Pollut}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 6 Oct with no abstract. By title, HULIS measured for both light absorption (brown-carbon forcing) and oxidative stress, in a high-altitude Himalayan setting. HULIS is the fraction that links the optical property a low-cost sensor responds to with the oxidative potential that toxicology implicates, so a single study reporting both is more useful than two reporting one each. Relevance: high; on the retry list.}
+{10.1016/j.envpol.2026.129300}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 2 records}{Clay}
+
+\paperentry{Mukhamediyarov et al. 2026}
+{Elemental Composition, Sources, and Health Risks of Ambient PM$_{2.5}$ in Ust-Kamenogorsk (Oskemen) and Pavlodar, Kazakhstan}
+{Atmosphere}
+{PCA separates a non-ferrous metallurgical profile in Ust-Kamenogorsk from coal fly ash, ferrous metallurgy and petrochemicals in Pavlodar. The risk arithmetic then reports cumulative hazard indices exceeding 1 by more than 500-fold, driven by Zn (HQinh 304.7) and Al (129.5), and carcinogenic risks for Cr and As up to 9x the 1e-4 threshold. Limitation: a hazard quotient of 300 for zinc is a sign that the reference concentration is being misapplied, not that residents are inhaling a toxic zinc dose - EPA inhalation RfCs do not exist for several of these elements and the substitutes used are oral values scaled by default breathing rates; sampling duration and n are not stated. Relevance: moderate for the Central Asian composition data, which is genuinely scarce; the risk numbers should not be propagated.}
+{10.3390/atmos17100977}
+
+\paperentry{Wang et al. 2026d}
+{Physics-inspired inductive spatiotemporal kriging for PM$_{2.5}$ with satellite gradient constraints}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 6 Oct with no abstract. By title, this is the central methodological problem of a sparse network - interpolating to unmonitored locations - attacked inductively (so that new sensors can be added without retraining) and constrained by satellite gradients rather than by a stationarity assumption. The Everglades record in the 2 October issue measured exactly how badly ordinary kriging and IDW fail day to day; this is the proposed repair. Relevance: high, the highest of any metadata-only record in this backfill; flagged for a full-text read as soon as the abstract appears.}
+{10.1016/j.atmosenv.2026.122398}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{Loh et al. 2026}
+{Seasonal characteristics of submicron aerosols in the coastal atmosphere of southeastern Korea: Influence of urban-port outflow}
+{Mar Pollut Bull}
+{Seasonal HR-ToF-AMS measurement at a coastal receptor site southwest of Busan, winter 2021 to autumn 2022. PM$_{1}$ ranged 4.23-10.0 $\mu$g\,m$^{-3}$; PMF resolved five organic factors including hydrocarbon-like, oxidised primary (OPOA), two oxygenated and biomass-burning. Ultrafine growth events were frequent, most in autumn, when OPOA reached 36\% alongside elevated black carbon under north-easterly transport from the port. Limitation: one receptor site with no upwind reference, so 'port influence' rests on wind sector rather than on a source-resolved tracer, and AMS does not measure refractory sea salt or dust - the submicron mass is non-refractory by construction. Relevance: high - growth events at 4-10 $\mu$g\,m$^{-3}$ of mass are invisible to a mass-reporting network, which is the recurring theme of this week's issues.}
+{10.1016/j.marpolbul.2026.120437}
+
+\paperentry{Dai et al. 2026}
+{Cross-phase partitioning of sulfur-nitrogen ratios and aerosol mixing-state evolution based on single-particle observations}
+{Atmos Chem Phys}
+{SPA-MS through winter and summer emission-control periods and matched normal periods, with three sulfur-to-nitrogen metrics (gas gSNR, particle pSNR, number-based nSNR) analysed by causal inference plus interpretable machine learning. Control periods cut NOx while SO$_2$ stayed roughly flat, raising gSNR, lifting pSNR by about 57\% across particle classes and expanding mean vacuum aerodynamic diameter by 27\%; enrichment was greatest in particles containing both black and organic carbon and least in BC-free inorganic particles. Limitation: emission-control periods are confounded with season and meteorology, and 'causal inference' on an observational time series with co-varying controls is a strong label for what remains an association. Relevance: high - a 27\% diameter shift under a control policy is a direct change in the optical cross-section a nephelometric sensor measures, i.e. a calibration drift caused by policy rather than by hardware.}
+{10.5194/acp-26-14015-2026}
+
+\paperentry{Zhang et al. 2026e}
+{Full field of view temporal calibration for the directional polarimetric camera onboard the GaoFen-5 (02) satellite based on a data reconstruction method}
+{Appl Opt}
+{\textsc{metadata only.} Metadata-only record: PubMed indexed title, authors and DOI on 6 Oct; Applied Optics deposited no abstract and the retry leg recovered none. By title, a full-field-of-view temporal calibration for the DPC instrument, correcting on-orbit response drift by data reconstruction. Polarimetric retrievals are the satellite side of aerosol loading, and a drifting on-orbit calibration propagates straight into the AOD that surface PM$_{2.5}$ models are trained against - the same class of problem as field drift in a ground sensor, at a different scale. Relevance: moderate-high; on the retry list.}
+{10.1364/ao.597069}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Othman et al. 2026}
+{Impact of Urban Land Use on Indoor Air Quality: Quantifying Ambient Particle Infiltration and Asthma Risk in Naturally Ventilated School Buildings}
+{Indoor Air}
+{Ten primary schools stratified by land use (high-traffic, industrial, residential, mixed industrial/high-traffic, mixed industrial/port) with paired indoor-outdoor PM$_{2.5}$ and PM$_{1}$. Indoor maxima were at mixed industrial/port schools (24 h PM$_{2.5}$ 35.33 +/- 9.25, PM$_{1}$ 23.79 +/- 5.87 $\mu$g\,m$^{-3}$); outdoor maxima at high-traffic schools (34.50 +/- 20.64 and 23.78 +/- 13.09); land-use class differences were significant (p<0.05) and the mean infiltration factor exceeded 0.6. Limitation: ten buildings across five classes is two per class, so the land-use contrast is confounded with building; Finf estimated from indoor-outdoor ratios without an independent air-change measurement absorbs any indoor source into the infiltration term. Relevance: high - Finf > 0.6 in naturally ventilated classrooms means outdoor network data is a usable proxy for children's exposure in this climate, which is the assumption most school studies make without testing.}
+{10.1155/ina/5050009}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{Ranzi et al. 2026}
+{Atlante Aria e Salute: methods for estimating the health impacts of air pollution and national application}
+{Epidemiol Prev}
+{Methodological description of the Air and Health Atlas, an interactive national platform. PM$_{2.5}$ and NO$_2$ are modelled at 1 km with random forests, converted to population-weighted exposure at municipality level against 2021 census blocks, and combined with provincial death-certificate rates through HRAPIE-2 concentration-response functions against the 5 $\mu$g\,m$^{-3}$ WHO counterfactual; 2019 is shown as an illustration, with pronounced north-south gradients. Limitation: population-weighted exposure at municipality scale cannot capture within-municipality contrast, the random-forest surface is validated against the same monitors that train it, and HRAPIE-2 functions are transferred from other populations. Relevance: high - this is the operational template a low-cost network would be asked to improve, and the 1 km population-weighted step is exactly where added density pays.}
+{10.19191/ep26.4-5.s1.a1030.092}
+
+\paperentry{Zhao et al. 2026e}
+{Thermal-oxygen evolution and atmospheric pollutant emission characteristics during the vertical propagation of underground coal fires}
+{Research Square (preprint)}
+{A scaled physical-similarity rig run from ignition to burnout with continuous monitoring at six depths. Thermal-oxygen evolution split into incubation, rapid heating, intensive reaction, rapid cooling and burnout; the upper layers burned out while the middle sustained reaction and the deepest was oxygen-limited; surface response lagged the seam. Particulate matter and light hydrocarbons were released early (CH4 and C2H6 concentrated in the first 40-60 h, at background by \textasciitilde{}80 h) while CO$_2$ and CO dominated later. Limitation: a similarity-scaled rig reproduces sequence, not magnitude - emission factors from it cannot be transferred to a real coal fire, and no scaling validation is offered; preprint. Relevance: moderate - the early-PM, late-CO sequence is a usable detection signature for surface sensor arrays over suspected underground fires.}
+{10.21203/rs.3.rs-10517753/v1}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{6 October 2026}, single day, continuous with the 5 October issue. Harvest
+and screening were completed on the \textbf{6 October} run and cached
+(\texttt{cache/2026-10-06/\_fresh.json}); this run authored from that cache without re-querying.
+\textbf{72} fresh candidates after cross-day deduplication, including \textbf{7} appended from the PubMed
+connector; \textbf{OpenAlex} HTTP 429 again; \textbf{arXiv} answered (148\,kB) with no entry dated
+6 October passing the recency gate. \textbf{11 admitted}, \textbf{61 rejected} with logged reasons.
+\textbf{Four records carried on metadata alone} (36\,\%) --- the fourth consecutive issue above 25\,\%,
+and one of them (\textit{Atmos.\ Environ.}, satellite-constrained inductive kriging) is the
+highest-relevance record of the day despite having no abstract. \textbf{Consensus} returned 10 calibration
+hits, \textbf{0 new}. \textbf{Scholar Gateway} fails with \texttt{ACCESS\_DENIED}.
+\textbf{ClinicalTrials.gov} (LastUpdatePostDate 3--6 October): EPIC-AIR \texttt{NCT07500948} and a
+CAN-EXACT update, both already in the trial watch. An \textit{Atmos.\ Environ.} retraction notice
+(drought and PM$_{2.5}$ in Texas) appeared in the window and concerns no record in this corpus. DOI gate:
+\textbf{0 fail, 1 warn} --- the \textit{Epidemiologia \& Prevenzione} supplement DOI resolves but is not in
+Crossref, which is normal for that publisher and was confirmed by eye. Abstracts remain the copyright of
+their respective publishers.\par}
+\end{keybox}
+
+\end{document}
