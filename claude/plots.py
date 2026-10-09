@@ -645,6 +645,11 @@ design_group.update({
 design_group.update({
     "In vitro": "Experimental / toxicology",
 })
+# 2026-10-07 run (3 Oct issue): engine-bench emissions record; two-sample MR without TWAS.
+design_group.update({
+    "Engine dynamometer testing": "Chamber / laboratory",
+    "Two-sample Mendelian randomisation": "Modelling / inventory",
+})
 
 _design_unmapped = set()
 def dgrp(d):

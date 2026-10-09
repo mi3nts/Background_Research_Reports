@@ -1,0 +1,307 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{3 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-03\;\;\textcolor{Amber}{\textbar}\;\;Entry window 3 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;14 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{14}{RECORDS IN SCOPE\\(45 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Constituent-specific lung-cancer risk in a quarter-million
+never-smokers --- and the constituent it fingers is the one low-cost sensors measure worst.}\\[1.4mm]
+\footnotesize
+Xia and colleagues (\textit{J.\ Hazard.\ Mater.}, tier A) followed \textbf{262,785} never-smokers in the
+China Kadoorie Biobank to \textbf{2,646} incident lung cancers and assigned annual PM$_{2.5}$ constituents
+from a satellite/ML reanalysis, 2004--2018. Per IQR: nitrate \textbf{HR 1.35} (1.23--1.48), ammonium
+\textbf{1.22} (1.13--1.31), chloride \textbf{1.20} (1.12--1.28); the quantile g-computation mixture gives
+\textbf{1.13} (1.07--1.19), with NO$_3^-$ and NH$_4^+$ the dominant contributors and an additive and
+multiplicative NO$_3^-\times$PRS interaction. \textbf{Caveat:} nitrate and ammonium are strongly collinear
+in any reanalysis product and are partly inherited from the total-mass predictors, so ``nitrate drives the
+risk'' may be ``the best-resolved component wins''.
+\textbf{Why it matters for sensing:} ammonium nitrate is semi-volatile. It evaporates in a heated inlet and
+in the warm optical cavity of a low-cost node, which is why nephelometric sensors under-read exactly the
+fraction this cohort implicates --- and why a composition-blind network cannot stratify the exposure that
+carries the effect.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Marine PM$_{2.5}$ by extrapolation.} XGBoost on AOD, meteorology and NO$_2$/CO/O$_3$/SO$_2$ gives
+2019--2024 PM$_{2.5}$ fields over the eastern China seas, falling west-to-east with Bohai Bay maxima and a
+visible 2020 drop; SHAP puts AOD first in spring--autumn, meteorology in winter. There are almost no marine
+ground monitors, so training and held-out validation both lean on coastal land sites --- open-water skill is
+unverified, and no shipping-emission predictor enters the model.
+
+\item \textbf{Waterpipe caf\'es as occupational environments.} Five operating venues in Al-Madinah:
+weekday PM$_{2.5}$ \textbf{285.5\,$\pm$\,149}\,$\mu$g\,m$^{-3}$, PM$_{10}$ \textbf{301.6\,$\pm$\,156},
+weekend TVOC 0.50\,mg\,m$^{-3}$, formaldehyde below reference. A PM$_{2.5}$/PM$_{10}$ ratio near 0.95 is the
+signature of pure combustion with no coarse fraction. Instrument and humidity correction unstated --- but a
+factor-of-two optical bias still leaves these an order of magnitude above guideline.
+
+\item \textbf{A properly bounded null.} Two-sample MR of six pollutants against otitis media with effusion
+(12,397 cases / 464,237 controls) finds nothing surviving FDR; the nominal PM$_{10}$ OR \textbf{1.56}
+(0.95--2.55) reverses with the 88-SNP set. The authors report minimum detectable ORs of \textbf{1.69--32.1},
+so moderate effects are not excluded --- and ambient-PM genetic instruments index residence and behaviour,
+not exposure.
+
+\item \textbf{Cold-start particle number.} A 1.6\,L GDI engine with an electrically heated catalyst plus
+secondary air over the first 80\,s of the cold WLTC cut THC 69.1\,\%, CO 65.7\,\% and NO$_x$ 80.6\,\% for
+26.7\,Wh; PN rose sharply at $-7\,^\circ$C coolant but fell $>$30\,\% under coordinated control. PN is
+reported only as a relative change --- no absolute count, size distribution or sub-23\,nm fraction, which is
+where cold-start GDI particles sit and where optical nodes are blind.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 2 October issue closed with \texttt{last\_entry\_date} at 2 October. This issue collects
+\textbf{3 October in full}, continuous with it. \textbf{Five scheduled runs (4--8 October) harvested and
+screened but did not author}, so dailies for 4--8 October and the W40 weekly (27 September--3 October) are
+still owed and follow in this backfill. One admitted record (an \textit{ES\&T} in-vitro immunotoxicology
+paper, \texttt{10.1021/acs.est.6c07515}) could not be written in this run and is held, not rejected; it
+enters a later issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 14 in-scope records. \textbf{Seven of ten bands populated};
+\textit{Other clinical}, \textit{Burden} and \textit{Sensing} carry \textbf{three} each, \textit{Mechanistic
+toxicology} two, and one each for \textit{Reproductive}, \textit{Exposure assessment} and
+\textit{Occupational \& indoor}. \textit{Cardiovascular}, \textit{Neuro} and \textit{Respiratory} are empty
+--- the day's only respiratory-adjacent record is a never-smoker lung-cancer cohort, filed under other
+clinical endpoints.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: \textbf{four} records carry no abstract and assert no
+design; \textit{modelling / inventory} and \textit{experimental / toxicology} hold \textbf{three} each (the
+machine-learning marine surface, the aviation health-impact model and the Mendelian-randomisation analysis;
+the mouse model and two in-vitro studies), with one each for the prospective cohort, the review, the indoor
+measurement campaign and the engine bench. Right --- \textbf{eight} records report no health endpoint.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: unspeciated PM or emissions \textbf{six} (the four
+metadata-only deposits, the engine bench and the aviation burden), PM$_{2.5}$ only \textbf{five},
+PM$_{2.5}$ + PM$_{10}$ jointly two (the waterpipe caf\'es and the MR analysis), PM$_{10}$ only one. The
+constituent cohort is filed under PM$_{2.5}$; no record reports particle number or composition as its
+primary metric. Right --- geography: China \textbf{five}, global / not stated \textbf{three}, East Asia
+excluding China \textbf{three} (both Korean laboratory studies and the engine bench), and one each for
+Europe, South Asia and the Middle East \& North Africa.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: in utero one (the gestational mouse preeclampsia model), working
+age one (the CKB never-smoker cohort, adult at baseline); childhood, adolescence and older adults have no
+age-specific record. The in-utero entry is experimental, not a human birth cohort.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the 14 records. The metadata-only block sits
+across sensing and burden; toxicology concentrates in mechanistic and reproductive; the measurement and
+modelling cells are each occupied once.}
+
+\vspace{2mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Five ratio estimates with 95\,\% CIs, log scale. The four hazard ratios are per-IQR constituent and
+mixture effects from one cohort (China Kadoorie Biobank never-smokers) and share cases, so they are not
+poolable with each other. The fifth is the two-sample MR odds ratio for PM$_{10}$ and otitis media with
+effusion --- a different estimand on a genetic instrument, plotted for scale, and it crosses unity. The
+aviation burden estimate is a death count, not a ratio, and does not enter the panel.}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Ma et al. 2026}
+{Maternal PM$_{2.5}$ exposure induces preeclampsia-like phenotypes in mice through placental angiogenic dysfunction and lncRNA-RUNX1 dysregulation}
+{J Environ Manage}
+{C57BL/6J dams given intranasal heating-season PM$_{2.5}$ through gestation developed raised blood pressure at E13.5 and E17.5, proteinuria, lower VEGF and PlGF, higher TNF-alpha, IL-6 and sFlt-1, and abnormal labyrinth architecture with impaired angiogenesis; ET-1 and NO were unchanged. Transcriptomics plus ChIP/RIP implicated lncRNAs NONMMUT087808.1 and NONMMUT044449.2 acting through RUNX1. Limitation: 3 mg/kg bolus intranasal instillation is far above any ambient-equivalent deposited dose and bypasses the nasal-pharyngeal filter, so the phenotype demonstrates sufficiency, not ambient relevance; one PM source, no filtered-air-plus-vehicle dose-response. Relevance: moderate - the sFlt-1/PlGF axis is measurable in human pregnancy and is the natural mediator to test against measured exposure.}
+{10.1016/j.jenvman.2026.131066}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Zhang et al. 2026c}
+{PM$_{2.5}$ exposure impairs BMSC function and dysregulates mitochondrial oxidative stress: multi-omics insights into potential osteoporotic mechanisms}
+{Free Radic Biol Med}
+{Rat BMSCs exposed to PM$_{2.5}$ lost viability, cytoskeletal integrity, proliferation and migration, with suppressed osteogenesis via beta-catenin/Runx2, raised ROS and disturbed mitochondrial homeostasis. Transcriptomics gave 2,372 DEGs (911 up / 1,461 down) and metabolomics 171 DEMs, converging on cAMP signalling; forskolin rescued viability, ROS, membrane potential, migration and differentiation. Limitation: a single pooled PM$_{2.5}$ sample of unstated composition at unstated dose, applied directly to a cell type that in vivo sits behind the alveolar barrier - the rescue is strong internal evidence for the pathway but says nothing about delivered dose at the marrow. Relevance: low for sensing, moderate for the bone-outcome literature that epidemiology has begun to report.}
+{10.1016/j.freeradbiomed.2026.10.004}
+
+\paperentry{Lee et al. 2026b}
+{Curcumin-Loaded Nanospheres Attenuate Fine Dust (PM$_{10}$)-Induced Cellular Toxicity by Suppressing Reactive Oxygen Species-Dependent Signaling in Human Keratinocytes}
+{Cell Biol Int}
+{PM$_{10}$ reduced HaCaT viability and raised ROS, ERK, p38 and NF-kB activity, shifted Bax/Bcl-2, cleaved caspase-3 and processed IL-1beta; curcumin-loaded nanospheres at 1e-4 ug/mL restored viability and blunted each step, as did NAC and pathway inhibitors. Limitation: this is a formulation paper - the PM$_{10}$ arm is a generic oxidative-stress stimulus with no composition, dose-response or endotoxin control, and an effect at 1e-4 ug/mL with none at higher unformulated doses is a non-monotonic claim that needs replication before it means anything. Relevance: low - logged for completeness of the dermal-endpoint strand, not as mechanism.}
+{10.1002/cbin.70222}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 1 record}{Clay}
+
+\paperentry{Wen and Chang 2026}
+{Estimating marine PM$_{2.5}$ concentrations and exploring the drivers over the eastern China seas using multi-source data and machine learning}
+{Environ Pollut}
+{BPNN, random forest and XGBoost compared under sample-, spatial- and temporal-held-out validation for PM$_{2.5}$ over the Bohai, Yellow and East China seas; XGBoost best. Estimated fields fall west-to-east and north-to-south with maxima in Bohai Bay and off Shandong, a declining trend with winter maxima, a visible 2020 drop, and SHAP attributing spring-autumn variance to AOD and winter variance to meteorology. Limitation: there are almost no marine ground monitors, so training and validation both lean on coastal land sites - held-out skill over open water is unverified and the 'marine' field is an extrapolation; no shipping-emission predictor. Relevance: moderate - the obvious use case for buoy- or vessel-mounted low-cost nodes is precisely this validation gap.}
+{10.1016/j.envpol.2026.129276}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{Rawat et al. 2026}
+{Integrated Assessment of PM$_{2.5}$ in the Central Himalaya using Satellite, Reanalysis, and a new In-situ CUPI Sensor network}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 3 Oct with no abstract; Europe PMC and Semantic Scholar returned nothing and Scholar Gateway is still refusing the connection. By title this is exactly the fusion problem this watch tracks - a new in-situ sensor network (CUPI) evaluated against satellite and reanalysis PM$_{2.5}$ in complex mountain terrain, where both gridded products are weakest. Relevance: potentially high; on the retry list, and worth a full-text read when the abstract appears.}
+{10.1016/j.atmosenv.2026.122395}
+
+\paperentry{Chen et al. 2026b}
+{Linking Aerosol Chemical Composition to Volatility: A Predictive Parameterization and Implications for Future Clean Air}
+{J Aerosol Sci}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 3 Oct without an abstract. By title, a parameterisation predicting aerosol volatility from chemical composition. Volatility is the quantity that decides how much of an ambient aerosol survives the heated inlet of a reference monitor or the warm optical cavity of a low-cost sensor, so a composition-based predictor is directly relevant to the semi-volatile bias that separates sensor and FEM mass. Relevance: potentially high; on the retry list.}
+{10.1016/j.jaerosci.2026.106902}
+
+\paperentry{Kang et al. 2026}
+{Moisture-coupled aerosol filtration in moss-based porous media: enhanced particle capture and aerodynamic resistance trade-off}
+{Build Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 3 Oct with no abstract. By title, a filtration study of moss-based porous media in which moisture improves particle capture at a cost in aerodynamic resistance. The efficiency-vs-pressure-drop trade-off is the same constraint that governs inlet and filter design in gravimetric samplers and in filtered-air intervention trials. Relevance: low-moderate; on the retry list.}
+{10.1016/j.buildenv.2026.115363}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Aljabri et al. 2026}
+{Indoor Air Quality and Exposure Characterization in Operational Waterpipe Cafes: Field Measurements of Particulate and Volatile Pollutants in Al-Madinah Al-Munawwarah}
+{Indoor Air}
+{Direct measurement in five operating waterpipe cafes on weekdays and weekends: mean weekday PM$_{2.5}$ 285.5 +/- 149 $\mu$g\,m$^{-3}$ and PM$_{10}$ 301.6 +/- 156 $\mu$g\,m$^{-3}$, weekend TVOC 0.50 mg/m3, formaldehyde below short-term reference values. Variability tracked smoking intensity and ventilation. The PM$_{2.5}$/PM$_{10}$ ratio near 0.95 is the signature of a pure combustion source with no coarse fraction. Limitation: instrument make, calibration and whether an optical sensor was humidity- or composition-corrected are not stated - charcoal and tobacco smoke is exactly where optical PM monitors read high; five venues, no personal sampling, no worker shift-length exposure. Relevance: high for occupational indoor monitoring, where a factor-of-two optical bias still leaves concentrations an order of magnitude above guideline.}
+{10.1155/ina/8494753}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 3 records}{Coral}
+
+\paperentry{Quadros et al. 2026}
+{Global air quality and human health impacts of growing aircraft emissions}
+{Commun Earth Environ}
+{Global aircraft emissions projected 2019-2040 and run through a chemistry transport model. 2019: 33,900 (95\% CI 23,500-45,600) PM$_{2.5}$ deaths and 24,600 (15,500-34,200) O$_3$ deaths attributable to aviation. By 2040 these rise 58\%/82\% (low), 119\%/148\% (baseline) and 169\%/205\% (high scenario); the non-aviation background shifts aircraft impacts by up to 44\%. Limitation: the CIs propagate concentration-response uncertainty only, not CTM, inventory (especially cruise NOx-nitrate) or grid resolution, which dominate a marginal-sector estimate; most PM$_{2.5}$ impact is secondary nitrate and sulfate far from airports. Relevance: moderate - the near-airport UFP signal low-cost networks can see is not the mass-based burden counted here.}
+{10.1038/s43247-026-03732-4}
+
+\paperentry{Lee et al. 2026c}
+{Exhaust Emission Characteristics of Gasoline Engines with Secondary Air Systems and Electrically Heated Catalysts in Cold-Start WLTC Mode}
+{ACS Omega}
+{A 1.6 L GDI engine with warm-up and underfloor catalysts, an electrically heated catalyst (EHC) and secondary air injection (SAI) was run over the cold WLTC phase, including a -7 C coolant case. EHC + SAI over the first 80 s cut THC 69.1\%, CO 65.7\% and NOx 80.6\% for 26.7 Wh; best strategy was EHC pre-heat 50 s before start, held 30 s after. SAI without EHC raised CO. PN rose sharply in the cold case but optimised EHC-SAI coordination cut it by >30\%. Limitation: one engine, one calibration, dynamometer cycle rather than real driving, and PN is reported only as a relative reduction - no absolute PN, size distribution or sub-23 nm fraction, which is where cold-start GDI particles sit. Relevance: moderate - cold-start PN is the largest remaining tailpipe contribution in urban low-cost-network data, and sub-23 nm particles are invisible to the optical nodes watching for it.}
+{10.1021/acsomega.6c05980}
+
+\paperentry{Zhang et al. 2026d}
+{Impact of strong biomass burning in Northeast China: air pollution, enhancement ratio among pollutants, and health risk}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Metadata-only record: title, authors and DOI deposited 3 Oct with no abstract. By title, an episode study of strong agricultural biomass burning in Northeast China reporting enhancement ratios among co-emitted pollutants and a health-risk estimate. Enhancement ratios (dPM / dCO, for instance) are the quantity that lets a sparse network attribute an episode to burning rather than to secondary formation, so the numbers matter more than the burden claim. Relevance: moderate; on the retry list.}
+{10.1016/j.apr.2026.103224}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 3 records}{Slate}
+
+\paperentry{Xia et al. 2026}
+{Long-term exposure to fine particulate matter constituents and lung cancer risk in Chinese never-smokers}
+{J Hazard Mater}
+{262,785 never-smokers in the China Kadoorie Biobank, 2,646 incident lung cancers; time-dependent Cox models per IQR of each constituent, quantile g-computation for the mixture, and a polygenic risk score for interaction. HR per IQR: nitrate 1.35 (1.23-1.48), ammonium 1.22 (1.13-1.31), chloride 1.20 (1.12-1.28); mixture HR 1.13 (1.07-1.19), dominated by NO$_3$- and NH4+; additive and multiplicative NO$_3$- x PRS interaction. Limitation: constituents come from one satellite/ML reanalysis in which nitrate and ammonium are strongly collinear and partly inherited from total-mass predictors, so 'nitrate drives the risk' may be 'the best-resolved component wins'; second-hand smoke and cooking fuel only partly captured. Relevance: high - constituent-specific risk is the argument for composition-capable nodes (nitrate is semi-volatile and biased low on heated optical sensors).}
+{10.1016/j.jhazmat.2026.143759}
+
+\paperentry{Yang and Liu 2026}
+{No evidence for large causal effects of six air pollutants on non-suppurative otitis media: a two-sample Mendelian randomization study}
+{medRxiv (preprint)}
+{Two-sample MR with UK Biobank pollutant GWAS and FinnGen R13 OME (12,397 cases, 464,237 controls); IVW primary, full pleiotropy battery, positive (asthma, rhinitis, CRS) and negative (suppurative OM) controls. No pollutant survived FDR; the nominal PM$_{10}$ OR 1.56 (0.95-2.55) reversed with the 88-SNP set (0.64, 0.24-1.69). Minimum detectable ORs 1.69-32.1, so moderate effects are not excluded - the authors say so. Limitation: 'genetic instruments for ambient PM' index residential and behavioural traits, not exposure; null MR here is uninformative by construction, and MVMR F < 10. Relevance: low - included as a properly bounded null, not as evidence of absence.}
+{10.64898/2026.09.30.26364391}
+
+\paperentry{Sandal et al. 2026}
+{Disasters and hazard exposure in end-stage kidney disease: a scoping review of patient outcomes}
+{Clin Kidney J}
+{PRISMA scoping review: 10,040 screened, 30 studies, \textasciitilde{}1.07 million dialysis patients and 64,531 transplant recipients. Poor air quality was associated with 5-139\% higher mortality; extreme heat 9-45\%; 23-59\% of patients had dialysis disruption in disasters. Limitation: scoping design, no pooling or risk-of-bias grading, and 'poor air quality' spans wildfire smoke, PM$_{2.5}$ increments and AQI categories, so the 5-139\% range is not an effect size. Relevance: low-moderate - dialysis patients are an identifiable, routinely contacted population where sensor-triggered alerts could plausibly be tested.}
+{10.1093/ckj/sfag318}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{3 October 2026}, single day, continuous with the 2 October issue. Harvest and
+screening for this day were completed on the \textbf{6 October} run and cached
+(\texttt{cache/2026-10-03/\_fresh.json}); this run authored from that cache without re-querying, so the
+per-source counts are as logged then: \textbf{PubMed}, \textbf{Europe PMC}, \textbf{Crossref by ISSN} and
+the \textbf{PubMed connector} (\texttt{[EDAT]} 3--5 October, 17 PMIDs merged across three days) contributing
+\textbf{60} fresh candidates after cross-day deduplication; \textbf{OpenAlex} HTTP 429; \textbf{arXiv} no
+entry dated 3 October. \textbf{14 admitted}, \textbf{45 rejected} with logged reasons, \textbf{1 held} to a
+later issue. \textbf{Four records carried on metadata alone} (29\,\%, a series high) --- all four are
+Elsevier or Wiley deposits with no abstract, and the abstract-retry leg recovered none of them.
+\textbf{Consensus} returned 10 calibration hits, \textbf{0 new}. \textbf{Scholar Gateway} fails with
+\texttt{ACCESS\_DENIED} and has now been unavailable for eleven days. \textbf{ClinicalTrials.gov}:
+EPIC-AIR (\texttt{NCT07500948}, Leicester, $n$=80, real-time PM$_{2.5}$/PM$_{10}$/NO$_2$ guidance in cardiac
+and pulmonary rehabilitation) is new in the window and enters the trial watch. DOI gate: \textbf{0 fail,
+0 warn}. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

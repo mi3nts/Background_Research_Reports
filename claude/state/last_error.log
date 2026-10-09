@@ -27,3 +27,27 @@ Secondary sandbox issues seen on this run (worked around, not fatal):
     pre-migration proofing debris could only be untracked (git rm --cached) and
     gitignored, not deleted. Stray .git/lk.* and .git/index.lock.*.bak files are
     harmless leftovers of that workaround; delete them on a local checkout.
+2026-10-06T14:55Z run halted before authoring. Harvest + screen complete and cached for 3, 4, 5 Oct
+(cache/<day>/_fresh.json; cross-day dedup applied; abstracts fetched for candidates). Fresh: 3 Oct 60,
+4 Oct 13, 5 Oct 52. PubMed connector EDAT 3-5 Oct 17 PMIDs (merged). Consensus 10 hits, 0 new.
+Scholar Gateway ACCESS_DENIED. Trials: EPIC-AIR NCT07500948 (new, not yet in trials.json), CAN-EXACT update.
+Nothing written to corpus/seen/metrics/manifest; last_entry_date still 2026-10-02. W40 weekly not built.
+Next run: author 3, 4, 5 Oct from the cached _fresh.json, then W40 (27 Sep-3 Oct, filed under 3 Oct).
+2026-10-07T06:2xZ run halted during authoring (no issue built). New since 6 Oct run: 6 Oct harvested+screened
+(cache/2026-10-06/_fresh.json, 72 incl. 7 PubMed-connector appends; OpenAlex 429; arXiv 148 kB); abstract
+retry run for 3, 5, 6 Oct candidates. Screening decisions (fresh-index admit lists, not yet written):
+  3 Oct: 2,3,5,10,21,22,23,29,35,39,53,54,55,56,58  (15)
+  4 Oct: 0,2,3,11,12                                  (5)
+  5 Oct: 0,2,3,4,5,6,15,17,18,21,34,35,43             (13)
+  6 Oct: 0,2,3,7,8,21,24,26,43,50,58                  (11)
+Consensus 10 hits, 0 new. Scholar Gateway ACCESS_DENIED. Trials (LastUpdatePostDate 3-6 Oct): EPIC-AIR
+NCT07500948 (Leicester, 80, real-time PM2.5/PM10/NO2 guidance in cardiac/pulmonary rehab; not yet in
+trials.json), CAN-EXACT update. Atmos Environ retraction notice (drought/PM2.5 Texas) - not in corpus.
+Still owed: dailies 3-6 Oct, W40 weekly (27 Sep-3 Oct, under 3 Oct). last_entry_date still 2026-10-02.
+2026-10-08T04:2xZ run (7 Oct 23:1x CDT) halted during authoring of the 3 Oct issue: the authoring step was
+interrupted mid-write. Partial _mk_2026_10_03.py moved to build/trash/ (gitignored; mount is delete-restricted).
+plots.py gained two design_group keys ("Engine dynamometer testing", "Two-sample Mendelian randomisation") - harmless, uncommitted.
+Nothing written to corpus/seen/metrics/manifest; last_entry_date still 2026-10-02.
+Still owed: dailies 3-7 Oct (7 Oct not yet harvested), W40 weekly (27 Sep-3 Oct, under 3 Oct). Screening admit lists above unchanged.
+2026-10-09T04:2xZ run (8 Oct 23:1x CDT) halted again while writing the 3 Oct issue file: the authoring step was stopped mid-write (third consecutive run to stop at this point). Partial _mk_2026_10_03.py moved to build/trash/.
+Nothing written to corpus/seen/metrics/manifest; last_entry_date still 2026-10-02. Still owed: dailies 3-8 Oct (7, 8 Oct not harvested), W40 weekly. Admit lists above unchanged.
