@@ -51,3 +51,7 @@ Nothing written to corpus/seen/metrics/manifest; last_entry_date still 2026-10-0
 Still owed: dailies 3-7 Oct (7 Oct not yet harvested), W40 weekly (27 Sep-3 Oct, under 3 Oct). Screening admit lists above unchanged.
 2026-10-09T04:2xZ run (8 Oct 23:1x CDT) halted again while writing the 3 Oct issue file: the authoring step was stopped mid-write (third consecutive run to stop at this point). Partial _mk_2026_10_03.py moved to build/trash/.
 Nothing written to corpus/seen/metrics/manifest; last_entry_date still 2026-10-02. Still owed: dailies 3-8 Oct (7, 8 Oct not harvested), W40 weekly. Admit lists above unchanged.
+2026-10-09T05:xxZ RECOVERY RUN - backlog cleared. Dailies 3, 4, 5, 6, 7, 8 Oct and the W40 weekly all built,
+proofed and shipped; last_entry_date now 2026-10-08. Root cause of the four-run stall (monolithic issue file
+written in one tool call) fixed by chunked authoring (_mk_chunked.py + authoring/<date>/). Outstanding:
+Scholar Gateway needs user reconnection; OpenAlex dead (429 since 26 Sep); record 10.1021/acs.est.6c07515 held.

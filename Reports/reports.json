@@ -1,6 +1,14 @@
 {
   "daily": [
     {
+      "file": "PM-Research-Watch_2026-10-08.pdf",
+      "title": "Daily digest \u2014 8 Oct 2026"
+    },
+    {
+      "file": "PM-Research-Watch_2026-10-07.pdf",
+      "title": "Daily digest \u2014 7 Oct 2026"
+    },
+    {
       "file": "PM-Research-Watch_2026-10-06.pdf",
       "title": "Daily digest \u2014 6 Oct 2026"
     },
@@ -290,6 +298,10 @@
     }
   ],
   "weekly": [
+    {
+      "file": "PM-Research-Watch-Weekly_2026-10-03.pdf",
+      "title": "Week 40 \u00b7 27 Sep \u2013 3 Oct 2026"
+    },
     {
       "file": "PM-Research-Watch-Weekly_2026-09-26.pdf",
       "title": "Week 39 \u00b7 20 Sep \u2013 26 Sep 2026"

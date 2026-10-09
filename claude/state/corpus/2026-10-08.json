@@ -1,0 +1,308 @@
+{
+ "date": "2026-10-08",
+ "entry_window": "2026-10-08 -> 2026-10-08",
+ "PAPERS": [
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-11182286/v1",
+   "journal": "Research Square (preprint)",
+   "short": "Conformal PM2.5 mapping 2026",
+   "title": "Preregistered External Validation of Spatially Valid Conformal Prediction for Air-Pollution Exposure Mapping in China",
+   "sub": "Exposure assessment & modelling",
+   "design": "Statistical model",
+   "pm": "Province-level population-weighted PM2.5, 1998-2024 (n=837), with distribution-free prediction intervals",
+   "geo": "China (provincial)",
+   "endpoint": "None (uncertainty quantification)",
+   "tier": "A",
+   "n": "A preregistered external validation - rare in this literature - of spatially valid conformal prediction against gradient boosting, with an acceptance band of [0.85, 0.95] on pooled coverage declared in advance. Under spatial hold-out the spatially weighted method reached 0.873 coverage at nominal 90% (gradient boosting: 0.486), 5 of 7 macro-regions met the block criterion (worst, North China, 0.719), and interval widths matched equal-weight conformal prediction, so coverage was not bought with wider intervals. Under temporal hold-out coverage fell to 0.794, outside the band, and the preregistered joint hypothesis failed - traced to the sharp post-2017 PM2.5 decline. Limitation: province-level annual means are a very coarse spatial unit; coverage there says little about a 1 km surface, and the temporal failure is the one that matters for forecasting. Relevance: high - every exposure map in this corpus ships point estimates with no interval, and this is the first record in the series to preregister the test and report the failure."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c10850",
+   "journal": "Environ Sci Technol",
+   "short": "Budapest deposition 2026",
+   "title": "Aerosol Deposition in the Human Respiratory System from Distinct Urban Sources Using Multiple Exposure Metrics",
+   "sub": "Exposure assessment & modelling",
+   "design": "Exposure model (secondary data)",
+   "pm": "Source-apportioned particle number size distributions, 6-1000 nm, with lung deposition modelling",
+   "geo": "Hungary (Budapest urban background)",
+   "endpoint": "None (deposited dose)",
+   "tier": "A",
+   "n": "Source apportionment of particle number at an urban background site feeds a lung deposition model under reference breathing conditions. Most particles reach the deep lung with maximum deposition at airway generations 17-21 depending on activity; deposition fraction varies by source from 76% (new particle formation) to 27% (solid fuel combustion). Exercise raises total deposition and shifts it from extra-thoracic to alveolar; deposition rates are more sensitive to activity than deposition fractions, and number and surface-area curves are similar in shape but rank sources differently. Limitation: a deposition model, not a measurement - ICRP-type models are calibrated on healthy adults at rest and carry large uncertainty below 20 nm, exactly where the new-particle-formation fraction sits. Relevance: high - a factor of nearly three in deposited fraction between sources at the same ambient number concentration is the clearest statement in this backfill that mass, and even number, is not dose."
+  },
+  {
+   "pmid": "42844301",
+   "doi": "10.1038/s41467-026-77632-8",
+   "journal": "Nat Commun",
+   "short": "China BC burden 2026",
+   "title": "The Hidden Health and Climate Burden of Black Carbon under China's Dual Carbon Strategy",
+   "sub": "Burden, policy & mitigation",
+   "design": "Health impact model",
+   "pm": "Localized black carbon emission inventory with revised health risk function; CMIP6 comparison",
+   "geo": "China (national)",
+   "endpoint": "Premature mortality; radiative forcing",
+   "tier": "A",
+   "n": "A localized BC inventory and revised risk function put over 540,000 premature deaths attributable to black carbon in China in 2015 - more than twice previous estimates - while the CMIP6 inventory is found to overestimate BC radiative forcing by 45%. Projections suggest demographic ageing may offset the health gains from falling emissions. Limitation: a doubled burden rests on a 'revised health risk function' whose derivation is the entire result and cannot be checked from the abstract; BC-specific concentration-response functions are confounded with co-emitted species in every source study they come from, so attributing 540,000 deaths to BC rather than to combustion mixture is a strong claim. Relevance: high - BC is measurable by low-cost aethalometry, and the inventory-vs-measurement gap this paper quantifies is what a dense BC network would close."
+  },
+  {
+   "pmid": "42849692",
+   "doi": "10.1016/j.envpol.2026.129302",
+   "journal": "Environ Pollut",
+   "short": "Beijing CKD cohort 2026",
+   "title": "Association between Long-term Exposure to Air Pollution and Incident Chronic Kidney Disease among Adults in Beijing, China",
+   "sub": "Other clinical endpoints",
+   "design": "Prospective cohort",
+   "pm": "Annual PM10, PM2.5, NO2, CO and O3, with a composite pollution score",
+   "geo": "China (Beijing)",
+   "endpoint": "Incident chronic kidney disease (eGFR-defined)",
+   "tier": "B",
+   "n": "15,580 adults in the Beijing Air Pollution and Population Health Cohort, 664 incident CKD cases 2019-2025, time-varying Cox models. Per 10 ug/m3: PM10 HR 1.18 (1.06-1.31) and CO 1.02 (1.01-1.03) were significant; PM2.5 1.22 (0.99-1.50) and NO2 1.17 (0.96-1.43) were positive but crossed unity; O3 was inverse, 0.77 (0.68-0.87). The composite score gave 1.51 (1.07-2.12) per IQR, with stronger associations in women, older adults and urban residents. Limitation: six years of follow-up in one city where all pollutants fell together makes single-pollutant HRs nearly uninterpretable - the inverse ozone estimate is the tell, since ozone rose as PM fell; eGFR-defined incident CKD is sensitive to a single creatinine measurement. Relevance: moderate - kidney endpoints are under-studied, but this design cannot separate the pollutants."
+  },
+  {
+   "pmid": "42844605",
+   "doi": "10.1186/s12889-026-29130-1",
+   "journal": "BMC Public Health",
+   "short": "CLHLS indoor constituents 2026",
+   "title": "Association between exposure to indoor PM2.5 constituents and mortality risk among Chinese older adults: a nationwide prospective cohort study",
+   "sub": "Other clinical endpoints",
+   "design": "Prospective cohort",
+   "pm": "Indoor PM2.5 and constituents (BC, OM, sulfate, ammonium, nitrate) from ambient fields x infiltration factors",
+   "geo": "China (nationwide, CLHLS-type cohort)",
+   "endpoint": "All-cause mortality",
+   "tier": "A",
+   "n": "12,607 participants (mean age 86.8) followed 2008-2018, 8,643 deaths over a median 4.14 years, time-varying Cox with restricted cubic splines. Per 1 ug/m3: PM2.5 HR 1.003 (1.001-1.005), black carbon 1.072 (1.035-1.111), organic matter 1.009 (1.002-1.016), sulfate 1.010 (1.001-1.019); associations were stronger in rural residents, non-linear, robust to excluding hypertensive and diabetic participants, and PM2.5 tracked the neutrophil-to-lymphocyte ratio as a candidate inflammatory mediator. Limitation: 'indoor' here is an ambient field multiplied by a modelled infiltration factor, not a measurement - and the infiltration factor is itself a function of building and season, so constituent contrasts partly encode housing type; black carbon's HR is an order of magnitude above PM2.5's per unit mass, which is biologically plausible and also what collinearity with a small-magnitude constituent produces. Relevance: high - this is the exact quantity a cheap indoor node measures directly, and the study had to model it."
+  },
+  {
+   "pmid": "42849652",
+   "doi": "10.1016/j.envres.2026.125881",
+   "journal": "Environ Res",
+   "short": "Tampere SOA toxicity 2026",
+   "title": "From primary to secondary aerosol: chemical transformation and toxicity of gasoline vehicle exhaust under contrasting driving conditions",
+   "sub": "Mechanistic toxicology",
+   "design": "Chamber / laboratory",
+   "pm": "Primary and photochemically aged gasoline exhaust; PAHs, nitro- and oxy-PAHs, water-soluble elements, SP-AMS",
+   "geo": "Finland (Tampere, chassis dynamometer)",
+   "endpoint": "A549 cytotoxicity at the air-liquid interface",
+   "tier": "A",
+   "n": "A Euro 6 plug-in hybrid with a gasoline particulate filter run over a mild RDE cycle and a highly dynamic Combined cycle, cold and hot, with diluted exhaust aged in the Tampere Secondary Aerosol Reactor and delivered to A549 cells through a mobile air-liquid-interface system, fresh and aged, whole exhaust and gas-phase only. Ageing consistently shifted aerosol composition and toxicity relative to primary emissions. Limitation: one vehicle, one fuel, and an OFR delivers days of equivalent ageing in minutes at OH concentrations far above ambient, which over-produces highly oxygenated products; ALI dose at the cell surface is rarely quantified in the same units as an inhaled dose. Relevance: high - a GPF-equipped modern vehicle emitting little primary PM and substantial secondary aerosol is the case in which a tailpipe-mass regulatory metric and a downwind sensor network disagree by construction."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c06323",
+   "journal": "Environ Sci Technol",
+   "short": "Aged traffic particles 2026",
+   "title": "Aging of Urban Traffic Fine Particles Modulates Toxicity Mechanisms and Oxidative Stress Responses",
+   "sub": "Mechanistic toxicology",
+   "design": "Chamber / laboratory",
+   "pm": "Parking-garage aerosol (cold-start plus urban), fresh and OFR-aged; oxidative potential, SOA mass, O:C",
+   "geo": "Not stated in abstract (parking-garage sampling)",
+   "endpoint": "A549 and HepG2 oxidative stress and DNA damage",
+   "tier": "B",
+   "n": "Real cold-start and urban emissions sampled in a parking garage, aged in an oxidation flow reactor. Ageing raised SOA mass up to 6.9-fold, O:C from 0.26 to 0.79, and both intrinsic and volume-normalised oxidative potential, while peroxide-sensitive DCF activity fell. Aged extracts raised cellular ROS in lung and liver cells and produced greater oxidative-stress and DNA-damage responses; fresh extracts instead suppressed cellular respiration, especially in HepG2, with distinct cell-painting morphological profiles. Limitation: extracts, not whole aerosol, so the soluble fraction is tested and the particle is not; the divergence between acellular DCF and cellular ROS shows how assay-dependent 'oxidative potential' remains. Relevance: high - oxidative potential is the leading candidate for a health-relevant metric a sensor network could one day report, and this is a direct demonstration that it changes downwind of the source."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1029/2026gh001884",
+   "journal": "GeoHealth",
+   "short": "GOES-R PM2.5 CONUS 2026",
+   "title": "Machine Learning Predictions of PM2.5 and Their Applications to Exposure and Health Assessment in the CONUS",
+   "sub": "Exposure assessment & modelling",
+   "design": "Machine-learning model",
+   "pm": "Hourly PM2.5 at 0.01 degrees from gap-filled GOES-R geostationary AOD plus random forest",
+   "geo": "USA (contiguous)",
+   "endpoint": "None (exposure surface)",
+   "tier": "B",
+   "n": "A two-phase framework: a U-Net-like partial convolutional network inpaints missing geostationary AOD (agreement with AERONET R=0.75, paired observations raised from 430,603 to 728,115 by iterative gap-filling), then a random forest predicts hourly surface PM2.5 at ~1 km for 2019 onward. Limitation: the inpainting is validated against AERONET, which is sited where retrievals already work - gap-filled cells are by definition cloudy, humid or smoke-covered, and their skill is not demonstrated; a random forest on gap-filled inputs inherits that uncertainty without propagating it. Relevance: high - hourly rather than daily is the step that makes a satellite product comparable to a sensor network's native time resolution, and the same day's conformal-prediction record is the missing half of this one."
+  },
+  {
+   "pmid": "42845224",
+   "doi": "10.4168/aair.2026.18.5.668",
+   "journal": "Allergy Asthma Immunol Res",
+   "short": "Ko-CHENS 36 months 2026",
+   "title": "Exposure to Environmental Pollutants and the Risk of Respiratory Illnesses in 36-Month-Old Children: The Korean Children's Environmental Health Study",
+   "sub": "Respiratory & allergic",
+   "design": "Prospective birth cohort (mixtures)",
+   "pm": "Home-visit indoor PM10 and PM2.5 with VOCs and dust-mite allergen; blood metals and urinary metabolites",
+   "geo": "South Korea (Ko-CHENS)",
+   "endpoint": "Six respiratory illnesses at 36 months",
+   "tier": "B",
+   "n": "4,059 children with measured indoor pollutants at a 36-month home visit, blood lead, mercury and cadmium, urinary endocrine-disruptor metabolites and questionnaire outcomes, analysed by quantile g-computation. Allergic rhinitis was most prevalent; children with respiratory illness had more tobacco-smoke exposure and pet ownership, and higher dust-mite levels with recurrent wheezing and pneumonia. The mixture was positively associated with allergic rhinitis (driven by lead and phthalates) and with pneumonia (phthalates). Limitation: the indoor PM measurement is a single home visit standing in for three years of exposure, and in a mixture model dominated by biomarkers with month-long half-lives, that one spot measurement is the weakest term - which is a likely reason PM does not drive any of the mixture associations. Relevance: high - a continuously logging indoor node would replace the single visit, and this cohort shows what the single visit costs."
+  },
+  {
+   "pmid": "42845995",
+   "doi": "10.3389/fpubh.2026.1926405",
+   "journal": "Front Public Health",
+   "short": "Hefei conjunctivitis 2026",
+   "title": "Ambient air pollutants and outpatient visits for conjunctivitis in Hefei, China: a time-series study of hospital-based data during 2014-2023",
+   "sub": "Other clinical endpoints",
+   "design": "Monitoring-record analysis",
+   "pm": "Daily PM2.5 and PM10 with O3, NO2 and SO2 from regulatory monitors",
+   "geo": "China (Hefei)",
+   "endpoint": "Outpatient visits for conjunctivitis",
+   "tier": "C",
+   "n": "73,043 conjunctivitis outpatient records, 2014-2023, in a time-series design with stratification by sex, age, season and pandemic period. All five pollutants were positively associated with daily visits, strongest generally at lag0; SO2 carried the largest lag-0 estimate, then NO2, with pollutant-specific cumulative lag patterns. Limitation: no effect sizes, units or intervals appear in the abstract, so nothing can be entered; SO2 ranking first in a city where SO2 has fallen to a few ug/m3 suggests a marker for combustion-season conditions rather than a conjunctival effect, and single-city time series cannot separate co-varying pollutants. Relevance: low-moderate - ocular surface endpoints are plausible for coarse and irritant exposure, and a record of the claim is worth keeping even though this analysis does not establish it."
+  },
+  {
+   "pmid": "42846892",
+   "doi": "10.3389/fped.2026.1899313",
+   "journal": "Front Pediatr",
+   "short": "Sao Paulo paediatric 2026",
+   "title": "Climate and air pollution are associated with pediatric respiratory hospitalizations in Sao Paulo, Brazil",
+   "sub": "Respiratory & allergic",
+   "design": "Observational - cross-sectional",
+   "pm": "IDW-interpolated pollutant and meteorological fields at geocoded residence, 2022",
+   "geo": "Brazil (Metropolitan Sao Paulo)",
+   "endpoint": "Bronchiolitis and acute respiratory infection hospitalisation",
+   "tier": "C",
+   "n": "Paediatric emergency visits and admissions recorded in 2022, geocoded, with exposures assigned by inverse-distance weighting and multivariable logistic models for two outcomes. Higher ozone (OR 1.012, 1.005-1.019), higher relative humidity (1.016, 1.005-1.027) and spring were associated with greater odds that a respiratory encounter was a bronchiolitis admission; lower temperature was associated with the unspecified-ARI outcome (0.887, 0.793-0.993 per unit). Limitation: the outcome is conditional on presenting - these are odds of diagnosis given an encounter, not risk of disease, so the design cannot speak to incidence; IDW over a sparse monitor network in a metropolitan area of 21 million is the same interpolation problem the 2 October Everglades record quantified. Relevance: moderate - no PM estimate reaches significance here, which is itself informative about what IDW exposure does to a signal."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-14073-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Aerosol Fe isotopes 2026",
+   "title": "Isotopic composition of aerosol iron from anthropogenic sources: implications for source apportionment of aerosol iron",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "delta-56Fe endmembers for desert dust and anthropogenic aerosol iron sources",
+   "geo": "Global (source characterisation)",
+   "endpoint": "None (source apportionment)",
+   "tier": "B",
+   "n": "Iron isotope endmembers measured for desert dust and several anthropogenic sources: dust averaged +0.14 +/- 0.10 per mil (n=7, consistent with prior work), power-plant coal fly ash +0.26 +/- 0.18 (n=28) and steelwork fly ash -0.07 +/- 0.41, with a wide anthropogenic range overall. Limitation: the endmembers overlap heavily - a steelwork standard deviation of 0.41 per mil against a dust mean of +0.14 means a mixed urban sample cannot be apportioned by delta-56Fe alone, which the spread itself makes plain; small n for dust. Relevance: moderate - soluble aerosol iron matters for oxidative potential and for ocean biogeochemistry, and isotopic apportionment is the kind of offline chemistry that fixed networks will never do but that calibrates what they see."
+  },
+  {
+   "pmid": "42849691",
+   "doi": "10.1016/j.envpol.2026.129305",
+   "journal": "Environ Pollut",
+   "short": "PM2.5 and GPP 2026",
+   "title": "Climate-dependent nonlinear relationships between PM2.5 and ecosystem productivity across China's urban agglomerations",
+   "sub": "Exposure assessment & modelling",
+   "design": "Machine-learning model",
+   "pm": "Satellite PM2.5 against gross primary productivity across five urban agglomerations",
+   "geo": "China (five urban agglomerations)",
+   "endpoint": "None (ecosystem productivity)",
+   "tier": "C",
+   "n": "Satellite observations and interpretable machine learning relate PM2.5 to gross primary productivity across climate and pollution gradients. The relationship is robust everywhere but changes sign by region: moderate aerosol loading goes with enhanced productivity in arid environments, while elevated PM2.5 generally suppresses it elsewhere, jointly shaped by climate and pollution regime. Limitation: the authors flag the central problem themselves - PM2.5, radiation, humidity and temperature co-vary, so a diffuse-radiation fertilisation effect cannot be separated from co-varying meteorology by feature attribution on observational data; both PM2.5 and GPP are satellite products with shared retrieval dependencies. Relevance: low for health, moderate as a reminder that aerosol has non-health consequences that enter policy arithmetic."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosenv.2026.122410",
+   "journal": "Atmos Environ",
+   "short": "Izmir maritime 2026",
+   "title": "Quantifying Maritime Contributions to Urban Air Quality in Izmir Bay Using Tier 3 Emission Inventory and AERMOD",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - Tier 3 ship emission inventory with AERMOD dispersion (by title)",
+   "geo": "Turkiye (Izmir Bay)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 8 Oct with no abstract. By title, a bottom-up Tier 3 (movement-based) ship emission inventory coupled to AERMOD for a port city. Port and shipping contributions are among the hardest urban sources to attribute from a land-based network, because the source is offshore, mobile and upwind only part of the time - the same problem the Geoje Island AMS record (6 October) attacked by measurement rather than by model. Relevance: moderate-high; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103227",
+   "journal": "Atmos Pollut Res",
+   "short": "Indo-Gangetic BC 2026",
+   "title": "Long-term decline in Black Carbon Aerosol and Associated Health Risk over north-western Indo-Gangetic Plain",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - long-term black carbon trend and associated health risk (by title)",
+   "geo": "India (north-western Indo-Gangetic Plain)",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: title, authors and DOI deposited 8 Oct with no abstract. By title, a long-term decline in black carbon over the north-western Indo-Gangetic Plain with an attached health-risk estimate. A declining BC trend in one of the most polluted regions on earth is a strong claim that depends entirely on aethalometer calibration and filter-loading correction being stable across the record - the commonest source of spurious long-term trends in BC. The same day carries two independent BC burden records (China, 540,000 deaths; the 274-city outpatient series on 7 October), so the trend direction matters. Relevance: high; on the retry list."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115381",
+   "journal": "Build Environ",
+   "short": "Neonatal air cleaners 2026",
+   "title": "Portable air cleaners in neonatal facilities: Hybrid experimental-CFD assessment of different configurations",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Metadata only - portable air cleaner placement assessed by experiment plus CFD (by title)",
+   "geo": "Not recoverable from metadata",
+   "endpoint": "None (abstract not deposited)",
+   "tier": "B",
+   "n": "Metadata-only record: Elsevier deposited title, authors and DOI on 8 Oct with no abstract. By title, a combined experimental and CFD assessment of portable air cleaner configurations in neonatal facilities. Placement, not device rating, is what decides delivered clean-air rate in a real room, and the AFRI-c care-home null (4 October) is the clinical consequence of getting it wrong unmeasured. A neonatal unit is the setting where the dose argument is strongest. Relevance: high; on the retry list."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "All-cause mortality\nindoor black carbon (per 1 ug/m3)",
+   "exposure": "Indoor BC, ambient x infiltration factor",
+   "est": 1.072,
+   "lo": 1.035,
+   "hi": 1.111,
+   "metric": "HR",
+   "src": "12,607 older adults, China, 8,643 deaths"
+  },
+  {
+   "label": "All-cause mortality\nindoor sulfate (per 1 ug/m3)",
+   "exposure": "Indoor SO4 2-, ambient x infiltration factor",
+   "est": 1.01,
+   "lo": 1.001,
+   "hi": 1.019,
+   "metric": "HR",
+   "src": "12,607 older adults, China, 8,643 deaths"
+  },
+  {
+   "label": "All-cause mortality\nindoor organic matter (per 1 ug/m3)",
+   "exposure": "Indoor OM, ambient x infiltration factor",
+   "est": 1.009,
+   "lo": 1.002,
+   "hi": 1.016,
+   "metric": "HR",
+   "src": "12,607 older adults, China, 8,643 deaths"
+  },
+  {
+   "label": "All-cause mortality\nindoor PM2.5 (per 1 ug/m3)",
+   "exposure": "Indoor PM2.5, ambient x infiltration factor",
+   "est": 1.003,
+   "lo": 1.001,
+   "hi": 1.005,
+   "metric": "HR",
+   "src": "12,607 older adults, China, 8,643 deaths"
+  },
+  {
+   "label": "Incident CKD\nPM10 (per 10 ug/m3)",
+   "exposure": "Annual PM10, time-varying",
+   "est": 1.18,
+   "lo": 1.06,
+   "hi": 1.31,
+   "metric": "HR",
+   "src": "15,580 adults, Beijing, 664 cases"
+  },
+  {
+   "label": "Incident CKD\nPM2.5 (per 10 ug/m3)",
+   "exposure": "Annual PM2.5, time-varying",
+   "est": 1.22,
+   "lo": 0.99,
+   "hi": 1.5,
+   "metric": "HR",
+   "src": "15,580 adults, Beijing, 664 cases"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 3,
+   "note": "childhood:\nKo-CHENS, Sao\nPaulo, neonatal\nair cleaners"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno age-specific\nrecord"
+  },
+  {
+   "n": 1,
+   "note": "working age:\nBeijing CKD\ncohort"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nindoor constituent\nmortality"
+  }
+ ]
+}

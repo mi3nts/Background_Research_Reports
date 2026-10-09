@@ -1,0 +1,309 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{7 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-07\;\;\textcolor{Amber}{\textbar}\;\;Entry window 7 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;14 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{14}{RECORDS IN SCOPE\\(61 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Congestion pricing cut PM$_{2.5}$ by
+1.44\,$\mu$g\,m$^{-3}$ inside the zone --- and the same day, a national analysis shows that averaging
+that kind of contrast away is how disparities disappear.}\\[1.4mm]
+\footnotesize
+New York's Central Business District Tolling Program began in January 2025. Against 2022--2024, a
+difference-in-differences on NYCCAS real-time monitors attributes a \textbf{1.44\,$\mu$g\,m$^{-3}$}
+PM$_{2.5}$ reduction inside the congestion relief zone ($p<0.001$; \textbf{1.33} allowing for spillover),
+while nearby non-zone sites rose a non-significant 0.50. Tropospheric NO$_2$ fell over 20\,\% across metro
+New York, but only \textbf{1.23\,\%} of that is attributable to the programme ($p$ = 0.096).
+Alongside it, block-level US emission intensities: medium- and heavy-duty trucks are under \textbf{11\,\%}
+of vehicle kilometres but \textbf{46\,\%} of NO$_x$ and \textbf{50\,\%} of PM$_{2.5}$ emission burden;
+people of colour face burdens \textbf{40\,\%} above the national mean, and significant disparities appear
+in \textbf{85--89\,\%} of counties, rural as much as urban. The finding that matters most is methodological:
+\textbf{spatial aggregation substantially attenuates the measured disparity}.
+\textbf{Why it matters for sensing:} both results are about resolution. A 1.4\,$\mu$g\,m$^{-3}$ step across
+a few square kilometres, and an equity gap that shrinks as you coarsen the grid, are the two clearest
+arguments yet in this series that network density is not a refinement --- it decides what is visible.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Black carbon, at lag0, across 212 million outpatient records.} 274 Chinese cities, 2013--2017:
+BC carried the strongest independent constituent associations, per IQR (1.8\,$\mu$g\,m$^{-3}$) ranging from
+\textbf{+1.33\,\%} (0.93--1.74) for chronic kidney disease to \textbf{+3.89\,\%} (3.30--4.49) for COPD, and
+at \textit{lag0} rather than the lag0--1 typical of admissions. Outpatient visits are supply-sensitive, so
+a same-day signal may partly be care-seeking on visibly bad days.
+
+\item \textbf{Rural exposure misclassification, visible in the estimate.} 592 rural Californian children: an
+IQR (38 days) increase in prior-year days above 50\,$\mu$g\,m$^{-3}$ PM$_{10}$ gave \textbf{+1.1\,mmHg} DBP
+(0.8--1.5) and +0.9 SBP (0.3--1.5), with 5.8--5.9 percentage points higher risk of elevated SBP in the top
+short-term quartile. Exposure came from regulatory monitors that can be tens of kilometres away in a
+region whose sources are agricultural and local.
+
+\item \textbf{A network paper with no calibration.} A ZigBee mesh of low-cost CO and PM$_{2.5}$ nodes in
+Calabar reports mean PM$_{2.5}$ of 40\,$\mu$g\,m$^{-3}$, AQI 112.5 and a self-defined
+``performance index'' of 76.5\,\% --- with no co-location, no reference comparison and no humidity
+correction reported. West Africa's data gap is real; this does not close it.
+
+\item \textbf{A null worth having.} PRISm in 2,275 Kazakh adults: prevalence \textbf{12\,\%} (10.7--13.3),
+higher in women, and \textit{no} association with lifetime occupational vapour, gas, dust and fume exposure
+by job-exposure matrix --- in a heavily industrial country. A European-derived JEM applied to Kazakh work
+histories is exactly the instrument that would null out a real effect.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 6 October issue closed with \texttt{last\_entry\_date} at 6 October. This issue collects
+\textbf{7 October in full}, continuous with it. Unlike the 3--6 October issues, this day was
+\textbf{harvested and screened fresh on this run} --- the cached backfill ended at 6 October. The 8 October
+daily and the W40 weekly (27 September--3 October) remain owed and follow.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 14 in-scope records. \textbf{Seven of ten bands populated};
+\textit{Mechanistic toxicology} leads with \textbf{four} (three of them metadata-only or review),
+\textit{Burden} three --- and those three carry three of the day's four tier-A records --- then two each
+for \textit{Neuro} and \textit{Exposure assessment}, and one each for \textit{Cardiovascular},
+\textit{Occupational} and \textit{Sensing}.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: \textbf{five} metadata-only deposits, two cohorts (the
+children's blood-pressure study and the ABCD imaging analysis), and one each for the ecological
+policy evaluation, the national inventory, the acute case-crossover, the cross-sectional spirometry
+survey, the chamber work, the toxicology experiment and the review. Right --- the health endpoints are
+unusually spread: blood pressure, brain structure, outpatient visits, spirometry and the in-vitro
+endpoints each appear once.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ only \textbf{eight}, unspeciated PM or
+emissions three, composition/speciation two (the black-carbon constituent analysis and the manganese
+biomarker deposit) and PM$_{2.5}$ + PM$_{10}$ jointly one. Right --- geography: North America
+\textbf{five}, the most of any issue in this backfill, global / not stated four, Sub-Saharan Africa two
+(Calabar and the Ethiopian eruption), and one each for China, Central Asia and East Asia excluding
+China.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: childhood one (rural Californian blood pressure), adolescence one
+(the ABCD imaging cohort --- the first adolescence-specific record since 26 September), working age one
+(the PRISm survey). In utero and older adults have no record.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the 14 records. The metadata-only block spans
+mechanistic toxicology, neuro and exposure assessment; burden holds three different architectures
+(ecological, inventory, acute) and no two records in it share a design --- which is why the three agree
+only in direction.}
+
+\vspace{2mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Two relative risks with 95\,\% CIs, log scale, both per interquartile range (1.8\,$\mu$g\,m$^{-3}$)
+of daily black carbon at lag0, from the same 274-city case-crossover --- COPD and chronic kidney disease,
+the extremes of the twelve disease groups reported. They share an exposure series and are not independent.
+The day's other quantitative results do not belong on a ratio scale: the New York policy effect is a
+concentration difference ($-$1.44\,$\mu$g\,m$^{-3}$), the children's blood-pressure results are mean
+differences in mmHg and percentage-point risk differences, and the emission-burden disparities are ratios
+of emission intensity, not of risk.}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 2 records}{Deep}
+
+\paperentry{ABCD air pollution 2026}
+{The Relationship between Air Pollution Exposure, Genetic Liability for Schizophrenia, and Brain Outcomes in the ABCD Study}
+{Schizophr Bull}
+{1,580 adolescents with genotype, age 9-10 exposure and structural plus resting-state MRI at 13-14; linear mixed-effects models with a schizophrenia polygenic score as moderator. Higher PM$_{2.5}$ was associated with smaller right frontal pole surface area (p-FDR 0.039); the PRS interactions were non-monotonic - among low-PRS individuals, higher PM$_{2.5}$ went with larger bilateral caudate volumes, while low-PRS/medium-PM$_{2.5}$ showed smaller left caudate than medium/medium. Higher NO$_2$ was associated with stronger negative connectivity between networks. Limitation: a single surviving FDR-corrected main effect across a very large imaging search space, and interaction patterns that do not order monotonically in either PRS or exposure, is the signature of noise - the authors' own 'first test' framing is the right reading. Relevance: moderate - the exposure is a modelled annual surface at the residence of adolescents who move around a city all day.}
+{10.1093/schbul/sbag138}
+
+\paperentry{PM$_{2.5}$ and Mn biomarkers 2026}
+{Differential associations of PM$_{2.5}$ and particulate manganese with blood-based amyloid and tau biomarkers}
+{Environ Pollut}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 7 Oct with no abstract. By title, PM$_{2.5}$ mass and a specific metal constituent are contrasted against blood-based amyloid and tau - the preclinical Alzheimer biomarkers. Separating a constituent from total mass against a mechanistic biomarker is precisely the design the UFP dementia-mortality cohort (5 October) and the nitrate lung-cancer cohort (3 October) both point toward. Relevance: high; on the retry list.}
+{10.1016/j.envpol.2026.129304}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Cardiovascular \& metabolic\hfill 1 record}{Teal}
+
+\paperentry{Children's AIRE 2026}
+{Ambient particulate matter exposure and children's blood pressure in rural California, 2019-2022}
+{Int J Hyg Environ Health}
+{592 children aged 6-8 at enrolment, blood pressure measured up to five times through spring 2022, linear mixed models. An IQR increase (38 days) in prior-year days above 50 $\mu$g\,m$^{-3}$ daily PM$_{10}$ was associated with +1.1 mmHg DBP (95\% CI 0.8, 1.5) and +0.9 mmHg SBP (0.3, 1.5); the top quartile of short-term PM$_{2.5}$ and PM$_{10}$ carried 5.8 (0.4, 11.2) and 5.9 (0.2, 11.6) percentage-point higher risk of elevated or hypertensive SBP against the lowest quartile. Limitation: exposure comes from regulatory monitors in a rural region where the nearest monitor can be tens of kilometres away and agricultural and wildfire sources are highly local, so non-differential misclassification is large and almost certainly biases toward the null; paediatric BP is noisy across visits. Relevance: high - this is the archetypal study whose exposure term a rural low-cost network would transform, and the 'days above threshold' metric suits an inexpensive, lower-accuracy node better than an annual mean does.}
+{10.1016/j.ijheh.2026.114923}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 4 records}{Violet}
+
+\paperentry{Melatonin DPM2.5 2026}
+{Melatonin protects keratinocytes from diesel-derived PM$_{2.5}$-induced damage by suppressing JNK/p38 MAPK signaling and caspase activation}
+{Ecotoxicol Environ Saf}
+{Diesel PM$_{2.5}$ raised intracellular ROS, damaged macromolecules, disrupted mitochondrial membrane potential and drove apoptosis in HaCaT cells; melatonin scavenged radicals, restored viability and membrane potential, partly restored Bcl-2 against raised Bax and Bim, and suppressed caspase-9 and -3 and JNK/p38 MAPK activation, with a hairless-mouse arm. Limitation: the same template as the curcumin-nanosphere record on 3 October - a protective-agent paper in which the PM arm is a generic oxidant stimulus, with no composition, no dose-response against a deposited-dose estimate and no endotoxin control; diesel PM is a reference material, not an ambient aerosol. Relevance: low as mechanism; logged to keep the dermal-endpoint strand complete and because the DPM2.5 reference material is at least characterised, unlike most such papers.}
+{10.1016/j.ecoenv.2026.120879}
+
+\paperentry{Env epigenetics review 2026}
+{Environmental epigenetic modifiers in neurodegenerative diseases: a systematic review of epigenomic mechanisms and therapeutic targets}
+{Front Epigenet Epigenom}
+{A PRISMA-structured review of DNA methylation, histone modification and non-coding RNA changes linking environmental neurotoxicants - particulate matter among them - to neurodegeneration, with emphasis on developmental windows and life-course exposure. Limitation: PRISMA structure without quantitative synthesis, risk-of-bias assessment or any pooling, over a literature in which publication bias toward positive methylation findings is severe; particulate matter is treated interchangeably with metals and solvents despite incomparable exposure metrics. Relevance: low as evidence. Entered because the epigenetic mediator claim keeps appearing beside the dementia-mortality results in this backfill and it should be visible how thin the review base under it is.}
+{10.3389/freae.2026.1833533}
+
+\paperentry{Mountain West wood smoke 2026}
+{Household wood smoke exposure, lung black carbon deposition, and genomic instability in U.S. Mountain West residents}
+{Part Fibre Toxicol}
+{\textsc{metadata only.} Metadata-only record: Crossref deposited title, authors and DOI on 7 Oct; neither PubMed, Europe PMC nor Semantic Scholar held an abstract, and Scholar Gateway is still refusing. By title this is an unusually direct chain - a household exposure, a measured internal dose (lung black carbon deposition) and a genomic endpoint in the same human subjects. Internal dose is what every ambient-monitoring epidemiology study substitutes a model for, so a paper that measures it is worth the retry. Relevance: high, the highest of the day's metadata-only records; flagged for full-text read.}
+{10.1186/s12989-026-00702-8}
+
+\paperentry{Vocal fold fibroblasts 2026}
+{Effects of Fine Particulate Matter (PM$_{2.5}$) in Cultured Human Vocal Fold Fibroblasts}
+{Laryngoscope}
+{\textsc{metadata only.} Metadata-only record: Wiley deposited title, authors and DOI on 7 Oct with no abstract. By title, an in-vitro exposure of human vocal fold fibroblasts to PM$_{2.5}$ - an unusual target tissue, and a plausible one given that the larynx sits in the deposition path of coarse and fine particles and that occupational voice disorders cluster in dusty trades. Relevance: low-moderate; on the retry list.}
+{10.1002/lary.70976}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 2 records}{Clay}
+
+\paperentry{Hayli Gubbi eruption 2026}
+{Short-term Atmospheric Impacts of the Hayli Gubbi Volcanic Eruption 2025}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 7 Oct with no abstract. By title, the short-term atmospheric impact of the 2025 Hayli Gubbi eruption. Volcanic SO$_2$ and ash plumes are the natural experiment that tests whether a sparse monitoring network can detect and attribute a known, dated, large perturbation - and East African ground monitoring is close to absent, so the answer is informative either way. Relevance: moderate; on the retry list.}
+{10.1016/j.atmosenv.2026.122406}
+
+\paperentry{N-containing OA 2026}
+{Unveiling the Precursor-Specific Aqueous Formation Mechanisms of Nitrogen-Containing Organic Aerosols}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 7 Oct with no abstract. By title, a mechanistic account of how particular precursors form nitrogen-containing organic aerosol in the aqueous phase. Aqueous-phase secondary formation is humidity-dependent, which makes it the physical process underneath the humidity correction every optical low-cost sensor applies - the correction treats growth as hygroscopic swelling when some of it is mass that was not there before. Relevance: moderate-high; on the retry list.}
+{10.1016/j.atmosenv.2026.122408}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 1 record}{Amber}
+
+\paperentry{Calabar ZigBee WSN 2026}
+{Design and Performance Evaluation of a ZigBee-Based Wireless Sensor Network for CO and PM$_{2.5}$ Air Quality Monitoring in Calabar Metropolis}
+{Research Square (preprint)}
+{A ZigBee mesh of low-cost CO and PM$_{2.5}$ nodes, with analytical models for sensing, communication, energy use and dispersion exercised in MATLAB. Reported: reliable links, coverage growing with node count, a lifetime of about 4,065 transmissions, mean CO 30 ppm, mean PM$_{2.5}$ 40 $\mu$g\,m$^{-3}$, AQI 112.5, and a composite 'performance index' of 76.5\%. Limitation: the central weakness is that no calibration, co-location or reference comparison is reported at all - a 40 $\mu$g\,m$^{-3}$ mean from uncalibrated optical nodes in a humid tropical city is not a measurement, and a self-defined performance index is not a validation; the dispersion component is simulated, not observed. Relevance: moderate as a record of the deployment gap in West Africa, where ambient data is genuinely absent; low as evidence. This is the failure mode this watch exists to flag.}
+{10.21203/rs.3.rs-10637757/v1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Kazakhstan PRISm 2026}
+{Occupational associations of preserved ratio impaired spirometry (PRISm) in a population-based study}
+{Front Public Health}
+{2,275 adults from the general population with spirometry and a lifetime job-exposure matrix. PRISm prevalence was 12\% (95\% CI 10.7-13.3), higher in women (14\%) than men (10\%). Occupational airborne exposure including VGDF was not associated with PRISm, as ever-exposure or cumulative years; BMI was (adjusted OR 1.05 per unit). Limitation: a job-exposure matrix built for European job titles applied to Kazakh work histories misclassifies heavily and will null out a real association; cross-sectional design cannot separate PRISm from healthy-worker selection out of dusty jobs. Relevance: moderate - a clean negative in a heavily industrial country, and a direct argument for measured rather than matrix-assigned occupational exposure.}
+{10.3389/fpubh.2026.1921126}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 3 records}{Coral}
+
+\paperentry{NYC congestion pricing 2026}
+{Attributing PM$_{2.5}$ and NO$_2$ Changes One Year after New York City's Congestion Pricing Policy}
+{Environ Sci Technol Lett}
+{The Central Business District Tolling Program began in January 2025; its first year is evaluated against 2022-2024 with difference-in-differences on NYCCAS real-time PM$_{2.5}$ and on satellite NO$_2$. Within the congestion relief zone, PM$_{2.5}$ fell by 1.44 $\mu$g\,m$^{-3}$ attributable to the policy (p<0.001), or 1.33 $\mu$g\,m$^{-3}$ allowing for spillover, while nearby non-zone sites showed a non-significant 0.50 $\mu$g\,m$^{-3}$ rise. Tropospheric NO$_2$ fell over 20\% across metropolitan New York against a 2018-2024 baseline, but only 1.23\% was attributable to the programme (p=0.096). Limitation: one treated zone and one post-period, so the parallel-trends assumption rests on three pre-years; the non-zone increase is the signal that displacement may be real but underpowered. Relevance: high - a 1.4 $\mu$g\,m$^{-3}$ step change across a few square kilometres is exactly the contrast a dense low-cost network resolves and a regulatory network, here a purpose-built survey, only barely does.}
+{10.1021/acs.estlett.6c00610}
+
+\paperentry{US vehicle emission burden 2026}
+{Spatially Refined Analysis of Emission Burdens and Equity from Light-, Medium-, and Heavy-Duty Vehicle Traffic in the United States}
+{Environ Sci Technol}
+{Block-level on-road emission intensities for the whole United States. Medium- and heavy-duty trucks are under 11\% of vehicle kilometres but 46\% of NOx and 50\% of PM$_{2.5}$ emission burden; truck PM$_{2.5}$ is exhaust-dominated while tyre and brake wear are nearly half of light-duty PM$_{2.5}$. People of colour face burdens averaging 40\% above the national mean (Asian populations over 60\%), lower-income populations 20-25\% higher, with significant disparities in 85-89\% of counties, rural as well as urban. Critically, spatial aggregation attenuates the measured disparity. Limitation: this is an emission-intensity metric, not a concentration or an exposure - no dispersion, no background, no infiltration - so it cannot be read as an inhaled dose. Relevance: high - the aggregation result is the quantitative case for network density: resolution is not cosmetic, it determines whether a disparity is visible at all.}
+{10.1021/acs.est.6c12227}
+
+\paperentry{BC outpatient risk 2026}
+{Black carbon as a major contributor to ambient PM$_{2.5}$-related cause-specific outpatient risks: implications for early warning and health benefits evaluation of air quality improvement}
+{Eco Environ Health}
+{Over 212 million daily outpatient records, 2013-2017, with conditional logistic regression per city pooled by random effects and three complementary models testing constituent independence. Black carbon carried the strongest independent associations, and at lag0 rather than the lag0-1 typical of admissions: per IQR (1.8 $\mu$g\,m$^{-3}$) increases ranged from 1.33\% (0.93-1.74) for chronic kidney disease to 3.89\% (3.30-4.49) for COPD, attributable fractions 2.38\% to 6.12\%. Both PM$_{2.5}$- and BC-attributable burdens fell substantially after the 2013 clean-air programme. Limitation: constituents come from a modelled reanalysis and are collinear; outpatient visits are supply-sensitive, and the lag0 finding could reflect care-seeking on visibly bad days rather than a faster biological response. Relevance: high - BC is measurable by low-cost aethalometry, and a same-day constituent signal is the one an operational early-warning network could actually act on.}
+{10.1016/j.eehl.2026.100283}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{7 October 2026}, single day, continuous with the 6 October issue, and the
+first day in this backfill harvested on the run that published it. Harvester legs run leg-by-leg:
+\textbf{PubMed} health \textbf{9}, sensing \textbf{1}; \textbf{Europe PMC} \textbf{20} (11 after the
+AGRICOLA retro-index gate dropped 9); \textbf{Crossref by ISSN} \textbf{43}; \textbf{arXiv} answered
+(148\,kB) with no entry dated 7 October; \textbf{OpenAlex} HTTP 429 --- the leg has now failed on every run
+since 26 September and should be considered dead rather than degraded. 64 raw deduplicated to \textbf{62},
+all fresh. The \textbf{PubMed connector} (\texttt{[EDAT]} 7--8 October, both axes as separate queries)
+returned 23 PMIDs dated 7 October, of which 2 merged a PMID onto an existing DOI-only record and
+\textbf{13} were appended --- \textbf{75} candidates screened, \textbf{14 admitted}, \textbf{61 rejected}
+with logged reasons (water and soil chemistry, microplastics, wastewater, measurement-science and
+remote-sensing engineering, and the usual broad-axis noise). \textbf{Five records carried on metadata
+alone} (36\,\%), including the day's highest-relevance record (\textit{Part.\ Fibre Toxicol.}, measured
+lung black-carbon deposition). The abstract-retry leg recovered \textbf{6 of 11} attempted.
+\textbf{Consensus} returned 10 calibration hits, \textbf{0 new}. \textbf{Scholar Gateway} fails with
+\texttt{ACCESS\_DENIED}. DOI gate: \textbf{0 fail, 0 warn}. Abstracts remain the copyright of their
+respective publishers.\par}
+\end{keybox}
+
+\end{document}

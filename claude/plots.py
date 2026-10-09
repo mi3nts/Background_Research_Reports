@@ -646,6 +646,10 @@ design_group.update({
     "In vitro": "Experimental / toxicology",
 })
 # 2026-10-07 run (3 Oct issue): engine-bench emissions record; two-sample MR without TWAS.
+# 2026-10-09 run (7 Oct issue): quasi-experimental policy evaluation on observed series.
+design_group.update({
+    "Difference-in-differences evaluation": "Observational - ecological",
+})
 # 2026-10-09 run (4 Oct issue): qualitative process evaluation nested in a filtration RCT.
 design_group.update({
     "Qualitative study (within RCT)": "Review / synthesis",
@@ -993,6 +997,7 @@ GEO_SUBSTR = [
     ("argentina", "Argentina"), ("san juan", "Argentina"),
     ("germany", "Germany"), ("spain", "Spain"), ("cartagena", "Spain"),
     ("france", "France"), ("italy", "Italy"), ("poland", "Poland"),
+    ("hungary", "Hungary"), ("budapest", "Hungary"),
     ("netherlands", "Netherlands"), ("denmark", "Denmark"), ("norway", "Norway"),
     ("greece", "Greece"), ("sweden", "Sweden"), ("stockholm", "Sweden"),
     ("gothenburg", "Sweden"), ("uppsala", "Sweden"), ("europe", "Europe"),
