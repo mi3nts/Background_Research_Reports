@@ -942,6 +942,7 @@ geo_group = {
     # never Hungary; unmapped, the only European record of the issue would have landed
     # in Global / multi-region and left the Europe bar empty.
     "Hungary": "Europe",
+    "Serbia": "Europe",  # 2026-10-12 run (9 Oct issue): Belgrade PM10 PMF
     # added 2026-08-24: an ACP kinetic-modelling paper whose "field site" is a pooled
     # set of field and chamber growth-rate datasets across several continents. It is
     # genuinely multi-region rather than unlocatable, so it is named explicitly here
@@ -998,6 +999,7 @@ GEO_SUBSTR = [
     ("germany", "Germany"), ("spain", "Spain"), ("cartagena", "Spain"),
     ("france", "France"), ("italy", "Italy"), ("poland", "Poland"),
     ("hungary", "Hungary"), ("budapest", "Hungary"),
+    ("serbia", "Serbia"), ("belgrade", "Serbia"),  # 2026-10-12
     ("netherlands", "Netherlands"), ("denmark", "Denmark"), ("norway", "Norway"),
     ("greece", "Greece"), ("sweden", "Sweden"), ("stockholm", "Sweden"),
     ("gothenburg", "Sweden"), ("uppsala", "Sweden"), ("europe", "Europe"),

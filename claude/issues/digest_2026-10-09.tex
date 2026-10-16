@@ -1,0 +1,343 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{9 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-09\;\;\textcolor{Amber}{\textbar}\;\;Entry window 9 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;19 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{19}{RECORDS IN SCOPE\\(52 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Two records say the quantity being measured is the wrong
+one: the toxicity of PM$_{2.5}$ organics is carried by reduced nitrogen compounds, and the fastest-growing
+traffic particle source is tyre and road wear, not exhaust.}\\[1.4mm]
+\footnotesize
+Nontargeted high-resolution mass spectrometry plus serum-albumin adductomics restricts attention to the
+organic fraction that actually reaches the circulation, then scores it: \textbf{reduced organic nitrogen}
+compounds carry \textbf{39\,\%} of predicted multi-organ toxicity against \textbf{23\,\%} for the
+oxygenated organics the field normally targets. Separately, a road-segment-resolved national inventory
+puts China's tyre and road wear particles at \textbf{425\,kt} of PM$_{2.5}$ in 2023, roughly
+\textbf{80\,\%} of it modelled resuspension, with the TRWP share of traffic PM$_{2.5}$ projected to rise
+\textbf{34-fold} from 2011 to 2050 and reach \textbf{67\,\%} of traffic emissions.
+\textbf{Why it matters for sensing:} both quantities are invisible to an optical mass node. Nitrogenous
+organics are a composition signal --- and, per a third record the same day, the ones that absorb at
+365\,nm, so a multi-wavelength absorption channel sees them. Non-exhaust PM is coarse-skewed and
+mineral-rich, the aerosol class on which Plantower-type sensors misreport mass worst; a rising non-exhaust
+share therefore drifts a network's calibration without any hardware changing.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Source-resolved PM$_{2.5}$ and dementia.} 5,648 incident cases over a median 11.9 years, Cox
+models with time-varying source-specific exposure: per IQR, road transport \textbf{HR 1.12} (1.04--1.21),
+other transport 1.12 (1.06--1.19), industry 1.07 (1.03--1.11), domestic 1.05 (1.01--1.08). Per-IQR scaling
+differs by source, so this is not a per-$\mu$g ranking, and the source fields are spatially collinear
+outputs of one dispersion model.
+
+\item \textbf{A 1\,\% effect on six million admissions.} Time-stratified case-crossover over 6,098,836
+Medicare ADRD index admissions: an IQR (7.2\,$\mu$g\,m$^{-3}$) rise in lag 0--2 PM$_{2.5}$ gave
+\textbf{OR 1.010} (1.006--1.015) for 30-day all-cause readmission. Green and blue space did not
+conclusively modify it --- unsurprising when exposure is ZIP-code modelled air for a largely homebound
+population.
+
+\item \textbf{Persistence is still the baseline.} Five-station VAR models in Navi Mumbai bound six of seven
+lagged co-pollutant effects within \textbf{$\pm$5\,\%} per SD; rain and boundary-layer height move same-day
+PM$_{2.5}$ by \textbf{10--24\,\%} per SD, and shared date effects explain \textbf{78\,\%} of variance,
+three-quarters of it weather. A stagnation index plus persistence warned as skilfully as XGBoost --- which
+did not beat persistence. The same day carries two forecasting papers that report no persistence baseline
+at all, one of them an implausible 0.73\,$\mu$g\,m$^{-3}$ next-day RMSE for Tehran.
+
+\item \textbf{Residential burning, measured two ways.} PMF on PM$_{10}$ with 34 species at an urban
+background site in Belgrade puts \textbf{biomass burning first at 21\,\%}, ahead of ammonium sulphate
+(18\,\%) and mineral dust (17\,\%), with traffic and industry unresolved from each other at 15\,\%. In the
+North China Plain, water-soluble brown carbon absorption at a rural site ran \textbf{1.1--3.5$\times$} the
+urban values while urban Abs$_{365}$ fell \textbf{$\sim$45\,\%} since 2018.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 8 October issue closed with \texttt{last\_entry\_date} at 8 October. This issue collects
+\textbf{9 October in full}, continuous with it; 10 and 11 October follow as their own issues on this run,
+and the \textbf{W41 weekly} (4--10 October) follows under 10 October. Three records admitted to this day
+are \textbf{held, not rejected} --- authoring was interrupted mid-file --- and are logged as held in
+\texttt{rejected.jsonl}, absent from this issue and from the W41 pool: the EHP green-space/biological-aging
+cohort, the \textit{Nat.\ Commun.} congenital-heart-defect proteomics case-control, and the alveolar-organoid
+toxicology record. They should enter a later issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 19 in-scope records. \textbf{Six of ten bands populated};
+\textit{Exposure assessment} leads with \textbf{six} and \textit{Sensing} follows with \textbf{five} ---
+the measurement side is 58\,\% of the day, the highest share since 3 October. \textit{Occupational \&
+indoor} three, \textit{Burden} and \textit{Neuro} two each, \textit{Mechanistic toxicology} one.
+\textit{Cardiovascular}, \textit{Respiratory}, \textit{Reproductive} and \textit{Other clinical} are empty
+--- two of those four are empty because the records that would have filled them are among the three held.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture, in the grouped categories the figure uses:
+\textbf{seven} metadata-only records (37\,\%, the highest share since 29 September, every one a publisher
+deposit without an abstract), \textbf{six} measurement campaigns, three modelling / inventory records, and
+one each of cohort, acute-design epidemiology and chamber study. Right --- only \textbf{three} records
+carry a health endpoint (incident dementia, 30-day readmission, estimated worker inhalation dose); the rest
+report concentrations, optical properties, emissions or forecast skill.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ only \textbf{seven}, unspeciated PM or
+emissions \textbf{five}, size-resolved number two (the fast-scan MPSS calibration and the dormitory
+Stokes-number record), PM$_{2.5}$ + PM$_{10}$ jointly two, and one each of PM$_{10}$ only, bioaerosol /
+coarse, and optical properties. Right --- geography: global / multi-region \textbf{six} --- inflated,
+because three records state no location and two more are method papers with no site --- then China
+\textbf{four}, Europe three (Belgrade, Central European rural background, the UK nowcasting series), South
+Asia two, Latin America two, and one each for North America and the Middle East \& North Africa.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: older adults \textbf{two} (the source-specific dementia cohort
+and the Medicare ADRD readmission study) and working age \textbf{one} (wastewater and landfill
+bioaerosol exposure). In utero, childhood and adolescence have no record --- the periconception record
+that would have occupied the first column is one of the three held.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the 19 records. The metadata-only column is
+the densest in the matrix and spreads across exposure assessment, burden, sensing and indoor --- a
+deposit-pattern artefact, not a research pattern. No other cell holds more than two records.}
+
+\vspace{2mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Five estimates with 95\,\% CIs, log scale, from two studies. The four dementia hazard ratios come
+from one cohort and one exposure model and differ only in which emission source is entered; they are
+nested, not independent, and each is scaled per source-specific IQR, so the apparent ordering of transport
+above domestic is not a comparison at equal mass. The Medicare readmission odds ratio is a different
+quantity entirely --- a short-term, within-person contrast per 7.2\,$\mu$g\,m$^{-3}$ of daily PM$_{2.5}$
+against long-term annual exposure for the dementia estimates --- and the two are not poolable. Its
+interval is narrow because the denominator is six million admissions, not because the effect is precisely
+characterised at the individual level.}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 2 records}{Deep}
+
+\paperentry{Tang source PM dementia 2026}
+{Associations of long-term exposure to source-specific PM$_{2.5}$, lifestyle, and genetic susceptibility with dementia risk: a prospective cohort study}
+{Eur Arch Psychiatry Clin Neurosci}
+{Cox models with time-varying source-specific PM$_{2.5}$; median follow-up 11.9 years, 5,648 incident dementia cases. Per IQR: domestic HR 1.05 (1.01-1.08), road transport 1.12 (1.04-1.21), other transport 1.12 (1.06-1.19), industry 1.07 (1.03-1.11). High exposure plus high polygenic risk gave a 236-352\% excess versus the lowest-lowest stratum. Limitation: source fields come from a dispersion model whose sources are spatially collinear, and per-IQR scaling differs by source, so the ranking of transport over domestic is not a per-ug comparison; the joint-effect excess mostly restates genetic risk; the abstract does not name the cohort or country. Relevance: moderate - source attribution at residence is what a speciated or BC-capable node network could provide directly.}
+{10.1007/s00406-026-02391-y}
+
+\paperentry{Byun ADRD readmission 2026}
+{PM$_{2.5}$ and 30-Day Readmission in Medicare Beneficiaries with Alzheimer's Disease and Related Dementias: Effect Modification by Neighborhood Green and Blue Space}
+{Environ Health Perspect}
+{Nationwide time-stratified case-crossover over 6,098,836 ADRD index admissions, 759,128 (12.4\%) readmitted within 30 days. Per IQR (7.2 $\mu$g\,m$^{-3}$) of lag 0-2 PM$_{2.5}$: OR 1.010 (1.006-1.015), stronger for readmissions after day 7. Landsat- and Street-View-derived green and blue space did not conclusively modify the association. Limitation: ZIP-level modelled PM$_{2.5}$ for a largely homebound or institutionalised population is a poor proxy for the air actually breathed, which biases toward the null and makes the null modification uninterpretable. Relevance: moderate - a 1\% per-IQR effect on a 6-million-person denominator is the scale at which indoor sensing in care settings would change the exposure estimate more than the model does.}
+{10.1021/ehp.6c00147}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Zeng RON toxicity 2026}
+{Reduced organic nitrogen compounds dominate the toxicity of PM$_{2.5}$ organics following internal exposure}
+{Sci Adv}
+{Nontargeted high-resolution MS of urban PM$_{2.5}$ organics is combined with protein-adductomics to define the fraction that actually reaches the circulation, then scored with multi-endpoint toxicity prediction. Reduced organic nitrogen (RON: amines, amides, N-heterocycles) carries 39\% of the predicted multi-organ toxicity of the internally exposed fraction against 23\% for the oxygenated organics the field usually targets, and binds human serum albumin strongly enough to explain systemic distribution. Limitation: the toxicity shares are model predictions on annotated features, not measured dose-response; nontargeted annotation confidence and ionisation bias toward basic nitrogen both inflate RON's apparent share. Relevance: high - the toxic fraction is invisible to optical mass sensing, an argument for adding composition proxies (e.g. N-containing BrC absorption) to networks.}
+{10.1126/sciadv.aea8654}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 6 records}{Clay}
+
+\paperentry{Petrovic Belgrade PMF 2026}
+{Chemical characterization and source apportionment of PM$_{10}$ in Belgrade, Serbia: influence of local and regional anthropogenic and natural sources}
+{Atmos Chem Phys}
+{USEPA PMF 5.0 on PM$_{10}$ at an urban-background site using 34 inputs including organic tracers - broader than earlier Belgrade apportionments that used elements or ions alone. Biomass burning leads at 21\% of PM$_{10}$, concentrated in the heating season, then ammonium sulphate 18\%, mineral dust 17\% and mixed traffic/industry 15\%, with primary biological and biogenic secondary factors resolved separately. Limitation: one site, and a mixed traffic-industry factor means PMF could not separate the two sources most amenable to local control; PM$_{10}$ mass weighting under-represents the fine combustion fraction that drives health effects. Relevance: moderate - a 21\% residential biomass share in a Balkan capital is the case where low-cost optical networks track the winter smoke signal well but need composition-aware RH correction.}
+{10.5194/acp-26-14165-2026}
+
+\paperentry{Wu NCP brown carbon 2026}
+{Light absorption properties and composition of water-soluble brown carbon in North China Plain: implication for an enhancing role of nitrogenous organic compounds}
+{Atmos Chem Phys}
+{Simultaneous winter sampling at Beijing, Tianjin, Luancheng (rural), Handan and Jinan. Abs365 at the rural site was 1.1-3.5 times the urban values, but mass absorption efficiency peaked in Jinan (1.40 m2/g). Urban Abs365 fell \textasciitilde{}45\% from 2018 to 2023. BrC absorptivity rose from clean to haze with the N:C ratio, pointing to nitrogenous organics as chromophores. Limitation: water-soluble extracts miss the methanol-soluble, more absorbing BrC, and one winter cannot separate trend from meteorology. Relevance: moderate - the same nitrogenous organics the same-day Sci Adv record ranks most toxic are the ones that absorb at 365 nm, which a multi-wavelength absorption node can see.}
+{10.5194/acp-26-14229-2026}
+
+\paperentry{Rocha Volta Redonda 2026}
+{Long-term trends and seasonal variability of particulate matter (PM$_{10}$ and PM$_{2.5}$) in Volta Redonda (RJ), Brazil: a 15-year temporal analysis}
+{Environ Monit Assess}
+{\textsc{metadata only.} Metadata-only record: Springer deposited title, authors and DOI on 9 Oct with no abstract, and the retry chain (PubMed, Europe PMC, Semantic Scholar) recovered none. By title, a 15-year PM$_{10}$ and PM$_{2.5}$ trend and seasonality analysis for a steel-industry city in Rio de Janeiro state. Long regulatory records from Latin American industrial cities are scarce, and instrument changes over 15 years are the usual confounder of any trend claim. Relevance: moderate; on the abstract-retry list.}
+{10.1007/s10661-026-15988-6}
+
+\paperentry{Arora rural PAH 2026}
+{Seasonal PAH Exposure and Health Risks at Central European Rural Background Sites Driven by Combustion Sources and Transport Pathways}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 9 Oct with no abstract. By title, seasonal particle-bound PAH exposure and incremental lifetime cancer risk at Central European rural background sites, attributed to combustion sources and transport. Rural background PAH is dominated by residential solid-fuel burning, the same source the same-day Belgrade apportionment puts at 21\% of PM$_{10}$. Limitation unverifiable from metadata. Relevance: moderate - PAH is a composition endpoint no optical node reaches; on the abstract-retry list.}
+{10.1016/j.atmosenv.2026.122419}
+
+\paperentry{Yadav ENSO India 2026}
+{Air Quality in Flux: The Baffling ENSO Transition in India}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 9 Oct with no abstract. By title, an analysis of how an ENSO phase transition altered Indian air quality. Interannual meteorological modes are the main reason a national PM trend over a few years is not an emissions trend - the same-day Navi Mumbai record makes the station-scale version of this point, and the 10 Oct Indo-Gangetic trend record the regional one. Relevance: moderate; on the abstract-retry list.}
+{10.1016/j.apr.2026.103231}
+
+\paperentry{Carnec adjoint nodal IAQ 2026}
+{Adjoint-based corrective approach for nodal indoor air quality predictions}
+{Indoor Environments}
+{\textsc{metadata only.} Metadata-only record: title, authors and DOI deposited 9 Oct with no abstract. By title, an adjoint-based correction for nodal indoor air quality models, which treat each room as one well-mixed node and are fast but systematically wrong where a room is not well mixed. An adjoint formulation gives sensitivity of predicted concentrations to each input at the cost of one extra solve, which is what makes correction from sparse sensor data tractable. Relevance: high - this is the data-assimilation route by which a handful of indoor nodes can correct a whole-building model, the indoor analogue of the conformal-coverage question raised on 8 October. On the abstract-retry list.}
+{10.1016/j.indenv.2026.100199}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 5 records}{Amber}
+
+\paperentry{Malik MPSS calibration 2026}
+{Traceable calibration of MPSS in fast-scan mode: Recommendations for PNSD measurement at urban traffic hot spots}
+{Aerosol Sci Technol}
+{\textsc{metadata only.} Metadata-only record: title, authors and DOI deposited 9 Oct with no abstract. By title, a metrology-grade calibration route for MPSS/SMPS operated in fast-scan mode, with recommendations for particle number size distribution at traffic hot spots. Fast scans trade sizing accuracy for time resolution - the scan-direction smearing and DMA transfer-function errors that dominate when concentrations change faster than a scan are the reason roadside PNSD is rarely comparable across sites. Relevance: high - a traceable reference for sub-100 nm number is the missing anchor for any UFP sensor co-location; on the abstract-retry list.}
+{10.1080/02786826.2026.2726892}
+
+\paperentry{Dayare Navi Mumbai 2026}
+{Weather, Co-Pollutants and Daily PM$_{2.5}$ in a Coastal Indian City: Multi-Station Evidence for Meteorology-Triggered Air-Quality Warnings in Navi Mumbai}
+{Preprints.org (preprint)}
+{VAR models with exogenous weather on screened, unimputed station data. Lagged co-pollutants add little: equivalence tests bound six of seven effects within +/-5\% per SD; lagged ozone raises PM$_{2.5}$ by 4\%. Rain and boundary-layer height lower same-day PM$_{2.5}$ by 10-24\% per SD; date effects shared across stations explain 78\% of variance, three-quarters of it weather. A stagnation index plus persistence warns as well as XGBoost, which does not beat persistence. Limitation: a preprint; ERA5 boundary-layer height over a coastal city is coarse, and five stations limit the spatial claim. Relevance: high - a clean demonstration that 'driver' inference from co-movement is weather confounding, and that persistence is the baseline any network forecast must beat.}
+{10.20944/preprints202610.0209.v1}
+
+\paperentry{Ghajari fuzzy DL Tehran 2026}
+{A Novel Fuzzy Hybrid Deep Learning Architecture for Spatiotemporal PM$_{2.5}$ Prediction}
+{Research Square (preprint)}
+{A fuzzy transformer-CNN-GRU with cross-branch attention for one-day-ahead PM$_{2.5}$ in Tehran, trained on 2014-2015 and tested on 2016, outperforming seven comparator models with a reported RMSE of 0.73 $\mu$g\,m$^{-3}$. Limitation: an RMSE below 1 $\mu$g\,m$^{-3}$ for next-day PM$_{2.5}$ in Tehran is implausible for a genuine forecast and suggests leakage (e.g. same-day inputs or normalised units); no persistence baseline is reported, and the data end in 2016. Relevance: low - the same-day Navi Mumbai record shows why persistence must be the reference; this one does not test against it.}
+{10.21203/rs.3.rs-11058151/v1}
+
+\paperentry{Pires quantum NN 2026}
+{An Annealing-based Quantum Neural Network with Discrete Wavelet Transforms for Enhanced Air Pollution Nowcasting}
+{arXiv (preprint)}
+{Hybrid variational quantum circuits with quantum annealing, scaled to 172 qubits on a neuromorphic platform, nowcast PM$_{2.5}$ from UK urban data and are reported to outperform MLP and LSTM on raw high-entropy inputs, more so with wavelet decomposition. Limitation: the abstract gives no error metric, horizon or persistence baseline, and beating an MLP/LSTM on unpreprocessed data is a weak comparator; 'quantum utility' claims need a classical model tuned on the same wavelet features. Relevance: low - nowcasting at node level is a solved problem for persistence-plus-meteorology.}
+{10.48550/arXiv.2610.13882}
+
+\paperentry{Pavlidis cold start 2026}
+{Measurements of Real-World Cold Start Emissions in a Parking Garage}
+{Environ Sci: Atmos}
+{Only the deposited lead sentences are available: motor-vehicle cold starts contribute disproportionately to total vehicle emissions, and this work quantifies them under real-world conditions by measuring in a parking garage rather than on a dynamometer. A semi-enclosed garage gives the dilution control a roadside site lacks while keeping real engines, real soak times and real driver behaviour. Limitation: the abstract is truncated at deposit, so emission factors and fleet composition cannot be read; garage ventilation sets the dilution and is rarely characterised well enough to convert concentrations to per-vehicle factors. Relevance: high - cold starts are short, intense, local events, the exact signal a dense node network resolves and a regulatory monitor averages away. The 8 October aged-parking-garage-aerosol record sampled the same kind of microenvironment for oxidative potential.}
+{10.1039/d6ea00044d}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 3 records}{Amber}
+
+\paperentry{Zhang WWTP bioaerosol 2026}
+{Comprehensive Characterization of Bioaerosol Microbial Communities, ARG, and Occupational Exposure Risks in WWTP and Comprehensive Landfill}
+{Environ Res}
+{Paired sampling at a wastewater plant and an integrated solid-waste facility with 16S sequencing, HT-qPCR, QMRA and ML. Culturable bacteria were 3.4-fold higher at the landfill (1,726 vs 502 CFU/m3) and so was the fine biogenic particle share (27\% vs 15\%), but airborne ARG/MGE copies were an order of magnitude higher at the WWTP (5,462 vs 584 copies/m3), giving it the larger estimated worker inhalation dose. Limitation: two facilities, short campaigns, and culturable counts undercount viable-but-nonculturable cells; ARG copies per m3 do not establish viable resistant organisms. Relevance: low-moderate - optical sensors see biogenic particles as generic mass; the case for fluorescence-capable occupational monitors.}
+{10.1016/j.envres.2026.125888}
+
+\paperentry{Mahmoud filtration risk 2026}
+{The link between aerosol dispersion, infection risk and air filtration}
+{Build Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 9 Oct with no abstract. By title, a link between indoor aerosol dispersion, filtration and infection risk - the Wells-Riley family of models, whose weak point is that a well-mixed room assumption and a measured clean-air delivery rate rarely both hold. Relevance: moderate - filtration intervention studies in this corpus (the 4 Oct AFRI-c HEPA null among them) keep failing on exposure verification, which is a monitoring problem before it is a filtration problem. On the abstract-retry list.}
+{10.1016/j.buildenv.2026.115378}
+
+\paperentry{Chen dormitory Stokes 2026}
+{Size-resolved aerosol transport and exposure risk in university dormitories driven by Stokes number topology and source-flow coupling}
+{Build Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 9 Oct with no abstract. By title, size-resolved aerosol transport and exposure risk in dormitories organised around Stokes number and source-flow coupling - i.e. the regime where inertia, not the mean flow, decides where particles land, which is why a single room-average concentration misrepresents exposure for coarse particles. Relevance: moderate - the argument for size-resolved rather than PM$_{2.5}$-mass indoor nodes. On the abstract-retry list.}
+{10.1016/j.buildenv.2026.115373}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{Ma TRWP China 2026}
+{Spatiotemporal dynamics of tire wear particles reveal escalating emission inequalities across China's road network}
+{Nat Commun}
+{A road-segment-resolved national inventory fuses harmonised field measurements, ML and traffic activity: China's roads emitted 425 kt of TRWP-derived PM$_{2.5}$ in 2023, \textasciitilde{}80\% from modelled vehicle-induced resuspension. TRWP's share of traffic PM$_{2.5}$ is projected to rise 34-fold from 2011 to 2050, reaching 67\% of traffic PM$_{2.5}$ emissions, with exposure concentrated in megacity corridors; combined mitigation cuts emissions 41\%. Limitation: resuspension dominates the total and is the least constrained term - it is modelled, not measured, and its emission factor varies by an order of magnitude with road silt loading and humidity. Relevance: high - non-exhaust PM is coarse-skewed and rubber/mineral-rich, exactly the aerosol on which Plantower-class sensors misreport mass, so a growing TRWP share silently changes network calibration.}
+{10.1038/s41467-026-77475-3}
+
+\paperentry{Rodriguez Bogota car-free 2026}
+{Annual trends in ambient particulate matter during car free days in Bogota from 2016 to 2025}
+{Research Square (preprint)}
+{Nine annual Car-Free Day observations from the regulatory network, OLS and weighted regressions with 2,000-replicate bootstrap. PM$_{10}$ fell significantly, slope -4.04 $\mu$g\,m$^{-3}$ per year (weighted bootstrap CI -6.49 to -0.81), median change -41.8\%; PM$_{2.5}$ trend was -1.72 $\mu$g\,m$^{-3}$ per year (CI -3.17 to 0.40), not significant. Limitation: n = 9 single days with no control days, so the trend is the city's background trend plus that day's weather - it says nothing about the effect of the car-free intervention itself. Relevance: low-moderate - the right design (Car-Free Day minus matched control days, by station) is one that a dense sensor network could deliver at street scale.}
+{10.21203/rs.3.rs-10864736/v1}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{9 October 2026}, single day, continuous with the 8 October issue.
+Harvester legs: \textbf{PubMed} health \textbf{14}, sensing \textbf{6}; \textbf{Europe PMC} \textbf{33}
+(23 after the retro-index gate dropped 10); \textbf{Crossref by ISSN} \textbf{37}; \textbf{arXiv}
+answered (148\,kB) with \textbf{one} entry dated 9 October; \textbf{OpenAlex} HTTP 429 --- the leg has
+returned 429 on every run since 26 September and is treated as dead. 81 raw records deduplicated to
+\textbf{75}, 5 already carried, \textbf{70} fresh. The \textbf{PubMed connector} (\texttt{[EDAT]}
+9--11 October, health and instrumentation axes as separate queries) returned 9 PMIDs dated 9 October, of
+which \textbf{1} was appended --- \textbf{71} candidates screened, \textbf{22 admitted}, \textbf{3 held},
+\textbf{49 rejected} with logged reasons. \textbf{Seven records carried on metadata alone} (37\,\%); the
+abstract-retry chain (PubMed efetch $\to$ Europe PMC $\to$ Semantic Scholar) recovered \textbf{10 of 19}
+attempted and none of the nine Elsevier or Springer deposits. \textbf{Consensus} returned 10 calibration
+hits, \textbf{0 new}. \textbf{Scholar Gateway} fails with \texttt{ACCESS\_DENIED} and has done for the
+whole backfill --- it is the designated route for the calibration R$^2$/RMSE figures the MPSS record
+omits, and it needs reconnecting. \textbf{ClinicalTrials.gov}: one new registration in the 4--11 October
+window, surfaced in the W41 weekly. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

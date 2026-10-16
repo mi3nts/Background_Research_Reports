@@ -1,0 +1,188 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{11 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-11\;\;\textcolor{Amber}{\textbar}\;\;Entry window 11 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;1 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS IN SCOPE\\(11 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A one-record Sunday. The single admitted paper puts
+PM$_{2.5}$ against incident fatty liver disease at HR 1.19 (1.10--1.30) and claims a 700-protein signature
+mediates 15\,\% of it --- with a confidence interval from 2.7\,\% to 37.7\,\%.}\\[1.4mm]
+\footnotesize
+52,190 participants free of metabolic dysfunction-associated steatotic liver disease at baseline, 624
+incident cases over a median 11.8 years. Annual average PM$_{2.5}$ gave \textbf{HR 1.19} (1.10--1.30); an
+elastic-net signature of \textbf{700} PM$_{2.5}$-associated proteins gave the same \textbf{1.19}
+(1.08--1.31), enriched in NF-$\kappa$B signalling and cytokine--receptor interaction. Mendelian
+randomisation supported CD28, CSF3 and HAVCR2 as causally associated with MASLD, and structural equation
+modelling put the mediated fraction at \textbf{15\,\%} (2.7--37.7\,\%).
+\textbf{Where it is weak:} a 700-protein signature trained and tested in one cohort absorbs variance from
+everything PM$_{2.5}$ co-varies with, so 15\,\% is an upper bound on mediation rather than an estimate of
+it, and the interval spans more than an order of magnitude. The MR arm establishes protein-to-disease
+causality, not exposure-to-protein. Exposure itself is an annual mean read off an interpolated surface ---
+the weakest link in the chain, and the one a measurement network addresses directly.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{A single-record day, and that is the finding.} Eleven candidates were screened, one admitted.
+The rejected eleven are heatwave mortality, pesticide exposure, indoor radon, two records already carried
+in the 10 October issue and six journal-sweep records with no PM content --- a Sunday entry date with one
+PubMed health hit and no instrumentation deposits at all.
+
+\item \textbf{Two estimates, one cohort, one exposure.} The exposure HR and the protein-signature HR are not
+independent findings: the signature is derived \textit{from} PM$_{2.5}$ in the same participants, so its
+agreement with the exposure estimate is close to arithmetic rather than confirmatory.
+
+\item \textbf{Mediation reported as a point estimate, read as a range.} 15\,\% with a 2.7--37.7\,\%
+interval is compatible with a trivially small mechanism and with a dominant one. The abstract's framing
+--- that the signature ``mediated 15\,\%'' --- is the kind of precision this digest records but does not
+repeat as a finding.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 10 October issue closed with \texttt{last\_entry\_date} at 10 October. This issue collects
+\textbf{11 October in full}, continuous with it, and brings the watch current: the backlog that opened on
+9 October is closed. The \textbf{W41 weekly} (4--10 October) is filed under 10 October. 12 October is not
+opened --- under the 22:00 rule a run must not harvest the day it executes on before 22:00 local, and this
+run began at 17:17 local.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the single in-scope record: \textit{Other clinical endpoints},
+one of ten bands populated. This is the smallest issue in the history of the watch, below the previous
+floor of four records (27 September, also a Sunday). A one-bar bar chart carries no distributional
+information and is retained only so the issue's figure set is complete and comparable in the rollups.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: one prospective cohort. Right --- one health endpoint,
+incident metabolic dysfunction-associated steatotic liver disease. No metadata-only record this issue,
+the first zero since 4 October.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ only, as an annual mean from an
+interpolated surface. Right --- geography: the cohort's country is not stated in the abstract, so the
+record is assigned to global / multi-region rather than guessed at from cohort size or follow-up.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: one record, working-age adulthood (mid-life enrolment, 11.8-year
+follow-up to incident liver disease). Every other window is empty.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture: a single occupied cell. Shown for continuity with
+the rest of the series and for the pooled rollups, where this issue contributes one cell of the week.}
+
+\vspace{2mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Two hazard ratios with 95\,\% CIs from one cohort, one exposure model and one set of 624 events.
+They are not independent estimates: the protein signature is fitted to PM$_{2.5}$ in these same
+participants, so its near-identical hazard ratio reflects how well the signature reproduces the exposure
+variable, not a second line of evidence for the association. Reading the pair as mutual confirmation
+would be a mistake; the panel is shown because the issue's only quantitative content is here.}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Ran PM$_{2.5}$ MASLD proteins 2026}
+{Association of protein signature of fine particulate matter with MASLD: the underlying pathways and Mendelian randomization}
+{J Adv Res}
+{52,190 participants free of metabolic dysfunction-associated steatotic liver disease at baseline, 624 incident cases over a median 11.8 years. PM$_{2.5}$ gave HR 1.19 (1.10-1.30) and a 700-protein elastic-net signature of PM$_{2.5}$ gave HR 1.19 (1.08-1.31), the proteins enriched in NF-kB signalling and cytokine-receptor interaction; Mendelian randomisation supported CD28, CSF3 and HAVCR2 as causally associated with MASLD, and the signature mediated 15\% (2.7-37.7\%) of the PM$_{2.5}$-MASLD association. Limitation: a 700-protein signature trained on the same cohort in which it is then tested will absorb variance from everything PM$_{2.5}$ correlates with - smoking, adiposity, deprivation - so the mediated fraction is an upper bound, and its CI nearly spans an order of magnitude; the MR arm addresses protein-to-MASLD causality, not exposure-to-protein. Exposure is an annual mean from an interpolated surface, which is the weakest term in the chain. Relevance: moderate - liver endpoints are under-studied, and 15\% mediation at best leaves the mechanism mostly open.}
+{10.1016/j.jare.2026.10.021}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{11 October 2026}, single day, continuous with the 10 October issue.
+Harvester legs: \textbf{PubMed} health \textbf{9}, sensing \textbf{3}; \textbf{Europe PMC} \textbf{0} ---
+no record created in the window, the first zero EPMC day since 25 September; \textbf{Crossref by ISSN}
+\textbf{6}; \textbf{arXiv} no entry dated 11 October; \textbf{OpenAlex} HTTP 429. 18 raw records
+deduplicated to \textbf{15}, 4 already carried, \textbf{11} fresh. The \textbf{PubMed connector}
+(\texttt{[EDAT]} 9--11 October) returned 3 PMIDs dated 11 October, 1 appended --- \textbf{12} candidates
+screened, \textbf{1 admitted}, \textbf{11 rejected} with logged reasons, two of them duplicates of records
+already carried in the 10 October issue. \textbf{No record carried on metadata alone.} \textbf{Consensus}
+returned 10 calibration hits, \textbf{0 new}. \textbf{Scholar Gateway} fails with \texttt{ACCESS\_DENIED}
+and has done for the whole backfill; it is the designated route for recovering numbers that abstracts
+omit, and it needs reconnecting at the user's end. \textbf{ClinicalTrials.gov}: the 4--11 October window
+is reported in the W41 weekly. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

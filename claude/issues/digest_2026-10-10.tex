@@ -1,0 +1,263 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{10 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-10\;\;\textcolor{Amber}{\textbar}\;\;Entry window 10 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;9 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{RECORDS IN SCOPE\\(35 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Sixty-six studies, ten years: low-cost PM sensors reach a
+median calibrated R$^2$ of 0.92 on the bench and 0.72 in the field, and median RMSE rises from
+2.6 to 12.3\,$\mu$g\,m$^{-3}$ on the same crossing.}\\[1.4mm]
+\footnotesize
+A critical review of 66 peer-reviewed studies published 2015--2025 --- 32 laboratory evaluations and 34
+field deployments --- puts numbers on the gap this watch keeps circling. Median calibrated R$^2$ was
+\textbf{0.92} ($n$ = 31) in the laboratory against \textbf{0.72} ($n$ = 29) in the field; median RMSE
+\textbf{2.6\,$\mu$g\,m$^{-3}$} ($n$ = 7) against \textbf{12.3\,$\mu$g\,m$^{-3}$} ($n$ = 9). The authors
+are careful that these summarise a heterogeneous literature rather than estimate a pooled effect: aerosol
+mixture, reference instrument, concentration range, averaging interval and validation design all differ
+between studies, and only 7 and 9 of the 66 reported RMSE at all.
+\textbf{Why it matters:} the review's conclusion is the operative one --- calibration is not a correction
+applied once and carried unchanged into a new deployment. Machine-learning and hybrid models appear more
+often in field work and sometimes lower error, but independent validation across \textit{time, place and
+sensor unit} is uneven, which is precisely the validation that a network, as opposed to a study, requires.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{The error figures rest on a thin subset.} Of 66 studies, \textbf{31} reported a calibrated
+R$^2$ and only \textbf{7} (laboratory) and \textbf{9} (field) reported RMSE. A median over nine field
+RMSEs is a weak estimate of what a network should expect, and the studies that report error at all are
+plausibly the ones that found it acceptable.
+
+\item \textbf{Microplastics travel with the resuspended mixture.} Two seasonal campaigns in central Los
+Angeles found airborne microplastics in every sample (2.2--4.0\,MP\,m$^{-3}$ cool season,
+2.2--3.4 warm), fibre-dominated and concentrated in the 5--50 and 50--100\,$\mu$m fractions, correlating
+at $\rho \ge 0.79$ with crustal, traffic and carbonaceous tracers while showing no consistent relationship
+with short-term meteorology. The inhalable fraction below 5\,$\mu$m is not resolved.
+
+\item \textbf{A policy reform with emissions down and ambient flat.} Kazakhstan's 2021 Environmental Code cut
+reported stationary-source emissions by \textbf{5--6\,\%} between 2021 and 2024, yet no statistically
+significant improvement in ambient indicators appeared through 2025 and episodic exceedances persisted.
+With no control region, the null is as much a property of the design --- and of a network too sparse to
+detect a 5\,\% change --- as of the policy.
+
+\item \textbf{Trends that are mostly weather.} Eight years of Indian in-situ data give falling PM at several
+Indo-Gangetic sites (Sen's slope $-0.893$ to $-0.097\,\mu$g\,m$^{-3}$ per month for PM$_{2.5}$), rising
+ozone (0.041 to 0.529), and rising Punjab. The paper's own finding --- declining boundary-layer height and
+wind speed modulate all of it --- is the reason those slopes are not emission trends.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 9 October issue closed with \texttt{last\_entry\_date} at 9 October. This issue collects
+\textbf{10 October in full}, continuous with it; the 11 October issue follows on this run, and the
+\textbf{W41 weekly} (4--10 October) is filed under this date. Two PubMed-connector records dated 10 October
+by entry date also surfaced in the 11 October PubMed query and were rejected there as duplicates of this
+issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 9 in-scope records --- a thin Saturday, the smallest issue
+since 4 October. \textbf{Four of ten bands populated}: \textit{Exposure assessment} and \textit{Burden}
+three each, \textit{Sensing} two, \textit{Reproductive} one. The six empty bands include every clinical
+band except reproductive, which is what a day with one health-endpoint record looks like.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: three measurement campaigns, \textbf{three}
+metadata-only records (33\,\%), two modelling / inventory records and one review / synthesis (the sensor
+calibration review, the day's only tier-A record). Right --- a single record reports a health endpoint
+(lung cancer burden, modelled rather than observed); one more asserts one by title only. Everything else
+reports concentrations, composition, model skill or measurement performance.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: unspeciated PM or emissions \textbf{three},
+PM$_{2.5}$ only three, and one each of PM$_{10}$ only, PM$_{2.5}$ + PM$_{10}$ jointly, and optical
+properties. Right --- geography: North America \textbf{two} (the Los Angeles microplastics campaign and
+the China--US burden comparison), Europe two, and one each for China, South Asia, Central Asia,
+sub-Saharan Africa and global --- the widest geographic spread per record of the backfill, on the fewest
+records.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: one record only, in preconception / in utero (the nationwide
+maternal PM$_{2.5}$ and macrosomia study, carried on metadata alone). Childhood, adolescence, working age
+and older adults have no age-specific record this issue --- the lung-cancer burden projection spans all
+ages and is not assigned to a window.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture for the 9 records. With nine records across four
+subtopics and five architectures, no cell holds more than two; the matrix is nearly diagonal, which is
+what a thin and heterogeneous day looks like rather than any structure in the field.}
+
+\vspace{2mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}\textbf{No forest plot this issue.} No admitted
+record reports a PM effect estimate with a confidence interval. The calibration review's headline
+quantities are measurement-performance statistics (median R$^2$ and RMSE across studies), not effect
+estimates, and pooling them would misrepresent a literature its own authors decline to pool; the lung
+cancer projection reports burden rather than an exposure-response estimate. The f5 panel is absent by
+design, not by build failure.\par}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Qiang maternal PM macrosomia 2026}
+{Interaction of maternal PM$_{2.5}$ exposure and psychosocial state on newborn macrosomia: A nationwide population-based study}
+{Chin Med J (Engl)}
+{\textsc{metadata only.} Metadata-only record: the publisher deposited title, authors and DOI on 10 Oct with no abstract, and the retry chain recovered none. By title, a nationwide study of the interaction between maternal PM$_{2.5}$ exposure and maternal psychosocial state on newborn macrosomia. Interaction claims between a modelled environmental exposure and a self-reported psychosocial measure are the design most prone to residual confounding by socioeconomic position, and macrosomia is a thresholded birthweight outcome whose prevalence is sensitive to that. Relevance: moderate - birth cohorts are where personal rather than residential exposure measurement would change the estimate most. On the abstract-retry list.}
+{10.1097/cm9.0000000000004256}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 3 records}{Clay}
+
+\paperentry{Fazelvalipour LA microplastics 2026}
+{Size-Resolved Characteristics and Source Influences of Airborne Microplastics in Central Los Angeles}
+{Preprints.org (preprint)}
+{Two seasonal campaigns in central Los Angeles: microplastics were in every sample at 2.2-4.0 MP/m3 (cool season) and 2.2-3.4 MP/m3 (warm), dominated by fibres and by the 5-50 and 50-100 um size fractions. Total MP correlated strongly (rho >= 0.79) with crustal (Fe, Si, Mn, Ca, Al, Mg), traffic (Ba, Cu, Ni) and carbonaceous (OC, EC) tracers, while short-term meteorology showed no consistent relationship, implying MPs travel as part of the resuspended urban particle mixture rather than as a separate contaminant. Limitation: a preprint; microscopy-based MP counts carry large operator and blank uncertainty, correlation with crustal tracers is also what resuspension artefact looks like, and particles under 5 um - the inhalable fraction - are not resolved. Relevance: moderate-high - supports the same-day tyre-wear argument that the growing non-exhaust, coarse, resuspended fraction is what networks increasingly measure badly.}
+{10.20944/preprints202610.0577.v1}
+
+\paperentry{Chaudhary India meteorology 2026}
+{Meteorological modulation of ground-level air quality in India based on in situ measurements}
+{Environ Monit Assess}
+{Eight years of in-situ measurements across Indian monitoring sites with Sen's slope trends. PM$_{2.5}$ fell at several Indo-Gangetic sites (-0.893 to -0.097 $\mu$g\,m$^{-3}$/month) and PM$_{10}$ likewise (-1.320 to -0.169), while Punjab rose on local sources; ozone increased (0.041 to 0.529 $\mu$g\,m$^{-3}$/month), read as aerosol inhibition weakening plus more precursors. Declining boundary-layer height and wind speed over north and east India modulate all of it. Limitation: Sen's slope on eight years of CPCB data cannot separate emission change from meteorological trend, which is the paper's own point turned against its trend estimates; station siting and instrument changes over that period are undocumented. Relevance: moderate - the regional version of the same-day argument that a concentration trend is not an emissions trend.}
+{10.1007/s10661-026-15915-9}
+
+\paperentry{Anwar Pretoria FTIR 2026}
+{PM$_{2.5}$ Composition and Organic Matter Sources in Pretoria, South Africa Employing Fourier Transform-Infrared Spectroscopy}
+{Aerosol Air Qual Res}
+{\textsc{metadata only.} Metadata-only record: title, authors and DOI deposited 10 Oct with no abstract. By title, FT-IR functional-group analysis of PM$_{2.5}$ organic matter in Pretoria with source attribution. FT-IR on routine filters is one of the few speciation routes cheap enough to run network-wide, and sub-Saharan African composition data are scarce enough that any new site matters. Relevance: high for the composition gap this corpus repeatedly hits; on the abstract-retry list.}
+{10.1007/s44408-026-00172-9}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Fang LCS calibration review 2026}
+{Calibration of Low-Cost Particulate Matter Sensors for Exposure Assessment: A Critical Review}
+{Curr Environ Health Rep}
+{Sixty-six studies, 32 laboratory evaluations and 34 field studies. Median calibrated R2 was 0.92 (n = 31) in the laboratory against 0.72 (n = 29) in the field, and median RMSE 2.6 $\mu$g\,m$^{-3}$ (n = 7) against 12.3 $\mu$g\,m$^{-3}$ (n = 9) - a factor of nearly five in error on crossing from bench to deployment. The authors are explicit that these are summaries of a heterogeneous literature, not a pooled effect: aerosol mixture, comparison instrument, concentration range, averaging interval and validation design all differ. RH and temperature were handled in most studies; ML and hybrid models appear more often in field work and sometimes lower error, but independent validation across time, place and sensor unit is uneven. Limitation: only 7 and 9 studies reported RMSE at all, so the headline error figures rest on a small and probably favourable subset. Relevance: high - this is the reference statement that calibration does not transfer, which is the standing assumption behind every distributed network claim in this corpus.}
+{10.1007/s40572-026-00566-2}
+
+\paperentry{Chiappini WRF-Chem nudging 2026}
+{Regime-Dependent Effectiveness of Spectral Nudging in WRF-Chem: Meteorological and Saharan Dust Skill over the Central Mediterranean}
+{Atmosphere}
+{A two-tier design separates the meteorological response to spectral nudging (a 104-day chemistry-free pair) from the dust-transport response (paired event simulations). Nudging improves sea-level pressure most (daily RMSE 2.08 to 1.53 hPa) and 10 m wind less (2.50 to 2.20 m/s), while 2 m temperature does not improve (2.05 to 2.15 C); the benefit recurs episodically rather than growing with simulation age. Dust skill is conditional: in the weakly forced June case all seven AERONET sites improved (station-mean RMSE 0.457 to 0.235, correlation 0.778 to 0.881), while in March RMSE fell at all eight sites but mean correlation was unchanged. Limitation: two outbreaks is a thin basis for a regime claim, and AOD is a column integral that constrains surface dust PM only weakly. Relevance: moderate - dust is the event class where satellite-and-model PM products diverge most from surface nodes.}
+{10.3390/atmos17100992}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 3 records}{Coral}
+
+\paperentry{Mukhamediyarov Kazakhstan code 2026}
+{Air Quality and Emission Trends Following the 2021 Environmental Code Reform in Kazakhstan Across Regions and Industrial Sectors}
+{Atmosphere}
+{A before-and-after comparison of Kazakhstan's 2021 Environmental Code reform, which tightened standards and pushed Best Available Techniques. Reported stationary-source emissions fell roughly 5-6\% between 2021 and 2024, but no statistically significant improvement in assessed ambient indicators appeared between 2021 and 2025, and episodic PM exceedances persisted in several cities. Limitation: no control region and no counterfactual, so the null is as much about the design as about the policy; reported emissions are self-declared inventory, and the ambient network is sparse enough that a 5\% emission change would be undetectable even if real. Relevance: moderate - a clean example of why policy evaluation needs measurement density the regulatory network does not have; the 7 October congestion-pricing record is the version that had it.}
+{10.3390/atmos17100993}
+
+\paperentry{Guo lung cancer burden 2026}
+{Trends in lung cancer burden, risk factors, and disease projections in China and the United States, 1990-2023}
+{Chin Med J Pulm Crit Care Med}
+{GBD 2023 data with joinpoint regression, three-factor Das-Gupta decomposition and Bayesian age-period-cohort projection to 2050, comparing lung cancer burden and its attributable risks - smoking, air pollution, occupational exposure, metabolic and dietary factors - between China and the United States. Limitation: GBD attribution for air pollution is a modelled counterfactual built on exposure surfaces and borrowed concentration-response functions, so the pollution share is an assumption propagated forward, not an observation; the abstract reports no attributable fractions. Relevance: low-moderate - useful as the burden framing that the measurement side of this corpus feeds, but it adds no exposure information of its own.}
+{10.1016/j.pccm.2026.08.006}
+
+\paperentry{Abdella Italy urban-rural 2026}
+{Cleaning the air or shifting the burden? Characterizing urban-rural disparities in air pollution-attributable mortality across Italy}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata-only record: Elsevier deposited title, authors and DOI on 10 Oct with no abstract. By title, an attributable-mortality analysis asking whether Italian air-quality gains have been distributed or merely displaced from urban to rural populations. Rural exposure is systematically the worse-measured half of any national network, so a rural-urban disparity estimate inherits the monitoring asymmetry it is trying to describe - the 8 October US block-level record showed spatial aggregation attenuating exactly this kind of disparity. Relevance: moderate-high; on the abstract-retry list.}
+{10.1016/j.atmosenv.2026.122420}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{10 October 2026}, single day, continuous with the 9 October issue.
+Harvester legs: \textbf{PubMed} health \textbf{1}, sensing \textbf{0} --- the thinnest PubMed day of the
+series, a Saturday entry date; \textbf{Europe PMC} \textbf{20} (8 after the retro-index gate dropped 12);
+\textbf{Crossref by ISSN} \textbf{32}; \textbf{arXiv} returned no entry dated 10 October;
+\textbf{OpenAlex} HTTP 429. 41 raw records, no cross-source duplicates, \textbf{41} fresh. The
+\textbf{PubMed connector} (\texttt{[EDAT]} 9--11 October) returned 9 PMIDs dated 10 October, 5 already
+carried and \textbf{3} appended --- \textbf{44} candidates screened, \textbf{9 admitted}, \textbf{35
+rejected} with logged reasons. \textbf{Three records carried on metadata alone} (33\,\%); the
+abstract-retry chain recovered \textbf{3 of 7} attempted, all three via PubMed, and none of the Elsevier
+or Springer deposits. \textbf{Consensus} returned 10 calibration hits, \textbf{0 new} --- all pre-date the
+window and several are cited by the calibration review admitted here. \textbf{Scholar Gateway} fails with
+\texttt{ACCESS\_DENIED}. \textbf{ClinicalTrials.gov}: one new registration in the 4--11 October window
+(EPIC-AIR, NCT07500948), reported in the W41 weekly. Abstracts remain the copyright of their respective
+publishers.\par}
+\end{keybox}
+
+\end{document}
