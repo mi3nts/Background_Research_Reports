@@ -3062,3 +3062,11 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **Forest defect avoided:** metric "cRR" is not in `_RATIO_METRICS`, so it is drawn on the difference-scale panel; write cumulative RRs as "RR".
 - `plots.py`: design keys Multi-location time-series, Time-series (GAM) with mixture models, Nested case-control, Ecological / registry analysis, Integrative review, Commentary, Theoretical / optical modelling; geo needles Gambia, North Macedonia/Skopje, UAE/Abu Dhabi.
 - Trial watch 12-14 Oct: 0 hits. Scholar Gateway still `ACCESS_DENIED`. Next: 15 Oct daily, then 16 Oct, then **17 Oct + W42 weekly (11-17 Oct)** on the Sat 17 Oct ≥22:00 run.
+
+## Run 2026-10-16 (16:2x UTC = 11:2x CDT) — daily 15 Oct
+
+- 22:00 rule: newest buildable = 15 Oct; 16 Oct left to the next run, then **17 Oct + W42 weekly (11-17 Oct)** on the Sat 17 Oct >=22:00 run. Harvest leg-by-leg: PubMed 6 health / 3 sensing, EPMC 46 (0 AGR), Crossref-ISSN 78 (first attempt killed when run backgrounded - run legs in the foreground), arXiv no in-window entry, OpenAlex 429 → 129 unique → 22 carried → 107 fresh; connector (EDAT 15 Oct, `_conn_1016b.py`) 7 PMIDs, 3 appended.
+- **110 screened → 25 admitted / 85 rejected** (`_rej_1016b.py`), 11 pp, 4 effects (3 PAF on the difference panel, 1 OR), 5 tier A, 5 metadata-only (20%). DOI gate 0 fail / 2 warn (Epidemiol Prev DOIs not in Crossref, live at doi.org). 0 overfull.
+- Proof caught the second forest caption split onto the next page; fixed by wrapping each forest figure+caption in a minipage in the prose module. Apply the same when an issue has both f5_forest and f5_forest_2.
+- `plots.py`: design keys Case-control study, Delphi consensus, Web review, Instrument evaluation, Laboratory (+ field) measurement; geo Peru. **Do not add a "lima" needle — it matches KaLIMAntan** (caught when Indonesia/Malaysia moved to Latin America).
+- Consensus 10 hits, 0 new; trial watch 0 hits. Scholar Gateway still `ACCESS_DENIED`; OpenAlex 429.

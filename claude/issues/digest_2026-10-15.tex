@@ -1,0 +1,360 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{15 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-15\;\;\textcolor{Amber}{\textbar}\;\;Entry window 15 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;25 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{25}{RECORDS IN SCOPE\\(85 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}AERONET's night-time lunar AOD now matches its daytime solar
+AOD to within $\pm$0.01 at 440\,nm across 492 sites --- the column reference for AOD--PM$_{2.5}$ fusion no
+longer stops at sunset.}\\[1.4mm]
+\footnotesize
+Model-T CIMEL radiometers have recorded direct-beam lunar irradiance at six wavelengths (440--1640\,nm) since
+2014. With an updated empirical correction to the ROLO lunar irradiance model, day--night AOD differences at
+every long-record site are typically \textbf{within $\pm$0.01} at 440\,nm and as good or better at longer
+wavelengths; in 3\,h dusk/dawn transition windows under low, stable AOD, AOD, \AA ngstr\"om exponent, column water
+vapour and SDA fine/coarse AOD differ negligibly.
+\textbf{Where it is weak:} consistency is demonstrated only where AOD is low and stable --- smoke and dust nights,
+the case that matters for exposure, are not tested, and lunar phase leaves recurring multi-day gaps.
+\textbf{Why it matters here:} satellite AOD is daytime-only, so AOD-driven PM$_{2.5}$ surfaces interpolate the
+night; a validated night column is a direct check on how ground LCS networks and models handle the nocturnal
+boundary layer.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Low-cost monitors in a transfer-learning exposure model.} Lima 2010--2023: reference and low-cost
+monitors, MAIAC AOD and WRF-Chem fused by an instance-weighted random forest that borrows US training data by
+geo-environmental similarity. CV R$^2$ \textbf{0.76}; mountain-district mean PM$_{2.5}$ fell from 34.2 to
+29.2\,$\mu$g\,m$^{-3}$ --- a correction that the reported CV, run on the same biased sites, cannot verify.
+
+\item \textbf{Datacenter power as a PM$_{2.5}$ exposure.} Memphis preprint (Dominici group): on-site turbines
+concentrate attributable deaths within 50\,km (82\,\%), grid supply scatters them $>$250\,km (94\,\%); at
+real/permitted capacity, \textbf{11.35} (6.48--17.29) vs \textbf{8.10} (4.60--12.38) deaths/yr. A near-source
+burden that a local network could test directly.
+
+\item \textbf{Two well-powered nulls.} MESA ($n$=5,072): no pollutant associated with suPAR, PM$_{2.5}$ CI
+excluding $\geq$2\,\% per 5\,$\mu$g\,m$^{-3}$. UK Biobank women ($n$=231,525): the PM$_{2.5}$--NO$_2$
+association with fatty-liver index vanishes after area deprivation (OR \textbf{0.999}, 0.993--1.004) --- with
+the caveat that deprivation may sit on the pathway.
+
+\item \textbf{Constituents and windows.} Guangdong CHD registry (12,680 cases): per-IQR constituent increments
+raised odds 9--16\,\%, strongest preconception; conotruncal ORs 1.14--1.36; sulfate and BC lead early, BC and
+nitrate later. CIs absent from the abstract.
+
+\item \textbf{Non-exhaust metrology with explicit drift.} DLR tire-wear rig: chamber temperature raised CPC
+response 3.6-fold (1.8--7.2), inflation pressure cut OPS number 18\,\% (12--24\,\%), and the reference-condition
+CPC signal doubled over the campaign --- drift monitoring and randomised blocks are prerequisites.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 14 October issue closed with \texttt{last\_entry\_date} at 14 October. This issue collects
+\textbf{15 October in full}, continuous with it. 16 October is not opened: this run began at 11:23 CDT on
+16 October, before 22:00. The \textbf{W42 weekly} (11--17 October) is due with the Saturday 17 October issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 25 in-scope records across eight bands. Exposure assessment and
+modelling leads (7), burden and policy follows (5); sensing (4) carries the AERONET lunar-AOD tier-A record.
+Neuro and other-clinical bands are empty.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: modelling/inventory and review each 5, metadata-only 5
+(20\,\%, all Elsevier or Springer Nature deposits without abstracts at harvest). Right --- health endpoints:
+CHD, arrhythmia, chronic respiratory disease, stroke burden, fatty liver, a biomarker null (suPAR).}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ dominates; optical (AOD) and size-resolved
+number (tire-wear CPC/OPS) metrics appear on the sensing side. Right --- geography: China (5) and North America
+(4) lead; Peru, Indonesia/Malaysia and Taiwan enter.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: preconception/in utero (Guangdong CHD), school-age children
+(inhaled dose), working age (creosote workers), and three older-adult samples (Guangdong $\geq$40, MESA, UK
+Biobank women). No adolescent record.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Review/synthesis spreads across burden, respiratory,
+sensing and mechanism; the exposure row mixes modelling, laboratory and metadata-only records.}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale: one estimate --- the UK Biobank fatty-liver OR per unit of a 2010 PM$_{2.5}$--NO$_2$ score
+after area-deprivation adjustment, a null by construction of the adjustment set, not per unit concentration.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{Difference scale: population-attributable fractions (\%) of chronic respiratory disease for PM$_1$,
+PM$_{2.5}$ and PM$_{10}$ from one cross-sectional Guangdong sample. All three come from the same 1\,km
+satellite-ML product and are near-collinear --- one estimate drawn three times, causal only by assumption.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Cardiovascular \& metabolic\hfill 3 records}{Teal}
+
+\paperentry{UKB arrhythmia NMR metabolome mediation 2026}
+{Large-scale plasma metabolic profiling identifies signatures and biomarkers associated with air pollution and arrhythmias: A prospective cohort study from UK Biobank}
+{Ecotoxicol Environ Saf}
+{449,068 UK Biobank participants free of arrhythmia, median follow-up 16.3 y, 47,381 incident cases. All four pollutants were associated with arrhythmia, HR 1.015-1.257 per 10 $\mu$g\,m$^{-3}$ (range across pollutants; CIs not in the abstract). An elastic-net signature from 170 NMR metabolites mediated 11.2\% of the PM$_{2.5}$ association (PM$_{10}$ 5.2\%, NO$_2$ 7.4\%, NOx 9.8\%); lipid, ketone-body and amino-acid pathways recurred, ketone bodies most for intraventricular block. Limitation: single-baseline 2010 LUR exposure and single-time metabolomics make mediation cross-sectional in disguise; ketone bodies track fasting and diabetes status. Relevance: low-moderate for sensing - another UKB LUR result whose exposure contrast is too smooth to need dense monitoring.}
+{10.1016/j.ecoenv.2026.120919}
+
+\paperentry{MESA long-term air pollution suPAR null 2026}
+{Long-term ambient air pollution is not associated with circulating soluble urokinase plasminogen activator receptor}
+{Environ Epidemiol}
+{5,072 MESA participants (2000-2002 enrolment), ELISA suPAR, multivariable linear regression. No pollutant - PM$_{2.5}$, NO$_2$, NOx, O$_3$ or light-absorbing carbon - was associated with suPAR; the PM$_{2.5}$ CI excluded effects of 2\% or more per 5 $\mu$g\,m$^{-3}$. With two prior null cohorts, the authors conclude suPAR is not a meaningful mediator of the PM-CVD link. Limitation: single cross-sectional suPAR measure, and the US contrast of the early 2000s is narrow relative to high-exposure settings, so a null at 5 $\mu$g\,m$^{-3}$ does not transfer to them. Relevance: low-moderate - a well-powered null worth citing against biomarker-mediation claims; the exposure model, not sensors, sets the contrast.}
+{10.1097/ee9.0000000000000532}
+
+\paperentry{UKB women deprivation PM$_{2.5}$-NO$_2$ fatty liver 2026}
+{Socioeconomic disadvantage, air pollution, and metabolic health among women: analyses of UK Biobank and US data}
+{Front Endocrinol (Lausanne)}
+{231,525 UK Biobank women: Townsend deprivation predicted FLI (beta 1.114, 95\% CI 1.069-1.159) and FLI>=60 (OR 1.080, 1.076-1.084). Age-adjusted pollution associations vanished once deprivation entered the model (FLI beta -0.068, -0.137 to 0.001; FLI>=60 OR 0.999, 0.993-1.004). Across 46 US jurisdictions, +1 SD poverty meant +1.38 points female obesity after PM$_{2.5}$ adjustment. Limitation: adjusting for an area deprivation index that partly lies on the pollution pathway can over-adjust; a 2010 LUR score and state-level US PM$_{2.5}$ are coarse. The null is contextual, not causal. Relevance: low-moderate - shows how easily SES absorbs smooth LUR contrasts; finer exposure would be needed to separate them.}
+{10.3389/fendo.2026.1948066}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{Yoon pollutant asthma immune mechanisms review 2026}
+{Impacts and Immune Mechanisms of Pollutant-Mediated Asthma and Airway Inflammation}
+{Allergy Asthma Immunol Res}
+{Narrative review of epithelial injury, barrier disruption, oxidative stress and innate signalling (NF-kB, MAPK, PI3K/Akt, inflammasome) driving T2, non-T2 and mixed asthma phenotypes; pollutant-specific arms include PM-induced NLRP3 activation, O$_3$ barrier disruption, DEP-driven IL-17A and pollutant-allergen co-exposure. Acknowledges that experimental doses and compositions do not map onto real-world exposure. Limitation: non-systematic, no new data, and no dose metric that a measurement study could target. Relevance: low - background for mechanism sections.}
+{10.4168/aair.2026.18.5.640}
+
+\paperentry{Guangdong COPD surveillance PM$_{1}$ PM$_{2.5}$ PM$_{10}$ PAF 2026}
+{Association between chronic respiratory diseases and the attributable risk of long-term exposure to atmospheric particulate matters among middle-aged and elderly Chinese population}
+{Fundamental Research}
+{COPD surveillance sample of 7,371 adults >=40 y (CRD 19.4\%, COPD 10.0\%). Each 10 $\mu$g\,m$^{-3}$ of PM was associated with higher prevalence of every CRD outcome, more so in rural residents and biomass users. PAF of CRD: PM$_{1}$ 19.09\% (95\% CI 12.41-25.02), PM$_{2.5}$ 18.98\% (12.90-24.90), PM$_{10}$ 21.40\% (13.84-27.67); COPD highest. Limitation: cross-sectional prevalence, so PAF here is causal only by assumption; PM$_{1}$/PM$_{2.5}$/PM$_{10}$ come from the same satellite-ML product and are near-collinear, so the three PAFs are one estimate three times; biomass fuel confounds rural contrasts. Relevance: low-moderate - PM$_{1}$ adds nothing distinct when derived from the same model.}
+{10.1016/j.fmre.2025.04.013}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Guangdong CHD PM$_{2.5}$ constituents 2026}
+{Differential Impacts of Fine Particulate Matter Constituents on Congenital Heart Disease across Critical Periconceptional Windows}
+{Environ Pollut}
+{Guangdong CHD Registry 2004-2022: 12,680 cases, 10,266 controls, multilevel logistic regression by exposure window. Per-IQR increments of PM$_{2.5}$ mass and constituents raised CHD odds 9-16\%, strongest in the preconception window and attenuating later; BC and nitrate stayed associated during pregnancy. Conotruncal defects carried the largest ORs (1.14-1.36 per IQR). Mixture models put sulfate and BC first preconception, BC and nitrate thereafter. Limitation: constituents are modelled and mutually collinear, so 'dominant constituent' rankings are mixture-model artefacts as much as biology; registry controls and the higher-SES amplification hint at ascertainment differences. CIs absent from the abstract. Relevance: moderate - constituent-resolved windows need speciation, which optical LCS cannot supply; BC from multi-wavelength nodes is the tractable piece.}
+{10.1016/j.envpol.2026.129345}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Lung-on-a-chip pollutant toxicity review 2026}
+{Microfluidic lung-on-a-chip for evaluating inflammation and toxicity from environmental pollutants}
+{Front Bioeng Biotechnol}
+{Review of microfluidic lung-on-a-chip platforms - air-liquid interface, cyclic stretch, perfused endothelium - for pollutant toxicology, covering PM, pathogens, VOCs and emerging nanomaterials, with advantages in biomimicry and real-time readout and the obstacles of chip standardisation, operational complexity and subsystem integration. Limitation: no quantitative synthesis; dose delivery (deposited mass per area) is the variable that decides translatability and is not addressed in the abstract. Relevance: low - only connects to monitoring if chips are dosed at measured ambient deposition rates.}
+{10.3389/fbioe.2026.1942916}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 7 records}{Clay}
+
+\paperentry{Pu Lima hybrid transfer-learning PM$_{2.5}$ 2026}
+{A Hybrid Transfer Learning Approach for Ambient PM$_{2.5}$ Exposure Modeling in LMIC Contexts: A Case Study from Lima, Peru}
+{ACS EST Air}
+{Lima 2010-2023 daily PM$_{2.5}$ surface from an instance-weighted random forest that fuses reference and low-cost monitor data, satellite AOD and WRF-Chem. Sampling bias toward monitored districts is handled by geo-environmental similarity transfer learning that borrows weighted training instances from the US. Cross-validated R2 0.76; predicted mean PM$_{2.5}$ in mountainous districts fell from 34.19 to 29.23 $\mu$g\,m$^{-3}$ versus the unweighted model. Limitation: CV R2 is computed on the same biased monitor locations the method claims to correct, so the mountain-region gain is unverified by held-out sites there; how low-cost data were calibrated is not stated. Relevance: high - a template for using sparse LCS networks plus transfer learning in data-poor cities.}
+{10.1021/acsestair.6c00125}
+
+\paperentry{Torii Kalimantan peat fire super-linear scaling 2026}
+{Peat Burning Scales Super-linearly with Fire-Season Magnitude in the West Kalimantan-Sarawak Border Region, 2012-2025}
+{Research Square (preprint)}
+{Fourteen fire seasons of VIIRS detections against a peat map: peat-fire counts scale with total detections as a power law, exponent 1.96 (95\% CI 1.57-2.36; R2 0.89), so doubling fire activity quadruples peat burning; robust to alternative predictors (2.36) and a Suomi-NPP-only subset (1.98). Peat share rises from <4\% in La Nina years to 30-51\% in El Nino years (ONI r 0.78), though ONI is collinear with season size. 24.3\% of cells burning >=7 years gave 57.7\% of cumulative FRP; scaling survives back-trajectory transport (1.59). Limitation: single-author preprint, detections not emissions, and no PM observations close the chain. Relevance: moderate - receptor-site sensors in Sarawak could test whether haze PM really tracks the squared term.}
+{10.21203/rs.3.rs-11311408/v1}
+
+\paperentry{Monsoon aerosol Pb isotopes rainwater offsets 2026}
+{Monsoon-related variability of water-soluble aerosol Pb isotopes and systematic aerosol-rainwater offsets at Peng Chia Yu}
+{Atmos Environ}
+{\textsc{metadata only.} No abstract at harvest. Title indicates monsoon-resolved variation in water-soluble aerosol Pb isotope ratios and systematic offsets between aerosol and rainwater signatures. Recorded for coverage; no estimate inferred. Relevance: low - source apportionment input, not a monitoring method.}
+{10.1016/j.atmosenv.2026.122425}
+
+\paperentry{Multi-scale PM$_{2.5}$ nonlinear time-series two metros 2026}
+{Deciphering multi-scale PM$_{2.5}$ temporal dynamics and cross-scale interactions in two climatically distinct metropolitan areas: insights from advanced nonlinear time-series analysis}
+{Atmos Pollut Res}
+{\textsc{metadata only.} No abstract at harvest. Title indicates nonlinear multi-scale decomposition of PM$_{2.5}$ series and cross-scale interactions in two climatically distinct metropolitan areas (author affiliations suggest Vietnam/Taiwan). Recorded for coverage; no estimate inferred. Relevance: low-moderate - scale separation is how network redundancy and siting density are usually argued.}
+{10.1016/j.apr.2026.103238}
+
+\paperentry{Zhou condensation sink efficiency hygroscopicity 2026}
+{Condensation Sink Efficiency of Atmospheric Particles Regulated by Their Chemical Compositions and Hygroscopicity}
+{Environ Sci Technol}
+{Defines a CS efficiency coefficient (epsilon = CS\_eff/CS\_calc, the latter assuming irreversible uptake) for gaseous H2SO4. Epsilon depends on composition and water uptake: dry pure organics scavenge less efficiently than inorganics, high RH raises epsilon for both, and mixed particles sit between, set jointly by composition and RH; CS efficiency is lower still for HIO$_3$. Including epsilon improves cluster-survival and sub-3 nm formation simulations and may explain intense NPF despite high CS in megacities. Limitation: epsilon values and their uncertainty are not given in the abstract, and field transfer is 'exploratory'. Relevance: low-moderate - NPF bursts drive number, not mass, so optical LCS miss them; CPC-equipped nodes would not.}
+{10.1021/acs.est.6c07189}
+
+\paperentry{Harbin ammonium PM$_{2.5}$ and precipitation sources 2026}
+{From atmosphere to river: Tracing the origins and deposition of ammonium in both PM$_{2.5}$ and precipitation in Harbin}
+{Environ Pollut}
+{\textsc{metadata only.} No abstract at harvest. Title indicates source tracing of ammonium in PM$_{2.5}$ and precipitation in Harbin and its deposition to river systems. Recorded for coverage; no estimate inferred. Relevance: low - secondary inorganic aerosol source apportionment.}
+{10.1016/j.envpol.2026.129335}
+
+\paperentry{Cheng BTH multi-source satellite PM$_{2.5}$ stacking 2026}
+{Machine Learning-Based Retrieval of PM$_{2.5}$ Concentrations Using Multi-Source Satellite Data in the Beijing-Tianjin-Hebei Region of China}
+{Atmosphere}
+{BTH 2019-2021: RF, SVR, XGBoost and linear stacking on four predictor sets with an 80:10:10 split. Test R2 rose from 0.51-0.54 with AOD alone to 0.83-0.84 with all eight predictors; stacking best at R2 0.84, RMSE 12.4, MAE 9.7 $\mu$g\,m$^{-3}$. Southern/southwestern Hebei highest; winter > summer. Missing AOD limited spatial completeness. Limitation: a random split leaks spatial and temporal autocorrelation, so the test R2 overstates out-of-site skill; no spatial-block CV, and gap filling - the real problem - is left to future work. Relevance: moderate - AOD alone explains half the variance; ground nodes and meteorology carry the rest.}
+{10.3390/atmos17101010}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 4 records}{Amber}
+
+\paperentry{SEARO air-quality early-warning review 2026}
+{Prediction accuracy of available early warning systems for air pollution across WHO South-East Asia region: a systematic review}
+{Front Public Health}
+{PROSPERO-registered review (to Feb 2026): 14 modelling studies from 839 records, PROBAST+AI risk-of-bias. Hybrid deep-learning forecasters reported the lowest RMSE (0.84-4.61 $\mu$g\,m$^{-3}$) and R2 up to 0.998 for PM$_{2.5}$; ML reached 98.3\% categorical accuracy; CTMs cut bias \textasciitilde{}70\% only with satellite data assimilation. Most studies were at high risk of bias from absent external validation and overfitting; heterogeneity precluded meta-analysis. Limitation: an R2 of 0.998 for daily PM$_{2.5}$ is a leakage signature, and the review reports such figures without re-analysis. Relevance: moderate - operational forecast skill in the region is unproven; LCS networks could provide the out-of-sample validation these systems lack.}
+{10.3389/fpubh.2026.1945362}
+
+\paperentry{Schafer AERONET lunar AOD assessment 2026}
+{An assessment of lunar photometry in AERONET}
+{Atmos Meas Tech}
+{CIMEL model-T lunar AOD at 492 sites since 2014 with an updated empirical correction to the ROLO lunar irradiance model. At all long-record sites, day-night AOD differences are typically within +/-0.01 at 440 nm and as good or better at longer wavelengths; in 3 h day/night transition windows under low, stable AOD, AOD, Angstrom exponent, water vapour and SDA fine/coarse AOD show statistically negligible differences. Limitation: agreement is shown only under stable low AOD - smoke and dust nights, where night AOD matters most, are untested, and lunar-phase coverage leaves gaps. Relevance: high - validated night-time AOD removes the daytime-only constraint on AOD-PM$_{2.5}$ fusion and gives LCS networks a night-time column reference.}
+{10.5194/amt-19-6487-2026}
+
+\paperentry{Bachour WRF-Chem AOD post-correction hot desert 2026}
+{Statistical post-correction of WRF-Chem aerosol optical depth under hot-desert conditions}
+{Atmos Pollut Res}
+{\textsc{metadata only.} No abstract at harvest. Title indicates statistical bias correction of WRF-Chem AOD in a hot-desert setting (author group based in Qatar). Recorded for coverage; no estimate inferred. Relevance: moderate - dust-dominated AOD is where both models and optical LCS fail, and corrected CTM fields are common fusion inputs.}
+{10.1016/j.apr.2026.103233}
+
+\paperentry{Epple DLR tire-wear particle chassis dynamometer 2026}
+{Temperature and Inflation Pressure Effects on Airborne Tire Wear Particle Measurements on a Chassis Dynamometer}
+{Atmosphere}
+{Two-level factorial (inflation 1.8/3.8 bar x chamber 11/35 C) on the DLR TRWP system, in two blocks of toe setting. Higher temperature raised cumulative MCPC response 3.6-fold (95\% CI 1.8-7.2); higher pressure cut OPS number 18\% (12-24\%); OPS mass proxy fell \textasciitilde{}17\% with temperature. Toe >48 arcmin produced rising signals and irregular wear. Reference-condition MCPC response doubled over the campaign, so drift monitoring and randomised blocked run order are prerequisites. Limitation: one tire, one rig; the OPS mass proxy assumes density and refractive index; the ultrafine mode may be volatile, not wear. Relevance: moderate - non-exhaust PM metrology with explicit instrument drift; the same discipline applies to LCS.}
+{10.3390/atmos17101011}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Creosote railroad switch PAH workers 2026}
+{Assessing PAH exposure during construction work of railroad switches using creosote-impregnated ties}
+{Ann Work Expo Health}
+{Workers assembling railroad switches from creosote ties: breathing-zone sum of 16 PAHs 120,000-280,000 ng/m3 on a single sampled shift; skin pyrene 0.31-140 ng/cm2, highest on palms and calves; urinary 1-HP rose across the week (1.9-17 umol/mol creatinine), most above the UK guidance value by day 4. A PBTK model attributed uptake mainly to the dermal route, and pyrene under protective clothing implies fabric penetration. Limitation: one air-sampling shift, small crew, and the particle/vapour split is not reported, so the inhalation share rests on the model. Relevance: low for ambient sensing - a reminder that biomarker-based particulate PAH exposure is not reducible to air concentration.}
+{10.1093/annweh/wxag088}
+
+\paperentry{Walter neighbourhood air exchange inhaled dose children 2026}
+{Neighborhood-scale disparities in air exchange rates and inhaled pollution dose among school-aged children}
+{J Expo Sci Environ Epidemiol}
+{\textsc{metadata only.} No abstract at harvest. Title indicates neighbourhood-scale modelling of housing air exchange rates and the resulting inhaled pollutant dose among school-aged children, framed as a disparity analysis (Northeastern University group). Recorded for coverage; no estimate inferred. Relevance: high if infiltration is parameterised from data - indoor/outdoor LCS pairs measure exactly this ratio.}
+{10.1038/s41370-026-00989-x}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 5 records}{Coral}
+
+\paperentry{Gujral Dominici Memphis datacenter PM$_{2.5}$ 2026}
+{Behind-the-Meter Versus Grid Electricity for AI Datacenters: Magnitude, Geography, and Equity of PM$_{2.5}$-Attributable Mortality in Memphis}
+{Preprints.org (preprint)}
+{Two datacenters 12 km apart. At a common 240 MW, grid-supplied C1 carried 10.83 attributable deaths/y (95\% interval 7.83-13.84) vs 3.67 (2.65-4.68) for behind-the-meter C2; at real/permitted capacities the order reversed, 11.35 (6.48-17.29) for C2 vs 8.10 (4.60-12.38) for C1. 94\% of C1 deaths fell >250 km away; 82\% of C2 deaths within 50 km, concentrated in the low-income, high people-of-colour stratum. Limitation: preprint; permitted capacity is not operating capacity, and on-site turbine emission factors and the reduced-form dispersion model are the whole result. Relevance: high - a near-source burden that a local LCS network around the site could verify directly.}
+{10.20944/preprints202610.0819.v1}
+
+\paperentry{GBD 2023 G20 stroke air pollution temperature 2026}
+{Estimates, temporal evolution, and contributors of the stroke burden due to air pollution and non-optimal temperature across G20 nations, 1990-2023}
+{Thromb Haemost}
+{GBD 2023, G20 nations. Age-standardised stroke mortality attributable to air pollution plus non-optimal temperature fell from 52.81 to 17.46/100,000 (1990-2023; EAPC -3.44\%, 95\% CI -3.57 to -3.30); DALY rate EAPC -3.29\%. The decline is driven by household air pollution; ambient PM and heat burdens rose or stalled, highest in low/middle-SDI members, and ARIMA projections to 2040 keep them flat. Limitation: GBD re-tabulation with joint attribution of two risk classes; the ARIMA projection adds no exposure information. Relevance: low - confirms that ambient PM, not household fuel, now carries the residual stroke burden.}
+{10.1055/a-2977-5555}
+
+\paperentry{Atlante Aria e Salute Delphi co-creation 2026}
+{Co-creation as a decision-making tool in the PNC 'Atlante Aria e Salute' project to define the contents of an integrated atlas}
+{Epidemiol Prev}
+{Two Delphi rounds (16 then 22 experts and regional stakeholders) plus plenaries to fix the Italian national air-and-health atlas: data sources (ISTAT cause-specific mortality, hospital discharges), territorial disaggregation, pollutant-outcome pairs graded on causal certainty, public-health relevance and routine-data accuracy, attributable-fraction methods and policy counterfactuals. Limitation: process paper; the abstract is truncated before the final outcome list, and no exposure model is specified. Relevance: low-moderate - a national open-data atlas is a natural consumer of fused monitor/LCS exposure surfaces if its resolution is fine enough.}
+{10.19191/ep26.4-5.s1.a952.090}
+
+\paperentry{Air-health web atlases review Italy 2026}
+{PNC project 'Atlante Aria e Salute': exploratory web review and quality assessment of open-access atlases on the health effects of air pollution}
+{Epidemiol Prev}
+{Protocol-driven review of public air-and-health atlases (Sep-Dec 2024): 1,000 websites screened, 15 potentially relevant, 8 included (3 governmental, 3 academic, 2 foundations). All report PM$_{2.5}$ and/or PM$_{10}$; NO$_2$ and O$_3$ are less common; all but one use annual averages, six give dose-response estimates (mostly all-cause long-term mortality), only two cause-specific. Assessed for interactivity, Flesch readability, WCAG accessibility and transparency. Limitation: eight sites is a thin sample and search-engine screening is not reproducible. Relevance: moderate - public health-impact maps ignore sub-annual and sub-city variation, exactly what dense networks measure.}
+{10.19191/ep26.4-5.s1.a1026.089}
+
+\paperentry{Shandong integrated air-pollutant GHG inventory 2026}
+{Strategies for Co-Control of Air Pollutants and Greenhouse Gases: Insights from an Integrated Emission Inventory in Shandong Province}
+{Atmosphere}
+{2024 integrated inventory for 16 Shandong prefectures, 10 air pollutants and 4 GHGs over 8 source categories. Power/heat and industry gave 86.84\% of CO$_2$; industry dominated SO$_2$, CO and VOCs; mobile sources NOx; agriculture NH$_3$, CH4 and N2O; fugitive dust dominated primary PM. Interspecies correlations show partial synergy, so co-control cannot be assumed from shared sources. Limitation: inventory only, no uncertainty bounds in the abstract, and fugitive-dust PM is the least constrained category in any inventory. Relevance: low-moderate - fugitive dust dominance is a coarse-mode signal that PM$_{10}$/PM$_{2.5}$ ratios from LCS can check locally.}
+{10.3390/atmos17101016}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{15 October 2026}, single day. Harvester legs: \textbf{PubMed} health \textbf{6},
+sensing \textbf{3}; \textbf{Europe PMC} \textbf{46} (0 AGRICOLA retro-index); \textbf{Crossref by ISSN}
+\textbf{78}; \textbf{arXiv} no entry dated 15 October; \textbf{OpenAlex} HTTP 429. 129 unique, 22 already
+carried, 107 fresh. \textbf{PubMed connector} (EDAT 15 Oct) 7 PMIDs, 3 appended --- \textbf{110} candidates
+screened, \textbf{25 admitted}, \textbf{85 rejected} with logged reasons. \textbf{Consensus} calibration sweep:
+10 hits, \textbf{0 new} (Ginsburg 2026 and Kumpika 2026 already archived). \textbf{Trial watch}: 0 registrations
+updated 15--16 October. Abstract retry recovered 7 of 12; \textbf{5 records carried on metadata alone}.
+DOI gate 0 fail, 2 advisory warnings (Epidemiologia e Prevenzione DOIs resolve at doi.org but are absent from
+Crossref). \textbf{Scholar Gateway} still \texttt{ACCESS\_DENIED}. Abstracts remain the copyright of their
+publishers.\par}
+\end{keybox}
+
+\end{document}

@@ -395,6 +395,12 @@ design_group.update({
     "Nested case-control": "Observational - cross-sectional",   # 2026-10-16 (case-control grouped as in 557)
     "Multi-omics regional evidence synthesis": "Review / synthesis",
     "Seasonal field sampling + filtration test": "Measurement campaign",
+    "Case-control study": "Observational - cross-sectional",   # 2026-10-16b (as Nested case-control)
+    "Delphi consensus": "Review / synthesis",   # 2026-10-16b
+    "Web review": "Review / synthesis",   # 2026-10-16b
+    "Instrument evaluation": "Measurement campaign",   # 2026-10-16b (network-wide AERONET record)
+    "Laboratory + field measurement": "Chamber / laboratory",   # 2026-10-16b
+    "Laboratory measurement": "Chamber / laboratory",   # 2026-10-16b
 })
 # 2026-09-14 issue: sixteen labels coined this issue, added in the same edit that wrote
 # them onto records, per the standing rule. The diagnostic fired on all sixteen because
@@ -894,6 +900,7 @@ geo_group = {
     "Angola": "Sub-Saharan Africa", "Chile": "Latin America",  # 2026-09-29
     "Burkina Faso": "Sub-Saharan Africa", "Croatia": "Europe", "Middle East": "Middle East & N. Africa",  # 2026-10-02
     "Gambia": "Sub-Saharan Africa",  # 2026-10-16
+    "Peru": "Latin America",  # 2026-10-16b
     "North Macedonia": "Europe",  # 2026-10-16
     "United Arab Emirates": "Middle East & N. Africa",  # 2026-10-16
     "Greenland": "North America",  # 2026-09-29, geographic not political binning
@@ -981,6 +988,7 @@ GEO_ALIAS = {
 GEO_SUBSTR = [
     ("burkina faso", "Burkina Faso"), ("croatia", "Croatia"), ("middle east", "Middle East"),  # 2026-10-02
     ("gambia", "Gambia"), ("macedonia", "North Macedonia"), ("skopje", "North Macedonia"), ("united arab emirates", "United Arab Emirates"), ("abu dhabi", "United Arab Emirates"),  # 2026-10-16
+    ("peru", "Peru"),  # 2026-10-16b (no "lima" needle: it matches KaLIMAntan)
     ("united states", "USA"), ("u.s.", "USA"), (" usa", "USA"), ("america", "USA"),
     # added 2026-09-20: "Utah, California, Nevada, Idaho, Colorado (USA)" matched no
     # needle because " usa" is anchored on a leading space and the string has "(USA)".
