@@ -3052,3 +3052,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - `plots.py`: three design_group keys ("Qualitative study (within RCT)", "Difference-in-differences evaluation", plus the two uncommitted from 7 Oct) and a Hungary/Budapest geo needle.
 - **DOI gate earned its keep**: caught 3 fabricated DOIs on 8 Oct metadata-only records before the build (corrected against the harvest cache). Never hand-write a DOI for a metadata-only record — copy it from `cache/<day>/_fresh.json`.
 - Still open: **Scholar Gateway `ACCESS_DENIED` for the whole backfill — needs the user to reconnect it**; OpenAlex 429 on every run since 26 Sep (treat as dead); abstract-retry deferred pass still unbuilt; `.git` lock debris growing on the delete-restricted mount.
+
+## Run 2026-10-16 (00:46-01:1x UTC = 19:46 CDT 15 Oct) — ship 9-11 Oct + W41, backfill dailies 12-14 Oct
+
+- **The 12 Oct run built 9, 10, 11 Oct and W41 but never committed or logged** (stopped after the build, like 29 Sep). This run proofed all four PDFs (contact sheets; W41 27 pp clean) and pushed them first (`6c1d01e`).
+- 22:00 rule: newest buildable = 14 Oct. Harvest leg-by-leg: **12 Oct** PubMed 8/0, EPMC 7 (4 AGR dropped), Crossref 47; **13 Oct** PubMed 14/1, EPMC 46 (**all** AGRICOLA retro-index, dropped), Crossref 42; **14 Oct** PubMed 26/4, EPMC **0** (index lag), Crossref 48. arXiv no in-window entry; OpenAlex 429 every day. Connector (`_conn_1016.py`, EDAT 12-14) 34 PMIDs → 3/3/5 appended.
+- Shipped: **12 Oct** 24 (21 + 3 HELD from 9 Oct: EHP aging, Nat Commun CHD, Front Toxicol organoids — the held queue is now empty), 10 pp, 8 effects; **13 Oct** 16, 9 pp, 2 effects; **14 Oct** 24, 9 pp, 5 effects. 136 rejections logged (`_rej_1016.py`). Metadata-only 6/4/8. 0 overfull throughout.
+- **DOI gate earned its keep again:** a Consensus "new" hit (Guo 2026, ACS EST Air 10.1021/acsestair.5c00225) was DUPLICATE-DOI — shipped 2 Aug. Title-prefix matching against the corpus missed it; check Consensus hits by DOI, not title.
+- **Forest defect avoided:** metric "cRR" is not in `_RATIO_METRICS`, so it is drawn on the difference-scale panel; write cumulative RRs as "RR".
+- `plots.py`: design keys Multi-location time-series, Time-series (GAM) with mixture models, Nested case-control, Ecological / registry analysis, Integrative review, Commentary, Theoretical / optical modelling; geo needles Gambia, North Macedonia/Skopje, UAE/Abu Dhabi.
+- Trial watch 12-14 Oct: 0 hits. Scholar Gateway still `ACCESS_DENIED`. Next: 15 Oct daily, then 16 Oct, then **17 Oct + W42 weekly (11-17 Oct)** on the Sat 17 Oct ≥22:00 run.

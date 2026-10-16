@@ -1,0 +1,294 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{13 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-13\;\;\textcolor{Amber}{\textbar}\;\;Entry window 13 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;16 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{16}{RECORDS IN SCOPE\\(40 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Prenatal ultrafine particles, not PM$_{2.5}$, track positive
+postpartum-depression screens in a 2,647-woman Shanghai cohort: OR 1.25 per IQR in the first trimester.}\\[1.4mm]
+\footnotesize
+Residential trimester-specific UFP and PM$_{2.5}$; EPDS $\geq$10 at 6--10 weeks postpartum (20.4\,\% positive).
+First-trimester UFP \textbf{OR 1.252} (1.065--1.471) per IQR, whole-pregnancy \textbf{1.104} (1.047--1.164), both
+robust to PM$_{2.5}$ adjustment; PM$_{2.5}$ itself showed no stable independent association. It follows the 5
+October UFP--dementia result (HR 1.22 per 10,000\,cm$^{-3}$): two neuro endpoints in nine days carried by
+particle \textit{number}, not mass.
+\textbf{Where it is weak:} an EPDS screen is not a diagnosis, and the abstract does not give the UFP surface's
+resolution or validation. UFP decays within a few hundred metres of roads; residential misclassification is
+probably large, and it is non-differential only if road proximity is unrelated to deprivation.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Instrumentation is a third of the issue.} A polarisation-ceilometer aerosol typing algorithm
+(CONIOPOL, Vaisala CL61) validated over a year at Uccle; drone profiles showing when ground nodes represent the
+mixed layer; dust-lidar asymptotics implying classifiers under-count coarse absorbing dust; and a Taiwan PM$_{10}$
+forecaster in which \textit{upwind observation density}, not trajectory sophistication, delivered the skill
+(RMSE 11.04\,$\mu$g\,m$^{-3}$, 13\,\% below persistence).
+
+\item \textbf{Smoke source attribution in three regimes.} Fire-sourced PM$_{2.5}$ outperforms all-source mass for
+five cancer sites across China; fire-on/fire-off simulations put 17--21\,$\mu$g\,m$^{-3}$ of 2024 S\~ao Paulo
+peaks on biomass burning, with every inventory short at the worst episode; PMF on 1,195 filters attributes
+21--35\,\% of North Macedonian PM$_{2.5}$ to wood burning, $>$50\,\% on 83\,\% of Skopje episode days.
+
+\item \textbf{Particle counts are not microbes.} In dental ultrasonic scaling, sub-micron counts surged while
+culturable bacteria sat in the 1.1--3.3\,$\mu$m stages --- an optical counter's number signal is the wrong
+proxy for biological load.
+
+\item \textbf{One cross-day duplicate removed.} The Lancet Planetary Health multicountry admissions paper reached
+13 October through the connector's \texttt{[EDAT]} bucket; it is carried once, in the 12 October issue.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 12 October issue (built earlier in this run) closed with \texttt{last\_entry\_date} at 12 October.
+This issue collects \textbf{13 October in full}, continuous with it. 14 October follows as its own issue;
+15 October is not opened under the 22:00 rule.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 16 in-scope records across nine bands. Sensing and exposure
+assessment tie at four each --- the first issue since 8 October where measurement work equals the largest
+health band combined.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: four metadata-only records (25\,\%), all Elsevier or Dove
+deposits without abstracts at harvest; one instrument development and one theoretical optics paper. Right ---
+health endpoints are sparse: postpartum depression, cancer incidence, placental biomarkers, paediatric asthma.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: composition, source-resolved and vertical/optical
+quantities outnumber plain PM$_{2.5}$. Right --- geography spans China, Taiwan, Vietnam, Brazil, North
+Macedonia, Belgium, Germany, Canada and the US.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: in utero (prenatal UFP, placental biomarkers), childhood and
+adolescence (school smoke, Taiwanese asthma), working age (postpartum mothers). No older-adult record.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. The sensing row spans machine learning, instrument
+development, theory and field measurement --- four architectures for four records.}
+
+\vspace{2mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Two odds ratios per IQR of modelled residential UFP from the same 2,647 pregnancies; not independent.
+The first-trimester estimate is larger but wider; the whole-pregnancy estimate is the more stable of the two.
+No PM$_{2.5}$ estimate is shown because the abstract reports none as stable.}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Shanghai prenatal UFP postpartum depression 2026}
+{Prenatal exposure to ultrafine particles and positive screening for postpartum depression: a prospective pregnancy cohort in Shanghai, China}
+{Environ Pollut}
+{2,647 pregnant women, two centres; 20.4\% screened positive at 6-10 weeks postpartum. Per IQR, first-trimester UFP OR 1.252 (1.065-1.471) and whole-pregnancy UFP OR 1.104 (1.047-1.164); both survived adjustment for PM$_{2.5}$, which had no stable independent association. Stronger with male infants. Limitation: EPDS is a screen, not a diagnosis, and the UFP surface's spatial resolution and validation are not stated - UFP gradients decay over \textasciitilde{}100-300 m from roads, so residential misclassification is likely large and non-differential only if traffic proximity is unrelated to deprivation, which in Shanghai it is not. Relevance: high - a second UFP-specific neuro signal this month that PM$_{2.5}$ mass does not carry, and that optical nodes cannot measure.}
+{10.1016/j.envpol.2026.129330}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Taiwan greenness pollution child asthma 2026}
+{Association of Urban Greenness and Air Pollution on Asthma Visits Among Children and Adolescents in Industrial and Non-Industrial Cities in Taiwan}
+{J Asthma Allergy}
+{\textsc{metadata only.} No abstract at harvest. Title indicates an analysis of greenness and air pollution with paediatric asthma visits contrasting industrial and non-industrial Taiwanese cities. Recorded for coverage. Relevance: low-moderate.}
+{10.2147/jaa.s614875}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Placental angiogenic biomarkers review 2026}
+{Exposure to environmental toxicants during pregnancy and placental angiogenic biomarkers: An integrative review}
+{Reprod Toxicol}
+{Whittemore-Knafl integrative review: 19 human studies after screening. Air pollutants predominantly showed an anti-angiogenic pattern - higher sFlt-1 or sFlt-1/PlGF and lower PlGF - as did PFAS, Cd and Cu; 14 of 19 studies reported at least one association in that direction. Limitation: 19 heterogeneous studies across four toxicant classes, no pooling or bias assessment, and 'at least one association' across multiple biomarkers and windows is a low bar. Relevance: low-moderate - plausible mechanism for PM-preeclampsia links, not evidence of it.}
+{10.1016/j.reprotox.2026.109377}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{EPFR size-resolved PM 2026}
+{Size-Dependent Characteristics, Exposure Risk, and Formation Mechanisms of Environmentally Persistent Free Radicals in Atmospheric Particulate Matter}
+{Environ Toxicol Chem}
+{EPFRs were carbon-centred radicals adjacent to oxygen groups; PM$_{2.5}$ had the highest mass-normalised concentration (8.05e16 spins/g) and g-factor (2.00337). Cigarette-equivalent exposure was 0.326/day for PM$_{2.5}$ and 0.346/day for PM$_{10}$. Laboratory surrogates showed smaller particles generate more EPFRs owing to larger specific surface. Limitation: the cigarette-equivalent model is a communication device without dosimetric basis, and site/season details are absent from the abstract. Relevance: low-moderate - another surface-chemistry toxicity axis that mass sensing cannot see.}
+{10.1093/etojnl/vgag274}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 4 records}{Clay}
+
+\paperentry{North Macedonia biomass PMF 2026}
+{Biomass burning drives urban PM$_{2.5}$ across the Western Balkans: evidence from a six-city source apportionment study in North Macedonia}
+{Environ Pollut}
+{1,195 filters at six urban-background sites over two year-long campaigns. Campaign means 29.1-62.2 $\mu$g\,m$^{-3}$ (1.2-2.5x the EU annual limit); residential wood combustion and open/waste burning resolved as distinct factors everywhere, together 21-35\% of PM$_{2.5}$, with heating-season RWC up to 33x non-heating. Biomass exceeded 50\% of PM$_{2.5}$ on 83\% of Skopje episode days; an undocumented winter signal in Strumica fits greenhouse boilers. Limitation: PMF factor naming relies on tracer interpretation, and RWC/OBB separation without levoglucosan isotopes or 14C is assumption-laden. Relevance: high - a wood-smoke regime with bimodal evening peaks to 93 $\mu$g\,m$^{-3}$, where optical sensor response to fresh smoke is the calibration problem.}
+{10.1016/j.envpol.2026.129339}
+
+\paperentry{Sao Paulo 2024 fire extremes 2026}
+{Compound fire-meteorology extremes drove megacity air pollution during the 2024 South American fire season}
+{J Environ Manage}
+{Three multi-day 2024 episodes with daily PM$_{2.5}$ of 80-100 $\mu$g\,m$^{-3}$ in metropolitan Sao Paulo. Fire-off simulations missed the PM$_{2.5}$ and CO peaks; fire-attributable increments reached 17-21 $\mu$g\,m$^{-3}$ state-wide and a cumulative metropolitan burden of \textasciitilde{}547 $\mu$g\,m$^{-3}$-day. Episodes differed in transport configuration, and the worst coincided with heat, dryness and weak ventilation. Limitation: all fire inventories underestimated the most extreme episode, so the attribution is a lower bound with unquantified error; a global model is coarse for a megacity receptor. Relevance: moderate - the inventory shortfall at the extreme is exactly where a dense surface network constrains attribution.}
+{10.1016/j.jenvman.2026.131131}
+
+\paperentry{US school wildfire smoke trends 2026}
+{Spatio-Temporal Trends in Wildfire Smoke Exposures at Schools and Childcare Centers in the United States and Implications for Child and Adolescent Health}
+{Environ Res}
+{\textsc{metadata only.} No abstract at harvest. Title indicates national spatiotemporal trends in smoke exposure at schools and childcare centres. Recorded for coverage; no estimate inferred. Relevance: high if the exposure surface is sensor-informed - school sensor deployments are the most common LCS siting in the US smoke literature.}
+{10.1016/j.envres.2026.125883}
+
+\paperentry{Hanoi PM$_{2.5}$-bound PCDD/Fs 2026}
+{Levels and contributing sources to PM$_{2.5}$-bound PCDD/Fs and dl-PCBs in ambient air of Hanoi}
+{Atmos Pollut Res}
+{\textsc{metadata only.} No abstract at harvest. Title indicates measurement and source attribution of particle-bound dioxins, furans and dl-PCBs in Hanoi PM$_{2.5}$. Recorded for coverage. Relevance: low - trace organics require filter sampling.}
+{10.1016/j.apr.2026.103235}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 4 records}{Amber}
+
+\paperentry{Taiwan transboundary PM$_{10}$ forecast 2026}
+{Forecasting transboundary PM$_{10}$ pollution in northern Taiwan using upwind observations and transport timing}
+{Environ Pollut}
+{Upwind-transition-receptor framework with temporally separated training and evaluation for 1-4-day PM$_{10}$ forecasts. Nested models attribute most added skill to distributed upwind observations; trajectory timing adds a smaller, receptor-dependent refinement. Best model (CatBoost with upwind data): RMSE 11.04 $\mu$g\,m$^{-3}$, 13.0\% below persistence. Limitation: 13\% over persistence at 1-4 days is modest, and upper-tail precision is limited by event scarcity - the episodes that matter are the ones the model sees least. Relevance: high - quantitative evidence that upwind observation density, not trajectory sophistication, buys forecast skill; a siting argument for upwind nodes.}
+{10.1016/j.envpol.2026.129340}
+
+\paperentry{CONIOPOL CL61 aerosol typing 2026}
+{New operational perspective to identify aerosols and hydrometeors in real-time with a pioneering algorithm (CONIOPOL) based on single-wavelength polarization lidar (CL61)}
+{Atmos Meas Tech}
+{Automated classification from a polarised automatic lidar-ceilometer combining depolarisation, attenuated backscatter and cloud base to separate aerosol, cloud phase and precipitation and to type aerosol as dust, smoke/marine, continental or mixed. One year at Uccle showed strong temporal and vertical correspondence with CAMS for transported dust and smoke. Limitation: single wavelength cannot separate smoke from marine aerosol, and validation against CAMS is model-conditioned agreement rather than in-situ truth. Relevance: high - ceilometers are already networked across Europe; vertical typing tells a surface sensor network when its column assumption is broken.}
+{10.5194/amt-19-6415-2026}
+
+\paperentry{Dust lidar asymptotics 2026}
+{Asymptotic behavior of lidar scattering properties of absorbing dust aerosols across Rayleigh and geometrical-optics regimes: theory and implications}
+{Atmos Chem Phys}
+{TAMUdust2020 and triaxial-ellipsoid calculations give shape-insensitive limits: Rayleigh S \textasciitilde{} x\textasciicircum{}-3, SSA \textasciitilde{} x\textasciicircum{}3, small depolarisation; geometric-optics depolarisation falls, SSA -> 1/2 and lidar ratio rises with strong absorption. Large, strongly absorbing dust can therefore mimic weakly depolarising classes and bias classifiers toward under-counting coarse and super-coarse dust. Limitation: theory only, no field test. Relevance: moderate - the same physics explains why optical PM sensors under-read coarse absorbing dust; the bias direction carries over.}
+{10.5194/acp-26-14487-2026}
+
+\paperentry{Drone boundary-layer profiles Germany 2026}
+{Influence of irradiance and mixing layer height on the vertical trace matter distribution in the lower planetary boundary layer - drone-based investigation}
+{Atmos Chem Phys}
+{Two 2.5-week summer campaigns: night profiles in the lowest 120 m showed multi-layer fine-scale stratification; O$_3$ and potential temperature were the most reliable mixing-height markers, and trace species outperformed several meteorological variables. Local sources and sinks affected in-layer distribution more than irradiance, but aerosol concentrations homogenised under strong radiation even at low mixing heights. Limitation: rural summer only; drone-borne particle sensors are themselves low-cost optical units with flow and RH artefacts that the abstract does not address. Relevance: high - directly tests when a ground node represents the mixed layer.}
+{10.5194/acp-26-14417-2026}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Dental scaling bioaerosols 2026}
+{Divergent bacterial signatures in dental clinic bioaerosols: a real-field investigation}
+{J Hosp Infect}
+{Ultrasonic scaling caused a large surge in sub-micron particle counts, but culturable bacteria concentrated in the 1.1-3.3 um stages. Airborne bacterial communities differed from PPE (ANOSIM R=0.633, p=0.001) and were indistinguishable from non-touch surfaces; oral pathogens were rare in air. Limitation: single clinic and procedure type, small sample count not given. Relevance: moderate - a clean demonstration that particle number from an optical counter is not a proxy for biological load; mirrors the 4 Oct suction study.}
+{10.1016/j.jhin.2026.10.003}
+
+\paperentry{Global IAQ open standards framework 2026}
+{A unified framework for global indoor air quality: transitioning from guidelines to actionable open regulatory standards}
+{Build Environ}
+{\textsc{metadata only.} No abstract at harvest. Title indicates a proposal to move indoor air quality from guideline values to open, enforceable standards. Recorded for coverage. Relevance: moderate - enforceable indoor standards would make low-cost indoor PM monitors compliance instruments, with the performance-certification burden that implies.}
+{10.1016/j.buildenv.2026.115384}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Canada wildfire smoke guidance 2026}
+{Public health guidance about wildfire smoke: Four targets for improvement}
+{Can J Public Health}
+{Commentary proposing four distinct targets for improving Canadian wildfire-smoke guidance: a stronger evidence base (subpopulations, long-term effects, protective interventions), ethically deliberated recommendations, evaluation of guidance effectiveness beyond self-report, and a process-and-content standard for authoritative guidance. Limitation: no data. Relevance: moderate - the evaluation target presupposes measured indoor and personal exposure during smoke events, which is where low-cost sensors already dominate the evidence.}
+{10.17269/s41997-026-01267-x}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{China fire-sourced PM$_{2.5}$ cancer 2026}
+{Extreme, Accumulated, and Lagged Exposure to Fire-Sourced PM$_{2.5}$ and Site-specific Cancer Risk in China}
+{Environ Pollut}
+{Fire-sourced PM$_{2.5}$ was positively associated with several site-specific cancers, with lagged and accumulated metrics showing the broadest pattern (thyroid, kidney, breast, lung, leukaemia, lymphoma) and extreme exposure the narrowest (strongest for larynx). Against all-source PM$_{2.5}$, fire PM$_{2.5}$ associations were stronger for thyroid, kidney, larynx, lymphoma and oral cancers, and stronger in the north and in low-GDP areas. Limitation: no effect sizes, n or geographic unit in the abstract; many sites x three metrics is a multiple-comparison surface, and thyroid cancer incidence is notoriously driven by screening intensity, which tracks region and income. Relevance: moderate - source-resolved smoke again outperforms mass.}
+{10.1016/j.envpol.2026.129343}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{13 October 2026}, single day. Harvester legs: \textbf{PubMed} health \textbf{14},
+sensing \textbf{1}; \textbf{Europe PMC} \textbf{46}, all AGRICOLA retro-index records (pubYear before 2026),
+\textbf{all dropped}; \textbf{Crossref by ISSN} \textbf{42} (2 ES\&T Letters front-matter items dropped);
+\textbf{arXiv} no entry dated 13 October; \textbf{OpenAlex} HTTP 429. 53 unique, 0 already carried.
+\textbf{PubMed connector} 8 PMIDs dated 13 October, 3 appended --- \textbf{56} candidates screened,
+\textbf{16 admitted}, \textbf{40 rejected} with logged reasons (one a cross-day duplicate of the 12 October
+Lancet Planetary Health record). Abstract retry recovered 11 of 15; \textbf{4 records carried on metadata
+alone}. \textbf{Scholar Gateway} still \texttt{ACCESS\_DENIED}. Abstracts remain the copyright of their
+publishers.\par}
+\end{keybox}
+
+\end{document}

@@ -1,0 +1,272 @@
+{
+ "date": "2026-10-13",
+ "entry_window": "2026-10-13 -> 2026-10-13",
+ "PAPERS": [
+  {
+   "pmid": "42869371",
+   "doi": "10.1016/j.envpol.2026.129330",
+   "journal": "Environ Pollut",
+   "short": "Shanghai prenatal UFP postpartum depression 2026",
+   "title": "Prenatal exposure to ultrafine particles and positive screening for postpartum depression: a prospective pregnancy cohort in Shanghai, China",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort",
+   "pm": "Residential trimester-specific UFP number and PM2.5 (modelled)",
+   "geo": "China (Shanghai)",
+   "endpoint": "Postpartum depression screen (EPDS >= 10)",
+   "tier": "A",
+   "n": "2,647 pregnant women, two centres; 20.4% screened positive at 6-10 weeks postpartum. Per IQR, first-trimester UFP OR 1.252 (1.065-1.471) and whole-pregnancy UFP OR 1.104 (1.047-1.164); both survived adjustment for PM2.5, which had no stable independent association. Stronger with male infants. Limitation: EPDS is a screen, not a diagnosis, and the UFP surface's spatial resolution and validation are not stated - UFP gradients decay over ~100-300 m from roads, so residential misclassification is likely large and non-differential only if traffic proximity is unrelated to deprivation, which in Shanghai it is not. Relevance: high - a second UFP-specific neuro signal this month that PM2.5 mass does not carry, and that optical nodes cannot measure."
+  },
+  {
+   "pmid": "42869373",
+   "doi": "10.1016/j.envpol.2026.129343",
+   "journal": "Environ Pollut",
+   "short": "China fire-sourced PM2.5 cancer 2026",
+   "title": "Extreme, Accumulated, and Lagged Exposure to Fire-Sourced PM2.5 and Site-specific Cancer Risk in China",
+   "sub": "Other clinical endpoints",
+   "design": "Ecological / registry analysis",
+   "pm": "Fire-sourced vs all-source PM2.5; lagged, accumulated and extreme metrics",
+   "geo": "China (nationwide)",
+   "endpoint": "Site-specific cancer incidence",
+   "tier": "B",
+   "n": "Fire-sourced PM2.5 was positively associated with several site-specific cancers, with lagged and accumulated metrics showing the broadest pattern (thyroid, kidney, breast, lung, leukaemia, lymphoma) and extreme exposure the narrowest (strongest for larynx). Against all-source PM2.5, fire PM2.5 associations were stronger for thyroid, kidney, larynx, lymphoma and oral cancers, and stronger in the north and in low-GDP areas. Limitation: no effect sizes, n or geographic unit in the abstract; many sites x three metrics is a multiple-comparison surface, and thyroid cancer incidence is notoriously driven by screening intensity, which tracks region and income. Relevance: moderate - source-resolved smoke again outperforms mass."
+  },
+  {
+   "pmid": "42869372",
+   "doi": "10.1016/j.envpol.2026.129340",
+   "journal": "Environ Pollut",
+   "short": "Taiwan transboundary PM10 forecast 2026",
+   "title": "Forecasting transboundary PM10 pollution in northern Taiwan using upwind observations and transport timing",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "PM10 at 3 receptors; 9 continental upwind records; trajectory timing composite",
+   "geo": "Taiwan (northern)",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "Upwind-transition-receptor framework with temporally separated training and evaluation for 1-4-day PM10 forecasts. Nested models attribute most added skill to distributed upwind observations; trajectory timing adds a smaller, receptor-dependent refinement. Best model (CatBoost with upwind data): RMSE 11.04 ug/m3, 13.0% below persistence. Limitation: 13% over persistence at 1-4 days is modest, and upper-tail precision is limited by event scarcity - the episodes that matter are the ones the model sees least. Relevance: high - quantitative evidence that upwind observation density, not trajectory sophistication, buys forecast skill; a siting argument for upwind nodes."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129339",
+   "journal": "Environ Pollut",
+   "short": "North Macedonia biomass PMF 2026",
+   "title": "Biomass burning drives urban PM2.5 across the Western Balkans: evidence from a six-city source apportionment study in North Macedonia",
+   "sub": "Exposure assessment & modelling",
+   "design": "Source apportionment",
+   "pm": "PM2.5 from 1,195 daily filters, EPA PMF 5.0",
+   "geo": "North Macedonia (six cities)",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "1,195 filters at six urban-background sites over two year-long campaigns. Campaign means 29.1-62.2 ug/m3 (1.2-2.5x the EU annual limit); residential wood combustion and open/waste burning resolved as distinct factors everywhere, together 21-35% of PM2.5, with heating-season RWC up to 33x non-heating. Biomass exceeded 50% of PM2.5 on 83% of Skopje episode days; an undocumented winter signal in Strumica fits greenhouse boilers. Limitation: PMF factor naming relies on tracer interpretation, and RWC/OBB separation without levoglucosan isotopes or 14C is assumption-laden. Relevance: high - a wood-smoke regime with bimodal evening peaks to 93 ug/m3, where optical sensor response to fresh smoke is the calibration problem."
+  },
+  {
+   "pmid": "42863238",
+   "doi": "10.1016/j.jenvman.2026.131131",
+   "journal": "J Environ Manage",
+   "short": "Sao Paulo 2024 fire extremes 2026",
+   "title": "Compound fire-meteorology extremes drove megacity air pollution during the 2024 South American fire season",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport model",
+   "pm": "Surface PM2.5 and CO, AOT, trajectories; fire-on/fire-off global simulations",
+   "geo": "Brazil (Sao Paulo State)",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "Three multi-day 2024 episodes with daily PM2.5 of 80-100 ug/m3 in metropolitan Sao Paulo. Fire-off simulations missed the PM2.5 and CO peaks; fire-attributable increments reached 17-21 ug/m3 state-wide and a cumulative metropolitan burden of ~547 ug/m3-day. Episodes differed in transport configuration, and the worst coincided with heat, dryness and weak ventilation. Limitation: all fire inventories underestimated the most extreme episode, so the attribution is a lower bound with unquantified error; a global model is coarse for a megacity receptor. Relevance: moderate - the inventory shortfall at the extreme is exactly where a dense surface network constrains attribution."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/amt-19-6415-2026",
+   "journal": "Atmos Meas Tech",
+   "short": "CONIOPOL CL61 aerosol typing 2026",
+   "title": "New operational perspective to identify aerosols and hydrometeors in real-time with a pioneering algorithm (CONIOPOL) based on single-wavelength polarization lidar (CL61)",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Instrument development",
+   "pm": "Volume depolarisation ratio and attenuated backscatter (Vaisala CL61 ceilometer)",
+   "geo": "Belgium (Uccle)",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "Automated classification from a polarised automatic lidar-ceilometer combining depolarisation, attenuated backscatter and cloud base to separate aerosol, cloud phase and precipitation and to type aerosol as dust, smoke/marine, continental or mixed. One year at Uccle showed strong temporal and vertical correspondence with CAMS for transported dust and smoke. Limitation: single wavelength cannot separate smoke from marine aerosol, and validation against CAMS is model-conditioned agreement rather than in-situ truth. Relevance: high - ceilometers are already networked across Europe; vertical typing tells a surface sensor network when its column assumption is broken."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-14487-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Dust lidar asymptotics 2026",
+   "title": "Asymptotic behavior of lidar scattering properties of absorbing dust aerosols across Rayleigh and geometrical-optics regimes: theory and implications",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Theoretical / optical modelling",
+   "pm": "Lidar ratio, depolarisation ratio, SSA vs size parameter and iron-oxide fraction",
+   "geo": "Not applicable (theory)",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "TAMUdust2020 and triaxial-ellipsoid calculations give shape-insensitive limits: Rayleigh S ~ x^-3, SSA ~ x^3, small depolarisation; geometric-optics depolarisation falls, SSA -> 1/2 and lidar ratio rises with strong absorption. Large, strongly absorbing dust can therefore mimic weakly depolarising classes and bias classifiers toward under-counting coarse and super-coarse dust. Limitation: theory only, no field test. Relevance: moderate - the same physics explains why optical PM sensors under-read coarse absorbing dust; the bias direction carries over."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-14417-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Drone boundary-layer profiles Germany 2026",
+   "title": "Influence of irradiance and mixing layer height on the vertical trace matter distribution in the lower planetary boundary layer - drone-based investigation",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Field measurement",
+   "pm": "Drone vertical profiles of particle mass and number, CO2, O3 to 500 m",
+   "geo": "Germany (rural)",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "Two 2.5-week summer campaigns: night profiles in the lowest 120 m showed multi-layer fine-scale stratification; O3 and potential temperature were the most reliable mixing-height markers, and trace species outperformed several meteorological variables. Local sources and sinks affected in-layer distribution more than irradiance, but aerosol concentrations homogenised under strong radiation even at low mixing heights. Limitation: rural summer only; drone-borne particle sensors are themselves low-cost optical units with flow and RH artefacts that the abstract does not address. Relevance: high - directly tests when a ground node represents the mixed layer."
+  },
+  {
+   "pmid": "42867143",
+   "doi": "10.1093/etojnl/vgag274",
+   "journal": "Environ Toxicol Chem",
+   "short": "EPFR size-resolved PM 2026",
+   "title": "Size-Dependent Characteristics, Exposure Risk, and Formation Mechanisms of Environmentally Persistent Free Radicals in Atmospheric Particulate Matter",
+   "sub": "Mechanistic toxicology",
+   "design": "Field measurement",
+   "pm": "EPFRs (EPR) in PM2.5, PM10, TSP; SiO2-catechol-ZnO simulations",
+   "geo": "China",
+   "endpoint": "EPFR exposure (cigarette-equivalent)",
+   "tier": "C",
+   "n": "EPFRs were carbon-centred radicals adjacent to oxygen groups; PM2.5 had the highest mass-normalised concentration (8.05e16 spins/g) and g-factor (2.00337). Cigarette-equivalent exposure was 0.326/day for PM2.5 and 0.346/day for PM10. Laboratory surrogates showed smaller particles generate more EPFRs owing to larger specific surface. Limitation: the cigarette-equivalent model is a communication device without dosimetric basis, and site/season details are absent from the abstract. Relevance: low-moderate - another surface-chemistry toxicity axis that mass sensing cannot see."
+  },
+  {
+   "pmid": "42869196",
+   "doi": "10.1016/j.reprotox.2026.109377",
+   "journal": "Reprod Toxicol",
+   "short": "Placental angiogenic biomarkers review 2026",
+   "title": "Exposure to environmental toxicants during pregnancy and placental angiogenic biomarkers: An integrative review",
+   "sub": "Reproductive & developmental",
+   "design": "Integrative review",
+   "pm": "PM2.5, PM10, NO2, O3 among other toxicants",
+   "geo": "Global / multi-region",
+   "endpoint": "sFlt-1, PlGF, sFlt-1/PlGF",
+   "tier": "C",
+   "n": "Whittemore-Knafl integrative review: 19 human studies after screening. Air pollutants predominantly showed an anti-angiogenic pattern - higher sFlt-1 or sFlt-1/PlGF and lower PlGF - as did PFAS, Cd and Cu; 14 of 19 studies reported at least one association in that direction. Limitation: 19 heterogeneous studies across four toxicant classes, no pooling or bias assessment, and 'at least one association' across multiple biomarkers and windows is a low bar. Relevance: low-moderate - plausible mechanism for PM-preeclampsia links, not evidence of it."
+  },
+  {
+   "pmid": "42867609",
+   "doi": "10.17269/s41997-026-01267-x",
+   "journal": "Can J Public Health",
+   "short": "Canada wildfire smoke guidance 2026",
+   "title": "Public health guidance about wildfire smoke: Four targets for improvement",
+   "sub": "Burden, policy & mitigation",
+   "design": "Commentary",
+   "pm": "Wildfire smoke (guidance)",
+   "geo": "Canada",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Commentary proposing four distinct targets for improving Canadian wildfire-smoke guidance: a stronger evidence base (subpopulations, long-term effects, protective interventions), ethically deliberated recommendations, evaluation of guidance effectiveness beyond self-report, and a process-and-content standard for authoritative guidance. Limitation: no data. Relevance: moderate - the evaluation target presupposes measured indoor and personal exposure during smoke events, which is where low-cost sensors already dominate the evidence."
+  },
+  {
+   "pmid": "42869382",
+   "doi": "10.1016/j.jhin.2026.10.003",
+   "journal": "J Hosp Infect",
+   "short": "Dental scaling bioaerosols 2026",
+   "title": "Divergent bacterial signatures in dental clinic bioaerosols: a real-field investigation",
+   "sub": "Occupational & indoor",
+   "design": "Field measurement",
+   "pm": "Optical particle sizer; Andersen six-stage culturable and filter bioaerosol sampling",
+   "geo": "Not stated (dental clinic)",
+   "endpoint": "Airborne and surface bacterial load and community",
+   "tier": "C",
+   "n": "Ultrasonic scaling caused a large surge in sub-micron particle counts, but culturable bacteria concentrated in the 1.1-3.3 um stages. Airborne bacterial communities differed from PPE (ANOSIM R=0.633, p=0.001) and were indistinguishable from non-touch surfaces; oral pathogens were rare in air. Limitation: single clinic and procedure type, small sample count not given. Relevance: moderate - a clean demonstration that particle number from an optical counter is not a proxy for biological load; mirrors the 4 Oct suction study."
+  },
+  {
+   "pmid": "42869364",
+   "doi": "10.1016/j.envres.2026.125883",
+   "journal": "Environ Res",
+   "short": "US school wildfire smoke trends 2026",
+   "title": "Spatio-Temporal Trends in Wildfire Smoke Exposures at Schools and Childcare Centers in the United States and Implications for Child and Adolescent Health",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Wildfire smoke PM2.5 at school and childcare locations",
+   "geo": "United States",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "No abstract at harvest. Title indicates national spatiotemporal trends in smoke exposure at schools and childcare centres. Recorded for coverage; no estimate inferred. Relevance: high if the exposure surface is sensor-informed - school sensor deployments are the most common LCS siting in the US smoke literature."
+  },
+  {
+   "pmid": "42866555",
+   "doi": "10.2147/jaa.s614875",
+   "journal": "J Asthma Allergy",
+   "short": "Taiwan greenness pollution child asthma 2026",
+   "title": "Association of Urban Greenness and Air Pollution on Asthma Visits Among Children and Adolescents in Industrial and Non-Industrial Cities in Taiwan",
+   "sub": "Respiratory & allergic",
+   "design": "Metadata only (no abstract)",
+   "pm": "Ambient air pollution (unspecified) and greenness",
+   "geo": "Taiwan",
+   "endpoint": "Paediatric asthma visits",
+   "tier": "C",
+   "n": "No abstract at harvest. Title indicates an analysis of greenness and air pollution with paediatric asthma visits contrasting industrial and non-industrial Taiwanese cities. Recorded for coverage. Relevance: low-moderate."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103235",
+   "journal": "Atmos Pollut Res",
+   "short": "Hanoi PM2.5-bound PCDD/Fs 2026",
+   "title": "Levels and contributing sources to PM2.5-bound PCDD/Fs and dl-PCBs in ambient air of Hanoi",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM2.5-bound PCDD/Fs and dioxin-like PCBs",
+   "geo": "Vietnam (Hanoi)",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "No abstract at harvest. Title indicates measurement and source attribution of particle-bound dioxins, furans and dl-PCBs in Hanoi PM2.5. Recorded for coverage. Relevance: low - trace organics require filter sampling."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115384",
+   "journal": "Build Environ",
+   "short": "Global IAQ open standards framework 2026",
+   "title": "A unified framework for global indoor air quality: transitioning from guidelines to actionable open regulatory standards",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Indoor air quality metrics (incl. PM)",
+   "geo": "Global / multi-region",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "No abstract at harvest. Title indicates a proposal to move indoor air quality from guideline values to open, enforceable standards. Recorded for coverage. Relevance: moderate - enforceable indoor standards would make low-cost indoor PM monitors compliance instruments, with the performance-certification burden that implies."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Postpartum depression screen\nUFP, 1st trimester (per IQR)",
+   "exposure": "Residential first-trimester UFP",
+   "est": 1.252,
+   "lo": 1.065,
+   "hi": 1.471,
+   "metric": "OR",
+   "src": "2,647 pregnancies, Shanghai"
+  },
+  {
+   "label": "Postpartum depression screen\nUFP, whole pregnancy (per IQR)",
+   "exposure": "Residential whole-pregnancy UFP",
+   "est": 1.104,
+   "lo": 1.047,
+   "hi": 1.164,
+   "metric": "OR",
+   "src": "2,647 pregnancies, Shanghai"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 2,
+   "note": "preconception /\nin utero:\nprenatal UFP;\nplacental review"
+  },
+  {
+   "n": 2,
+   "note": "childhood:\nschool smoke;\nTaiwan asthma"
+  },
+  {
+   "n": 2,
+   "note": "adolescence:\nschool smoke;\nTaiwan asthma"
+  },
+  {
+   "n": 1,
+   "note": "working age:\npostpartum\nmothers"
+  },
+  {
+   "n": 0,
+   "note": "older adults:\nno age-specific\nrecord"
+  }
+ ]
+}

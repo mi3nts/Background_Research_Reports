@@ -386,6 +386,13 @@ design_group.update({
     "Mechanistic review": "Review / synthesis",
     "Repeated-measures panel, 24 h indoor monitoring": "Observational - acute",
     "Time-stratified case-crossover": "Observational - acute",
+    "Multi-location time-series": "Observational - acute",   # 2026-10-16
+    "Time-series (GAM) with mixture models": "Observational - acute",   # 2026-10-16
+    "Ecological / registry analysis": "Observational - ecological",   # 2026-10-16
+    "Integrative review": "Review / synthesis",   # 2026-10-16
+    "Commentary": "Review / synthesis",   # 2026-10-16
+    "Theoretical / optical modelling": "Modelling / inventory",   # 2026-10-16
+    "Nested case-control": "Observational - cross-sectional",   # 2026-10-16 (case-control grouped as in 557)
     "Multi-omics regional evidence synthesis": "Review / synthesis",
     "Seasonal field sampling + filtration test": "Measurement campaign",
 })
@@ -886,6 +893,9 @@ geo_group = {
     "Lebanon": "Middle East & N. Africa", "Bangladesh": "South Asia",
     "Angola": "Sub-Saharan Africa", "Chile": "Latin America",  # 2026-09-29
     "Burkina Faso": "Sub-Saharan Africa", "Croatia": "Europe", "Middle East": "Middle East & N. Africa",  # 2026-10-02
+    "Gambia": "Sub-Saharan Africa",  # 2026-10-16
+    "North Macedonia": "Europe",  # 2026-10-16
+    "United Arab Emirates": "Middle East & N. Africa",  # 2026-10-16
     "Greenland": "North America",  # 2026-09-29, geographic not political binning
     "Sri Lanka": "South Asia",  # 2026-08-30: fell through to Global / multi-region
     "Kazakhstan": "Central Asia", "Greece": "Europe", "Bulgaria": "Europe",
@@ -970,6 +980,7 @@ GEO_ALIAS = {
 }
 GEO_SUBSTR = [
     ("burkina faso", "Burkina Faso"), ("croatia", "Croatia"), ("middle east", "Middle East"),  # 2026-10-02
+    ("gambia", "Gambia"), ("macedonia", "North Macedonia"), ("skopje", "North Macedonia"), ("united arab emirates", "United Arab Emirates"), ("abu dhabi", "United Arab Emirates"),  # 2026-10-16
     ("united states", "USA"), ("u.s.", "USA"), (" usa", "USA"), ("america", "USA"),
     # added 2026-09-20: "Utah, California, Nevada, Idaho, Colorado (USA)" matched no
     # needle because " usa" is anchored on a leading space and the string has "(USA)".
