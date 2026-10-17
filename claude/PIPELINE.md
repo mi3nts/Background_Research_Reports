@@ -3070,3 +3070,12 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Proof caught the second forest caption split onto the next page; fixed by wrapping each forest figure+caption in a minipage in the prose module. Apply the same when an issue has both f5_forest and f5_forest_2.
 - `plots.py`: design keys Case-control study, Delphi consensus, Web review, Instrument evaluation, Laboratory (+ field) measurement; geo Peru. **Do not add a "lima" needle — it matches KaLIMAntan** (caught when Indonesia/Malaysia moved to Latin America).
 - Consensus 10 hits, 0 new; trial watch 0 hits. Scholar Gateway still `ACCESS_DENIED`; OpenAlex 429.
+
+## Run 2026-10-17 (16:4x UTC = 11:4x CDT) — daily 16 Oct
+
+- 22:00 rule: newest buildable = 16 Oct; **17 Oct daily + W42 weekly (11-17 Oct) left to the next run at or after 22:00 CDT**. Harvest: PubMed 15 health / 3 sensing, EPMC 123 raw (57 AGR dropped), Crossref-ISSN 48, arXiv no in-window entry, OpenAlex 429 → 129 unique → 8 carried → 121 fresh; connector (EDAT 16 Oct, `_conn_1017.py`) 15 PMIDs, 4 appended.
+- New helpers: `_epmcfill_1017.py` (EPMC core lookup by id) and `_xrfill_1017.py` (Crossref title→DOI, then Crossref/S2 abstract). Same-day EPMC records arrive with **no DOI and no abstract**; Crossref title match recovered 6 of 6 DOIs and abstracts.
+- **125 screened → 18 admitted / 107 rejected** (`_rej_1017.py` + 1 hand-logged), 9 pp, 3 effects (2 IRR, 1 RR), 2 tier A, 2 metadata-only. 0 overfull/underfull.
+- **DOI gate earned its keep again:** the Washington DC 1 km WRF-SMOKE-CMAQ record (EPMC, no DOI at harvest) had shipped 14 Oct; `seen.json` could not catch it because the DOI was only filled after screening. Run the DOI gate (or `check_dois.py`) before authoring when DOIs are back-filled.
+- Proof caught the f4 heatmap caption orphaned onto the next page; `_assemble_0929.py` now wraps every analytics figure + caption in a minipage (as forest figures already were).
+- Consensus 10 hits, 0 new; trial watch 0 hits (window logged, `trials.json` 17 NCT / 30 windows). Scholar Gateway not retried. `metrics.csv` csv.writer fix confirmed in place (update_state.py).

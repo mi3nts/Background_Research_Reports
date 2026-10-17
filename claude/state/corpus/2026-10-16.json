@@ -1,0 +1,309 @@
+{
+ "date": "2026-10-16",
+ "entry_window": "2026-10-16 -> 2026-10-16",
+ "PAPERS": [
+  {
+   "pmid": "42887622",
+   "doi": "10.1016/j.hrthm.2026.10.013",
+   "journal": "Heart Rhythm",
+   "short": "MESA incident AF time-varying pollution 2026",
+   "title": "Association of Air Pollution Exposure and Risk of Incident Atrial Fibrillation: The Multi-Ethnic Study of Atherosclerosis",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort",
+   "pm": "Spatiotemporal-model PM2.5, NO2, NOx, O3 at residence; 2-y rolling means updated every 30 d",
+   "geo": "United States (6 MESA metros)",
+   "endpoint": "Incident atrial fibrillation",
+   "tier": "A",
+   "n": "6,618 MESA participants (mean age 62), 16.5 y median follow-up, 1,055 incident AF events. Exposure came from the MESA Air hierarchical spatiotemporal models, which assimilate cohort-specific snapshot monitoring, entered as time-varying 2-y averages. Per IQR of NO2 (13.5 ppb) AF hazard rose 29% (HR 1.29, 95% CI 1.00-1.67); PM2.5, NOx and O3 were weaker and directionally positive, with no estimates in the abstract. Limitation: AF ascertainment from hospitalisation and study ECGs misses paroxysmal disease, and the NO2 CI touches the null; the PM2.5 contrast within six metros is narrow. Relevance: high methodologically - this is the cohort where supplemental community monitoring was built to cut exposure error, and PM2.5 still came out null-leaning."
+  },
+  {
+   "pmid": "42885770",
+   "doi": "10.1161/jaha.126.049988",
+   "journal": "J Am Heart Assoc",
+   "short": "West Florida temperature x PM2.5 CVD admissions 2026",
+   "title": "Joint Impacts of Ambient Air Pollution and Temperature on Cardiovascular Disease in West Florida",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Time-series",
+   "pm": "Daily network-monitor PM2.5 and temperature, DLNM lags 0-7 with tensor-product interaction",
+   "geo": "United States (West Florida)",
+   "endpoint": "Admissions for MI, heart failure, stroke",
+   "tier": "B",
+   "n": "BayCare Health System admissions 2017-2024 analysed with distributed-lag GAMs and tensor-product temperature x PM2.5 surfaces, copollutant-adjusted. Temperature dominated: MI risk in adults >=65 was lower at warmer days (RR75/25 0.92, 0.89-0.95), heart failure was U-shaped with heat risk in younger and Black patients (RR75/25 1.05, 1.02-1.09). PM2.5 was weak; the largest signal was stroke in Black patients, RR75/25 1.02 (0.96-1.08). Limitation: a single-system admissions series assigns one area-wide monitor value to a coastal region with low, compressed PM2.5, so near-null PM results partly reflect a small exposure contrast; subgroup multiplicity is unaddressed. Relevance: moderate - low-concentration subtropical settings are where denser networks would sharpen the contrast."
+  },
+  {
+   "pmid": "42887288",
+   "doi": "10.1016/j.ijheh.2026.114932",
+   "journal": "Int J Hyg Environ Health",
+   "short": "Uberlandia street vendors PM2.5 micronuclei panel 2026",
+   "title": "Urban air pollution and genotoxic damage in street vendors: a longitudinal repeated-measures panel study",
+   "sub": "Occupational & indoor",
+   "design": "Panel study",
+   "pm": "PM1, PM2.5, PM10 at seven fixed work-area monitoring points",
+   "geo": "Brazil (Uberlandia)",
+   "endpoint": "Buccal-cell micronucleus frequency",
+   "tier": "B",
+   "n": "238 men over four campaigns spanning rainy and dry seasons: 116 outdoor street vendors in the city centre vs 122 indoor formal vendors in a reference area. PM concentrations and MN frequency were both consistently higher in the centre. Poisson GEE: per 1 ug/m3 PM2.5, MN IRR 1.024 (1.013-1.034) rainy and 1.026 (1.019-1.034) dry; no season interaction (p=0.378). Limitation: exposure is fixed-point area monitoring, not personal, and is collinear with occupation group, so the PM2.5 slope partly encodes street vs indoor work (traffic gases, PAHs, sun, smoking patterns). Relevance: moderate - seven fixed points is exactly the density at which a small low-cost array could convert an ecological contrast into personal-scale exposure."
+  },
+  {
+   "pmid": "42881829",
+   "doi": "10.3390/jcm15197367",
+   "journal": "J Clin Med",
+   "short": "Northern Thailand NPC survival PM2.5 and coarse PM 2026",
+   "title": "The Effect of Fine (PM2.5) and Coarse (PM10-2.5) Particulate Matter on Survival Outcomes in Nasopharyngeal Carcinoma Patients: A Retrospective Cohort Study in a Northern Thailand Tertiary Care Center",
+   "sub": "Other clinical endpoints",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM2.5 and PM10-2.5 (exposure model not stated)",
+   "geo": "Thailand (northern)",
+   "endpoint": "Survival in nasopharyngeal carcinoma",
+   "tier": "C",
+   "n": "No abstract at harvest. Title indicates a single-centre retrospective cohort of nasopharyngeal carcinoma patients in northern Thailand relating fine and coarse PM to survival. Recorded for coverage; no estimate inferred. Relevance: moderate - northern Thailand's biomass-burning season is a well-instrumented low-cost-sensor region, and a coarse-fraction prognosis question needs PM10-2.5 that optical LCS estimate poorly."
+  },
+  {
+   "pmid": "42887682",
+   "doi": "10.1016/j.jnutbio.2026.110521",
+   "journal": "J Nutr Biochem",
+   "short": "Time-restricted feeding PM2.5 adipose metabolism 2026",
+   "title": "Metabolic Reprogramming by Time-Restricted Feeding Confers Resistance to PM2.5-Induced Metabolic Disturbances in Adipose Tissue",
+   "sub": "Mechanistic toxicology",
+   "design": "Metadata only (no abstract)",
+   "pm": "PM2.5 exposure (experimental; protocol not stated)",
+   "geo": "Not stated",
+   "endpoint": "Adipose-tissue metabolic disturbance",
+   "tier": "C",
+   "n": "No abstract at harvest. Title indicates an experimental study in which time-restricted feeding attenuated PM2.5-induced metabolic disturbance in adipose tissue. Recorded for coverage; no estimate inferred. Relevance: low for sensing - a dietary effect modifier, of interest only if human chrono-nutrition data are later paired with personal exposure."
+  },
+  {
+   "pmid": "42884173",
+   "doi": "10.3390/ijms27198931",
+   "journal": "Int J Mol Sci",
+   "short": "PM2.5 NLRP3 inflammasome lung cancer review 2026",
+   "title": "Possible Links Between PM2.5-Induced NLRP3 Inflammasome Activation and Its Role in Lung Cancer Progression and Drug Resistance",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "PM2.5 (toxicological literature)",
+   "geo": "Not applicable",
+   "endpoint": "Lung cancer progression and drug resistance (mechanistic)",
+   "tier": "C",
+   "n": "Narrative review positioning PM2.5-driven ROS as the trigger for NLRP3 inflammasome assembly, caspase-1 activation and IL-1beta/IL-18 maturation, sustaining chronic pulmonary inflammation in lung carcinogenesis. It then hypothesises that NLRP3 signalling contributes to lung-cancer drug resistance and proposes NLRP3 as a prognostic marker and target, noting NLRP3 inhibitors are in trials for other inflammatory diseases but none in oncology. Limitation: the drug-resistance link is explicitly hypothetical and assembled from heterogeneous in vitro doses; no systematic search or grading. Relevance: low for sensing - no exposure metric beyond mass PM2.5."
+  },
+  {
+   "pmid": "42883825",
+   "doi": "10.3390/ijms27198581",
+   "journal": "Int J Mol Sci",
+   "short": "Gut-liver axis pollutants MASLD review 2026",
+   "title": "The Role of the Gut-Liver Axis in the Development of Liver Diseases Induced by Selected Environmental Pollutants: A Narrative Review",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "PM among heavy metals and EDCs (toxicological literature)",
+   "geo": "Not applicable",
+   "endpoint": "MASLD / chronic liver disease (mechanistic)",
+   "tier": "C",
+   "n": "Narrative review covering heavy metals, PM and endocrine disruptors (chiefly BPA) as drivers of gut dysbiosis and barrier failure, with LPS translocation into the portal circulation activating hepatic TLR4/NF-kB, oxidative stress and steatosis; EDCs additionally act on hepatic nuclear receptors. Limitation: PM is one of three pollutant classes and the review does not separate inhaled from ingested particle routes or give dose context, so the PM-specific gut-liver claim rests on a thin, mostly rodent literature. Relevance: low for sensing - flags an extrapulmonary endpoint that cohort studies with dense exposure surfaces could test."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3389/fimmu.2026.1953398",
+   "journal": "Front Immunol",
+   "short": "Inhaled polystyrene microplastics pulmonary fibrosis review 2026",
+   "title": "Polystyrene-associated pulmonary fibrosis: a summary based on the available evidence and prospects",
+   "sub": "Mechanistic toxicology",
+   "design": "Narrative review",
+   "pm": "Airborne polystyrene micro/nanoplastics (inhalation)",
+   "geo": "Not applicable",
+   "endpoint": "Pulmonary fibrosis (mechanistic)",
+   "tier": "C",
+   "n": "Reviews sources, deposition and pulmonary effects of inhaled polystyrene microplastics and proposes, as a working model, convergence on coupled Wnt/beta-catenin and TGF-beta1/Smad2/3 signalling driving EMT, myofibroblast differentiation and matrix remodelling. Each element is graded as direct PS-MP evidence, extrapolation from other particles, or canonical fibrosis biology - an unusually honest structure. Limitation, stated by the authors: no study tests the full cascade in one inhalation model; non-physiological doses and pristine monodisperse spheres dominate. Relevance: low-moderate - airborne microplastics sit inside optical PM size bins but are invisible as a class to LCS; exposure assessment remains filter-and-spectroscopy work."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/amt-19-6517-2026",
+   "journal": "Atmos Meas Tech",
+   "short": "Fluorescence-Raman-Mie lidar PM2.5 profiles Beijing 2026",
+   "title": "Classification-constrained retrieval of PM2.5 vertical profiles from fluorescence-Raman-Mie polarization lidar",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Remote sensing / lidar retrieval",
+   "pm": "Lidar extinction to PM2.5, aerosol typed by depolarisation ratio and fluorescence capacity",
+   "geo": "China (Beijing)",
+   "endpoint": "No health endpoint",
+   "tier": "A",
+   "n": "Beijing lidar separates anthropogenic pollution aerosol from desert and mineral dust using particle depolarisation ratio plus fluorescence capacity, then applies an extinction-to-PM2.5 regression only to the anthropogenic fraction. Date-separated near-surface validation (411 hourly samples, 69 days): RMSE 17.32, MAE 13.54, bias 3.30 ug/m3; versus the unconstrained model RMSE -38.2%, MAE -45.0%, bias about -83%. Limitation: validation is at the surface only, so the vertical profile itself is unverified, and residual scatter of the empirical extinction-mass relation, not the classification, dominates uncertainty. Relevance: high - the same coarse-dust mass bias wrecks optical LCS; type-gated calibration is directly transferable to network QC during dust events."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/amt-19-6503-2026",
+   "journal": "Atmos Meas Tech",
+   "short": "MISR Research Product Algorithm 1.1 km AOD 2026",
+   "title": "The MISR Research Product Algorithm - producing global, self-consistent, pixel-level aerosol retrievals for the Multi-angle Imaging SpectroRadiometer",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Satellite retrieval evaluation",
+   "pm": "MISR AOD, Angstrom exponent, particle shape and SSA at 1.1 km",
+   "geo": "Global",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "Automates the MISR research aerosol retrieval into a production algorithm (MRPA) at 1.1 km pixels versus 4.4 km for the standard product. Against AERONET over land, MRPA mid-visible AOD has roughly half the RMSE and a higher correlation than the standard algorithm, at the cost of somewhat higher bias; Angstrom exponent improves, especially at high AOD. Smoke regions retrieve small-medium spherical absorbing particles, dust regions large non-spherical weakly absorbing ones. Limitation: automation reduces particle-type sensitivity, SSA and shape are validated only qualitatively, and MISR's 9-day global revisit limits daily PM2.5 use. Relevance: moderate - type-resolved AOD is a plausible covariate for compositional correction of LCS-satellite fusion."
+  },
+  {
+   "pmid": "42884376",
+   "doi": "10.3390/s26196178",
+   "journal": "Sensors (Basel)",
+   "short": "UAV rotor-wash bias in airborne pollutant sensing 2026",
+   "title": "UAV-Induced Measurement Bias in Air Pollution Sensing: A Physics-Informed Framework for Characterization, Sensor Placement, and Correction",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "UAV instrument deployment",
+   "pm": "UAV-mounted PM2.5, PM10 and gas sensors vs fixed reference",
+   "geo": "Not stated",
+   "endpoint": "No health endpoint",
+   "tier": "B",
+   "n": "Actuator-disk momentum theory and literature constraints are combined into a four-zone rotor-wash contamination map, a sensor-placement rule and a two-stage bias correction for nine pollutants. Hover and 5 m/s co-location flights on a 21-inch quadrotor against a fixed reference showed bias of 3-10% in hover and 6-15% in forward flight across NO2, CO, O3, PM10 and PM2.5, directionally matching predictions, but correlation fell to r = 0.44 in forward flight. Limitation: a single airframe, few flights and no wind tunnel - the authors concede qualitative rather than quantitative support. Relevance: high for vertical-profile LCS work - mounting position is a first-order error term and r = 0.44 is below any usable validation threshold."
+  },
+  {
+   "pmid": "42884477",
+   "doi": "10.3390/s26196276",
+   "journal": "Sensors (Basel)",
+   "short": "HMAC message authentication vs LoRa telemetry poisoning 2026",
+   "title": "Securing AI-Driven Systems for Environmental Sustainability in IoT Applications: A Lightweight Message-Authentication Scheme Against Telemetry Poisoning",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Method / algorithm",
+   "pm": "Network PM2.5 telemetry (public datasets) used for forecast-poisoning test",
+   "geo": "Not applicable",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Proposes an encryption-free HMAC-SHA-256 tag over device ID, timestamp, monotonic counter and payload for raw LoRa links, with a durable server-side counter high-water mark to reject forgeries and replays. Host-side reference tests: zero false accepts/rejects over 25,000 adversarial messages. In a ten-seed poisoning study on public environmental datasets, a value-based outlier defence raised PM2.5 forecast RMSE by up to ~104% by discarding real extremes, whereas authentication held the clean baseline. Cost: payload 34 to 99 B, airtime ~2.2x. Limitation: never run on the ESP32-S3 hardware; energy unquantified. Relevance: moderate - smoke-event extremes are precisely what outlier filters in LCS pipelines wrongly remove."
+  },
+  {
+   "pmid": "42884220",
+   "doi": "10.3390/s26196020",
+   "journal": "Sensors (Basel)",
+   "short": "Wildfire smoke onset detection fixed cameras 2026",
+   "title": "Detecting Wildfire Smoke Onset from Fixed View Camera Networks",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Method / algorithm",
+   "pm": "Visible smoke plumes in fixed-camera video (no mass metric)",
+   "geo": "United States (California) + transfer sets",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Reframes smoke detection as onset detection: a scene model learned from unlabelled fire-free video yields per-tile prediction residuals, read through four cues (residual magnitude, opacity accretion, motion coherence, temporal persistence), with detection delay and false alarms in the loss. On FIgLib the first alarm comes 1.52 min after ignition at 0.21 false alarms per camera-day, transferring to PyroNear-2025 and SKLFS-WildFire without labels. Limitation: ignition-to-alarm is benchmarked on curated sequences; night, fog and low-cloud performance is not reported. Relevance: low-moderate - an upstream trigger, not a PM measurement, but camera onset times could gate event-mode sampling and plume attribution in LCS networks."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-14655-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "OA molecular composition predicts ROS yield MCR-VK 2026",
+   "title": "Linking molecular composition of organic aerosols to reactive oxygen species formation using an MCR-VK framework",
+   "sub": "Exposure assessment & modelling",
+   "design": "Laboratory + field measurement",
+   "pm": "Filter PM2.5: H2O2 + radical ROS yields; FT-ICR/Orbitrap OA composition",
+   "geo": "Multi-site (China, Germany, Finland) + chamber SOA",
+   "endpoint": "Oxidative potential (ROS formation)",
+   "tier": "B",
+   "n": "Ambient fine PM from four Chinese megacities, a German semi-urban site and a boreal forest, plus chamber SOA, analysed by ultrahigh-resolution MS and H2O2/radical assays. Volume-normalised ROS rose with PM mass and dominates exposure in polluted cities, but mass-normalised ROS varied independently of loading and tracked the ratio of oxidised to unsaturated organic fractions (RF_OOC/RF_UOC); biogenic aerosol carried the highest per-mass yield. Limitation: correlational across few sites; cell-free ROS is a surrogate, and transition metals - a major ROS driver - are outside the framework. Relevance: moderate - mass-based LCS cannot see per-mass toxicity variation of this size; a case for pairing networks with periodic speciation."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17101021",
+   "journal": "Atmosphere",
+   "short": "Five megacities PM2.5 O3 trends meteorology 2018-2023",
+   "title": "Urban Air Quality Trends and Meteorological Influences Across Five Global Megacities, 2018-2023",
+   "sub": "Exposure assessment & modelling",
+   "design": "Monitoring-record analysis",
+   "pm": "Monitor PM2.5, PM10, O3, NO2, SO2 with temperature, SLP, wind",
+   "geo": "Global (Shanghai, Delhi, Paris, Los Angeles, Sao Paulo)",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Descriptive 2018-2023 comparison. Shanghai PM2.5 fell from 43.5 to 27.0 ug/m3 (2018-2022) then rose to 30.3 in 2023; Delhi stayed above 87 ug/m3 throughout; Paris declined; Sao Paulo rose by 2023. PM2.5 exceedance days: Delhi 2,025, Shanghai 1,881, Los Angeles 366. Temperature correlated negatively with PM2.5 in Delhi (r = -0.66), sea-level pressure positively (r = 0.65); wind speed was negative everywhere. Limitation: pairwise correlations without meteorological normalisation, so trends conflate emissions and weather; exceedance counts summed over pollutants and stations are hard to compare. Relevance: low - context only."
+  },
+  {
+   "pmid": "42887815",
+   "doi": "10.1016/j.envpol.2026.129262",
+   "journal": "Environ Pollut",
+   "short": "Urban tree bark PM retention functional traits 2026",
+   "title": "Species-specific PM retention by urban tree bark is associated with functional traits under controlled exposure",
+   "sub": "Burden, policy & mitigation",
+   "design": "Chamber / laboratory",
+   "pm": "Gravimetric PM retained on bark, leaves, branches (PM2.5, PM2.5-10)",
+   "geo": "China (Hangzhou)",
+   "endpoint": "No health endpoint",
+   "tier": "C",
+   "n": "Modified open-top chambers compared PM capture by bark, leaves and branches of 12 calibration species. Per unit area bark retained more PM than foliage in 11 of 12 (Cinnamomum camphora 364.5 vs Juniperus formosana 112.1 ug/cm2). Upscaled to whole plants, bark PM2.5-10 retention was 1.40x that of leaves while PM2.5 was comparable - a coarse-selective filter. Lenticel density, roughness and groove prominence predicted interspecies variation; applied to 26 Hangzhou species the spread was 4.83-fold. Limitation: retention mass under controlled exposure says nothing about net ambient concentration reduction, and independent validation was limited. Relevance: low for sensing - deposition-mitigation claims of this type need ambient gradient measurement to be credible."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3389/fpubh.2026.1945592",
+   "journal": "Front Public Health",
+   "short": "Portable air purifiers airborne bacteria AMR offices schools 2026",
+   "title": "Response of culturable bacteria and their resistance to air purification across compartments",
+   "sub": "Occupational & indoor",
+   "design": "Bioaerosol monitoring campaign",
+   "pm": "Culturable airborne, surface and human-associated bacteria before/after portable purifiers",
+   "geo": "Spain (Valencia) + Ireland (Dublin)",
+   "endpoint": "Airborne bacterial load and AMR prevalence",
+   "tier": "C",
+   "n": "Offices in Valencia and classrooms in Dublin sampled before and after portable air purifier deployment; 341 isolates, MALDI-TOF identification, susceptibility testing and resistance-gene PCR. Office airborne isolates fell from 41 to 5; school airborne isolates fell from 102 to 47 and resistant prevalence from 43% to 21%. Surface and human-associated communities shifted less, and human-associated samples became Staphylococcus-dominated with more non-susceptible isolates. Limitation: single pre/post snapshots without control rooms or particle counts, culture-only recovery, small isolate numbers. Relevance: low-moderate - purifier trials rarely log bioaerosol and PM together; co-located OPCs would let isolate counts be normalised to removed particle number."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1002/puh2.70428",
+   "journal": "Public Health Chall",
+   "short": "Landscape fire smoke health action plans review 2026",
+   "title": "Health Management Planning for Landscape Fire Smoke Events: A Literature Review and Suggested Human-Centred Framework for Resource Development",
+   "sub": "Burden, policy & mitigation",
+   "design": "Literature review",
+   "pm": "Landscape fire smoke (no metric)",
+   "geo": "Australia, Canada, United States",
+   "endpoint": "Preparedness resources for at-risk populations",
+   "tier": "C",
+   "n": "Reviews smoke-event health management plans for at-risk individuals in Australia, Canada and the US and finds only four resources, two of them dedicated landscape-fire-smoke action plans. Proposes a design-thinking, human-centred framework for producing tailored plans for priority populations and clinicians. Limitation: a non-systematic search of grey literature; the framework is a process proposal with no evaluation of uptake or exposure reduction. Relevance: moderate - action plans hinge on local, timely PM2.5 triggers, which is where corrected LCS (e.g. AirNow Fire and Smoke Map) carry operational weight."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Micronucleus frequency\nrainy season",
+   "exposure": "Work-area PM2.5 (per 1 ug/m3)",
+   "est": 1.024,
+   "lo": 1.013,
+   "hi": 1.034,
+   "metric": "IRR",
+   "src": "Uberlandia street vendors, n=238"
+  },
+  {
+   "label": "Micronucleus frequency\ndry season",
+   "exposure": "Work-area PM2.5 (per 1 ug/m3)",
+   "est": 1.026,
+   "lo": 1.019,
+   "hi": 1.034,
+   "metric": "IRR",
+   "src": "Uberlandia street vendors, n=238"
+  },
+  {
+   "label": "Stroke admissions\nBlack patients",
+   "exposure": "Daily PM2.5 (75th vs 25th pct)",
+   "est": 1.02,
+   "lo": 0.96,
+   "hi": 1.08,
+   "metric": "RR",
+   "src": "BayCare West Florida 2017-2024"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 0,
+   "note": "childhood:\nno age-specific\nrecord"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno age-specific\nrecord"
+  },
+  {
+   "n": 1,
+   "note": "working age:\nBrazilian\nstreet vendors"
+  },
+  {
+   "n": 2,
+   "note": "older adults:\nMESA AF;\nFlorida >=65"
+  }
+ ]
+}

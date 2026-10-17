@@ -29,7 +29,8 @@ body += ("\\begin{keybox}\n{\\sffamily\\bfseries\\footnotesize\\color{Deep}Windo
          "{\\fontsize{7.2}{8.8}\\selectfont\n" + M.CONT + "\\par}\n\\end{keybox}\n\n\\vspace{3mm}\n")
 body += "\\par\\vskip 0pt plus 18\\baselineskip\\penalty-200\\vskip 0pt plus -18\\baselineskip\n" + sec("Corpus analytics")
 for f in ("f1_subtopics", "f2_design_endpoint", "f3_metric_geography", "f6_lifecourse", "f4_heatmap"):
-    body += "\\noindent\\includegraphics[width=\\linewidth]{\\FIGDIR/%s.png}\n\\figcap{%s}\n\n\\vspace{2mm}\n" % (f, M.CAPS[f])
+    # 2026-10-17: figure+caption in one minipage - 16 Oct proof split the f4 caption onto the next page
+    body += "\\noindent\\begin{minipage}{\\linewidth}\\includegraphics[width=\\linewidth]{\\FIGDIR/%s.png}\n\\figcap{%s}\\end{minipage}\n\n\\vspace{2mm}\n" % (f, M.CAPS[f])
 body += "\n" + M.FOREST + "\n\n\\vspace{4mm}\n\n"
 ent = subprocess.run(["python3", "_tex_entries.py", D], capture_output=True, text=True, check=True).stdout
 # keep a band heading with its first entry (orphaned band at a page foot, 26 Sep proof):
