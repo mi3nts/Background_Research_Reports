@@ -1,0 +1,293 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{17 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-17\;\;\textcolor{Amber}{\textbar}\;\;Entry window 17 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;15 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{15}{RECORDS IN SCOPE\\(44 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}The gravimetric reference itself carries a +3 to +18\,\% water bias in PM$_1$
+and PM$_{2.5}$ that survives standard conditioning --- and every low-cost sensor calibrated against filters inherits
+it.}\\[1.4mm]
+\footnotesize
+Karl Fischer coulometry on 30 conditioned 47\,mm glass-fibre filters (PM$_1$, PM$_{2.5}$, PM$_{10}$) from a Krak\'ow
+steelworks site and a Zdzieszowice coal-combustion site, plus five blanks, with stepwise thermal water release at
+50--250\,$^\circ$C. Strongly bound water (180--250\,$^\circ$C) was \textbf{51--60\,\%} of filter water and adds a
+systematic \textbf{+3\,\% to +18\,\%} positive mass bias, largest for PM$_1$ at the steelworks; between-filter CV
+reached \textbf{53\,\%} for PM$_1$ and was minimal near 1330--1360\,$\mu$g loading.
+\textbf{Where it is weak:} 35 filters at two industrial sites, preprint, and the bias is not yet resolved by
+composition or humidity history.
+\textbf{Why it matters here:} co-location slopes are fitted to the reference; a composition-dependent positive
+bias in the reference is folded silently into every regional correction equation.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{A five-year mortality tail for wildfire smoke.} Deconvolving US county-month panels puts the excess-death
+peak $\sim$3\,y after a smoke pulse and gives \textbf{1.7 million} smoke deaths 2011--2023 (1.1--2.3\,M), about ten
+times long-term-RR estimates --- a large claim from an ecological lag structure (medRxiv).
+
+\item \textbf{A country-panel PM$_{2.5}$ paradox dissolves under trend control.} Two-way FE gives \textbf{+0.41}\,y life
+expectancy per 10\,$\mu$g\,m$^{-3}$ (0.14--0.67); economy-specific trends take it to $-$0.02 ($-$0.18 to 0.13).
+
+\item \textbf{China's Action Plan and infant neurodevelopment.} Wuhan cohort, $n$=3,575: target-trial emulation puts
+later-policy-period children \textbf{7.3} (MDI) and \textbf{6.4} (PDI) Bayley points higher; first postnatal year
+the most sensitive window.
+
+\item \textbf{Cataract: NO$_2$, not PM$_{2.5}$.} Pooled HR 1.041 (1.013--1.070) per 10\,$\mu$g\,m$^{-3}$ NO$_2$; PM$_{2.5}$
+1.036 (0.988--1.086) per 1\,$\mu$g\,m$^{-3}$ with I$^2$ = 99.7\,\%.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 16 October issue closed with \texttt{last\_entry\_date} at 16 October. This issue collects
+\textbf{17 October in full}, continuous with it. The 17 October run did not fire at or after 22:00 CDT, so this
+issue, the \textbf{W42 weekly} (11--17 October) and the 18 October daily were all built on the 19 October run
+(18:47 CDT). 19 October is not opened (before 22:00).\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 15 in-scope records across nine bands --- the widest spread this week.
+Sensing (3: gravimetric metrology, East African passive network, graph forecasting) leads; burden, exposure,
+mechanism and other-clinical have two each. Neuro is the only empty health band.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: modelling (3), ecological panels (2: smoke deconvolution, country
+specification), one RCT (LPG) and one meta-analysis; metadata-only 1 (7\,\%). Right --- endpoints span mortality,
+cataract, Bayley scores, acute symptoms and metabolic syndrome.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ dominates; size-resolved gravimetry and PUF
+composition sampling appear on the measurement side. Right --- geography: global/multi-region and not-applicable
+records (6) lead; China 3; Poland, Thailand, Chile, East Africa and the US one each.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: the Wuhan cohort fills both preconception/in utero and childhood; working
+age carries the LPG cooks and Thai adults; older adults only through the wildfire-smoke burden. No adolescent
+record.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Sensing splits across laboratory metrology, a field network
+and a forecasting model; burden is entirely ecological.}\end{minipage}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale: pooled cataract HRs from one meta-analysis --- PM$_{2.5}$ per 1\,$\mu$g\,m$^{-3}$ (I$^2$ 99.7\,\%,
+not a common effect) and black carbon per study-specific IQR (I$^2$ 33\,\%). Both cross the null.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{Difference scale: change in national life expectancy (years) per 10\,$\mu$g\,m$^{-3}$ PM$_{2.5}$ in 186
+economies, conventional two-way FE vs the same model with economy-specific linear trends. The sign flip is the
+finding: the paradoxical positive coefficient is a trend artefact.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Cardiovascular \& metabolic\hfill 1 record}{Teal}
+
+\paperentry{Huang gut microbiota mediation air pollution metabolic syndrome 2026}
+{The mediating roles of gut microbiota in the associations of air pollution and meteorological factors with metabolic syndrome}
+{iMetaOmics}
+{Gut microbial community clusters were derived and related to metabolic syndrome; health-associated clusters were dominated by Bacteroides and Prevotella. Long-term NO$_2$, PM$_{2.5}$ and temperature were associated with microbiota composition, and Megamonas and Megasphaera statistically mediated their associations with MetS. The abstract reports no sample size, effect estimates, mediated proportions or confidence intervals. Limitation: mediation from a single stool sample assumes exposure precedes the microbiome state and that diet, a strong common cause of both microbiota and MetS, is adequately adjusted - neither can be checked from the record. Relevance: low - mechanistic hypothesis generation; exposure resolution is not the limiting factor here.}
+{10.1002/imo2.70099}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Sittitoon Thailand haze PM$_{2.5}$ symptoms inequality 2026}
+{Health inequalities in PM$_{2.5}$-related symptoms during Thailand's haze season: the role of education, sociodemographic, lifestyle, protective behaviors, and environmental factors}
+{Front Public Health}
+{3,916 adults interviewed January-April 2025, mixed-effects logistic models with latent-class protective-behaviour phenotypes. Symptom prevalence: respiratory 80.7\%, eye 52.8\%, skin 48.7\%, neurological 33.1\%. Higher provincial PM$_{2.5}$ was independently associated with respiratory and dermatological symptoms; non-compliers (48.6\%) and the neutral group had higher odds of respiratory and neurological symptoms than compliers (33.4\%). Female sex, younger age, comorbidity, alcohol, urban residence and lack of village-health-volunteer contact also raised risk. Limitation: one satellite value per province per month is assigned to every respondent, so the PM$_{2.5}$ contrast is between-province and confounded with region; self-reported symptoms during a publicised haze season invite reporting bias; odds ratios are not given in the abstract. Relevance: high - northern Thailand has dense low-cost networks that could replace provincial satellite means with district-level exposure.}
+{10.3389/fpubh.2026.1899785}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Ni Wuhan birth cohort air pollution neurodevelopment target trial 2026}
+{Early Life Ambient Air Pollution, Sex Steroids and Neurodevelopment: Target Trial Emulation in a Prospective Cohort}
+{Environ Sci Technol}
+{3,575 mother-child pairs (2014-2019), cord sex steroids in 897. Most pollutants were inversely associated with Bayley scores across windows, strongest in the first postnatal year. Androstenedione mediated 5-12\% of some preconception/prenatal associations with PDI, but the IPW indirect effects lost significance. Target trial emulation of China's 2013-2017 Action Plan: children in the later policy period scored 7.27 (MDI) and 6.41 (PDI) points higher. Limitation: the policy contrast is a birth-period comparison, so secular changes in Bayley administration, parental education and care confound it; per-pollutant effect sizes and CIs are not in the abstract. Relevance: moderate - the postnatal window being most sensitive argues for exposure assigned to the infant's home, where indoor low-cost monitors outperform residential-grid estimates.}
+{10.1021/acs.est.6c09006}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Edwards macrophage superoxide SOA biomass plastic burning PM 2026}
+{Superoxide Release from Macrophages upon Exposure to Secondary Organic Aerosols, Biomass, and Plastic Burning Particulate Matter}
+{ACS Omega}
+{Macrophages exposed to PM suspensions, superoxide followed for 4 h by chemiluminescence plus EPR; an activation threshold is defined as the dose of a clear superoxide rise. Limonene SOA gave the largest release (\textasciitilde{}32 uM) but the highest threshold (300 ug/mL); naphthalene and toluene SOA gave 2.5-7 uM with thresholds of 0.02-0.1 ug/mL. Biomass PM had no clear threshold. Plastic-burning PM ranged widely: PET highest output (\textasciitilde{}12 uM), PS/LDPE/HDPE thresholds \textasciitilde{}0.01 ug/mL, PVC and PET 50-100 ug/mL. Limitation: suspension doses in ug/mL do not map onto deposited alveolar doses, and a single cell line under submerged exposure omits surfactant and epithelial interaction. Relevance: moderate - per-mass oxidative potency varies by four orders of magnitude across sources, which mass-only sensors cannot register.}
+{10.1021/acsomega.6c06562}
+
+\paperentry{Yoon PRL-3 ezrin airway epithelium particulate matter 2026}
+{PRL-3-sensitive cytoskeletal signaling mediates early airway epithelial responses to particulate matter}
+{Respir Res}
+{Phosphoproteomics of human bronchial epithelial cells under non-cytotoxic PM exposure, with pharmacological and genetic PRL-3 (PTP4A3) suppression and an acute mouse airway exposure model. PM rapidly and transiently upregulated PRL-3 and relocalised it to the membrane, with PRL-3-sensitive ezrin dephosphorylation in vitro and in vivo. Blocking PRL-3 restored ezrin phosphorylation and attenuated EMT-associated changes and MUC5AC upregulation, independent of Akt, ERK and mTOR, and reproducibly across UPM, DEP and PM$_{10}$. Limitation: doses are described as non-lethal but not related to deposited human doses; acute exposure says nothing about chronic remodelling. Relevance: low for sensing - a candidate early-effect pathway shared across PM types, i.e. not composition-specific.}
+{10.1186/s12931-026-03834-9}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 2 records}{Clay}
+
+\paperentry{Pourkiaei Santiago CMAQ EDGAR vs INEMA inventories 2026}
+{High-Resolution Air Quality Modeling over Santiago, Chile: A Comparative Assessment of EDGAR and INEMA Anthropogenic Emission Inventories}
+{Research Square (preprint)}
+{Global EDGAR v8.1 (2022) vs regional INEMA v2 (2020) in CMAQ with three one-way nests to 1 km. Aggregate PM$_{2.5}$ emissions were similar but sectoral splits differed sharply; INEMA reproduced PM better, EDGAR daytime O$_3$. After scaling emissions to mean observations, source apportionment shifted between industrial combustion (EDGAR) and transport (INEMA), with building energy use important in both. DDM showed VOC-limited O$_3$ and sector-specific non-linear second-order PM$_{2.5}$ sensitivity to NOx. Limitation: calibrating emissions to the observed mean forces agreement and then attributes sources within that constrained state, so apportionment differences reflect inventory structure, not validated truth; performance statistics are not in the abstract. Relevance: moderate - 1 km CTM fields are the prior that dense LCS networks are fused with in Andean basins.}
+{10.21203/rs.3.rs-10259950/v1}
+
+\paperentry{Ghazaryan explainable ML annual PM$_{2.5}$ Europe Central Asia 2026}
+{Explainable Machine Learning for PM$_{2.5}$ Prediction and Comparative Country-Level Risk Assessment in Europe and Central Asia}
+{Preprints.org (preprint)}
+{Fifty-nine country-year observations (ten cities, 2020-2025) with eleven predictors; six models under five-fold CV. Linear regression had the lowest RMSE and highest R2, Extra Trees the lowest MAE; SHAP attributed added information to development indicators beyond meteorology. The authors call the result exploratory. Limitation: 59 observations and 11 predictors with random-fold CV on autocorrelated city panels cannot support model ranking or attribution; numeric skill is not reported in the abstract. Relevance: low - illustrates why annual aggregate predictors are no substitute for measured spatial coverage.}
+{10.20944/preprints202610.1559.v1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{Chyzhykov gravimetric filter water Karl Fischer bias 2026}
+{Impact of Mass Loading and Water Speciation on Precision and Artifacts in Gravimetric Measurements of Atmospheric Particulate Matter}
+{Research Square (preprint)}
+{Thirty filters (n=5 per fraction per site) plus five field blanks, weighed under PN-EN 12341:2024 conditioning, then stepwise thermal water release at 50, 120, 180 and 250 C. Between-filter variability was U-shaped in mass loading, minimal near 1330-1360 ug; PM$_{1}$ was the most variable fraction (CV up to 53\%). Strongly bound water (180-250 C) made up 51-60\% of filter water, survives standard conditioning, and adds a systematic +3\% to +18\% mass bias, largest for PM$_{1}$ at the steelworks. Limitation: 35 filters at two industrial sites; the bias is not yet resolved by composition or RH history, so transfer to urban background aerosol is untested. Relevance: high - every LCS calibration inherits the reference's error; a positive, composition-dependent water bias in gravimetric PM$_{1}$ and PM$_{2.5}$ propagates directly into co-location slopes.}
+{10.21203/rs.3.rs-11157411/v1}
+
+\paperentry{Kalisa East Africa passive sampler network PAHs metals 2026}
+{First Results from a Passive Air Monitoring Network across Five East African Countries for Polycyclic Aromatic Hydrocarbons (PAHs) and Metals}
+{Environ Pollut}
+{Ten sites, 30-day dry-season deployments everywhere and paired wet-season samples at four. PAH ring profiles and metal loadings were spatially heterogeneous; water-soluble metals were a small share of total. HYSPLIT put >90\% of air masses from the S-SE, and adjacent cross-border sites saw near-identical air, so concentration differences are local-source driven; PCA components explained 46.5\% and 19.9\% of variance. Wet-season levels were lower. Screening risk was metal-dominated at some sites and PAH-dominated at Bukavu. Limitation: PUF-PAS uptake rates for particle-bound species are uncertain and site-specific, so concentrations are semi-quantitative; no PM mass. Relevance: high - electricity-free composition sampling is the natural complement to optical LCS mass networks in data-sparse Africa.}
+{10.1016/j.envpol.2026.129361}
+
+\paperentry{Qian MAG-MISD probabilistic multi-station PM$_{2.5}$ forecasting 2026}
+{MAG-MISD: A Mode-Specific Adaptive Graph Framework for Multiscale Interaction and Station Dependence in Probabilistic PM$_{2.5}$ Forecasting}
+{Preprints.org (preprint)}
+{Variational mode decomposition into five components, cross-mode Transformer per station, and a separate directed graph per mode (geographic, persistent adaptive and sample-conditioned dynamic edges) before fusion into conditional quantiles. Against the same-input VMD-iTransformer, RMSE fell 4.76\%, 2.78\%, 0.13\% and 0.72\% at 1, 6, 12 and 24 h, with better pinball loss and interval score and \textasciitilde{}70\% fewer parameters; the persistent adaptive relation drove most of the gain in ablation. Limitation: the improvement vanishes beyond 6 h, and decomposition of the full series before splitting risks leakage unless done causally - the abstract does not say. Relevance: moderate - station-graph forecasting transfers to LCS networks, where per-mode dependence could also flag drifting nodes.}
+{10.20944/preprints202610.1533.v1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Simkovich LPG stove RCT quality of life 2026}
+{Cooking With Liquefied Petroleum Gas or Biomass and Quality of Life: Results From a Randomized Controlled Trial}
+{Indoor Air}
+{180 women primary cooks aged 25-64 randomised to an LPG stove, 12 months of free fuel and behavioural reinforcement vs usual cooking; 179 completed. ITT at 12 months: SF-36 mental 48.3 vs 50.9 (p=0.59), physical 53.1 vs 47.6 (p=0.08), EQ-5D VAS 67.0 vs 71.7 (p=0.05); no personal PM$_{2.5}$-QOL exposure-response. More intervention women felt financially better off (42\% vs 13\%) and reported higher income (33\% vs 9\%), both p<0.001. Limitation: QOL is a secondary outcome in a trial powered for something else, unblinded, and the fuel subsidy itself transfers income, so the financial result is partly mechanical. Relevance: moderate - personal PM$_{2.5}$ monitoring was available but the QOL signal was absent; intervention trials remain the strongest design for testing whether measured reductions matter.}
+{10.1155/ina/9936046}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{Zhang US wildfire smoke five-year mortality impulse response 2026}
+{Wildfire smoke leaves a large five-year imprint on mortality in the United States}
+{medRxiv (preprint)}
+{County-month mortality and wildfire-PM$_{2.5}$ panels 2011-2023; episodic smoke pulses are used to deconvolve overlapping responses and recover an impulse-response function. Excess mortality peaks about three years after a pulse and is gone by five. Integrated over 2011-2023 this gives 1.7 million smoke-associated deaths (95\% UI 1.1-2.3 million), roughly ten times what long-term ambient PM$_{2.5}$ relative risks imply; circulatory and respiratory causes contribute comparably, adults >=65 dominate, and responses were larger during COVID-19. Limitation: a three-year lag in an ecological panel is exposed to slow confounders (migration, economic shocks, drought, heat) co-varying with fire years; the order-of-magnitude excess needs independent replication before it enters burden accounting. Relevance: high - a multi-year lag makes historical smoke-PM$_{2.5}$ reconstructions, including LCS-corrected ones, the binding input.}
+{10.64898/2026.10.15.26365428}
+
+\paperentry{Lu PM$_{2.5}$ longevity country panel specification analysis 2026}
+{Paradoxical PM$_{2.5}$-longevity estimates in global country panels are sensitive to differential trend control: a specification analysis, 2000-2023}
+{Front Public Health}
+{4,406 country-years, two-way fixed effects with GDP, health spending and urbanisation. The conventional model gives a paradoxical +0.406 y life expectancy per 10 $\mu$g\,m$^{-3}$ PM$_{2.5}$ (0.144-0.668); economy-specific linear trends remove it (-0.023 y, -0.175 to 0.129), as do first differences (-0.006 y, -0.085 to 0.073). A future-exposure lead (+2 y) was positive alone (0.296, 0.042-0.549) but attenuated with current exposure. Limitation: the trend-adjusted estimates are null rather than negative, so the paper diagnoses bias without recovering the expected harm; national averaging discards almost all exposure contrast. Relevance: moderate - a methods warning for any ecological PM$_{2.5}$ panel, including those fed by sensor-network or satellite exposure surfaces.}
+{10.3389/fpubh.2026.1936760}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 2 records}{Slate}
+
+\paperentry{Zhang air pollution cataract meta-analysis 2026}
+{Air pollution exposure and cataract outcomes: a systematic review and pollutant-specific meta-analysis}
+{Front Med (Lausanne)}
+{Fifteen observational studies, seven pooled with REML random effects (search to 10 Aug 2026; ROBINS-E). PM$_{2.5}$: HR 1.036 (0.988-1.086) per 1 $\mu$g\,m$^{-3}$, I2 99.7\%; NO$_2$: HR 1.041 (1.013-1.070) per 10 $\mu$g\,m$^{-3}$, I2 86\%; black carbon per IQR: HR 1.010 (0.983-1.038), I2 33\%. Highest-vs-lowest quartile was positive for NO$_2$ (HR 1.094, 1.057-1.133) and null for PM$_{2.5}$ and PM$_{10}$; Knapp-Hartung widened the NO$_2$ interval. Limitation: with I2 near 100\% the pooled PM$_{2.5}$ point estimate is not interpretable as a common effect - it averages incompatible exposure models and outcome definitions across too few studies. Relevance: low-moderate - the NO$_2$ > PM$_{2.5}$ ordering points at traffic proximity, which a dense network resolves better than satellite PM$_{2.5}$.}
+{10.3389/fmed.2026.1969759}
+
+\paperentry{Dahl air pollution bone fractures high-risk population 2026}
+{Air pollution and bone fractures in a high-risk population: differences by age and sex}
+{Environ Int}
+{\textsc{metadata only.} No abstract at harvest. The title indicates an analysis of ambient air pollution and fracture risk in a population at high fracture risk, stratified by age and sex. Recorded for coverage; no exposure model, design or estimate is inferred. Relevance: low-moderate - fracture is an under-studied PM endpoint, and bone-health associations have so far rested on residential annual means.}
+{10.1016/j.envint.2026.110570}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{17 October 2026}, single day. Harvester legs: \textbf{PubMed} health \textbf{6},
+sensing \textbf{1}; \textbf{Europe PMC} \textbf{24} (0 AGRICOLA); \textbf{Crossref by ISSN} \textbf{36};
+\textbf{arXiv} no entry dated 17 October; \textbf{OpenAlex} HTTP 429. 66 unique, 11 already carried, 55 fresh.
+\textbf{PubMed connector} (EDAT 17--18 Oct) 21 PMIDs, 4 appended to this day --- \textbf{59} candidates screened,
+\textbf{15 admitted}, \textbf{44 rejected} with logged reasons. \textbf{DOI gate} 0 fail / 0 warn. \textbf{Consensus}
+calibration sweep (run once for 17--18 Oct): 10 hits, 1 new, filed in the 18 October issue. \textbf{Trial watch}: 0
+registrations updated 16--19 October. Abstracts recovered via PubMed, Europe PMC and Semantic Scholar for 14 of 15;
+\textbf{1 record carried on metadata alone}. \textbf{Scholar Gateway} not called (\texttt{ACCESS\_DENIED} on previous
+runs). Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

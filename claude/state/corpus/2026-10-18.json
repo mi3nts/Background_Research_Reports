@@ -1,0 +1,257 @@
+{
+ "date": "2026-10-18",
+ "entry_window": "2026-10-18 -> 2026-10-18",
+ "PAPERS": [
+  {
+   "pmid": "42893227",
+   "doi": "10.1016/j.ajpc.2026.101775",
+   "journal": "Am J Prev Cardiol",
+   "short": "Brugge HEPA sham crossover cytokines visceral adiposity 2026",
+   "title": "Pro-inflammatory cytokines moderated by visceral adiposity from a pragmatic randomized crossover trial of portable HEPA air purifiers",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Randomised crossover trial",
+   "pm": "Indoor PM reduction by portable HEPA vs sham filtration (30-day periods)",
+   "geo": "Not stated in abstract",
+   "endpoint": "Plasma IL-1beta, IL-6, hsCRP",
+   "tier": "A",
+   "n": "116 adults (mean age 41.5) randomised to 30 days HEPA then sham, or the reverse, with a 30-day washout; ultra-sensitive cytokine assays, linear mixed models. No overall IL-1beta difference. Visceral adiposity (ABSI z >=+0.229) moderated the effect (interaction p=0.001): in the 12 participants with excess VAT, HEPA cut mean IL-1beta by 22.8% (0.138 vs 0.179 pg/mL, p<0.001); IL-6 showed a similar non-significant pattern and hsCRP little change; BMI moderated less well than ABSI. Limitation: the positive finding rests on 12 people in a post-hoc-looking subgroup chosen among several adiposity metrics, and achieved PM reduction is not reported in the abstract. Relevance: high - sham-controlled filtration with measured indoor PM is where calibrated low-cost monitors define the delivered dose."
+  },
+  {
+   "pmid": "42892469",
+   "doi": "10.1016/j.ijcard.2026.134999",
+   "journal": "Int J Cardiol",
+   "short": "Rao PM2.5 components cardiorenal multistate trajectory 2026",
+   "title": "Associations of PM2.5 components with dynamic and accelerated progression of different kidney function states and subsequent cardiovascular events",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort",
+   "pm": "2-year PM2.5 and components: sulfate, nitrate, ammonium, organic matter, black carbon",
+   "geo": "Not stated in abstract (cohort of 307,639)",
+   "endpoint": "Kidney-function transitions, incident CVD, CVD death",
+   "tier": "A",
+   "n": "307,639 participants, 1,058,210 person-years, 23,948 CVD cases and 7,763 CVD deaths; multistate and accelerated failure time models over eGFR categories 1-4. Per IQR, transition from category 2 to 3 had HR 1.273 (1.257-1.289) for sulfate, 1.304 (1.290-1.317) for nitrate and 1.280 (1.267-1.294) for ammonium, larger than for OM or BC. AFT: predicted 2-to-3 transition time 1,727 days at 4.2 vs 869 days at 7.0 ug/m3 nitrate. Limitation: HRs near 1.3 per IQR with CIs this narrow, for highly collinear secondary inorganic components, signal spatial confounding by region more than component-specific toxicity; single-pollutant component models cannot separate them. Relevance: moderate - component attribution needs speciation that optical LCS lack."
+  },
+  {
+   "pmid": "42892060",
+   "doi": "10.1016/j.jhazmat.2026.143879",
+   "journal": "J Hazard Mater",
+   "short": "Park Paris UFP number emissions mass-number conserving 2026",
+   "title": "Reconciling mass and number emissions through particle size: Implications for urban ultrafine particle modelling",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport modelling",
+   "pm": "Size-resolved particle number (UFP) from WRF-CHIMERE/MUNICH/SSH-aerosol",
+   "geo": "France (Greater Paris)",
+   "endpoint": "Not applicable (exposure modelling)",
+   "tier": "B",
+   "n": "Summer 2021 simulations from regional background to street scale, with a mass- and number-conserving algorithm converting sectoral PM mass emissions to sectional PN. Scenarios: COPERT vs on-board PN factors for exhaust, non-exhaust traffic, and non-combustion industrial processes including construction. The reference run, using mass emissions plus representative sector diameters, reproduced total PN at background and traffic stations; non-exhaust contributed about a third of traffic PN; the size distribution near 10 nm remained poorly reproduced. Limitation: one summer, and agreement on total PN can hide compensating errors across modes; sub-10 nm emission factors are missing. Relevance: moderate - PN, not PM2.5 mass, is the UFP exposure metric, and low-cost condensation counters are the only route to network density."
+  },
+  {
+   "pmid": "",
+   "doi": "10.22373/ljee.v7i1.10530",
+   "journal": "Lingkar: J Environ Eng",
+   "short": "Risti Jambi PMS5003 PMS7003 vs BAM-1020 2026",
+   "title": "Evaluation of Low-Cost PM2.5 Sensor Accuracy in Comparison with Government Reference Instrument",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Co-location calibration campaign",
+   "pm": "Plantower PMS5003 and PMS7003 vs BAM-1020 PM2.5",
+   "geo": "Indonesia (Jambi)",
+   "endpoint": "Not applicable (sensor evaluation)",
+   "tier": "B",
+   "n": "Consensus sweep. IoT nodes with two Plantower sensors co-located with the BMKG BAM-1020 at the Sultan Thaha Jambi climatology station, December 2025-January 2026, followed by linear-regression correction. Both tracked the reference moderately (R2 0.60 PMS5003, 0.59 PMS7003) and overestimated: PMS7003 MBE 10.46, MAE 12.53, RMSE 18.02 ug/m3; PMS5003 MBE 11.84, MAE 13.60, RMSE 19.60 ug/m3. The authors attribute the positive bias to high humidity. Limitation: two wet-season months at one site, no RH-stratified or kappa-Kohler correction and no held-out validation of the regression, so the correction will not transfer to the dry or haze seasons. Relevance: high - an equatorial reference co-location adds to the regional-calibration evidence; the 10 ug/m3 bias matches humid-tropics PurpleAir behaviour."
+  },
+  {
+   "pmid": "42893462",
+   "doi": "10.1007/s10661-026-16062-x",
+   "journal": "Environ Monit Assess",
+   "short": "Huang foliar particulate UV-Vis-NIR calibration transfer 2026",
+   "title": "Nondestructive UV-Vis-NIR assessment of foliar particulate retention in urban vegetation: cross-species transfer and calibration correction",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Spectroscopic calibration-transfer study",
+   "pm": "Leaf-surface particulate mass per area (washing-filtration reference)",
+   "geo": "China (Nanjing)",
+   "endpoint": "Not applicable (measurement method)",
+   "tier": "B",
+   "n": "Reflectance models built on 180 Ligustrum leaves and transferred to 45 Photinia leaves from park, street and industrial zones. Zone classification reached 91.1% after excluding endpoint and water bands. Direct mass prediction on the target species failed (R2 0.265, positive bias); a linear output correction using 15 target reference leaves (five per zone), tested on the other 30 over 50 splits, gave R2 0.797 +/- 0.042. Limitation: target-based scheme selection and the correction set share zones with the test set, and deposit properties are unmeasured, so this is reference-assisted local calibration, not transfer. Relevance: moderate - the same slope-and-offset recalibration logic, and the same failure of naive transfer, governs moving LCS calibrations between sites."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115452",
+   "journal": "Build Environ",
+   "short": "Chen ambient PM2.5 representativeness children microenvironments 2026",
+   "title": "Evaluating the representativeness of ambient PM2.5 for children's exposure and source characteristics across microenvironments during school semesters",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Ambient vs microenvironmental PM2.5 (instrumentation not stated)",
+   "geo": "Not stated in record",
+   "endpoint": "Children's personal / microenvironmental exposure",
+   "tier": "C",
+   "n": "No abstract at harvest. The title indicates a comparison of ambient PM2.5 with children's exposure and source profiles across school-semester microenvironments. Recorded for coverage; no estimate inferred. Relevance: high in principle - quantifying the ambient-to-personal gap for children is precisely what portable low-cost monitors are deployed for, and the full text should be checked."
+  },
+  {
+   "pmid": "42892432",
+   "doi": "10.1016/j.envres.2026.125931",
+   "journal": "Environ Res",
+   "short": "Matuskova wood stove phase-resolved particle-bound PAHs 2026",
+   "title": "Characterisation of particle-bound PAHs emitted from a residential wood-burning stove and their dependence on combustion phases",
+   "sub": "Occupational & indoor",
+   "design": "Chamber emission characterisation",
+   "pm": "Cascade-impactor size-resolved PM and particle-bound PAHs (GC-MS/MS)",
+   "geo": "Central Europe (laboratory stove; beech, black locust, spruce)",
+   "endpoint": "Not applicable (emission characterisation)",
+   "tier": "B",
+   "n": "Three temperate wood species burned in a standard residential stove, aerosol split by cascade impactor across five combustion phases. PM peaked at ignition and flaming; PAHs followed for spruce and black locust, while beech peaked later (interval 4), coinciding with low flue-gas oxygen. Size distributions were monomodal at ~0.1 um aerodynamic diameter with PM1 70-89% of mass. Hardwoods emitted mainly LMW PAHs; spruce gave an initial HMW burst, shifting to LMW during burnout, when PAHs moved towards coarser particles. Limitation: one stove under nominal operation; real-world overloading and damp fuel dominate emissions. Relevance: moderate - an ~0.1 um mode sits below optical LCS detection efficiency, so wood-smoke PM is under-counted by size-blind calibrations."
+  },
+  {
+   "pmid": "42891999",
+   "doi": "10.1080/02770903.2026.2751845",
+   "journal": "J Asthma",
+   "short": "Gonehgar sand dust storms asthma Asia systematic review 2026",
+   "title": "Geographic Patterns of Asthma Morbidity: A Systematic Review of Sand and Dust Storm (SDS) Impacts in Asia",
+   "sub": "Respiratory & allergic",
+   "design": "Systematic review",
+   "pm": "Dust-event PM10 and PM2.5 (study-specific definitions)",
+   "geo": "Asia (Japan, Korea, Middle East)",
+   "endpoint": "Asthma exacerbation, admissions, emergency visits",
+   "tier": "B",
+   "n": "Thirty-three studies to May 2023 (13 cohort, 12 panel), mostly Japan, Korea and the Middle East. Nearly all reported positive associations between SDS days and asthma exacerbations, admissions or ED visits, peaking at 1-5 day lags, with larger effects in children and older adults and stronger effects in East Asia than the Middle East. No pooled estimate. Limitation: the search is 29 months old, English-only, and SDS exposure is defined inconsistently (event days vs PM10 thresholds), which precludes meta-analysis and may explain the East-West contrast. Relevance: moderate - coarse-mode dust is where optical LCS under-read most, so SDS health evidence built on dust-flagged sensor data would need a coarse-fraction correction."
+  },
+  {
+   "pmid": "42893525",
+   "doi": "10.1002/alr.70204",
+   "journal": "Int Forum Allergy Rhinol",
+   "short": "Tullis cystic fibrosis CRS olfaction pollutants 2026",
+   "title": "Environmental Exposures, Chronic Sinusitis, and Olfaction in People With Cystic Fibrosis",
+   "sub": "Respiratory & allergic",
+   "design": "Cross-sectional (cohort baseline)",
+   "pm": "3-y mean PM2.5, PM10 (and gases) from nearest EPA monitor to residential ZIP",
+   "geo": "United States (multicentre)",
+   "endpoint": "SNOT-22, endoscopy and CT scores, QOD-NS, smell identification",
+   "tier": "C",
+   "n": "80 adults with CF and chronic rhinosinusitis enrolled 2019-2023 at US rhinology centres. Ozone correlated with worse SNOT-22 (Rs 0.34, p=0.002), QOD-NS (Rs 0.30) and smell identification (Rs -0.30); PM2.5, PM10, CO, SO2 and NO2 showed no significant associations. Limitation: unadjusted Spearman correlations across six pollutants and several outcomes in 80 people, with exposure from the nearest regulatory monitor to a ZIP centroid - the PM null is uninformative rather than reassuring. Relevance: moderate - a small clinical cohort is the case where residence-level sensor data would most reduce exposure misclassification."
+  },
+  {
+   "pmid": "42892546",
+   "doi": "10.1016/j.neuro.2026.103589",
+   "journal": "Neurotoxicology",
+   "short": "Baird woodsmoke CD4 T cell brain influx saturated fat diet mice 2026",
+   "title": "CD4+ T Cell Activation and Peripheral Immune Cell Influx into the Brain Following Wildfire Smoke Exposure is Modulated by a Saturated Fat Diet",
+   "sub": "Neuro / mental health",
+   "design": "Animal exposure study",
+   "pm": "Woodsmoke at 0.5 mg/m3, 4 h every other day for 14 days",
+   "geo": "Not applicable (laboratory)",
+   "endpoint": "Brain immune-cell infiltration, adhesion molecules, metabolome",
+   "tier": "C",
+   "n": "Female C57BL/6 mice exposed to filtered air or woodsmoke, with or without a coconut-oil saturated-fat diet, sampled 1, 14 and 28 days after exposure by high-dimensional flow cytometry. Woodsmoke produced a time- and diet-dependent influx of activated CD4 T cells (CD44+, RORgamma-, FOXP3-) into brain, and LFA-1, VCAM-1 and ICAM-1 peaked one day after the last exposure; taurine and glycerolipid metabolism were upregulated. Limitation: 500 ug/m3 is an extreme-episode dose, females only, and effect sizes are not in the abstract. Relevance: low for sensing - a mechanistic anchor for smoke-neuroinflammation epidemiology."
+  },
+  {
+   "pmid": "42891814",
+   "doi": "10.1007/s00420-026-02247-x",
+   "journal": "Int Arch Occup Environ Health",
+   "short": "Pigakis cement dust small airway dysfunction CPET 2026",
+   "title": "Early respiratory effects of long-term cement dust exposure: association with exercise capacity in asymptomatic workers",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional (occupational)",
+   "pm": "Cement dust (>=10 y occupational tenure; no measured concentrations in abstract)",
+   "geo": "Not stated in abstract",
+   "endpoint": "Small airway dysfunction (IOS), VO2 peak",
+   "tier": "C",
+   "n": "500 non-smoking, non-atopic cement workers aged >=35 with >=10 years' exposure underwent spirometry, lung volumes, impulse oscillometry and CPET. A subset had small airway dysfunction despite normal spirometry; they had 19.4% lower VO2 peak (29 vs 36 mL/kg/min) and lower breathing reserve (34% vs 43%). Limitation: no unexposed comparator and no measured dust concentrations, so this shows SAD is associated with exercise limitation, not that cement dust causes either; the SAD prevalence is not given. Relevance: low-moderate - occupational dust surveillance still relies on tenure, which personal PM monitors could replace."
+  },
+  {
+   "pmid": "42893239",
+   "doi": "10.1016/j.onehlt.2026.101600",
+   "journal": "One Health",
+   "short": "Bottini antibiotic resistance Ecoli Salmonella PM2.5 ecological 2026",
+   "title": "Environmental, socioeconomic, and livestock-related factors associated with antibiotic resistance in Escherichia coli, Shigella spp., and Salmonella enterica",
+   "sub": "Other clinical endpoints",
+   "design": "Ecological",
+   "pm": "Country-level PM2.5 exposure",
+   "geo": "Global / multi-region (102 countries)",
+   "endpoint": "Genotypic antibiotic resistance in bacterial isolates",
+   "tier": "C",
+   "n": "397,103 isolates from human, animal and environmental sources (NCBI Pathogen Detection, 2003-2018) in mixed-effects negative binomial models. For E. coli/Shigella, PM2.5 was associated with beta-lactam resistance (PRR 1.39, 1.11-1.74), alongside low income and population density; for S. enterica, PM2.5 and tetracycline resistance PRR 1.65 (0.98-2.76), with warm climate and poultry density. Limitation: national PM2.5 is a marker of industrialisation, sanitation and antibiotic use, and sequencing effort varies by country; the association is not interpretable as a PM effect. Relevance: low - included because PM2.5 is reported with an estimate; the airborne-resistome hypothesis would need measured bioaerosol, not country means."
+  },
+  {
+   "pmid": "42892957",
+   "doi": "10.1016/j.ajpc.2026.101704",
+   "journal": "Am J Prev Cardiol",
+   "short": "Beveridge HeatRisk AQI cardiovascular action algorithm 2026",
+   "title": "HeatRisk and air quality risk recommendations: A narrative review and action algorithm for the care of people at risk for and living with cardiovascular disease",
+   "sub": "Burden, policy & mitigation",
+   "design": "Narrative review",
+   "pm": "Air Quality Index (PM2.5-driven) alongside NWS HeatRisk",
+   "geo": "United States",
+   "endpoint": "Cardiovascular morbidity and mortality (clinical guidance)",
+   "tier": "C",
+   "n": "PubMed-based narrative review (2000-2025) prioritising systematic reviews, mapped onto CDC, EPA and NWS guidance to build a clinical counselling algorithm for heat and poor air quality in people with or at risk of CVD. It summarises excess risk for heart failure, ischaemic heart disease, stroke and MI, and high-risk groups (pregnancy, older age, certain medications, occupational exposure), and proposes action at a risk score >=3. Limitation: non-systematic and the scoring algorithm is not validated against outcomes. Relevance: moderate - AQI-triggered clinical advice is only as good as the local PM2.5 behind it; sensor-informed AQI (AirNow Fire and Smoke map) is the practical feed."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "eGFR category 2->3\nsulfate",
+   "exposure": "2-y sulfate (per IQR)",
+   "est": 1.273,
+   "lo": 1.257,
+   "hi": 1.289,
+   "metric": "HR",
+   "src": "Cohort n=307,639"
+  },
+  {
+   "label": "eGFR category 2->3\nnitrate",
+   "exposure": "2-y nitrate (per IQR)",
+   "est": 1.304,
+   "lo": 1.29,
+   "hi": 1.317,
+   "metric": "HR",
+   "src": "Cohort n=307,639"
+  },
+  {
+   "label": "eGFR category 2->3\nammonium",
+   "exposure": "2-y ammonium (per IQR)",
+   "est": 1.28,
+   "lo": 1.267,
+   "hi": 1.294,
+   "metric": "HR",
+   "src": "Cohort n=307,639"
+  },
+  {
+   "label": "E. coli/Shigella\nbeta-lactam resistance",
+   "exposure": "Country PM2.5",
+   "est": 1.39,
+   "lo": 1.11,
+   "hi": 1.74,
+   "metric": "RR",
+   "src": "397,103 isolates, 102 countries"
+  },
+  {
+   "label": "S. enterica\ntetracycline resistance",
+   "exposure": "Country PM2.5",
+   "est": 1.65,
+   "lo": 0.98,
+   "hi": 2.76,
+   "metric": "RR",
+   "src": "397,103 isolates, 102 countries"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nschool-semester\nmicroenvironments"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno age-specific\nrecord"
+  },
+  {
+   "n": 3,
+   "note": "working age:\nHEPA trial; cement\nworkers; CF adults"
+  },
+  {
+   "n": 0,
+   "note": "older adults:\nno age-specific\nrecord"
+  }
+ ]
+}

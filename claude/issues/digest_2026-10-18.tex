@@ -1,0 +1,271 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{18 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-18\;\;\textcolor{Amber}{\textbar}\;\;Entry window 18 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;13 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{13}{RECORDS IN SCOPE\\(15 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Sham-controlled HEPA filtration moves IL-1$\beta$ only in people with excess
+visceral fat --- a 22.8\,\% reduction in 12 of 116 participants, and nothing on average.}\\[1.4mm]
+\footnotesize
+Pragmatic randomised crossover: 30 days HEPA vs 30 days sham with a 30-day washout, 116 adults (mean age 41.5),
+ultra-sensitive cytokine assays. No overall difference in IL-1$\beta$; visceral adiposity (ABSI $z \geq +0.229$)
+moderated the effect (interaction $p$=0.001), with IL-1$\beta$ \textbf{0.138 vs 0.179}\,pg\,mL$^{-1}$ under HEPA vs sham
+in the excess-VAT group. IL-6 followed the same direction without significance; hsCRP barely moved; BMI was a weaker
+moderator than ABSI.
+\textbf{Where it is weak:} $n$=12 in the responsive stratum, chosen among several adiposity indices, and the indoor
+PM$_{2.5}$ reduction actually achieved is not reported in the abstract.
+\textbf{Why it matters here:} in filtration trials the dose is the measured indoor PM difference; calibrated
+low-cost monitors in both arms are what turn a null-on-average trial into an exposure--response analysis.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Secondary inorganic PM$_{2.5}$ and the cardiorenal trajectory.} Cohort $n$=307,639: per-IQR HRs for
+eGFR category 2$\to$3 of \textbf{1.27} (sulfate), \textbf{1.30} (nitrate), \textbf{1.28} (ammonium), all with CIs
+$\pm$0.02 --- precision that points to spatial confounding as much as toxicity.
+
+\item \textbf{An equatorial Plantower co-location.} Jambi, Indonesia, two months against a BAM-1020: PMS7003 R$^2$
+0.59, MBE \textbf{+10.5}\,$\mu$g\,m$^{-3}$, RMSE 18.0; PMS5003 R$^2$ 0.60, MBE +11.8 (Consensus sweep).
+
+\item \textbf{Wood smoke sits below optical detection.} Phase-resolved stove emissions peak at \textbf{$\sim$0.1\,$\mu$m}
+with PM$_1$ 70--89\,\% of mass; spruce gives an HMW-PAH burst at ignition.
+
+\item \textbf{UFP from mass inventories.} A mass- and number-conserving conversion reproduces total particle number
+over Greater Paris at background and traffic sites; non-exhaust traffic is about a third of traffic PN.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 17 October issue (built on the same run) closed with \texttt{last\_entry\_date} at 17 October. This
+issue collects \textbf{18 October in full}, continuous with it. Built on the 19 October run at 18:5x CDT; 19 October
+is not opened (before 22:00) and is due on the next run at or after 22:00 CDT.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 13 in-scope records across eight bands, none with more than two
+records. Cardiovascular holds both tier-A records (HEPA trial, cardiorenal components); reproductive and
+mechanism bands are empty.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: one RCT, one cohort, two reviews, two cross-sectional, one sensor
+co-location; metadata-only 1 (8\,\%). Right --- endpoints: cytokines, kidney-function transitions, asthma morbidity,
+sinonasal scores, brain immune influx, small airway function, antibiotic resistance.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: size-resolved records (Paris PN, stove impactor) join PM$_{2.5}$
+mass. Right --- geography: global, not-applicable and not-stated records (6) lead; Europe and North America 2 each;
+Indonesia, China and the Asian SDS review one each.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: childhood only through the metadata-only school-microenvironment record;
+working age carries the HEPA adults, cement workers and CF adults. Preconception, adolescent and older-adult
+windows are empty.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. No cell exceeds one record: the issue is broad and
+shallow.}\end{minipage}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale: three per-IQR HRs for the eGFR category 2$\to$3 transition from one cohort (sulfate, nitrate,
+ammonium; collinear, single-component models), and two prevalence-rate ratios for genotypic antibiotic resistance
+against country-level PM$_{2.5}$ from an ecological analysis of 397,103 isolates. The ecological RRs carry no
+causal weight.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Baird woodsmoke CD4 T cell brain influx saturated fat diet mice 2026}
+{CD4+ T Cell Activation and Peripheral Immune Cell Influx into the Brain Following Wildfire Smoke Exposure is Modulated by a Saturated Fat Diet}
+{Neurotoxicology}
+{Female C57BL/6 mice exposed to filtered air or woodsmoke, with or without a coconut-oil saturated-fat diet, sampled 1, 14 and 28 days after exposure by high-dimensional flow cytometry. Woodsmoke produced a time- and diet-dependent influx of activated CD4 T cells (CD44+, RORgamma-, FOXP3-) into brain, and LFA-1, VCAM-1 and ICAM-1 peaked one day after the last exposure; taurine and glycerolipid metabolism were upregulated. Limitation: 500 $\mu$g\,m$^{-3}$ is an extreme-episode dose, females only, and effect sizes are not in the abstract. Relevance: low for sensing - a mechanistic anchor for smoke-neuroinflammation epidemiology.}
+{10.1016/j.neuro.2026.103589}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{Brugge HEPA sham crossover cytokines visceral adiposity 2026}
+{Pro-inflammatory cytokines moderated by visceral adiposity from a pragmatic randomized crossover trial of portable HEPA air purifiers}
+{Am J Prev Cardiol}
+{116 adults (mean age 41.5) randomised to 30 days HEPA then sham, or the reverse, with a 30-day washout; ultra-sensitive cytokine assays, linear mixed models. No overall IL-1beta difference. Visceral adiposity (ABSI z >=+0.229) moderated the effect (interaction p=0.001): in the 12 participants with excess VAT, HEPA cut mean IL-1beta by 22.8\% (0.138 vs 0.179 pg/mL, p<0.001); IL-6 showed a similar non-significant pattern and hsCRP little change; BMI moderated less well than ABSI. Limitation: the positive finding rests on 12 people in a post-hoc-looking subgroup chosen among several adiposity metrics, and achieved PM reduction is not reported in the abstract. Relevance: high - sham-controlled filtration with measured indoor PM is where calibrated low-cost monitors define the delivered dose.}
+{10.1016/j.ajpc.2026.101775}
+
+\paperentry{Rao PM$_{2.5}$ components cardiorenal multistate trajectory 2026}
+{Associations of PM$_{2.5}$ components with dynamic and accelerated progression of different kidney function states and subsequent cardiovascular events}
+{Int J Cardiol}
+{307,639 participants, 1,058,210 person-years, 23,948 CVD cases and 7,763 CVD deaths; multistate and accelerated failure time models over eGFR categories 1-4. Per IQR, transition from category 2 to 3 had HR 1.273 (1.257-1.289) for sulfate, 1.304 (1.290-1.317) for nitrate and 1.280 (1.267-1.294) for ammonium, larger than for OM or BC. AFT: predicted 2-to-3 transition time 1,727 days at 4.2 vs 869 days at 7.0 $\mu$g\,m$^{-3}$ nitrate. Limitation: HRs near 1.3 per IQR with CIs this narrow, for highly collinear secondary inorganic components, signal spatial confounding by region more than component-specific toxicity; single-pollutant component models cannot separate them. Relevance: moderate - component attribution needs speciation that optical LCS lack.}
+{10.1016/j.ijcard.2026.134999}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{Gonehgar sand dust storms asthma Asia systematic review 2026}
+{Geographic Patterns of Asthma Morbidity: A Systematic Review of Sand and Dust Storm (SDS) Impacts in Asia}
+{J Asthma}
+{Thirty-three studies to May 2023 (13 cohort, 12 panel), mostly Japan, Korea and the Middle East. Nearly all reported positive associations between SDS days and asthma exacerbations, admissions or ED visits, peaking at 1-5 day lags, with larger effects in children and older adults and stronger effects in East Asia than the Middle East. No pooled estimate. Limitation: the search is 29 months old, English-only, and SDS exposure is defined inconsistently (event days vs PM$_{10}$ thresholds), which precludes meta-analysis and may explain the East-West contrast. Relevance: moderate - coarse-mode dust is where optical LCS under-read most, so SDS health evidence built on dust-flagged sensor data would need a coarse-fraction correction.}
+{10.1080/02770903.2026.2751845}
+
+\paperentry{Tullis cystic fibrosis CRS olfaction pollutants 2026}
+{Environmental Exposures, Chronic Sinusitis, and Olfaction in People With Cystic Fibrosis}
+{Int Forum Allergy Rhinol}
+{80 adults with CF and chronic rhinosinusitis enrolled 2019-2023 at US rhinology centres. Ozone correlated with worse SNOT-22 (Rs 0.34, p=0.002), QOD-NS (Rs 0.30) and smell identification (Rs -0.30); PM$_{2.5}$, PM$_{10}$, CO, SO$_2$ and NO$_2$ showed no significant associations. Limitation: unadjusted Spearman correlations across six pollutants and several outcomes in 80 people, with exposure from the nearest regulatory monitor to a ZIP centroid - the PM null is uninformative rather than reassuring. Relevance: moderate - a small clinical cohort is the case where residence-level sensor data would most reduce exposure misclassification.}
+{10.1002/alr.70204}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 2 records}{Clay}
+
+\paperentry{Park Paris UFP number emissions mass-number conserving 2026}
+{Reconciling mass and number emissions through particle size: Implications for urban ultrafine particle modelling}
+{J Hazard Mater}
+{Summer 2021 simulations from regional background to street scale, with a mass- and number-conserving algorithm converting sectoral PM mass emissions to sectional PN. Scenarios: COPERT vs on-board PN factors for exhaust, non-exhaust traffic, and non-combustion industrial processes including construction. The reference run, using mass emissions plus representative sector diameters, reproduced total PN at background and traffic stations; non-exhaust contributed about a third of traffic PN; the size distribution near 10 nm remained poorly reproduced. Limitation: one summer, and agreement on total PN can hide compensating errors across modes; sub-10 nm emission factors are missing. Relevance: moderate - PN, not PM$_{2.5}$ mass, is the UFP exposure metric, and low-cost condensation counters are the only route to network density.}
+{10.1016/j.jhazmat.2026.143879}
+
+\paperentry{Chen ambient PM$_{2.5}$ representativeness children microenvironments 2026}
+{Evaluating the representativeness of ambient PM$_{2.5}$ for children's exposure and source characteristics across microenvironments during school semesters}
+{Build Environ}
+{\textsc{metadata only.} No abstract at harvest. The title indicates a comparison of ambient PM$_{2.5}$ with children's exposure and source profiles across school-semester microenvironments. Recorded for coverage; no estimate inferred. Relevance: high in principle - quantifying the ambient-to-personal gap for children is precisely what portable low-cost monitors are deployed for, and the full text should be checked.}
+{10.1016/j.buildenv.2026.115452}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Risti Jambi PMS5003 PMS7003 vs BAM-1020 2026}
+{Evaluation of Low-Cost PM$_{2.5}$ Sensor Accuracy in Comparison with Government Reference Instrument}
+{Lingkar: J Environ Eng}
+{Consensus sweep. IoT nodes with two Plantower sensors co-located with the BMKG BAM-1020 at the Sultan Thaha Jambi climatology station, December 2025-January 2026, followed by linear-regression correction. Both tracked the reference moderately (R2 0.60 PMS5003, 0.59 PMS7003) and overestimated: PMS7003 MBE 10.46, MAE 12.53, RMSE 18.02 $\mu$g\,m$^{-3}$; PMS5003 MBE 11.84, MAE 13.60, RMSE 19.60 $\mu$g\,m$^{-3}$. The authors attribute the positive bias to high humidity. Limitation: two wet-season months at one site, no RH-stratified or kappa-Kohler correction and no held-out validation of the regression, so the correction will not transfer to the dry or haze seasons. Relevance: high - an equatorial reference co-location adds to the regional-calibration evidence; the 10 $\mu$g\,m$^{-3}$ bias matches humid-tropics PurpleAir behaviour.}
+{10.22373/ljee.v7i1.10530}
+
+\paperentry{Huang foliar particulate UV-Vis-NIR calibration transfer 2026}
+{Nondestructive UV-Vis-NIR assessment of foliar particulate retention in urban vegetation: cross-species transfer and calibration correction}
+{Environ Monit Assess}
+{Reflectance models built on 180 Ligustrum leaves and transferred to 45 Photinia leaves from park, street and industrial zones. Zone classification reached 91.1\% after excluding endpoint and water bands. Direct mass prediction on the target species failed (R2 0.265, positive bias); a linear output correction using 15 target reference leaves (five per zone), tested on the other 30 over 50 splits, gave R2 0.797 +/- 0.042. Limitation: target-based scheme selection and the correction set share zones with the test set, and deposit properties are unmeasured, so this is reference-assisted local calibration, not transfer. Relevance: moderate - the same slope-and-offset recalibration logic, and the same failure of naive transfer, governs moving LCS calibrations between sites.}
+{10.1007/s10661-026-16062-x}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Matuskova wood stove phase-resolved particle-bound PAHs 2026}
+{Characterisation of particle-bound PAHs emitted from a residential wood-burning stove and their dependence on combustion phases}
+{Environ Res}
+{Three temperate wood species burned in a standard residential stove, aerosol split by cascade impactor across five combustion phases. PM peaked at ignition and flaming; PAHs followed for spruce and black locust, while beech peaked later (interval 4), coinciding with low flue-gas oxygen. Size distributions were monomodal at \textasciitilde{}0.1 um aerodynamic diameter with PM$_{1}$ 70-89\% of mass. Hardwoods emitted mainly LMW PAHs; spruce gave an initial HMW burst, shifting to LMW during burnout, when PAHs moved towards coarser particles. Limitation: one stove under nominal operation; real-world overloading and damp fuel dominate emissions. Relevance: moderate - an \textasciitilde{}0.1 um mode sits below optical LCS detection efficiency, so wood-smoke PM is under-counted by size-blind calibrations.}
+{10.1016/j.envres.2026.125931}
+
+\paperentry{Pigakis cement dust small airway dysfunction CPET 2026}
+{Early respiratory effects of long-term cement dust exposure: association with exercise capacity in asymptomatic workers}
+{Int Arch Occup Environ Health}
+{500 non-smoking, non-atopic cement workers aged >=35 with >=10 years' exposure underwent spirometry, lung volumes, impulse oscillometry and CPET. A subset had small airway dysfunction despite normal spirometry; they had 19.4\% lower VO2 peak (29 vs 36 mL/kg/min) and lower breathing reserve (34\% vs 43\%). Limitation: no unexposed comparator and no measured dust concentrations, so this shows SAD is associated with exercise limitation, not that cement dust causes either; the SAD prevalence is not given. Relevance: low-moderate - occupational dust surveillance still relies on tenure, which personal PM monitors could replace.}
+{10.1007/s00420-026-02247-x}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Beveridge HeatRisk AQI cardiovascular action algorithm 2026}
+{HeatRisk and air quality risk recommendations: A narrative review and action algorithm for the care of people at risk for and living with cardiovascular disease}
+{Am J Prev Cardiol}
+{PubMed-based narrative review (2000-2025) prioritising systematic reviews, mapped onto CDC, EPA and NWS guidance to build a clinical counselling algorithm for heat and poor air quality in people with or at risk of CVD. It summarises excess risk for heart failure, ischaemic heart disease, stroke and MI, and high-risk groups (pregnancy, older age, certain medications, occupational exposure), and proposes action at a risk score >=3. Limitation: non-systematic and the scoring algorithm is not validated against outcomes. Relevance: moderate - AQI-triggered clinical advice is only as good as the local PM$_{2.5}$ behind it; sensor-informed AQI (AirNow Fire and Smoke map) is the practical feed.}
+{10.1016/j.ajpc.2026.101704}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Bottini antibiotic resistance Ecoli Salmonella PM$_{2.5}$ ecological 2026}
+{Environmental, socioeconomic, and livestock-related factors associated with antibiotic resistance in Escherichia coli, Shigella spp., and Salmonella enterica}
+{One Health}
+{397,103 isolates from human, animal and environmental sources (NCBI Pathogen Detection, 2003-2018) in mixed-effects negative binomial models. For E. coli/Shigella, PM$_{2.5}$ was associated with beta-lactam resistance (PRR 1.39, 1.11-1.74), alongside low income and population density; for S. enterica, PM$_{2.5}$ and tetracycline resistance PRR 1.65 (0.98-2.76), with warm climate and poultry density. Limitation: national PM$_{2.5}$ is a marker of industrialisation, sanitation and antibiotic use, and sequencing effort varies by country; the association is not interpretable as a PM effect. Relevance: low - included because PM$_{2.5}$ is reported with an estimate; the airborne-resistome hypothesis would need measured bioaerosol, not country means.}
+{10.1016/j.onehlt.2026.101600}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{18 October 2026}, single day (Sunday). Harvester legs: \textbf{PubMed} health
+\textbf{10}, sensing \textbf{1}; \textbf{Europe PMC} \textbf{0} (weekend index lag); \textbf{Crossref by ISSN}
+\textbf{10}; \textbf{arXiv} no entry dated 18 October; \textbf{OpenAlex} HTTP 429. 20 unique, 0 already carried.
+\textbf{PubMed connector} (EDAT 17--18 Oct) 7 appended --- \textbf{27} candidates screened, \textbf{12 admitted},
+\textbf{15 rejected} (one an exact duplicate of a 17 October admission) with logged reasons. \textbf{Consensus}
+calibration sweep: 10 hits, \textbf{1 new} (Jambi co-location, DOI by Crossref title match) added here, for
+\textbf{13} records. \textbf{DOI gate} 0 fail / 0 warn. \textbf{Trial watch}: 0 registrations updated 16--19
+October. Abstracts recovered via PubMed and Europe PMC for 12 of 13; \textbf{1 record carried on metadata alone}.
+\textbf{Scholar Gateway} not called. Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

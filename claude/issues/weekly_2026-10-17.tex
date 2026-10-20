@@ -1,0 +1,289 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{17 October 2026}
+\newcommand{\PERIODSTART}{11 October 2026}
+\newcommand{\PERIODEND}{17 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Teal] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ WEEKLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Week in Review\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Week ending \DIGESTDATE}\;\;\textcolor{Teal}{\textbar}\;\;\mbox{\PERIODSTART{} to \PERIODEND}\;\;
+ \textcolor{Teal}{\textbar}\;\;\mbox{123 records pooled from 7 daily issues}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{123}{RECORDS POOLED\\(123 UNIQUE DOIs)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{39\%}{MEASUREMENT SIDE\\(48 RECORDS)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{SUBTOPICS\\ACTIVE}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{28}{POOLED EFFECT\\ESTIMATES (28 WITH A CI)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{26}{ABSTRACT-FREE\\(21\% OF WEEK)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- week in one box
+\section*{\sffamily\bfseries\color{Deep}The week in one paragraph}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Volume recovered 41\,\% to 123 records, the abstract gap narrowed to
+21\,\%, and the health side came back --- but the week's most consequential records are about the
+reference, not the sensor: the gravimetric filter, the lidar retrieval and the drone platform each carry a
+bias that propagates into every calibration built on them.}\\[1.4mm]
+\footnotesize
+\textbf{Scale.} \textbf{123 records} over seven issues on daily totals of \textbf{1}, 24, 16, 24,
+\textbf{25}, 18 and 15. The single-record Sunday (11 October) is a weekend-deposit trough, not a harvest
+failure. Against recent rollups: 123 after 87, 125, 162, 148, 126 and 150. \textbf{All ten subtopics are
+populated} for the fourth week running.
+
+\textbf{The measurement side held at 39\,\%.} \textit{Exposure assessment \& modelling} 23
+$\rightarrow$ \textbf{26} and \textit{Sensing} 15 $\rightarrow$ \textbf{22} both grew, but the health
+side grew faster, so the share reads 40, 44, 33, 42, 44, \textbf{39\,\%} across six weeks.
+
+\textbf{The health side recovered from last week's collapse.} \textit{Cardiovascular \& metabolic}
+1 $\rightarrow$ \textbf{7}, \textit{Reproductive \& developmental} 1 $\rightarrow$ \textbf{6},
+\textit{Respiratory \& allergic} 3 $\rightarrow$ \textbf{8}. Part of this is the three held 9 October
+records (CHD proteomics, green-space ageing, alveolar organoids) entering the 12 October issue.
+
+\textbf{Estimates: 28, every one with an interval.} One per 4.4 records (series 2.7, 3.1, 5.2, 4.2, 5.4,
+\textbf{4.4}); \textbf{28 of 28 with a CI} for the fourth complete week. 23 sit on ratio scales and 5 on
+difference scales (three PAFs, two life-expectancy coefficients).
+
+\textbf{Abstract gap: 26 of 123 (21\,\%)}, down from the 31\,\% series high, mainly because the
+Crossref title-match and Europe PMC core-lookup back-fill introduced on 17 October now recovers same-day
+DOIs and abstracts that previously shipped as metadata-only.
+
+\textbf{Tier mix shifted down}: \textbf{15 A, 43 B, 65 C} --- tier A at 12\,\%, from last week's series
+high of 21\,\%. More volume, more marginal records; the A-list is shorter than the week deserves.
+\end{keybox}
+
+\clearpage
+
+% -------------------------------------------------------------- trend
+\section*{\sffamily\bfseries\color{Deep}Subtopic trend and inflection}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}, seven issues. Daily
+totals 1, 24, 16, 24, 25, 18 and 15. The 11 October issue was built on the 12 October run, 12--14 October
+on the 16 October backfill, 15 and 16 October on their next-day runs, and 17 October together with this
+rollup on the 19 October run --- the Saturday 23:00 run did not fire.}
+
+\footnotesize
+\textbf{Expanding.} \textit{Sensing} 15 $\rightarrow$ \textbf{22} is the largest absolute gain, and its
+content changed: retrieval and reference-method work (lunar AERONET AOD, aerosol-type-gated lidar, UAV
+rotor-wash bias, gravimetric filter water) displaced the routine LCS calibration papers that have
+dominated the band since August. \textit{Mechanistic toxicology} 10 $\rightarrow$ \textbf{15} and
+\textit{Burden, policy \& mitigation} 14 $\rightarrow$ \textbf{18} also grew.
+
+\vspace{1.2mm}
+\textbf{Contracting.} \textit{Neuro / mental health} 6 $\rightarrow$ \textbf{4}, though two of the four
+are tier A (smoke-carbonaceous ADRD in Medicare; prenatal UFP and postpartum depression in Shanghai).
+\textit{Occupational \& indoor} flat at 10.
+
+\vspace{1.2mm}
+\textbf{The inflection worth naming.} \textbf{Wildfire smoke is separating from ambient PM$_{2.5}$ as an
+exposure in its own right --- with its own composition, its own lag structure and its own endpoints.}
+In one week: incident ADRD in 39.7 million Medicare beneficiaries at HR \textbf{1.029} (1.024--1.035) per
+1\,$\mu$g\,m$^{-3}$ smoke PM$_{2.5}$ but \textbf{1.090} (1.077--1.103) per 1\,$\mu$g\,m$^{-3}$ of smoke
+EC+OC; head-and-neck cancer incidence RR \textbf{1.41} (1.24--1.60) for any annual smoke exposure over
+0--10 years in SEER counties; and a deconvolved US mortality response that peaks \textbf{three years}
+after a smoke pulse and sums to 1.7 million deaths 2011--2023. Carbonaceous fraction, multi-year lags and
+non-respiratory endpoints are three things a mass-only, daily-resolved surveillance record cannot carry.
+The sensing side has a matching weakness: smoke PM is concentrated near 0.1--0.3\,$\mu$m, where optical
+LCS under-count, and the US smoke corrections in use are mass-only. \textbf{The test for next week}: a
+smoke-specific estimate outside North America, or a validated carbonaceous channel (multi-wavelength
+absorption) in a network setting.
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Study architecture over the pooled week. \textit{Metadata only} 26 and \textit{Measurement
+campaign} 22 lead, then \textit{Modelling / inventory} 20 and \textit{Review / synthesis} 13. Primary
+observational epidemiology (cohort 9, acute 5, cross-sectional 9, ecological 5) totals \textbf{28}, up
+from 16. \textbf{Two interventional records entered} --- the LPG cooking RCT (quality of life) and the
+HEPA crossover trial carried in the 18 October issue falls in next week's pool.}
+
+\clearpage
+% -------------------------------------------------------------- pooled analytics
+\section*{\sffamily\bfseries\color{Deep}Pooled analytics}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Pooled subtopic distribution, all ten bands populated: \textit{Exposure} 26 and \textit{Sensing} 22
+put the measurement side at \textbf{48 of 123 (39\,\%)}. On the health side \textit{Burden} 18 and
+\textit{Mechanistic toxicology} 15 lead, then \textit{Occupational \& indoor} 10 and \textit{Respiratory}
+8; \textit{Neuro} is the smallest band at 4.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{\FIGDIR/f2b_endpoint.png}
+\figcap{Health endpoint over the pooled week, canonicalised. ``No health endpoint'' pools the
+metadata-only records with the instrument, retrieval, emissions and modelling work. Among human outcomes
+mortality, admissions and neurological outcomes lead; cancer appears twice (head-and-neck, nasopharyngeal
+survival), both in wildfire- or biomass-burning settings.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric. \textbf{PM$_{2.5}$ alone 57 of 123}, unspeciated PM or emissions 30,
+joint PM$_{2.5}$ + PM$_{10}$ 17; optical properties 6 (lidar, lunar AOD, MISR), PM$_{10}$ alone 5,
+size-resolved number 3, composition 2, bioaerosol 2, respirable dust 1. Number and composition records
+fell from 10 to 5 --- last week's ``mass is the wrong metric'' signal did not persist. Right --- geography.
+\textit{Global / multi-region} 40 is inflated by reviews, laboratory work and 14 records whose country is
+not recoverable; \textbf{China 23}, North America 17, Europe 13, South Asia 6, and five each for East Asia
+(ex-China), MENA and Southeast Asia.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows across the pooled week; counts non-exclusive. \textbf{Working age 9},
+older adults 7, \textbf{preconception / in utero 6} (from 1: Guangdong CHD constituents, Shanghai prenatal
+UFP, Wuhan cohort among them), infancy \& early childhood 6, \textbf{adolescence 4} --- the first week
+since August in which no window is in single figures below 4.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{The \textbf{23} ratio-scale estimates, every one with a 95\,\% CI. \textbf{Not mutually
+comparable and not meta-analysed}: increments include per 1, per 10\,$\mu$g\,m$^{-3}$, per IQR, per
+smoke-exceedance day, binary fuel contrasts and a mixture index, on HR, OR, RR and IRR scales, so no
+$I^2$ is reported. Readable points: the largest is head-and-neck cancer RR \textbf{1.41} (1.24--1.60);
+the most precise are the six-country admissions RRs from 346.5 million admissions (all-cause
+\textbf{1.080}, 1.074--1.086, per 10\,$\mu$g\,m$^{-3}$). \textbf{Five intervals touch or cross unity}:
+Kinshasa respiratory admissions on sensor-based PM$_{2.5}$ (1.01, 1.00--1.03), West Florida stroke in
+Black patients (1.02, 0.96--1.08), the SES-adjusted fatty-liver OR (0.999), and both pooled cataract HRs.
+Nested families: three SEER head-and-neck RRs, two Medicare ADRD HRs, two Shanghai UFP ORs, two
+Uberl\^andia IRRs and two cataract HRs share cases within each family.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{The \textbf{5} difference-scale estimates. Three population-attributable fractions (19--21\,\%)
+for chronic respiratory disease from one Guangdong sample and one 1\,km satellite-ML product --- one
+estimate drawn three times --- and two life-expectancy coefficients from one 186-economy panel whose sign
+flips from \textbf{+0.41} to \textbf{$-$0.02}\,y per 10\,$\mu$g\,m$^{-3}$ once country trends are
+modelled.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ architecture, pooled. The densest cells remain \textit{Exposure} $\times$
+\textit{Metadata only} and \textit{Sensing} $\times$ \textit{Measurement campaign}. Burden is spread
+across modelling and ecological designs; mechanism is split between reviews and in vitro / animal
+work.}
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- venues + trials
+\section*{\sffamily\bfseries\color{Deep}Venues, trial watch, and what the pipeline did}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Venues.} \textit{Environ Pollut} leads at \textbf{11} (9\,\%), then \textit{Atmosphere} 7,
+\textit{Atmos Chem Phys} 6, \textit{Front Public Health} 5, and \textit{Environ Sci Technol},
+\textit{Atmos Environ} and \textit{Atmos Pollut Res} at 4. \textbf{Preprints supplied 10} (Research
+Square 4, medRxiv returning after a blank week with the smoke-mortality deconvolution).
+
+\vspace{1.5mm}
+\textbf{Recurring authors.} Surname frequency remains a naming artefact; \textbf{no repeat-group cluster is
+claimed}. The largest datasets of the week --- 346.5 million admissions across six countries, 39.7
+million Medicare beneficiaries, SEER 2016--2022 --- each supplied one record.
+
+\vspace{1.5mm}
+\textbf{Trial watch --- nothing new.} ClinicalTrials.gov was queried over \texttt{LastUpdatePostDate}
+12--14, 16--17 and 16--19 October: \textbf{0 hits} in every window. \texttt{trials.json} holds
+\textbf{17 trials} over \textbf{31 logged windows}. The only interventional evidence of the week came from
+the literature (LPG RCT, 17 October), not the registry.
+
+\vspace{1.5mm}
+\textbf{What the harvesting legs did.} \textbf{Crossref-by-ISSN} again the highest-yield leg (36--78/day).
+\textbf{Europe PMC} ranged 0--123 raw/day, with the AGRICOLA retro-index again inflating two days (57 and
+46 dropped); it returned 0 on the 14th. \textbf{PubMed connector} appended 3--5 records/day the harvester
+missed. \textbf{OpenAlex} HTTP 429 on every run --- dead, not degraded. \textbf{arXiv} answered and
+contributed nothing in-window. \textbf{Consensus} 10 hits, \textbf{0 new} through 17 October (one new
+record surfaced on the 19 October sweep and is filed in the 18 October issue). \textbf{Scholar Gateway}
+not retried this week after two weeks of \texttt{ACCESS\_DENIED}. The DOI gate caught one already-shipped
+record (the Washington DC 1\,km CMAQ study) on 16 October.
+
+\vspace{2mm}
+% -------------------------------------------------------------- gaps
+\section*{\sffamily\bfseries\color{Deep}Open gaps}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Reference-method error is under-propagated.} Gravimetric filter water adds +3 to +18\,\%
+to PM$_1$/PM$_{2.5}$; unconstrained lidar extinction-to-mass conversion is 38\,\% worse in RMSE than a
+type-gated one; UAV rotor wash biases airborne readings 3--15\,\%. No calibration paper in the corpus
+carries reference uncertainty into its reported sensor RMSE.
+
+\item \textbf{Wildfire smoke needs a composition channel.} The week's smoke estimates are strongest for the
+carbonaceous fraction; no network record measures it.
+
+\item \textbf{The abstract gap is smaller but structural}: 26 records, concentrated in Elsevier same-day
+deposits on the measurement side. Scholar Gateway still needs reconnecting at the user's end.
+
+\item \textbf{Tier C at 53\,\%} of the week. Higher volume brought more peripheral records (country
+panels, reviews, metadata-only); the threshold for admission is unchanged, but the rollup is noisier.
+
+\item \textbf{Held queue empty.} The three 9 October holds entered the 12 October issue; nothing is held
+at period close.
+
+\item \textbf{Pipeline defects carried forward}: no first-author affiliation field; the
+\texttt{Cancer}/\texttt{Oncologic} split in \texttt{ENDPOINT\_CANON}; Saturday 23:00 runs not firing
+(17 October built two days late); \texttt{.git} lock debris.
+\end{itemize}
+
+\clearpage
+
+% -------------------------------------------------------------- digest
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the week by subtopic}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Every record that appeared in a daily issue
+keeps that issue's critical summary verbatim; nothing here is re-written or re-assessed.
+Records surfaced without an abstract are shown as such. Ordered by subtopic, then by the
+date of the issue that first carried the record.\par}
+
+\input{digest_body}
+
+% -------------------------------------------------------------- register
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Period \textbf{11 -- 17 October 2026}, Sunday to Saturday, \textbf{seven daily issues},
+\textbf{123 records}, \textbf{123 unique DOIs}, no record without a DOI. This rollup is
+\textbf{aggregation only}: it re-reads \texttt{state/corpus/*.json}, \texttt{state/metrics.csv} and
+\texttt{state/trials.json} over the period and \textbf{queries no literature API}; every record was gated by
+\texttt{check\_dois.py} at daily-issue time. Tier mix \textbf{15 A, 43 B, 65 C}. The 17 October daily and
+this rollup were built on the \textbf{19 October run} (the Saturday 23:00 run did not fire); no record is
+held. Effect estimates are transcribed verbatim from the daily issues on heterogeneous contrasts and are
+\textbf{not} meta-analysed. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

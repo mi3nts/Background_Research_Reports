@@ -3079,3 +3079,12 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **DOI gate earned its keep again:** the Washington DC 1 km WRF-SMOKE-CMAQ record (EPMC, no DOI at harvest) had shipped 14 Oct; `seen.json` could not catch it because the DOI was only filled after screening. Run the DOI gate (or `check_dois.py`) before authoring when DOIs are back-filled.
 - Proof caught the f4 heatmap caption orphaned onto the next page; `_assemble_0929.py` now wraps every analytics figure + caption in a minipage (as forest figures already were).
 - Consensus 10 hits, 0 new; trial watch 0 hits (window logged, `trials.json` 17 NCT / 30 windows). Scholar Gateway not retried. `metrics.csv` csv.writer fix confirmed in place (update_state.py).
+
+## Run 2026-10-19 (18:47-19:3x CDT) — dailies 17 + 18 Oct, W42 weekly (11-17 Oct)
+
+- The Sat 17 Oct 23:00 run did not fire; 22:00 rule on 19 Oct (18:47 CDT) → newest buildable 18 Oct. Built 17 Oct, W42 (filed under 17 Oct) and 18 Oct.
+- Harvest: **17 Oct** PubMed 6/1, EPMC 24, Crossref-ISSN 36 → 66 unique, 11 carried, 55 fresh; **18 Oct** PubMed 10/1, EPMC 0 (weekend), Crossref 10 → 20 fresh. arXiv no in-window entry, OpenAlex 429 both. Connector (EDAT 17-18, `_conn_1019.py`) 21 PMIDs → 4/7 appended.
+- **17 Oct**: 59 screened → 15 admitted / 44 rejected, 9 pp, 4 effects (2 HR + 2 "Years" diff-scale), 4 tier A, 1 metadata-only. **18 Oct**: 27 screened → 12 + 1 Consensus (Jambi PMS co-location, 10.22373/ljee.v7i1.10530) = 13 / 15 rejected (one cross-day duplicate of the East Africa PUF network), 9 pp, 5 effects. Rejections `_rej_1019.py`. DOI gate 0/0 both; 0 overfull.
+- **W42 weekly** 32 pp: 123 records/123 DOIs, measurement side 39%, metadata-only 21%, 28/28 CI, tier 15A/43B/65C. Proof fixes: f2b endpoint image capped at 0.80\textheight (was overflowing its page, 161 pt vbox); `mkdigest.py` now inserts a conditional break before every band after the first (orphaned band heading at a page foot).
+- `plots.py`: six design keys (distributed-lag panel deconvolution, passive-sampler network campaign, microbiome mediation, randomised crossover trial, cross-sectional occupational, spectroscopic calibration-transfer).
+- Trial watch 16-19 Oct 0 hits (`trials.json` 17 NCT / 31 windows). Consensus 10 hits, 1 new. Scholar Gateway not retried. Next: 19 Oct daily onward; W43 weekly (18-24 Oct) on Sat 24 Oct ≥22:00.

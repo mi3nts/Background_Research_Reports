@@ -152,6 +152,10 @@ def build():
         full   = [p for p in grp if p["doi"].lower() in blocks]
         others = [p for p in grp if p["doi"].lower() not in blocks]
         full.sort(key=lambda d: d["short"]); others.sort(key=lambda d: d["short"])
+        # 2026-10-19 (W42 proof): band heading orphaned at a page foot; conditional break
+        # before every band but the first, as the daily assembler already does.
+        if any(l.startswith(r"\band{") for l in out):
+            out.append(r"\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip")
         out.append(r"\band{%s\hfill %d records}{%s}" % (esc(sub), len(grp), BANDCOL[sub]))
         out.append("")
         if full:

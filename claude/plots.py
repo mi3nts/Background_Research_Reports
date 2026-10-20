@@ -672,6 +672,16 @@ design_group.update({
     "Two-sample Mendelian randomisation": "Modelling / inventory",
 })
 
+# 2026-10-19 run (17-18 Oct issues): six coined labels written with their records.
+design_group.update({
+    "Distributed-lag panel deconvolution": "Observational - ecological",
+    "Passive-sampler network campaign": "Measurement campaign",
+    "Microbiome mediation analysis": "Observational - cross-sectional",
+    "Randomised crossover trial": "Trial / intervention",
+    "Cross-sectional (occupational)": "Observational - cross-sectional",
+    "Spectroscopic calibration-transfer study": "Measurement campaign",
+})
+
 _design_unmapped = set()
 def dgrp(d):
     if d not in design_group:
