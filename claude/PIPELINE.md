@@ -3088,3 +3088,11 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **W42 weekly** 32 pp: 123 records/123 DOIs, measurement side 39%, metadata-only 21%, 28/28 CI, tier 15A/43B/65C. Proof fixes: f2b endpoint image capped at 0.80\textheight (was overflowing its page, 161 pt vbox); `mkdigest.py` now inserts a conditional break before every band after the first (orphaned band heading at a page foot).
 - `plots.py`: six design keys (distributed-lag panel deconvolution, passive-sampler network campaign, microbiome mediation, randomised crossover trial, cross-sectional occupational, spectroscopic calibration-transfer).
 - Trial watch 16-19 Oct 0 hits (`trials.json` 17 NCT / 31 windows). Consensus 10 hits, 1 new. Scholar Gateway not retried. Next: 19 Oct daily onward; W43 weekly (18-24 Oct) on Sat 24 Oct ≥22:00.
+
+## Run 2026-10-20 (04:0x UTC = 23:0x CDT 19 Oct) — daily 19 Oct
+
+- 22:00 rule: run started 23:05 CDT on 19 Oct → newest buildable = 19 Oct (complete day). Harvest leg-by-leg: PubMed 4 health / 1 sensing, EPMC 96 (16 AGR dropped), Crossref-ISSN 55, arXiv 1 entry dated 19 Oct, OpenAlex 429 → 137 unique → 50 carried → 87 fresh; connector (EDAT 19 Oct, `_conn_1020.py`) 6 PMIDs, 2 appended.
+- **89 screened → 19 admitted / 70 rejected** (`_rej_1020.py`), 9 pp, 5 effects (4 HR CLHLS cognition, 1 HR SO2 stroke), 1 tier A, **6 metadata-only (33%)** — day-0 Elsevier/T&F records with no abstract anywhere; abstract retry recovered 0. 0 overfull/underfull; proof clean (9 pp contact sheet).
+- **New hold case:** arXiv 2610.25941 (Foehn, km-scale generative PM2.5 forecaster, tier A) failed the DOI gate — DataCite `10.48550/arXiv.*` DOIs are not registered on the posting day (404). Authored entry kept in `authoring/_held/arxiv_2610.25941.py`; logged as HELD in `rejected.jsonl`. **Next run: re-run check_dois on it and add it to that day's issue** (copy the file into `authoring/<date>/`).
+- Consensus 10 hits, 0 new (Kumpika 2026 already archived). Trial watch 19–20 Oct 0 hits (`trials.json` 32 windows). Scholar Gateway not called.
+- Next: 20 Oct daily (run ≥22:00 CDT 20 Oct); W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00.

@@ -1,0 +1,327 @@
+{
+ "date": "2026-10-19",
+ "entry_window": "2026-10-19 -> 2026-10-19",
+ "PAPERS": [
+  {
+   "pmid": "42895283",
+   "doi": "10.7189/jogh.16.04307",
+   "journal": "J Glob Health",
+   "short": "Zhang CLHLS PM2.5 components cognitive disorders lifestyle mediation 2026",
+   "title": "Association between long-term ambient air pollution exposure and cognitive disorders among older adults in China: the mediating role of lifestyle",
+   "sub": "Neuro / mental health",
+   "design": "Prospective cohort",
+   "pm": "Long-term PM2.5, sulphate, nitrate, ammonium, O3 (per 10 ug/m3)",
+   "geo": "China (CLHLS, multi-province)",
+   "endpoint": "Incident cognitive disorders",
+   "tier": "B",
+   "n": "Chinese Longitudinal Healthy Longevity Study; Cox, Bayesian WQS and mediation models. Per 10 ug/m3, PM2.5 HR 1.005 (1.001-1.009), sulphate 1.030 (1.003-1.056), nitrate 1.020 (1.003-1.037), ammonium 1.033 (1.005-1.062), O3 1.006; mixture OR 1.028 (1.006-1.040) with O3 carrying the largest WQS weight. Favourable vs unfavourable lifestyle HR 0.488 (0.336-0.710); lifestyle mediated 8.4-9.5% of the pollutant associations. Limitation: an HR of 1.005 per 10 ug/m3 is at the floor of detectability and the abstract gives neither n, case count nor how cognitive disorder was ascertained (MMSE cut-offs in CLHLS are education-sensitive); 'mediation' by lifestyle that is itself a confounder of residential exposure is not identifiable. Relevance: low - gridded component surfaces, no sensor component."
+  },
+  {
+   "pmid": "42894454",
+   "doi": "10.5853/jos.2026.03265",
+   "journal": "J Stroke",
+   "short": "Lee CRCS-K post-discharge SO2 stroke recurrence PM null 2026",
+   "title": "Post-Discharge Ambient Sulfur Dioxide Exposure and Stroke Recurrence After Acute Ischemic Stroke",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort (registry linkage)",
+   "pm": "3-month post-discharge district PM10, PM2.5, NO2, SO2, CO, O3 (IDW)",
+   "geo": "South Korea (CRCS-K-NIH registry)",
+   "endpoint": "Stroke recurrence 3-15 months post-discharge",
+   "tier": "B",
+   "n": "27,340 acute ischaemic stroke patients (2014-2021), district-level IDW-interpolated pollutant means over the 3 months after discharge; cause-specific Cox with death as competing risk, cluster-robust SEs, splines. 764 recurrences, 542 deaths over a median 364.8 days. PM10 and PM2.5 showed no association; only SO2 did (overall spline p=0.024), with Q4 vs Q1 HR 1.19 (0.94-1.50), stronger in age >=75 and women (interaction p 0.051, 0.062). Limitation: district IDW from sparse monitors gives Berkson-type error that biases PM toward the null, and SO2 concentrates in harbour cities (Incheon, Ulsan, Busan) - a place effect cannot be excluded. Relevance: moderate - a null PM result built on interpolation is exactly where denser networks change the answer."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c05462",
+   "journal": "Environ Sci Technol",
+   "short": "Wang Guangdong PM2.5 oxidative potential DTT childhood allergy 2026",
+   "title": "Associations of PM2.5 and Its Oxidative Potential with Childhood Allergy-Related Symptoms: A Cross-Sectional Study in Guangdong Province, China",
+   "sub": "Respiratory & allergic",
+   "design": "School-based cross-sectional",
+   "pm": "PM2.5 mass, oxidative potential (DTTv, DTTm), metals, carbonaceous, ions",
+   "geo": "China (Guangdong, six cities)",
+   "endpoint": "Rhinitis, rhinoconjunctivitis, eczema symptoms",
+   "tier": "A",
+   "n": "131,346 children aged 6-18 in six Guangdong cities. PM2.5 mass and DTT oxidative potential were positively associated with all three symptom outcomes; mass-normalised OP (DTTm) gave the most consistent associations, lower AIC/BIC and the greatest stability in two-pollutant models. Mixture analyses implicated several constituents; OP plausibly carried part of the Co, OC, Cu and Hg associations, the largest indirect share 36.2% for OC and rhinoconjunctivitis via DTTm. Limitation: cross-sectional symptom questionnaires; OP is presumably modelled or assigned from few filter sites, and the abstract reports no effect sizes, so the model-fit comparison cannot be weighed against exposure-error differences between metrics. Relevance: high - OP is not measurable by optical LCS, which bounds what a mass-only network can say about allergy."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c07407",
+   "journal": "Environ Sci Technol",
+   "short": "Tang CPS-II plasma proteome air pollution lung cancer ever-smokers 2026",
+   "title": "Analysis of the Potential Mediating Role of Plasma Proteins in the Association Between Air Pollution Exposure and Lung Cancer Risk Among Ever-Smokers",
+   "sub": "Mechanistic toxicology",
+   "design": "Nested case-control",
+   "pm": "Six ambient pollutants and their mixture (pre-diagnosis)",
+   "geo": "USA (CPS-II Nutrition Cohort)",
+   "endpoint": "Incident lung cancer; plasma proteome",
+   "tier": "B",
+   "n": "95 matched case-control pairs of ever-smokers with pre-diagnostic plasma proteomics from the CPS-II Nutrition Cohort. Seventeen proteins associated with both exposures and lung cancer (CX3CL1, ADAM15, CXCL17 among them, p<0.05); high-dimensional mediation (HIMA) flagged six, including CX3CL1 and CXCL17 (Bonferroni p<0.05). Limitation: 190 people against a high-dimensional proteome, and the mediation signals disappeared when cases diagnosed within a year of blood draw were excluded - consistent with reverse causation by subclinical tumour. The abstract does not name the pollutants' exposure model. Pathways (chemokine signalling, immune modulation) are hypothesis-generating only. Relevance: low - biomarker discovery, no sensing implication."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17101024",
+   "journal": "Atmosphere",
+   "short": "Birinci Bosphorus bridge traffic ML proxy PM2.5 NO2 2026",
+   "title": "Machine-Learning Proxy of Air-Quality Variability Associated with Intercontinental Bridge Traffic over the Bosphorus in Istanbul",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Machine-learning model",
+   "pm": "Hourly PM2.5, PM10, coarse fraction, NO2, NO, NOx",
+   "geo": "Turkiye (Istanbul)",
+   "endpoint": "Not applicable (hold-out R2, RMSE)",
+   "tier": "B",
+   "n": "17,520-h panel (2022-2023) pairing six bridge traffic sensors with the nearest monitors. A Prophet traffic-only baseline gave negative R2 for every bridge x pollutant. LightGBM, XGBoost and a BiLSTM-attention model with meteorology, calendar, precipitation lags and short autoregressive terms reached mean hold-out R2 ~0.77 (0.58-0.86), RMSE down 47-63%; the three families were practically equivalent. SHAP ranked autocorrelation, season, wind direction and heavy vehicles above total traffic. Limitation: autoregressive pollutant terms make this nowcasting persistence, not a traffic proxy - the headline R2 largely reflects lagged concentrations, and 'closest monitor' distance is unstated. Relevance: moderate - shows traffic counts alone do not substitute for measurement in complex coastal flow."
+  },
+  {
+   "pmid": "42895578",
+   "doi": "10.1007/s10653-026-03508-x",
+   "journal": "Environ Geochem Health",
+   "short": "Moradnia Isfahan pregnant urinary metals indoor dust AQI 2026",
+   "title": "Spatial variability of heavy metals in pregnant women: linking urinary biomarkers, indoor dust contamination, and air quality in Isfahan, Iran",
+   "sub": "Reproductive & developmental",
+   "design": "Cross-sectional environmental survey",
+   "pm": "Zone-level Air Quality Index; indoor settled dust metals (not airborne PM)",
+   "geo": "Iran (Isfahan)",
+   "endpoint": "Urinary Cr, Pb, Cd, Ni in pregnancy",
+   "tier": "C",
+   "n": "80 pregnant women; paired urine and vacuum dust analysed by ICP-OES. Dust metals ranked Pb>Cr>Ni>Cd (Pb mean 111.10 ug/g); urine Pb 10.52, Cr 8.30, Ni 4.14 ug/L. Urinary metals and AQI differed across urban zones (p<0.001); dust did not (Pb p=0.514). Building age correlated with dust Pb (rho 0.788). Dust and urinary profiles were uncorrelated. Limitation: n=80, spot urine without creatinine adjustment stated, and the only airborne metric is a zone-level AQI - no PM mass or PM-bound metal was measured, so 'air quality' enters only as an ecological covariate. Relevance: low - illustrates the gap that personal or indoor PM monitoring with filter speciation would fill."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-14671-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Cheng LETKF WRF-Chem CALIOP component-resolved aerosol assimilation East Asia 2026",
+   "title": "Constraining the vertical profiles of aerosol component and heating rate over east Asia through assimilating CALIOP observations",
+   "sub": "Exposure assessment & modelling",
+   "design": "Chemical transport modelling",
+   "pm": "Species-resolved extinction profiles: dust, sea salt, black carbon, water-soluble",
+   "geo": "East Asia",
+   "endpoint": "Not applicable (AOT, extinction, SSA, heating rate)",
+   "tier": "B",
+   "n": "Component-resolved LETKF assimilation in WRF-Chem of CALIOP-MODIS synergistic species-specific extinction profiles (dust, sea salt, BC, water-soluble), with spatial and observational constraints. The analysis reconstructs multi-layer vertical structure and corrects severe underestimation of elevated BC plumes, including persistent free-tropospheric BC over South Asia; AERONET and AD-Net lidar validation shows gains in AOT, extinction and single-scattering albedo. Limitation: CALIOP's narrow curtain and 16-day repeat leave most of the domain unobserved, the species classification is retrieval-model dependent, and the abstract gives no quantitative skill figures; surface PM2.5 is not evaluated. Relevance: moderate - column and vertical constraints are what satellite-surface fusion with LCS networks currently lacks."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c09940",
+   "journal": "Environ Sci Technol",
+   "short": "Xiao NCP Sichuan haze reduced-nitrogen NOC oligomerisation PM2.5 2026",
+   "title": "Aqueous Carbonyl-Amino Aggregation Drives Atmospheric Nitrogen-Containing Oligomer Formation in China Haze",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "PM2.5 nitrogen-containing organic compounds (ESI+ HRMS)",
+   "geo": "China (North China Plain, Sichuan Basin)",
+   "endpoint": "Not applicable (composition / formation pathway)",
+   "tier": "C",
+   "n": "Winter-haze PM2.5 from the North China Plain compared with the Sichuan Basin. Reduced-nitrogen NOCs were 40% of ESI+ organics. High-molecular-weight (m/z>250) Re-NOCs rose in humid versus dry haze and correlated with NH4+ and the aqueous-SOA fraction of water-soluble organics, alongside longer aliphatic chains and higher unsaturation - read as carbonyl-amino oligomerisation and cyclisation. A marker oligomer (C8H13N3O2) tracked WSON; stronger acidity and higher temperature favoured oligomerisation over cyclisation, enriching it in the Sichuan Basin. Limitation: ESI+ is semi-quantitative and ionisation-biased, number of samples is not stated, and mechanism is inferred from correlation. Relevance: low - brown-carbon NOCs add absorbing mass that optical scattering sensors misweight under humid haze."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1039/d6ea00086j",
+   "journal": "Environ Sci: Atmos",
+   "short": "Lu street-view greenery street canyon PM concentrations 2026",
+   "title": "Association between urban greenery and particulate matter concentrations in street canyons: a local-scale study based on street view imagery",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "Street-canyon PM concentrations (metric not stated in abstract)",
+   "geo": "Not stated in abstract",
+   "endpoint": "Not applicable (greenery-PM association)",
+   "tier": "C",
+   "n": "Street-view imagery quantified street greenery quantity and configuration, which were related to PM concentrations in street canyons; the authors attribute the associations to low-level vegetation barriers restricting ventilation. The record's abstract is two sentences: no city, sample size, PM metric, measurement method or effect direction and magnitude are given. Limitation: on what is available, the inference is correlational and the proposed ventilation mechanism is untested; treat as near-metadata until the full text is read. Relevance: moderate - siting of street-level sensors relative to hedges and low canopy is a known representativeness issue for LCS networks, and image-derived greenery is a cheap covariate for spatial calibration."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17101023",
+   "journal": "Atmosphere",
+   "short": "Zhang Jiaxing inventory co-control screening PM2.5 GHG 2026",
+   "title": "Inventory-Based Co-Control Screening of Air Pollutants and Greenhouse Gases in a Typical Yangtze River Delta City",
+   "sub": "Burden, policy & mitigation",
+   "design": "Emission inventory",
+   "pm": "Inventory PM2.5 (with NOx, SO2, VOCs, NH3) vs CO2-eq",
+   "geo": "China (Jiaxing, Yangtze River Delta)",
+   "endpoint": "Not applicable (source prioritisation)",
+   "tier": "C",
+   "n": "Harmonised 2024 integrated inventory plus enterprise statistics for Jiaxing; 54 non-zero source categories scored on an air-pollutant H-score (mean of PM2.5, NOx, SO2, VOCs, NH3 shares) against a GWP100 CO2-eq G-score, screened at the 70th percentile. Coupled co-control candidates: CHP, thermal power, motor vehicles; decoupled single-pollutant priorities: industrial solvents (VOCs) and paved-road dust (PM). A 75th-percentile benchmark implies 7,941 t VOC reduction among reporting enterprises. Limitation: equal-weight averaging of pollutant shares ignores toxicity and secondary PM formation potential; no ambient or health validation. Relevance: low - road-dust PM priority is the coarse fraction optical LCS undercount."
+  },
+  {
+   "pmid": "42883207",
+   "doi": "10.3390/molecules31193443",
+   "journal": "Molecules",
+   "short": "Warminski SRC pellets boiler ESP PM CO emissions 2026",
+   "title": "Short-Rotation Coppice Pellets as Biofuels in a Modern Boiler with an Electrostatic Precipitator: Particulate Matter and Carbon Monoxide Emissions",
+   "sub": "Burden, policy & mitigation",
+   "design": "Laboratory measurement",
+   "pm": "Flue-gas total PM mass (mg/m3) with and without ESP",
+   "geo": "Not stated in abstract",
+   "endpoint": "Not applicable (emission factors)",
+   "tier": "C",
+   "n": "Short-rotation coppice pellets (willow, poplar, black locust) versus pine and birch in a pellet boiler with an electrostatic precipitator. Species significantly affected PM and CO; the ESP cut mean PM by 52.5% (53.81 to 25.54 mg/m3) without affecting CO. Highest PM: willow without ESP (90.96 mg/m3); lowest: pine with ESP (17.51). Poplar gave low PM but the highest CO; black locust the best balance (combustion efficiency 93.20%). Limitation: one boiler, total PM only (no size distribution or PM1 fraction, where residential-combustion mass sits), and steady-state operation that misses start-up peaks. Relevance: low - source-side mitigation; a 52% ESP removal at total-mass level likely overstates sub-micron removal."
+  },
+  {
+   "pmid": "42884878",
+   "doi": "10.3390/plants15193014",
+   "journal": "Plants (Basel)",
+   "short": "Brunori Rome urban vineyard grapevine leaf PM interception 2026",
+   "title": "Plant-Atmosphere Interactions in Urban Vineyards of Rome: A Digital Phenotyping Approach for the Functional Selection of Grapevine Cultivars",
+   "sub": "Burden, policy & mitigation",
+   "design": "Field measurement",
+   "pm": "Leaf-surface PM particle counts (SEM, particles/mm2)",
+   "geo": "Italy (Rome)",
+   "endpoint": "Not applicable (PM interception, leaf traits)",
+   "tier": "C",
+   "n": "Urban vineyard of 170 cultivars at Rome's Botanical Garden, 2025 season: 54 cultivars screened by leaf micromorphology, five assessed in depth (anatomy, chlorophyll, reflectance indices, SEM-counted PM). After ~20 days without heavy rain, leaf-surface PM ranged from 52,024 (Barbera) to 77,462 particles/mm2 (Maturano), comparable to some urban tree species; adaxial deposition was over twice abaxial. Limitation: particle counts, not mass or size-resolved deposition flux; five cultivars, one site, one accumulation window, and no ambient PM measurement to convert counts into a removal rate. Relevance: low - green-infrastructure mitigation claims need co-located ambient PM, which a low-cost sensor at canopy height would supply cheaply."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1080/02786826.2026.2746516",
+   "journal": "Aerosol Sci Technol",
+   "short": "He NYC-METS size-resolved organic aerosol offline AMS 2026",
+   "title": "Characteristics of size-resolved organic aerosols using offline aerosol mass spectrometry: NYC-METS",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Size-resolved organic aerosol (offline AMS)",
+   "geo": "USA (New York City)",
+   "endpoint": "Not applicable (composition)",
+   "tier": "C",
+   "n": "Title and authors only; no abstract in Crossref, Europe PMC or Semantic Scholar at harvest. The record reports size-resolved organic aerosol characterised by offline aerosol mass spectrometry - re-aerosolised filter or impactor extracts - within the NYC-METS campaign in New York City. Sampling period, size cuts, source apportionment and sample counts cannot be stated. Limitation: offline AMS loses water-insoluble and semi-volatile fractions in extraction, so size-resolved OA mass is a lower bound; no inference beyond the title is possible. Relevance: moderate - size-resolved organic composition governs refractive index and hygroscopicity, the two terms optical LCS corrections approximate."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103236",
+   "journal": "Atmos Pollut Res",
+   "short": "Polwiang Bangkok Chiang Mai burning control DLNM GAM PM2.5 regimes 2026",
+   "title": "Differential sensitivity of urban and biomass-dominated PM2.5 regimes to burning control: A distributed-lag generalized additive model analysis of Bangkok and Chiang Mai (2021-2024)",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Daily PM2.5 (urban vs biomass-dominated regimes)",
+   "geo": "Thailand (Bangkok, Chiang Mai)",
+   "endpoint": "Not applicable (PM2.5 response to burning control)",
+   "tier": "B",
+   "n": "Title and author only; no abstract retrievable at harvest. The title states a distributed-lag GAM comparing the sensitivity of PM2.5 to burning-control measures in an urban regime (Bangkok) and a biomass-burning-dominated regime (Chiang Mai), 2021-2024. Effect sizes, lag structure, the burning-control variable (fire counts, policy dates) and confounder set cannot be stated. Limitation: observational policy attribution in a GAM is sensitive to meteorological adjustment and transboundary smoke from Myanmar and Laos; single author. Relevance: moderate - Chiang Mai is a dense PMS-sensor setting (DustBoy network), and regime-specific response is where LCS spatial coverage tests policy effects."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103243",
+   "journal": "Atmos Pollut Res",
+   "short": "Barnett-Itzhaki hourly compound heat air pollution extremes 2026",
+   "title": "Hourly Resolution Reveals Hidden Temporal Windows of Compound Heat-Air Pollution Extremes Masked by Daily Averaging",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Hourly air pollution (pollutant set not stated) co-occurring with heat",
+   "geo": "Not stated in record",
+   "endpoint": "Not applicable (compound-event detection)",
+   "tier": "C",
+   "n": "Title and author only; no abstract retrievable at harvest. The title claims that hourly data expose compound heat-air-pollution extreme windows that daily means hide. Pollutants, location, thresholds, record length and how many events are missed by daily averaging cannot be stated. Limitation: unverifiable beyond the title; compound-extreme definitions are threshold-dependent, and hourly co-occurrence of heat and O3 is expected by photochemistry, so the PM-specific contribution is unknown. Relevance: moderate - sub-daily exposure windows are precisely what continuous low-cost monitors resolve and daily regulatory filters do not."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115449",
+   "journal": "Build Environ",
+   "short": "Ren physics-constrained UQ urban PM2.5 prediction driving factors 2026",
+   "title": "Integrating Implicit Physics Constraints and Uncertainty Quantification for Urban PM2.5 Prediction and Driving Factor Analysis",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Urban PM2.5 (prediction target)",
+   "geo": "Not stated in record",
+   "endpoint": "Not applicable (prediction skill, uncertainty)",
+   "tier": "C",
+   "n": "Title and authors only; no abstract retrievable at harvest. The title describes an urban PM2.5 prediction model with implicit physics constraints and uncertainty quantification, plus driving-factor attribution. Architecture, city, input features, horizon, skill metrics and whether the uncertainty is calibrated cannot be stated. Limitation: 'implicit' physics constraints in ML usually mean loss-function regularisation, which does not guarantee physical consistency out of distribution; nothing beyond the title is verifiable. Relevance: moderate - calibrated predictive uncertainty is what allows LCS-fed forecasts to propagate sensor error honestly."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.buildenv.2026.115399",
+   "journal": "Build Environ",
+   "short": "Suh residential occupant activities airborne microplastic emissions 2026",
+   "title": "Microplastics emissions from occupant activities in residential spaces: Experimental quantification and relative importance analysis of particle generation factors",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Airborne microplastic particles from occupant activities",
+   "geo": "Not stated in record",
+   "endpoint": "Not applicable (emission quantification)",
+   "tier": "C",
+   "n": "Title and authors only; no abstract retrievable at harvest. The title reports experimental quantification of microplastic particle emissions from occupant activities in residential spaces and a relative-importance analysis of generation factors (activity type, textiles, surfaces presumably). Size range, identification method (FTIR, Raman, pyrolysis GC-MS), emission rates and whether the inhalable fraction was measured cannot be stated. Limitation: unverifiable beyond the title; microplastic counts are method-bound and seldom expressed as PM mass. Relevance: moderate - indoor activity-resolved particle sources are what household LCS see as unexplained spikes; polymer fibres also scatter differently from combustion aerosol."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.indenv.2026.100200",
+   "journal": "Indoor Environments",
+   "short": "Du classroom CO2 proxy PM VOC ventilation types 2026",
+   "title": "CO2 as a proxy for PM and VOCs in classrooms across ventilation types and activities",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Classroom PM (fractions not stated) vs CO2 and VOCs",
+   "geo": "Not stated in record",
+   "endpoint": "Not applicable (proxy validity)",
+   "tier": "B",
+   "n": "Title and authors only; no abstract retrievable at harvest. The title tests whether CO2 tracks PM and VOCs in classrooms across ventilation types and activities - i.e. whether a cheap NDIR sensor can stand in for particle and VOC monitoring. Number of classrooms, ventilation categories, PM instrumentation and agreement statistics cannot be stated. Limitation: unverifiable beyond the title; physically, CO2 tracks occupant-generated bioeffluents and air exchange, whereas PM indoors also depends on outdoor infiltration, resuspension and filtration, so decoupling under mechanical ventilation is expected. Relevance: high - directly asks whether school CO2 monitor rollouts can be read as PM exposure surveillance."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Cognitive disorders\nPM2.5",
+   "exposure": "Long-term PM2.5 (per 10 ug/m3)",
+   "est": 1.005,
+   "lo": 1.001,
+   "hi": 1.009,
+   "metric": "HR",
+   "src": "CLHLS older adults"
+  },
+  {
+   "label": "Cognitive disorders\nsulphate",
+   "exposure": "Long-term sulphate (per 10 ug/m3)",
+   "est": 1.03,
+   "lo": 1.003,
+   "hi": 1.056,
+   "metric": "HR",
+   "src": "CLHLS older adults"
+  },
+  {
+   "label": "Cognitive disorders\nnitrate",
+   "exposure": "Long-term nitrate (per 10 ug/m3)",
+   "est": 1.02,
+   "lo": 1.003,
+   "hi": 1.037,
+   "metric": "HR",
+   "src": "CLHLS older adults"
+  },
+  {
+   "label": "Cognitive disorders\nammonium",
+   "exposure": "Long-term ammonium (per 10 ug/m3)",
+   "est": 1.033,
+   "lo": 1.005,
+   "hi": 1.062,
+   "metric": "HR",
+   "src": "CLHLS older adults"
+  },
+  {
+   "label": "Stroke recurrence\nSO2 Q4 vs Q1",
+   "exposure": "3-month post-discharge SO2 (quartile)",
+   "est": 1.19,
+   "lo": 0.94,
+   "hi": 1.5,
+   "metric": "HR",
+   "src": "Registry n=27,340"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "preconception /\nin utero:\nIsfahan pregnancies"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nGuangdong 6-18 y\n(OP, allergy)"
+  },
+  {
+   "n": 1,
+   "note": "adolescence:\nsame Guangdong\nsurvey (to 18 y)"
+  },
+  {
+   "n": 1,
+   "note": "working age:\nstroke registry\nadults"
+  },
+  {
+   "n": 2,
+   "note": "older adults:\nCLHLS cognition;\nCPS-II smokers"
+  }
+ ]
+}
