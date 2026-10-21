@@ -1,0 +1,314 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{20 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-20\;\;\textcolor{Amber}{\textbar}\;\;Entry window 20 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;19 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{19}{RECORDS IN SCOPE\\(58 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Four identical PM monitors breathing the same air disagree by up to a
+factor of three day to day --- and averaging does not fix it.}\\[1.4mm]
+\footnotesize
+Four prototype electrostatic (corona-charging, impaction, Faraday-cup) PM$_{10}$/PM$_{2.5}$/PM$_{1.0}$ monitors ran
+at one Thai combined-cycle power plant for four months with 92--100\,\% daily recovery. Fixed station differences
+explained only \textbf{0.7\,\%} of log 24-h PM$_{10}$ variance; the day$\times$station interaction explained
+\textbf{57.1\,\%}. Pairwise 95\,\% limits of agreement spanned ratios \textbf{0.35--3.26} (PM$_{10}$) and
+0.33--2.83 (PM$_{2.5}$); single-unit ICC 0.42, rising to 0.75 only for the four-unit mean.
+\textbf{Where it is weak:} preprint, no reference instrument, and no side-by-side co-location before deployment ---
+unit drift and real micro-gradients are separated by inference, not measurement.
+\textbf{Why it matters here:} the failure mode is generic to distributed networks. Station-to-station contrasts
+from any low-cost array need scheduled co-location checks, or they support only pooled, time-averaged statements.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Fire smoke and the kidney.} 12.5 million renal admissions, 1020 locations, six countries: per
+10\,$\mu$g\,m$^{-3}$ fire-sourced PM$_{2.5}$ (lag 0--5) RR \textbf{1.011} (1.007--1.015), strongest for acute
+kidney injury and larger than for non-fire PM$_{2.5}$.
+
+\item \textbf{An LCS protocol for pregnancy cohorts.} PRECISE (Gambia, Kenya, Mozambique): 343 women, 3,190
+person-days of wearable PM$_{2.5}$, Deming-harmonised sensors with inter-sensor R$^2>$0.75 in country --- precision
+reported, accuracy against reference not in the abstract.
+
+\item \textbf{AI inside the CTM, not after it.} ProNet embeds neural correctors in the transport equations; across
+338 Chinese cities it beats forecaster-adjusted operational PM$_{2.5}$ guidance by 6.1\,\% and attributes errors to
+processes.
+
+\item \textbf{Same emissions, more PM.} CAMS reanalysis: the Indo-Gangetic Plain emits 40\,\% less than the North
+China Plain yet averages 123.6 vs 113.2\,$\mu$g\,m$^{-3}$, with winter `pollution-forming efficiency' nearly double
+under a $<$300\,m boundary layer.
+
+\item \textbf{Held record released.} \emph{Foehn} (arXiv 2610.25941), the generative km-scale global PM$_{2.5}$
+forecaster held from 19 October, now resolves at doi.org and enters this issue.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 19 October issue closed with \texttt{last\_entry\_date} at 19 October. This issue collects
+\textbf{20 October in full}, continuous with it. Built on the run that started 23:0x CDT on 20 October (04:0x UTC
+21 October), after the 22:00 cut-off, so the day is complete. 21 October is due on the next run at or after
+22:00 CDT; the W43 weekly (18--24 October) on Saturday 24 October.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 19 in-scope records across eight bands. Exposure assessment (6) and
+sensing/forecasting (5) lead --- a measurement-heavy day; cardiovascular and occupational hold two each;
+neuro/mental health and mechanistic toxicology are empty.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: modelling/inventory 5, measurement campaigns 3, two acute
+(case-crossover, multi-location time-series), one ecological, one cross-sectional, one non-randomised intervention;
+\textbf{metadata-only 6 (32\,\%)}, again day-0 Elsevier records. Right --- endpoints: renal admissions, coronary
+dilatation, MACE, COPD prevalence, placental sncRNA, livestock productivity.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$-only records dominate (12); two size-resolved, two
+optical-property (brown carbon, aerosol typing). Right --- geography: China 6, Southeast Asia 4 (Thailand,
+Singapore), Europe 3, then sub-Saharan Africa, South Asia, Korea and the US border.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: working age leads (two occupational campaigns plus the adult renal and
+COPD records); two in utero (PRECISE, BiSC placenta), one childhood (Kawasaki); no adolescent record.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Exposure assessment spreads across modelling and
+metadata-only cells; sensing concentrates in modelling (forecasters) and measurement (electrostatic monitors).}\end{minipage}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, two estimates on different contrasts: fire-sourced PM$_{2.5}$ and renal admissions per
+10\,$\mu$g\,m$^{-3}$ over lag 0--5 (six countries), and PM$_{2.5}$ and coronary artery dilatation in Kawasaki disease
+at lag 3, whose increment the abstract does not state. Not poolable.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{Huang PM$_{2.5}$ coronary artery dilatation Kawasaki disease case-crossover 2026}
+{Association between PM(2.5) and coronary artery dilatation with Kawasaki disease in China}
+{Eur J Pediatr}
+{847 children with Kawasaki disease, 2017-2021; case-crossover with a distributed-lag Poisson GLM on coronary Z score. Risk of coronary artery dilatation rose at lags 2-4, peaking at lag 3 with RR 1.11 (1.02-1.21); the abstract does not state the PM$_{2.5}$ increment. Mediation via CRP, ALT and haemoglobin. Limitation: a case-crossover needs an acute event with a datable onset, yet CAD is detected at echocardiography whose timing follows admission and IVIG, so the referent-window logic is shaky; the 'mediators' are markers of disease severity measured after onset, and the highlights' claim of a 'population-based cohort' contradicts the design. Relevance: low - city-monitor assignment, no sensing implication.}
+{10.1007/s00431-026-07527-9}
+
+\paperentry{Wongcharoen short-term PM$_{2.5}$ MACE high-risk population nationwide case-crossover 2026}
+{Associations between short-term PM(2.5) exposure and major cardiovascular events in high-risk population: a nationwide case-crossover study}
+{BMJ Open}
+{\textsc{metadata only.} Title and authors only (Wongcharoen et al.); no abstract indexed at harvest. A nationwide time-stratified case-crossover of short-term PM$_{2.5}$ and major adverse cardiovascular events restricted to a 'high-risk population' (presumably prior CVD, diabetes or hypertension). Country, n, lag structure and effect size cannot be stated. Limitation: unverifiable beyond the title; case-crossover in a pre-selected high-risk group estimates a conditional acute effect that is not comparable with general-population estimates. Relevance: low-moderate - short-lag acute effects are what real-time LCS alerts are meant to act on.}
+{10.1136/bmjopen-2026-120476}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Morales El Paso port-of-entry PM$_{2.5}$ immigration COPD census tracts 2026}
+{Breathing at the Border: PM$_{2.5}$ Exposure, Immigration, and COPD Across Census Tracts Close to Ports-of-Entry}
+{J Immigr Minor Health}
+{El Paso census tracts; NASA satellite-derived PM$_{2.5}$ merged with CDC tract COPD prevalence and ACS social vulnerability; GLMs with distance to the port-of-entry. PM$_{2.5}$ and percent foreign-born non-citizens were positively associated with COPD prevalence; tracts within three miles of a port had higher prevalence, and the PM$_{2.5}$ effect was stratified by proximity. No coefficients or CIs in the abstract. Limitation: CDC PLACES prevalence is itself small-area modelled from BRFSS demographics, so regressing it on demographic covariates is partly circular; smoking is not addressed; satellite PM$_{2.5}$ at \textasciitilde{}1 km cannot resolve truck-idling gradients at bridge queues. Relevance: high - port-of-entry diesel queues are a textbook case for dense LCS siting.}
+{10.1007/s10903-026-02022-7}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Falcon-Gracia BiSC placental sncRNA air pollution maternal smoking 2026}
+{Impact of air pollution and tobacco smoke on the placental small non-coding RNA landscape}
+{medRxiv (preprint)}
+{390 chorionic villus samples from the Barcelona Life Study Cohort, small-RNA sequencing; 979 sncRNA clusters (miRNA 33\%, piRNA 26\%, snoRNA 12\%, tRF 8\%). Maternal smoking was associated with miR-421 down-regulation and up-regulation of SNORD113/114 snoRNAs at the imprinted DLK1-DIO$_3$ locus and piR-26394. No sncRNA was associated with PM$_{2.5}$, BC or NO$_2$ after multiple-testing correction; several miRNAs were suggestive. Limitation: preprint; a null after FDR across \textasciitilde{}1000 features at n=390 says little about effect absence, and pregnancy-average LUR exposure is a blunt contrast for trimester-specific placental biology. Relevance: low - a usefully reported null for PM against a positive smoking control.}
+{10.64898/2026.10.16.26365732}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 6 records}{Clay}
+
+\paperentry{Makacha PRECISE personal ambient PM$_{2.5}$ monitoring framework pregnancy SSA 2026}
+{An integrated climate-structured personal and ambient air pollution monitoring framework embedded within a pregnancy and postpartum cohort in Sub-Saharan Africa}
+{Front Glob Womens Health}
+{PRECISE cohort: 343 pregnant or postpartum women (Gambia 160, Kenya 105, Mozambique 78), two 5-day wearable deployments in opposing seasons recording PM$_{2.5}$, T, RH and GPS/accelerometry; six fixed health-facility monitors. Calibration by repeated pre-deployment co-location with reference instruments and in-country Deming-regression harmonisation. Yield 3,190 person-days personal and 328 ambient days; inter-sensor R2 >0.72 pre-deployment and >0.75 in country; ambient capture >85\% in Gambia and Kenya, lower in Mozambique (connectivity). Limitation: inter-sensor R2 is precision, not accuracy - the reference co-location bias and slope, and the RH correction applied, are not in the abstract; 5-day windows in a purposive subsample limit pregnancy-average inference. Relevance: high - a reusable LCS QA protocol for low-resource cohorts.}
+{10.3389/fgwh.2026.1849628}
+
+\paperentry{Nolles IGP vs NCP PM$_{2.5}$ pollution forming efficiency CAMS 2026}
+{Indo-Gangetic Plain experiences higher aerosol pollution than North China Plain despite lower emissions}
+{Environ Sci Pollut Res Int}
+{CAMS EAC4 reanalysis, CAMS-GLOB-ANT emissions and ERA5 for 2019. The NCP emitted 65\% more primary PM and precursors (28,860 vs 17,464 kt) yet the IGP had higher annual PM$_{2.5}$ (123.6 vs 113.2 $\mu$g\,m$^{-3}$); NCP logged more bad-air days (251 vs 238) but the IGP longer episodes, up to 170 consecutive days around Delhi. A 'pollution forming efficiency' was nearly double in the IGP in winter, attributed to winds <6 km/h and PBL <300 m. Limitation: both concentration and emissions are model products for one year; EAC4 assimilates AOD and is biased in the IGP, and emission inventories under-count agricultural and residential burning there, which inflates the efficiency ratio. Relevance: moderate - quantifies what reanalysis cannot replace ground networks for.}
+{10.1007/s11356-026-38305-7}
+
+\paperentry{Kirsanov COSMO-ART Saint Petersburg UHI pollution PM$_{10}$ feedback 2026}
+{Assessing Urban Pollution and Heat Island Feedback in a Northern Megacity Using the Fully Coupled COSMO-ART Model}
+{Atmosphere}
+{COSMO-ART with TERRA\_URB for winter and summer episodes in Saint Petersburg. UHI-driven mixing and deeper PBL cut near-surface primary pollutants 15-54\% (winter) and 5-33\% (summer), PM$_{10}$ peaks by >44\%, while O$_3$ rose. Aerosol radiative feedback on the UHI was weak (hundredths of a degree, peaks <0.3 C), cooling in summer and warming over winter snow, under a fifth of canopy forcing. Limitation: two episodes, model-only; no comparison with observed PM$_{10}$ is reported in the abstract, and PM$_{10}$ in a snowy city is dominated by road-dust resuspension that emission inventories handle poorly. Relevance: moderate - urban/rural LCS gradients conflate emission density with UHI-enhanced dilution.}
+{10.3390/atmos17101030}
+
+\paperentry{Imran Chinese cities urban air quality determinants interpretable ML 2014-2023}
+{Spatio-temporal variation and determinants of urban air quality in Chinese cities during 2014-2023: an interpretable machine learning analysis}
+{J Environ Manage}
+{\textsc{metadata only.} Title and authors only; no abstract retrievable at harvest. The title describes a decade (2014-2023) of spatio-temporal variation in Chinese urban air quality with interpretable ML (SHAP-type attribution) of its determinants. Pollutants, number of cities, predictors and model skill cannot be stated. Limitation: unverifiable beyond the title; SHAP attributions on correlated socio-economic and meteorological predictors are not causal, and the 2014-2023 decline is dominated by the 2013 and 2018 action plans. Relevance: low - monitor-network secondary analysis.}
+{10.1016/j.jenvman.2026.131184}
+
+\paperentry{Li atmospheric cadmium concentration deposition China modelling 2026}
+{Modeling the spatial distributions and seasonal variations of atmospheric cadmium concentration and deposition in China}
+{Atmos Environ}
+{\textsc{metadata only.} Title and authors only; no abstract retrievable at harvest. National modelling of atmospheric cadmium - carried almost entirely on fine particles - with its spatial and seasonal distribution and deposition. Model, inventory, resolution and evaluation against measured Cd cannot be stated. Limitation: unverifiable beyond the title; metal inventories for smelting and coal are the dominant uncertainty. Relevance: low - mass-only LCS cannot see toxic trace-metal fractions, which is why such composition models remain needed.}
+{10.1016/j.atmosenv.2026.122427}
+
+\paperentry{Liu Beijing autumn-winter PM$_{2.5}$ oxidative potential source predictors 2026}
+{Autumn-winter variability and source-related predictors of PM$_{2.5}$ oxidative potential in urban Beijing}
+{Atmos Environ}
+{\textsc{metadata only.} Title and authors only; no abstract retrievable at harvest. An autumn-winter campaign relating PM$_{2.5}$ oxidative potential in urban Beijing to source-related predictors (heating, traffic, secondary formation presumably). Assay (DTT, AA, GSH), sample count and predictive model cannot be stated. Limitation: unverifiable beyond the title; a single season and site. Relevance: high - follows the 19 Oct Guangdong OP finding; if OP is predictable from source tracers, a subset of networked sensors with composition proxies could map it.}
+{10.1016/j.atmosenv.2026.122428}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 5 records}{Amber}
+
+\paperentry{Intra four co-deployed electrostatic PM monitors power plant agreement 2026}
+{Multi-point monitoring of PM$_{10}$, PM$_{2.5}$, and PM$_{1}$.0 at a combined-cycle power plant: field agreement between four co-deployed electrostatic monitors}
+{Research Square (preprint)}
+{Four prototype three-channel electrostatic mass monitors at a combined-cycle plant, Feb-Jun 2020, 92-100\% daily recovery; station means PM$_{10}$ 44.9-54.1, PM$_{2.5}$ 24.8-30.8, PM$_{1}$.0 7.5-11.9 $\mu$g\,m$^{-3}$. Fixed station differences explained 0.7\% of log 24-h PM$_{10}$ variance but the day-by-station interaction 57.1\%; pairwise 95\% limits of agreement spanned ratios 0.35-3.26 (PM$_{10}$) and 0.33-2.83 (PM$_{2.5}$); single-unit ICC 0.42 for PM$_{10}$, 0.75 for the four-unit mean. Disagreement did not shrink with averaging. Limitation: preprint; no reference instrument, so agreement says nothing about accuracy; units were not co-located side by side first, so unit drift and real micro-gradients are separated only by inference. Relevance: high - the same argument applies to any LCS network: station contrasts need routine co-location checks.}
+{10.21203/rs.3.rs-10901106/v1}
+
+\paperentry{Li runway visual range model brown carbon aerosol chromatic effects 2026}
+{Refined runway visual range measurement model incorporating brown carbon aerosol effects}
+{Opt Lett}
+{Optics Letter: conventional runway visual range (RVR) algorithms treat black carbon and scattering aerosol only; brown carbon's wavelength-selective absorption introduces two systematic errors - extinction spectral mismatch between the transmissometer/forward-scatter wavelength and the photopic band, and a chromatic shift in the visual threshold. A refined RVR model including BrC chromatic effects is proposed and 'experimentally validated'. Limitation: no error magnitudes, BrC loadings or validation data in the abstract. Relevance: moderate - the same single-wavelength assumption underlies optical PM sensors, whose mass conversion is biased by absorbing, spectrally selective aerosol.}
+{10.1364/ol.611004}
+
+\paperentry{Wu ProNet physics-AI coupled CTM PM$_{2.5}$ O$_3$ forecasting 338 cities 2026}
+{Fusing physics and AI enhances accuracy and diagnostic capabilities in air quality forecasting}
+{Natl Sci Rev}
+{ProNet embeds observation-constrained neural correctors inside the governing equations of a chemical transport model rather than post-processing its output. On 2022-23 data across 338 Chinese cities it beat the physical CTM and AI-only baselines, generalised better to extreme events outside training, and surpassed forecaster-adjusted operational forecasts by 6.1\% (PM$_{2.5}$) and 3.0\% (O$_3$). The correctors yield process-level error bookkeeping that exposes systematic CTM parameterisation biases. Limitation: '6.1\% accuracy' is an unspecified metric; one two-year period invites temporal leakage, and process attribution from learned correctors is not unique - compensating errors can be assigned to the wrong process. Relevance: high - in-equation assimilation is the natural slot for dense calibrated LCS observations.}
+{10.1093/nsr/nwag570}
+
+\paperentry{Sharma Singapore aerosol type classification ground remote sensing reanalysis 2026}
+{Aerosol Types Classification in the Tropical Climate of Singapore by Integrating Ground-Based Remote Sensing and Reanalysis Datasets}
+{Aerosol Air Qual Res}
+{\textsc{metadata only.} Title and authors only; no abstract retrievable at harvest. Aerosol-type classification in tropical Singapore combining ground-based remote sensing (AERONET sun photometer presumably) with reanalysis (MERRA-2/CAMS). Classification scheme, period and the share of transboundary smoke cannot be stated. Limitation: unverifiable beyond the title; columnar typing does not map one-to-one onto surface PM. Relevance: moderate - aerosol type drives optical-LCS response (hygroscopicity, refractive index) and so the calibration regime a tropical network needs.}
+{10.1007/s44408-026-00164-9}
+
+\paperentry{Kheder Foehn generative km-scale global PM$_{2.5}$ forecast 2026}
+{Global probabilistic forecasting of air pollution}
+{arXiv (preprint)}
+{Foehn, a generative model trained on global kilometre-scale PM$_{2.5}$ estimates that also computes air-mass origin. In one year of retrospective forecasts it beat the operational forecast at three of four stations; its ensembles are reported as calibrated, and the ensemble mean detects local pollution extremes four days ahead about as well as the operational system does one day ahead. Limitation: preprint; 'kilometre-scale estimates' are themselves satellite/model fusion products, so skill is partly measured against the training distribution, and the authors concede real-time km-scale inputs do not yet exist - operational use is hypothetical. Skill metrics and station counts are not given in the abstract. Relevance: high - calibrated LCS networks are the plausible real-time km-scale input this model says it lacks.}
+{10.48550/arXiv.2610.25941}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Arif Agra leather footwear facilities indoor PM$_{2.5}$ CO$_2$ formaldehyde 2026}
+{Indoor Air Quality and Thermal Environment Across Three Leather Footwear Facilities in Agra India}
+{Research Square (preprint)}
+{Three leather-footwear facilities (cottage, small, organised), 27 months, 608 sessions. Facility dominated variance for every parameter (partial eta2 0.10-0.87); cottage vs organised means PM$_{2.5}$ 2.0-fold, CO$_2$ 1.9-, formaldehyde 3.0- and VOC 3.5-fold higher. Season dominated PM and thermal variables, tracking ventilation; indoor/outdoor PM$_{2.5}$ ratios 0.48-1.00 across facilities; CO$_2$ above the ASHRAE threshold in 99.5\% of cottage sessions vs 0\% organised. Limitation: preprint; one facility per tier, so scale is confounded with building; instruments and their calibration are not stated, and spot sessions are not shift-weighted personal exposure. Relevance: moderate - informal-sector workplaces are where portable LCS are the only feasible monitor.}
+{10.21203/rs.3.rs-10962722/v1}
+
+\paperentry{Kim pig building air cleaner TSP PM$_{2.5}$ productivity 2026}
+{Association between indoor air pollutants and pig productivity index by on-site application of air cleaner}
+{J Anim Sci Technol}
+{One commercial pig building, control vs air-cleaner-treated room, monitored six months across rearing stages. Air-cleaner reduction efficiency rose with stage, 5-10\% at farrowing to 30-45\% at fattening; treated rooms showed better weight gain, feed conversion, activity index and mortality. Weight gain and activity correlated with TSP and PM$_{2.5}$ (and airborne fungi). Limitation: one room per arm, no randomisation or replication - room effects are inseparable from treatment; the cleaner technology and PM instrumentation are not stated. Relevance: low - livestock housing is a large agricultural PM source and an occupational exposure for farm workers, but this design supports neither inference.}
+{10.5187/jast.2500087}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Prieto Perez Huszar future central European air quality emission changes 2026}
+{The role that changes in emissions play in future central European air-quality}
+{Atmos Environ}
+{\textsc{metadata only.} Title and authors only (Prieto Perez, Huszar, Karlicky); no abstract retrievable at harvest. The group runs regional climate-chemistry (RegCM/WRF-CAMx) scenarios; the title separates the emission-change contribution to future central European air quality from climate change. Pollutants, scenarios and horizons cannot be stated. Limitation: unverifiable beyond the title; scenario attribution depends on the emission pathway chosen. Relevance: low - policy context for the PM levels European LCS networks will measure.}
+{10.1016/j.atmosenv.2026.122404}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 1 record}{Slate}
+
+\paperentry{Wen landscape fire PM$_{2.5}$ renal hospitalisations six-country time-series 2026}
+{Landscape Fire-Sourced PM$_{2.5}$ and Cause-Specific Renal Hospitalizations: A Multicountry Two-Stage Time-Series Analysis of 12.5 Million Admissions}
+{Environ Sci Technol}
+{12.5 million renal admissions across 1020 locations in six countries, 2000-2019; two-stage time-series with fire-sourced PM$_{2.5}$ separated from the non-fire remainder. Per 10 $\mu$g\,m$^{-3}$ cumulative lag 0-5, RR 1.011 (1.007-1.015) for all renal admissions, strongest for acute kidney injury; associations larger for fire-sourced than non-fire PM$_{2.5}$, larger in warmer areas and graded by GDP per capita. Attributable burden 1.38 admissions per 100,000 per year. Limitation: the fire/non-fire split comes from a chemical-transport-plus-ML partition, not measured tracers, so 'fire PM is more toxic' partly inherits the partition's error structure; heat co-occurs with smoke and dehydration drives AKI, and residual confounding by temperature is the obvious threat. Relevance: moderate - smoke-episode exposure is where LCS density most improves over sparse FRM/FEM coverage.}
+{10.1021/acs.est.6c04677}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{20 October 2026}, single day (Tuesday). Harvester legs: \textbf{PubMed} health
+\textbf{20}, sensing \textbf{4}; \textbf{Europe PMC} \textbf{3} (index lag; 0 AGRICOLA); \textbf{Crossref by ISSN}
+\textbf{52} (2 ES\&T front-matter dropped); \textbf{arXiv} no entry dated 20 October; \textbf{OpenAlex} HTTP 429.
+76 unique, 5 already carried, 71 fresh. \textbf{PubMed connector} (EDAT 20 Oct) 18 PMIDs, 5 appended ---
+\textbf{76} candidates screened, \textbf{18 admitted}, \textbf{58 rejected} with logged reasons, plus \textbf{1 held}
+record released (arXiv 2610.25941), giving \textbf{19}. \textbf{Consensus} calibration sweep: 10 hits, 0 new.
+\textbf{DOI gate} 0 fail / 1 warn (arXiv DataCite DOI live at doi.org, not in Crossref). \textbf{Trial watch}:
+0 registrations updated 20--21 October. Abstract retry (PubMed, Europe PMC, Semantic Scholar) left
+\textbf{6 carried on metadata alone}. \textbf{Scholar Gateway} not called. Abstracts remain the copyright of their
+publishers.\par}
+\end{keybox}
+
+\end{document}

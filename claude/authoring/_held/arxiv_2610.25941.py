@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# RELEASED 2026-10-21: shipped in the 20 Oct issue (authoring/2026-10-20/p06.py). Do not re-add.
 # HELD 2026-10-20: arXiv DataCite DOI not yet registered (404). Re-run check_dois and add to the next issue.
 P = [
  dict(pmid="", doi="10.48550/arXiv.2610.25941", journal="arXiv (preprint)",

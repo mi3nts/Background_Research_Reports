@@ -3096,3 +3096,11 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **New hold case:** arXiv 2610.25941 (Foehn, km-scale generative PM2.5 forecaster, tier A) failed the DOI gate — DataCite `10.48550/arXiv.*` DOIs are not registered on the posting day (404). Authored entry kept in `authoring/_held/arxiv_2610.25941.py`; logged as HELD in `rejected.jsonl`. **Next run: re-run check_dois on it and add it to that day's issue** (copy the file into `authoring/<date>/`).
 - Consensus 10 hits, 0 new (Kumpika 2026 already archived). Trial watch 19–20 Oct 0 hits (`trials.json` 32 windows). Scholar Gateway not called.
 - Next: 20 Oct daily (run ≥22:00 CDT 20 Oct); W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00.
+
+## Run 2026-10-21 (04:0x UTC = 23:0x CDT 20 Oct) — daily 20 Oct
+
+- 22:00 rule: run started 23:06 CDT on 20 Oct → newest buildable = 20 Oct (complete day). Harvest leg-by-leg: PubMed 20 health / 4 sensing, EPMC **3** (index lag), Crossref-ISSN 52, arXiv no in-window entry, OpenAlex 429 → 76 unique → 5 carried → 71 fresh; connector (EDAT 20 Oct, `_conn_1021.py`) 18 PMIDs, 5 appended.
+- **76 screened → 18 admitted / 58 rejected** (`_rej_1021.py`) + **held arXiv 2610.25941 released** (doi.org now 302; gate warn only, not in Crossref) = **19**, 10 pp, 2 effects (RR fire-PM renal, RR Kawasaki CAD), 5 tier A, 6 metadata-only (32%). DOI gate 0 fail / 1 warn. 0 overfull/underfull; proof contact sheet clean. Held queue now empty.
+- `plots.py`: design keys Chemical-transport modelling, Cross-sectional (birth cohort), Intervention field trial (non-randomised), Reanalysis / inventory analysis; geo needles saint petersburg/moscow → "Russia (European)" → Europe (Russia not mapped as a whole).
+- Consensus 10 hits, 0 new; trial watch 20–21 Oct 0 hits (`trials.json` 33 windows). Scholar Gateway not called.
+- Next: 21 Oct daily (run ≥22:00 CDT 21 Oct); W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00.

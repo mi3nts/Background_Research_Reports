@@ -680,6 +680,11 @@ design_group.update({
     "Randomised crossover trial": "Trial / intervention",
     "Cross-sectional (occupational)": "Observational - cross-sectional",
     "Spectroscopic calibration-transfer study": "Measurement campaign",
+    # added 2026-10-21 (20 Oct issue)
+    "Chemical-transport modelling": "Modelling / inventory",
+    "Cross-sectional (birth cohort)": "Observational - cross-sectional",
+    "Intervention field trial (non-randomised)": "Trial / intervention",
+    "Reanalysis / inventory analysis": "Modelling / inventory",
 })
 
 _design_unmapped = set()
@@ -912,6 +917,7 @@ geo_group = {
     "Gambia": "Sub-Saharan Africa",  # 2026-10-16
     "Peru": "Latin America",  # 2026-10-16b
     "North Macedonia": "Europe",  # 2026-10-16
+    "Russia (European)": "Europe",  # 2026-10-21: Saint Petersburg; Russia is not mapped as a whole (transcontinental)
     "United Arab Emirates": "Middle East & N. Africa",  # 2026-10-16
     "Greenland": "North America",  # 2026-09-29, geographic not political binning
     "Sri Lanka": "South Asia",  # 2026-08-30: fell through to Global / multi-region
@@ -1028,6 +1034,7 @@ GEO_SUBSTR = [
     ("germany", "Germany"), ("spain", "Spain"), ("cartagena", "Spain"),
     ("france", "France"), ("italy", "Italy"), ("poland", "Poland"),
     ("hungary", "Hungary"), ("budapest", "Hungary"),
+    ("saint petersburg", "Russia (European)"), ("moscow", "Russia (European)"),  # 2026-10-21
     ("serbia", "Serbia"), ("belgrade", "Serbia"),  # 2026-10-12
     ("netherlands", "Netherlands"), ("denmark", "Denmark"), ("norway", "Norway"),
     ("greece", "Greece"), ("sweden", "Sweden"), ("stockholm", "Sweden"),
