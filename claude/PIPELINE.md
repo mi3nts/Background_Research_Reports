@@ -3104,3 +3104,12 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - `plots.py`: design keys Chemical-transport modelling, Cross-sectional (birth cohort), Intervention field trial (non-randomised), Reanalysis / inventory analysis; geo needles saint petersburg/moscow → "Russia (European)" → Europe (Russia not mapped as a whole).
 - Consensus 10 hits, 0 new; trial watch 20–21 Oct 0 hits (`trials.json` 33 windows). Scholar Gateway not called.
 - Next: 21 Oct daily (run ≥22:00 CDT 21 Oct); W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00.
+
+## Run 2026-10-22 (23:02 UTC = 18:02 CDT) — daily 21 Oct
+
+- The 04:04 UTC 22 Oct scheduled run did not fire until 23:02 UTC; 22:00 rule → newest buildable = 21 Oct; **22 Oct left to the next run ≥22:00 CDT**. Harvest leg-by-leg: PubMed **2** health / 0 sensing (connector EDAT 21 Oct confirms 2 — PubMed indexing lull), EPMC 53 (2 AGR dropped), Crossref-ISSN 61, arXiv **429**, OpenAlex 429 → 113 unique → 10 carried → 103 fresh.
+- **New defect:** `_xrfill_1017.py` Crossref title match returned ACS supplementary DOIs (`10.1021/envhealth.*.s001`) for 5 EPMC records; stripped `.s001` by hand, then PubMed esearch by DOI gave PMIDs (EDAT 22 Oct) and abstracts. Make `_xrfill` reject `\.s\d+$` DOIs.
+- **104 screened → 18 admitted / 86 rejected** (`_rej_1022.py` + 1 hand-logged), 9 pp, 5 effects (4 HR, 1 mL diff-scale), 3 tier A, 5 metadata-only (28%). 7 EPMC re-surfacings of 20 Oct rejections re-rejected.
+- **DOI gate caught a Consensus duplicate again**: Ginsburg 2026 PurpleAir global calibration (10.1080/02786826.2026.2676293) shipped 29 Jul. Check Consensus hits against `seen.json` DOIs *before* authoring.
+- Proof (contact sheet + forest crops) clean; 0 overfull/underfull. Trial watch 21–22 Oct: 2 hits (AIRWEIGHS NCT02763917 purifier RCT, Taif COPD survey) → `trials.json` 19 NCT / 34 windows. Scholar Gateway not called.
+- Next: 22 Oct daily (≥22:00 CDT 22 Oct); W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00.

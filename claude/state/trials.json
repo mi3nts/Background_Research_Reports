@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 17,
+ "trials": 19,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -280,6 +280,14 @@
    "filter": "condition='air pollution OR particulate matter OR PM2.5' x AREA[LastUpdatePostDate]RANGE[2026-10-20,MAX]",
    "hits": 0,
    "kept": 0
+  },
+  {
+   "window": "2026-10-21 -> 2026-10-22",
+   "queried": "2026-10-22",
+   "source": "ClinicalTrials.gov MCP connector, search_trials",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5' x AREA[LastUpdatePostDate]RANGE[2026-10-21,2026-10-22]",
+   "hits": 2,
+   "kept": 2
   }
  ],
  "NCT05867381": {
@@ -426,7 +434,7 @@
   "start_date": "2026-11-15",
   "last_update": "updated in 4-12 Oct window (start moved 2026-09-15 -> 2026-11-15)",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
+   "Pre-bronchodilator FEV₁ Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },
@@ -661,5 +669,40 @@
   ],
   "window": "2026-10-09..2026-10-11",
   "endpoint_note": "analyze: exposure endpoint is modelled ambient at GPS location, not personal measured dose; feasibility RCT n=80, 1:1 stratified; no health co-primary"
+ },
+ "NCT02763917": {
+  "first_seen": "2026-10-22",
+  "title": "AIRWEIGHS: Investigating Obesity as a Susceptibility Factor for Air Pollution in Childhood Asthma",
+  "status": "ACTIVE_NOT_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Johns Hopkins University",
+  "enrollment": 198,
+  "interventions": [
+   "Active Air Purifier",
+   "Placebo Air Purifier"
+  ],
+  "conditions": [
+   "Asthma"
+  ],
+  "start_date": "2016-08",
+  "primary_completion_date": "2026-09",
+  "note": "Placebo-controlled home air-purifier trial in obese vs non-obese asthmatic children; record updated in the 2026-10-21..22 window, primary completion (Sep 2026) just passed - results posting is the thing to watch."
+ },
+ "NCT07886346": {
+  "first_seen": "2026-10-22",
+  "title": "Prevalence of Chronic Obstructive Pulmonary Disease and Risk Factors Among Saudi Aged > 18 Years in Taif City",
+  "status": "COMPLETED",
+  "study_type": "OBSERVATIONAL",
+  "phase": null,
+  "sponsor": "Taif University",
+  "enrollment": 777,
+  "interventions": [],
+  "conditions": [
+   "COPD"
+  ],
+  "start_date": "2024-10-24",
+  "primary_completion_date": "2026-09-20",
+  "note": "Observational COPD prevalence survey; air pollution only as a listed risk factor. Logged for completeness, low relevance."
  }
 }

@@ -1,0 +1,327 @@
+{
+ "date": "2026-10-21",
+ "entry_window": "2026-10-21 -> 2026-10-21",
+ "PAPERS": [
+  {
+   "pmid": "42903701",
+   "doi": "10.1021/envhealth.5c00638",
+   "journal": "Environ Health (ACS)",
+   "short": "Zhu source-specific PM2.5 atrial fibrillation Medicare cohort 2026",
+   "title": "Source-Specific PM2.5 Exposure and Atrial Fibrillation Risk in U.S. Older Adults: A Nationwide Cohort Study",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Retrospective cohort",
+   "pm": "Source-apportioned PM2.5 (Multilinear Engine on CSN/IMPROVE speciation; IDW to ZIP code, 100 km)",
+   "geo": "USA (nationwide Medicare)",
+   "endpoint": "Incident atrial fibrillation",
+   "tier": "A",
+   "n": "26.3 million Medicare beneficiaries, 2000-2019, 171.6 M person-years, 4.44 M incident AF. Per IQR of source-specific PM2.5: secondary sulfate HR 1.056 (1.053-1.058), heavy oil/coal combustion 1.048 (1.046-1.050), secondary nitrate 1.032 (1.030-1.034), vehicle 1.029 (1.028-1.030); biomass burning and dust modest, SOA null overall but positive in the West. Limitation: source profiles come from sparse speciation monitors interpolated by inverse distance over 100 km, so source contrasts are largely regional contrasts; sulfate and nitrate fields are smooth and the per-IQR scaling differs by source, so 'sulfate is most toxic' is not a per-microgram statement. Claims-based AF under-ascertains paroxysmal AF. Relevance: high - speciation, not mass, is what optical LCS cannot give; source-resolved risk raises the value of co-located filter or ACSM nodes."
+  },
+  {
+   "pmid": "42903813",
+   "doi": "10.1021/envhealth.6c00011",
+   "journal": "Environ Health (ACS)",
+   "short": "Lin air pollution cervical cancer recurrence mortality Fudan cohort 2026",
+   "title": "Long-Term Exposure to Ambient Air Pollution and Cervical Cancer Outcomes in Chinese Women: A Prospective Study on Recurrence and Mortality Risks",
+   "sub": "Other clinical endpoints",
+   "design": "Prospective cohort",
+   "pm": "Residential PM2.5 and PM10 from high-resolution spatiotemporal models (post-surgery)",
+   "geo": "China (Shanghai, single hospital)",
+   "endpoint": "Cervical cancer recurrence and all-cause death",
+   "tier": "B",
+   "n": "3,758 women with primary cervical cancer (2019-2022), median follow-up ~3 y; 217 recurrences, 113 deaths. Per IQR PM2.5: recurrence SHR 1.93 (1.40-2.66, Fine-Gray), death HR 2.55 (1.78-3.67); PM10 SHR 1.65 (1.13-2.42) and HR 2.21 (1.38-3.54); NO2 and SO2 also positive, O3 null. Limitation: hazard ratios near 2-2.5 per IQR from 113 deaths are implausibly large for a residential long-term contrast and point to confounding by referral geography - patients from outside Shanghai (higher PM) likely differ in stage, HPV management and follow-up intensity; single-centre, short follow-up, no adjustment for distance to the hospital reported in the abstract. Relevance: low - model-based residential exposure, no sensing implication."
+  },
+  {
+   "pmid": "42903834",
+   "doi": "10.1021/envhealth.5c00676",
+   "journal": "Environ Health (ACS)",
+   "short": "Li size-specific PM lung function China Pulmonary Health Study 2026",
+   "title": "Associations between Size-Specific Particulate Matter and Lung Function: Results from the China Pulmonary Health Study",
+   "sub": "Respiratory & allergic",
+   "design": "Observational - cross-sectional",
+   "pm": "Long-term PM1, PM1-2.5, PM2.5, PM2.5-10, PM10 (per IQR)",
+   "geo": "China (national, CPH Study)",
+   "endpoint": "Spirometry: FEV1, FVC, FEV1/FVC, FEF75, FEF25-75",
+   "tier": "A",
+   "n": "50,991 adults >=20 y from the China Pulmonary Health Study; multivariable linear models on long-term size-resolved PM. Per IQR PM1: FEV1 -36.84 mL (-45.91 to -27.76), FVC -34.63 mL (-45.48 to -23.79); large-airway decrements grew as particle size fell, whereas the coarse fraction PM2.5-10 gave the largest small-airway (FEF75, FEF25-75) decrements. Limitation: size fractions are derived from correlated modelled surfaces (PM1 and PM2.5 share most of their mass), and the abstract reports no multi-fraction model, so 'size-specific' ranking may reflect differential exposure-model error rather than biology; cross-sectional. Relevance: high - optical LCS report PM1 and coarse bins natively, and this is evidence that those channels carry distinct health signal worth calibrating, not discarding."
+  },
+  {
+   "pmid": "42902466",
+   "doi": "10.1097/jom.0000000000003913",
+   "journal": "J Occup Environ Med",
+   "short": "Lin PM2.5 frailty trajectories CHARLS 2026",
+   "title": "The association of particulate matter 2.5 exposure with frailty trajectories in middle-aged and older Chinese adults and the potential modification by lifestyle and socioeconomic status",
+   "sub": "Other clinical endpoints",
+   "design": "Prospective cohort",
+   "pm": "Satellite-derived PM2.5 (Dalhousie/ACAG surface, per 10 ug/m3)",
+   "geo": "China (national, CHARLS)",
+   "endpoint": "Frailty-index trajectories (group-based trajectory modelling)",
+   "tier": "B",
+   "n": "10,659 CHARLS participants; deficit-accumulation frailty index, three GBTM trajectories (stable low 64%, increasing to frailty 29%, continuously worsening 7%). Per 10 ug/m3 PM2.5, odds of the two adverse trajectories rose 15.2% and 12.3% (ordered logistic; no CIs in the abstract). Higher SES attenuated the association (RERI -0.067); unhealthy sleep duration amplified it (RERI 0.163). Limitation: GBTM classes are model artefacts with posterior misclassification carried into a second-stage regression without uncertainty propagation; CHARLS addresses are coarse (city/county), so exposure contrast is mostly between regions with different healthcare and diet. Relevance: low - regional satellite exposure, no sensing implication."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3389/fpubh.2026.1950282",
+   "journal": "Front Public Health",
+   "short": "Sun long-term air pollution lipid profiles Shanxi repeated measures 2026",
+   "title": "Long-term exposure to ambient air pollution and lipid profiles: a longitudinal study in a heavily industrialized region of northern China",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort",
+   "pm": "3-y mean PM2.5, PM10 (ChinaHighAirPollutants, geocoded residence)",
+   "geo": "China (Shanxi Province)",
+   "endpoint": "TG, TC, LDL-C, HDL-C; dyslipidaemia",
+   "tier": "B",
+   "n": "Repeated-measures study of 9,040 adults with 19,113 lipid measurements from a health-screening programme, 2019-2023. Per 10 ug/m3 PM2.5: TG +1.85%, TC +1.70%, LDL-C +1.81%, HDL-C -1.55% (linear mixed models); PM10, NO2, SO2 and O3 in the same direction, CO weaker; age modified the HDL-C association after FDR correction. Limitation: a health-screening population self-selects; CHAP is itself trained on the sparse Shanxi monitor network that underrepresents coal-industry hotspots, and with five correlated pollutants the 'PM2.5 most pronounced' ranking is not identified from single-pollutant models. Lipids are sensitive to fasting status, not mentioned. Relevance: moderate - industrial-region exposure surfaces are where LCS densification would most change CHAP errors."
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-10964316/v1",
+   "journal": "Research Square (preprint)",
+   "short": "Mai population-weighted PM2.5 O3 China 2015-2024 preprint 2026",
+   "title": "Population Weighted Ambient PM2.5 and O3 Concentrations in China from 2015 to 2024",
+   "sub": "Exposure assessment & modelling",
+   "design": "Exposure model (secondary data)",
+   "pm": "Annual ~1 km CHAP PM2.5 and O3 weighted by WorldPop",
+   "geo": "China (national)",
+   "endpoint": "Population-weighted vs geographic-mean concentration trends",
+   "tier": "C",
+   "n": "Ecological geospatial analysis of annual ~1 km CHAP PM2.5/O3 rasters matched to WorldPop counts, 2015-2024. Population-weighted PM2.5 fell from 53.06 to 31.25 ug/m3 (-41.1%) while population-weighted O3 rose from 77.06 to 96.75 ug/m3 (+25.6%); the population-weighted minus geographic gap narrowed for PM2.5 (5.77 to 2.43) and widened for O3 (1.01 to 2.72). 97.4% of 0.2-degree blocks show falling PM2.5 with rising O3 at a 0.5 ug/m3/y threshold. Limitation: purely descriptive and inherits CHAP's ML smoothing; no uncertainty on the weighted means; preprint, not peer reviewed. Relevance: moderate - the narrowing urban-rural PM2.5 gap shifts LCS value toward peri-urban and rural siting."
+  },
+  {
+   "pmid": "42903623",
+   "doi": "10.1021/envhealth.6c00080",
+   "journal": "Environ Health (ACS)",
+   "short": "Liu PM2.5 IL-17 microglia neuroinflammation 2026",
+   "title": "IL-17 Signaling Pathway: A Potential Signaling Pathway Mediating Neuroinflammation Induced by PM2.5",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal + in vitro",
+   "pm": "Collected PM2.5 suspension (dose not stated in abstract)",
+   "geo": "Laboratory",
+   "endpoint": "Microglial viability, IL-17/NF-kB/MAPK activation, neurobehaviour",
+   "tier": "C",
+   "n": "BV2 microglia exposed to PM2.5 lost viability and raised inflammatory cytokines; microarray DEGs enriched for inflammatory GO terms and the KEGG IL-17 pathway with downstream NF-kB and MAPK. An anti-IL-17A antibody reversed cytokine release, microglial activation and behavioural deficits (implying an in vivo arm). Limitation: the abstract gives no PM2.5 source, composition or dose, so environmental relevance cannot be judged; BV2 is an immortalised murine line with an exaggerated inflammatory phenotype, and IL-17 is usually T-cell/gamma-delta derived, so microglial IL-17 signalling needs cell-type attribution. Relevance: low - mechanistic only."
+  },
+  {
+   "pmid": "42903402",
+   "doi": "10.1021/envhealth.5c00779",
+   "journal": "Environ Health (ACS)",
+   "short": "Ge preconception folic acid air pollution birthweight 2026",
+   "title": "Preconception Folic Acid Supplementation Associated with Attenuated Effects of Air Pollution on Birthweight Outcomes",
+   "sub": "Reproductive & developmental",
+   "design": "Metadata only (no abstract)",
+   "pm": "Ambient air pollution (metrics not stated in record)",
+   "geo": "China (inferred from author group; not stated in record)",
+   "endpoint": "Birthweight outcomes",
+   "tier": "C",
+   "n": "Title and authors only (Ge, Zhang, Liao ... Berhane, Bai et al.); no abstract retrievable from PubMed, Europe PMC, Crossref or Semantic Scholar at harvest. The title claims effect modification of the air pollution-birthweight association by preconception folic acid use. Pollutants, cohort, n and effect sizes cannot be stated. Limitation: unverifiable beyond the title; supplement use is self-reported and strongly socially patterned, so 'attenuation' by folate is exposed to confounding by SES and antenatal-care quality unless handled explicitly. Relevance: low - no sensing content evident."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129384",
+   "journal": "Environ Pollut",
+   "short": "Pyae Tin Saw portable PM2.5 cross-site prediction fixed station 2026",
+   "title": "Short-term PM2.5 data continuity: Cross-site prediction of portable measurements using a nearby fixed monitoring station",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Portable PM2.5 monitor vs nearby fixed-station PM2.5",
+   "geo": "Thailand (inferred from author affiliation; not stated in record)",
+   "endpoint": "Cross-site prediction / gap-filling of portable PM2.5",
+   "tier": "C",
+   "n": "Title and authors only (Pyae Tin Saw, Kallawicha); day-0 Elsevier deposit with no abstract anywhere at harvest. The title describes predicting short-term portable PM2.5 records from a nearby fixed monitoring station to maintain data continuity. Sensor model, distance, n, and skill metrics cannot be stated. Limitation: unverifiable beyond the title; cross-site transfer functions are typically valid only within the regional-background regime and fail for local sources, which is exactly when portable data matter. Relevance: high - gap-filling an LCS or portable record against a regulatory anchor is a core network-operations problem."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envpol.2026.129391",
+   "journal": "Environ Pollut",
+   "short": "Tripathi satellite-reanalysis sulfate aerosol India ground measurements 2026",
+   "title": "Improving Satellite-Reanalysis Sulfate Aerosol Estimates over India Using Ground Measurements",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Sulfate aerosol (satellite/reanalysis vs ground)",
+   "geo": "India",
+   "endpoint": "Bias-corrected sulfate PM component surface",
+   "tier": "C",
+   "n": "Title and authors only (Tripathi, Sahu, Sharma, Gupta); no abstract indexed at harvest. The title indicates ground measurements used to correct satellite-reanalysis (likely MERRA-2/CAMS-type) sulfate aerosol over India. Data sources, method and skill cannot be stated. Limitation: unverifiable beyond the title; Indian speciation networks are sparse and urban-biased, so any correction trained on them risks transferring urban bias to rural cells. Relevance: moderate - component-resolved surfaces are the complement LCS mass networks lack; pairs with the sulfate-dominant AF signal in today's Medicare cohort."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosenv.2026.122431",
+   "journal": "Atmos Environ",
+   "short": "Dayanandana CMIP6 dust optical depth MENA evaluation 2026",
+   "title": "Evaluation of Dust Optical Depth in CMIP6 Simulations over the Middle East-North Africa Region",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Dust optical depth (CMIP6 models vs observations)",
+   "geo": "Multi-country (Middle East and North Africa)",
+   "endpoint": "Model skill for dust optical depth",
+   "tier": "C",
+   "n": "Title and authors only (Dayanandana, Parottil, Abbas, Al-Harrasi et al.); no abstract at harvest. Evaluates CMIP6 dust optical depth over MENA, presumably against MODIS/MERRA-2 DOD. Models, metrics and biases cannot be stated. Limitation: unverifiable beyond the title; column optical depth maps to surface PM10 only through assumed vertical profiles and size distributions, so climate-model DOD skill says little about surface exposure. Relevance: low-moderate - MENA dust is where optical LCS mass error from coarse particles is largest."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c07635",
+   "journal": "Environ Sci Technol",
+   "short": "Du Air Health Index acute myocardial infarction 325 cities 2026",
+   "title": "Establishing an Air Health Index for Predicting the Risk of Acute Myocardial Infarction Onset Associated with Air Pollution and Ambient Temperature",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Health impact model",
+   "pm": "Daily PM2.5 (with NO2, O3, temperature) from high-resolution surfaces",
+   "geo": "China (325 cities)",
+   "endpoint": "AMI onset; composite Air Health Index (0-10+)",
+   "tier": "A",
+   "n": "1,207,625 AMI cases across 325 Chinese cities; excess risks from PM2.5, NO2, O3 and temperature aggregated into a normalised AHI. Per IQR, AHI associated with +5.97% (5.32-6.63%) AMI incidence vs +3.33% (2.93-3.72%) for AQHI and +2.04% (1.73-2.35%) for AQI; near-linear, no threshold; validated on an independent external dataset; 8,534 per 100,000 AMI cases attributed. Limitation: the index is fitted to the same outcome it is scored on, so in-sample superiority over AQI/AQHI is expected; IQR-scaled comparisons across indices with different distributions are not like-for-like, and 'attributable' fractions for a composite that includes temperature mix avoidable and non-avoidable risk. Relevance: high - an outcome-weighted index is a natural output layer for real-time LCS networks, provided the PM2.5 input is calibrated."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1021/acs.est.6c08602",
+   "journal": "Environ Sci Technol",
+   "short": "Zhang respirable magnetite emissions coal-fired power China 2026",
+   "title": "Emissions of Respirable Magnetite from the Coal-Fired Power Sector in China: Spatial Inequalities and Mitigation Pathways",
+   "sub": "Burden, policy & mitigation",
+   "design": "Emission inventory",
+   "pm": "Respirable magnetite (Fe3O4) particle emissions",
+   "geo": "China (national, provincial)",
+   "endpoint": "Annual magnetite emission and mitigation scenarios",
+   "tier": "B",
+   "n": "Multifactor emission model for respirable magnetite from Chinese coal-fired power: 2,828.7 (2,307.1-3,371.4) t/y, spatially concentrated by tiered emission standards. Guizhou and Sichuan supply 4% of coal power but tightening their standards alone would cut >31% of national magnetite emissions. Limitation: emission factors for magnetite specifically (as opposed to total PM or Fe) rest on few stack measurements, and the uncertainty interval looks narrow for a species-level inventory; health relevance is asserted from brain-magnetite literature rather than exposure-response data. Relevance: moderate - magnetite is invisible to optical LCS mass; magnetic or filter-based speciation would be needed to verify hotspots."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103244",
+   "journal": "Atmos Pollut Res",
+   "short": "Ghaffarpasand Pope vehicle remote sensing real-world emissions high emitters 2026",
+   "title": "Emerging Evidence on Real-World Exhaust Emissions and High Emitting Vehicles from Remote Sensing Observations",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "On-road remote sensing of exhaust (pollutants not stated in record)",
+   "geo": "Not stated (review)",
+   "endpoint": "Real-world exhaust emission factors; high-emitter identification",
+   "tier": "C",
+   "n": "Title and authors only (Ghaffarpasand, Pope); no abstract at harvest. Appears to synthesise vehicle emission remote-sensing (VERSS) evidence on real-world exhaust and high emitters. Whether PM/smoke opacity or only NOx/CO/HC is covered cannot be stated. Limitation: unverifiable beyond the title; VERSS PM is inferred from UV opacity with large per-pass uncertainty, and single-pass snapshots overweight hot-running conditions. Relevance: moderate - high-emitter fractions explain the kerbside spikes roadside LCS record but cannot attribute."
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-11381994/v1",
+   "journal": "Research Square (preprint)",
+   "short": "Idowu medical waste incinerator airborne heavy metals Monte Carlo Nigeria 2026",
+   "title": "Monte Carlo-Based Probabilistic Health Risk Assessment of Airborne Heavy Metals from a Medical Waste Incinerator in Southwestern Nigeria",
+   "sub": "Burden, policy & mitigation",
+   "design": "Health impact model",
+   "pm": "PM-bound heavy metals (passive glass-slide deposition samplers)",
+   "geo": "Nigeria (Ido-Ekiti)",
+   "endpoint": "Inhalation HQ and ILCR distributions",
+   "tier": "C",
+   "n": "Particulate matter collected on passive glass slides around a medical-waste incinerator for two months; ten metals analysed, converted to airborne concentrations, and propagated through 10,000 Monte Carlo draws. Median HQ ~400, 95th percentile 850; exceedance probability near 100%; ILCR above benchmarks. Limitation: passive deposition slides measure settled mass, not airborne concentration - the conversion to C_air requires an assumed deposition velocity that dominates the result, and an HQ of 400 almost certainly reflects that conversion rather than real inhalation dose. Preprint. Relevance: moderate as a cautionary example - fence-line LCS or low-volume samplers would have given a defensible air concentration."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3389/fpubh.2026.1920424",
+   "journal": "Front Public Health",
+   "short": "Jiang air pollution meteorology hand foot mouth disease Shenzhen DLNM 2026",
+   "title": "Ambient air pollution and meteorological factors associated with hand, foot, and mouth disease risk in Shenzhen, China: a time-series study",
+   "sub": "Other clinical endpoints",
+   "design": "Time-series",
+   "pm": "Daily city-wide PM2.5 and PM10 (fixed monitors)",
+   "geo": "China (Shenzhen)",
+   "endpoint": "Daily HFMD incidence",
+   "tier": "C",
+   "n": "Shenzhen daily HFMD counts 2013-2022 with six pollutants and meteorology in DLNMs, including pre/post EV71 vaccine and COVID-19 periods. PM2.5 and PM10 showed risk peaks at low concentrations and 'protective' effects at extreme highs; SO2 and CO raised cumulative risk at extremes; temperature showed a dual-peak pattern and high humidity raised risk. No effect sizes with CIs in the abstract. Limitation: HFMD is a contact-transmitted enteroviral disease with strong seasonality driven by school terms; non-monotone, sign-flipping PM curves are the signature of residual seasonal confounding and DLNM over-flexibility, not biology. Relevance: low."
+  },
+  {
+   "pmid": "42899860",
+   "doi": "10.1021/acs.langmuir.6c03984",
+   "journal": "Langmuir",
+   "short": "Jiang PLA melt-blown nonwoven filtration durability humidity airflow 2026",
+   "title": "Service Durability of PLA Melt-Blown Nonwovens: Roles of Humidity and Airflow Velocity in Degradation and Filtration Performance",
+   "sub": "Burden, policy & mitigation",
+   "design": "Chamber / laboratory",
+   "pm": "Filtration of particulate matter by PLA melt-blown media",
+   "geo": "Laboratory",
+   "endpoint": "Fibre degradation kinetics, pressure drop, filtration efficiency",
+   "tier": "C",
+   "n": "Full-factorial service-condition study (humidity, airflow velocity, PM loading, natural microbes) on PLA melt-blown filter media. Degradation stays early-stage, first-order, k up to 3.88e-2 /h, surface-erosion dominated. Humidity drives degradation (90% of short-term water-contact-angle variance; 77% of yield-strength and 91% of pressure-drop variance long-term); airflow velocity governs dynamic filtration via particle-media contact. Limitation: the abstract gives no filtration efficiency numbers by particle size, so it is unclear whether MPPS performance falls within a realistic mask or HVAC service life. Relevance: low - mitigation materials; humid-climate filter life matters for purifier intervention trials."
+  },
+  {
+   "pmid": "42898932",
+   "doi": "10.3389/fpubh.2026.1918362",
+   "journal": "Front Public Health",
+   "short": "Alquwayi respirable crystalline silica occupational exposure Saudi Arabia review 2026",
+   "title": "Potential risk of occupational exposure to respirable crystalline silica in Saudi Arabia: a comprehensive review of the current status and future challenges",
+   "sub": "Occupational & indoor",
+   "design": "Narrative review",
+   "pm": "Respirable crystalline silica (respirable dust fraction)",
+   "geo": "Saudi Arabia",
+   "endpoint": "Occupational RCS exposure potential; silicosis surveillance gaps",
+   "tier": "C",
+   "n": "Single-author review integrating literature, labour and mining statistics, mineralogy and regulation through a 'silica hazard triangle' (workforce, materials, activities). Concludes that mining, construction, cement, glass, engineered stone and photovoltaic manufacturing expansion plus arid-climate dust raise RCS exposure potential, while measured exposure, epidemiology and surveillance data are scarce. Limitation: no new measurements and no quantitative exposure estimates - the conclusion is an inference from sector size, not from data. Relevance: low-moderate - optical LCS cannot speciate silica, so RCS monitoring needs gravimetric/FTIR sampling regardless."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "AF incidence\nsulfate PM2.5",
+   "exposure": "Secondary-sulfate PM2.5 (per IQR)",
+   "est": 1.056,
+   "lo": 1.053,
+   "hi": 1.058,
+   "metric": "HR",
+   "src": "Medicare 26.3 M"
+  },
+  {
+   "label": "AF incidence\nvehicle PM2.5",
+   "exposure": "Vehicle-source PM2.5 (per IQR)",
+   "est": 1.029,
+   "lo": 1.028,
+   "hi": 1.03,
+   "metric": "HR",
+   "src": "Medicare 26.3 M"
+  },
+  {
+   "label": "Cervical cancer\nrecurrence",
+   "exposure": "PM2.5 (per IQR, post-surgery)",
+   "est": 1.93,
+   "lo": 1.4,
+   "hi": 2.66,
+   "metric": "HR",
+   "src": "Fudan cohort n=3758 (SHR)"
+  },
+  {
+   "label": "Cervical cancer\ndeath",
+   "exposure": "PM2.5 (per IQR, post-surgery)",
+   "est": 2.55,
+   "lo": 1.78,
+   "hi": 3.67,
+   "metric": "HR",
+   "src": "Fudan cohort n=3758"
+  },
+  {
+   "label": "FEV1 change\nPM1",
+   "exposure": "Long-term PM1 (per IQR)",
+   "est": -36.84,
+   "lo": -45.91,
+   "hi": -27.76,
+   "metric": "mL",
+   "src": "CPH Study n=50991"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "preconception /\nin utero:\nfolic acid x\nbirthweight"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nHFMD time-series\n(Shenzhen)"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno record"
+  },
+  {
+   "n": 5,
+   "note": "working age:\nlung function;\nlipids; cervical Ca;\nRCS review; AMI"
+  },
+  {
+   "n": 3,
+   "note": "older adults:\nMedicare AF;\nCHARLS frailty;\nAMI index"
+  }
+ ]
+}
