@@ -14,6 +14,7 @@ for i in IDX:
     if not r.get("doi"):
         j=get("https://api.crossref.org/works?rows=3&query.bibliographic="+urllib.parse.quote(r["title"]))
         for it in j.get("message",{}).get("items",[]):
+            if re.search(r"\.s\d+$", it.get("DOI","").lower()): continue  # ACS supplementary-info DOIs (fixed 2026-10-23)
             if nt((it.get("title") or [""])[0])==nt(r["title"]):
                 r["doi"]=it["DOI"].lower()
                 if it.get("abstract") and not r.get("abstract"): r["abstract"]=re.sub(r"<[^>]+>"," ",it["abstract"])[:3000]; r["abs_via"]="crossref"

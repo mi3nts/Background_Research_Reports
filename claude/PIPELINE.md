@@ -3113,3 +3113,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **DOI gate caught a Consensus duplicate again**: Ginsburg 2026 PurpleAir global calibration (10.1080/02786826.2026.2676293) shipped 29 Jul. Check Consensus hits against `seen.json` DOIs *before* authoring.
 - Proof (contact sheet + forest crops) clean; 0 overfull/underfull. Trial watch 21–22 Oct: 2 hits (AIRWEIGHS NCT02763917 purifier RCT, Taif COPD survey) → `trials.json` 19 NCT / 34 windows. Scholar Gateway not called.
 - Next: 22 Oct daily (≥22:00 CDT 22 Oct); W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00.
+
+## Run 2026-10-23 (16:06 UTC = 11:06 CDT) — daily 22 Oct
+
+- The 04:04 UTC run fired 12 h late; 22:00 rule → newest buildable = 22 Oct; **23 Oct left to the next run ≥22:00 CDT**. Harvest leg-by-leg: PubMed 21 health / 1 sensing, EPMC **1** (index lag), Crossref-ISSN 37, arXiv 150 kB no in-window entry, OpenAlex 429 → 58 unique → 8 carried → 50 fresh; connector (EDAT 22 Oct, `_conn_1023.py`) 25 PMIDs, 5 appended → 55 screened.
+- **Abstract gap closed for PubMed records:** 9 PubMed-leg records arrived without abstracts; a one-off efetch (`db=pubmed&retmode=xml`) filled all 9. Crossref/S2 (`_xrfill_1017.py`) filled 6 more; Elsevier day-0 deposits still empty.
+- **Defect closed:** `_xrfill_1017.py` now skips `\.s\d+$` (ACS supplementary) DOIs in the Crossref title match.
+- **55 screened → 17 admitted / 38 rejected** (`_rej_1023.py`), 10 pp, 6 effects (5 ratio: 2 HR ADHD-EC, 2 HR Beijing, 1 OR peaker; 1 diff-scale HAZ from HAPIN), 4 tier A, 1 metadata-only (6%, series low). DOI gate 0 fail / 1 warn (CMA DOI not in Crossref, live). 0 overfull/underfull; contact sheet + forest crop clean.
+- `plots.py`: design keys "Case-cohort study", "Statistical methods (simulation + application)"; geo needle "arabian peninsula" → Middle East.
+- Consensus 10 hits, 0 new; trial watch 22–23 Oct 2 hits, both already stored (`trials.json` 19 NCT / 35 windows). Scholar Gateway not called.
+- Next: 23 Oct daily + **W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00 CDT** (weekly = 18–24 Oct, filed under 24 Oct).

@@ -1,0 +1,322 @@
+{
+ "date": "2026-10-22",
+ "entry_window": "2026-10-22 -> 2026-10-22",
+ "PAPERS": [
+  {
+   "pmid": "42906672",
+   "doi": "10.1016/j.envres.2026.125900",
+   "journal": "Environ Res",
+   "short": "Kalkbrenner traffic air pollution ADHD Denmark critical windows 2026",
+   "title": "Traffic-related air pollution links with attention deficit hyperactivity disorder in Denmark: Developmental periods of susceptibility and sex-specific associations",
+   "sub": "Neuro / mental health",
+   "design": "Case-cohort study",
+   "pm": "Daily address-level PM2.5 and elemental carbon (DEHM/UBM/AirGIS), pre-conception to age 12",
+   "geo": "Denmark (national registers)",
+   "endpoint": "Clinically diagnosed ADHD (ICD-10 F90.0)",
+   "tier": "A",
+   "n": "Danish singletons born 1981-2008: 21,860 ADHD cases and a 32,041-person random subcohort. Exposure in each developmental period was mutually adjusted for the other periods to separate windows. The second year of life dominated: EC >1.13 vs <0.49 ug/m3 HR 1.24 (1.12-1.36), not attenuated by PM2.5 adjustment; females HR 1.44 (1.21-1.72) vs males 1.18 (1.00-1.40). PM2.5 gave the same window and sex pattern. Polygenic scores for ADHD were adjusted. Limitation: period-specific exposures at the same address are highly collinear, and a window identified by mutual adjustment is sensitive to differential measurement error between periods. Diagnosis-based ADHD in females is also subject to referral bias that varies with urbanicity. Relevance: medium - EC, not PM2.5 mass, carries the signal, which argues for absorption (BC) channels in dense networks."
+  },
+  {
+   "pmid": "",
+   "doi": "10.64898/2026.10.16.26365712",
+   "journal": "medRxiv (preprint)",
+   "short": "Kalam HAPIN LPG intervention child growth stunting ages 2-5 2026",
+   "title": "Effects of a 500-day LPG cookstove and fuel intervention delivered during gestation and infancy on height-for-age (HAZ) and stunting at ages 2, 3, 4 and 5 years",
+   "sub": "Reproductive & developmental",
+   "design": "Trial / intervention",
+   "pm": "Personal PM2.5, CO and black carbon (gestation, infancy, post-trial)",
+   "geo": "Guatemala, India and Rwanda (HAPIN 2.0 follow-up)",
+   "endpoint": "Height-for-age Z score; stunting and severe stunting, ages 2-5",
+   "tier": "A",
+   "n": "HAPIN randomised trial (~3,200 pregnant women; LPG stove plus free fuel to infant age 12 months), extended follow-up of 2,169 children. The intervention cut gestational PM2.5 from 117.5 to 80.7 ug/m3 and infant PM2.5 from 113.2 to 36.9 ug/m3, but post-trial exposures converged (99.9 vs 98.7). ITT effect on repeated HAZ: beta -0.06 (-0.16 to 0.03); no effect on stunting at any age and no effect modification. Limitation: even the intervention arm stayed far above the WHO guideline during gestation, so this is a null for a partial exposure contrast, not for clean air. The exposure-response analysis that would test dose is still pending. Preprint, not peer reviewed. Relevance: medium - the trial's personal monitoring shows how far stove switching moves exposure."
+  },
+  {
+   "pmid": "42907183",
+   "doi": "10.3760/cma.j.cn112338-20251204-00870",
+   "journal": "Zhonghua Liu Xing Bing Xue Za Zhi",
+   "short": "Wan PM2.5 mortality urban rural elderly Beijing cohort 2026",
+   "title": "Association between fine particulate matter exposure and all-cause and cardiovascular mortality in urban and rural elderly population in Beijing",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Prospective cohort",
+   "pm": "Satellite-gridded annual PM2.5 at residence (2010-2014 mean 79.8 ug/m3)",
+   "geo": "China (Beijing urban and rural)",
+   "endpoint": "All-cause and cardiovascular mortality",
+   "tier": "B",
+   "n": "Beijing Elderly Comprehensive Health Cohort, n=3,472. Per 1 ug/m3 PM2.5: all-cause mortality HR 1.053 (1.026-1.080), CVD mortality HR 1.046 (1.001-1.100). Outdoor physical activity modified the association (P-interaction 0.022): HR 1.087 per ug/m3 without outdoor activity vs 1.026 with it. Limitation: a 5% hazard increase per single ug/m3 is roughly an order of magnitude above the pooled long-term estimates. In a city-scale cohort the PM2.5 contrast is mostly urban vs rural, so residual confounding by healthcare access and SES is the likely driver. The physical-activity 'offset' is also confounded by baseline health. Relevance: low - single-city satellite exposure."
+  },
+  {
+   "pmid": "",
+   "doi": "10.5194/acp-26-14823-2026",
+   "journal": "Atmos Chem Phys",
+   "short": "Savolainen road traffic emission factors impact factors Helsinki street canyon 2026",
+   "title": "From direct emission factors to inverse and indirect impact factors of road traffic: influence of emerging and unregulated pollutants",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "Particle number and size distribution, BC, PM10, PM2.5, PM chemical components, NOx, CO, VOCs, small ions",
+   "geo": "Finland (Helsinki street canyon)",
+   "endpoint": "Fleet emission factors (CO2-tracer method) and 'impact factors'",
+   "tier": "A",
+   "n": "Wintertime supersite measurements in a central Helsinki street canyon. Fleet emission factors were derived by normalising pollutant increments to CO2 as a fuel-consumption tracer, across particle number and size, BC, PM10, PM2.5, organic and inorganic PM components, NOx and VOCs including PAHs. PM and NOx emission factors were well above the post-2014 Euro limits, so older and heavy-duty vehicles dominate. Traffic showed negative 'impact factors' for O3 and sub-2 nm small ions and contributed terpenoid VOCs. Limitation: one canyon in one season; the CO2-ratio method assumes co-emission and common dilution, which fails for secondary and non-exhaust species. Relevance: high - a CO2-normalised increment is a method LCS nodes with NDIR CO2 can apply directly."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17101035",
+   "journal": "Atmosphere",
+   "short": "Alturki ensemble ML emulation GEOS-CF PM2.5 Arabian Peninsula spatial transfer 2026",
+   "title": "Interpretable Ensemble Machine Learning for Statistical Emulation of Summer PM2.5 Change in GEOS-CF over the Arabian Peninsula: How Far Does Spatially Blocked Skill Transfer?",
+   "sub": "Exposure assessment & modelling",
+   "design": "Machine-learning model",
+   "pm": "GEOS-CF summer PM2.5 relative change 2020-2025 (0.25 deg); TROPOMI, ERA5-Land, CHIRPS, MODIS predictors",
+   "geo": "Arabian Peninsula",
+   "endpoint": "Emulator skill under spatial blocking and held-out sectors",
+   "tier": "A",
+   "n": "Emulated the 2020-2025 change in summer PM2.5 over 3,933 GEOS-CF cells from 13 satellite and reanalysis predictors. Tree ensembles reached spatially blocked CV R2 0.82-0.84 (linear 0.55), but a Random Forest on latitude and longitude alone scored higher (R2 0.91). The predictor model lost all skill once cells within 300 km were excluded, failed on an unseen eastern sector (r 0.11) and did not transfer to other summers. Plain interpolation filled gaps better than any emulator. Split-conformal 90% intervals covered 82-98% of test cells, but only 60% in the east. Limitation: the target is model output, not observations. Relevance: high - a clean demonstration that blocked-CV R2 in PM mapping can be pure interpolation; the same diagnostics belong in sensor-fusion papers."
+  },
+  {
+   "pmid": "42905376",
+   "doi": "10.1007/s11356-026-38306-6",
+   "journal": "Environ Sci Pollut Res Int",
+   "short": "Amato mobile air-liquid interface toxicity Barcelona harbor urban 2026",
+   "title": "Assessment of air pollution toxicity in urban environments in Barcelona, Spain, using a mobile air-liquid interface system",
+   "sub": "Mechanistic toxicology",
+   "design": "Exposure assessment + in vitro",
+   "pm": "Co-measured particle and gas concentrations; whole-air ALI exposure",
+   "geo": "Spain (Barcelona harbour and urban background)",
+   "endpoint": "A549 cytotoxicity (LDH release)",
+   "tier": "B",
+   "n": "A mobile air-liquid interface system exposed A549 cells directly to ambient air at a harbour site and an urban background site, alongside co-located particle and gas monitoring. Partial least squares explained up to 80% of the variance in ALI toxicity from air-quality parameters. Gas-phase pollutants, ozone above all, contributed more than particles. Limitation: LDH release in a single tumour-derived cell line is a crude endpoint. With two sites and highly collinear predictors, PLS loadings cannot separate ozone from photochemical-age covariates. n and exposure durations are not given in the abstract. Relevance: medium - pairing in-situ bioassays with multipollutant monitors is the template for testing whether mass-based LCS metrics track toxicity."
+  },
+  {
+   "pmid": "42903668",
+   "doi": "10.1016/j.joclim.2026.100762",
+   "journal": "J Clim Change Health",
+   "short": "Jung peaker power plant emissions ED urgent care visits Massachusetts 2026",
+   "title": "Individual-level health effects of living near a gas-fired \"Peaker\" power plant",
+   "sub": "Respiratory & allergic",
+   "design": "Case-crossover",
+   "pm": "HyADS trajectory-derived peaker-plant exposure index (unitless); background PM2.5 adjusted",
+   "geo": "USA (Massachusetts)",
+   "endpoint": "Cause-specific ED/urgent-care visits",
+   "tier": "B",
+   "n": "Primary-care patients living within 30 km of a gas-fired peaker plant, 2017-2021; 2,310 ED/UC visits analysed with a case-crossover design. Exposure was a daily HyADS parcel-trajectory index (mean 1.4, SD 16, reflecting plant intermittency); models adjusted for heat index and non-peaker PM2.5 (mean 8.5 ug/m3). Respiratory visits OR 1.044 (1.001-1.090) per unit; non-white patients OR 1.347 (1.034-1.755). Cardiovascular, headache and pregnancy visits were null. Limitation: the exposure is unitless and ZIP-code assigned, so the OR has no concentration scale. Peaker 'on' days coincide with peak heat and grid stress. A lower CI of 1.001 across four outcome families invites multiplicity concerns. Relevance: high - intermittent point sources are exactly what fence-line LCS can time-resolve."
+  },
+  {
+   "pmid": "42906364",
+   "doi": "10.1016/j.ecoenv.2026.120945",
+   "journal": "Ecotoxicol Environ Saf",
+   "short": "He ozone-dominant air pollution risk ageing inequality China counties 2026",
+   "title": "A nationwide effect-based assessment of ozone-dominant air pollution risk patterns and ageing-related inequality in China",
+   "sub": "Burden, policy & mitigation",
+   "design": "Ecological / registry analysis",
+   "pm": "Cold-season PM2.5 and warm-season O3 (multi-source county exposures)",
+   "geo": "China (813 counties)",
+   "endpoint": "Cancer-panel-derived exceedance and excess-hazard indices, 2017-2023",
+   "tier": "B",
+   "n": "Interpretable machine learning was fit to cancer data from 813 Chinese counties (2018-2019) to get non-linear long-term exposure-response shapes for cold-season PM2.5 and warm-season O3. Model-based thresholds then anchored exceedance and excess-hazard indices projected over 2017-2023. PM2.5 pressure fell while O3 pressure rose, with hotspots in Sichuan-Chongqing and the Yangtze River Delta that coincide with ageing. Limitation: two years of county cancer data cannot identify a dose-response threshold. ML-derived 'thresholds' in an ecological panel are model artefacts confounded by region, and the abstract gives no effect sizes or CIs. Relevance: low - county-level modelled exposure."
+  },
+  {
+   "pmid": "",
+   "doi": "10.3390/atmos17101033",
+   "journal": "Atmosphere",
+   "short": "Bloise water-soluble carbon nitrogen PM10 Chennai street vertical 2026",
+   "title": "Seasonal, Spatial, and Near-Surface Vertical Variability of Water-Soluble Carbon and Nitrogen in PM10 in Chennai, India",
+   "sub": "Exposure assessment & modelling",
+   "design": "Field measurement",
+   "pm": "PM10 mass, WSOC, WSTN, WSIN at 3, 16 and 37 m",
+   "geo": "India (Chennai street sites)",
+   "endpoint": "Seasonal, site and vertical variability of soluble PM10 composition",
+   "tier": "B",
+   "n": "Three Chennai street environments across three campaigns, sampled at nominal heights of 3, 16 and 37 m: 76 PM10 samples, 75 WSOC/WSTN and 74 WSIN determinations. Means: PM10 65.3 ug/m3, WSOC 2.53 ug C/m3, WSTN 1.28 and WSIN 1.26 ug N/m3. WSOC fell from 4.01 to 0.62 ug C/m3 between campaigns while WSIN rose from 1.12 to 1.86. Site contrasts were strong for PM10, and vertical differences were not significant. Limitation: about 25 samples per campaign split across sites and heights gives little power for the vertical null. Campaigns confound season with meteorology. Relevance: medium - no vertical gradient between 3 and 37 m supports rooftop siting of street-canyon LCS for PM10, though the null is underpowered."
+  },
+  {
+   "pmid": "42907699",
+   "doi": "10.1007/s10661-026-16071-w",
+   "journal": "Environ Monit Assess",
+   "short": "Magalhaes extreme rainfall landslides PM10 PM2.5 Sao Sebastiao 2026",
+   "title": "Can extreme rainfall associated with landslides affect air quality? A case study in a coastal city (Sao Sebastiao, Sao Paulo State, Brazil)",
+   "sub": "Exposure assessment & modelling",
+   "design": "Monitoring-record analysis",
+   "pm": "Hourly PM10 and PM2.5 (regulatory station), Dec 2021-Feb 2025",
+   "geo": "Brazil (Sao Sebastiao, Sao Paulo State)",
+   "endpoint": "PM response to extreme precipitation and landslide event",
+   "tier": "B",
+   "n": "Hourly PM and meteorology from December 2021 to February 2025, with k-means meteorological clusters and openair polar and time-variation analysis around the February 2023 extreme rainfall and landslides. Rain first scavenged PM. The post-landslide period then showed PM10 up 124% and PM2.5 up 93.3%. Two comparison rain events showed similar scavenging but different recovery, so the authors do not attribute the rise to landslides alone. Limitation: a single station and one event; clean-up traffic, resuspension of dried debris and meteorology are not separated, and there is no composition data. Relevance: medium - post-disaster resuspension is a case for rapidly deployable sensor nodes."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1080/02786826.2026.2746515",
+   "journal": "Aerosol Sci Technol",
+   "short": "Cover solvatochromic fluorophores in situ aerosol fluorescence 2026",
+   "title": "Evaluation of solvatochromic fluorophores for in situ fluorescence characterization of aerosols",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Aerosol particles (in situ fluorescence probes)",
+   "geo": "Not stated in record",
+   "endpoint": "Fluorophore performance for in situ aerosol characterisation",
+   "tier": "C",
+   "n": "Title and authors only (Cover, Gibbons, Boadu, Ohno et al.). No abstract was retrievable from Crossref or Semantic Scholar at harvest. The title describes evaluating solvatochromic dyes, whose emission shifts with local polarity, as in-situ probes of aerosol particle properties. Analytes, particle types and performance metrics cannot be stated. Limitation: unverifiable beyond the title. Solvatochromic readouts also confound polarity with viscosity and water content, so any phase-state inference needs independent calibration. Relevance: low-medium - a laboratory composition probe, not a field-deployable sensor channel."
+  },
+  {
+   "pmid": "42907900",
+   "doi": "10.1186/s13073-026-01770-3",
+   "journal": "Genome Med",
+   "short": "Kim SpaMixed spatial mixed models microbiome PM2.5 2026",
+   "title": "Spatial mixed models for assessing environmental exposure effects on the microbiome",
+   "sub": "Exposure assessment & modelling",
+   "design": "Statistical methods (simulation + application)",
+   "pm": "PM2.5 (two applied studies)",
+   "geo": "Not stated (methods paper)",
+   "endpoint": "PM2.5-associated microbiome taxa",
+   "tier": "C",
+   "n": "SpaMixed is a spatial mixed model for microbiome count data that handles both spatial dependence across regions (conditional autoregressive priors) and ecological correlation among taxa. In simulations it achieved high feature-selection power with low false-positive rates and lower estimation error than existing methods. Applied to two PM2.5 studies, it found 'biologically plausible' PM2.5-associated taxa. Limitation: the abstract gives no sample sizes, regions or effect sizes for the applications. CAR priors absorb the spatial variance that carries the PM2.5 contrast, so the method trades confounding for attenuation. Relevance: low - statistical method, no sensing content."
+  },
+  {
+   "pmid": "42906366",
+   "doi": "10.1016/j.ecoenv.2026.120951",
+   "journal": "Ecotoxicol Environ Saf",
+   "short": "Jiang carbon nanoparticle NSCLC progression ARNT2 ARL14 2026",
+   "title": "Carbon nanoparticle exposure promotes the progression of non-small cell lung cancer via the ARNT2/ARL14 axis: Findings from in vivo and in vitro models",
+   "sub": "Mechanistic toxicology",
+   "design": "Animal + in vitro",
+   "pm": "Carbon nanoparticles (intranasal 15-200 ug/kg; in vitro 2 ug/mL)",
+   "geo": "China (laboratory)",
+   "endpoint": "NSCLC xenograft growth, EMT, stemness, ARNT2/ARL14 signalling",
+   "tier": "C",
+   "n": "Mouse CNP-induced fibrosis model (200 ug/kg every other day, 90 days) identified ARNT2 by transcriptomics. In xenografts with continued CNP exposure, tumour volume at day 36 rose (A549 194 to 308 mm3; A427 245 to 417 mm3) along with Ki-67/PCNA and N-cadherin/vimentin. ARNT2 knockdown reversed these changes. In vitro, 2 ug/mL for 48 h increased proliferation, migration (up to 3.6-fold), invasion, stemness markers and IL-6 (up to 13.7-fold), and reduced apoptosis. Limitation: carbon black nanoparticles stand in for 'the shared core' of PM2.5, coal dust and smoke, but lack their organic and metal fractions. Instillation doses and in-vitro concentrations far exceed lung deposition from ambient air. Group sizes are not reported. Relevance: low."
+  },
+  {
+   "pmid": "42905338",
+   "doi": "10.1007/s12012-026-10209-5",
+   "journal": "Cardiovasc Toxicol",
+   "short": "Yadav PM pollution-accelerated cardiovascular aging PACA framework 2026",
+   "title": "Particulate Matter Exposure and Accelerated Cardiovascular Aging: Mechanistic Evidence, Biomarker Integration, and the PACA Framework",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Mechanistic review",
+   "pm": "PM2.5 and ultrafine particles (literature)",
+   "geo": "Global / multi-region (review)",
+   "endpoint": "Cardiovascular ageing phenotypes and biomarkers",
+   "tier": "C",
+   "n": "A conceptual review that proposes the 'Pollution-Accelerated Cardiovascular Aging' (PACA) framework to separate transient toxicity from a real shift in cardiovascular ageing trajectory. It collects established pathways (mitochondrial and redox dysfunction, epigenetic change, senescence/SASP, proteostasis, endothelial and autonomic dysfunction, the pulmonary-neural-cardiac axis) and adds a Temporal-Evidence Matrix that weighs persistence after exposure stops and change relative to age-referenced comparators. Limitation: hypothesis-generating with no new data or systematic search. Without validated ageing clocks for the vasculature the matrix is hard to operationalise. Relevance: low - longitudinal personal exposure data are the missing input the framework asks for."
+  },
+  {
+   "pmid": "42904438",
+   "doi": "10.1097/moo.0000000000001164",
+   "journal": "Curr Opin Otolaryngol Head Neck Surg",
+   "short": "Argersinger air pollution chronic rhinosinusitis review 2026",
+   "title": "The link between air pollution and chronic rhinosinusitis",
+   "sub": "Respiratory & allergic",
+   "design": "Narrative review",
+   "pm": "PM2.5 (traffic, industrial, wildfire, pollen sources)",
+   "geo": "Global / multi-region (review)",
+   "endpoint": "CRS prevalence, severity, post-surgical outcomes",
+   "tier": "C",
+   "n": "A short review of recent work on PM2.5 and chronic rhinosinusitis. PM2.5 is associated with CRS prevalence and severity and with worse disease-specific and quality-of-life outcomes after endoscopic sinus surgery. In nasal epithelial cells from CRS patients it worsens remodelling and barrier dysfunction and reduces ciliogenesis. Traffic, industrial, wildfire and pollen-related PM contribute independently. Limitation: non-systematic, no pooled estimates. Most cited associations are cross-sectional or claims-based with modelled residential exposure, and CRS phenotype (with or without polyps) is rarely separated. Relevance: low."
+  },
+  {
+   "pmid": "42906566",
+   "doi": "10.1016/s2213-2600(26)00252-3",
+   "journal": "Lancet Respir Med",
+   "short": "Kim interstitial lung disease changing climate Personal View 2026",
+   "title": "Interstitial lung diseases in a changing climate: emerging risks and opportunities to improve care",
+   "sub": "Respiratory & allergic",
+   "design": "Narrative review",
+   "pm": "Air pollution and wildfire smoke among climate exposures (literature)",
+   "geo": "Global / multi-region (review)",
+   "endpoint": "ILD incidence, exacerbation and care",
+   "tier": "C",
+   "n": "A Lancet Respiratory Medicine Personal View on climate-related exposures in interstitial lung disease. Air pollution is the established risk factor. Extreme heat, viral illness, damp housing, pollen, disasters and desertification are framed as emerging threats. Wildfire smoke, occupational ILD under climate change and disaster preparedness are named as the main gaps. Limitation: an opinion synthesis with no quantitative evidence grading. ILD cohorts are small and heterogeneous, so most climate-ILD links are extrapolated from COPD and asthma. Relevance: low-medium - wildfire-smoke alerting for ILD patients is a concrete use case for hyperlocal sensing."
+  },
+  {
+   "pmid": "42906617",
+   "doi": "10.2460/javma.26.05.0436",
+   "journal": "J Am Vet Med Assoc",
+   "short": "Scott equine air quality index Delphi management 2026",
+   "title": "Experts recommend management strategies for horses during poor air quality",
+   "sub": "Burden, policy & mitigation",
+   "design": "Delphi consensus",
+   "pm": "AQI categories (PM2.5-driven, wildfire smoke)",
+   "geo": "USA (expert panel)",
+   "endpoint": "Equine-specific AQI messaging and management recommendations",
+   "tier": "C",
+   "n": "A three-round modified Delphi with 15 equine veterinarians, 11 of whom completed all rounds. The panel adapted the EPA AQI public messaging to equine health risk and set management, training and competition recommendations for each AQI category. Experts agreed that healthy horses as well as compromised ones can have short- and long-term effects. Limitation: 11 completers, and the recommendations rest on translational extrapolation from human data, as the authors acknowledge. There are no equine exposure-response data. Relevance: medium - venue-level LCS readings at stables and competition grounds are what would operationalise AQI-tiered decisions."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "ADHD\nEC yr-2 (all)",
+   "exposure": "EC >1.13 vs <0.49 ug/m3, 2nd year of life",
+   "est": 1.24,
+   "lo": 1.12,
+   "hi": 1.36,
+   "metric": "HR",
+   "src": "Danish case-cohort"
+  },
+  {
+   "label": "ADHD\nEC yr-2 (female)",
+   "exposure": "EC >1.13 vs <0.49 ug/m3, 2nd year of life",
+   "est": 1.44,
+   "lo": 1.21,
+   "hi": 1.72,
+   "metric": "HR",
+   "src": "Danish case-cohort"
+  },
+  {
+   "label": "All-cause death\nBeijing elderly",
+   "exposure": "PM2.5 (per 1 ug/m3)",
+   "est": 1.053,
+   "lo": 1.026,
+   "hi": 1.08,
+   "metric": "HR",
+   "src": "Beijing cohort n=3472"
+  },
+  {
+   "label": "CVD death\nBeijing elderly",
+   "exposure": "PM2.5 (per 1 ug/m3)",
+   "est": 1.046,
+   "lo": 1.001,
+   "hi": 1.1,
+   "metric": "HR",
+   "src": "Beijing cohort n=3472"
+  },
+  {
+   "label": "Respiratory ED/UC\npeaker plant",
+   "exposure": "HyADS peaker index (per unit)",
+   "est": 1.044,
+   "lo": 1.001,
+   "hi": 1.09,
+   "metric": "OR",
+   "src": "MA case-crossover"
+  },
+  {
+   "label": "HAZ\nLPG trial",
+   "exposure": "LPG stove + fuel (ITT)",
+   "est": -0.06,
+   "lo": -0.16,
+   "hi": 0.03,
+   "metric": "HAZ",
+   "src": "HAPIN n=2169"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 1,
+   "note": "preconception /\nin utero:\nHAPIN LPG\n(gestation)"
+  },
+  {
+   "n": 2,
+   "note": "childhood:\nADHD yr-2 EC;\nHAPIN growth\nages 2-5"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno record"
+  },
+  {
+   "n": 3,
+   "note": "working age:\nCRS; ILD;\npeaker ED visits"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nBeijing elderly\nmortality"
+  }
+ ]
+}

@@ -397,6 +397,8 @@ design_group.update({
     "Seasonal field sampling + filtration test": "Measurement campaign",
     "Case-control study": "Observational - cross-sectional",   # 2026-10-16b (as Nested case-control)
     "Delphi consensus": "Review / synthesis",   # 2026-10-16b
+    "Case-cohort study": "Observational - cohort",   # 2026-10-22
+    "Statistical methods (simulation + application)": "Modelling / inventory",   # 2026-10-22
     "Web review": "Review / synthesis",   # 2026-10-16b
     "Instrument evaluation": "Measurement campaign",   # 2026-10-16b (network-wide AERONET record)
     "Laboratory + field measurement": "Chamber / laboratory",   # 2026-10-16b
@@ -1002,6 +1004,7 @@ GEO_ALIAS = {
     "United Kingdom": "UK", "Korea": "South Korea",
 }
 GEO_SUBSTR = [
+    ("arabian peninsula", "Middle East"),  # 2026-10-22
     ("burkina faso", "Burkina Faso"), ("croatia", "Croatia"), ("middle east", "Middle East"),  # 2026-10-02
     ("gambia", "Gambia"), ("macedonia", "North Macedonia"), ("skopje", "North Macedonia"), ("united arab emirates", "United Arab Emirates"), ("abu dhabi", "United Arab Emirates"),  # 2026-10-16
     ("peru", "Peru"),  # 2026-10-16b (no "lima" needle: it matches KaLIMAntan)
