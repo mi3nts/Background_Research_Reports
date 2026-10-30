@@ -3123,3 +3123,14 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - `plots.py`: design keys "Case-cohort study", "Statistical methods (simulation + application)"; geo needle "arabian peninsula" → Middle East.
 - Consensus 10 hits, 0 new; trial watch 22–23 Oct 2 hits, both already stored (`trials.json` 19 NCT / 35 windows). Scholar Gateway not called.
 - Next: 23 Oct daily + **W43 weekly (18–24 Oct) on Sat 24 Oct ≥22:00 CDT** (weekly = 18–24 Oct, filed under 24 Oct).
+
+## Run 2026-10-30 (14:20-15:0x UTC = 09:20 CDT) — recovery: dailies 23-29 Oct + W43 weekly
+
+- Scheduled runs for 23-29 Oct did not complete; a 30 Oct 00:21 UTC run had harvested 23-28 Oct (+ connector EDAT 23-28, `_conn_1030.py`) but stopped before screening. 22:00 rule → newest buildable 29 Oct. 29 Oct harvested here: PubMed 13/1, EPMC 19, Crossref 66, arXiv 150 kB, OpenAlex 429 → 97 fresh; connector EDAT 29 Oct (`_conn_1030b.py`) 21 PMIDs, 10 appended → 107; efetch filled 24 abstracts.
+- Authored in parallel per day (forks), built sequentially. **23 Oct** 148 scr → 24 (12 pp, 5 eff); **24 Oct** 77 → 10 (7 pp, 2); **25 Oct** 55 → 3 (6 pp, 0 eff, no forest); **26 Oct** 80 → 24 (11 pp, 8); **27 Oct** 199 → 30 (15 pp, 5); **28 Oct** 118 → 22 (10 pp, 8); **29 Oct** 107 → 22 (10 pp, 3). Rejections `_rej_1030_<dd>.py` (649 logged). DOI gate 0 fail all days (2 benign title warns); 0 overfull/underfull; contact sheets proofed.
+- **Cross-day duplicates were the main defect**: EPMC/connector re-surface the same PubMed record on 2-3 consecutive days, so parallel per-day screening double-admitted ~40 records. Resolved by DOI gate + earliest-issue rule (except where a record was already authored in the later day: iScience candle crossover kept in 26 not 25; 11 records entered 27 Oct but stay in 28). **For backfills: screen days sequentially, or build a cross-day DOI set before authoring.**
+- 25 Oct fork was cut off mid-authoring (`authoring/_partial/` holds the truncated chunk; untracked-worthy scratch); finished by hand. 28 Oct has empty `p07-p09.py` stubs (delete-restricted mount).
+- Held 3 Oct ES&T NK-cell record (`10.1021/acs.est.6c07515`) shipped 23 Oct. Ruwali/Lary (Sensors 10.3390/s26206478, MINTS) shipped 27 Oct.
+- **W43 weekly** (18-24 Oct, filed 24 Oct) 34 pp via `_wk_1030.py` → `build/weekly.tex`: 119 records/119 DOIs, measurement 39%, metadata-only 21%, 30/30 CI, tier 21A/43B/55C. Inflection: PM2.5 components (SO4/NO3/NH4, EC) carry the effects. Proof fixed f2a/f3 captions against the rendered counts.
+- Consensus 10 hits, 0 new (Fang 2026 review shipped 10 Oct). Trial watch 23-30 Oct: 4 hits, **1 new NCT07536178** (UBC woodsmoke chamber, FeNO+CANTAB co-primary) → `trials.json` 20 NCT / 36 windows. Scholar Gateway not called; OpenAlex 429.
+- Next: 30 Oct daily (≥22:00 CDT 30 Oct), then **31 Oct daily + W44 weekly (25-31 Oct) + October monthly** on the Sat 31 Oct ≥22:00 run.

@@ -1,0 +1,183 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{25 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-25\;\;\textcolor{Amber}{\textbar}\;\;Entry window 25 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;3 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{RECORDS IN SCOPE\\(52 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A Sunday floor issue: three records, and the most watch-relevant
+point is that 3-D printing emits almost entirely below the optical cut of consumer PM sensors.}\\[1.4mm]
+\footnotesize
+Recycled plastic-bag HDPE extruded to filament and then 3-D printed (NIOSH chamber work): extrusion emits mostly
+1.2--5.2\,nm particles, printing mostly 5.6--560\,nm, with number yields per gram \textbf{2--3 orders of magnitude}
+higher during printing; formaldehyde 9.9--16.1\,$\mu$g\,g$^{-1}$ printed.
+\textbf{Where it is weak:} yields are per mass processed in an enclosure, not breathing-zone concentrations, and
+no uncertainty is attached to the contrast.
+\textbf{Why it matters here:} a PMS-class optical node registers almost none of this number emission; maker-space
+and indoor-occupational monitoring needs a condensation or diffusion-charging counter.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Thin day, heavy overlap.} Ten of the 13 records that passed the topic screen had already been issued on
+23, 24 or 26 October (Europe PMC re-surfacing PubMed entries one to two days late) and are logged as duplicates.
+
+\item \textbf{Single-monitor ceiling.} Cubat\~ao schoolchildren ($n$\,=\,77): HRV and spirometry associations are for
+SO$_2$, O$_3$ and NO$_2$ assigned from one regulatory station; no PM association is reported.
+
+\item \textbf{Street-scale morphology thresholds} for PM$_{2.5}$/PM$_{10}$ (Atmos.\ Pollut.\ Res.) arrived as a
+metadata-only Crossref deposit.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 22 October issue closed with \texttt{last\_entry\_date} at 22 October. The scheduled runs for 23--29
+October did not complete (a 30 October 00:21 UTC run harvested 23--28 October but stopped before screening). This
+issue was built on the \textbf{30 October 14:20 UTC (09:20 CDT) recovery run}, which backfills 23--29 October day by
+day; it collects \textbf{25 October in full} (Sunday), continuous with the 24 October issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 3 in-scope records: respiratory (Cubat\~ao schoolchildren), occupational
+\& indoor (3-D printing emissions) and exposure assessment (street-scale morphology, metadata-only).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: one school-based cross-sectional study, one chamber emission
+characterisation, one metadata-only record (1 of 3). Right --- endpoints: HRV/spirometry, emission yields, and
+street-level concentration.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: regulatory-monitor pollutants, nanoscale number emissions, and
+PM$_{2.5}$+PM$_{10}$. Right --- geography: Brazil, United States (laboratory), and one not stated.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: one childhood record (Cubat\~ao) and one working-age occupational record;
+no in-utero, adolescent or older-adult record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Three singleton cells; no cohort, trial or effect estimate
+with a confidence interval today, so no forest plot is drawn.}\end{minipage}
+
+\vspace{2mm}
+
+
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Oliveira air pollution HRV lung function schoolchildren Cubatao 2026}
+{Effect of air pollution on heart rate variability and pulmonary function in schoolchildren: a cross-sectional study, Cubatao, Brazil, 2017.}
+{Epidemiol Serv Saude}
+{Convenience sample of 77 schoolchildren in the Cubatao industrial zone, with pollutant levels from the state agency's monitors. Associations reported in the abstract are for gases: SO$_2$ and HFnu -0.68 (-1.27 to -0.11) daily, -1.29 (-2.21 to -0.38) over three days; O$_3$ and HFnu -0.32 (-0.62 to -0.02); NO$_2$ with 0.23\% lower FEV1 and 0.30\% lower FEF25-75 (no CI given). No PM association is reported in the abstract. Limitation: 77 children, one fixed-site monitor and a single visit leave essentially no exposure contrast across subjects - the estimates rest on day-to-day variation within a cross-sectional design, with multiple pollutants and lags tested. Relevance: low - illustrates the exposure-assignment ceiling of a single regulatory monitor.}
+{10.1590/s2237-96222026v35e20250368.en}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 1 record}{Clay}
+
+\paperentry{Wang urban morphology street-scale PM$_{2.5}$ PM$_{10}$ change points 2026}
+{Non-linear associations, model-supported change points, and seasonal variations of urban morphology with street-scale PM$_{2.5}$ and PM$_{10}$ concentrations}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Metadata-only record: Crossref deposit with no abstract on the day of entry, and no abstract recoverable from Europe PMC or Semantic Scholar. The title reports non-linear associations and model-supported change points between urban morphology indicators and street-scale PM$_{2.5}$ and PM$_{10}$, with seasonal variation. Design, city, sample size, morphology metrics and effect sizes cannot be stated from the record and are not inferred here. Limitation: unassessable until the abstract or full text is available; threshold-type 'change points' in morphology-PM regressions are prone to overfitting when sites are few. Relevance: medium - street-scale morphology thresholds bear directly on how a dense sensor network should be sited across canyon geometries.}
+{10.1016/j.apr.2026.103242}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Stefaniak recycled plastic bag HDPE filament 3-D printing emissions 2026}
+{Recycling Plastic Bags into Filament: Consideration of Emissions during Melting, Extrusion, and 3-D Printing.}
+{J Chem Health Saf}
+{Waste HDPE plastic bags from South Africa and the US were blended with virgin HDPE, extruded into filament and 3-D printed, with particle- and gas-phase emissions measured through each stage. Filament extrusion emitted mostly 1.2-5.2 nm particles; printing emitted mostly 5.6-560 nm particles, with particle yields (no./g processed) 2-3 orders of magnitude higher than extrusion. Printing also released acetone (1.4-39.4 ug/g printed) and formaldehyde (9.9-16.1 ug/g). Mechanical properties matched virgin HDPE. Limitation: yields are per mass processed in a controlled enclosure, not personal breathing-zone concentrations, and no uncertainty is attached to the order-of-magnitude contrast; feedstock contamination of bag plastic was not characterised. Relevance: low-medium - nearly all the number emission sits below the \textasciitilde{}300 nm optical cut of consumer PM sensors, so maker-space monitoring needs a CPC or diffusion charger, not a PMS-class node.}
+{10.1021/acs.chas.5c00138}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{25 October 2026}, single day (Sunday). Harvester legs (run 30 October 00:21 UTC):
+\textbf{PubMed} health \textbf{12}, sensing \textbf{1}; \textbf{Europe PMC} \textbf{68}; \textbf{Crossref by ISSN}
+\textbf{7}; \textbf{arXiv} 150 kB, no in-window entry; \textbf{OpenAlex} HTTP 429. PubMed connector (EDAT 23--28 Oct,
+one backfill query bucketed by entry date) appended 1. \textbf{55 screened}. \textbf{3 admitted}, \textbf{52
+rejected} with logged reasons, 10 of them cross-day duplicates of the 23, 24 and 26 October issues. \textbf{DOI gate}
+0 fail / 0 warn. \textbf{0 effect estimates with a CI} --- no forest plot. \textbf{1 carried on metadata alone}.
+Consensus sweep and trial watch were run once for the 23--29 October backfill and are reported in the 29 October
+issue. Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

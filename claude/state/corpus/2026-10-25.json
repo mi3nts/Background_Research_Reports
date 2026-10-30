@@ -1,0 +1,71 @@
+{
+ "date": "2026-10-25",
+ "entry_window": "2026-10-25 -> 2026-10-25",
+ "PAPERS": [
+  {
+   "pmid": "42922790",
+   "doi": "10.1590/s2237-96222026v35e20250368.en",
+   "journal": "Epidemiol Serv Saude",
+   "short": "Oliveira air pollution HRV lung function schoolchildren Cubatao 2026",
+   "title": "Effect of air pollution on heart rate variability and pulmonary function in schoolchildren: a cross-sectional study, Cubatao, Brazil, 2017.",
+   "sub": "Respiratory & allergic",
+   "design": "School-based cross-sectional",
+   "pm": "Regulatory monitor concentrations (CETESB), daily and 2-3 day averages",
+   "geo": "Brazil (Cubatao, Sao Paulo State)",
+   "endpoint": "Resting HRV (SDNN, rMSSD, HFnu); FEV1, FEF25-75",
+   "tier": "C",
+   "n": "Convenience sample of 77 schoolchildren in the Cubatao industrial zone, with pollutant levels from the state agency's monitors. Associations reported in the abstract are for gases: SO2 and HFnu -0.68 (-1.27 to -0.11) daily, -1.29 (-2.21 to -0.38) over three days; O3 and HFnu -0.32 (-0.62 to -0.02); NO2 with 0.23% lower FEV1 and 0.30% lower FEF25-75 (no CI given). No PM association is reported in the abstract. Limitation: 77 children, one fixed-site monitor and a single visit leave essentially no exposure contrast across subjects - the estimates rest on day-to-day variation within a cross-sectional design, with multiple pollutants and lags tested. Relevance: low - illustrates the exposure-assignment ceiling of a single regulatory monitor."
+  },
+  {
+   "pmid": "42921553",
+   "doi": "10.1021/acs.chas.5c00138",
+   "journal": "J Chem Health Saf",
+   "short": "Stefaniak recycled plastic bag HDPE filament 3-D printing emissions 2026",
+   "title": "Recycling Plastic Bags into Filament: Consideration of Emissions during Melting, Extrusion, and 3-D Printing.",
+   "sub": "Occupational & indoor",
+   "design": "Chamber emission characterisation",
+   "pm": "Particle number size distribution (1.2-560 nm), particle yields per g plastic; acetone and formaldehyde",
+   "geo": "United States (laboratory; South African and US HDPE bags)",
+   "endpoint": "Particle and VOC emission yields during extrusion and 3-D printing",
+   "tier": "B",
+   "n": "Waste HDPE plastic bags from South Africa and the US were blended with virgin HDPE, extruded into filament and 3-D printed, with particle- and gas-phase emissions measured through each stage. Filament extrusion emitted mostly 1.2-5.2 nm particles; printing emitted mostly 5.6-560 nm particles, with particle yields (no./g processed) 2-3 orders of magnitude higher than extrusion. Printing also released acetone (1.4-39.4 ug/g printed) and formaldehyde (9.9-16.1 ug/g). Mechanical properties matched virgin HDPE. Limitation: yields are per mass processed in a controlled enclosure, not personal breathing-zone concentrations, and no uncertainty is attached to the order-of-magnitude contrast; feedstock contamination of bag plastic was not characterised. Relevance: low-medium - nearly all the number emission sits below the ~300 nm optical cut of consumer PM sensors, so maker-space monitoring needs a CPC or diffusion charger, not a PMS-class node."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103242",
+   "journal": "Atmos Pollut Res",
+   "short": "Wang urban morphology street-scale PM2.5 PM10 change points 2026",
+   "title": "Non-linear associations, model-supported change points, and seasonal variations of urban morphology with street-scale PM2.5 and PM10 concentrations",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Street-scale PM2.5 and PM10",
+   "geo": "Not stated (metadata only)",
+   "endpoint": "Urban-morphology predictors of street-level PM concentration",
+   "tier": "B",
+   "n": "Metadata-only record: Crossref deposit with no abstract on the day of entry, and no abstract recoverable from Europe PMC or Semantic Scholar. The title reports non-linear associations and model-supported change points between urban morphology indicators and street-scale PM2.5 and PM10, with seasonal variation. Design, city, sample size, morphology metrics and effect sizes cannot be stated from the record and are not inferred here. Limitation: unassessable until the abstract or full text is available; threshold-type 'change points' in morphology-PM regressions are prone to overfitting when sites are few. Relevance: medium - street-scale morphology thresholds bear directly on how a dense sensor network should be sited across canyon geometries."
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nCubatao\nschoolchildren"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno record"
+  },
+  {
+   "n": 1,
+   "note": "working age:\n3-D printing\nemissions"
+  },
+  {
+   "n": 0,
+   "note": "older adults:\nno record"
+  }
+ ]
+}

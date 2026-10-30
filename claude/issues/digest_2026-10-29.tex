@@ -1,0 +1,338 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{29 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-29\;\;\textcolor{Amber}{\textbar}\;\;Entry window 29 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;22 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{22}{RECORDS IN SCOPE\\(85 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Accra, 146 gravimetric sites: in a decade, household biomass burning
+lost $\sim$16\,\% of its share of PM$_{2.5}$ elemental mass and solid/e-waste burning gained 23 points.}\\[1.4mm]
+\footnotesize
+A citywide campaign (April 2019--June 2020, $>$600 weekly filters, ED-XRF, PMF) against four legacy sites sampled in
+2007--2008. Harmattan dust was 52--68\,\% of elemental mass. Outside Harmattan: biomass burning 11--32\,\%, traffic and
+road dust 9--36\,\%, solid and e-waste combustion 0--35\,\%. Biomass share $-$16\,\% (5.2--25.8); waste burning
+$+$23 points (15.9--30.0).
+\textbf{Where it is weak:} ED-XRF misses the carbonaceous fraction, so these are shares of \emph{elemental} mass, not of
+PM$_{2.5}$; the decadal contrast rests on four sites.
+\textbf{Why it matters here:} a 146-site gravimetric network is the speciation reference a West African low-cost
+network needs, and open waste burning is a source an optical mass sensor cannot tell apart from wood smoke.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Ultrafine particles and the kidney.} New York State, 269,945 ED visits: excess risk 0.74\,\% (0.28--1.20)
+per IQR of CTM-modelled UFP at lag 0--3. The exposure is modelled, and co-pollutant control is not reported.
+
+\item \textbf{Surface vs 230\,m.} Czech rural tower, ToF-ACSM at 4\,m and ToF-AMS at 230\,m: every submicron component
+higher at the surface (ratio 0.55--0.82); 2--3$\times$ under inversions with mixing height $<$230\,m.
+
+\item \textbf{Children's respirators.} Chiang Mai, 82 children: a KN95-equivalent passed fit testing in 3.7\,\%
+(median fit factor 9.5); adding positive-pressure HEPA air raised the pass rate to 23.2\,\%.
+
+\item \textbf{Biomass fuel tops the stillbirth PAF.} ICMR-SPIC, 227,821 pregnancies: household biomass aIRR 1.37
+(1.21--1.57), PAF 13.95\,\% --- the largest of any factor, and an upper bound given its tie to rural poverty.
+
+\item \textbf{Seven metadata-only records (32\,\%)}, including the most sensing-relevant title of the day: multicopter
+vibration and OPC accuracy (\emph{Aerosol Sci.\ Technol.}). Retry first.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 22 October issue closed with \texttt{last\_entry\_date} at 22 October. The scheduled runs for 23--29 October
+did not complete (one 30 October 00:21 UTC firing harvested 23--28 October and stopped before screening). This issue
+was built on the \textbf{30 October 14:20 UTC (09:20 CDT) recovery run}, which backfills 23--29 October day by day,
+each with its own window; this issue covers \textbf{29 October in full}. By the 22:00 rule 30 October is \emph{not}
+opened. The W44 weekly (25--31 October) and the October monthly are due on the Saturday 31 October run.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 22 in-scope records across nine bands; cardiovascular \& metabolic is
+empty. Exposure assessment leads with six (Accra PMF, vertical speciation, WRF-Chem NH$_3$ uptake, trend change-points,
+Warsaw, nucleation mode); burden/mitigation four; sensing three (all metadata-only).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: \textbf{metadata-only 7 (32\,\%)}, three cross-sectional, three
+measurement campaigns, two cohorts, two modelling, and one each acute (case-crossover), ecological, toxicology,
+laboratory (respirator fit) and review. Right --- endpoints run from kidney ED visits to stillbirth, behaviour, COPD,
+TB and respirator fit.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: unspeciated/emissions 10 (biomass-fuel proxies, metadata-only
+records), PM$_{2.5}$-only 6, size-resolved/number 2, and one each joint PM$_{2.5}$+PM$_{10}$, UFP, bioaerosol, optical.
+Right --- geography: global/not stated 8, China 3, Europe 3; two each North America, Southeast Asia (Thailand) and the
+Middle East (Iran, T\"urkiye); one each Sub-Saharan Africa (Ghana) and South Asia.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: two in-utero records (stillbirth, CHAPS prenatal window), three childhood, one
+reaching adolescence (CHAPS), two working-age (COPD, coal dust) and one older-adult signal (UFP kidney effect stronger
+above 65).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Sensing is entirely metadata-only today; the exposure band spans
+measurement, modelling and metadata cells; the health bands sit in cohort, cross-sectional, case-crossover and
+ecological cells.}\end{minipage}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, two estimates from two studies: combined biomass + cigarette vs cigarette-only COPD and severe
+exacerbation (OR, T\"urkiye, $n$\,=\,319); household biomass fuel and stillbirth (IRR, ICMR-SPIC). Neither is a measured
+particle exposure. Not poolable.}\end{minipage}
+
+\vspace{3mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{Difference scale: \% excess risk of kidney-disease ED visits per IQR of CTM-modelled UFP, cumulative lag 0--3
+(New York State, 269,945 visits).}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Holm CHAPS Fresno neurobehavior BDNF children air pollution 2026}
+{Neurobehavioral assessments and biomarkers in school children who are highly exposed to air pollution}
+{Front Public Health}
+{Children's Health and Air Pollution Study, n=193 aged 7-18. Third-grade test scores correlated with NIH Toolbox total and crystallized composites (r 0.55-0.60) and with BDNF (r 0.35). First-trimester traffic pollutants were associated with aggressive and rule-breaking behaviour; first-year exposure to all pollutants with lower BDNF, window around 5-6 months. Limitation: 193 children, many pollutants, windows and outcomes, and no effect sizes or multiple-testing control in the abstract - the window findings are exploratory. Pollutants are highly collinear in Fresno, so 'all pollutants' cannot attribute the BDNF signal to PM or EC. Relevance: medium - EC and PAH contrasts again point to absorption channels rather than mass.}
+{10.3389/fpubh.2026.1970714}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{Yuksel COPD cigarette biomass combined exposure exacerbations Turkiye 2026}
+{Clinical outcomes of COPD associated with cigarette smoke, biomass smoke, and combined exposure: A retrospective observational study}
+{Tob Induc Dis}
+{319 stable COPD patients: smoking-associated 159, biomass-associated 80, combined 80. Combined exposure presented younger (59.2 vs 61.4 and 63.5 y), with lower FEV1 (48\% vs 55-56\% predicted), more chronic respiratory failure (26.2\% vs 17.0\% and 11.2\%) and, adjusted, severe exacerbations AOR 1.89 (1.22-2.96) vs smoking alone. Limitation: exposure is a retrospective chart classification with no dose for biomass, and the equal group sizes (80/80) suggest selection rather than consecutive enrolment. Pack-years differ by group and are not shown to be balanced, so 'combined' may simply mean heavier total exposure. Relevance: low - no measured particle exposure.}
+{10.18332/tid/231161}
+
+\paperentry{Shi air pollution pulmonary tuberculosis incidence China GTWR 2026}
+{Analysis of influencing factors of atmospheric pollution on pulmonary tuberculosis incidence in China from 2014 to 2020}
+{Front Public Health}
+{Provincial panel 2014-2020 (31 units), spatial autocorrelation, space-time scanning and geographically and temporally weighted regression (R2 0.889), with 1-5-year moving-average exposure windows. High-burden clusters persisted in Xinjiang, Xizang and Qinghai (RR 3.56). PM$_{2.5}$ coefficients ran 'east-negative, west-positive'; SO$_2$, NO$_2$ and CO were jointly positive in the north-east; O$_3$ mostly negative. Limitation: 217 province-years and locally varying coefficients amount to a flexible fit of an ecological surface; the sign flip of PM$_{2.5}$ across China shows confounding by development and TB control, not toxicity. Relevance: low.}
+{10.3389/fpubh.2026.1951817}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{ICMR-SPIC stillbirth risk factors biomass fuel India pooled cohort 2026}
+{Prevalence and risk factors for stillbirths in India: secondary analysis of ICMR-Stillbirth Pooled India Cohort (ICMR-SPIC)}
+{Lancet Reg Health Southeast Asia}
+{Ten prospective pregnancy cohorts 1994-2023 harmonised, 227,821 pregnancies, 3,935 stillbirths; weighted rate 14.8/1000 (13.4-16.3). In mixed-effects modified Poisson models, biomass fuel use aIRR 1.37 (1.21-1.57) with the largest population attributable fraction of any factor, 13.95\% (9.11-18.79), ahead of nulliparity and hypertensive disorders. Limitation: biomass use is a binary household marker strongly tied to rural residence, poverty and access to obstetric care; mutual adjustment for education does not remove that, so the PAF is an upper bound, not a smoke effect. Cohorts span three decades with different ascertainment. Relevance: low - the household-air-pollution burden case, without a particle metric.}
+{10.1016/j.lansea.2026.100841}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Donohoe ultrafine amorphous silica epithelial stress pro-fibrotic 2026}
+{Ultrafine amorphous silica induces chronic epithelial cell stress and pro-fibrotic reprogramming in a particle size- and exposure duration-dependent manner}
+{Part Fibre Toxicol}
+{\textsc{metadata only.} Title and authors only (Donohoe, Selvamani, Dharwal, O'Neil et al.). No abstract was retrievable at harvest. The title reports that ultrafine amorphous silica causes chronic epithelial cell stress and pro-fibrotic reprogramming that depends on particle size and exposure duration - relevant because amorphous silica is usually treated as low-hazard relative to crystalline silica. Model system, doses and endpoints are not available; nothing is inferred. Relevance: low - toxicology of a particle class not resolved by mass sensors.}
+{10.1186/s12989-026-00710-8}
+
+\paperentry{Zhao coal dust macrophage extracellular vesicles thyroid cancer miR-205-5p 2026}
+{Coal dust-stimulated macrophage-derived extracellular vesicles promote thyroid cancer cell phenotypes involving miR-205-5p, CAMK1G, and NF-kB-associated signaling}
+{Front Immunol}
+{THP-1 macrophages exposed to characterised coal dust released extracellular vesicles enriched in miR-205-5p; these increased TPC-1 thyroid cancer cell viability, clonogenicity, migration and invasion and reduced apoptosis. Effects ran through CAMK1G and NF-kB (p65, IkBa phosphorylation) and were attenuated by miR-205-5p inhibition or CAMK1G knockdown; coal-dust-exposed mice and humanised xenograft mice were used in vivo. Limitation: the premise - coal dust promoting thyroid cancer - has no epidemiological anchor, and macrophage dosing in vitro is far above realistic lung burdens. Relevance: low - occupational mechanism without an exposure metric.}
+{10.3389/fimmu.2026.1856770}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 6 records}{Clay}
+
+\paperentry{Accra PM$_{2.5}$ elemental composition PMF source shift e-waste burning 2026}
+{Shifting Dominant Air Pollution Sources in Sub-Saharan Africa's Changing Urban Environment: Analysis of Elemental Composition and Source Contributions of Ambient Fine Particulate Matter (PM$_{2.5}$) Pollution in Accra, Ghana}
+{Environ Health Perspect}
+{Citywide campaign April 2019-June 2020: >600 weekly gravimetric PM$_{2.5}$ filters from 146 sites, ED-XRF and PMF, compared with four legacy sites from 2007-2008. Harmattan crustal dust was 52-68\% of elemental mass. Outside Harmattan, 4-6 factors: biomass burning 11-32\%, traffic/road dust 9-36\%, solid and e-waste combustion 0-35\%. Over a decade the biomass contribution fell by \textasciitilde{}16\% (5.2-25.8) while waste burning rose by 23 points (15.9-30.0). Limitation: ED-XRF elements miss the carbonaceous fraction, so the shares are of elemental mass, not PM$_{2.5}$ mass, and the decadal comparison rests on four sites. Relevance: high - a 146-site gravimetric network is the speciation reference a West African LCS network needs; e-waste burning is a source optical sensors cannot distinguish.}
+{10.1021/ehp.6c00323}
+
+\paperentry{Julaha vertical aerosol chemical composition 230 m 4 m ACSM rural background 2026}
+{Meteorological Effects on the Vertical Variability of Aerosol Chemical Composition at a Rural Background Site}
+{Environ Pollut}
+{Concurrent dual-height speciation, December 2019-May 2020: compact ToF-AMS at 230 m, ToF-ACSM at 4 m, Sunset OCEC. Every component was higher at 4 m; median 230/4 m ratios 0.55-0.82. Carbonaceous species had the steepest gradients and winter peaks; secondary inorganics were more homogeneous. Under inversions with mixing height <230 m, surface concentrations were 2-3x those aloft. Limitation: two different instruments at the two heights (AMS vs ACSM) - inter-instrument bias contributes directly to the ratio, and the abstract gives no co-location intercomparison. One site, one half-year. Relevance: high - a 2-3x surface/aloft contrast under shallow mixing is the bias any satellite-AOD or tower-based calibration of ground sensors must model.}
+{10.1016/j.envpol.2026.129431}
+
+\paperentry{Lu heterogeneous ammonia uptake SOA WRF-Chem North China Plain 2026}
+{Impacts of the heterogeneous ammonia uptake on air quality in the North China Plain}
+{Atmos Chem Phys}
+{A first-order NH$_3$ uptake on SOA forming NOCs was added to WRF-Chem for November 2017, with uptake coefficient gamma 1e-5 to 1e-3. Laboratory decline in reaction efficiency and measured NOC burdens support gamma=1e-5 as a conservative upper limit. At that value, NH$_3$ fell 0.62\%, inorganic aerosol and PM$_{2.5}$ fell <0.06\%, and the pathway produced 1.2 $\mu$g\,m$^{-3}$ of NOCs. Limitation: one month, one region, and the constraining gamma is chosen partly from the NOC burden it is meant to explain. Relevance: low - a negligible PM$_{2.5}$ mass term; useful only as a null for the chemistry.}
+{10.5194/acp-26-15257-2026}
+
+\paperentry{Mandujano change-point detection trend estimation long-term PM records 2026}
+{Assessing the Effect of Change-Point Detection Techniques on Trend Estimation in Long-Term Particulate Matter Records}
+{Environ Sci Atmos}
+{\textsc{metadata only.} Mandujano, Gonzalez, Hernandez, Guillen et al. Only the opening sentence of the abstract was retrievable from Crossref or Semantic Scholar: long-term PM trend analyses assume a single trend direction across the record, which can mask structural changes. The title states that change-point detection techniques are compared for their effect on trend estimates. Location, data set, methods and results are not available at harvest; nothing is inferred. Relevance: medium - instrument changes and station relocations are exactly the breakpoints that contaminate trends from mixed reference/LCS archives; retry the abstract.}
+{10.1039/d6ea00110f}
+
+\paperentry{Aktypis nucleation-mode particles marine atmosphere downwind urban 2026}
+{Frequent Appearance of Nucleation-Mode Particles in the Marine Atmosphere Downwind of an Urban Area}
+{Atmos Environ}
+{\textsc{metadata only.} Title and authors only (Aktypis, Vasilakopoulou, Matrali, Kaltsonoudis et al.). No abstract was retrievable at harvest. The title reports frequent nucleation-mode particles in marine air downwind of an urban area, implying urban plumes seed new-particle formation or carry fresh emissions over water. Site, instrumentation and event statistics are not available; nothing is inferred. Relevance: low - sub-25 nm particles are invisible to optical sensors and carry negligible mass.}
+{10.1016/j.atmosenv.2026.122458}
+
+\paperentry{Szczepanik Warsaw wintertime air quality improvement 2016-2025 2026}
+{Improvement in wintertime air quality in urban and suburban areas of Warsaw within 2016-2025}
+{Aerosol Air Qual Res}
+{\textsc{metadata only.} Title and authors only (Szczepanik, Deptula, Klapinski, Rakowska). No abstract was retrievable at harvest. The title reports improved wintertime air quality across urban and suburban Warsaw over 2016-2025, the period of Poland's anti-smog resolutions and boiler-replacement programmes. Pollutants, data sources and magnitudes are not available; nothing is inferred. Relevance: medium - suburban solid-fuel heating is where Polish LCS networks (Airly and others) are densest; the paper may use them.}
+{10.1007/s44408-026-00173-8}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 3 records}{Amber}
+
+\paperentry{zum Berge multicopter vibration optical particle counter accuracy 2026}
+{Influence of multicopter-induced vibrations on the measurement accuracy of optical particle counter}
+{Aerosol Sci Technol}
+{\textsc{metadata only.} Title and authors only (zum Berge, Platis, Bange). No abstract was retrievable from Crossref or Semantic Scholar at harvest. The title describes quantifying how airframe vibration from a multicopter degrades the accuracy of an optical particle counter carried aloft - relevant to the growing use of drone-borne OPCs (often the same Alphasense/Plantower-class sensors used in ground networks) for vertical PM profiling. Design, sensor model, vibration spectrum and error magnitudes are not available; nothing is inferred. Relevance: high - vibration is an uncharacterised error term for mobile and UAV-mounted low-cost OPCs; retry the abstract first.}
+{10.1080/02786826.2026.2747765}
+
+\paperentry{Washeem machine learning condensation bioaerosol sampler collection volume 2026}
+{Machine-Learning-Guided Prediction and Temperature Optimization for Collection Volume Control in a Condensation-Based Bioaerosol Sampler}
+{J Aerosol Sci}
+{\textsc{metadata only.} Title and authors only (Washeem, Li, Jansen, Shirkhani et al.). No abstract was retrievable at harvest. The title describes using machine learning to predict and control the liquid collection volume of a condensation-growth bioaerosol sampler by optimising its temperature set points. Instrument, training data and performance are not available; nothing is inferred. Relevance: low - sampler control engineering for bioaerosol, adjacent to but outside mass-concentration sensing.}
+{10.1016/j.jaerosci.2026.106907}
+
+\paperentry{Vannini biochar passive biomonitor potentially toxic elements lichens 2026}
+{Wood-derived biochar as a potential sustainable alternative to lichens for monitoring airborne potentially toxic elements}
+{Atmos Environ}
+{\textsc{metadata only.} Title and authors only (Vannini, Sidoli, Pagano, Magnani). No abstract was retrievable at harvest. The title proposes wood-derived biochar as a standardisable passive accumulator of airborne potentially toxic elements in place of transplanted lichens. Exposure design, elements, comparison data and agreement are not available; nothing is inferred. Relevance: medium - a cheap passive element sampler could add composition to dense optical-mass networks, provided uptake can be calibrated to air concentration.}
+{10.1016/j.atmosenv.2026.122457}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Blanco-Alegre ironing indoor ultrafine particles ventilation eBC 2026}
+{Ironing as a Source of Indoor Aerosol Particles: Effects of Ventilation and Ironing Conditions}
+{Atmosphere}
+{Residential measurements with a conventional steam iron and a steam iron with a portable boiler, at low and higher ventilation. PNC rose by about two orders of magnitude during ironing, mostly 20-80 nm, to a maximum of 7.12e5 cm$^{-3}$ (conventional iron, low ventilation). Emission rates 8.1e11-1.5e12 particles/min, highest for the boiler iron at low ventilation; modes shifted to larger sizes after ironing; eBC changed little. Limitation: one dwelling, few repetitions, and the source mechanism (water additives, fabric, soleplate heating) is not separated; no mass concentration is reported, so health relevance is by number only. Relevance: medium - an ultrafine source that optical home sensors will undercount almost entirely.}
+{10.3390/atmos17111063}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 4 records}{Coral}
+
+\paperentry{Ruengdit active-flow respirator fit children Chiang Mai 2026}
+{Active-flow systems enhance respirator fit success in children: a comparative study with standard disposable models}
+{Front Public Health}
+{82 children aged 5-10, modified OSHA quantitative fit test. A standard triple-fold KN95-equivalent FFR passed in 3.7\%; adding a portable HEPA unit supplying 66.5 L/min positive pressure raised the pass rate to 23.2\% (OR 17.0) and median fit factor from 9.5 to 39.5. Wider bizygomatic breadth (aOR 1.31) and longer menton-sellion (1.11) favoured fit; head nodding was worst. Limitation: no CI given for the OR; crossover order and fit-test learning effects are not described, and 77\% still failed with the active system. Relevance: high - a median fit factor of 9.5 means adult masks give children roughly 90\% leakage-limited protection at best, which matters for exposure-reduction advice issued from LCS haze alerts.}
+{10.3389/fpubh.2026.1851331}
+
+\paperentry{Imman caregivers PM$_{2.5}$ prevention preschool children northern Thailand qualitative 2026}
+{Caregivers' experiences of PM$_{2.5}$ prevention for preschool children in Thailand: a qualitative study with focus group interviews}
+{Child Health Nurs Res}
+{Focus groups plus in-depth interviews with 20 primary caregivers (14 women) of preschool children in a rural northern Thai community subject to recurrent haze; content analysis (Graneheim and Lundman). Themes: barriers of awareness and responsibility against pervasive local sources; individual prevention driven by visible symptoms rather than air-quality information; and a shift toward collective action and calls for structural change (waste-burning control). Limitation: one community, 20 participants, no link to measured exposure or behaviour change. Relevance: medium - caregivers act on symptoms, not data; local sensor displays only help if they reach this audience in an actionable form.}
+{10.4094/chnr.2025.047}
+
+\paperentry{Grzesczyk-Nojszewska Poland air pollution interventions public attitudes survey 2026}
+{Public attitudes toward personal and population interventions to reduce air pollution exposure: a 2025 nationwide cross-sectional survey in Poland}
+{Int J Occup Med Environ Health}
+{CAWI survey, May 2025, quota sample of 1,092 adults. 76.4\% saw air pollution as requiring public action (women aOR 1.47, 1.11-1.96; age >=60 aOR 2.49, 1.59-3.91). Commonest protective behaviours: closing windows during episodes (44.2\%) and avoiding outdoor time (36.5\%). Fines for burning prohibited materials in home furnaces had 70.2\% support. Limitation: quota online panels over-represent the engaged; no link to local concentrations, and stated behaviours are unverified. Relevance: medium - window closing is the dominant action, so indoor/outdoor paired sensing is what tells people whether it works.}
+{10.13075/ijomeh.1896.02831}
+
+\paperentry{Mohamadi Isfahan PM$_{2.5}$ AirQ+ WRF-SMOKE-CMAQ health damage 2026}
+{Assessing the health impacts of PM$_{2.5}$ from anthropogenic and natural sources in Isfahan, Iran}
+{J Environ Health Sci Eng}
+{Station annual PM$_{2.5}$ fed AirQ+; at a 2020 GDP of USD 2,283 per capita, annual health damage was USD 441 M (253-628 M). A year-long WRF-SMOKE-CMAQ run attributed 7.9\% of damage to iron and steel, 2.2\% to cement and 1.7\% to brick kilns; 'environmental' (natural) particles accounted for USD 115.3 M (26\%). Limitation: attributing damage linearly by modelled mass share assumes equal toxicity, and the share of dust (natural) depends on how the inventory handles anthropogenic fugitive dust. Few stations in a large city. Relevance: low - a standard AirQ+ exercise; denser monitoring would mainly tighten the exposure input.}
+{10.1007/s40201-026-01011-0}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 2 records}{Slate}
+
+\paperentry{Deng ultrafine particles kidney disease ED visits New York 2026}
+{A mysterious danger for kidney disease exacerbations: short-term impacts of ultrafine particles on hospital visits}
+{Environ Res}
+{New York State discharge data 2013-2018 (95\% of hospitals), 269,945 kidney-disease ED visits, conditional logistic regression per IQR of modelled UFP. Associations appeared at lag 1 and on every cumulative lag 0-1 to 0-6, peaking at lag 0-3: excess risk 0.74\% (0.28-1.20) per IQR. Larger in adults >65, non-African American patients, hot and dry days, and fall/winter. Limitation: UFP is a CTM product, not a measurement; its spatial error is large and likely correlated with PM$_{2.5}$ and NO$_2$, and the abstract reports no co-pollutant adjustment, so 'UFP-specific' toxicity is not isolated. The effect per IQR is small. Relevance: high - a state-scale UFP health signal built entirely on modelled number concentration is the case for CPC or OPC-extended nodes to validate it.}
+{10.1016/j.envres.2026.126022}
+
+\paperentry{Wang PM$_{2.5}$ lung cancer nonsmokers narrative review IL-1beta EGFR screening 2026}
+{Environmental PM$_{2.5}$ exposure associated with lung cancer in nonsmokers: a narrative review of high-risk groups, mechanisms, and implications for screening}
+{J Toxicol Environ Health B Crit Rev}
+{Narrative review of cohort, meta-analytic and toxicological evidence on PM$_{2.5}$ and lung cancer in never-smokers (<100 lifetime cigarettes), weighted to East Asian women. Emphasises macrophage IL-1beta signalling promoting EGFR-mutant adenocarcinoma, and lists high-exposure microenvironments: incense burning, cooking and solid fuel, subway/bus/motorbike commuting and professional driving, firefighting, construction, informal e-waste recycling. Argues for cumulative PM$_{2.5}$ in risk-prediction models and screening of exposed never-smokers. Limitation: non-systematic; no new quantitative synthesis, and the microenvironment list is not dose-ranked. Relevance: medium - cumulative personal PM$_{2.5}$ as a screening criterion would need exactly the personal and microenvironment data wearable sensors produce.}
+{10.1080/10937404.2026.2747089}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{29 October 2026}, single day (Thursday). Harvester legs: \textbf{PubMed} health
+\textbf{13}, sensing \textbf{1}; \textbf{Europe PMC} \textbf{19}; \textbf{Crossref by ISSN} \textbf{66}; \textbf{arXiv}
+150 kB, no in-window entry; \textbf{OpenAlex} HTTP 429. 97 unique, 0 already carried, 97 fresh; PubMed connector
+(EDAT 29 Oct) 21 PMIDs (20 bucketed to 29 Oct), 1 merged, 10 appended, \textbf{107 screened}. Abstracts for 24
+PubMed records recovered by efetch; Crossref/Semantic Scholar recovered the Accra (EHP) abstract and a one-line
+fragment for one more. \textbf{Consensus} calibration sweep (once for the 23--29 October backfill): 10 hits, 0 new (Ginsburg 2026, Kumpika 2026 and Fang 2026 already archived). \textbf{22 admitted}, \textbf{85 rejected} with logged reasons (6 of them already shipped in the 28 October issue). \textbf{DOI
+gate} 0 fail / 0 warn. \textbf{Trial watch} 23--30 October: 4 registrations updated, \textbf{1 new} --- NCT07536178 (UBC \emph{Lungs on Fire}, $n$\,=\,24 controlled woodsmoke vs filtered-air exposure; co-primary FeNO and CANTAB cognition, with rs-fMRI, $^{129}$Xe MRI and neuroinflammation panels); \texttt{trials.json} 20 NCT / 36 windows. \textbf{7 carried on metadata alone}. \textbf{Scholar Gateway} not called.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

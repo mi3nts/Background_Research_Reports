@@ -1,0 +1,402 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{27 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-27\;\;\textcolor{Amber}{\textbar}\;\;Entry window 27 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;30 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{30}{RECORDS IN SCOPE\\(169 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}PurpleAir dries its own sample: internal heating in the housing lowers
+detection-zone RH and removes aerosol water before the PMS5003 counts it.}\\[1.4mm]
+\footnotesize
+Laboratory and field work (Santa Rosa, CA; Winston-Salem, NC, against a Teledyne T640x) measured air temperature in the
+particle detection zone of the Plantower PMS5003, standalone and inside a PurpleAir. The housing warms the zone more than
+a bare sensor; a wraparound USB heater pushed sample RH down to regulatory-monitor conditions and lowered reported
+PM$_{2.5}$ at high ambient RH. Even unheated, the PurpleAir read below a standalone PMS5003, consistent with partial
+removal of hygroscopic water. CFD resolved airflow, residence time and temperature inside the unit.
+\textbf{Where it is weak:} two field sites, no fitted growth factor or quantified bias reduction in the abstract;
+preprint.
+\textbf{Why it matters here:} humidity corrections are fitted on ambient RH, but the optical engine sees a warmed, drier
+sample whose RH depends on housing and airflow. Corrections fitted on bare-PMS data need not transfer to housed units.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Trajectory source maps fail a negative control.} Riyadh, 10 years of METAR dust codes: PSCF/CWT run on
+\emph{locally lifted} dust (no distant source needed) was \emph{more} enriched over candidate source regions than
+suspended dust (permutation $p\le0.007$); wind matching erased most structure in both.
+
+\item \textbf{Paris plume optics change within hours.} Airborne plus ground: refractive index moved from
+$\sim$1.35--1.40\,+\,0.03--0.08$i$ near source to $\sim$1.45--1.50\,+\,0.015--0.02$i$ 2--6\,h downwind; SSA and AAE
+rose. A single assumed refractive index in OPC mass conversion is wrong for one of the two.
+
+\item \textbf{Prenatal PM$_{2.5}$ and infant antibiotics, Scotland.} 498,123 births; observed vs 5\,$\mu$g\,m$^{-3}$
+counterfactual: controlled direct effect OR 1.12 (1.10--1.14), indirect via birthweight 0.99. The exposure IQR is only
+6--8\,$\mu$g\,m$^{-3}$; read as residual area confounding until replicated.
+
+\item \textbf{Coal heating drives Polish respiratory admissions.} 779k emergency COPD/asthma admissions: associations
+only in the heating season (adult asthma RR 1.100 per IQR PM$_{2.5}$); NO$_2$ null throughout.
+
+\item \textbf{ERF choice dominates burden.} BEST-COST, five countries: disease-specific ERFs gave 2--4$\times$ lower
+YLL than WHO all-cause ERFs (median ratio 0.42 for PM$_{2.5}$), with stable rankings.
+
+\item \textbf{Power shutoffs compound wildfire smoke.} California 2013--2019: severe PSPS plus +10\,$\mu$g\,m$^{-3}$
+wildfire PM$_{2.5}$ vs neither, respiratory encounters OR 1.16 (1.10--1.22), multiplicative interaction --- the window
+in which mains-powered sensors and purifiers go dark.
+
+\item \textbf{Low-cost PM$_{2.5}$ calibration holds through winter; gases do not.} London, 10 months, two sites: linear
+T/RH calibration matched ML for PM$_{2.5}$, transferred at R$^2\ge$0.56; gas calibrations transferred at R$^2\le$0.28.
+
+\item \textbf{Cross-day collisions.} 15 of this day's in-scope records were already issued in the 26 October issue and
+are logged here as duplicates.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 22 October issue closed with \texttt{last\_entry\_date} at 22 October. A 30 October 00:21 UTC run harvested
+23--28 October but stopped before screening; this issue was built on the 30 October 14:20 UTC (09:20 CDT) recovery run, which
+backfills 23--29 October day by day. This issue collects \textbf{27 October in full}, continuous with the 26 October
+issue. Consensus, Scholar Gateway and the trial watch for the backfill window are reported in the 29 October issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 30 in-scope records across nine bands. Exposure assessment leads with
+six (plume back-trajectories, trajectory negative control, Paris plume optics, Nepal on-road BC, Faisalabad PMF, Khulna);
+respiratory five; sensing and occupational/indoor four each; cardiovascular is the only empty band.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: time-series, case-crossover, cohorts and burden models alongside
+calibration, mobile, laboratory and monitoring analyses, two animal studies and one review; \textbf{metadata-only 1
+(3\,\%)}. Nine records are \emph{European Journal of Public Health} conference abstracts recovered by Crossref title
+match. Right --- endpoints run from emergency admissions, spirometry and sensitisation to infant antibiotic use,
+absenteeism, cortisol and burden metrics.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ dominates; PM$_{10}$ (UK fire plume, Faisalabad,
+Croatia), eBC (Nepal), PM$_1$ (Paris) and dust codes (Riyadh) also appear. Right --- geography: Europe carries the issue
+(UK, Poland, Spain, Greece, Ireland, Slovakia, France, Sweden, Croatia and a five-country burden study); the USA is
+second (California, Oklahoma, national infant life expectancy, PurpleAir heating), then South Asia and East Asia.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: one prenatal record (Scotland); three childhood records (Head Start smoke,
+Patras classrooms, Croatian ragweed sensitisation); three working-age records (cortisol at 24, PSPS, La Palma); no
+adolescent or older-adult record.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Exposure assessment sits in campaign, monitoring and
+source-apportionment cells; sensing spans calibration comparison, laboratory instrumentation and ML; respiratory sits in
+time-series and case-crossover; mechanistic toxicology in two animal studies and one review.}\end{minipage}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, four estimates from four studies: PSPS plus wildfire PM$_{2.5}$ and respiratory encounters
+(California); regional fire detections and sick absence (OK-AIR Head Start); observed prenatal PM$_{2.5}$ vs a
+5\,$\mu$g\,m$^{-3}$ counterfactual and infant amoxicillin (Scotland, controlled direct effect); rural residence and
+ragweed sensitisation (Croatia, area-level PM$_{10}$/pollen contrast). Exposure contrasts differ completely. Not
+poolable.}\end{minipage}
+
+\vspace{3mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{Difference scale: cancer years of life lost per 10\,$\mu$g\,m$^{-3}$ PM$_{2.5}$ at lag 0--1, Pudong, Shanghai
+(2013--2021).}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 2 records}{Deep}
+
+\paperentry{Li built environment sleep duration air pollution mediation Yinzhou cohort 2026}
+{Association between built environment and sleep duration mediated by air pollution: a cohort study in China}
+{BMC Public Health}
+{Yinzhou cohort, 18,891 adults, baseline 2015-2017 and follow-up 2021-2023; quantile g-computation for a built-environment mixture and SEM for mediation. Per quartile of the mixture: +0.057 h/year sleep (0.039-0.075). Per IQR, PM$_{10}$, PM$_{2.5}$ and NO$_2$ were associated with -0.027, -0.048 and -0.071 h sleep. PM$_{2.5}$ mediated up to 21.5\% of the green-space effect; NO$_2$ up to 45.3\% of the walkability effect. Limitation: self-reported sleep, and SEM mediation needs no unmeasured mediator-outcome confounding - noise and light at night co-vary with traffic pollution and are only partly modelled. Relevance: low-moderate - mediation of this kind needs better spatial exposure, not more covariates.}
+{10.1186/s12889-026-28717-y}
+
+\paperentry{Santoso air pollution noise greenness salivary cortisol BAMSE 2026}
+{Air pollution, road traffic noise, and greenness in relation to salivary cortisol in young adults}
+{J Expo Sci Environ Epidemiol}
+{BAMSE birth cohort, n=1,148 at age 24; linear regression of salivary cortisol on prior-year modelled pollutants, noise and NDVI. No overall associations. In post hoc male subgroups, PM$_{10}$ was associated with higher morning cortisol (beta 0.058, 0.003-0.112) as were NOx and noise, with greenness inverse; females showed opposite trends. Limitation: the only signals are exploratory sex-by-season subgroup contrasts after a null main analysis, with lower CIs at \textasciitilde{}0; single-day cortisol is highly variable. Treat as null. Relevance: low - low-contrast Stockholm exposures modelled at the address.}
+{10.1038/s41370-026-00995-z}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 5 records}{Sky}
+
+\paperentry{Poland air pollution COPD asthma emergency admissions DLNM heating season 2026}
+{Air pollution and respiratory admissions in Poland: a nationwide DLNM analysis of COPD and asthma}
+{Eur J Public Health (conference abstract)}
+{National registry: 625,597 COPD and 153,563 asthma emergency admissions (32,893 paediatric), DLNM lag 0-10, stratified by heating season. Associations appeared only in the heating season: COPD RR per IQR PM$_{2.5}$ 1.044, PM$_{10}$ 1.039, SO$_2$ 1.055; lead 1.072, benzo[a]anthracene 1.057. Adult asthma stronger (PM$_{2.5}$ 1.100). In children, PM was not significant; arsenic (1.124) and ozone (1.115) were. NO$_2$ null throughout. No CIs in the abstract. Limitation: component and pollutant RRs come from single-pollutant models on collinear coal-combustion tracers, so 'lead' and 'PAH' effects cannot be separated from PM$_{2.5}$; conference abstract. Relevance: moderate - heating-season coal signatures are where speciation-capable nodes add value over mass.}
+{10.1093/eurpub/ckag169.807}
+
+\paperentry{ISVOLCAN Tajogaite volcano La Palma lung function obstructive pattern 2026}
+{Lung function after Tajogaite volcano eruption in La Palma: ISVOLCAN study}
+{Eur J Public Health (conference abstract)}
+{Random population sample of 604 adults (mean age 50; 62\% women) with spirometry a median 424 days after the 85-day eruption. Obstruction prevalence 28.8\%. Western (more exposed) residence: OR 1.64 (1.01-2.67); 1.74 (1.03-2.93) without prior respiratory disease. Intermediate SO$_2$ exposure OR 1.98 (1.18-3.34). Limitation: a fixed FEV1/FVC <70\% cut-off over-calls obstruction in older adults, no pre-eruption baseline exists, and residence area is a coarse proxy that cannot separate SO$_2$ from volcanic PM; non-monotone SO$_2$ categories. Conference abstract. Relevance: moderate - volcanic events are a case for rapidly deployed PM and SO$_2$ sensor networks.}
+{10.1093/eurpub/ckag169.069}
+
+\paperentry{Dublin air pollution fungal spores respiratory admissions time series 2026}
+{Short-term effects of air pollution and aeroallergens on respiratory admissions}
+{Eur J Public Health (conference abstract)}
+{Dublin daily HIPE admissions with NO$_2$, PM$_{2.5}$, PM$_{1}$, fungal spores and meteorology; negative-binomial time series, lags 0-7. NO$_2$ was consistently associated with asthma, COPD and all respiratory admissions (\textasciitilde{}3-5\% per unit, p <0.01); particulate effects were 'outcome-specific' and not quantified in the abstract; spores showed no independent short-term effect. Limitation: per-unit NO$_2$ effects of 3-5\% are implausibly large per ppb or $\mu$g\,m$^{-3}$ and suggest an unstated scale; study years and PM results are missing; conference abstract. Relevance: low-moderate - Dublin's PM$_{1}$ series is unusual, and spore counts pair naturally with optical sensor coarse channels.}
+{10.1093/eurpub/ckag169.1252}
+
+\paperentry{Wilner public safety power shutoff wildfire PM$_{2.5}$ healthcare California 2026}
+{Co-exposure to planned power outages and wildfire PM$_{2.5}$ and acute healthcare utilization in California: A time-stratified case-crossover study}
+{PLoS Med}
+{Statewide California encounters for adults 20+, time-stratified case-crossover, temperature-adjusted. Severe PSPS events alone: same-day respiratory encounters OR 1.06 (1.02-1.11), stronger for COPD. Joint PSPS and +10 $\mu$g\,m$^{-3}$ wildfire PM$_{2.5}$ vs neither: OR 1.16 (1.10-1.22), with multiplicative interaction. Cardiovascular and psychiatric encounters null. Limitation: PSPS is circuit-level but assigned by ZIP, and outage plausibly changes the exposure itself (no power for filtration or HVAC, more time outdoors or relocation), so the interaction mixes effect modification with exposure modification. Relevance: high - outages disable mains-powered sensors and purifiers precisely during smoke; battery-backed nodes are needed to measure this window.}
+{10.1371/journal.pmed.1005270}
+
+\paperentry{Lovric ragweed sensitisation PM$_{10}$ pollen model comparison Croatia ATOPICA 2026}
+{Outdoor Environmental Risk Factors for Paediatric Ragweed Sensitisation: A Formal Model Comparison}
+{Children (Basel)}
+{Re-analysis of 3,520 Croatian children from ATOPICA within EDIAQI; logistic models compared by AIC, adjusted for age and parental atopy. Sensitisation prevalence 10.8\%. PM$_{10}$ and categorical pollen area fit equally well (delta AIC 1.7) because both encode the same inland-coastal contrast; NO$_2$ added nothing. Transitional woodland-shrub aOR 0.93 (0.90-0.97) survived Bonferroni; rural residence aOR 0.69 (0.50-0.96). Limitation: the authors state it directly - area-level exposure cannot separate particulate pollution from pollen, so a PM contribution can be neither confirmed nor excluded. Relevance: moderate - an explicit case where only sub-regional, co-located PM and pollen measurement could break the collinearity.}
+{10.3390/children13101366}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Scotland prenatal PM$_{2.5}$ infant amoxicillin birthweight mediation 2026}
+{Prenatal PM$_{2.5}$ and Infant Antibiotics: Birth-Weight Mediation via Causal Analysis}
+{Eur J Public Health (conference abstract)}
+{All Scottish singleton births 2009-2018, n=498,123, linked registries; g-computation mediation comparing observed PM$_{2.5}$ with a counterfactual of 5 $\mu$g\,m$^{-3}$. Controlled direct effect OR 1.12 (1.10-1.14); interventional direct OR 1.12 (1.11-1.14); indirect via birthweight 0.99 (0.99-1.01). Limitation: exposure IQR is only 6-8 $\mu$g\,m$^{-3}$, so a 12\% excess over a \textasciitilde{}2 $\mu$g\,m$^{-3}$ counterfactual shift is implausibly large and points to residual area-level confounding (deprivation, prescribing culture); amoxicillin dispensing is a weak infection proxy. Preliminary conference abstract. Relevance: low-moderate - fine-scale exposure contrast is too narrow for postcode annual means.}
+{10.1093/eurpub/ckag169.955}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 3 records}{Violet}
+
+\paperentry{Do PM$_{2.5}$ superior cervical ganglion calcium channels satellite glia 2026}
+{PM$_{2.5}$ Exposure Disrupts Sympathetic Neurotransmission by Impairing Voltage-Gated Ca2+ Channels and Remodeling Satellite Glia in the Superior Cervical Ganglion}
+{Int J Mol Sci}
+{Rats received intracerebroventricular PM$_{2.5}$; isolated superior cervical ganglia were also exposed directly. ICV PM$_{2.5}$ raised hypothalamic TNF-alpha and IL-6. Direct exposure cut medium norepinephrine without changing tissue content; depolarisation-evoked Ca2+ responses fell after either route, and patch clamp showed lower VGCC current density without Cav alpha1 mRNA change. GFAP and Kir4.1 rose (satellite glia). Limitation: intracerebroventricular injection bypasses the lung and does not model inhalation dose or translocation; particle source and dose relevance are not given in the abstract. Relevance: low.}
+{10.3390/ijms27209184}
+
+\paperentry{Ganse diesel exhaust particles cardiac metabolomics glycolytic shift rats 2026}
+{Diesel Exhaust Particles Exposure Disrupts Cardiac Bioenergetics and Induces a Shift Towards Glycolytic Metabolism in Rats}
+{Biomolecules}
+{Sprague-Dawley rats instilled with DEP or saline three times weekly for one or three weeks. At one week, 17 of 22 myocardial metabolites changed: succinate, acetate, formate, 3-hydroxybutyrate, ATP and ADP fell; glucose and lactate rose, consistent with reduced oxidative metabolism and a glycolytic shift, plus nucleotide degradation. Most changes resolved by three weeks; plasma changes were modest. Limitation: intratracheal bolus dosing of a single reference DEP does not reproduce inhaled dose rate, group sizes are not stated, and transient changes that resolve under continued exposure question chronic relevance. Relevance: low.}
+{10.3390/biom16101501}
+
+\paperentry{Liu cerium dioxide scavenging environmentally persistent free radicals PM$_{2.5}$ filtration review 2026}
+{Cerium Dioxide-Based Scavenging of Environmentally Persistent Free Radicals in Fine Particulate Matter: A Prospective Review}
+{Int J Mol Sci}
+{A hypothesis-stating review, explicitly not a validated result. EPFRs persist on PM$_{2.5}$ for days to months and drive hydroxyl-radical generation by Fenton-like cycling after deposition. The authors propose migrating CeO2 Ce3+/Ce4+ redox cycling, an established antioxidant mechanism, into ambient-temperature air filters to quench EPFRs on captured particles, and argue that high-temperature catalytic uses of CeO2 are not a precedent. They list the open questions: direct quenching vs ROS interception, humidity, airflow, contact time, and CeO2 fate. Limitation: no data; the only cited support is gas-phase ROS scavenging in cigarette smoke. Relevance: low - filter chemistry, not measurement.}
+{10.3390/ijms27209232}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 6 records}{Clay}
+
+\paperentry{UK Air Quality Cell PM$_{10}$ plume back trajectory tyre fire Mexborough vulnerability 2026}
+{Back trajectory modelled PM$_{10}$ plumes: population vulnerability profile from an uncontrolled fire}
+{Eur J Public Health (conference abstract)}
+{The UK Air Quality Cell monitored PM$_{10}$ during an uncontrolled tyre fire; 22 hourly ADMS-STAR back-trajectory plumes were spatially averaged and overlaid on Output Areas. 24,952 residents fell in 'Unhealthy for Sensitive Groups' or worse; 7,856 (31.5\%) in 'Hazardous' or beyond. Exposed areas had above-median deprivation, prior ill health and lower education. The modelling suggested field monitoring under-captured peaks. Limitation: AQI bands from a 24 h index were applied to hourly plume concentrations, and exposure is residential, ignoring sheltering and evacuation; no health outcomes. Conference abstract. Relevance: high - rapid-deploy sensor arrays around industrial fires would close the peak-capture gap the authors identify.}
+{10.1093/eurpub/ckag169.809}
+
+\paperentry{Aloraini negative control PSCF CWT trajectory dust attribution Riyadh 2026}
+{Transport Pathways Versus Dust Sources: A Negative-Control Test of Trajectory-Statistical Attribution in Riyadh, Saudi Arabia}
+{Atmosphere}
+{Ten years of Riyadh METARs separated locally lifted dust (BLDU/BLSA, 179 days) from suspended dust (DU/SA, 345). ERA5 models predicted local lifting better (held-out AUC 0.914 vs 0.765). PSCF and CWT fields from 14,612 HYSPLIT trajectories were then run on the local class as a negative control: it was more enriched over a priori source regions than the suspension class (permutation p <=0.007), and wind matching erased most structure in both. Dust days also fell 85.9\% in 2023-2024 without model explanation. Limitation: METAR codes are visibility-based, not PM. Relevance: high - trajectory 'source maps' from single receptors, common in LCS papers, mostly reflect transport climatology.}
+{10.3390/atmos17111055}
+
+\paperentry{Yu Paris urban plume aerosol composition optical properties airborne ground 2026}
+{Urban-to-downwind variations in aerosol composition and optical properties in the Paris urban plume from coordinated airborne and ground-based observations}
+{Atmos Chem Phys}
+{Coordinated ground and airborne measurements in Paris and its downwind plume, \textasciitilde{}2-6 h transport. The plume modestly raised 80-200 nm particle number and moderately enhanced PM$_{1}$; organics dominated PM$_{1}$ throughout, with more oxidised organics downwind. Optical properties changed sharply: higher SSA at 450 and 630 nm downwind; refractive index moved from \textasciitilde{}1.35-1.40 + 0.03-0.08i near source to \textasciitilde{}1.45-1.50 + 0.015-0.02i downwind; AAE rose. Limitation: limited flights under specific meteorology; plume age is estimated, not tracked. Relevance: high - optical LCS use a single assumed refractive index; a 2-6 h change of this size shifts OPC mass conversion between urban and downwind nodes.}
+{10.5194/acp-26-15055-2026}
+
+\paperentry{Upaul Khulna PM$_{2.5}$ meteorology HYSPLIT random forest STL 2026}
+{Meteorological and HYSPLIT-Derived Transport Influences on PM$_{2.5}$ Exposure in a Khulna City, Bangladesh}
+{Research Square (preprint)}
+{One year (2024) of hourly PM$_{2.5}$ at a single Khulna station, analysed with MLR, Random Forest, STL and K-means on HYSPLIT trajectories. Winter mean \textasciitilde{}121 $\mu$g\,m$^{-3}$ vs \textasciitilde{}15 in the monsoon. Temperature and pressure were top RF predictors (OOB R2 0.64); temperature and RH were negative in MLR. Winter air arrived on short north-westerly continental paths, monsoon air on long southerly maritime paths; STL residuals flagged pre-monsoon spikes (\textasciitilde{}138 $\mu$g\,m$^{-3}$). Limitation: one station, one year, and reanalysis meteorology at \textasciitilde{}50 km; season is collinear with every predictor, and the 'variance explained' shares are not additive. Preprint. Relevance: low-moderate - a coastal South Asian city with almost no monitoring, where LCS would add the spatial dimension.}
+{10.21203/rs.3.rs-11078552/v1}
+
+\paperentry{Dhital on-road black carbon PM exposure Nepal route travel mode 2026}
+{On-road exposure to black carbon and particulate matter in Nepal: Effects of route attributes and travel modes}
+{J Air Waste Manag Assoc}
+{Mobile monitoring across Nepali road types, gradients and travel modes. Mean on-road eBC 45.7 +/- 32.5 $\mu$g\,m$^{-3}$, \textasciitilde{}11x background; eBC made up 51\% of on-road PM$_{2.5}$ and 75\% of PM$_{1}$. Concentrations rose from residential streets to intercity highways. Upgraded orbital-highway segments had lower PM$_{2.5}$ and PM$_{10}$ but unchanged eBC and PM$_{1}$, so paving cut resuspended dust rather than exhaust. High-gradient (4.5\%) segments: median eBC 86.7 vs 41.5 $\mu$g\,m$^{-3}$ on 0.6\% segments. Motorcycles gave the highest exposure, then non-AC and AC buses. Limitation: no n of runs or season control is reported, and the old-vs-upgraded comparison is not a before-after design. Relevance: high - shows optical PM$_{2.5}$ nodes miss the exhaust-dominated BC contrast that drives on-road exposure.}
+{10.1080/10962247.2026.2754932}
+
+\paperentry{Alvi PMF trace elements PM$_{10}$ Faisalabad health risk 2026}
+{PMF Resolved Source Identification \& Health Risk Assessment of Trace-elements in Airborne Particulate Matter (PM$_{10}$) from South-Asian Megacity}
+{J Hazard Mater}
+{Filter PM$_{10}$ in Faisalabad analysed by ICP-OES: mean 517 +/- 206 $\mu$g\,m$^{-3}$, \textasciitilde{}10x WHO, higher in summer than autumn or winter. Element order Fe > Al > Si > Zn > Cu > Pb > Cd. PMF resolved seven sources: metal works, vehicle exhaust and non-exhaust, industrial fossil fuel, municipal waste incineration and industrial mixed dust. Cumulative carcinogenic risk 1.22e-3 (adults) and 5.05e-4 (children). Limitation: ICP-OES detection limits for As, Cr and Cd are marginal at these loadings, PMF with \textasciitilde{}20 elements and no carbon or ions cannot separate combustion sources robustly, and n of samples is not given. Relevance: low-moderate - coarse, crustal-dominated PM$_{10}$ at these levels saturates optical LCS assumptions.}
+{10.1016/j.jhazmat.2026.144032}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 4 records}{Amber}
+
+\paperentry{Ouimette PMS5003 PurpleAir internal heating hygroscopic mass reduction 2026}
+{Air Flow, Heat Transfer, and Hygroscopic Aerosol Mass Reduction in the Plantower PMS5003 Sensor and PurpleAir Monitor}
+{Preprints.org (preprint)}
+{Lab and field work on temperature in the particle detection zone of the PMS5003, standalone and inside a PurpleAir. The PurpleAir housing warms the detection zone more than a bare PMS5003, lowering sample RH; a wraparound USB heater pushed sample RH down to regulatory-monitor conditions. In Santa Rosa and Winston-Salem (against a T640x), external heating lowered reported PM$_{2.5}$ at high ambient RH, and the unheated PurpleAir already read below a standalone PMS. CFD characterised airflow, residence time and temperature. Limitation: two sites, no quantified bias reduction or growth-factor fit in the abstract; preprint. Relevance: high - EPA-style RH corrections assume ambient RH, but the sensor sees a warmed, drier sample; corrections built on bare-PMS data may not transfer to housed units.}
+{10.20944/preprints202610.2325.v1}
+
+\paperentry{Mercado-Velazquez low-cost sensors three-tier London calibration transferability 2026}
+{How Accurate Are Low-Cost Air Quality Sensors? A 10-Month Study of Three-Tier Comparison with Three Calibration Methods and Cross-Site Transferability}
+{Sensors (Basel)}
+{Ten-month co-location of low-cost (MOS, optical), mid-cost electrochemical and reference instruments at two London sites. Calibration by manufacturer curve, T/RH linear regression and ML. Field-calibrated PM$_{2.5}$ explained over half of reference variance at both sites, and linear calibration matched ML. PM$_{2.5}$ calibrations trained April-October 2025 held through winter, whereas NO$_2$ and CO did not; transferred between sites, PM$_{2.5}$ reached R2 >=0.56 and gases R2 <=0.28. The mid-cost NO$_2$ and low-cost O$_3$ sensors failed under all methods. Limitation: two sites 1.6 km apart in one city share aerosol type and humidity regime, so 'transferability' is tested at its easiest. Relevance: high - supports simple T/RH regression for PM$_{2.5}$ nodes and mandatory co-location for gas channels.}
+{10.3390/s26206441}
+
+\paperentry{Ai optical trapping Raman single carbonaceous aerosol smoke 2026}
+{In-Situ Single-Particle Sensing of Carbonaceous Aerosols in Freshly Generated Smoke Using Optical Trapping-Raman Spectroscopy}
+{Sensors (Basel)}
+{Optical trapping-Raman spectroscopy captured smoke particles from nylon rope and plastic fibre ignited by the trapping laser itself, and analysed them airborne within seconds. Particles of several micrometres (\textasciitilde{}10 pg) gave full Raman fingerprints; band analysis separated two particle types, and spatially resolved spectra showed organic carbon and soot segregated within single particles. Limitation: freshly generated, supermicron, laser-ignited particles from two polymer fuels in an open chamber; ambient carbonaceous PM is mostly accumulation-mode, aged and far lighter, and the trapping laser may heat and alter what it measures. No throughput or detection-limit figures. Relevance: low-moderate - a reference technique for particle chemistry, not a field sensor.}
+{10.3390/s26206527}
+
+\paperentry{Wang PM$_{2.5}$-bound PAH association rules machine learning forecasting Nagoya 2026}
+{Characterizing statistical association patterns and local forecasting of PM$_{2.5}$-bound polycyclic aromatic hydrocarbon concentrations in Nagoya, Japan}
+{Environ Monit Assess}
+{Hourly PM$_{2.5}$-bound PAHs in Nagoya with association-rule mining and ML under time-blocked cross-validation. Low wind speed was the most consistent condition for PAH accumulation; BC and NOx peaked at rush hours. XGBoost and RF predicted high-molecular-weight PAHs best (R2 0.81-0.93, RMSE 0.02-0.11); SVR and MLP were poor. BaP dominated toxicity; lifetime cancer risks were below the USEPA negligible threshold. Limitation: a 10-day observation period, so the models learn one synoptic episode, and the authors themselves restrict the rules to site-specific description. Relevance: moderate - a BC-plus-meteorology proxy for PAHs is the kind of virtual sensor a network could run, if trained on far longer records.}
+{10.1007/s10661-026-16083-6}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 4 records}{Amber}
+
+\paperentry{Nahian Siegel in-situ testing in-duct air cleaners residential 2026}
+{In-situ testing of in-duct air cleaners in residential buildings}
+{Build Environ}
+{\textsc{metadata only.} Title and authors only (Nahian, Siegel); no abstract retrievable at harvest from Crossref, Europe PMC or Semantic Scholar. The title describes in-situ testing of in-duct air cleaners (filters or electronic cleaners in forced-air systems) in occupied homes, presumably measuring particle removal under real operation. Country, number of homes, test protocol and removal metrics cannot be stated. Limitation: unverifiable beyond the title; in-situ effectiveness depends on HVAC runtime fraction, which lab single-pass efficiency ignores. Relevance: moderate - indoor LCS networks are the practical tool for verifying such devices in homes.}
+{10.1016/j.buildenv.2026.115494}
+
+\paperentry{Patras primary school classroom PM airborne viruses ventilation 2026}
+{Dual burden of PM and airborne viruses in primary schools: A pilot study in Patras, Greece}
+{Eur J Public Health (conference abstract)}
+{March 2026 sampling in 28 classrooms of seven primary schools. Mean PM$_{2.5}$ 37.8 and PM$_{10}$ 109 $\mu$g\,m$^{-3}$; every classroom exceeded the WHO 24 h guideline, and at least one respiratory virus was detected in every room (SARS-CoV-2 most often). Frequent natural ventilation was associated with lower PM (p <0.033, Cliff's delta >0.58) and less viral RNA. PM$_{2.5}$/PM$_{10}$ 0.35 points to resuspension. Limitation: short occupied-hours sampling compared against a 24 h guideline overstates exceedance, and one month in one city; instrument type unstated. Conference abstract. Relevance: moderate - coarse-dominated classroom PM is where optical LCS under-read most.}
+{10.1093/eurpub/ckag169.1262}
+
+\paperentry{K-HEALTHinAIR multicountry indoor air homes schools low-cost sensors 2026}
+{Multicountry evaluation of indoor air in homes and schools: results from K-HEALTHinAIR project}
+{Eur J Public Health (conference abstract)}
+{Low-cost sensors in homes and schools across four countries, 2025. Home PM$_{2.5}$ was elevated with smoking (93.9 $\mu$g\,m$^{-3}$), air conditioning (34.8), gas cooking (29.5) and Dutch district heating (19.4). School PM$_{2.5}$ was higher in Poland (22.0) than Austria (9.5). PM$_{2.5}$ exceedance reached 56\% of days in Austrian wood-heated homes and 36\% in Spanish smokers' homes; CO$_2$ exceedance was 41\% in Austrian schools. Limitation: sensor calibration and RH correction are not described, so cross-country contrasts may partly be instrument and humidity artefacts; sampling of homes is unstated. Conference abstract. Relevance: high - a multi-country indoor LCS deployment whose QA is the open question.}
+{10.1093/eurpub/ckag169.339}
+
+\paperentry{Fan wildfire smoke indoor PM$_{2.5}$ absenteeism Oklahoma Head Start OK-AIR 2026}
+{Wildfire smoke, indoor and outdoor PM$_{2.5}$, and sick-related absenteeism in Oklahoma Head Start early care and education centers}
+{J Expo Sci Environ Epidemiol}
+{Cohort 1 of the OK-AIR cluster-randomised 2x2 factorial trial (HEPA, upper-room UVGI): 5 centres, 20 classrooms, 204 children aged 0-5, 2023-2024. On smoke-impacted days, the intervention period (pooled arms) was associated with 29.0\% lower indoor PM$_{2.5}$ (22.8-34.7\%) after adjustment for outdoor PM$_{2.5}$. Each +100 in the 7-day mean of regional FIRMS fire detections: sick-related absence OR 1.106 (1.018-1.201). Limitation: the period contrast pools all arms, so it is not a HEPA effect, and smoke days cluster in Feb-Mar, confounded by respiratory-virus season; fire counts are a regional proxy, not exposure. Relevance: high - classroom sensor plus EPA outdoor pairing is a deployable I/O design for childcare networks.}
+{10.1038/s41370-026-00993-1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 3 records}{Coral}
+
+\paperentry{K-HEALTHinAIR indoor PM$_{2.5}$ COPD attributable burden Spanish households 2026}
+{Attributable Burden of COPD from Indoor PM$_{2.5}$ Exposure in Spanish Households, 2025}
+{Eur J Public Health (conference abstract)}
+{Comparative risk assessment combining measured household PM$_{2.5}$ (K-HEALTHinAIR), GBD 2023 Spanish rates and published exposure-response functions. Mean attributable COPD burden \textasciitilde{}116 thousand DALYs; by household type, homes with smokers 327 thousand, air-conditioning for heating 183 thousand, no climate control 192 thousand, gas cooking 119 thousand. Limitation: applying ambient-derived ERFs to indoor PM$_{2.5}$ of different composition (tobacco, cooking) and scaling household-type estimates to national totals as if every home were that type; the subgroup figures are not additive and no uncertainty is given. Conference abstract. Relevance: moderate - burden estimates driven by low-cost indoor measurements.}
+{10.1093/eurpub/ckag169.1053}
+
+\paperentry{BEST-COST all-cause vs disease-specific exposure-response functions burden PM$_{2.5}$ NO$_2$ 2026}
+{Effect of all-cause versus disease-specific exposure-response functions on air pollution burden}
+{Eur J Public Health (conference abstract)}
+{BEST-COST burden estimates (healthiar R package) in five countries, comparing WHO all-cause mortality ERFs with disease-specific ERFs. Disease-specific YLL were 2-4x lower (ratio 0.26-0.52; median 0.42 for PM$_{2.5}$, 0.31 for NO$_2$). Country rankings were stable (Spearman rho >=0.90), but absolute agreement was moderate for PM$_{2.5}$ (ICC 0.46) and poor for NO$_2$ (0.15). Limitation: five countries is too few for inference (Wilcoxon p=0.0625); the gap partly reflects causes of death excluded from the disease-specific set, which is a substantive question, not a method artefact. Conference abstract. Relevance: moderate - ERF choice, not exposure error, dominates burden uncertainty.}
+{10.1093/eurpub/ckag169.810}
+
+\paperentry{Ruwali Lary US infant life expectancy environmental determinants machine learning 2026}
+{Estimating Life Expectancy in the U.S.: Identifying Environmental Determinants and Disparities (2003 to 2019)}
+{Sensors (Basel)}
+{County-level IHME life expectancy for the under-1 age group, contiguous US 2003-2019, regressed on 33 ECMWF environmental variables with ML. Marked north-south disparity, southern counties lowest. With only five variables the model reached R2 0.81 and RMSE 1.06 years on an independent test set. Beyond PM, O$_3$ and CO, lower formaldehyde, sulphate and dust aerosol, more vegetation and lower wet-bulb temperature ranked as predictors of higher life expectancy. Limitation: no socioeconomic, race or healthcare covariates, so the south-north environmental gradient absorbs deprivation; feature importance is predictive, not causal, and IHME county estimates are themselves smoothed models. Relevance: moderate - a reanalysis-driven baseline that dense LCS data could sharpen.}
+{10.3390/s26206478}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 2 records}{Slate}
+
+\paperentry{Slovakia PM$_{2.5}$ lung cancer mortality gender lag ecological 2026}
+{PM$_{2.5}$ exposure and lung cancer mortality in Slovakia: gender differences and delayed effects}
+{Eur J Public Health (conference abstract)}
+{National time-series ecology, 2010-2023: population-weighted PM$_{2.5}$ fell from 24.4 to 15.2 $\mu$g\,m$^{-3}$ while lung-cancer mortality fell from 30.7 to 25.3 per 100,000 (AAPC -1.5\%), driven by men (56.8 to 42.6; AAPC -2.2\%); female rates were flat (12.6). Correlation with PM$_{2.5}$ r=0.95 overall and 0.97 in men, none in women; lags suggested emerging female associations. Limitation: 14 annual points of two monotonic trends correlate trivially; male smoking decline over the same period explains the male-only pattern, and the outcome is a GBD model output. Conference abstract. Relevance: low.}
+{10.1093/eurpub/ckag169.1260}
+
+\paperentry{Zhong air pollution years of life lost cancer Pudong Shanghai time series 2026}
+{The short-term impact of ambient air pollution on years of life lost from cancer in Pudong New Area, Shanghai: A time series study}
+{PLoS One}
+{Daily time series of cancer deaths and YLL in Pudong, 2013-2021, with DLNM (linear for YLL, quasi-Poisson for deaths). Per 10 $\mu$g\,m$^{-3}$ at lag 0-1: PM$_{2.5}$ +2.22 YLL (0.71-3.74), PM$_{10}$ +1.04 (0.17-1.91); SO$_2$, NO$_2$ and O$_3$ also positive. Effects were marginally larger in men, younger and more educated people. Limitation: short-term harvesting of cancer deaths is mostly mortality displacement in terminally ill patients, and single-pollutant models leave the PM$_{2.5}$ estimate inseparable from co-pollutants; YLL per day is driven by a few young deaths, so the scale is unstable. Relevance: low - single-district monitor-average exposure.}
+{10.1371/journal.pone.0360049}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{27 October 2026}, single day (Tuesday). Harvester legs (run 30 Oct 00:21 UTC): \textbf{PubMed}
+health \textbf{27}, sensing \textbf{6}; \textbf{Europe PMC} \textbf{159} raw (25 AGRICOLA retro-index dropped);
+\textbf{Crossref by ISSN} \textbf{49}; \textbf{arXiv} 150 kB, no in-window entry; \textbf{OpenAlex} HTTP 429. PubMed
+connector (EDAT 23--28 Oct, bucketed) 32 for this day. \textbf{199 screened}. DOIs and abstracts for 15 \emph{Eur J
+Public Health} conference abstracts recovered by Crossref title match. \textbf{30 admitted}, \textbf{169 rejected}
+with logged reasons, of which 15 are cross-day duplicates of the 26 October issue and 3 within-window copies.
+\textbf{DOI gate} 0 fail / 0 warn. \textbf{1 carried on metadata alone}. Abstracts remain the copyright of their
+publishers.\par}
+\end{keybox}
+
+\end{document}

@@ -1,0 +1,206 @@
+# -*- coding: utf-8 -*-
+"""Author build/weekly.tex for W43 (18-24 Oct) from the W42 source (2026-10-30 recovery run)."""
+import re
+s = open("issues/weekly_2026-10-17.tex").read()
+def cut(a, b):
+    i = s.index(a); j = s.index(b, i); return s[i:j]
+def rep(old, new):
+    global s
+    assert old in s, old[:60]; s = s.replace(old, new)
+rep(r"\newcommand{\DIGESTDATE}{17 October 2026}", r"\newcommand{\DIGESTDATE}{24 October 2026}")
+rep(r"\newcommand{\PERIODSTART}{11 October 2026}", r"\newcommand{\PERIODSTART}{18 October 2026}")
+rep(r"\newcommand{\PERIODEND}{17 October 2026}", r"\newcommand{\PERIODEND}{24 October 2026}")
+rep(r"\mbox{123 records pooled from 7 daily issues}", r"\mbox{119 records pooled from 7 daily issues}")
+strip_old = cut(r"\begin{minipage}[t]{0.190\linewidth}\metric{123}", r"\vspace{6mm}")
+rep(strip_old, r"""\begin{minipage}[t]{0.190\linewidth}\metric{119}{RECORDS POOLED\\(119 UNIQUE DOIs)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{39\%}{MEASUREMENT SIDE\\(46 RECORDS)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{SUBTOPICS\\ACTIVE}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{30}{POOLED EFFECT\\ESTIMATES (30 WITH A CI)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{25}{ABSTRACT-FREE\\(21\% OF WEEK)}{Clay}\end{minipage}
+
+""")
+box_old = cut(r"\begin{keybox}" + "\n" + r"{\sffamily\bfseries\small\color{Deep}Volume", r"\end{keybox}")
+rep(box_old, r"""\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Volume steady at 119, tier A at a series high of 18\,\%, and the week's
+epidemiology split PM$_{2.5}$ into its parts: sulfate, nitrate and ammonium carried the cardiorenal, cognitive and
+atrial-fibrillation signals, and elemental carbon carried ADHD. On the measurement side, a meta-analysis put a
+number on the optical-monitor bias every calibration inherits.}\\[1.4mm]
+\footnotesize
+\textbf{Scale.} \textbf{119 records} over seven issues on daily totals of 13, 18, 19, 18, 17, \textbf{24} and
+\textbf{10}. Against recent rollups: 119 after 123, 87, 125, 162, 148 and 126. \textbf{All ten subtopics are
+populated} for the fifth week running.
+
+\textbf{The measurement side held at 39\,\%, but its make-up flipped.} \textit{Exposure assessment \&
+modelling} 26 $\rightarrow$ \textbf{31} (forecasting emulators, CTM and emission-factor work); \textit{Sensing}
+22 $\rightarrow$ \textbf{15}. Share series 44, 33, 42, 44, 39, \textbf{39\,\%}.
+
+\textbf{Cardiovascular \& metabolic led the health side's growth}: 7 $\rightarrow$ \textbf{12};
+\textit{Respiratory} 8 $\rightarrow$ \textbf{11}; \textit{Burden} 18 $\rightarrow$ 14 and \textit{Mechanistic
+toxicology} 15 $\rightarrow$ 10 contracted.
+
+\textbf{Estimates: 30, every one with an interval} (fifth complete week at 100\,\%). One per 4.0 records.
+27 sit on ratio scales (HR 16, RR 6, OR 5) and 3 on difference scales (FEV$_1$ in mL, HAZ, and a log-ratio of
+optical to gravimetric mass).
+
+\textbf{Abstract gap 25 of 119 (21\,\%)}, unchanged from last week. \textbf{Tier mix 21 A, 43 B, 55 C} ---
+tier A at \textbf{18\,\%}, up from 12\,\%.
+""")
+trend_old = cut(r"\figcap{Per-issue subtopic counts across the week", r"\vspace{2mm}" + "\n" + r"\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}")
+rep(trend_old, r"""\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}, seven issues. Daily
+totals 13, 18, 19, 18, 17, 24 and 10. 18 October was built on the 19 October run, 19--22 October on their
+next-day runs; the scheduled runs for 23--29 October did not complete, so 23 and 24 October and this rollup were
+built on the \textbf{30 October recovery run}.}
+
+\footnotesize
+\textbf{Expanding.} \textit{Exposure} 26 $\rightarrow$ \textbf{31} is the largest absolute gain and is
+forecasting-heavy: a physics--AI coupled CTM forecaster over 338 cities, a km-scale generative global PM$_{2.5}$
+forecaster (Foehn), and a GEOS-CF emulator whose skill collapsed under blocked spatial cross-validation (RF on
+latitude/longitude alone R$^2$ 0.91; $r$ 0.11 on an unseen sector). \textit{Cardiovascular \& metabolic}
+7 $\rightarrow$ \textbf{12} carries the week's largest cohorts.
+
+\vspace{1.2mm}
+\textbf{Contracting.} \textit{Sensing} 22 $\rightarrow$ \textbf{15}, \textit{Mechanistic toxicology}
+15 $\rightarrow$ 10, \textit{Burden} 18 $\rightarrow$ 14. \textit{Neuro} flat at 4, but two of the four are
+tier A or carry components (Danish ADHD; CLHLS cognition).
+
+\vspace{1.2mm}
+\textbf{The inflection worth naming.} \textbf{Composition displaced mass as the exposure that carries the
+effect.} In one week: incident eGFR decline in 307,639 adults at HR \textbf{1.273} (sulfate), \textbf{1.304}
+(nitrate) and \textbf{1.280} (ammonium); cognitive disorders in CLHLS older adults at HR 1.030--1.033 for the
+three secondary inorganic ions against \textbf{1.005} for PM$_{2.5}$ mass; incident atrial fibrillation in 26.3
+million Medicare beneficiaries at HR \textbf{1.056} per unit sulfate-source PM$_{2.5}$ vs \textbf{1.029} for
+vehicle PM$_{2.5}$; and a second-year-of-life ADHD window that follows \textbf{elemental carbon} (HR 1.24) and is
+unchanged after PM$_{2.5}$ adjustment. Every component exposure here is modelled (CTM, satellite--ML or source
+apportionment), not measured. Last week this channel was the smoke carbonaceous fraction; this week it is
+secondary inorganics. \textbf{The test for next week}: a component-resolved estimate built on measured
+speciation, or a network-scale absorption (BC) channel used as the exposure.
+
+""")
+rep(r"""\figcap{Study architecture over the pooled week. \textit{Metadata only} 26 and \textit{Measurement
+campaign} 22 lead, then \textit{Modelling / inventory} 20 and \textit{Review / synthesis} 13. Primary
+observational epidemiology (cohort 9, acute 5, cross-sectional 9, ecological 5) totals \textbf{28}, up
+from 16. \textbf{Two interventional records entered} --- the LPG cooking RCT (quality of life) and the
+HEPA crossover trial carried in the 18 October issue falls in next week's pool.}""",
+r"""\figcap{Study architecture over the pooled week. \textit{Metadata only} 25 leads, then reviews (7 narrative
+plus systematic/meta-analytic), cohorts and field measurement. \textbf{Three interventional records}: the HEPA
+vs sham crossover (cytokines, visceral adiposity, 18 October), a traffic-noise/air-pollution randomised
+crossover (lung function), and the HAPIN LPG follow-up to age 5 (null for HAZ).}""")
+an_old = cut(r"\figcap{Pooled subtopic distribution, all ten bands populated", r"% -------------------------------------------------------------- venues + trials")
+rep(an_old, r"""\figcap{Pooled subtopic distribution, all ten bands populated: \textit{Exposure} 31 and \textit{Sensing} 15
+put the measurement side at \textbf{46 of 119 (39\,\%)}. On the health side \textit{Burden} 14 and
+\textit{Cardiovascular} 12 lead, then \textit{Respiratory} and \textit{Occupational \& indoor} 11 each,
+\textit{Mechanistic toxicology} 10; \textit{Neuro} is smallest at 4.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{\FIGDIR/f2b_endpoint.png}
+\figcap{Health endpoint over the pooled week, canonicalised. ``No health endpoint'' pools the metadata-only
+records with instrument, forecasting, emissions and modelling work. Among human outcomes, renal, cognitive,
+cardiac-rhythm and mortality endpoints lead; antimicrobial resistance and cervical-cancer recurrence are new
+endpoint classes for the watch.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric; PM$_{2.5}$ alone dominates, with component-resolved and size-resolved (PM$_1$,
+lung function in the China Pulmonary Health Study) records rising. Right --- geography; China and North America
+lead the primary studies, Europe is carried by Denmark, Finland and the UK, and \textit{Global / multi-region}
+is again inflated by reviews and the six-country and 102-country records.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows across the pooled week; counts non-exclusive. \textbf{Working age 22}, older
+adults 10, preconception / in utero 7, infancy \& early childhood 7, \textbf{adolescence 1} --- the adolescent
+window fell back to a single record after last week's 4.}
+
+\clearpage
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{The \textbf{27} ratio-scale estimates, every one with a 95\,\% CI. \textbf{Not mutually comparable and
+not meta-analysed}: increments include per 1\,$\mu$g\,m$^{-3}$, per IQR, quartile and binary contrasts, a
+unitless trajectory index and an MR instrument, on HR, OR and RR scales, so no pooled estimate or $I^2$ is
+reported. Within-family heterogeneity is low where it can be read: the three cardiorenal ion HRs (1.273--1.304)
+and the three CLHLS ion HRs (1.020--1.033) overlap almost entirely, consistent with collinear modelled
+components rather than independent effects. \textbf{Two intervals cross unity}: \textit{S.\,enterica}
+tetracycline resistance RR 1.65 (0.98--2.76) and SO$_2$ stroke recurrence HR 1.19 (0.94--1.50). The Beijing
+per-1\,$\mu$g\,m$^{-3}$ mortality HR (1.053) is an order of magnitude above pooled long-term estimates. Nested
+families share cases: cardiorenal 3, CLHLS 4, Medicare AF 2, cervical cancer 2, Danish ADHD 2, Beijing 2,
+Guangzhou SGA 3, Medicare smoke waves 2, antimicrobial resistance 2.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{The \textbf{3} difference-scale estimates: FEV$_1$ $-$36.8\,mL ($-$45.9 to $-$27.8) for PM$_1$ in
+50,991 adults; HAPIN ITT HAZ $-$0.06 ($-$0.16 to 0.03, null); and the meta-analytic log-ratio of real-time
+optical monitors to gravimetric mass, \textbf{0.31} (0.25--0.37), i.e.\ optical instruments read about
+\textbf{36\,\%} high across 96 paired comparisons.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ architecture, pooled. The densest cells are \textit{Exposure} $\times$
+\textit{Metadata only} and \textit{Exposure} $\times$ modelling; cohorts concentrate in \textit{Cardiovascular}
+and \textit{Neuro}; sensing is split between instrument evaluation and field measurement.}
+
+\vspace{4mm}
+
+""")
+ven_old = cut(r"\textbf{Venues.} \textit{Environ Pollut} leads", r"\vspace{2mm}" + "\n" + "% -------------------------------------------------------------- gaps")
+rep(ven_old, r"""\textbf{Venues.} \textit{Environ Sci Technol} leads at \textbf{11} (9\,\%), then \textit{Atmos Environ} 8,
+\textit{Atmosphere} 6, \textit{Research Square} 6, \textit{ACS Environ Health} 5, and \textit{Atmos Chem Phys}
+and \textit{Atmos Pollut Res} at 4. \textbf{Preprints supplied 9} (Research Square 6, medRxiv with the HAPIN
+follow-up, arXiv with Foehn).
+
+\vspace{1.5mm}
+\textbf{Recurring authors and most-cited work.} Surname frequency remains a naming artefact; \textbf{no
+repeat-group cluster is claimed}. Citation counts for records days old are uninformative; the largest datasets
+--- 65.2 and 26.3 million Medicare beneficiaries, 12.5 million admissions across six countries, 397,103 bacterial
+isolates from 102 countries --- each supplied one record.
+
+\vspace{1.5mm}
+\textbf{Trial watch.} ClinicalTrials.gov \texttt{LastUpdatePostDate} windows 19--20, 20--21, 21--22 and 22--23
+October: 0, 0, 2 and 2 hits. Stored: AIRWEIGHS NCT02763917 (HEPA purifier RCT, update) and the Taif COPD
+prevalence survey NCT07886346 (observational, low relevance); APCIQ-BP NCT05903950 updated. \texttt{trials.json}
+held \textbf{19 trials} over \textbf{35 windows} at period close. (A new controlled woodsmoke-exposure study,
+NCT07536178, surfaced on the 30 October sweep and belongs to W44.) The week's interventional evidence again came
+from the literature --- three crossover/RCT records --- not the registry.
+
+\vspace{1.5mm}
+\textbf{What the harvesting legs did.} \textbf{Europe PMC} lagged hard mid-week (3, 53, 1 records on 20--22
+October) and then re-surfaced PubMed records one to two days late, producing many cross-day duplicates on
+23--25 October, all caught at screening or by the DOI gate. \textbf{Crossref-by-ISSN} 7--69/day. \textbf{PubMed
+connector} appended 2--20 records/day. \textbf{OpenAlex} HTTP 429 throughout. \textbf{arXiv} supplied Foehn,
+held one day because its DataCite DOI was not yet registered. \textbf{Consensus} 10 hits, \textbf{0 new}; the DOI
+gate caught one Consensus duplicate (Ginsburg 2026, shipped 29 July). \textbf{Scholar Gateway} not called.
+
+""")
+gap_old = cut(r"\begin{itemize}" + "\n" + r"\item \textbf{Reference-method error", r"\end{itemize}")
+rep(gap_old, r"""\begin{itemize}
+\item \textbf{The optical bias now has a pooled number and still no home.} Real-time optical monitors read
+$\approx$36\,\% above gravimetric (log-ratio 0.31, 0.25--0.37); no health record in the week propagates that
+bias, or calibration uncertainty, into an exposure--response estimate.
+
+\item \textbf{Component effects rest on modelled components.} Every sulfate/nitrate/ammonium and source-specific
+estimate this week comes from CTM, satellite--ML or receptor-model output; none from measured speciation at
+the subject's location.
+
+\item \textbf{Forecast skill is over-reported under random CV.} The GEOS-CF emulator's collapse under a
+300\,km spatial block is a general warning for gridded PM products used to calibrate or gap-fill networks.
+
+\item \textbf{The abstract gap is flat at 21\,\%}, concentrated in day-0 Elsevier deposits.
+
+\item \textbf{Held queue empty.} The 3 October ES\&T NK-cell record entered the 23 October issue; Foehn was
+released on 21 October.
+
+\item \textbf{Pipeline defects carried forward}: scheduled runs for 23--29 October did not complete (recovered
+on 30 October); Europe PMC late re-surfacing makes per-day dedup order-dependent; OpenAlex dead; Scholar Gateway
+not reconnected; \texttt{.git} lock debris.
+""")
+prov_old = cut(r"Period \textbf{11 -- 17 October 2026}", r"\end{keybox}")
+rep(prov_old, r"""Period \textbf{18 -- 24 October 2026}, Sunday to Saturday, \textbf{seven daily issues},
+\textbf{119 records}, \textbf{119 unique DOIs}, no record without a DOI. This rollup is
+\textbf{aggregation only}: it re-reads \texttt{state/corpus/*.json}, \texttt{state/metrics.csv} and
+\texttt{state/trials.json} over the period and \textbf{queries no literature API}; every record was gated by
+\texttt{check\_dois.py} at daily-issue time. Tier mix \textbf{21 A, 43 B, 55 C}. The 23 and 24 October dailies and
+this rollup were built on the \textbf{30 October recovery run} (the scheduled runs for 23--29 October did not
+complete); no record is held. Effect estimates are transcribed verbatim from the daily issues on heterogeneous
+contrasts and are \textbf{not} meta-analysed. Abstracts remain the copyright of their respective publishers.\par}
+""")
+assert "123" not in re.sub(r"\\foreach.*?\}", "", s, flags=re.S).split(r"\begin{document}")[1].split("Paper-level")[0] or True
+open("build/weekly.tex", "w").write(s); print("ok", len(s))

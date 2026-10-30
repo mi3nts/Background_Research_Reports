@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+P = [
+ dict(pmid="42920012", doi="10.1007/s10661-026-16102-6", journal="Environ Monit Assess",
+  short="Liu PM2.5 sources mixing state Chengdu Kangding basin-plateau 2026",
+  title="Altitudinal and seasonal differences in PM2.5 sources, secondary formation, and particle mixing states in the basin-plateau transition zone of Southwest China.",
+  sub=corpus.EXPO, design="Source apportionment", pm="PM2.5 mass, water-soluble ions, carbonaceous fractions; single-particle mixing state (winter)",
+  geo="China (Chengdu and Kangding, Sichuan)", endpoint="Not applicable (composition, PMF sources, mixing state)", tier="B",
+  n=("Summer and winter filter campaigns in Chengdu (500 m a.s.l.) and Kangding (2,500 m), plus wintertime "
+     "single-particle analysis. PM2.5 was 79.4 +/- 27.7 (winter) and 29.1 +/- 10.2 ug/m3 (summer) in Chengdu vs 15.2 "
+     "+/- 5.1 and 8.1 +/- 2.4 in Kangding. PMF: Chengdu combustion 26.0%, traffic 32.4%, secondary 35.3%; Kangding "
+     "combustion 47.9%. Secondary inorganic particles were 29.0% of particle number in Chengdu vs 17.6%, but Kangding "
+     "had a higher OM-SIA/SIA ratio (1.15 vs 0.57). Limitation: one season each, two sites; PMF factor labels at "
+     "a combustion-dominated plateau town rest on few tracers. Relevance: medium - the shift in hygroscopic SIA "
+     "fraction between sites implies site-specific humidity correction for optical sensors.")),
+ dict(pmid="42921553", doi="10.1021/acs.chas.5c00138", journal="J Chem Health Saf",
+  short="Stefaniak plastic bag recycling filament 3D printing particle emissions 2026",
+  title="Recycling Plastic Bags into Filament: Consideration of Emissions during Melting, Extrusion, and 3-D Printing.",
+  sub=corpus.OCC, design="Chamber emission characterisation", pm="Particle number size distribution (1.2-560 nm); VOCs incl. formaldehyde",
+  geo="United States (laboratory)", endpoint="Not applicable (particle and VOC emission yields)", tier="B",
+  n=("Recycled HDPE bags (South African and US) blended with virgin HDPE were extruded into filament and 3-D printed "
+     "while particle and gas emissions were measured. Filament production emitted mostly 1.2-5.2 nm particles; printing "
+     "emitted 5.6-560 nm particles, with particle yields per gram processed 2-3 orders of magnitude higher than "
+     "extrusion. Printing released acetone (1.4-39.4 ug/g) and formaldehyde (9.9-16.1 ug/g). Limitation: emission "
+     "yields, not exposures - room volume, ventilation and duration determine dose, and nanoscale number "
+     "emissions carry negligible mass. Relevance: medium - most of this aerosol is below the ~300 nm optical cut of "
+     "low-cost PM sensors, so maker-space monitoring with OPC-based nodes will miss it; a CPC or charger-based "
+     "sensor is needed.")),
+ dict(pmid="42916439", doi="10.1021/acs.est.6c07515", journal="Environ Sci Technol",
+  short="Sun respirable mining dust NK cell dysfunction oxidative stress 2026",
+  title="Respirable Particulate Matter Induces Natural Killer Cell Dysfunction via Oxidative Stress-Mediated Lysosomal and Mitochondrial Injury: Implications for Mineral-Rich Mining Dust Exposure.",
+  sub=corpus.MECH, design="In vitro", pm="Compositionally distinct respirable mineral, iron-bearing and carbonaceous dusts",
+  geo="Australia (laboratory)", endpoint="NK-cell apoptosis, cytokines, perforin/granzyme B, K562 killing", tier="B",
+  n=("In vitro exposure of NK cells to respirable PM of differing composition, with a K562 target-cell challenge. "
+     "Injury was dose- and composition-dependent: silica- and silicate-rich particles produced the strongest "
+     "dysfunction (apoptosis/necrosis, altered cytokines, impaired effector function), whereas iron-bearing and "
+     "carbonaceous dusts gave distinct oxidative patterns. Mitochondrial depolarisation, reduced mitochondrial mass "
+     "and lysosomal deacidification converged; ascorbic acid partly restored organelle function and IFN-gamma. "
+     "No doses or effect sizes in the abstract. Limitation: submerged cell-line exposure at unstated mass doses "
+     "cannot be mapped to in

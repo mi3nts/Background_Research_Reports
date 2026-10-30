@@ -1,0 +1,340 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{28 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-28\;\;\textcolor{Amber}{\textbar}\;\;Entry window 28 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;22 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{22}{RECORDS IN SCOPE\\(96 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}West Oakland: a dense black-carbon network plus Bayesian inversion
+raises the BC inventory by a third and quadruples the exposure share of neighbourhood and port sources.}\\[1.4mm]
+\footnotesize
+Mobile and fixed-site BC measurements (6.7 sites\,km$^{-2}$) were assimilated into hourly 150\,m emission maps. The
+posterior added $\sim$33\,\% to bottom-up BC emissions and moved the population-weighted exposure share of local and
+port-related sources from 5 to 20\,\%, concentrated in low-income blocks beside freight corridors. A thinned network of
+$\sim$10 fixed monitors ($\sim$1\,km$^{-2}$) plus time-averaged mobile maps gave similar answers.
+\textbf{Where it is weak:} the posterior inherits the transport kernel and prior error covariance; ``unaccounted''
+sources are inferred, not inspected, and this is one community.
+\textbf{Why it matters here:} it is the clearest demonstration yet that a sensor network's value is in inversion, not
+in concentration maps --- and it states the density needed.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Urban firestorm smoke is a metal plume.} Eaton fire, Los Angeles: lead $>$50-fold, halogens 7-fold, arsenic
+3-fold above wildfire smoke; $\sim$7 million residents above 50\,ng\,m$^{-3}$ 24-h lead. Optical sensors see the mass,
+not the toxicity.
+
+\item \textbf{Low-cost sensors as the sole exposure metric.} Kinshasa LBW study used calibrated PurpleAir PA-II-SD
+(0.52$\times$raw\,+\,3.2 vs BAM): area PM$_{2.5}$ $>$75\,$\mu$g\,m$^{-3}$ aOR 1.18 (0.59--2.36) --- but sensors ran
+48--72\,h in 2022 for births in 2021.
+
+\item \textbf{Component scaling artefact.} China 123-city cohort: BC HR 1.381 per 1\,$\mu$g\,m$^{-3}$ vs PM$_{2.5}$ 1.027
+--- a per-unit comparison across ranges that differ tenfold.
+
+\item \textbf{Paediatric asthma, Louisiana.} 28,499 hospitalisations: PM$_{2.5}$ lag 0--3 OR 1.079 (1.052--1.107),
+robust to co-pollutants; no significant modification by race or Medicaid.
+
+\item \textbf{Cross-day duplicates.} 14 records in the 28 October harvest had already entered the 27 October pool via
+Europe PMC/PubMed lag and were issued there; one record, one issue.
+
+\item \textbf{Metadata-only share 32\,\%.} Seven day-0 Elsevier/T\&F deposits with no abstract anywhere; abstract retry
+(EPMC $\rightarrow$ Semantic Scholar) recovered none.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 22 October issue closed with \texttt{last\_entry\_date} at 22 October. Scheduled runs for 23--29 October did
+not complete: a run at 00:21 UTC on 30 October harvested 23--28 October but stopped before screening. This issue was
+built on the \textbf{30 October 2026 14:20 UTC (09:20 CDT) recovery run}, which backfills 23--29 October day by day, each with its
+own window and issue. This issue collects \textbf{28 October in full}, continuous with the 27 October issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 22 in-scope records across nine bands. Exposure assessment leads with six
+(urban-fire metals, fireworks, PM--O$_3$ coupling and three metadata-only records); respiratory three; burden/policy is
+empty.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: cohorts, cross-sectional surveys, field measurements, one inversion
+method, one case-crossover, one ecological panel; \textbf{metadata-only 7 (32\,\%)}. Right --- endpoints run from LBW,
+childhood haemoglobin and eGFR to asthma admissions, OSA, heart disease and cancer recurrence.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$-only dominates; BC and speciated metals carry the two
+tier-A records. Right --- geography: China leads; USA second (Oakland, Los Angeles, Louisiana); one each for DRC and
+Brazil; several metadata-only records carry inferred locations.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: in utero two (Fujian haemoglobin/anaemia, Kinshasa LBW); childhood three;
+adolescence two; working age three; no dedicated older-adult record.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Exposure assessment spreads over measurement and metadata-only
+cells; the health bands sit in cohorts and cross-sectional surveys; sensing holds the inversion method and one
+metadata-only metrology record.}\end{minipage}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, seven estimates from six studies: Louisiana paediatric asthma (PM$_{2.5}$ lag 0--3); China
+123-city heart disease per 1\,$\mu$g\,m$^{-3}$ PM$_{2.5}$ and BC; lung cancer recurrence per within-site SD;
+Sichuan adolescent anxiety per IQR PM$_{10}$; Kinshasa LBW (area PM$_{2.5}$ $>$75\,$\mu$g\,m$^{-3}$); Brazil
+circulatory admissions per fire-detection density. Contrasts differ completely. Not poolable.}\end{minipage}
+
+\vspace{3mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{Difference scale: eGFR (mL\,min$^{-1}$\,1.73\,m$^{-2}$) per IQR (0.505\,$\mu$g\,m$^{-3}$) of landscape-fire
+PM$_{2.5}$ in 12,102 Chinese children --- a large effect for a tiny contrast; read with the confounding caveat.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Wang air pollution adolescent anxiety depression Sichuan cross-sectional 2026}
+{Air pollution and mental health in adolescents: a cross-sectional study in Sichuan, China}
+{BMC Public Health}
+{71,364 school students aged 10-19, surveyed over two winters (2022-23, 2023-24). Per IQR, PM$_{10}$ anxiety OR 1.29 (1.22-1.36) and O$_3$ 1.24 (1.19-1.29), with similar depression associations; a weighted combined score rose stepwise. PM$_{2.5}$ and SO$_2$ were inversely associated. Limitation: exposure was assigned from the IP address of the online survey, i.e. a point-in-time location of the device, and the PM$_{10}$-positive/PM$_{2.5}$-inverse split from highly correlated pollutants is the signature of collinearity and spatial confounding rather than a fraction-specific effect. Relevance: low - coarse exposure assignment.}
+{10.1186/s12889-026-28370-5}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{Andreotti active fire detections circulatory hospital admissions Brazil ecological panel 2026}
+{Active Fire Detections and Hospital Admissions for Circulatory Diseases in Brazil: An Ecological Panel Study (2013-2024)}
+{Cureus}
+{27 Brazilian federative units x 12 years (324 unit-years), 13.8 million circulatory admissions and 2.3 million fire detections. Correlations were null (rho -0.03 to 0.01). In negative-binomial models with state fixed effects, year effects, temperature, poverty and primary-care coverage, the rate ratio per additional 1,000 detections/100,000 km2/year was 0.998 (0.970-1.028), null in every subset and with clustered SEs. Limitation: annual state-level fire counts are far removed from short-term smoke PM$_{2.5}$ at residence; smoke from Amazon fires is exported to other states, so the exposure is misplaced as well as aggregated. The authors correctly state this is not evidence of no effect. Relevance: low - illustrates why fire counts cannot substitute for measured PM.}
+{10.7759/cureus.118676}
+
+\paperentry{Cao PM$_{2.5}$ chemical components heart disease longitudinal China 123 cities 2026}
+{Association between PM$_{2.5}$ and its chemical components exposure and heart disease risk: a longitudinal study from China}
+{BMC Cardiovasc Disord}
+{8,172 participants from 123 Chinese cities; Cox models with three adjustment levels plus WQS mixtures. Per 1 $\mu$g\,m$^{-3}$ PM$_{2.5}$: HR 1.027 (1.022-1.032); BC had the largest per-unit estimate, HR 1.381 (1.266-1.506). All components showed non-linear exposure-response; southern residents and overweight participants had stronger associations; PAF 2.63\%. Limitation: per-$\mu$g\,m$^{-3}$ component HRs are not comparable because component ranges differ by an order of magnitude, and components are highly collinear, so 'BC largest' is a scaling artefact unless expressed per IQR. Heart disease is likely self-reported (cohort not named in the abstract). Relevance: medium - again points to absorption (BC) as the health-relevant channel.}
+{10.1186/s12872-026-06395-3}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 3 records}{Sky}
+
+\paperentry{Luglio air pollution pediatric asthma hospitalizations Louisiana vulnerable groups 2026}
+{Associations between air pollution and pediatric asthma hospitalizations across vulnerable groups in Louisiana}
+{Environ Epidemiol}
+{28,499 asthma hospitalizations in children in Louisiana 2010-2019, time-stratified case-crossover with DLNM to lag 3. Cumulative lag 0-3: PM$_{2.5}$ OR 1.079 (1.052-1.107), O$_3$ 1.082 (1.050-1.116), NO$_2$ 1.071 (1.034-1.111), with increments as defined in the paper. In multipollutant models O$_3$ and NO$_2$ attenuated while PM$_{2.5}$ persisted. Effect modification by race and Medicaid status was not significant, although lag patterns differed (lags 1-2 Black children, lag 3 White children). Limitation: exposure assigned from area-level estimates in a state with sparse monitoring outside the industrial corridor, so differential misclassification by race/rurality could mask modification; NO$_2$ covers only 2010-2016. Relevance: medium - higher-burden groups sit where reference coverage is thinnest.}
+{10.1097/ee9.0000000000000544}
+
+\paperentry{Wang air pollutants sleep apnea polysomnography architecture Shenzhen 2026}
+{Associations of multiple ambient air pollutants and sleep apnea, sleep architecture and nocturnal oxygenation in adult patients with or without obstructive sleep apnea (OSA)}
+{Environ Res}
+{Retrospective polysomnography study of 4,049 adults in Shenzhen. Over a 0-180 day lag window, PM$_{2.5}$, PM$_{10}$, NO$_2$, SO$_2$, CO and diurnal temperature range were associated with greater OSA severity. PM$_{2.5}$ and PM$_{10}$ were associated with 1.71\% and 1.32\% of total sleep time more N1 and 1.51\% and 1.32\% less N3 sleep (increments as reported). O$_3$ and DTR showed the clearest associations with oxygenation; PM$_{2.5}$ had a rising exposure-response. Limitation: the lag window was chosen post hoc, which inflates false-positive risk across many pollutant-outcome pairs; a clinic-referred sample means referral itself may track season and pollution. CIs are not given in the abstract. Relevance: low - city-level exposure.}
+{10.1016/j.envres.2026.126044}
+
+\paperentry{Kusumaningtiar school children PM$_{2.5}$ PM$_{10}$ health risk systematic review 2026}
+{Environmental Health Risks in School Children Due to Air Pollution Exposure: Systematic Literature Review}
+{Research Square (preprint)}
+{PRISMA review (PROSPERO CRD420261282406) of 12 studies published 2015-2025 on school PM$_{2.5}$ and PM$_{10}$, combining environmental health risk assessment, epidemiology, MPPD dosimetry and STELLA modelling. Several studies reported risk quotients >1; one Bandung study found inverse PM$_{2.5}$-lung function associations; dosimetry indicated higher airway deposition in children. Limitation: 12 heterogeneous studies with mixed methods and no quantitative synthesis; RQ>1 depends on default intake assumptions rather than measured outcomes. Preprint. Relevance: medium - underlines the need for standardised school-level monitoring that low-cost networks could provide.}
+{10.21203/rs.3.rs-11094408/v1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 2 records}{Sage}
+
+\paperentry{Zhu prenatal PM$_{1}$ PM$_{2.5}$ PM$_{10}$ childhood hemoglobin anemia Fujian birth cohort 2026}
+{Association of prenatal PM$_{1}$, PM$_{2.5}$, and PM$_{10}$ exposure with early childhood hemoglobin levels and anemia: Identification of susceptibility windows}
+{Ecotoxicol Environ Saf}
+{Fujian Birth Cohort paediatric subcohort, 1,235 mother-child pairs. Per 1 $\mu$g\,m$^{-3}$ over the whole pregnancy, child hemoglobin fell by 1.02 (0.53-1.52) for PM$_{1}$, 0.87 (0.46-1.28) for PM$_{2.5}$ and 0.37 (0.19-0.56) for PM$_{10}$ (units as reported). First-trimester anemia ORs per unit were 1.23, 1.16 and 1.09; DLMs placed the hemoglobin window in early-mid pregnancy and the anemia window in the first trimester. Limitation: per-microgram effects of this size imply implausibly large decrements across the cohort's range; PM$_{1}$, PM$_{2.5}$ and PM$_{10}$ are near-collinear satellite products, so the size-fraction ranking is not interpretable. Postnatal exposure and diet are not stated. Relevance: low - satellite-derived exposures only.}
+{10.1016/j.ecoenv.2026.120980}
+
+\paperentry{Valuvunina PM$_{2.5}$ PurpleAir quarry low birth weight Kinshasa DRC 2026}
+{Atmospheric Pollution by Fine Particulate Matter (PM$_{2.5}$) and Low Birth Weight: A Cross-Sectional Study in Binza Ozone Health Zone, Democratic Republic of the Congo, 2022}
+{J Toxicol}
+{355 mothers delivering in 2021 at six facilities near the Carrigres quarry. LBW prevalence 12.96\% (9.7-16.9). PurpleAir PA-II-SD sensors, corrected with a Kinshasa BAM-derived equation, gave area PM$_{2.5}$ 54.6-102.5 $\mu$g\,m$^{-3}$. Residence <500 m from the quarry: aOR 4.12 (1.98-8.57); area PM$_{2.5}$ >75 $\mu$g\,m$^{-3}$: aOR 1.18 (0.59-2.36). Limitation: PM$_{2.5}$ was measured for 48-72 h in 2022 and assigned to births in 2021, i.e. after the pregnancies, at the health-area level, so the null PM$_{2.5}$ result says nothing about gestational exposure; quarry dust is coarse and poorly captured by Plantower optics. Relevance: high - a direct example of low-cost sensors used as the sole exposure metric, and of the temporal mismatch that undermines it.}
+{10.1155/jt/7953451}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Nored lithium-ion battery fire soot PM pulmonary toxicity mice fluoride 2026}
+{Pulmonary Toxicity of Particulate-Phase Combustion Byproducts from Lithium-Ion Battery Fires}
+{Environ Res}
+{Soot (10 fire tests) and smoke PM (2 tests) from lithium-ion battery thermal runaway were size-filtered to <10 um and given to mice (100 ug). Soot had more carbon (37\% vs 18\%), PM more anions (12\% vs 6\%), inorganic elements similar (23-28\%); particulate fluoride reached \textasciitilde{}5\% of mass. Only soot altered ventilatory timing, peak expiratory flow and relaxation time; both raised lung inflammation to levels comparable with other combustion sources. Fluoride, Al, Fe, Ni and Li were associated with toxicity. Limitation: a single 100 ug bolus (aspiration/instillation) is not inhalation dosimetry, two smoke tests is a thin basis, and component-toxicity associations across so few samples are exploratory. Relevance: low - toxicology; flags fluoride-bearing PM as a new indoor/urban fire hazard.}
+{10.1016/j.envres.2026.126023}
+
+\paperentry{Liu Streptococcus D19T fermentation supernatant asthmatic mice PM$_{2.5}$ 2026}
+{Protective effect and mechanism of Streptococcus D19T fermentation supernatant in asthmatic mice exposed to PM$_{2.5}$}
+{Environ Int}
+{\textsc{metadata only.} Title and authors only (Liu, Sun, Wang, Jin et al.); no abstract retrievable at harvest. The title describes a probiotic-derived fermentation supernatant protecting asthmatic mice against PM$_{2.5}$-aggravated airway disease. Dose, model and outcomes cannot be stated. Limitation: unverifiable beyond the title; PM$_{2.5}$ aggravation models usually use instilled boluses far above ambient deposition. Relevance: low.}
+{10.1016/j.envint.2026.110584}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 6 records}{Clay}
+
+\paperentry{Baliaka Eaton urban firestorm airborne toxic metals lead Los Angeles 2026}
+{Fire at the boundary: Airborne toxic metals from the 2025 Los Angeles urban firestorm}
+{Sci Adv}
+{Hourly airborne trace-element measurements during the January 2025 Eaton fire tracked the transition from structure to wildland burning via the K/Pb ratio. Relative to wildfire smoke, the urban plume was enriched >50-fold in lead, \textasciitilde{}7-fold in halogens and \textasciitilde{}3-fold in arsenic, attributed to vehicles, electronics and building materials. An estimated 7 million residents (range 4.3-8.0 million) experienced 24-h lead above 50 ng/m3, >80 times background. Limitation: population exposure is extrapolated from a small number of monitoring points through a dispersion estimate, and the 24-h lead threshold has no health-based standard counterpart (NAAQS is a 3-month mean). Relevance: high - optical PM sensors would register the smoke but not its metal toxicity; speciation is needed.}
+{10.1126/sciadv.aei4455}
+
+\paperentry{Lian firework barium aerosols single-particle SPAMS Guangzhou 2026}
+{Evolution of firework-related barium aerosols: insights from single-particle analysis and mass concentration monitoring}
+{Atmos Chem Phys}
+{Online Ba mass monitoring and SPAMS at four Guangzhou sites through firework events. Ba rose 1-3 orders of magnitude above background. The urban-core site under a complete firework ban peaked lower than a suburban site with time- and place-restricted use, despite higher population density - consistent with, but not proof of, a ban effect. Chloride-rich and nitrate-dominated Ba-containing particle classes were interpreted as fresh and aged, tracking chloride displacement and nitrate uptake. Limitation: four sites and a few events; the ban contrast is confounded by local emissions and transport, as the authors acknowledge, and SPAMS is semi-quantitative. Relevance: medium - firework episodes are a known optical-sensor artefact (hygroscopic, metal-rich particles), and this characterises their chemistry.}
+{10.5194/acp-26-15101-2026}
+
+\paperentry{Wei PM$_{2.5}$ ozone nonlinear coupling Puyang oilfield city GAM 2015-2025 2026}
+{Long-Term Trends and Nonlinear PM$_{2.5}$-O$_3$ Coupling in a Typical Oilfield City of the "2 + 26" Region}
+{Atmosphere}
+{Daily PM$_{2.5}$ and MDA8 O$_3$ in Puyang 2015-2025 with nested GAMs adding meteorology, NO$_2$, humidity and season interactions. Raw correlation reversed by concentration band: r 0.271 below 35 $\mu$g\,m$^{-3}$, -0.208 at 35-75 and -0.313 above 75. After controlling for meteorology and NO$_2$, the conditional partial effect of PM$_{2.5}$ on O$_3$ increased over most of the range, so the negative raw correlation is largely meteorological. The low-band positive coupling strengthened over time (0.190 to 0.306). Limitation: one city, observational correlations; GAM partial effects do not identify chemical mechanisms (aerosol radiative or heterogeneous HO2 uptake). Relevance: low.}
+{10.3390/atmos17111057}
+
+\paperentry{Jabbari-Hichri on-road emissions light-duty vehicles particulate gaseous pollutants 2026}
+{On-road emissions of light-duty vehicles: detailed analysis of particulate and gaseous pollutants}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Title and authors only (Jabbari-Hichri, Azizi, Guiot, Boreave et al.); no abstract retrievable at harvest. The title describes detailed on-road measurement of particulate and gaseous emissions from light-duty vehicles. Vehicles, instruments and emission factors cannot be stated. Limitation: unverifiable beyond the title; on-road (PEMS) particle number measurements usually exclude volatile and sub-23 nm particles, which matters for comparing with roadside data. Relevance: low.}
+{10.1016/j.apr.2026.103252}
+
+\paperentry{Netto metal distribution PM$_{2.5}$ smelting Rio de Janeiro solubility risk 2026}
+{Metal distribution in atmospheric particulate matter (PM$_{2.5}$) from urban areas with smelting activities in the Rio de Janeiro state, Brazil: Solubility, correlation and risk assessment}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Title and authors only (Netto, da Silva, Diniz et al.); no abstract retrievable at harvest. The title describes PM$_{2.5}$ metal concentrations, their soluble fractions and risk assessment in urban areas with smelting in Rio de Janeiro state. Concentrations, n and risk estimates cannot be stated. Limitation: unverifiable beyond the title; risk assessments on total metal mass overstate dose unless the bioaccessible (soluble) fraction is used, which the title suggests is addressed. Relevance: low - filter chemistry.}
+{10.1016/j.apr.2026.103250}
+
+\paperentry{Pani Southeast Asian biomass burning smoke aerosol light extinction apportionment high-altitude western North Pacific 2026}
+{Impact of peninsular Southeast Asian biomass-burning smoke on chemical apportionment of aerosol light extinction at a high-altitude remote environment in the western North Pacific}
+{Atmos Res}
+{\textsc{metadata only.} Title and authors only (Pani, Lee, Lin); no abstract retrievable at harvest. The title describes apportioning aerosol light extinction by chemical component at a high-altitude remote site in the western North Pacific under transported Southeast Asian biomass-burning smoke. Concentrations and apportionment fractions cannot be stated. Limitation: unverifiable beyond the title; IMPROVE-type mass extinction efficiencies are fixed assumptions that aged smoke violates. Relevance: medium - mass-extinction relations are what optical PM sensors implicitly assume.}
+{10.1016/j.atmosres.2026.109421}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Manchanda hyperlocal BC sensing Bayesian inverse modeling West Oakland 2026}
+{Hyperlocal sensing and inverse modeling reveal community impacts of urban air pollutant emissions}
+{Sci Adv}
+{Dense mobile and fixed-site BC measurements were assimilated in a Bayesian inversion to produce hourly 150 x 150 m emission maps for West Oakland, a freight-corridor community. The posterior raised total BC emissions by \textasciitilde{}33\% over the bottom-up inventory and quadrupled the share of population-weighted exposure attributed to neighbourhood and port-related sources (5\% to 20\%), concentrated in low-income blocks. Sensitivity runs with \textasciitilde{}10 fixed monitors (\textasciitilde{}1 site/km2) plus time-averaged mobile maps recovered similar results. Limitation: the posterior is only as good as the transport kernel and prior error covariance; unpermitted sources are inferred, not verified on the ground, and one community limits transfer. Relevance: high - a direct recipe for turning a sparse low-cost BC/PM network into source-resolved emission corrections.}
+{10.1126/sciadv.aeb7647}
+
+\paperentry{Zhao spin-trapping EPR radicals atmospheric fine particulate matter cavity quality factor 2026}
+{Optimized spin-trapping method for radicals detection induced by atmospheric fine particulate matter: Critical roles of temporal evolution and cavity quality factor}
+{Aerosol Sci Technol}
+{\textsc{metadata only.} Title and authors only (Zhao, Chen, Ding, Zhang et al.); no abstract retrievable from Crossref, Europe PMC or Semantic Scholar at harvest. The title describes optimising EPR spin-trapping for radicals generated by PM$_{2.5}$, identifying the time course of adduct formation and the cavity quality factor as critical. Sample type, n and performance metrics cannot be stated. Limitation: unverifiable beyond the title; spin-trap adducts decay on minute timescales, so inter-lab oxidative-potential comparisons hinge on exactly these timing choices. Relevance: low - offline oxidative-potential metrology.}
+{10.1080/02786826.2026.2750406}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Kulmala determination deposition rates indoor particle dynamics 2026}
+{Determination of deposition rates from indoor particle dynamics}
+{Aerosol Sci Technol}
+{\textsc{metadata only.} Title and authors only (Kulmala I., Siilin, Hakala, Ehder-Gahm); no abstract retrievable at harvest. The title describes deriving particle deposition rates from indoor concentration dynamics. Method, size range and validation cannot be stated. Limitation: unverifiable beyond the title; decay-based deposition estimates are confounded by air-exchange and mixing assumptions unless these are measured independently. Relevance: medium - deposition rates are an input for indoor/outdoor ratio models used to interpret paired indoor and outdoor low-cost sensors.}
+{10.1080/02786826.2026.2754776}
+
+\paperentry{Ng particulate matter respiratory deposition inhalation dose biomass burning homes indigenous communities 2026}
+{Particulate Matter Exposure, Respiratory Deposition and Inhalation Dosage Assessment in Biomass Burning Homes in Rural Indigenous Communities}
+{Atmos Environ}
+{\textsc{metadata only.} Title and authors only (Ng, Monalisa, Balachandran, Hoque et al.); day-0 Elsevier deposit with no abstract at harvest. The title describes household PM measurement in biomass-burning homes in rural indigenous communities with respiratory deposition and inhaled-dose modelling. Instruments, n and concentrations cannot be stated. Limitation: unverifiable beyond the title; deposition models (e.g. MPPD) are sensitive to the assumed size distribution, which optical monitors in smoke-laden kitchens report poorly. Relevance: medium - household biomass smoke is a key use case for low-cost PM monitors.}
+{10.1016/j.atmosenv.2026.122448}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 2 records}{Slate}
+
+\paperentry{Duan landscape fire-sourced PM$_{2.5}$ kidney function eGFR children China 2026}
+{Landscape fire-sourced PM$_{2.5}$ and kidney function in children: evidence from a national cross-sectional study in China}
+{Environ Res}
+{China National Nutrition and Health Surveillance of Children and Lactating Women 2016-2018, n=12,102 aged 5-18. Per IQR (0.505 $\mu$g\,m$^{-3}$) of fire-sourced PM$_{2.5}$: eGFR -0.83 mL/min/1.73 m2 (-1.03 to -0.62); middle-school students -1.46 (-1.83 to -1.09) vs primary -0.59 (-0.84 to -0.34). Associations were stronger with low NDVI and low vitamin or carbohydrate intake. Limitation: an IQR of 0.5 $\mu$g\,m$^{-3}$ is a tiny contrast for an effect this size, which points to residual spatial confounding (fire-PM tracks rural, agricultural regions); creatinine-based eGFR in children depends on muscle mass and hydration, which also vary by region. Cross-sectional. Relevance: low - source-specific PM from a chemical-transport model, no sensing.}
+{10.1016/j.envres.2026.125978}
+
+\paperentry{Hu air pollution built environment lung cancer recurrence after surgery China 2026}
+{Ambient Air Pollution, Residential Built Environment, and Lung Cancer Recurrence After Curative-Intent Surgery: A Retrospective Cohort Study in Three Chinese Cities}
+{Research Square (preprint)}
+{542 adults after curative resection at three tertiary hospitals (2019-2026); 60 recurrences, median follow-up 27.3 months. Site-stratified meta-analysis, per within-site SD of first-year post-diagnosis exposure: PM$_{2.5}$ HR 1.41 (1.08-1.84), PM$_{10}$ 1.38 (1.10-1.73), NO$_2$ 1.67, CO 1.51, SO$_2$ 1.59; O$_3$ null. A co-exposure component gave HR 1.51 (1.20-1.89); green-space diversity HR 0.59/SD. Limitation: 60 events across six pollutants, mixtures and built-environment terms is badly underpowered for adjustment; within-site SD contrasts are small and residence tracks stage, histology and access to follow-up imaging. Preprint. Relevance: low.}
+{10.21203/rs.3.rs-11311605/v1}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{28 October 2026}, single day (Wednesday). Harvester legs (run 30 Oct 00:21 UTC):
+\textbf{PubMed} health \textbf{16}, sensing \textbf{2}; \textbf{Europe PMC} \textbf{26}; \textbf{Crossref by ISSN}
+\textbf{78}; \textbf{arXiv} 150 kB, no in-window entry; \textbf{OpenAlex} HTTP 429. PubMed connector (EDAT 23--28 Oct,
+bucketed by entrez date) 18 PMIDs for 28 Oct; \textbf{118 screened}. Abstract retry (efetch; Europe PMC
+$\rightarrow$ Semantic Scholar) recovered none of the 7 day-0 deposits. \textbf{22 admitted}, \textbf{96 rejected}
+with logged reasons, of which 14 are cross-day duplicates issued under 27 October. \textbf{DOI gate} run before
+build. Consensus sweep and trial watch for 23--29 October are reported in the 29 October issue. \textbf{7 carried on
+metadata alone}. \textbf{Scholar Gateway} not called. Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

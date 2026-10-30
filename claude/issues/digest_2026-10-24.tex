@@ -1,0 +1,247 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{24 October 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-10-24\;\;\textcolor{Amber}{\textbar}\;\;Entry window 24 October 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;10 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{RECORDS IN SCOPE\\(67 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}65.2 million Medicare beneficiaries: the long-term PM$_{2.5}$--CVD
+slope is halved in ZIP-years that had wildfire smoke waves.}\\[1.4mm]
+\footnotesize
+A national ZIP-year cohort (2017--2022) with 1\,km total PM$_{2.5}$ and 10\,km smoke PM$_{2.5}$ from machine-learning
+models; a smoke wave is $\geq$2 consecutive days with smoke PM$_{2.5}$ $>$10\,$\mu$g\,m$^{-3}$. Raising the two-year mean
+from 5 to 9\,$\mu$g\,m$^{-3}$: overall CVD first hospitalisation RR \textbf{1.09} (1.09--1.10) without smoke waves,
+\textbf{1.04} (1.03--1.04) with them; ratio of RRs 1.05 (1.04--1.06). The gap persists below 9\,$\mu$g\,m$^{-3}$ and is
+largest in men, urban and western residents.
+\textbf{Where it is weak:} episodic spikes inflate a two-year mean without a proportional rise in risk, so the
+attenuation is partly a property of the exposure metric, not of smoke toxicity; ZIP assignment and a 10\,km smoke grid
+blur the contrast further.
+\textbf{Why it matters here:} the long-term mean cannot represent a peaked exposure distribution. Peak-resolved,
+high-frequency network data are the input this kind of model lacks.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Wildfire PM toxicology is mostly not wildfire PM.} Systematic review of 46 studies (2005--2025): only 42\,\%
+of in-vitro and 27\,\% of in-vivo studies used particles collected during real fires; no chronic or toxicokinetic work
+and no mixtures with urban PM.
+
+\item \textbf{Brown carbon toxicity tracks lipophilicity.} 350\,$^\circ$C wood-pyrolysis BrC, 776--1,132 molecular
+features per extract: A549 cytotoxicity rose water $<$ methanol $<$ acetone; methoxyphenols, quinols and
+coniferylaldehyde named as contributors.
+
+\item \textbf{Cordwood stove trade-off (metadata only).} Automated forced-air injection lowers PM$_{2.5}$ mass but shifts
+emissions to smaller particles --- the regime where optical mass sensors overstate the gain.
+
+\item \textbf{Five cross-day duplicates moved to 23 October.} Records harvested again in the 24 October window (EPMC
+re-surfacings of 23 October PubMed entries) were assigned to the earlier issue; one smoke--dementia preprint had
+already shipped on 12 October and was blocked by the DOI gate.
+
+\item \textbf{Saturday floor.} PubMed returned 2 records; Europe PMC (40) and the Crossref ISSN sweep (33) carried a thin
+window, and 3 of 10 admitted records have no abstract anywhere.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 23 October issue closes the window through 23 October. This issue collects \textbf{24 October in full},
+continuous with it. It was built on the \textbf{30 October 2026 recovery run} (14:20 UTC (09:20 CDT)), which backfilled
+23--29 October day by day after the scheduled runs of 24--29 October did not complete; a 30 October 00:21 UTC run had
+harvested 23--28 October but stopped before screening. 24 October is a Saturday: the \textbf{W43 weekly (18--24
+October)} is filed under this date as a separate report.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\vskip 0pt plus 18\baselineskip\penalty-200\vskip 0pt plus -18\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 10 in-scope records across four bands. Mechanistic toxicology leads with
+four (wildfire-PM review, brown-carbon cytotoxicity, gut microbiota, rat lung); exposure assessment three (all
+metadata-only); cardiovascular two; respiratory one. Sensing is empty today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: two animal studies, one in-vitro, one systematic review, one
+narrative review, one nationwide cohort, one ecological analysis; \textbf{metadata-only 3 (30\,\%)}. Right ---
+endpoints: CVD hospitalisation, heart failure, subglottic stenosis prevalence and in-vitro/in-vivo toxicity markers.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$-only dominates; dust/smoke aerosol and stove emissions
+are unspeciated. Right --- geography: North America 2 (Medicare; iSGS), global 2 (reviews), East Asia, Argentina and
+China one each; the rest are laboratory or not stated.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: two older-adult records (smoke-wave CVD; heart-failure exposome) and one
+working-age ecological record (iSGS in women). No in-utero, childhood or adolescent record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Toxicology sits in animal, in-vitro and review cells; the two
+cardiovascular records split between a cohort and a narrative review; the exposure band is entirely metadata-only.}\end{minipage}
+
+\vspace{2mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, two estimates from one study: overall CVD first-hospitalisation RR for a two-year PM$_{2.5}$
+increase from 5 to 9\,$\mu$g\,m$^{-3}$ in Medicare ZIP-years without and with wildfire smoke waves. Same cohort,
+stratified --- the contrast, not either estimate, is the finding.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{Zhang wildfire smoke waves long-term PM$_{2.5}$ cardiovascular hospitalisation Medicare 2026}
+{Impact of wildfire smoke waves on the association between long-term exposure to fine particulate matter and cardiovascular hospitalizations among older adults in the United States}
+{Environ Res Health}
+{65.2 million Medicare beneficiaries aged >=65, 2017-2022, ZIP-year quasi-Poisson. Raising two-year PM$_{2.5}$ from 5 to 9 $\mu$g\,m$^{-3}$ (WHO guideline to US standard) gave overall CVD RR 1.09 (1.09-1.10) in ZIP-years without smoke waves but 1.04 (1.03-1.04) with them (ratio of RRs 1.05, 1.04-1.06); the pattern held below 9 $\mu$g\,m$^{-3}$ and was stronger in men, urban and western residents. Limitation: the attenuation is what one expects if smoke spikes inflate the two-year mean with a less toxic-per-mass or differently distributed exposure, so this is an exposure-metric artefact as much as a biological finding; ZIP-level assignment and 10 km smoke grids blur the contrast. Relevance: high - long-term means hide episodic peaks that only high-frequency network data resolve.}
+{10.1088/2752-5309/aeb0c3}
+
+\paperentry{Hahad exposome heart failure older adults review 2026}
+{Exposomic Determinants in Heart Failure Among Older Adults - Mechanistic Links, Clinical Evidence, and Future Perspectives}
+{Curr Heart Fail Rep}
+{Narrative review arguing for a life-course, systems-level view of heart failure in older adults in which air pollution sits alongside traffic noise, temperature extremes, metals, artificial light at night and social environment. Mechanisms proposed to converge on oxidative stress, mitochondrial dysfunction, inflammaging, impaired autophagy, epigenetic change and senescence, lowering the threshold for HF onset and decompensation. No new data or pooled estimates. Limitation: the mechanistic convergence is asserted from separate literatures; co-exposures (PM, noise, heat) are spatially correlated, and the review does not address how to separate them. Relevance: low - multi-exposure co-located sensing (PM, noise, temperature) is what the exposome framing would need.}
+{10.1007/s11897-026-00781-w}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Harb idiopathic subglottic stenosis geographic clustering ecological 2026}
+{Geographic Clustering of Idiopathic Subglottic Stenosis in North America: An Ecological Cohort Study}
+{Laryngoscope Investig Otolaryngol}
+{4,450 members of an online iSGS support group (99.3\% female) mapped to state/province and scaled by census White female populations. Prevalence clustered in dry, high, warm areas: Wyoming 18.1, Utah 17.4, Colorado 13.9 per million vs New Hampshire 1.2; Alberta 85.4 vs Quebec 2.9. PM$_{2.5}$ was not independently associated with prevalence but modified the elevation association. Limitation: the numerator is self-selected membership of an online group, so 'prevalence' reflects diagnosis, awareness and referral patterns; state-level ecology cannot separate climate from health-system access. Level 4 evidence by the authors' own grading. Relevance: low - a null for PM at state scale, hypothesis-generating only.}
+{10.1002/lio2.70607}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 4 records}{Violet}
+
+\paperentry{Zendi brown carbon wood pyrolysis tracers cytotoxicity A549 2026}
+{Fine Brown Carbon Aerosol Emitted by Wood Pyrolysis - New Harmful Tracers and Cytotoxicity in Human Lung Cells}
+{Chem Res Toxicol}
+{Smouldering-regime BrC was generated by 350 C wood pyrolysis, extracted in three solvents and characterised by UHPLC-ESI-ToF-MS non-target analysis (776-1,132 molecular features per extract). Water extracts were dominated by lignin phenols and aromatic acids; methanol and acetone pulled less oxidised terpenoid and sterol-like species. Cytotoxicity in A549 cells ranked water < methanol < acetone, consistent with lipophilic, membrane-partitioning and redox-active compounds; named contributors to baseline narcosis included 3-hydroxybenzoic, salicylic and p-coumaric acids, benzene-1,2,4-triol and coniferylaldehyde. Limitation: solvent extracts at unreported dose-equivalence to inhaled mass, a single carcinoma line, and pyrolysis rather than flaming or aged smoke. Relevance: low-medium - supports BrC (UV-absorbing) channels as a toxicity-weighted metric.}
+{10.1021/acs.chemrestox.6c00273}
+
+\paperentry{de Luna wildfire PM toxicity systematic review 2026}
+{Systematic review on the toxicity of wildfire emitted particulate matter: State of science, knowledge gaps and way forward}
+{J Hazard Mater}
+{46 in vitro and in vivo studies, 2005-2025 (epidemiology excluded). Only 42\% of in vitro and 27\% of in vivo studies used PM actually collected during wildfires; the rest used surrogate burns. In vitro work concentrates on lung (50\%) and macrophages (17\%); inhalation studies on lung (46\%), heart (15\%) and brain (15\%). Mechanisms reported are mainly inflammation, oxidative stress and DNA damage, and toxicity varied with dose, size, fuel and burn condition. Gaps: incomplete physicochemical characterisation, unrealistic doses, few chronic or toxicokinetic studies, no work on mixtures with urban pollution. Limitation: no quantitative synthesis or risk-of-bias grading, so heterogeneity is described, not explained. Relevance: medium - the field cannot yet say which smoke property a sensor should track beyond mass.}
+{10.1016/j.jhazmat.2026.143985}
+
+\paperentry{Ruan gut microbiota dose-time trajectories PM$_{2.5}$ PFOS mouse 2026}
+{Time-resolved profiling reveals nonlinear dose-time trajectories of gut microbiota in PM$_{2.5}$ and PFOS exposure models}
+{Environ Pollut}
+{Two mouse models (PM$_{2.5}$ inhalation; PFOS in drinking water) sampled repeatedly across dose levels and exposure stages, with 16S sequencing and generalised additive models for dose-time structure. Controls showed clear temporal succession, which the authors stress must be modelled before attributing change to exposure. In the PM$_{2.5}$ model, restructuring peaked at early-to-intermediate stages, with nonlinear trajectories in Lactobacillus, Prevotella and the Firmicutes/Bacteroidetes ratio; PFOS effects were later and longer. No effect sizes with CIs are reported in the abstract. Limitation: functional pathways are inferred, not measured; doses and particle source are not given in the abstract, and cage effects dominate small murine microbiome studies. Relevance: low - mechanistic, but the time-varying response argues against single-timepoint toxicology.}
+{10.1016/j.envpol.2026.129383}
+
+\paperentry{Kou Xing Su San Sang Xing Tang PM$_{2.5}$ lung injury rats 2026}
+{Xing Su San and Sang Xing Tang attenuate PM$_{2.5}$-induced lung injury and inflammatory marker expression in rats}
+{Pak J Pharm Sci}
+{40 male Wistar rats in five groups of 8. PM$_{2.5}$ at 500 $\mu$g\,m$^{-3}$ raised lung RAGE mRNA 2.8-fold (warm-dry) and 2.5-fold (cool-dry), NF-kB p65 2.4- and 2.2-fold, and S100A9-positive cells to 3.45\% and 3.13\% vs 0.82\% in controls (all P<0.05). The two herbal formulas, given by gavage, partly reversed these markers in their matched climate model (e.g. RAGE 1.6-fold with Sang Xing Tang). Limitation: 500 $\mu$g\,m$^{-3}$ is an episode-level dose, n=8 per group, no histology scoring or blinding reported, and formula composition is not standardised. Relevance: low - a temperature-humidity x PM interaction in toxicology, not monitoring.}
+{10.36721/pjps/2026.40.15845.1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 3 records}{Clay}
+
+\paperentry{de la Cruz automated forced air injection cordwood stove PM$_{2.5}$ particle size 2026}
+{Less Mass of PM$_{2.5}$ Emissions, Smaller Particles: The Trade-Off of Automated Forced Air Injection in a Residential Cordwood Stove}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata only: no abstract was available from PubMed, Europe PMC, Crossref or Semantic Scholar at harvest. The title reports that automated forced-air injection in a residential cordwood stove lowers PM$_{2.5}$ mass emissions but shifts particles to smaller sizes. No numbers, test protocol or fuel details can be summarised. Limitation: cannot be appraised from the title; the trade-off claim needs number-based metrics to evaluate. Relevance: high in principle - a mass reduction with a shift to ultrafine sizes is precisely the case where optical mass sensors, blind below \textasciitilde{}0.3 um, would overstate the improvement.}
+{10.1016/j.atmosenv.2026.122443}
+
+\paperentry{Tsai mineral dust biomass burning aerosol convergence East Asia western North Pacific 2026}
+{Convergence of mineral dust and biomass-burning aerosols over East Asia and the western North Pacific}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata only: no abstract was available at harvest from any route tried. The title describes convergence of mineral dust and biomass-burning aerosol over East Asia and the western North Pacific, presumably from observation and transport analysis; the instruments, period and metrics cannot be stated. Limitation: not appraisable. Relevance: medium in principle - mixed dust-smoke plumes combine coarse non-spherical and fine absorbing particles, a regime where optical sensor size and refractive-index assumptions fail together.}
+{10.1016/j.atmosenv.2026.122444}
+
+\paperentry{Mulena dust intrusion regimes north-central Argentina vertical structure optical properties 2026}
+{Dust intrusion regimes over north-central Argentina: Vertical structure, optical properties, and transport pathways}
+{Atmos Res}
+{\textsc{metadata only.} Metadata only: no abstract at harvest. The title describes a classification of dust-intrusion regimes over north-central Argentina by vertical structure, optical properties and transport pathway, likely from lidar or sun-photometer records with trajectory analysis. No data can be summarised. Limitation: not appraisable; column and vertical optical properties do not by themselves give surface PM. Relevance: low-medium - dust-regime classification is the prior a satellite-surface fusion model needs for coarse-mode episodes in an under-monitored region.}
+{10.1016/j.atmosres.2026.109404}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{24 October 2026}, single day (Saturday). Harvester legs: \textbf{PubMed} health
+\textbf{2}, sensing \textbf{0}; \textbf{Europe PMC} \textbf{40} (4 AGRICOLA retro-index dropped); \textbf{Crossref by
+ISSN} \textbf{33}; \textbf{arXiv} 150 kB, no in-window entry; \textbf{OpenAlex} HTTP 429. PubMed connector (EDAT
+24 Oct) 11 PMIDs, 8 appended; \textbf{77 screened}. Abstracts for 4 records recovered via Crossref/Semantic Scholar
+title match. \textbf{10 admitted}, \textbf{67 rejected} with logged reasons, including 5 cross-day duplicates assigned
+to 23 October and 1 DUPLICATE-DOI (shipped 12 October). \textbf{DOI gate} 0 fail / 0 warn after removal.
+\textbf{3 carried on metadata alone}. Consensus sweep and trial watch for the 23--29 October backfill are reported in
+the 29 October issue and the W43 weekly. \textbf{Scholar Gateway} not called. Abstracts remain the copyright of their
+publishers.\par}
+\end{keybox}
+
+\end{document}
