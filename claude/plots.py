@@ -693,7 +693,9 @@ _design_unmapped = set()
 def dgrp(d):
     if d not in design_group:
         _design_unmapped.add(d)
-    return design_group.get(d, "Other / mixed")
+    g = design_group.get(d, "Other / mixed")
+    # 2026-11-01: one ecological group (was split "Ecological" / "Observational - ecological")
+    return "Observational - ecological" if g == "Ecological" else g
 dg = collections.Counter(dgrp(p["design"]) for p in PAPERS)
 # DEFECT CLASS CLOSED 2026-08-23. This fall-through has now been logged twelve times.
 # Every previous fix added map entries and left the diagnostic as a print() at the very
@@ -1193,7 +1195,7 @@ for i in range(len(subs)):
     for j in range(len(dgs)):
         if M[i, j] > 0:
             ax.text(j, i, int(M[i, j]), ha="center", va="center", fontsize=FS(8.6),
-                    fontweight="bold", color=PAPER if M[i, j] >= 2 else INK)
+                    fontweight="bold", color=PAPER if M[i, j] >= 0.45 * max(3, M.max()) else INK)  # 2026-11-01 contrast fix
 ax.set_xticks(np.arange(-.5, len(dgs), 1), minor=True)
 ax.set_yticks(np.arange(-.5, len(subs), 1), minor=True)
 ax.grid(which="minor", color=PAPER, lw=2.0)

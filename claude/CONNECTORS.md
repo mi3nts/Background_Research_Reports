@@ -86,3 +86,14 @@ Tier-2 legs will surface high-value records whose entry dates predate this watch
 ## 2026-11-01 — Wiley Scholar Gateway
 
 The old Scholar Gateway connector (`semanticSearch`, failing since Sep with "Could not resolve user identity") is retired. Use **Wiley Scholar Gateway** `search_wiley_fulltext` for full-text passage retrieval; `getUsageLimit` reports remaining quota.
+
+## 2026-11-01 — research connectors on the account (add to the scheduled task's connector list)
+
+| Connector | Use in the pipeline |
+|---|---|
+| OpenAlex | `search_works` with a created/publication-date filter as the replacement OpenAlex leg (covers AMT/ACP); `get_work` for authorships/institutions → optional `affil` field for author clusters |
+| bioRxiv / medRxiv | `search_preprints` by date window (environmental-health / epidemiology categories) |
+| alphaXiv | arXiv full-text search for LCS calibration / ML / edge inference; replaces the keyword arXiv leg's recall gap |
+| Scite | retraction / correction notice check on tier-A records; citation counts for "most-cited" in rollups |
+| Amass TrialCore | WHO ICTRP (non-US) trials for the weekly trial watch |
+| Undermind / Elicit | monthly or yearly gap rebuild only (when dailies are missing) |

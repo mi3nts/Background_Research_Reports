@@ -39,6 +39,28 @@ def harvest(date):
     print("entry window:", start, "->", date)
 
 
+EXTRA_HOOK = "\\IfFileExists{\\FIGDIR/extra_figs.tex}{\\input{\\FIGDIR/extra_figs.tex}}{}"
+
+
+def add_extra_figs(texpath):
+    """2026-11-01: splice the plots_extra.py figure blocks (x1-x4, data-derived captions)
+    into an authored issue if the author has not placed the hook. Anchor: before the
+    forest plot, else before the paper-level digest, else before \\end{document}."""
+    s = open(texpath, encoding="utf-8").read()
+    if "extra_figs" in s:
+        return
+    blk = "\n\n" + EXTRA_HOOK + "\n\n"
+    for a in ("f5_forest", "Paper-level digest", "Paper-level", "\\end{document}"):
+        i = s.find(a)
+        if i < 0:
+            continue
+        k = s.rfind("\n\n", 0, i)
+        k = i if (k < 0 or a == "\\end{document}") else k
+        s = s[:k] + blk + s[k:]
+        break
+    open(texpath, "w", encoding="utf-8").write(s)
+
+
 def post(date):
     # Gate: a wrong DOI is invisible in the PDF but ships a dead link. Four such
     # records went out in the 28-29 Jul issues before this check existed.
@@ -51,7 +73,9 @@ def post(date):
     os.makedirs(figdir, exist_ok=True); os.makedirs(build, exist_ok=True)
     env = {"PMRW_DATE": date, "PMRW_FIGDIR": figdir, "PMRW_BUILD": build}
     run(["python3", "plots.py"], env)
+    run(["python3", "plots_extra.py"], env)     # x1-x4 insight figures (2026-11-01)
     run(["python3", "mktable.py"], env)
+    add_extra_figs(os.path.join(build, "digest.tex"))
     # ALWAYS refresh: build/ is scratch, and a stale copy silently compiles the previous
     # design system. A preamble edit on 2026-08-02 (rollup digest macros) was invisible
     # to the build for exactly this reason - same failure class as the stale fig symlink.
@@ -127,6 +151,8 @@ def rollup(cadence, end):
            "PMRW_BUILD": build}
     run(["python3", "plots.py"], env)           # pooled f1-f6 over the range
     run(["python3", "plots_weekly.py"], env)    # w1 trend panel from metrics.csv
+    run(["python3", "plots_extra.py"], env)     # x1-x4 insight figures (2026-11-01)
+    add_extra_figs(src)
     run(["python3", "mktable.py"], env)
     run(["python3", "mkdigest.py"], env)        # per-paper digest body for the rollup
     # ALWAYS refresh: build/ is scratch, and a stale copy silently compiles the previous

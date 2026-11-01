@@ -59,6 +59,14 @@ def rewrite_metrics():
 
 
 def update_last_run(date):
+    # 2026-11-01: never move last_entry_date backwards (two concurrent backfill forks
+    # reset it from 31 to 30 Oct on the 1 Nov run)
+    try:
+        cur = json.load(open(os.path.join(STATE, "last_run.json")))["last_entry_date"]
+        if cur and cur > date:
+            date = cur
+    except Exception:
+        pass
     json.dump({"last_entry_date": date,
                "last_run_utc": datetime.datetime.now(datetime.timezone.utc)
                                        .strftime("%Y-%m-%dT%H:%M:%SZ")},

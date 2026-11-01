@@ -106,6 +106,34 @@ skip if the output file already exists.
 
 ---
 
+## Figure set (as of 2026-11-01)
+
+| Fig | Script | Daily | Rollup | What it answers |
+|---|---|---|---|---|
+| f1 subtopics | plots.py | yes | yes | Where volume sits across the ten bands |
+| f2 design / endpoint (f2a, f2b) | plots.py | yes | f2b dropped when >60 singleton endpoints | Study architecture; endpoint mix |
+| f3 metric + geography | plots.py | yes | yes | Particle metric studied; provenance |
+| f4 heatmap | plots.py | yes | yes | Subtopic x architecture. 2026-11-01: cell text contrast now relative to the max (light cells were white-on-white); "Ecological" merged into "Observational - ecological" |
+| f5 forest (split at 32 rows) | plots.py | if effects | yes | Every estimate with its CI, ratio and difference scales apart |
+| f6 life course | plots.py | yes | yes | Life stages addressed |
+| w1 subtopic trend | plots_weekly.py | -- | yes | Per-issue / per-week subtopic counts within the period |
+| **x1 exposure basis** | plots_extra.py | yes | yes | How the PM quantity was obtained (low-cost sensor, reference monitor, lab instrument, satellite-fused, model, proxy, genetic/biomarker, review, not stated) by side; health subtopics by measured / modelled / proxy share |
+| **x4 evidence grade** | plots_extra.py | yes | yes | Tier A/B/C per subtopic, sorted by tier-A share |
+| **x2 effect funnel** | plots_extra.py | if >=6 ratio estimates | if >=4 | ln(ratio) vs SE from the CI, coloured by exposure increment; Egger intercept when n>=10. Explicitly *not* a pooled effect |
+| **x3 archive series** | plots_extra.py | -- | yes | Every Sun-Sat week to date: health vs measurement records, low-cost-sensor records, tier-A % and metadata-only %, period shaded |
+
+`plots_extra.py` writes `<FIGDIR>/extra_figs.tex` (figure blocks with captions computed from the
+data). `run_all.py --post/--rollup` runs it and `add_extra_figs()` splices
+`\IfFileExists{\FIGDIR/extra_figs.tex}{\input{...}}{}` before the forest plot unless the author
+already placed it. Optional record fields that sharpen x1/x2: paper `basis` (one of the x1 class
+labels) and effect `inc` (`per 10 µg/m³`, `per IQR / SD`, `per 1 µg/m³ / unit`,
+`categorical contrast`). Write them on new records; the regex classifier is the fallback.
+October 2026 baseline from these figures: 15 of 523 records rest on a low-cost sensor; health-side
+exposure basis 36 % measured / 42 % modelled / 22 % proxy; 49 of 97 ratio estimates carry no
+recorded increment; Egger intercept 4.6 (SE 1.1) — strong small-study asymmetry.
+
+---
+
 ## Source notes (state of the world, 2026-07-28)
 
 - **Wiley Scholar Gateway** (2026-11-01) — replaces the retired Scholar Gateway `semanticSearch` connector. Tool `search_wiley_fulltext` (natural-language question, `start_year`/`end_year`, `topN`≤20; `getUsageLimit` for quota). Wiley full text only, text only. Use for passage-level quantities (R²/RMSE, CIs, sensor models), not as a harvest leg.
@@ -3146,3 +3174,9 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Consensus 10 hits, 0 new (Yan Sensor Review, Guo ES&T Air already in seen by DOI). Trial watch 30 Oct-1 Nov 0 hits (`trials.json` 20 NCT / 37 windows). Scholar Gateway not called; Smithery connected (not needed).
 - Open defects: `plots.py` design groups "Ecological" vs "Observational - ecological" split ecological records into two bars; endpoint canon uncapped (f2b omitted at rollup scale); no affiliation field → no author clusters. update_state.py run by concurrent forks reset `last_run.json` to 30 Oct — corrected by hand; run it serially.
 - Next: 1 Nov daily (≥22:00 CDT 1 Nov); W45 weekly (1-7 Nov) on Sat 7 Nov.
+
+## 2026-11-01 (user session) — instruction set v6, four new figures
+
+- New `plots_extra.py` (x1 exposure basis, x2 effect funnel, x3 archive series, x4 evidence grade) wired into `run_all.py` post and rollup with auto-captions; tested on 30 Oct daily (13 pp, compiles clean, 0 overfull) and the October range. Not retro-applied to shipped issues.
+- `plots.py`: ecological design groups merged; f4 heatmap text contrast fixed. `update_state.py` never moves `last_entry_date` backwards.
+- Scheduled-task prompt rewritten to v6 (connector routing incl. OpenAlex, bioRxiv/medRxiv, alphaXiv, Scite, Amass; backfill discipline; figure and insight contract; optional `basis` / `inc` / `affil` fields). Wiley Scholar Gateway replaces Scholar Gateway.
