@@ -306,6 +306,15 @@
    "hits": 4,
    "kept": 1,
    "note": "NEW NCT07536178 (UBC Lungs on Fire woodsmoke chamber); NCT07111208 MARKOPOLO, NCT05903950 APCIQ-BP, NCT07886346 Taif already stored; record updates only"
+  },
+  {
+   "window": "2026-10-30 -> 2026-11-01",
+   "queried": "2026-11-01",
+   "source": "ClinicalTrials.gov MCP connector, search_trials",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR wildfire smoke' x AREA[LastUpdatePostDate]RANGE[2026-10-30,2026-11-01]",
+   "hits": 0,
+   "kept": 0,
+   "note": "no registrations or updates in window"
   }
  ],
  "NCT05867381": {

@@ -1,0 +1,188 @@
+{
+ "date": "2026-10-31",
+ "entry_window": "2026-10-31 -> 2026-10-31",
+ "PAPERS": [
+  {
+   "pmid": "42964290",
+   "doi": "10.3389/fpubh.2026.1777772",
+   "journal": "Front Public Health",
+   "short": "Zhang short-term air pollution stroke incidence Guiyang karst city 2026",
+   "title": "Time-series analysis of the impact of short-term exposure to atmospheric pollutants on stroke risk among residents in Guiyang City, 2016-2021",
+   "sub": "Cardiovascular & metabolic",
+   "design": "Time-series (generalized additive model)",
+   "pm": "Daily fixed-site PM2.5 and PM10 (city mean), with SO2, NO2, O3, CO",
+   "geo": "China (Guiyang)",
+   "endpoint": "Daily stroke incidence (registry)",
+   "tier": "A",
+   "n": "Guiyang 2016-2021, 11,517 incident strokes (5.25/day), quasi-Poisson GAM with single-day and cumulative lags, controlling trend, weather, day-of-week and holidays. Per 10 ug/m3 at the maximal lag: PM2.5 RR 1.026 (1.005-1.048), PM10 1.015 (1.001-1.030); SO2 1.075, NO2 1.057, CO 1.346 per mg/m3. Women and adults >=65 carried more of the risk; under-65s responded only to NO2 and PM10. Limitation: single-pollutant models with the lag chosen at the maximum inflate the PM coefficients, co-pollutant collinearity is unaddressed, and the stroke series does not split ischaemic from haemorrhagic. Relevance: moderate - a low-concentration karst basin is where fixed-site averaging hides terrain-driven gradients that a dense low-cost network would resolve."
+  },
+  {
+   "pmid": "42965015",
+   "doi": "10.1016/j.ghrp.2026.04.002",
+   "journal": "Glob Health Res Policy",
+   "short": "Wang climate air pollutants influenza 48 countries convergent cross mapping 2026",
+   "title": "Delayed and nonlinear associations and predictive causal signals between climate factors, air pollutants, and influenza epidemics in 48 countries",
+   "sub": "Respiratory & allergic",
+   "design": "Bayesian spatiotemporal model",
+   "pm": "Weekly cumulative SO2, organic carbon and dust PM2.5 (gridded; source not stated in abstract)",
+   "geo": "Global (48 countries)",
+   "endpoint": "Weekly influenza positivity (FluNet)",
+   "tier": "B",
+   "n": "48 countries, 2022-2024; FluNet weekly positivity against national climate and pollutant series in hemisphere-specific Bayesian distributed-lag models, then convergent cross mapping (CCM) for 'predictive causal' drivers. Northern Hemisphere peak OR 1.74 (1.34-2.26) at weekly cumulative SO2 3100 ug/m3, lag 1.6 weeks; Southern peak for organic carbon OR 1.72 (0.65-4.58), null. CCM ranked dust PM2.5 the leading pollutant driver (19 countries). Limitation: national-level exposure against surveillance positivity is fully ecological; three post-pandemic seasons cannot separate pollution from NPI relaxation, and CCM detects shared dynamics, not causation. Relevance: low - surveillance-scale; dust PM2.5 is a size fraction low-cost optical sensors undercount."
+  },
+  {
+   "pmid": "42965991",
+   "doi": "10.1016/j.chroma.2026.467564",
+   "journal": "J Chromatogr A",
+   "short": "Bei UPLC-MS/MS 74 antibiotics in PM2.5 Beijing 2026",
+   "title": "Optimization and application of a sensitive UPLC-MS/MS method for the quantitative determination of antibiotics in PM2.5",
+   "sub": "Sensing, forecasting & instrumentation",
+   "design": "Analytical method validation",
+   "pm": "Filter-collected 24 h PM2.5, 74 antibiotics by SPE + UPLC-MS/MS",
+   "geo": "China (Beijing)",
+   "endpoint": "Airborne antibiotic concentration (method validation)",
+   "tier": "B",
+   "n": "Method for 74 antibiotics in PM2.5: T3 column, formic-acid mobile phase, Oasis HLB extraction with Na2EDTA. Recoveries 69.7-131.7%, RSD 1.0-18.1% at three spike levels, quantification limits down to 0.37 pg/m3. On 29 Beijing 24-h samples, 22 compounds exceeded detection limits (max 121.38 pg/m3); roxithromycin was in every sample and oxytetracycline had the highest mean (14.48 pg/m3). Limitation: 29 samples from one city and season give occurrence, not exposure; recoveries near 70% for some classes bias low, and the link to resistance spread is asserted, not tested. Relevance: low for sensing - a filter-bound chemical fraction no optical sensor sees, but co-located filter sampling at sensor nodes could support it."
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-11373778/v1",
+   "journal": "Research Square (preprint)",
+   "short": "Anjum Idaho PM2.5 2005-2024 wildfire vs wood-smoke regimes 2026",
+   "title": "Long-Term Spatiotemporal Variability of Fine Particulate Matter (PM2.5) Across Idaho, USA, Using Statistical and Geospatial Tools",
+   "sub": "Exposure assessment & modelling",
+   "design": "Monitoring-record analysis",
+   "pm": "EPA AQS daily PM2.5, 32 sites (4,260 site-months)",
+   "geo": "USA (Idaho)",
+   "endpoint": "PM2.5 trends, seasonality and source regimes",
+   "tier": "A",
+   "n": "EPA AQS daily PM2.5 at 32 Idaho sites, 2005-2024, aggregated to 4,260 site-months; Mann-Kendall/Theil-Sen trends, PCA and IDW. Mean 7.53 ug/m3 (site range 3.16-12.08). Bimodal climatology: an August-September wildfire peak and a November-February wood-smoke/inversion peak; July-September carries 36.6% of annual mass. Cold-season and background series declined while fire-season PM2.5 rose 2.54 ug/m3 per decade, holding the annual mean flat; 32.7% of site-years exceed the 9.0 ug/m3 standard. Limitation: unreviewed preprint; IDW over 32 sites in mountainous terrain is not an exposure surface, and the 'regimes' are PCA loadings, not source apportionment. Relevance: high - two diverging seasonal regimes in inversion valleys are precisely where sparse FRM coverage fails and a calibrated PurpleAir layer (smoke-specific correction) adds most."
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-10780874/v1",
+   "journal": "Research Square (preprint)",
+   "short": "Arif Agra footwear cluster ventilation IAQ tiers 2026",
+   "title": "Ventilation, indoor air quality and thermal comfort in India's leather footwear manufacturing cluster: a tier-resolved field study",
+   "sub": "Occupational & indoor",
+   "design": "Cross-sectional (occupational)",
+   "pm": "Breathing-zone PM2.5 with CO2, TVOC, formaldehyde, air velocity",
+   "geo": "India (Agra)",
+   "endpoint": "Workplace IAQ vs WHO/OEL limits; thermal comfort",
+   "tier": "B",
+   "n": "Agra footwear cluster, three enterprise tiers (formal factory to cottage unit), 378 worker-sessions over four seasons and 147 days, breathing-zone measurements paired with ASHRAE 55 ballots. All pollutants rose linearly from large to cottage scale as air velocity fell from 0.80 to 0.16 m/s; velocity explained 79% of between-tier pollutant variance. No session anywhere met the WHO PM2.5 guideline; 91.3% exceeded the ACGIH formaldehyde TLV. Limitation: unreviewed preprint; PM instrument and calibration are not described in the abstract, and session means against an annual guideline overstate comparability. Relevance: moderate - informal-sector workplaces with no monitoring are an obvious deployment niche for wearable or wall-mounted low-cost PM nodes."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1029/2025gh001735",
+   "journal": "GeoHealth",
+   "short": "Li spatiotemporal causal machine learning PM2.5 asthma Colorado counties 2026",
+   "title": "A Spatiotemporal Causal Machine Learning Framework for Quantifying the Impact of PM2.5 on Asthma at the Community Level",
+   "sub": "Respiratory & allergic",
+   "design": "Causal ML on monitoring records",
+   "pm": "County-month PM2.5 (exposure surface not stated in abstract)",
+   "geo": "USA (Colorado)",
+   "endpoint": "Asthma hospitalisations and ED visits (county-month)",
+   "tier": "B",
+   "n": "Colorado county-level monthly asthma hospitalisations and ED visits, 2011-2019, modelled with a spatiotemporal representation-learning network plus a causal-inference layer that estimates counterfactual outcomes under hypothetical PM2.5 reductions. Estimated effects were heterogeneous, larger in communities with compounded environmental and social stressors, with wider uncertainty in data-sparse counties. No effect size per ug/m3 is given in the abstract. Limitation: county-month aggregation with monthly PM2.5 is ecological; 'causal' here rests on unconfoundedness given learned covariates, which a neural model cannot verify, and sparse rural counties are exactly where exposure error peaks. Relevance: moderate - the model's uncertainty is concentrated where monitors are absent, an explicit argument for sensor densification in rural Colorado."
+  },
+  {
+   "pmid": "42965806",
+   "doi": "10.1111/dme.70421",
+   "journal": "Diabet Med",
+   "short": "Lee type 2 diabetes burden Asia GBD 2023 particulate matter leading risk 2026",
+   "title": "The evolving burden of type 2 diabetes mellitus in Asia, 1990-2023: A Global Burden of Disease Study 2023",
+   "sub": "Burden, policy & mitigation",
+   "design": "Burden estimation (GBD)",
+   "pm": "GBD particulate matter pollution risk factor (ambient + household)",
+   "geo": "Asia (34 countries)",
+   "endpoint": "T2DM prevalence and DALYs; risk-attributable DALYs",
+   "tier": "B",
+   "n": "GBD 2023 secondary analysis, 34 Asian countries in five regions, 1990-2023. Age-standardised T2DM prevalence and DALY rates rose almost everywhere, most in South Asia (prevalence +66.5%, DALYs +75.6%); High-income Asia Pacific DALYs fell 2.4% (UI crosses zero). Particulate matter pollution was the leading attributable risk factor in every Asian region, though low-fruit diet led in South Asia (157 DALYs/100,000). Limitation: attribution inherits the GBD PM2.5-diabetes exposure-response curve and satellite-model exposure surfaces; it is not new evidence of causality, and the abstract gives no PM-attributable numbers. Relevance: low - burden framing; the exposure layer is exactly the satellite-fusion product low-cost networks are used to correct in Asia."
+  },
+  {
+   "pmid": "42965957",
+   "doi": "10.1002/smll.76528",
+   "journal": "Small",
+   "short": "Zargarian spent coffee grounds MOF filtration membrane PM2.5 bioaerosol photothermal 2026",
+   "title": "Spent Coffee Grounds-Derived Micro-Nano-Architectured Air Filtration Membranes for Multiwavelength Light-Triggered Bioaerosol Inactivation",
+   "sub": "Occupational & indoor",
+   "design": "Bench / device experiment",
+   "pm": "PM2.5 filtration efficiency (laboratory aerosol)",
+   "geo": "Laboratory (no field site)",
+   "endpoint": "Filtration efficiency, pressure drop, NH3 removal, microbial inactivation",
+   "tier": "C",
+   "n": "Single-step co-electrospinning of MOF-177/polyacrylonitrile nanofibres with electrosprayed ZIF-8-decorated spent coffee ground microparticles. At 4.5x the NIOSH respirator test face velocity the membrane captured 99.7% of PM2.5 at about half the pressure drop of a MOF-free control and removed 83.4% of ammonia; photothermal heating >80 C under simulated sunlight or NIR restored microbial suppression after three days of office air. Limitation: one challenge aerosol and short loading; no size-resolved efficiency at the MPPS, no long-term loading curve, and MOF stability under humidity is not shown. Relevance: low - a filtration material, not a measurement; at most a candidate inlet pre-filter for bioaerosol-sensitive sensor housings."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103256",
+   "journal": "Atmos Pollut Res",
+   "short": "Bei air moisture particulate matter winter Guanzhong Basin 2026",
+   "title": "Contributions of air moisture to particulate matter pollution during wintertime in the Guanzhong Basin, China",
+   "sub": "Exposure assessment & modelling",
+   "design": "Metadata only (no abstract)",
+   "pm": "Wintertime particulate matter (fraction not stated in record)",
+   "geo": "China (Guanzhong Basin)",
+   "endpoint": "Contribution of humidity to PM pollution",
+   "tier": "C",
+   "n": "Title and authors only (Bei, Chen, Jiang, Tie et al.). No abstract was retrievable at harvest. The title reports an analysis of how air moisture contributes to wintertime particulate pollution in the Guanzhong Basin. Design, mechanism, metrics and magnitude are not available; nothing is inferred. Relevance: potentially high - humidity-driven aerosol water uptake is the dominant error term in optical low-cost PM sensing, so a basin-scale moisture budget bears directly on correction. Retry abstract first."
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envint.2026.110587",
+   "journal": "Environ Int",
+   "short": "Lu kitchen air purifier health-economic outcomes 338 Chinese cities 2026",
+   "title": "Heterogeneous health-economic outcomes of kitchen air purifier interventions: A 338-city study in urban China",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Kitchen (cooking) particulate exposure - not stated in record",
+   "geo": "China (338 cities)",
+   "endpoint": "Health-economic outcomes of kitchen air purification",
+   "tier": "C",
+   "n": "Title and authors only (Lu, Yao, Jiang, Fu et al.). No abstract was retrievable at harvest. The title reports a 338-city assessment of heterogeneous health-economic outcomes of kitchen air-purifier interventions in urban China. Exposure model, health endpoints, cost basis and effect sizes are not available; nothing is inferred. Relevance: moderate - cooking-generated PM is the largest indoor source a low-cost sensor sees, and any intervention-scale cost-effectiveness estimate depends on indoor concentration inputs such sensors could supply. Retry abstract first."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Stroke incidence\nPM2.5 max lag",
+   "exposure": "PM2.5 per 10 ug/m3",
+   "est": 1.026,
+   "lo": 1.005,
+   "hi": 1.048,
+   "metric": "RR",
+   "src": "Guiyang 11,517 strokes"
+  },
+  {
+   "label": "Stroke incidence\nPM10 max lag",
+   "exposure": "PM10 per 10 ug/m3",
+   "est": 1.015,
+   "lo": 1.001,
+   "hi": 1.03,
+   "metric": "RR",
+   "src": "Guiyang 11,517 strokes"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 1,
+   "note": "childhood:\nasthma ED\n(all ages, county)"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno record"
+  },
+  {
+   "n": 1,
+   "note": "working age:\nfootwear\nworkers"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nstroke\n(>=65 stronger)"
+  }
+ ]
+}

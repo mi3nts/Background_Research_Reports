@@ -3134,3 +3134,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - **W43 weekly** (18-24 Oct, filed 24 Oct) 34 pp via `_wk_1030.py` → `build/weekly.tex`: 119 records/119 DOIs, measurement 39%, metadata-only 21%, 30/30 CI, tier 21A/43B/55C. Inflection: PM2.5 components (SO4/NO3/NH4, EC) carry the effects. Proof fixed f2a/f3 captions against the rendered counts.
 - Consensus 10 hits, 0 new (Fang 2026 review shipped 10 Oct). Trial watch 23-30 Oct: 4 hits, **1 new NCT07536178** (UBC woodsmoke chamber, FeNO+CANTAB co-primary) → `trials.json` 20 NCT / 36 windows. Scholar Gateway not called; OpenAlex 429.
 - Next: 30 Oct daily (≥22:00 CDT 30 Oct), then **31 Oct daily + W44 weekly (25-31 Oct) + October monthly** on the Sat 31 Oct ≥22:00 run.
+
+## Run 2026-11-01 (05:25-06:5x UTC = 00:25 CDT 1 Nov) — dailies 30 + 31 Oct, W44 weekly, October monthly
+
+- 22:00 rule → newest buildable 31 Oct. Harvest: **30 Oct** PubMed 16/4, EPMC 40 (9 AGR dropped), Crossref 43, arXiv 150 kB, OpenAlex 429 → 85 fresh + connector 18 PMIDs/6 appended = 91; **31 Oct** (Sat) PubMed 6/0, EPMC 35 (5 AGR), Crossref 22, connector 9/4 → 64, **18 cross-day duplicates assigned to 30 Oct before authoring** (fix from the 30 Oct log works) → 46. efetch filled 32 abstracts; `_xrfill` filled 11.
+- **30 Oct** 24 admitted / 67 rejected (`_rej_1101_30.py`), 12 pp, 3 effects, 1 A, 5 metadata-only. **31 Oct** 10 / 36 (`_rej_1101_31.py`), 7 pp, 2 effects, 2 A, 2 metadata-only. DOI gate 0/0 both; 0 overfull; contact sheets proofed. Authored in parallel forks on disjoint candidate sets.
+- **W44 weekly** (25-31 Oct, filed 31 Oct) 35 pp via `_wk_1101.py`: 135 records/135 DOIs, measurement 37%, 29/29 CI, metadata-only 17%. Inflection: fire smoke as the common exposure (9 records, all modelled). f2b endpoint chart dropped (>60 singleton categories).
+- **October monthly** 116 pp (`_mstats_1031.py`, compiled isolated in `build/mon1031/`): 523 records/523 DOIs, 113 effects all with CI, metadata-only 21% (Sep 16%), tier A 14%. Sep prediction (1) not met, (2) met; two November predictions set.
+- Consensus 10 hits, 0 new (Yan Sensor Review, Guo ES&T Air already in seen by DOI). Trial watch 30 Oct-1 Nov 0 hits (`trials.json` 20 NCT / 37 windows). Scholar Gateway not called; Smithery connected (not needed).
+- Open defects: `plots.py` design groups "Ecological" vs "Observational - ecological" split ecological records into two bars; endpoint canon uncapped (f2b omitted at rollup scale); no affiliation field → no author clusters. update_state.py run by concurrent forks reset `last_run.json` to 30 Oct — corrected by hand; run it serially.
+- Next: 1 Nov daily (≥22:00 CDT 1 Nov); W45 weekly (1-7 Nov) on Sat 7 Nov.

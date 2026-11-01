@@ -1,6 +1,14 @@
 {
   "daily": [
     {
+      "file": "PM-Research-Watch_2026-10-31.pdf",
+      "title": "Daily digest \u2014 31 Oct 2026"
+    },
+    {
+      "file": "PM-Research-Watch_2026-10-30.pdf",
+      "title": "Daily digest \u2014 30 Oct 2026"
+    },
+    {
       "file": "PM-Research-Watch_2026-10-29.pdf",
       "title": "Daily digest \u2014 29 Oct 2026"
     },
@@ -383,6 +391,10 @@
   ],
   "weekly": [
     {
+      "file": "PM-Research-Watch-Weekly_2026-10-31.pdf",
+      "title": "Week 44 \u00b7 25 Oct \u2013 31 Oct 2026"
+    },
+    {
       "file": "PM-Research-Watch-Weekly_2026-10-24.pdf",
       "title": "Week 43 \u00b7 18 Oct \u2013 24 Oct 2026"
     },
@@ -436,6 +448,10 @@
     }
   ],
   "monthly": [
+    {
+      "file": "PM-Research-Watch-Monthly_2026-10-31.pdf",
+      "title": "Monthly review \u2014 October 2026"
+    },
     {
       "file": "PM-Research-Watch-Monthly_2026-09-30.pdf",
       "title": "Monthly review \u2014 September 2026"
