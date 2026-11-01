@@ -108,6 +108,8 @@ skip if the output file already exists.
 
 ## Source notes (state of the world, 2026-07-28)
 
+- **Wiley Scholar Gateway** (2026-11-01) — replaces the retired Scholar Gateway `semanticSearch` connector. Tool `search_wiley_fulltext` (natural-language question, `start_year`/`end_year`, `topN`≤20; `getUsageLimit` for quota). Wiley full text only, text only. Use for passage-level quantities (R²/RMSE, CIs, sensor models), not as a harvest leg.
+
 - **PubMed E-utilities** — the reliable spine. Window on `[EDAT]`. Does *not* index
   `Atmos. Meas. Tech.` or `Atmos. Chem. Phys.`, so pure instrumentation work is invisible here.
 - **Europe PMC** — `CREATION_DATE:[a TO b]` works and surfaces preprints PubMed misses.

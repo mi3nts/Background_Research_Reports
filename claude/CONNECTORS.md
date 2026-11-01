@@ -47,7 +47,7 @@ between 12 January and 15 July, and none of which belonged in a 9 August issue.
 
 | Leg | Tool | Use it for |
 |---|---|---|
-| Scholar Gateway | `semanticSearch` | Full-text **passage** retrieval — calibration R²/RMSE, CIs, sensor model numbers that abstracts omit. **Corpus is Wiley full text, last updated May 2026.** It is not a recency leg and cannot resolve non-Wiley publishers. Confirmed 2026-08-10: could not return any of five Elsevier *Atmos. Environ.* abstracts. |
+| Wiley Scholar Gateway | `search_wiley_fulltext`, `getUsageLimit` | Full-text **passage** retrieval — calibration R²/RMSE, CIs, sensor model numbers that abstracts omit. Wiley full text only, text only; not a recency leg and cannot resolve non-Wiley publishers. Replaced the retired Scholar Gateway `semanticSearch` connector on 2026-11-01. |
 | Exa | `web_search_exa`, `web_fetch_exa` | Journal TOC pages, publisher landing pages when a DOI has no metadata. Web index, not a bibliographic one. |
 | Nimble | `nimble_search` | Date-filtered web search. Returned 0 for a 2-day window on 2026-08-10. |
 | Claude in Chrome / Control Chrome | `navigate`, `get_page_text` | Google Scholar sweep, journal TOCs, live-site verification. |
@@ -81,3 +81,8 @@ Tier-2 legs will surface high-value records whose entry dates predate this watch
 3. Mark every one `\textsc{backfill}` in the digest **with its entry date**, and record the
    per-leg backfill count in the provenance box. A reader must be able to tell which
    records the date window actually produced.
+
+
+## 2026-11-01 — Wiley Scholar Gateway
+
+The old Scholar Gateway connector (`semanticSearch`, failing since Sep with "Could not resolve user identity") is retired. Use **Wiley Scholar Gateway** `search_wiley_fulltext` for full-text passage retrieval; `getUsageLimit` reports remaining quota.
