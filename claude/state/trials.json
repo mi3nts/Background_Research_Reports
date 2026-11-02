@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 20,
+ "trials": 21,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -315,6 +315,15 @@
    "hits": 0,
    "kept": 0,
    "note": "no registrations or updates in window"
+  },
+  {
+   "window": "2026-11-01 -> 2026-11-02",
+   "queried": "2026-11-02",
+   "source": "ClinicalTrials.gov MCP connector, search_trials; Amass TrialCore minLastUpdateDate",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR wildfire smoke' x AREA[LastUpdatePostDate]RANGE[2026-11-01,2026-11-02]",
+   "hits": 0,
+   "kept": 1,
+   "note": "CT.gov 0; Amass 10 returned, 1 relevant new: NCT07311967 (UIC cooking UFP chamber, n=15)"
   }
  ],
  "NCT05867381": {
@@ -754,5 +763,26 @@
   "start_date": "2026-05-26",
   "primary_completion_date": "2029-08-31",
   "note": "Controlled-exposure crossover (woodsmoke vs filtered air), n=24. analyze_endpoints: co-primary FeNO and CANTAB cognition; secondaries sputum cells, rs-fMRI DMN connectivity, 129Xe MRI composite, NULISAseq CNS panel, NETs, DNA methylation/epigenetic age, glial EVs. Lung + brain endpoints in one wildfire-smoke chamber protocol."
+ },
+ "NCT07311967": {
+  "first_seen": "2026-11-02",
+  "title": "Short-Term Health Outcomes of Cooking UFP Exposure",
+  "status": "NOT_YET_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": [
+   "NA"
+  ],
+  "sponsor": "University of Illinois Chicago",
+  "enrollment": 15,
+  "interventions": [
+   "Clean Indoor Air Exposure (Control)",
+   "Exposure to Cooking-Generated Ultrafine Particles and Gases"
+  ],
+  "conditions": [
+   "Air Pollution Exposure",
+   "Cognitive Function Decline",
+   "Respiratory Inflammation"
+  ],
+  "source": "Amass TrialCore"
  }
 }

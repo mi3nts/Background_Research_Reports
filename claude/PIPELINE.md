@@ -3180,3 +3180,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - New `plots_extra.py` (x1 exposure basis, x2 effect funnel, x3 archive series, x4 evidence grade) wired into `run_all.py` post and rollup with auto-captions; tested on 30 Oct daily (13 pp, compiles clean, 0 overfull) and the October range. Not retro-applied to shipped issues.
 - `plots.py`: ecological design groups merged; f4 heatmap text contrast fixed. `update_state.py` never moves `last_entry_date` backwards.
 - Scheduled-task prompt rewritten to v6 (connector routing incl. OpenAlex, bioRxiv/medRxiv, alphaXiv, Scite, Amass; backfill discipline; figure and insight contract; optional `basis` / `inc` / `affil` fields). Wiley Scholar Gateway replaces Scholar Gateway.
+
+## Run 2026-11-02 (05:05-05:2x UTC = 23:05 CST 1 Nov) — daily 1 Nov
+
+- 22:00 rule satisfied (23:05 CST, first night of standard time) → 1 Nov owed, Sunday, no rollup. Harvest: PubMed 0/1, EPMC 11 (2 AGR), Crossref 6, arXiv 150 kB none in window, OpenAlex HTTP 429 → 14 unique → 8 fresh; connector EDAT 1 Nov (3 axes, `_conn_1102.py`) 5 PMIDs, 4 appended → 12 screened. efetch filled 4 abstracts; `_xrfill` none (Elsevier day-0).
+- **7 admitted** (4 window + 3 Amass backfill: Alli Accra EDAT 4 Jun, Hess Medicare EDAT 4 May, Ruvuna SPIROMICS ERS abstract Crossref 29 Oct), 10 rejected (`_rej_1102.py`, incl. 2 Amass). 8 pp, 6 effects (5 OR, 1 mmHg), 1 tier A, 2 metadata-only. DOI gate 0/0; 0 overfull; contact sheet + captions proofed. x2 omitted (<6 ratio); forest split f5/f5_2 placed by hand.
+- Amass `minCreateDate` is a working recency filter for Tier-2 but returns older papers newly ingested; check seen before use. Held for the next backfill slot (not rejected): 10.3390/jcm15083089, 10.1016/j.apr.2025.102827, 10.1183/13993003.congress-2026.oa5536.
+- **v6 connector routing is not fully available**: OpenAlex, alphaXiv and bioRxiv/medRxiv connectors are not on this session; Scite returns "requires a paid plan or trial" (no retraction check; Amass `isRetracted` used instead); Scholar_Gateway needs re-authorisation; Smithery medRxiv search ignores keywords (off-topic results). `affil` filled from PubMed efetch/Crossref where present.
+- Delete still blocked on the mount (`rm` fails) → `.git/stale-rmtest-*` moved aside. `plots.py`: design key "Autopsy tissue analysis" → Chamber / laboratory.
+- Trial watch 1-2 Nov: CT.gov 0; Amass adds NCT07311967 (UIC cooking UFP chamber) → `trials.json` 21 NCT / 38 windows. Consensus 10 hits, 0 new.
+- Next: 2 Nov daily (≥22:00 CST 2 Nov); W45 weekly (1-7 Nov) on Sat 7 Nov.

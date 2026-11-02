@@ -1,0 +1,193 @@
+{
+ "date": "2026-11-01",
+ "entry_window": "2026-11-01 -> 2026-11-01",
+ "PAPERS": [
+  {
+   "pmid": "42967812",
+   "doi": "10.1097/cm9.0000000000004318",
+   "journal": "Chin Med J (Engl)",
+   "short": "Xiao air pollution kidney disease mortality subtypes China case-crossover 2026",
+   "title": "Air pollution exposure and death from different subtypes of kidney diseases: A nationwide, individual-level, case-crossover study in China.",
+   "sub": "Other clinical endpoints",
+   "design": "Time-stratified case-crossover",
+   "pm": "Modelled daily PM2.5 and PM2.5-10 at residential address, with O3 and NO2",
+   "geo": "China (nationwide)",
+   "endpoint": "Kidney disease mortality and subtypes (renal failure, glomerular, tubulointerstitial, urolithiasis)",
+   "tier": "A",
+   "basis": "Model (CTM / LUR / ML)",
+   "affil": "Fudan University, China; Chinese Center for Disease Control and Prevention, China",
+   "n": "466,543 kidney deaths, China 2013-2019, time-stratified case-crossover with conditional logistic regression. Per IQR: PM2.5 lag 0-2 OR 1.0195 (1.0122-1.0269); coarse PM2.5-10 lag 0-3 OR 1.0240 (1.0158-1.0323); O3 +2.05% (1.05-3.07); NO2 lag 0-3 +3.62% (2.47-4.78). Renal failure and glomerular deaths responded to all four pollutants; tubulointerstitial deaths to O3 only; urolithiasis null. Limitation: the abstract does not give the IQR widths, so 'NO2 strongest' is not a per-mass comparison, the lag differs by pollutant, and renal failure on a death certificate is often a proximate cause. Relevance: moderate - coarse-mode signal comparable to PM2.5 per IQR, in a size fraction low-cost optical sensors undercount."
+  },
+  {
+   "pmid": "42965512",
+   "doi": "10.24875/gmm.m26001158",
+   "journal": "Gac Med Mex",
+   "short": "Calderon-Garciduenas ferrimagnetic nanoparticles olfactory bulb cortex Mexico City children 2026",
+   "title": "The olfactory bulb, prefrontal and anterior cingulate cortex are early pediatric targets for anthropogenic magnetic nanoparticles and their motion behavior under electromagnetic fields.",
+   "sub": "Neuro / mental health",
+   "design": "Autopsy tissue analysis",
+   "pm": "Ferrimagnetic nanoparticles in brain tissue by magnetophoresis, TEM and EDX",
+   "geo": "Mexico (Mexico City)",
+   "endpoint": "Presence, composition and field-induced motion of magnetic nanoparticles in brain",
+   "tier": "B",
+   "basis": "Lab / research instrument",
+   "affil": "University of Montana, United States; Universidad Nacional Autonoma de Mexico, Mexico",
+   "n": "48 brain samples (olfactory bulb, anterior cingulate, prefrontal cortex) from 12 children (8.5 +/- 7.6 y) and 16 adults (39.2 +/- 19.6 y), Metropolitan Mexico City. Magnetophoresis at 25-1,000 mT AC showed small displacements and significant vector-direction variation; TEM and EDX located ferrimagnetic nanoparticles. No effect size. Limitation: autopsy convenience series with no comparison population or exposure measure in the abstract, so 'early pediatric targets' and the neural-damage risk are inferred, not tested; particle attribution to anthropogenic sources is not apportioned here. Relevance: low for sensing - mass-calibrated optical nodes are blind to this metallic ultrafine fraction, which is the actual argument for co-located number or magnetic measurements."
+  },
+  {
+   "doi": "10.1016/j.envint.2026.110586",
+   "journal": "Environ Int",
+   "short": "Aretz sick leave long-term fine particulate German health claims 13-year 2026",
+   "title": "Assessing the health and economic burden of sick leave associated with long-term fine particulate matter exposure: a 13-year analysis using German health claims data",
+   "sub": "Burden, policy & mitigation",
+   "design": "Metadata only (no abstract)",
+   "pm": "Long-term fine PM (exposure source not available)",
+   "geo": "Germany",
+   "endpoint": "Sick leave and economic burden (per title)",
+   "tier": "C",
+   "n": "Metadata only: Elsevier day-0 deposit, no abstract in Crossref, Europe PMC or Semantic Scholar; no finding asserted. The title describes a 13-year analysis of German health claims linking long-term fine PM to sick leave and its economic burden. Limitation: exposure source, increment, cohort size and estimate are all unknown until the abstract deposits. Relevance: to be assessed - claims-linked sick leave is a working-age endpoint rarely paired with PM, and this is the first record to retry on the next weekly abstract sweep."
+  },
+  {
+   "doi": "10.1016/j.buildenv.2026.115523",
+   "journal": "Build Environ",
+   "short": "Nie personal air purification device multi-scale modelling fan speed occupant exposure 2026",
+   "title": "Multi-scale modeling and fan speed optimization of a personal air-purification device for occupant exposure control in polluted indoor environments",
+   "sub": "Occupational & indoor",
+   "design": "Metadata only (no abstract)",
+   "pm": "Not stated (indoor pollutant class unavailable)",
+   "geo": "Not stated",
+   "endpoint": "Occupant exposure control (per title)",
+   "tier": "C",
+   "n": "Metadata only: Elsevier day-0 deposit, no abstract in Crossref or Semantic Scholar; no finding asserted. The title describes multi-scale modelling and fan-speed optimisation of a personal air-purification device. Limitation: the title does not confirm particulate matter as the pollutant, and no performance figures, validation or occupant data are available. Relevance: to be assessed - breathing-zone control is where stationary sensors misstate exposure; retain only if the abstract confirms a PM target and measured validation."
+  },
+  {
+   "pmid": "42243366",
+   "doi": "10.1038/s41598-026-54135-6",
+   "journal": "Sci Rep",
+   "short": "Alli ambient air pollution blood pressure schoolchildren Accra LUR 2026",
+   "title": "Urban ambient air pollution and blood pressure in schoolchildren in Accra, Ghana",
+   "sub": "Cardiovascular & metabolic",
+   "design": "School-based cross-sectional",
+   "pm": "Home and school PM2.5, BC, NO2 from spatiotemporal LUR (146 measurement sites)",
+   "geo": "Ghana (Accra)",
+   "endpoint": "Systolic and diastolic BP; elevated BP",
+   "tier": "B",
+   "basis": "Model (CTM / LUR / ML)",
+   "affil": "University of Massachusetts Amherst, United States; University of Massachusetts Amherst, United States",
+   "n": "BACKFILL (entry date 4 Jun 2026; Amass). 919 children aged 7-14 in 90 schools; one-third with elevated BP. Per 10 units home exposure: SBP PM2.5 -0.70 mmHg (-3.34 to 1.94), BC -4.61 (-9.59 to 0.37); DBP PM2.5 -0.83 (-2.93 to 1.28), BC -4.35 (-8.19 to -0.50); elevated BP PM2.5 OR 0.75 (0.39-1.41). Exposures ran 5-8 times the WHO annual PM2.5 guideline. Limitation: cross-sectional, and inverse associations in a high-exposure city suggest residual confounding by socioeconomic or adiposity patterning; the upper bound does not exclude a moderate SBP rise. Relevance: high - the LUR rests on a 146-site campaign in sub-Saharan Africa, the design a low-cost network could sustain."
+  },
+  {
+   "pmid": "42074403",
+   "doi": "10.3390/ijerph23040464",
+   "journal": "Int J Environ Res Public Health",
+   "short": "Hess low-level PM2.5 mortality Native American Medicare geographic attenuation 2026",
+   "title": "Untangling Impacts of Socioeconomic Position, Chronic Disease, and Low-Level PM2.5 Exposure on Mortality Among Native American Medicare Beneficiaries",
+   "sub": "Burden, policy & mitigation",
+   "design": "Case-control",
+   "pm": "Long-term low-level PM2.5 (lowest-decile zip codes; exposure source not stated)",
+   "geo": "United States (Medicare)",
+   "endpoint": "All-cause mortality",
+   "tier": "B",
+   "affil": "Hess Epidemiology Services, United States; University of Texas Health Science Center at Houston, United States",
+   "n": "BACKFILL (entry date 4 May 2026; Amass). Case-control within 1,713,399 traditional Medicare beneficiaries in the lowest PM2.5 decile, 2015-2016, with PCA summaries of area SEP and chronic disease. Fully adjusted OR per ug/m3: Native American 1.12 (1.06-1.18), non-Native American 1.01 (1.001-1.02). Sequential adjustment attributed most attenuation in Native American beneficiaries to state-level clustering, less to SEP and disease. Limitation: the abstract gives no pre-adjustment coefficient, zip-level exposure over a narrow range makes a per-ug/m3 slope fragile, and state effects may absorb real exposure contrast. Relevance: moderate - low-level gradients are where sparse monitoring error is largest."
+  },
+  {
+   "doi": "10.1183/13993003.congress-2026.oa5535",
+   "journal": "Eur Respir J (congress abstract)",
+   "short": "Ruvuna ambient PM2.5 NO2 plasma proteomics SPIROMICS SomaScan congress 2026",
+   "title": "Associations of ambient air pollution and protein expression among individuals from the Subpopulations and intermediate outcome measures in COPD study (SPIROMICS)",
+   "sub": "Respiratory & allergic",
+   "design": "Cross-sectional (cohort baseline)",
+   "pm": "Modelled prior-year average PM2.5 and NO2",
+   "geo": "United States (SPIROMICS)",
+   "endpoint": "Plasma proteome (SomaScan 7k aptamers)",
+   "tier": "C",
+   "basis": "Model (CTM / LUR / ML)",
+   "n": "BACKFILL (Crossref deposit 29 Oct 2026; Amass; no PMID). ERS congress abstract. SPIROMICS tobacco-exposed cohort, n=1,627 for PM2.5 and n=1,618 for NO2; SomaScan 7k against modelled prior-year exposure, adjusted for site, COPD status, smoking, BMI, occupation, income and deprivation. 860 proteins associated with PM2.5 at FDR<0.05, none with NO2; enrichment in vascular remodelling, insulin signalling and inflammation. Limitation: abstract only, no effect sizes or replication, cross-sectional, and a one-pollutant-sided result may partly reflect exposure-model quality or spatial confounding. Relevance: low - no sensing element, but the proteomic contrast depends on exposure accuracy."
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Kidney death\nPM2.5 lag 0-2",
+   "exposure": "PM2.5 per IQR (width not in abstract)",
+   "est": 1.0195,
+   "lo": 1.0122,
+   "hi": 1.0269,
+   "metric": "OR",
+   "src": "China 466,543 deaths",
+   "inc": "per IQR / SD"
+  },
+  {
+   "label": "Kidney death\nPM2.5-10 lag 0-3",
+   "exposure": "PM2.5-10 per IQR (width not in abstract)",
+   "est": 1.024,
+   "lo": 1.0158,
+   "hi": 1.0323,
+   "metric": "OR",
+   "src": "China 466,543 deaths",
+   "inc": "per IQR / SD"
+  },
+  {
+   "label": "Death, Native Am.\nlow PM2.5",
+   "exposure": "PM2.5 per 1 ug/m3",
+   "est": 1.12,
+   "lo": 1.06,
+   "hi": 1.18,
+   "metric": "OR",
+   "src": "US Medicare lowest decile",
+   "inc": "per 1 µg/m³ / unit"
+  },
+  {
+   "label": "Death, non-Native\nlow PM2.5",
+   "exposure": "PM2.5 per 1 ug/m3",
+   "est": 1.01,
+   "lo": 1.001,
+   "hi": 1.02,
+   "metric": "OR",
+   "src": "US Medicare lowest decile",
+   "inc": "per 1 µg/m³ / unit"
+  },
+  {
+   "label": "Elevated BP\nAccra children",
+   "exposure": "Home PM2.5 per 10 units",
+   "est": 0.75,
+   "lo": 0.39,
+   "hi": 1.41,
+   "metric": "OR",
+   "src": "Accra n=919",
+   "inc": "per 10 µg/m³"
+  },
+  {
+   "label": "SBP Accra\nchildren",
+   "exposure": "Home PM2.5 per 10 units",
+   "est": -0.7,
+   "lo": -3.34,
+   "hi": 1.94,
+   "metric": "mmHg",
+   "src": "Accra n=919",
+   "inc": "per 10 µg/m³"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": "preconception /\nin utero:\nno record"
+  },
+  {
+   "n": 2,
+   "note": "childhood:\nAccra BP;\nMexico City brain"
+  },
+  {
+   "n": 0,
+   "note": "adolescence:\nno separate\nrecord"
+  },
+  {
+   "n": 1,
+   "note": "working age:\nsick leave\n(metadata only)"
+  },
+  {
+   "n": 1,
+   "note": "older adults:\nMedicare\nmortality"
+  }
+ ]
+}

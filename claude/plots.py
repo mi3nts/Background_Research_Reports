@@ -239,6 +239,7 @@ design_group = {
     "Proxy validation vs personal exposure": "Measurement campaign",
     "Exposome-wide association": "Observational - cross-sectional",
     "Case-control": "Observational - cross-sectional",
+    "Autopsy tissue analysis": "Chamber / laboratory",
     # added 2026-08-24, in the same edit as the records that use them (13th recurrence
     # of the unmapped-design class, and the first run where the guard was in place
     # *before* the labels were written rather than after).
