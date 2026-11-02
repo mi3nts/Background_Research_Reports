@@ -3190,3 +3190,4 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Delete still blocked on the mount (`rm` fails) → `.git/stale-rmtest-*` moved aside. `plots.py`: design key "Autopsy tissue analysis" → Chamber / laboratory.
 - Trial watch 1-2 Nov: CT.gov 0; Amass adds NCT07311967 (UIC cooking UFP chamber) → `trials.json` 21 NCT / 38 windows. Consensus 10 hits, 0 new.
 - Next: 2 Nov daily (≥22:00 CST 2 Nov); W45 weekly (1-7 Nov) on Sat 7 Nov.
+- Shipped commit 51124d7; PDF and manifest 200 on Pages (first try 404 at +75 s, 200 at +2 min).
