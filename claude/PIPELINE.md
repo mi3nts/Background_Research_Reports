@@ -3213,3 +3213,8 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 3-4 Nov: CT.gov 1 (NCT07914010, already carried), Amass 15/1 already carried → **0 new**; `trials.json` 27 trials / 40 windows.
 - Shipped commit 96d56a8; PDF, manifest and index 200 on Pages at +95 s.
 - Next: 4 Nov daily (≥22:00 CST 4 Nov); **W45 weekly (1-7 Nov) on Sat 7 Nov**.
+
+## Note 2026-11-04 (05:05-05:2x UTC) — overlapping firing, no build
+
+- A second session fired at 23:05 CST while the 04:2x UTC run was still authoring 3 Nov. It found the day already in progress and stood down: no issue, state or manifest writes. Its only shared-file writes were at 05:07 UTC: the "second connector pass" in the entry above (`_fresh.json` +9, `pubmed_connector_raw.json` overwritten); that run picked them up and admitted 3 (paternal CAP, pedestrian PM2.5, brake wear). **No lock prevents overlapping firings**: check `authoring/<day>/` mtimes before starting a day (`build/lock_rollup` covers rollups only).
+- Consensus 30-hit calibration sweep: exact-title matching against the corpus overcounts new records, so check by DOI. Held for a backfill slot: 10.1007/s44291-026-00286-9 (Goyal, moisture artefact digital twin, Crossref 26 Sep). Crossref 429 left 5 titles unchecked.
