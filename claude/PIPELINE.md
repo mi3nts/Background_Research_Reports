@@ -3191,3 +3191,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 1-2 Nov: CT.gov 0; Amass adds NCT07311967 (UIC cooking UFP chamber) → `trials.json` 21 NCT / 38 windows. Consensus 10 hits, 0 new.
 - Next: 2 Nov daily (≥22:00 CST 2 Nov); W45 weekly (1-7 Nov) on Sat 7 Nov.
 - Shipped commit 51124d7; PDF and manifest 200 on Pages (first try 404 at +75 s, 200 at +2 min).
+
+## Run 2026-11-04 (00:19-00:3x UTC = 18:19 CST 3 Nov) — daily 2 Nov
+
+- Slot of 05:04 UTC 3 Nov fired 19 h late; before 22:00 → newest buildable 2 Nov, **3 Nov left to the next run ≥22:00 CST**. Monday, no rollup. Harvest: PubMed 9/2, EPMC 9 (0 AGR), Crossref 54, arXiv 150 kB none in window, OpenAlex 0 → 69 unique → 68 fresh; connector EDAT 2 Nov (3 axes, `_conn_1104.py`) 16 PMIDs, 4 appended → 72 screened. efetch filled 10 abstracts; `_xrfill` 0 (Elsevier day-0). Two connector PMIDs bucket to entrez 1 Nov by esummary but came via EPMC anyway.
+- **19 admitted** (16 window + 3 backfill: Sharon vape nodes EDAT 4 May, Kim EJ hernia EDAT 4 May held from 1 Nov, Dyer UBD EUPHA Crossref 26 Oct), 57 rejected (`_rej_1104.py`, incl. 1 Amass). 11 pp, 4 effects (2 PR, 2 OR), 2 tier A, 3 metadata-only. DOI gate 0/0; 0 overfull; contact sheets + forest proofed. x2 omitted (<6 ratio). 2 low-cost-sensor records.
+- **Defect fixed (affects shipped figures):** `plots.py` `_RATIO_METRICS` lacked PR, aOR, sHR, RRR, GMR, TR, Ratio, so those were drawn on the linear difference panel with null 0 (found on PMOS PR 1.22 in this proof). Corpus holds 7 PR, 12 aOR, 3 sHR, 3 RRR, 2 GMR, 2 TR, 5 Ratio, so earlier issues and rollups that contained them have mis-scaled forest panels; not retro-fixed. `plots_extra.py` RATIO extended likewise, which will change the x2 n and Egger on future rollups vs the October baseline. Added 11 design keys.
+- Still held for a backfill slot: 10.1016/j.apr.2025.102827, 10.1183/13993003.congress-2026.oa5536, 10.1080/09603123.2026.2669382 (Long Mycoplasma, no CI in abstract). Abstract arithmetic in Dyer: states 76,833 gap, printed figures give 75,504; flagged in the entry.
+- Connectors: OpenAlex, alphaXiv, bioRxiv/medRxiv, Wiley Scholar Gateway not on this session; Scite still paid-plan refusal (no retraction check, Amass `isRetracted` used for PMID-bearing backfills only). Consensus 10 hits, 0 new. Trial watch 2-4 Nov: CT.gov 1 NCT07914010 REACT (UC Berkeley; PurpleAir indicator light randomised, 100 households); Amass adds ACTRN12626001238369 (Melbourne HEPA COPD RCT, n=200), ChiCTR2600134305 → `trials.json` 24 / 39 windows.
+- Shipped commit 7bf1573; PDF and manifest 200 on Pages at +2 min. rm on mount still blocked; locks moved to `.git/stale-*`.
+- Next: 3 Nov daily (≥22:00 CST 3 Nov); W45 weekly (1-7 Nov) on Sat 7 Nov.
