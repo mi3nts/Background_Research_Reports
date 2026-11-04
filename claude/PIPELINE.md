@@ -3201,3 +3201,15 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Connectors: OpenAlex, alphaXiv, bioRxiv/medRxiv, Wiley Scholar Gateway not on this session; Scite still paid-plan refusal (no retraction check, Amass `isRetracted` used for PMID-bearing backfills only). Consensus 10 hits, 0 new. Trial watch 2-4 Nov: CT.gov 1 NCT07914010 REACT (UC Berkeley; PurpleAir indicator light randomised, 100 households); Amass adds ACTRN12626001238369 (Melbourne HEPA COPD RCT, n=200), ChiCTR2600134305 → `trials.json` 24 / 39 windows.
 - Shipped commit 7bf1573; PDF and manifest 200 on Pages at +2 min. rm on mount still blocked; locks moved to `.git/stale-*`.
 - Next: 3 Nov daily (≥22:00 CST 3 Nov); W45 weekly (1-7 Nov) on Sat 7 Nov.
+
+## Run 2026-11-04 (04:2x-05:2x UTC = 3 Nov 22:2x-23:2x CST) — daily 3 Nov
+
+- 22:00 rule satisfied (23:01 CST) → 3 Nov owed and built in full; Tuesday, no rollup. Harvest: PubMed 18/1, EPMC 25 (7 AGR dropped), Crossref 67, arXiv none in window, OpenAlex HTTP leg 429 → 102 unique → 93 fresh; connector EDAT 3 Nov (`_conn_1104b.py`) 19 PMIDs/1 appended, a second connector pass added 9 → **103 screened**. efetch filled 13 abstracts, `_xrfill` 1.
+- **OpenAlex connector (`search_works` + `raw_filter` publication-date) WORKS** — first yield since the HTTP API started refusing on 10 Aug. Returned 2 in-window Research Square preprints, both admitted (Delhi CUPI-G assimilation; California PM2.5 metals). Promote to a Tier-1 check next run and confirm; the harvester's own OpenAlex leg still 429s.
+- **28 admitted** (25 window + 3 Amass backfill: Jean-Luc Kinshasa PurpleAir asthma EDAT 12 Mar, Jin personal inhaled dose EDAT 23 Feb, Ammons NIH-AARP EDAT 15 Jun), **81 rejected** (`_rej_1104b.py`). 13 pp, 3 effects (all NIH-AARP HR, per 5 µg/m³), 4 tier A, 6 metadata-only, **4 low-cost-sensor records — the highest in one day to date**. DOI gate 0/0; 0 overfull; contact sheet + forest proofed. x2 omitted (3 ratio < 6).
+- **This run recovered an interrupted build**: an earlier attempt the same night stopped mid-authoring after writing `authoring/2026-11-03/p04-p05.py`; those were **overwritten** (rm still blocked on the mount) and the DOI uniqueness assert in `_mk_chunked.py` is what would have caught any leftover duplicate.
+- `plots.py`: 15 design keys added. **Placement matters** — the f2 unmapped-label check runs mid-file at the `_design_unmapped` definition, so a new `design_group.update({...})` appended at EOF is silently too late and f2-f6 never render. Insert before `_design_unmapped = set()`.
+- Connectors: Scite still refuses (paid plan) → no retraction check; bioRxiv/medRxiv connector now present (30 medRxiv records for 3 Nov, 0 PM-related); alphaXiv present (5 hits, 0 PM); Wiley Scholar Gateway listed but not called. Consensus 10 hits, 0 new.
+- Trial watch 3-4 Nov: CT.gov 1 (NCT07914010, already carried), Amass 15/1 already carried → **0 new**; `trials.json` 27 trials / 40 windows.
+- Shipped commit 96d56a8; PDF, manifest and index 200 on Pages at +95 s.
+- Next: 4 Nov daily (≥22:00 CST 4 Nov); **W45 weekly (1-7 Nov) on Sat 7 Nov**.
