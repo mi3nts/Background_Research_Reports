@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 21,
+ "trials": 24,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -324,6 +324,15 @@
    "hits": 0,
    "kept": 1,
    "note": "CT.gov 0; Amass 10 returned, 1 relevant new: NCT07311967 (UIC cooking UFP chamber, n=15)"
+  },
+  {
+   "window": "2026-11-02 -> 2026-11-04",
+   "queried": "2026-11-04",
+   "source": "ClinicalTrials.gov MCP connector, search_trials + analyze_endpoints; Amass TrialCore minCreateDate",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR wildfire smoke' x AREA[LastUpdatePostDate]RANGE[2026-11-02,2026-11-04]; Amass query with minCreateDate 2026-11-01",
+   "hits": 1,
+   "kept": 3,
+   "note": "CT.gov 1: NCT07914010 REACT. Amass 20 returned, 2 relevant new: ACTRN12626001238369 (Melbourne HEPA COPD RCT, n=200), ChiCTR2600134305 (reproductive, n=500)"
   }
  ],
  "NCT05867381": {
@@ -470,7 +479,7 @@
   "start_date": "2026-11-15",
   "last_update": "updated in 4-12 Oct window (start moved 2026-09-15 -> 2026-11-15)",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
+   "Pre-bronchodilator FEV₁ Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },
@@ -783,6 +792,65 @@
    "Cognitive Function Decline",
    "Respiratory Inflammation"
   ],
+  "source": "Amass TrialCore"
+ },
+ "NCT07914010": {
+  "first_seen": "2026-11-04",
+  "title": "Reducing Exposure With Air Cleaners and Technology (REACT) in At-Risk Communities",
+  "status": "NOT_YET_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "University of California, Berkeley",
+  "enrollment": 100,
+  "interventions": [
+   "Air Cleaner",
+   "PM2.5 Monitor with Visual Air Quality Indicator",
+   "Educational Materials",
+   "Air Cleaner Technical Assistance"
+  ],
+  "conditions": [
+   "Asthma",
+   "COPD (Chronic Obstructive Pulmonary Disease)"
+  ],
+  "start_date": "2026-11",
+  "primary_outcomes": [
+   "Absolute change in daily average indoor PM2.5 (PurpleAir)",
+   "Percent change in daily average indoor PM2.5, indicator light on vs off",
+   "BCSS or Asthma Control Test score"
+  ],
+  "note": "PurpleAir Zen indicator light randomised on/off; indoor sensor paired to nearest public outdoor sensor for Finf",
+  "source": "ClinicalTrials.gov search_trials, analyze_endpoints"
+ },
+ "ACTRN12626001238369": {
+  "first_seen": "2026-11-04",
+  "title": "Double Blind placebo-controlled RCT of High Efficiency Particulate Air (HEPA) filters to assess efficacy for reducing exacerbations in adults with moderate to severe chronic obstructive pulmonary disease (COPD)",
+  "status": "NOT_YET_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "University of Melbourne",
+  "enrollment": 200,
+  "interventions": [
+   "Two HEPA air purifiers at home for 12 months"
+  ],
+  "conditions": [
+   "Chronic obstructive pulmonary disease"
+  ],
+  "start_date": "2026-11-01",
+  "source": "Amass TrialCore"
+ },
+ "ChiCTR2600134305": {
+  "first_seen": "2026-11-04",
+  "title": "Pollutant Exposure and Reproductive Outcomes",
+  "status": "NOT_YET_RECRUITING",
+  "study_type": "OBSERVATIONAL",
+  "phase": "NA",
+  "sponsor": "The First Affiliated Hospital of Zhengzhou University",
+  "enrollment": 500,
+  "interventions": [],
+  "conditions": [
+   "female infertility"
+  ],
+  "start_date": "2027-01-01",
   "source": "Amass TrialCore"
  }
 }

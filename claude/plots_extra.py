@@ -162,7 +162,7 @@ if PAPERS:
           "(%d of %d)." % (tA, len(PAPERS), pct(tA, len(PAPERS)), top, T[top]["A"], sum(T[top].values())))
 
 # ------------------------------------------------------------------ x2 effect funnel
-RATIO = {"HR", "RR", "OR", "IRR", "RR-equiv", "aHR", "aOR", "aRR", "SHR", "MRR", "RRR"}
+RATIO = {"HR", "RR", "OR", "IRR", "RR-equiv", "aHR", "aOR", "aRR", "SHR", "sHR", "MRR", "RRR", "PR", "GMR", "TR", "Ratio", "ratio"}  # PR etc. added 2026-11-04
 def incr(e):
     if e.get("inc") in ICOL: return e["inc"]              # author-declared (optional field)
     s = (e.get("exposure") or "").lower()

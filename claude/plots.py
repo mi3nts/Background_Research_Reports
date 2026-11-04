@@ -240,6 +240,18 @@ design_group = {
     "Exposome-wide association": "Observational - cross-sectional",
     "Case-control": "Observational - cross-sectional",
     "Autopsy tissue analysis": "Chamber / laboratory",
+    # 2026-11-04 run, with the records that use them
+    "Comparative risk assessment": "Modelling / inventory",
+    "Cross-sectional study": "Observational - cross-sectional",
+    "In vitro cell exposure": "Experimental / toxicology",
+    "Instrument development and laboratory validation": "Chamber / laboratory",
+    "Longitudinal case study of a sensor deployment": "Measurement campaign",
+    "Metadata only: invited discussion of a data-fusion paper": "Metadata only",
+    "Metadata only: no abstract in Crossref at issue time": "Metadata only",
+    "Multi-site monitoring campaign": "Measurement campaign",
+    "Pilot field measurement": "Measurement campaign",
+    "Prediction model development (prospective cohort)": "Observational - cohort",
+    "Statistical analysis of monitoring data": "Measurement campaign",
     # added 2026-08-24, in the same edit as the records that use them (13th recurrence
     # of the unmapped-design class, and the first run where the guard was in place
     # *before* the labels were written rather than after).
@@ -1227,7 +1239,8 @@ def _hasci(e):
 # scale gets its own panel with its own axis, null and tick rule. A ratio metric
 # whose lower bound is <= 0 is treated as difference-scale defensively, because a
 # log axis cannot draw it whatever the metric name claims.
-_RATIO_METRICS = {"HR", "OR", "RR", "RR-equiv", "IRR"}
+# 2026-11-04: PR, aOR, sHR, RRR, GMR, TR and bare "Ratio" were falling to the linear difference panel with null 0.
+_RATIO_METRICS = {"HR", "OR", "RR", "RR-equiv", "IRR", "PR", "aOR", "aHR", "aRR", "sHR", "SHR", "MRR", "RRR", "GMR", "TR", "Ratio", "ratio"}
 def _scale_of(e):
     if e["metric"] not in _RATIO_METRICS:
         return "diff"
