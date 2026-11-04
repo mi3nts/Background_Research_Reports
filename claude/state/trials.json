@@ -333,6 +333,15 @@
    "hits": 1,
    "kept": 3,
    "note": "CT.gov 1: NCT07914010 REACT. Amass 20 returned, 2 relevant new: ACTRN12626001238369 (Melbourne HEPA COPD RCT, n=200), ChiCTR2600134305 (reproductive, n=500)"
+  },
+  {
+   "window": "2026-11-03 -> 2026-11-04",
+   "queried": "2026-11-04",
+   "source": "ClinicalTrials.gov MCP connector, search_trials; Amass TrialCore minCreateDate",
+   "filter": "condition='air pollution OR particulate matter OR PM2.5 OR wildfire smoke OR ultrafine particles' x AREA[LastUpdatePostDate]RANGE[2026-11-03,2026-11-04]; Amass query with minCreateDate 2026-11-02",
+   "hits": 1,
+   "kept": 0,
+   "note": "CT.gov 1: NCT07914010 REACT, already carried from the 2 Nov window. Amass 15 returned, 1 relevant (ACTRN12626001238369) already carried. 0 new."
   }
  ],
  "NCT05867381": {

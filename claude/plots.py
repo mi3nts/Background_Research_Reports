@@ -107,6 +107,7 @@ despine(ax, keep=("bottom",))
 ax.tick_params(axis="y", length=0)
 save(fig, "f1_subtopics.png")
 
+
 # ---------------------------------------------------------------- 2. design donut + tier bar
 design_group = {
     # 2026-09-18 (evening recovery run): eight labels coined with the records that
@@ -700,6 +701,27 @@ design_group.update({
     "Cross-sectional (birth cohort)": "Observational - cross-sectional",
     "Intervention field trial (non-randomised)": "Trial / intervention",
     "Reanalysis / inventory analysis": "Modelling / inventory",
+})
+
+# 2026-11-04 run (3 Nov issue): fifteen labels coined this issue, added in the same edit
+# that writes them onto records, per the standing rule. "Letter to the editor" joins
+# Review / synthesis: it is commentary on published work and asserts no primary design.
+design_group.update({
+    "Data assimilation experiment": "Modelling / inventory",
+    "Chemical-transport modelling with Bayesian inversion": "Modelling / inventory",
+    "Pilot field measurement with health-impact modelling": "Measurement campaign",
+    "Personal monitoring campaign": "Measurement campaign",
+    "Paired indoor sampling campaign": "Measurement campaign",
+    "Multi-year lidar measurement campaign": "Measurement campaign",
+    "Fine-grid monitoring campaign with CFD": "Measurement campaign",
+    "Source-isolated emission test": "Chamber / laboratory",
+    "Animal knockout experiment": "Experimental / toxicology",
+    "Animal multigenerational inhalation experiment": "Experimental / toxicology",
+    "Airborne retrieval algorithm development": "Modelling / inventory",
+    "Machine-learning model development": "Modelling / inventory",
+    "Model development and operational evaluation": "Modelling / inventory",
+    "Methodological simulation with applied case study": "Modelling / inventory",
+    "Letter to the editor": "Review / synthesis",
 })
 
 _design_unmapped = set()
@@ -1433,3 +1455,4 @@ print("subtopics:", dict(counts))
 print("designs:", dict(dg))
 print("geo:", dict(geo))
 print("pm:", dict(pmc))
+
