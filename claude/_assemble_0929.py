@@ -27,7 +27,9 @@ body = sec("Signal of the day") + "\\begin{keybox}\n" + M.SIGNAL + "\\par\n\\end
 body += sec("What changed today") + "\\footnotesize\n\\begin{itemize}\n\n" + "\n\n".join("\\item " + c for c in M.CHANGED) + "\n\n\\end{itemize}\n\n\\vspace{2mm}\n\n"
 body += ("\\begin{keybox}\n{\\sffamily\\bfseries\\footnotesize\\color{Deep}Window continuity}\\\\[1.2mm]\n"
          "{\\fontsize{7.2}{8.8}\\selectfont\n" + M.CONT + "\\par}\n\\end{keybox}\n\n\\vspace{3mm}\n")
-body += "\\par\\vskip 0pt plus 18\\baselineskip\\penalty-200\\vskip 0pt plus -18\\baselineskip\n" + sec("Corpus analytics")
+# 2026-11-06: the old \\vskip/\\penalty-200 needspace broke the page unconditionally under \\raggedbottom when the
+# continuity box spilled to p2 (p2 nearly blank, 4 Nov proof). Measure the remaining space instead.
+body += "\\par\\ifdim\\dimexpr\\pagegoal-\\pagetotal\\relax<18\\baselineskip\\newpage\\fi\n" + sec("Corpus analytics")
 for f in ("f1_subtopics", "f2_design_endpoint", "f3_metric_geography", "f6_lifecourse", "f4_heatmap"):
     # 2026-10-17: figure+caption in one minipage - 16 Oct proof split the f4 caption onto the next page
     body += "\\noindent\\begin{minipage}{\\linewidth}\\includegraphics[width=\\linewidth]{\\FIGDIR/%s.png}\n\\figcap{%s}\\end{minipage}\n\n\\vspace{2mm}\n" % (f, M.CAPS[f])

@@ -78,6 +78,7 @@ BCOL = {"Low-cost sensor / network": AMBER, "Personal / wearable": CLAY, "Lab / 
 
 def basis(p):
     if p.get("basis") in BCOL: return p["basis"]          # author-declared (optional field)
+    if p.get("basis") == "Not stated": return "Not stated / metadata only"  # 2026-11-06: an explicit declaration beats the regex
     if p["design"].lower().startswith("metadata only"): return "Not stated / metadata only"
     s = (p.get("pm") or "").lower()
     for lab, rx in RULES:
@@ -159,7 +160,7 @@ if PAPERS:
     tA = sum(T[s]["A"] for s in subs); top = subs[-1]
     block("x4_evidence_grade.png",
           "Tier mix per subtopic. %d of %d records are tier A (%s). Highest tier-A share: \\textit{%s} "
-          "(%d of %d)." % (tA, len(PAPERS), pct(tA, len(PAPERS)), top, T[top]["A"], sum(T[top].values())))
+          "(%d of %d)." % (tA, len(PAPERS), pct(tA, len(PAPERS)), top.replace("&", "\\&"), T[top]["A"], sum(T[top].values())))
 
 # ------------------------------------------------------------------ x2 effect funnel
 RATIO = {"HR", "RR", "OR", "IRR", "RR-equiv", "aHR", "aOR", "aRR", "SHR", "sHR", "MRR", "RRR", "PR", "GMR", "TR", "Ratio", "ratio"}  # PR etc. added 2026-11-04
@@ -171,7 +172,7 @@ def incr(e):
     if re.search(r"per ?(1|one) ?(µ|u|ug|μ)|per unit|per 1 ", s): return "per 1 µg/m³ / unit"
     if re.search(r"->| to \d| vs |versus|highest|quartile|quintile|tertile|high |exposed|any |categor", s): return "categorical contrast"
     return "increment not recorded"
-ICOL = {"per 10 µg/m³": TEAL, "per IQR": AMBER, "per 1 µg/m³ / unit": CORAL,
+ICOL = {"per 10 µg/m³": TEAL, "per IQR / SD": AMBER, "per 1 µg/m³ / unit": CORAL,
         "categorical contrast": VIOLET, "increment not recorded": MUSK}
 R = [e for e in EFFECTS if e.get("metric") in RATIO and e.get("lo") and e.get("hi") and e["lo"] > 0 and e["hi"] > e["lo"] and e["est"] > 0]
 if (ROLL and len(R) >= 4) or len(R) >= 6:
@@ -190,7 +191,10 @@ if (ROLL and len(R) >= 4) or len(R) >= 6:
     ax.legend(fontsize=7.4 * K, loc="lower left" if c0 > 0 else "lower right")
     ax.set_title("Ratio-scale estimates: precision vs magnitude", pad=8)
     eg = ""
-    if len(R) >= 10:
+    nsrc = len({(e.get("src") or "?") for e in R})   # 2026-11-06: estimates from one cohort are not independent studies
+    if len(R) >= 10 and nsrc < 10:
+        eg = " Egger regression not computed: the %d estimates come from %d sources and are not independent." % (len(R), nsrc)
+    elif len(R) >= 10:
         z = x / se; pr = 1 / se; A = np.vstack([np.ones_like(pr), pr]).T
         coef, res, *_ = np.linalg.lstsq(A, z, rcond=None); n = len(z)
         resid = z - A @ coef; s2 = resid @ resid / (n - 2); cov = s2 * np.linalg.inv(A.T @ A)
