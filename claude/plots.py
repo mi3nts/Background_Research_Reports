@@ -1418,6 +1418,10 @@ if not LIFECOURSE:
     raise SystemExit(
         "f6: LIFECOURSE missing for this issue. Write it via corpus.save(..., "
         "lifecourse=[...]) -- refusing to render placeholder life-course counts.")
+# 2026-11-06: zip() below silently truncated a 4-entry list (4 Nov issue), shifting every
+# note one stage left. LIFECOURSE is positional over the five stages; enforce it.
+if len(LIFECOURSE) != len(stages):
+    raise SystemExit("f6: LIFECOURSE has %d entries, need %d (one per stage, n=0 allowed)" % (len(LIFECOURSE), len(stages)))
 stage_hits = [d["n"] for d in LIFECOURSE]
 # Re-wrap every note line to the column width. A daily issue writes notes already broken
 # to fit, but a rollup POOLS the notes of every issue in the range, and those pooled lines

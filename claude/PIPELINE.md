@@ -3230,3 +3230,12 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 4-6 Nov: CT.gov 1 (NCT07914010, carried), Amass 15, relevant ones carried → **0 new**; `trials.json` 41 windows.
 - Shipped commit b749cf9; PDF, manifest and index 200 on Pages at +90 s. rm on mount still blocked; locks moved to `.git/stale-*`. A device disconnect mid-build killed one `run_all.py`; rerun clean.
 - Next: 5 Nov daily (≥22:00 CST 5 Nov); **W45 weekly (1-7 Nov) on Sat 7 Nov**.
+
+## Run 2026-11-06 (17:34-17:5x UTC = 11:34 CST 6 Nov) — daily 5 Nov
+
+- 05:04 UTC slot fired 12.5 h late; before 22:00 → newest buildable 5 Nov, built in full. Thursday, no rollup. Harvest: PubMed 12/2, **EPMC 0** (indexing lag, recheck), Crossref 59, arXiv none in window, OpenAlex HTTP 429 → 72 unique/72 fresh; connector EDAT 5 Nov (`_conn_1106b.py`) 28 PMIDs, 22 bucketed to 5 Nov, 13 appended → **85 screened**; the 6 bucketed to 4 Nov: 3 seen, 3 off topic. efetch filled 25/26.
+- **25 admitted** (22 window + 3 backfill: Ayittey Accra FRM and Hao Shanghai influenza held from 4 Nov, Gupta coal-mine OP via Amass), 63 rejected (`_rej_1106b.py`). 13 pp, 6 effects (3 aOR per SD, 2 RR + 1 OR per 10), 2 tier A (Agrawal Nat Commun LCS Bihar; Yang JAMA Oto sinonasal), 5 metadata-only. DOI gate 0/0; 0 overfull; contact sheets + x1/x4/funnel proofed.
+- **Defect fixed (shipped):** f6 life course is positional over 5 stages but `zip()` silently truncated a 4-entry `L`; the **4 Nov issue shipped with every life-course note shifted one stage left** (childhood under preconception). `plots.py` now hard-fails unless len(L)==5; 4 Nov `meta.py` and `state/corpus/2026-11-04.json` corrected so W45 pools right. The 4 Nov PDF was not rebuilt.
+- Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent again; Scite not attempted (paid-plan refusal every prior run). Affiliations from PubMed XML. Consensus 10 hits, 0 new (Gökozan Chemosensors unmatched, held for DOI check). Still held: Hao-group 10.1007/s00484-026-03128-1, -03150-3, 10.1007/s10661-026-15231-2, 10.1007/s10653-026-03038-6, 10.1016/j.apr.2025.102827, 10.1183/13993003.congress-2026.oa5536, 10.1080/09603123.2026.2669382.
+- Trial watch 4-6 Nov: 0 new; `trials.json` 42 windows.
+- Next: 6 Nov daily (≥22:00 CST 6 Nov) and **W45 weekly + 7 Nov daily on Sat 7 Nov**.

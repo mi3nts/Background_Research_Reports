@@ -17,9 +17,4 @@ E = [
  dict(label="CWP, Central\nAppalachia", exposure="Region vs rest of US, tenure-adjusted, categorical contrast", est=3.9, lo=3.4, hi=4.5, metric="PR", src="Myers n=30,319", inc="categorical contrast"),
  dict(label="PMF, Central\nAppalachia", exposure="Region vs rest of US, tenure-adjusted, categorical contrast", est=10.0, lo=5.7, hi=17.5, metric="PR", src="Myers n=30,319", inc="categorical contrast"),
 ]
-L = [
- dict(n=1, note="childhood:\nrhinitis meta-analysis;\ntrajectory review"),
- dict(n=1, note="adolescence:\nABCD linked\nexposures"),
- dict(n=4, note="working age:\ncoal miners; furniture plant;\nsawmill; studio"),
- dict(n=2, note="adult to older:\nUK Biobank;\nCFPS China"),
-]
+L = [{'n': 0, 'note': ''}, {'n': 1, 'note': 'childhood:\nrhinitis meta-analysis;\ntrajectory review'}, {'n': 1, 'note': 'adolescence:\nABCD linked\nexposures'}, {'n': 4, 'note': 'working age:\ncoal miners; furniture plant;\nsawmill; studio'}, {'n': 2, 'note': 'adult to older:\nUK Biobank;\nCFPS China'}]
