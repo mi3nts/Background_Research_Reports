@@ -3249,4 +3249,5 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - W45 weekly (`_wk_1110.py`, 42 pp): 151 records, measurement side 40 %, 11 low-cost-sensor records, 53 estimates all with CI, 6/48 ratio estimates lack increment (12 % vs Oct 51 %), Egger 4.38 (SE 0.66). Forest now splits into 3 panels (f5_forest_3) — template gained FOREST3.
 - Trial watch 6-10 Nov: CT.gov 2 new (NCT07925229 PINE woodsmoke x ibuprofen; NCT07924839 MSU sham filtration), Amass 0 → `trials.json` 26 trials / 43 windows.
 - Held for check: 9 Nov metadata-only 10.1016/j.envpol.2026.129523 may overlap the IIT Kanpur dose paper shipped 5 Nov.
+- Shipped commit 4fef982; 4 dailies, W45 and manifest 200 on Pages at +45 s. Project run log updated.
 - Next: 10 Nov daily (≥22:00 CST 10 Nov); W46 (8-14 Nov) on Sat 14 Nov.
