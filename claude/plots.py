@@ -724,6 +724,33 @@ design_group.update({
     "Letter to the editor": "Review / synthesis",
 })
 
+# 2026-11-10 run: labels new in the 6-9 Nov backfill (inserted before the unmapped check).
+design_group.update({
+    "Randomised double-blind crossover controlled exposure": "Trial / intervention",
+    "Panel study (repeated measures)": "Observational - acute",
+    "In vivo mouse + 3D follicle culture": "Experimental / toxicology",
+    "Ex vivo primary cells + CRISPR + humanised mouse": "Experimental / toxicology",
+    "Time-series (quasi-Poisson GAM)": "Observational - acute",
+    "Time-series (DLNM, quasi-Poisson)": "Observational - acute",
+    "Prospective cohort + proteomic mediation": "Observational - cohort",
+    "Cross-sectional (clinical cohort)": "Observational - cross-sectional",
+    "Multi-cohort meta-analysis": "Review / synthesis",
+    "Cross-sectional experimental (fear conditioning + fMRI)": "Observational - cross-sectional",
+    "In vivo rat exposure": "Experimental / toxicology",
+    "Quasi-experimental difference-in-differences": "Trial / intervention",
+    "Personal and indoor exposure campaign": "Measurement campaign",
+    "Cross-sectional population-weighted exposure": "Modelling / inventory",
+    "Methodological simulation on mobility data": "Modelling / inventory",
+    "Laboratory sampler-media development": "Chamber / laboratory",
+    "Bioaerosol sampling campaign (preprint)": "Measurement campaign",
+    "Protocol (cross-sectional)": "Review / synthesis",
+    "Measurement campaign (GAW station)": "Measurement campaign",
+    "Measurement campaign + back-trajectory": "Measurement campaign",
+    "Engineering control device test": "Chamber / laboratory",
+    "Paired intervention pilot": "Trial / intervention",
+    "Mixed methods (registry survey + interviews)": "Observational - cross-sectional",
+})
+
 _design_unmapped = set()
 def dgrp(d):
     if d not in design_group:
@@ -1028,6 +1055,8 @@ geo_group = {
 # Same closure for geography. On 2026-08-05 only four of the thirteen group names were
 # self-mapped; "Sub-Saharan Africa", "Global / multi-region", "Oceania" and six others
 # would have collapsed to the unmapped bucket. Generated, not hand-listed.
+geo_group.update({"Malawi": "Sub-Saharan Africa", "Somalia": "Sub-Saharan Africa", "Mongolia": "East Asia (ex-China)",
+                  "Asia": "Global / multi-region", "Not stated": "Global / multi-region"})  # 2026-11-10
 geo_group.update({v: v for v in set(geo_group.values())})
 # Aliases and sub-national place names. `geo` is written as free text on the record
 # ("Chiang Mai, Thailand", "Bogota, Colombia", "Ile-Ife, Nigeria"), so an exact-key

@@ -1,0 +1,267 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{9 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-09\;\;\textcolor{Amber}{\textbar}\;\;Entry window 9 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;17 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{17}{RECORDS IN SCOPE\\(46 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A PROSPERO-registered meta-analysis of 32 wildfire studies (25 pooled, $>$394 million deaths) puts all-cause mortality at RR 1.066 (1.014--1.121) per 10\,$\mu$g/m$^3$ of wildfire-attributed PM$_{2.5}$ and cardiovascular mortality at 1.020 (1.010--1.030); respiratory (1.112, 0.953--1.298) and cancer mortality stayed imprecise.}\\[1.4mm]
+\footnotesize
+Australian National University (Tong group), \textit{Environmental Research}; random effects, Navigation Guide grading, subgroups by WHO region, lag, income, age and sex. Europe gave the largest regional all-cause estimate (1.045, 1.024--1.066).
+\textbf{Where it is weak:} the pooled all-cause RR sits above the largest regional all-cause estimate quoted (Europe), which implies heterogeneity it does not report, and ``wildfire-related PM$_{2.5}$'' is produced by different attribution methods (chemical transport, satellite, statistical separation) across the pooled studies.
+\textbf{Why it matters here:} smoke-specific PM$_{2.5}$ is almost always a modelled quantity. Ground networks that resolve smoke episodes at neighbourhood scale are the direct way to shrink the exposure term that dominates this uncertainty.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{ML calibration is not a free win indoors.} Full-scale residential testbed, three particle sources, linear regression against three ML models: adding the sensors' number-concentration channels raised R$^2$ by 0.05--0.10 and cut normalised error by up to 25\,\%; LightGBM beat linear regression on error and bias only with more multi-source training data, and linear regression kept the higher R$^2$ throughout. The abstract names neither sensor nor reference.
+
+\item \textbf{Coarse PM carries its own cardiovascular signal.} Bangkok, 1,461 days and 23 hospitals: PM$_{\mathrm{coarse}}$ (PM$_{10}-$PM$_{2.5}$) IRR 1.175 (1.076--1.283) for cardiovascular morbidity at MA0--1 after nonlinear PM$_{2.5}$ and gas adjustment (increment not stated); the composite AQHI added nothing over a PM$_{2.5}$ AQI out of period. Children's atopic dermatitis meta-analysis (52 studies) points the same way: PM$_{10}$ OR 1.19 (1.06--1.35) against PM$_{2.5}$ 1.04 (1.00--1.08) per 10\,$\mu$g/m$^3$.
+
+\item \textbf{A tight null.} Kawasaki disease, 13 studies: PM$_{2.5}$ RR 1.00 (0.985--1.016, I$^2$ 43.8\,\%), PM$_{10}$ 1.00 (0.983--1.022) per 10\,$\mu$g/m$^3$.
+
+\item \textbf{Burden at the WHO targets.} 136 LMICs at $\sim$1\,km: meeting 5\,$\mu$g/m$^3$ PM$_{2.5}$ cuts annual mortality 22.97\,\% (9.43 million, UI 6.8--11.7 million), Int\$8.4 trillion; intervals carry concentration--response uncertainty only, not exposure-surface error.
+
+\item \textbf{Exposure basis (x1).} One record rests on low-cost sensors (the indoor calibration testbed, sensing side) and none on a personal monitor. On the health side, of the five records with a recoverable primary basis three are modelled (LMIC health impact surfaces, county PM size fractions, GBD), one is a regulatory monitor (Bangkok) and one a mouse instillation; three more are meta-analyses. \emph{No effect estimate today comes from sensor-measured exposure}.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 5 November issue closed with \texttt{last\_entry\_date} at 5 November. This issue was built on the \textbf{10 November 22:16 UTC (16:16 CST) run}, the 05:00 UTC slot firing 17 hours late. Before 22:00 CST the newest buildable day is yesterday, so this run backfills \textbf{6, 7, 8 and 9 November as four issues} plus the \textbf{W45 weekly (1--7 November)}; \textbf{9 November is covered in full}. Monday: no rollup is owed; \textbf{W46 (8--14 November) falls on Saturday 14 November}. Cross-day dedupe assigned one record to an earlier issue. No \textsc{backfill} records today. \textbf{Europe PMC returned zero records for the day} (indexing lag; the leg returned 27--47 on 6--8 November). OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 17 records across seven of ten bands: exposure assessment 5, burden 4, cardiovascular 3, sensing 2, and one each for respiratory, neuro and mechanistic. Reproductive, occupational and other clinical are empty today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: four reviews or meta-analyses, four measurement records (including the calibration testbed), three metadata-only, two experimental (chamber ageing, mouse/cohort mechanism), two ecological (GBD, county panel), one health impact model and one time-series. Right --- endpoints are singletons apart from the three unrecoverable metadata-only records; four are measurement or emission outcomes rather than clinical ones.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric as classified from the record fields; size-resolved and coarse-fraction work (county PM$_1$/PM$_{1-2.5}$/PM$_{2.5-10}$, Bangkok PM$_{\mathrm{coarse}}$, the Kanpur-group dose paper) is unusually prominent for one day. Right --- geography by record: global or multi-region 6 (four reviews, the LMIC assessment and one metadata-only commentary), China 3, India 2, and one each South Korea, Spain, Thailand, USA, multi-country Asia and the laboratory chamber.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. Childhood is the atopic dermatitis and Kawasaki meta-analyses plus the all-age Bangkok series; adolescence the dermatitis review ($<$18\,y) and Bangkok; working age adds the wildfire mortality review, the LMIC assessment and the severe-asthma cohort; older adults add the GBD dementia analysis ($\geq$70\,y). No preconception or in-utero record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Exposure assessment spreads across measurement (2), metadata-only (2) and the chamber experiment; burden mixes a review, a health impact model, a county panel and a field measurement. The only acute design is cardiovascular (Bangkok); both sensing records are a measurement campaign and a review.}\end{minipage}
+
+\vspace{2mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, 9 estimates from 4 sources: Yadate wildfire mortality meta-analysis (4, per 10\,$\mu$g/m$^3$ wildfire PM$_{2.5}$), Park atopic dermatitis meta-analysis (2, per 10\,$\mu$g/m$^3$), Verma Kawasaki meta-analysis (2, per 10\,$\mu$g/m$^3$) and Kanchanasuta Bangkok PM$_{\mathrm{coarse}}$ (1, increment not stated). Eight of nine are pooled estimates from reviews, not primary studies; the four wildfire estimates share one evidence base. Endpoints differ across sources, so no cross-source pooling and no I$^2$.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Kim GBD 2023 Asia Alzheimer dementia mortality attributable air pollution tobacco FPG BMI decomposition 1990-2023}
+{Decoding the Drivers of Alzheimer's Disease and Other Dementias Mortality in Asia, 1990-2023: A Global Burden of Diseases Study 2023.}
+{Neuroepidemiology}
+{GBD 2023 comparative risk assessment in 34 Asian countries, adults aged 70 and over, with Das Gupta decomposition into population growth, ageing and epidemiological change. ADOD mortality was highest in high-income Asia Pacific (661 per 100,000, UI 190-1,505) and lowest in Central Asia (273). The abstract calls air pollution 'a major driver' but gives no attributable rate for it, while high fasting glucose rose everywhere (high-income Asia Pacific 76 to 139 per 100,000). The uncertainty intervals span roughly an order of magnitude, and the air-pollution-dementia link enters as a GBD relative-risk function, not an estimate from these data. Relevance: indirect - burden accounting only.}
+{10.1159/ned/adwag033}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Cardiovascular \& metabolic\hfill 3 records}{Teal}
+
+\paperentry{Verma Kawasaki disease ambient air pollution systematic review meta-analysis null PM$_{2.5}$ 2026}
+{Ambient Air Pollution and Kawasaki Disease: A Systematic Review and Meta-Analysis of Epidemiological Evidence.}
+{Public Health Chall}
+{13 observational studies, mostly Asian, random effects with HR and OR pooled as RR per 10 $\mu$g\,m$^{-3}$. PM$_{2.5}$ RR 1.00 (0.985-1.016, I2 43.8\%, Egger p=0.27); PM$_{10}$ 1.00 (0.983-1.022); SO$_2$ 1.008 (0.966-1.051); NO$_2$ 0.99 (0.989-1.009); O$_3$ and CO 1.013 (0.981-1.046). No pollutant was associated with Kawasaki disease. Mixing case-crossover, time-series and cohort designs with different lags into one pooled estimate can cancel real short-window associations, which the authors acknowledge; the search closed December 2024. A null result with tight CIs around 1.00 is still informative. Relevance: indirect - a well-bounded null that counts against Kawasaki disease as a PM-triggered endpoint.}
+{10.1002/puh2.70448}
+
+\paperentry{Kanchanasuta Bangkok AQHI temporal transportability PM$_{2.5}$ AQI coarse PM cardiovascular morbidity 2021-2024}
+{Temporal Transportability and Component Deconstruction of a Multipollutant Air Quality Health Index: Health Information Beyond the Composite Score.}
+{Environ Pollut}
+{Out-of-period test of the Bangkok AQHI, 2021-2024: 1,461 days, 26 postcodes, 23 hospitals, negative binomial models against a PM$_{2.5}$-based AQI. The composite AQHI did not consistently improve fit or out-of-time prediction over the AQI. PMcoarse (PM$_{10}$ minus PM$_{2.5}$) stayed associated with cardiovascular morbidity after nonlinear PM$_{2.5}$ and gas adjustment, MA0-1 IRR 1.175 (1.076-1.283); the increment is not given in the abstract. On discordant days, removing O$_3$ brought every AQHI below 7. Multiple comparisons are acknowledged and several signals are not multiplicity-robust. Relevance: direct - coarse PM carries independent cardiovascular signal, and a PM$_{2.5}$-only sensor network cannot report it.}
+{10.1016/j.envpol.2026.129530}
+
+\paperentry{Lee Al-Kindi visceral adiposity susceptibility air pollution cardiovascular commentary 2026}
+{Beyond exposure: Visceral adiposity and susceptibility to air pollution.}
+{Am J Prev Cardiol}
+{\textsc{metadata only.} Metadata only: PubMed record without an abstract in the American Journal of Preventive Cardiology; no finding is asserted. The title frames visceral adiposity as a susceptibility modifier of air-pollution cardiovascular effects, a thread consistent with the BMI- and diabetes-stratified results carried in the 6 November issue. The authors sit in environmental science (SUNY ESF) and preventive cardiology (Houston Methodist). Without text there is no claim to assess. Relevance: indirect - effect modification by body composition matters for interpreting personal-monitor exposure-response in cohorts with imaging-derived fat measures.}
+{10.1016/j.ajpc.2026.101820}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Park children atopic dermatitis ambient air pollution systematic review meta-analysis GRADE PM$_{2.5}$ PM$_{10}$ NO$_2$ 2026}
+{Air Pollution and Atopic Dermatitis in Children: A Systematic Review and Meta-Analysis.}
+{JAMA Pediatr}
+{52 observational studies of children (<18 y), random effects, ROBINS-E and GRADE. Per 10 $\mu$g\,m$^{-3}$, PM$_{2.5}$ OR 1.04 (1.00-1.08) and PM$_{10}$ OR 1.19 (1.06-1.35) for atopic dermatitis prevalence, both moderate certainty; outpatient visits rose with NO$_2$ (OR 3.46, 1.06-11.31) and SO$_2$ (3.96, 1.00-15.65). Incidence and severity findings were mixed or null. The gas ORs for visits are implausibly large per 10 $\mu$g\,m$^{-3}$ with very wide CIs, suggesting few, heterogeneous time-series studies; prevalence associations are mostly cross-sectional and cannot order exposure and onset. Relevance: indirect - the PM$_{10}$ > PM$_{2.5}$ gradient for a skin endpoint hints at the coarse fraction, which low-cost optical sensors measure least well.}
+{10.1001/jamapediatrics.2026.5020}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{Duan KDM4B PTX3 dendritic cell senescence severe asthma HDM PM$_{2.5}$ mouse model biologic non-response 2026}
+{KDM4B-PTX3-mediated dendritic cell senescence drives severe asthma and predicts biologic non-response.}
+{J Adv Res}
+{Discovery cohort of 226 patients plus scRNA-seq, ChIP/ATAC-seq and HDM and PM$_{2.5}$ mouse models. Plasma PTX3 was raised in severe asthma and tracked impaired lung function and exacerbations; CD1c+ cDC2 cells were its main source, and DC-specific Ptx3 knockout showed lung cDC2 supply about 61\% of circulating PTX3. KDM4B demethylates H3K9me3 at PTX3 and PTX3 induces KDM4B through NF-kB, a loop the authors call conserved across triggers; inhaled KDM4B inhibition was tested. PM$_{2.5}$ is one of two triggers and its dose and source are not given, so the PM-specific contribution cannot be separated from HDM. Relevance: indirect - mechanism for PM-triggered severe asthma, not an exposure result.}
+{10.1016/j.jare.2026.11.010}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 5 records}{Clay}
+
+\paperentry{Bengaluru CAAQM hybrid gap-filling random forest proxy station PM$_{2.5}$ PM$_{10}$ trends 2016-2025}
+{Hybrid gap-filling framework and spatiotemporal analysis of urban air pollution in Bengaluru, India.}
+{Environ Monit Assess}
+{Three Bengaluru CAAQM stations (Peenya, Majestic, Bellandur), 2016-2025. Short gaps are linearly interpolated, longer ones filled by random forest regression and proxy-station substitution, then trends, seasonality and exceedances computed on the reconstructed series. PM$_{2.5}$ declined at Peenya while PM$_{10}$ rose at Peenya and Bellandur, read as road dust and construction; exceedance days cluster in winter and pre-monsoon and are far more frequent against WHO than Indian NAAQS limits. The abstract reports no gap-filling validation metrics or the fraction of each series imputed, so trends could partly be imputation artefacts. Relevance: indirect - gap-filled regulatory series are the usual reference for sensor calibration in Indian cities, and imputed reference values must be flagged before use.}
+{10.1007/s10661-026-16146-8}
+
+\paperentry{Clemente western Mediterranean suburban rural PM$_{2.5}$ oxidative potential DTT AA PMF biomass burning traffic 2026}
+{What drives the oxidative potential of fine particles? Insights from suburban and rural sites of the western Mediterranean.}
+{Environ Geochem Health}
+{PM$_{2.5}$ filters at one suburban and one rural site in south-eastern Spain, OP by DTT and AA assays, PMF sources regressed on OP by GLS. Mass and volume-normalised OP were higher at the suburban site. In winter biomass burning was nearly 50\% of rural PM$_{2.5}$ mass and the dominant driver of both OP measures there; at the suburban site traffic and biomass burning drove OP. In summer aged sea salt and secondary sulfate contributed substantially, which the authors attribute to co-varying redox-active organics or acid-enhanced metal solubility rather than sulfate itself. Two sites, source-OP regression without uncertainty in the abstract, and no exposure or health link. Relevance: indirect - mass-only sensors miss the source-dependent toxicity this shows; OP varies by season at fixed mass.}
+{10.1007/s10653-026-03578-x}
+
+\paperentry{Ebtini PHOTO-LAC Siberian biomass burning flaming smouldering ageing PAH oxy-PAH resin diterpenoids TOCA-PIMS 2026}
+{Compositional changes of biomass burning aerosols during ageing in the Photochemical Large Aerosol Chamber (PHOTO-LAC).}
+{Environ Sci Process Impacts}
+{Siberian biomass emissions aged in a large chamber under alternating light and dark at dense-plume concentrations. Smouldering emitted more OC (27 vs 2.8 g/kg) and far more PAH (430 vs 21 mg/kg) and oxy-PAH (230 vs 17 mg/kg) but less EC (7.8 vs 21 g/kg) than flaming. Flaming plumes formed secondary OC on ageing, smouldering lost OC; PAHs and oxy-PAHs fell mainly in the first photochemical step and then held. Resin diterpenoids were large in smouldering emissions and abietic acid by TOCA-PIMS is proposed as a fresh-smoke marker. Single fuel region and chamber wall losses are not addressed in the abstract. Relevance: indirect - smoke toxicity per unit mass shifts with combustion phase and age, which mass sensors do not see.}
+{10.1039/d6em00402d}
+
+\paperentry{Mirkhanian coastal California wildfire marine boundary layer satellite AOD surface PM$_{2.5}$ coupling 2026}
+{Marine boundary layer influence on satellite AOD and surface PM$_{2.5}$ during coastal California wildfires}
+{Environ Sci Atmos}
+{\textsc{metadata only.} Metadata only: Crossref carries a one-sentence graphical-abstract line and no abstract; Semantic Scholar had nothing further at issue time. The deposited line states that satellite AOD-PM$_{2.5}$ coupling can vary with boundary-layer structure and transport regime during coastal wildfires; no data, method, sites or effect sizes are available, so no finding is asserted here. Both authors are at UC Irvine public health. Relevance: direct if borne out - when marine-layer capping decouples column AOD from surface PM$_{2.5}$, satellite-fused smoke surfaces fail exactly where coastal populations live, and ground sensors become the only constraint. Recheck at the W46 abstract sweep.}
+{10.1039/d6ea00098c}
+
+\paperentry{Singh Sathish Banerjee size-resolved fine aerosol composition optics alveolar dose two contrasting environments 2026}
+{Size resolves what bulk mass misses: composition, optics and alveolar dose of fine aerosol over two contrasting environments}
+{Environ Pollut}
+{\textsc{metadata only.} Metadata only: Elsevier day-0 deposit with no abstract in Crossref or Semantic Scholar at issue time; no finding is asserted. Title and author list (Singh, Sathish, Anand, Chakraborty ... Banerjee) match the IIT Kanpur group whose paired Kanpur-Mumbai size-resolved study (Environ Res, 10.1016/j.envres.2026.126094) ran in the 5 November issue; this is a separate DOI in a different journal, so it is carried and the overlap in data will be checked when the abstract appears. Geography is inferred from that companion paper. Relevance: direct in theme - alveolar dose by size fraction is the quantity bulk optical PM$_{2.5}$ sensors approximate worst.}
+{10.1016/j.envpol.2026.129523}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Park residential testbed low-cost indoor particle sensor ML vs linear calibration data volume source heterogeneity 2026}
+{Data-Dependent Performance of Machine Learning Calibration for Low-Cost Indoor Particle Sensors.}
+{Environ Pollut}
+{Full-scale residential testbed, three particle-source conditions, linear regression against three ML models under intra-source, cross-source and multi-source training. Adding sensor particle-number channels raised R2 by 0.05-0.10 and cut normalised error by up to 25\%. LightGBM was the best nonlinear model and gained most from more training data, but at fixed data volume greater source heterogeneity lowered its error and bias without raising R2 or beating linear regression; with more multi-source data it won on error and bias while linear regression kept the higher R2. The abstract names neither the sensor models nor the reference, and three sources in one house is a narrow test of transfer. Relevance: direct - 'ML beats linear' is metric- and data-dependent, so calibration claims must state both.}
+{10.1016/j.envpol.2026.129522}
+
+\paperentry{Ramadan review spatial uncertainty indoor air quality monitoring mobile sensing position error response-time displacement 2026}
+{Spatial Intelligence for Indoor Air Quality: Integrating Spatial Uncertainty Into Monitoring, Exposure Assessment, and Ventilation Control}
+{Indoor Air}
+{Scored review of 91 indoor air-quality publications using a 'Building Spatial Intelligence' framework: capability profile, a propagation level for how far spatial uncertainty travels downstream, and nine system archetypes. None of the 91 attaches a quantified uncertainty to measurement position, none quantifies sensor-response displacement, and none of the 31 mobile-platform studies reports position uncertainty. The key physical point: on a moving platform, speed times sensor time constant typically displaces a reading further than positioning error, a systematic shift correctable by re-registration. The scoring is the authors' own construct and the corpus is not claimed to represent the field. Relevance: direct - mobile low-cost PM mapping inherits exactly this lag-displacement error, and the scoring dataset is released.}
+{10.1155/ina/1015833}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 4 records}{Coral}
+
+\paperentry{Yadate global wildfire smoke PM$_{2.5}$ PM$_{10}$ O$_3$ mortality systematic review meta-analysis WHO region 2026}
+{Mortality risk associated with wildfire smoke exposure across global, regional, and country levels: A systematic review and meta-analysis.}
+{Environ Res}
+{32 studies (>394 million deaths), 25 meta-analysed, random effects, PROSPERO-registered, Navigation Guide grading. Per 10 $\mu$g\,m$^{-3}$ wildfire PM$_{2.5}$: all-cause mortality RR 1.066 (1.014-1.121), cardiovascular 1.020 (1.010-1.030); respiratory 1.112 (0.953-1.298) and cancer 1.066 (0.954-1.192) were imprecise. By WHO region the largest all-cause estimate was Europe (1.045, 1.024-1.066). The pooled all-cause RR exceeds the largest regional all-cause estimate given, which points to strong between-study heterogeneity the abstract does not report, and the smoke-attribution methods (chemical transport, satellite, statistical) differ across studies. Relevance: indirect - smoke-specific PM$_{2.5}$ is a modelled quantity; dense sensor networks are the obvious route to measured smoke exposure for these cohorts.}
+{10.1016/j.envres.2026.126139}
+
+\paperentry{Navaratnam 136 LMIC health impact assessment WHO IT3 AQG PM$_{2.5}$ NO$_2$ mortality VSL cost-of-illness 2026}
+{Health and economic impacts of achieving WHO air quality targets in 136 Low- and Middle-Income countries.}
+{Environ Int}
+{Health impact assessment across 136 LMICs at \textasciitilde{}1 km with GBD 2021 baseline rates and published concentration-response functions. Meeting the PM$_{2.5}$ Interim Target 3 (15 $\mu$g\,m$^{-3}$) would cut annual mortality 16.04\% (6.58 million, UI 4.7-8.3 million); the 5 $\mu$g\,m$^{-3}$ guideline 22.97\% (9.43 million, 6.8-11.7 million), valued at Int\$5.5 and 8.4 trillion, 7.0\% and 10.7\% of aggregate LMIC GDP. NO$_2$ targets add 1.06-2.79\%. The intervals carry concentration-response uncertainty only, as the authors state, so exposure-surface error in data-sparse LMICs is not propagated. Relevance: indirect - in LMICs the gridded PM$_{2.5}$ input is least constrained by ground monitors, which is where sensor networks change the answer.}
+{10.1016/j.envint.2026.110577}
+
+\paperentry{Xi 1898 Chinese counties green blue space life expectancy mediation PM$_{1}$ PM$_{1}$-2.5 PM$_{2.5}$-10 2000-2021}
+{Associations of green and blue spaces with life expectancy are partly explained by lower ambient particulate matter: Evidence from 1898 Chinese counties over two decades.}
+{J Adv Res}
+{1,898 counties, 2000-2021, generalised additive mixed models in a mediation framework. A simultaneous 10-percentage-point rise in green and blue cover was associated with 0.968 years more life expectancy (0.945-0.991); lower PM explained about 23\%, PM$_{1}$ most (0.109 y, 0.095-0.123), then PM$_{2.5}$-10 (0.065 y) and PM$_{1}$-2.5 (0.050 y). Indirect effects were strongest in the Northwest and roughly twice as large in underdeveloped regions. County-level ecological mediation with modelled, collinear size fractions cannot separate deposition by vegetation from the fact that greener counties are less industrial. Relevance: indirect - size-fractionated PM$_{1}$ surfaces are uncommon; PM$_{1}$ channels on optical sensors could test them.}
+{10.1016/j.jare.2026.11.009}
+
+\paperentry{Li Jinan five tree species foliar PM$_{2.5}$ PM$_{10}$ accumulation O$_3$ deposition isoprene AMItree screening 2026}
+{Balancing the Dual Roles of Urban Vegetation in Air Quality Regulation: An Organismal-Scale Screening Framework of Pollutant Deposition and Biogenic Emissions Across Five Temperate Tree Species}
+{Atmosphere}
+{Five temperate species in Jinan, field-measured and upscaled to the canopy. Platycladus orientalis had the highest net foliar accumulation, 1.22 g/day per tree for PM$_{2.5}$ and 3.02 for PM$_{10}$; Platanus acerifolia had the highest O$_3$ deposition (0.60 m3/s per tree, 4.5 times the lowest) but emitted 220 mg C/h isoprene, while Styphnolobium japonicum emitted 596 and scored near zero on the composite index (0.02-0.04). Foliar elution measures retained mass, not net removal from breathing-height air, and the index weights are partly expert-chosen. Relevance: indirect - species-level PM deposition rates for urban-greening claims, not an exposure measurement.}
+{10.3390/atmos17111100}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{9 November 2026}, single day (Monday). Harvester legs: \textbf{PubMed} health \textbf{11}, sensing \textbf{2}; \textbf{Europe PMC} \textbf{0} (indexing lag); \textbf{Crossref by ISSN} \textbf{47}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 429 on the harvester leg. PubMed connector (EDAT 6--9 November, three axes) 69 PMIDs, 16 bucketed to 9 November, 6 appended; cross-day dedupe removed 1 record assigned to an earlier issue --- \textbf{63 screened}. Abstracts: efetch filled 16 of 17 PMID records; Crossref/Semantic Scholar recovered one line for one of three Crossref records tried.
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check not run, so no record carries a Scite check. No Amass backfill this run.
+\textbf{17 admitted}, \textbf{46 rejected} with logged reasons. \textbf{3 carried on metadata alone}. Affiliations from PubMed XML and Crossref (OpenAlex unavailable). Trial watch: see W45 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

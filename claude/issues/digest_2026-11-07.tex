@@ -1,0 +1,339 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{7 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-07\;\;\textcolor{Amber}{\textbar}\;\;Entry window 7 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;28 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{28}{RECORDS IN SCOPE\\(40 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{11}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}The first multi-day controlled human exposure to near-ambient PM$_{2.5}$: three consecutive days at 35\,$\mu$g/m$^3$ --- the US 24-hour standard --- left FEV$_1$ unchanged on day 1 but 1.9\,\% lower on day 2 (95\,\% CI 0.7--3.1) and 1.8\,\% lower on day 3, with the deficit still present 20 hours after exposure ended.}\\[1.4mm]
+\footnotesize
+US EPA, \textit{Environmental Health Perspectives}; randomised, double-blind crossover, 17 healthy volunteers, 4 h/day with intermittent exercise, clean-air sessions at least two weeks apart. Exercise output fell 2.0\,W on day 2 and 2.4\,W on day 3.
+\textbf{Where it is weak:} n=17 healthy young adults; decrements of about 2\,\% sit near spirometric reproducibility, and the sex-modification claims are underpowered.
+\textbf{Why it matters here:} the effect accumulates across days at a concentration that is legal for a single day. Sensor-network alerting built on single-day exceedance flags misses exactly this; multi-day running means are the defensible public metric.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Wildfire smoke, adult asthma.} All of Us, 18,935 exacerbations, time-stratified case-crossover: aOR 1.27 (1.22--1.33) to 1.38 (1.32--1.44) across lags 0--7, stronger in older adults and the Midwest. The abstract does not state the exposure increment or smoke-PM product, so the magnitude cannot be scaled.
+
+\item \textbf{Sub-micron mass beats PM$_{10}$ in Ulaanbaatar.} Under-5 pneumonia visits, 48,488: per IQR at lag 2, PM$_1$ RR 1.065 (1.025--1.106), PM$_{2.5}$ 1.057 (1.015--1.100), PM$_{10}$ null; infants PM$_1$ 1.098 at lag 0. NO$_2$ (1.383) is larger still. Almaty, by contrast, returns a null for cardiovascular mortality (cumulative RR 1.011, 0.837--1.222) over 43,095 deaths.
+
+\item \textbf{A causal design for household energy.} Beijing Clean Heating Policy, difference-in-differences over 50 villages and 1,003 adults: diastolic BP $-$1.6\,mmHg ($-$2.9 to $-$0.3), systolic $-$1.4 ($-$3.3 to 0.5). Exposure is policy assignment; indoor PM and indoor temperature move together and are not separated in the abstract.
+
+\item \textbf{Exposure-assessment method.} The temporal exposure averaging problem: year-long mobile-signalling traces for 110,000 Shenzhen residents show that days-to-weeks windows inflate between-person exposure variance and individual deviation from the annual mean. A direct caution for short wearable-sensor campaigns that report inequality.
+
+\item \textbf{Exposure basis (x1).} Of 28 records, \emph{none rests on a low-cost sensor}; one is a personal gravimetric campaign (San Joaquin Valley farmworker households: personal PM$_{10}$ 45.5 vs indoor 24.3\,$\mu$g/m$^3$). The seven ratio estimates come from regulatory monitors (Ulaanbaatar, Almaty) or a modelled wildfire-smoke product; the four difference estimates from a chamber and a policy contrast. Health evidence today is measured at the regulatory or laboratory tier, or modelled --- not sensed.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 5 November issue closed with \texttt{last\_entry\_date} at 5 November; the last completed run was 6 November 17:46 UTC. This issue was built on the \textbf{10 November 22:16 UTC (16:16 CST) run}, the 05:00 UTC slot firing 17 hours late. Before 22:00 the newest buildable day is 9 November, so this run backfills \textbf{6, 7, 8 and 9 November as four issues} and the \textbf{W45 weekly (1--7 November)}, owed on Saturday 7 November. A cross-day candidate set was built first and every record assigned to its earliest day: \textbf{15 records surfaced again on 7 November were left with 6 November}. No \textsc{backfill} records from Tier-2 legs in this run. The OpenAlex connector was not available on this session.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 28 records across nine of ten bands: exposure assessment 7, respiratory 4, cardiovascular and metabolic 4, mechanistic 3, burden and mitigation 3, and 2 each for reproductive, sensing and occupational; neuro 1. Other clinical endpoints is empty today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: laboratory and experimental work (controlled human exposure, three animal or cell studies, two device or sampler tests) and measurement campaigns lead; acute observational designs (case-crossover, two time-series), cohorts and a panel follow; three metadata-only records. Right --- endpoints are almost all singletons; three are unrecoverable (the metadata-only Elsevier deposits).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ dominates; size-resolved or sub-micron metrics appear in the PNC 5--560\,nm panel, wildfire PM$_{0.1}$, PM$_1$ in Ulaanbaatar and the LDSA record. Right --- geography: USA 9 and China 9, South Korea 3, not stated 2, and one each for Mongolia, Kazakhstan, Europe (multi-cohort), Pakistan and Nigeria.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. Preconception and in utero: ovarian (mouse), follicular-fluid metals, rat sperm and the pregnancy window of the epigenetic-age meta-analysis. Childhood and adolescence each carry three records, including the Lagos asthma protocol (to 18 years). Working age is the largest stage (9); older adults appear only as subgroups or lower age bounds (4).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Exposure assessment is spread over measurement campaigns, a methods simulation and a metadata-only record; respiratory carries the controlled exposure, the wildfire case-crossover and the Ulaanbaatar time-series; mechanistic is all laboratory. Neither the sensing band nor any health band contains a sensor-network design.}\end{minipage}
+
+\vspace{2mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, 7 estimates from 3 sources: Huang wildfire-smoke asthma (2, lowest and highest lag, increment not stated), Tsogtbayar Ulaanbaatar pneumonia (3, per IQR, PM$_{2.5}$ and PM$_1$), Kulkayeva Almaty cardiovascular mortality (2, increment not stated). Difference scale, 4 estimates: Pulczinski controlled exposure FEV$_1$ (\% change, days 2 and 3) and Sternbach clean-heating blood pressure (mmHg). Estimates within each source share a sample and are not independent; endpoints, pollutants and increments differ across sources, so no pooling and no I$^2$.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{Zundel Detroit adolescents PM$_{2.5}$ above 9 $\mu$g\,m$^{-3}$ fear conditioning amygdala 2026}
+{Outdoor Air Pollution Exposure Alters Fear Regulation and Fear-Related Neural Circuitry in Adolescence.}
+{Biol Psychiatry Glob Open Sci}
+{102 adolescents aged 10-17 (68 with fMRI) completed Pavlovian conditioning, extinction and recall. Past-month PM$_{2.5}$ above vs below 9 $\mu$g\,m$^{-3}$: greater skin conductance and subjective fear to threat cues, greater return of fear at recall, higher overall SCR, and greater right amygdala (conditioning, extinction) and left insula (recall) activation, adjusted for age, sex and neighbourhood disadvantage. No effect sizes are given in the abstract. Dichotomising a modelled one-month mean at a regulatory cut-point in 102 people invites residual neighbourhood confounding. Relevance: indirect - short-window exposure contrasts like this need residence-level resolution that dense networks can supply.}
+{10.1016/j.bpsgos.2026.100831}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Cardiovascular \& metabolic\hfill 4 records}{Teal}
+
+\paperentry{He Beijing panel 152 young adults PNC5-560 gut microbiome pro-atherosclerotic biomarkers 2026}
+{Exposure to Size-Fractioned Ambient Particles Associated with Alterations in Gut Microbiome and Pro-Atherosclerotic Biomarkers in Young Adults.}
+{Environ Health Perspect}
+{Beijing panel of 152 young adults, four monthly visits (Sep 2019-Jan 2020). PNC 5-560 nm sources: diesel 37.9\%, gasoline 39.4\%, nucleation 9.2\%, secondary 11.9\%. Per IQR of 7-day PNC, inflammatory and pro-atherosclerotic biomarkers rose by 2.1\% (0.4-3.8) to 198.6\% (29.3-365.8); Shannon, Simpson and Chao1 diversity fell. Microbial mediation reached 9.8\% (0.8-38.3) and 4.8\% (0.09-22.5). The 2-to-199\% span across many biomarkers signals heavy multiplicity, mediation shares are small with wide CIs, and a single fixed-site PNC stands in for personal number exposure. Relevance: indirect - number concentration, not mass, carries the signal, and mass-calibrated optical sensors cannot see most of the 5-560 nm range.}
+{10.1021/ehp.6c00374}
+
+\paperentry{Kulkayeva Almaty time-series PM$_{2.5}$ cardiovascular mortality null 2026}
+{Short-term effects of ambient PM$_{2.5}$ exposure on cardiovascular mortality in Almaty, Kazakhstan.}
+{Front Public Health}
+{Almaty 2017-2025, 3,287 days, 43,095 cardiovascular deaths, mean PM$_{2.5}$ 36.9 $\mu$g\,m$^{-3}$. Cumulative lag 0-7 RR 1.011 (0.837-1.222), null; age >=65 RR 1.174 (0.926-1.489), also null; lag-specific risk peaked at 2-4 days. The comparison increment for the cumulative RR is not given in the abstract, the CI spans a 16\% deficit to a 22\% excess, and the PM$_{2.5}$ series source and station count are unstated. Relevance: indirect - Almaty's monitor record is thin and its PurpleAir network is one of the denser in Central Asia; a sensor-fused exposure series could narrow exactly this interval. Included as a reported null from an under-studied region.}
+{10.3389/fpubh.2026.1950463}
+
+\paperentry{Xu CHARLS PM$_{1}$ PM$_{2.5}$ PM$_{10}$ cardiometabolic multimorbidity cohort 2026}
+{EXPRESS: Air pollution increases cardiometabolic diseases in China: A nationwide longitudinal cohort study.}
+{J Investig Med}
+{CHARLS, 8,725 adults aged >=45 free of cardiometabolic multimorbidity (two or more of hypertension, diabetes, CVD, stroke) at 2011 baseline, followed to 2020. All five pollutants - PM$_{1}$, PM$_{2.5}$, PM$_{10}$, O$_3$, NO$_2$ - were associated with incident multimorbidity, more strongly with lower education and short sleep. The abstract reports no hazard ratios, increments, case counts or exposure model, so magnitude cannot be judged; participants with one condition at baseline were retained, which mixes progression with onset. Relevance: indirect - one more CHARLS reuse with a satellite-type exposure inferred; no new measurement contribution.}
+{10.1177/10815589261507081}
+
+\paperentry{Lin prospective cohort plasma proteomics PM$_{2.5}$ type 2 diabetes mediation 2026}
+{Plasma Proteomic Profiling Reveals Mediating Proteins and Preventive Targets Linking Ambient Air Pollution to Type 2 Diabetes Incidence: A Prospective Cohort Study}
+{Environ Pollut}
+{44,917 participants with 2,911 plasma proteins, 13.64 years of follow-up, 3,193 incident T2D. Per IQR of PM$_{2.5}$, NO$_2$, NOx and SO$_2$, T2D risk was 5-14\% higher (pollutant-specific HRs not separated in the abstract). 187 proteins mediated the PM$_{2.5}$-T2D association; a protein score mediated 31.69\% for PM$_{2.5}$. Hubs sat in cytokine, chemokine and leukocyte-migration pathways; 13 targets have approved drugs. The cohort is not named in the abstract. Proteins measured once, at baseline alongside the exposure window, make the mediation temporally ambiguous, and NO$_2$, NOx and SO$_2$ are correlated with PM$_{2.5}$. Relevance: indirect - mechanism-oriented, with interpolated residential exposure and no new measurement contribution.}
+{10.1016/j.envpol.2026.129476}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 4 records}{Sky}
+
+\paperentry{Pulczinski EPA controlled human exposure 3 consecutive days 35 $\mu$g\,m$^{-3}$ PM$_{2.5}$ FEV1 exercise 2026}
+{Repeated Exposure to Near-Ambient PM(2.5) Decreases Pulmonary Function: Controlled Human Exposure Study.}
+{Environ Health Perspect}
+{First multi-day controlled human exposure: 17 healthy volunteers, 3 consecutive days at 35 $\mu$g\,m$^{-3}$ PM$_{2.5}$ (the US 24-h standard) vs clean air, crossover 2 weeks apart. Day 1 FEV1 unchanged (-0.9\%, -2.1 to 0.3). Day 2 FEV1 -1.9\% (-3.1 to -0.7) immediately and -1.7\% (-3.3 to -0.2) at +20 h; Day 3 -1.8\% (-3.5 to -0.1) and -1.7\% (-3.2 to -0.1). Exercise output fell 2.0 W (Day 2) and 2.4 W (Day 3). n=17 healthy young adults, so sex-modification claims are underpowered, and the decrements are small against spirometric reproducibility. Relevance: direct - cumulative-day effects at a concentration low-cost networks routinely report argue for multi-day running means, not single-day exceedance flags.}
+{10.1021/ehp.6c00055}
+
+\paperentry{Huang All of Us case-crossover wildfire smoke PM$_{2.5}$ adult asthma exacerbation 2026}
+{Asthma Exacerbations Following Wildfire Smoke PM$_{2.5}$ Exposure Among U.S. Adults}
+{GeoHealth}
+{NIH All of Us: 18,935 adult asthma exacerbations, four matched control periods each, warm months 2006-2019. Wildfire-smoke PM$_{2.5}$ was associated with exacerbation at every lag 0-7 d, adjusted OR 1.27 (1.22-1.33) to 1.38 (1.32-1.44); higher in older adults, non-Hispanic White, Midwestern residents and in May. The abstract does not state the exposure increment or the smoke-PM product, so the OR cannot be scaled, and an OR near 1.3 is large for smoke PM per usual increments - likely a binary smoke-day or large contrast. All of Us EHR linkage selects insured, engaged participants. Relevance: indirect - the Midwestern excess points at long-range transported smoke, where PurpleAir density is thinnest.}
+{10.1029/2026gh001972}
+
+\paperentry{Tsogtbayar Ulaanbaatar time-series PM$_{1}$ PM$_{2.5}$ under-5 pneumonia outpatient 2026}
+{Associations between air pollution and pediatric pneumonia incidence in Ulaanbaatar, Mongolia: age and sex susceptibility.}
+{J Thorac Dis}
+{Ulaanbaatar 2014-2019, 48,488 under-5 outpatient pneumonia visits, adjusted for season, weather, holidays and the raw-coal ban. At lag 2, per IQR: PM$_{2.5}$ RR 1.057 (1.015-1.100), PM$_{1}$ 1.065 (1.025-1.106), SO$_2$ 1.136 (1.023-1.261), NO$_2$ 1.383 (1.108-1.726); PM$_{10}$ and O$_3$ non-significant. Infants <1 y showed PM$_{1}$ RR 1.098 (1.046-1.152) at lag 0. PM$_{2.5}$ and NO$_2$ survived co-pollutant adjustment. IQR values are not in the abstract, outpatient visits depend on care-seeking, and NO$_2$ dwarfs PM. Relevance: indirect - PM$_{1}$ outperforming PM$_{10}$ in a coal-heating city favours sub-micron-capable nodes in ger districts, where the regulatory monitors that fed this series are sparse.}
+{10.21037/jtd-2026-1940}
+
+\paperentry{Ubuane Lagos protocol paediatric asthma control household PM$_{2.5}$ CO cotinine 2026}
+{Association of asthma control with household particulate matter less than 2.5 microns, carbon monoxide and second-hand-smoking among children with asthma in Lagos, Nigeria: protocol of an ongoing observational cross-sectional study}
+{Research Square}
+{Protocol, no results. Children and adolescents up to 18 years attending LASUTH asthma clinics in Lagos are being recruited consecutively; asthma control, lung function (peak flow, FEV1, home PEF variability), adherence, inhaler technique, quality of life, urinary cotinine and household PM$_{2.5}$ and CO will be related by hierarchical logistic regression. The rationale is that questionnaire-based household air pollution studies found no association. The PM$_{2.5}$ instrument, sampling duration and sample size are not stated. Relevance: direct if it uses portable optical monitors - the protocol should specify instrument and calibration before data collection ends.}
+{10.21203/rs.3.rs-9634309/v1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 2 records}{Sage}
+
+\paperentry{Tao Peking ART women 1-km PM$_{2.5}$ follicular fluid metals 2026}
+{Associations of ambient fine particulate matter exposure with metal and metalloid concentrations in follicular fluid.}
+{J Hazard Mater}
+{198 women undergoing assisted reproduction; 12-month residential PM$_{2.5}$ at 1 km. Per IQR, follicular-fluid chromium +22.10\% (9.59-36.04), lead +23.15\% (1.27-49.76), cadmium +22.81\% (8.95-38.44), arsenic +29.25\% (8.13-54.49), germanium +15.72\% (4.42-28.25), lithium +25.84\% (9.65-44.43); five survived FDR, lead did not. The IQR value is not reported, n is small, diet and water - major Cd/As sources - are not mentioned as adjusted, and the PM$_{2.5}$ surface has no composition, so the link to particle-borne metals is inferred. Relevance: indirect - a biomarker endpoint where metal-resolved sampling, not optical mass, would be needed to close the pathway.}
+{10.1016/j.jhazmat.2026.144126}
+
+\paperentry{Marques Generation R multi-cohort LUR PM$_{2.5}$ NO$_2$ epigenetic age birth to adolescence 2026}
+{Outdoor Air pollution Exposure and Epigenetic Age from birth to adolescence - a multi-cohort study.}
+{Environ Res}
+{European birth cohorts: 4,166 at birth, 1,531 at 4-7 y, 1,748 at 8-10 y, 2,546 at 16-18 y; harmonised LUR exposures in three windows, fixed-effects meta-analysis. No pollutant, PM$_{2.5}$ included, was associated with epigenetic age at birth or in childhood. In adolescence, per 10 $\mu$g\,m$^{-3}$ lifetime NO$_2$, epigenetic age was 0.23 years higher (0.06-0.39), about 84 days, surviving adapted Bonferroni. PM associations were null in the main analysis. LUR at address omits school and transit time, which dominates adolescent exposure. Relevance: indirect - a well-powered PM null; the one signal is traffic NO$_2$, not particle mass.}
+{10.1016/j.envres.2026.126058}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 3 records}{Violet}
+
+\paperentry{Mali Rutgers wildfire PM0.1 mouse ovarian hyperandrogenism AhR 2026}
+{Wildfire-Emitted Particulate Matter Induces Ovarian Hyperandrogenism through Aryl Hydrocarbon Receptor Activation}
+{Environ Health Perspect}
+{Mouse intratracheal exposure to lab-synthesised wildfire PM0.1 at a dose described as environmentally relevant disrupted estrous cycles and raised serum testosterone; follicles showed AhR activation and altered steroidogenic genes, reproduced by real Canadian 2023 wildfire PM0.1, BaP and TCDD, and reversed by AhR inhibition. Single-follicle and single-oocyte RNA-seq flagged inflammatory and mitochondrial genes. The abstract gives no dose in ug or lung-deposited equivalent, no group sizes and no effect magnitudes, so translation to human wildfire episodes cannot be judged. Relevance: indirect - the toxicity is attributed to the nanosized fraction, which optical sensors used for smoke alerts barely register.}
+{10.1021/ehp.6c00189}
+
+\paperentry{Liu BALF fibroblast PM$_{2.5}$ house dust mite FAM45A allergic asthma 2026}
+{FAM45A-Mediated Persistent Memory-Like Fibroblast Reprogramming Drives PM$_{2.5}$-Exacerbated Allergic Asthma.}
+{Environ Health Perspect}
+{BALF fibroblasts from 8 HDM-sensitised asthmatics and 8 sensitised non-asthmatic controls: only combined PM$_{2.5}$ + HDM stimulation induced a persistent antigen-presenting, IL-33-secreting phenotype, with FAM45A the top dual-exposure transcript; FAM45A slows lysosomal allergen degradation via V-ATPase, is required by CRISPR knockout, and its neutralisation reduced PM$_{2.5}$/HDM airway inflammation in humanised mice. In an expanded cohort fibroblast FAM45A correlated with residential PM$_{2.5}$ exposure duration, HDM IgE and GINA severity. Primary-cell n=8 per group; PM$_{2.5}$ dose and source are not given, and the clinical correlation is unquantified in the abstract. Relevance: indirect - an interaction mechanism that argues for allergen-season stratification of sensor-based asthma alerts.}
+{10.1021/ehp.6c00353}
+
+\paperentry{Jeon rat PM$_{2.5}$ inhalation sperm abnormality ACE2 vs renal insufficiency 2026}
+{Particulate matter inhalation induces male reproductive dysfunction comparable to renal failure: insights from a rat model.}
+{Transl Androl Urol}
+{Male rats: control, PM$_{2.5}$ (30 mg/kg/day, 3 h/day, 10 days) and renal insufficiency by unilateral ureteral obstruction. PM$_{2.5}$ increased sperm morphological abnormalities; count and motility changes were not significant. Testicular ACE2 staining and inflammatory/endothelial gene expression shifted in both exposed and RI groups. Dose expressed per kg body weight for an inhalation exposure is unusual and cannot be converted to an air concentration; group sizes and effect magnitudes are absent, and the PM source is unstated. Relevance: minimal for sensing - mechanistic, at a dose far above ambient; logged for the reproductive-endpoint map.}
+{10.21037/tau-2026-0425}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 7 records}{Clay}
+
+\paperentry{Young CSU San Joaquin Valley agricultural community personal indoor PM$_{2.5}$ PM$_{10}$ 2026}
+{Particulate Matter Pollution in an Agricultural Setting: A Community-Engaged Research Study.}
+{Environments}
+{Community-engaged study, San Joaquin Valley: 35 Hispanic/Latino(a) participants from 18 households living a median 633 m from processing silos, sampled in December 2023, May 2024 and the September 2024 harvest. Median personal PM$_{2.5}$ 11.1 and PM$_{10}$ 45.5 $\mu$g\,m$^{-3}$; indoor 12.9 and 24.3 $\mu$g\,m$^{-3}$. 29\% of PM$_{2.5}$ and 33\% of PM$_{10}$ samples exceeded WHO 24-h guidelines. Agricultural work in the household and regional ambient PM were the strongest predictors. Small n, three visits, and no coarse-fraction composition to separate soil from processing dust. Relevance: direct - personal PM$_{10}$ four times indoor PM$_{10}$ shows a coarse take-home or activity component that ambient PM$_{2.5}$ sensors miss entirely.}
+{10.3390/environments12100348}
+
+\paperentry{Mohsin California disaggregated AA NHPI wildfire-specific PM$_{2.5}$ disparities 2026}
+{Race disparities in total PM(2.5) and wildfire-specific PM(2.5) exposure among disaggregated Asian American, Native Hawaiian, and Pacific Islander groups in California.}
+{J Clim Change Health}
+{California census tracts, 2008-2012, total and wildfire-specific PM$_{2.5}$ weighted by 2010 Census counts across five broad and 29 disaggregated AA and NHPI groups. Hmong populations had the highest average total and wildfire-specific PM$_{2.5}$; Fijian, Laotian, Bhutanese, Marshallese and other Micronesian groups also ranked high for wildfire PM$_{2.5}$. The abstract gives no concentrations or contrasts, the exposure period predates the 2017-2021 fire seasons, and the method for isolating wildfire PM$_{2.5}$ from AQS data is unstated. Relevance: indirect - Central Valley Hmong communities are exactly where community sensor deployments could update a 15-year-old picture.}
+{10.1016/j.joclim.2026.100755}
+
+\paperentry{Wang Kwan Shenzhen 110,000 mobile signalling year-long temporal exposure averaging problem 2026}
+{The temporal exposure averaging problem (TEAP).}
+{Environ Sci Ecotechnol}
+{Year-long mobile-signalling trajectories for 110,000 Shenzhen residents were combined with pollutant and greenspace surfaces; months were resampled to test how observation length shapes chronic-exposure estimates. Short windows produced large intra-individual deviations from annual exposure and inflated between-person variance; longer windows converged steadily, consistently across age, gender and indicators, and seasonally stratified vs random four-month samples agreed. No numerical deviation or convergence threshold is in the abstract, and the surfaces themselves carry model error that this framing does not address. Relevance: direct - a formal warning for wearable-sensor campaigns of days to weeks that report exposure inequality.}
+{10.1016/j.ese.2026.100782}
+
+\paperentry{Khan Pakistan winter smog PM$_{2.5}$-associated antimicrobial resistance genes qPCR 2026}
+{PM$_{2.5}$-Associated Variation in Airborne Antimicrobial Resistance Gene Abundance During Winter Smog Episodes in Urban Pakistan (2022–2023)}
+{Research Square}
+{Winter PM$_{2.5}$ sampled in three Pakistani cities; eDNA qPCR for sul1, blaTEM, blaCTX-M-32, blaNDM-1, vanA, vanRA, tnpA, intI1. Lahore PM$_{2.5}$ reached 276.6 +/- 27.4 $\mu$g\,m$^{-3}$ (AQI 289). blaNDM-1 had the highest relative abundance (0.077 Lahore, 0.056 Islamabad); vanA was higher in Okara. PM$_{2.5}$ correlated with AQI (r=0.92) and humidity (r=0.91), which is near-tautological. No ARG-PM$_{2.5}$ regression, sample count or blank controls are reported, so the PM link is spatial co-variation across three sites. Preprint. Relevance: minimal for sensing - a bioaerosol dimension that mass sensors cannot resolve, at concentrations where optical sensors also saturate.}
+{10.21203/rs.3.rs-11398870/v1}
+
+\paperentry{Bu Anmyeon-do GAW November 2025 Asian dust haze wildfire episodes aerosol optics 2026}
+{Episode-Dependent Variations in Atmospheric Composition at the Anmyeon-Do Global Atmosphere Watch Station in November 2025}
+{Preprints.org}
+{Anmyeon-do GAW station, November 2025: Asian dust, haze, high-PM and wildfire-influenced episodes vs non-event periods. PM$_{10}$ in all events exceeded twice the non-event mean (24.8 +/- 9.9 $\mu$g\,m$^{-3}$), peaking in Asian dust (66.1 +/- 19.2). Scattering Angstrom exponent was lowest in dust (1.1 +/- 0.5). Secondary ions made up 93.4\% (haze) and 75.1\% (high-PM) of measured composition; NOx was 1.5-1.7 times higher in haze/high-PM and CO rose most in the wildfire period. One month, one site, preprint. Relevance: direct - episode-dependent Angstrom and composition shifts are the conditions under which optical PM sensors' mass calibration breaks.}
+{10.20944/preprints202611.0490.v1}
+
+\paperentry{Yu Jeju Lunar New Year 2026 fireworks long-range transport K+ aerosol 2026}
+{Fireworks-Influenced Aerosols on Jeju Island, Korea, During the 2026 Lunar New Year}
+{Preprints.org}
+{Seogwipo, Jeju, 14-23 February 2026: two K+-enriched episodes with mean K+ 2.59 +/- 1.44 and 1.50 +/- 0.66 $\mu$g\,m$^{-3}$, about 99\% non-sea-salt. K+/total carbon was 5.5 and 3.9 times the pre-episode value, while absorption Angstrom exponents of 1.37 and 1.29 gave no optical sign of biomass burning; median transit from 120 E was 23 h, crossing on Lunar New Year's Day. Attribution to transported Chinese fireworks rests on K+ ratios and timing, not tracers such as Sr, Ba or Mg; PM$_{2.5}$ mass is not reported in the abstract. Preprint. Relevance: indirect - a transported episode with fresh-composition particles.}
+{10.20944/preprints202611.0554.v1}
+
+\paperentry{Li Wuhan impervious surface morphology land surface temperature PM$_{2.5}$ 2015-2024 2026}
+{Combined effects of impervious surface morphology on land surface temperature and PM$_{2.5}$ pollution: Evidence from long-term observations (2015–2024) in Wuhan, China}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Metadata only; no abstract in Crossref at issue time, so no finding is asserted. The title promises a decade (2015-2024) of observations in Wuhan relating impervious-surface morphology to both land surface temperature and PM$_{2.5}$. Carried because urban-form predictors are standard LUR inputs and a joint heat-PM treatment matters for co-exposure studies, since heat and PM$_{2.5}$ share urban-form drivers and confound each other in health models. To be assessed when the abstract deposits: whether PM$_{2.5}$ comes from monitors or satellite retrievals, spatial unit, and whether morphology effects survive meteorological adjustment and wind. Relevance: possible, unassessed; a candidate LUR-predictor source.}
+{10.1016/j.apr.2026.103261}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Li Nanjing jute cellulose filter PM$_{2.5}$ sampling recovery oxidative potential 2026}
+{An All-Natural Cellulose Fiber Filter Developed for High Recovery Sampling and In Vitro Toxicity Assessment of PM(2.5).}
+{Environ Res}
+{Freeze-dried jute-pulp filter: filtration efficiency 81.55-99.41\% across particle sizes at 216.8 Pa pressure drop; PM$_{2.5}$ recovery 94.25-96.37\%, higher than PTFE. Recovered PM$_{2.5}$ showed higher oxidative potential and dose-dependent macrophage cytotoxicity than PTFE-recovered PM, and the filter degrades in soil. Higher OP from the new medium may mean better recovery or contamination by the cellulose itself; the abstract reports no blank OP or endotoxin control, and lower efficiency at the low end breaks mass closure. Relevance: indirect - relevant only if gravimetric co-location uses it; 81.55\% minimum efficiency would bias reference mass low.}
+{10.1016/j.envres.2026.126128}
+
+\paperentry{Suter LDSA lung-deposited surface area summer measurements spatiotemporal modelling 2026}
+{Measurements and exploratory spatiotemporal modelling of LDSA in summer}
+{Atmos Environ}
+{\textsc{metadata only.} Metadata only; no abstract in Crossref at issue time, so no finding is asserted. The title describes summer measurements of lung-deposited surface area and an exploratory spatiotemporal model of it. LDSA is the dose-relevant ultrafine metric that diffusion-charger sensors report and optical sensors cannot; a spatiotemporal surface would let health studies use it at scale. To be assessed when the Elsevier abstract deposits: instrument (diffusion charger model), number of sites or mobile route, model predictors and cross-validated skill. Relevance: possible, likely direct - LDSA surfaces would be the natural target for diffusion-charger networks.}
+{10.1016/j.atmosenv.2026.122459}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Krevanko UW cannabis processing local exhaust ventilation inhalable PM terpenes 2026}
+{Pilot study of a local exhaust ventilation system to control particle and terpene concentrations during cannabis processing.}
+{Front Public Health}
+{Partially enclosed local exhaust ventilation hood with MERV-13 particle and activated-charcoal terpene filters, tested in three paired trials during cannabis flower grinding and automated pre-roll filling. Inhalable PM fell on average 95\% during grinding and 83\% during pre-roll filling; terpenes fell below the limit of detection during grinding. Three paired trials, no absolute concentrations in the abstract, and area rather than personal sampling limit inference about worker dose. Relevance: indirect - inhalable organic dust is a coarse fraction that low-cost PM$_{2.5}$ sensors under-report, so sensor-based workplace screening would miss the hazard this hood controls.}
+{10.3389/fpubh.2026.1964267}
+
+\paperentry{Laferriere VA burn pits registry headache phenotypes mixed methods 2026}
+{Veteran deployed burn pits exposure: headache phenotypes, trajectories, and outcomes: a mixed-methods evaluation.}
+{Front Neurol}
+{Airborne Hazards and Open Burn Pit Registry: 247,583 linked participants; 1,980 surveyed, 772 responded (39.0\%), 335 completed headache phenotyping, 49 interviewed. Migraine and post-traumatic headache carried more disability and insomnia than other headache; 68.0\% of SDOH responders reported social isolation; many dated onset to deployment. There is no unexposed comparator, burn-pit exposure is self-reported, and 335 of 247,583 is a highly selected fraction. No PM metric is measured, and headache is not compared with other registry outcomes. Relevance: indirect - deployment smoke exposure remains unquantified, a gap personal samplers in future deployments could close.}
+{10.3389/fneur.2026.1899580}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 3 records}{Coral}
+
+\paperentry{Sternbach Beijing Clean Heating Policy difference-in-differences blood pressure 2026}
+{China’s Clean Heating Policy and Effects on Blood Pressure in Rural Beijing Adults}
+{Environ Health Perspect}
+{1,003 adults >40 y in 50 rural Beijing villages enrolled before treatment; 20 villages switched from coal to electric or gas heating during follow-up. Two-way fixed-effects difference-in-differences: brachial systolic -1.4 mmHg (-3.3 to 0.5), central systolic -1.5 (-3.3 to 0.4), brachial diastolic -1.6 (-2.9 to -0.3), central diastolic -1.6 (-2.9 to -0.3). Effects varied by treatment year, larger in early-treated villages. The exposure is policy assignment, not measured PM, and indoor temperature rises alongside; the abstract cannot separate the two pathways. Relevance: indirect - the clearest causal design in the household-energy literature; personal PM monitoring in the parent study is what would assign the mechanism.}
+{10.1021/ehp.6c00053}
+
+\paperentry{Hauck USC plasma-enhanced electrostatic precipitator self-cleaning electrode diesel PM 2026}
+{Plasma-Enhanced Electrostatic Precipitator (ESP) with Self-Cleaning Electrode for Scalable Remediation of Particulate Matter in Large Diesel Engines.}
+{ACS Omega}
+{Nanosecond-pulsed (20 kV, 20 ns) plasma-enhanced ESP, with ion densities about six orders above DC corona, removed >90\% of diesel PM at 1\% of engine power; a porous stainless-steel collector regenerated by Joule heating kept >89\% removal over four cycles and >200 h. Target is megawatt-class marine and locomotive engines without acceptable after-treatment. Efficiency is mass-based in the abstract; size-resolved removal for ultrafine particles - the hardest for ESPs - and regeneration emissions are not given. Relevance: minimal for sensing - port and rail-yard networks would be the field test of whether such controls change fenceline PM.}
+{10.1021/acsomega.6c06682}
+
+\paperentry{Shao greening Chinese cities air pollution deaths 25-year scenario health impact 2026}
+{Greening Chinese cities could prevent air pollution—related deaths: A 25-year analysis and scenario-based health impact assessment}
+{Environ Int}
+{\textsc{metadata only.} Metadata only; no abstract in Crossref at issue time, so no finding is asserted. The title describes a 25-year analysis of urban greening in Chinese cities and scenario-based estimates of air-pollution-related deaths avoidable by further greening. Read against the 6 November Korean urban-forest isotope study, which found vegetation lowered PM$_{2.5}$ only in the growing season. To be assessed when the abstract deposits: pollutant(s), the greening-to-concentration function and whether it is causal or cross-sectional, and the concentration-response function used, since greening scenarios usually borrow risk functions rather than observe deaths. Relevance: possible, unassessed.}
+{10.1016/j.envint.2026.110595}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{7 November 2026}, single day (Saturday). Harvester legs: \textbf{PubMed} health \textbf{0}, sensing \textbf{0}; \textbf{Europe PMC} \textbf{47}; \textbf{Crossref by ISSN} \textbf{28}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 429 on the harvester leg. PubMed connector (EDAT 6--9 November, three axes) 69 PMIDs, \textbf{23 bucketed to 7 November, 18 appended}. Cross-day dedupe moved 15 records to 6 November, leaving \textbf{68 screened}. Abstracts: efetch filled 20 of 21; Crossref retry on five Elsevier deposits returned nothing.
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check not run. No Amass backfill in this four-day run.
+\textbf{28 admitted}, \textbf{40 rejected} with logged reasons. \textbf{3 carried on metadata alone}. Affiliations from PubMed XML (OpenAlex unavailable); preprint and Crossref-only records carry none. Trial watch: see W45 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

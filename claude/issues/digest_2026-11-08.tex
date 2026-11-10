@@ -1,0 +1,181 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{8 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-08\;\;\textcolor{Amber}{\textbar}\;\;Entry window 8 November 2026 (full day, Sunday)\;\;%
+ \textcolor{Amber}{\textbar}\;\;5 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RECORDS IN SCOPE\\(11 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Indoor and outdoor PM act jointly on stroke in older Chinese adults: in CHARLS (13,917 adults, 1,060 strokes) high county-level PM$_{2.5}$ carried HR 1.25 (1.04--1.51), household solid fuel HR 1.38 (1.18--1.62), with a multiplicative interaction (p=0.022).}\\[1.4mm]
+\footnotesize
+Ambient exposure is one pre-baseline year of the CHAP satellite-fused product averaged to county; solid fuel is a single questionnaire item. The ordinal joint-exposure score gives HR 1.10 (1.05--1.15) per step.
+\textbf{Where it is weak:} the PM$_{2.5}$ contrast is categorical with no cut-point or per-$\mu$g/m$^3$ estimate in the abstract; every resident of a county shares one value; no household PM was measured, so the ``joint'' category combines an ecological and a proxy exposure.
+\textbf{Why it matters here:} the interaction is the kind of claim paired indoor--outdoor low-cost nodes could test directly at the household, which neither exposure layer in this cohort can.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{A Sunday floor.} Five records from sixteen screened, three bands occupied (exposure assessment 2, sensing 2, cardiovascular 1), no tier-A record. Eighteen Europe PMC hits for 8 November had already been assigned to 6--7 November in the cross-day candidate set.
+
+\item \textbf{Personal sensors inside an intervention design.} URBANOME ran wearable and ambient monitoring, agent-based exposure modelling, spirometry, HRV and omics before and after co-created mobility, greening and traffic-calming interventions in nine European urban living labs. The abstract gives direction only (annoyance, sleep-breathing complaints down; FVC gradient attenuated) and a metabolite panel at AUROC $\approx$1.0 that the authors themselves call overoptimistic. No control arm.
+
+\item \textbf{Two sensing items for quality control and toxicity.} A labelled smart-home indoor air-quality dataset with experimentally induced contextual anomalies (Norway), useful for fault detection on unattended nodes if a PM channel is present --- the abstract does not list channels. A review of automated field-deployable cell-exposure platforms maps hardware for toxicity-weighted sensing, without performance data.
+
+\item \textbf{Exposure basis (x1).} Of 5 records, 1 rests on a low-cost sensor class (the smart-home dataset, sensing side) and 1 on personal/wearable monitoring (URBANOME). The single health-side record (stroke) is \emph{modelled} (satellite-fused, county mean); no health estimate today is tied to a measured exposure.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 5 November issue closed with \texttt{last\_entry\_date} at 5 November. This issue was built on the \textbf{10 November 22:16 UTC (16:16 CST) run}, the 05:00 UTC slot firing 17 hours late; no run executed on 7--9 November. Before 22:00 the newest buildable day is 9 November, so this run \textbf{backfills 6, 7, 8 and 9 November as four issues} and builds the \textbf{W45 weekly (1--7 November)}, owed since Saturday. Sunday 8 November opens W46. A cross-day candidate set was built before authoring and each record assigned to its earliest day. No \textsc{backfill} records this issue.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 5 records across three of ten bands: exposure assessment 2, sensing 2, cardiovascular and metabolic 1. Seven bands are empty, as expected on a Sunday entry day.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: one each of cohort, non-randomised intervention field study, review, data descriptor and metadata-only record. Right --- every endpoint is a singleton; only incident stroke is a clinical outcome.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric as recorded per record; three records carry no single PM metric (review, data descriptor, metadata-only). Right --- geography: China 1 (CHARLS), Brazil 1 (S\~ao Paulo State), one multi-region review and two European records (nine-city URBANOME; Norway).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. Working age carries CHARLS (enrolment from 45 years) and URBANOME adults; older adults the CHARLS stroke cohort (mean age 58.9). No preconception, in-utero, childhood or adolescent record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture, five occupied cells, each with one record: the cohort sits in cardiovascular; exposure assessment holds the intervention study and the metadata-only record; sensing holds the review and the data descriptor.}\end{minipage}
+
+\vspace{2mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, 3 hazard ratios from one source (Liu, CHARLS, n=13,917): high vs low county PM$_{2.5}$, solid fuel vs clean fuel, and the per-step trend of the ordinal joint score. All three are categorical contrasts in the same sample and are not independent; no pooling and no I$^2$.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Cardiovascular \& metabolic\hfill 1 record}{Teal}
+
+\paperentry{Liu CHARLS cohort county PM$_{2.5}$ solid fuel joint exposure incident stroke 2026}
+{Associations of PM(2.5) Exposure and Solid Fuel Use With Incident Stroke: Evidence From a Longitudinal Chinese Cohort.}
+{J Epidemiol Glob Health}
+{CHARLS, 13,917 adults (mean age 58.9 y), 1,060 incident strokes. High vs low ambient PM$_{2.5}$: HR 1.25 (1.04-1.51); solid fuel users vs non-users: HR 1.38 (1.18-1.62); multiplicative interaction p=0.022; HR 1.10 (1.05-1.15) per step of an ordinal joint-exposure score. The PM$_{2.5}$ contrast is categorical and the cut-point and per-unit estimate are not in the abstract. County-level assignment from a satellite-fused product with one pre-baseline year gives every resident of a county the same value, and solid fuel is a one-time self-report with no measured household PM, so the joint category mixes an ecological and a proxy exposure. Relevance: indirect - indoor-outdoor co-exposure is exactly what paired household and ambient low-cost sensors could resolve.}
+{10.1007/s44197-026-00623-x}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 2 records}{Clay}
+
+\paperentry{Sarigiannis URBANOME nine-city urban living labs exposome wearable sensors interventions 2026}
+{URBANOME: an exposome-based framework linking urban interventions to molecular, health, and policy-relevant outcomes.}
+{Hum Genomics}
+{Horizon 2020 framework run in nine European urban living labs (Aarhus to Thessaloniki) evaluating co-created active-mobility, greening and traffic-calming interventions before and after, with wearable and ambient monitoring, agent-based exposure modelling, spirometry, blood pressure, HRV and omics. Pilot findings are qualitative: self-reported pollution annoyance and sleep-related breathing problems fell, pollution-related FVC differences attenuated in higher-exposure neighbourhoods; a four-metabolite panel separated pre/post samples with AUROC near 1.0, which the authors call likely overoptimistic. No PM concentration change, effect size or CI is reported in the abstract; designs, comparators and follow-up differ by site, and there is no control arm. Relevance: direct for method - an operational template for coupling personal sensors to intervention evaluation.}
+{10.1186/s40246-026-01012-y}
+
+\paperentry{de Oliveira Sao Paulo State municipality air-quality anomalies COVID-19 restrictions ecological surveillance 2026}
+{Municipality-specific air-quality anomalies and exploratory ecological COVID-19 surveillance analyses in São Paulo State during 2020 restrictions}
+{Atmos Pollut Res}
+{\textsc{metadata only.} Metadata only: Crossref deposit with no abstract on the day of entry and none recoverable by title lookup. From the title, the paper derives municipality-specific air-quality anomalies across Sao Paulo State during the 2020 COVID-19 restrictions and runs exploratory ecological analyses against COVID-19 surveillance data. No pollutant list, monitoring network, anomaly baseline, effect estimate or sample size can be stated, and no finding is asserted here. Any ecological pollution-COVID association from this period carries heavy confounding by mobility, testing intensity and season, which the full text will need to address. Relevance: indirect - lockdown anomaly baselines are a reference case for separating emission change from meteorology at municipal scale; recheck for the abstract in the weekly sweep.}
+{10.1016/j.apr.2026.103258}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Jeong review automated robotic field-deployable platforms aerosol cytotoxicity analysis 2026}
+{Automated small-scale devices and robotic systems for analyzing the cellular impact of ambient aerosol particles.}
+{iScience}
+{Conceptual review of small, automated and robotic platforms that deliver ambient aerosol to cells for on-site cytotoxicity analysis, with emphasis on mobile and field-deployable systems, biomimetic device design, and the data acquisition and processing needed for a source-to-effect workflow. It reports no new measurements, no comparison of platforms against standard air-liquid-interface exposure, and no performance numbers in the abstract; search strategy and inclusion criteria are not described, so coverage cannot be judged. Relevance: indirect - toxicity-weighted sensing at the node is the logical step beyond mass concentration, and this is a map of the hardware candidates rather than evidence that any of them works in the field.}
+{10.1016/j.isci.2026.118066}
+
+\paperentry{Toor SHoRT-CA smart home indoor air quality time series contextual anomalies dataset 2026}
+{SHoRT-CA: Smart home data repository of time series with contextual anomalies.}
+{Data Brief}
+{Open repository of multivariate indoor air-quality time series from one IoT smart home, with human-activity and environmental-interaction records and contextual anomalies deliberately induced by experiments on the sensors, each documented and labelled for anomaly-detection benchmarking. The abstract does not list which pollutants or particle channels are measured, the sensor models, calibration, or record length, and a single dwelling with induced rather than naturally occurring faults limits how far detectors trained here transfer. Relevance: direct for quality control - labelled anomaly sets are scarce, and automated fault flagging is a standing need for unattended low-cost indoor networks, provided a PM channel is present.}
+{10.1016/j.dib.2026.113370}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{8 November 2026}, single day (Sunday). Harvester legs: \textbf{PubMed} health \textbf{18}, sensing \textbf{2}; \textbf{Europe PMC} \textbf{27}; \textbf{Crossref by ISSN} \textbf{3}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 429 on the harvester leg. PubMed connector (EDAT 6--9 November, health, instrumentation and broad MeSH axes) 69 PMIDs, \textbf{4 bucketed to 8 November, 2 appended}. The cross-day candidate set removed \textbf{18} records already assigned to 6--7 November (mostly Europe PMC re-surfacing), leaving \textbf{16 screened}. Abstracts: efetch filled 4 of 5 PMID records; Crossref title lookup recovered one EHP abstract; the APR deposit stayed empty.
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check not run; no Amass backfill this run. Affiliations from PubMed XML.
+\textbf{5 admitted} (all window), \textbf{11 rejected} with logged reasons. \textbf{1 carried on metadata alone}. \textbf{Trial watch}: see the W45 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

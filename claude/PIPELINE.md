@@ -3239,3 +3239,14 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent again; Scite not attempted (paid-plan refusal every prior run). Affiliations from PubMed XML. Consensus 10 hits, 0 new (Gökozan Chemosensors unmatched, held for DOI check). Still held: Hao-group 10.1007/s00484-026-03128-1, -03150-3, 10.1007/s10661-026-15231-2, 10.1007/s10653-026-03038-6, 10.1016/j.apr.2025.102827, 10.1183/13993003.congress-2026.oa5536, 10.1080/09603123.2026.2669382.
 - Trial watch 4-6 Nov: 0 new; `trials.json` 42 windows.
 - Next: 6 Nov daily (≥22:00 CST 6 Nov) and **W45 weekly + 7 Nov daily on Sat 7 Nov**.
+
+## Run 2026-11-10 (22:16-23:0x UTC = 16:16 CST 10 Nov) — recovery: dailies 6-9 Nov + W45 weekly (1-7 Nov)
+
+- No scheduled run completed 7-9 Nov; 05:00 UTC 10 Nov slot fired 17 h late. Before 22:00 → newest buildable 9 Nov; owed 6, 7, 8, 9 Nov + W45 (Sat 7 Nov). Cross-day candidate set built first (`_xday_1110.py`; 33 later-day duplicates removed, earliest day wins).
+- Harvest (health/sensing, EPMC, Crossref, connector-appended): 6 Nov 16/0, 43, 44, +9 → 88 screened; 7 Nov 0/0, 47, 28, +18 → 68; 8 Nov 18/2, 27, 3, +2 → 16; 9 Nov 11/2, **EPMC 0**, 47, +6 → 63. Connector EDAT 6-9 Nov three axes, 69 PMIDs (`_conn_1110.py`). OpenAlex HTTP 429; OpenAlex/alphaXiv/bioRxiv/Wiley connectors absent; Scite not run; no Amass/Consensus backfill this run.
+- Admitted/rejected: 6 Nov 26/62, 7 Nov 28/40, 8 Nov 5/11, 9 Nov 17/46 (`_rej_1110_0{6..9}.py`). 7-9 Nov authored by forks in parallel on disjoint candidate sets; builds and state serialised. DOI gate 0/0 and 0 overfull on all five PDFs; contact sheets proofed.
+- `plots.py`: 23 new design labels mapped (inserted before `_design_unmapped`); geo map + Malawi, Somalia, Mongolia, "Asia", "Not stated". Fork prose carried Unicode subscripts in two titles (`PM₂.₅`) → pdflatex error; normalise titles to ASCII at authoring.
+- W45 weekly (`_wk_1110.py`, 42 pp): 151 records, measurement side 40 %, 11 low-cost-sensor records, 53 estimates all with CI, 6/48 ratio estimates lack increment (12 % vs Oct 51 %), Egger 4.38 (SE 0.66). Forest now splits into 3 panels (f5_forest_3) — template gained FOREST3.
+- Trial watch 6-10 Nov: CT.gov 2 new (NCT07925229 PINE woodsmoke x ibuprofen; NCT07924839 MSU sham filtration), Amass 0 → `trials.json` 26 trials / 43 windows.
+- Held for check: 9 Nov metadata-only 10.1016/j.envpol.2026.129523 may overlap the IIT Kanpur dose paper shipped 5 Nov.
+- Next: 10 Nov daily (≥22:00 CST 10 Nov); W46 (8-14 Nov) on Sat 14 Nov.
