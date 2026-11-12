@@ -3251,3 +3251,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Held for check: 9 Nov metadata-only 10.1016/j.envpol.2026.129523 may overlap the IIT Kanpur dose paper shipped 5 Nov.
 - Shipped commit 4fef982; 4 dailies, W45 and manifest 200 on Pages at +45 s. Project run log updated.
 - Next: 10 Nov daily (≥22:00 CST 10 Nov); W46 (8-14 Nov) on Sat 14 Nov.
+
+## Run 2026-11-12 (23:38-00:1x UTC = 17:38 CST 12 Nov) — dailies 10 + 11 Nov
+
+- Before 22:00 → newest buildable 11 Nov; owed 10 and 11 Nov (Tue/Wed, no rollup). Cross-day set via `_xday_1112.py` (15 later-day dups removed from 11 Nov, 12 seen/rejected from 10 Nov).
+- Harvest 10 Nov: PubMed 25/3, EPMC 26, Crossref 64, arXiv 1 → 104 with connector (+10) → 92 screened. 11 Nov: PubMed 31/3, EPMC 41, Crossref 71 → 141 (+8) → 126 screened. Connector EDAT 10-11 Nov three axes, 60 PMIDs (`_conn_1112.py`). OpenAlex HTTP 429; OpenAlex/alphaXiv/bioRxiv/Wiley connectors absent; Scite, Consensus, Amass backfill not run.
+- Admitted/rejected: 10 Nov 26/66 (9 effects, 3 tier A, 4 metadata-only); 11 Nov 36/90 (6 effects, 3 tier A, 10 metadata-only) (`_rej_1112_1{0,1}.py`). Authored by two forks on disjoint days; builds/state serialised. DOI gate 0 FAIL (2 warn on 10 Nov: unregistered EE DOI, arXiv DOI); 0 overfull; contact sheets proofed (14 + 16 pp).
+- Forks remapped ~22 new design labels to existing `plots.py` labels rather than editing `plots.py` — consider adding the mappings properly.
+- Trial watch 10-12 Nov: CT.gov 0, Amass 6 (2 carried, 4 off topic) → 0 new; `trials.json` 44 windows.
+- Shipped commit 757d165; both PDFs, manifest, index 200 on Pages at +75 s.
+- Next: 12 Nov daily (≥22:00 CST 12 Nov); W46 (8-14 Nov) on Sat 14 Nov.
