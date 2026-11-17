@@ -3261,3 +3261,15 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 10-12 Nov: CT.gov 0, Amass 6 (2 carried, 4 off topic) → 0 new; `trials.json` 44 windows.
 - Shipped commit 757d165; both PDFs, manifest, index 200 on Pages at +75 s.
 - Next: 12 Nov daily (≥22:00 CST 12 Nov); W46 (8-14 Nov) on Sat 14 Nov.
+
+## Run 2026-11-17 (05:06-05:3x UTC = 23:06 CST 16 Nov) — dailies 12-16 Nov + W46 weekly (8-14 Nov)
+
+- 22:00 rule → newest buildable 16 Nov; owed 12-16 Nov + W46 (Sat 14 Nov, missed). **Recovered the interrupted 16 Nov 05:40Z run**: it had harvested/authored 12-15 Nov and logged rejections, built 13 and 15 Nov, but 12 and 14 Nov stopped at `plots.py`'s unmapped-design hard-fail and nothing was committed (stale `build/lock_rollup` left behind, moved to `build/trash/`).
+- New `_dg_1117.py 'Label=Group' ...` inserts `design_group.update` before `_design_unmapped` (29 labels added this run). Use it whenever run_all stops on f2.
+- 16 Nov harvest: PubMed 6/0, EPMC 4, Crossref 47, arXiv none, OpenAlex HTTP **403** (was 429) → 55 fresh; connector EDAT 16 Nov two axes 13 PMIDs (`_conn_1117.py`), 2 bucketed to 15 Nov were unassigned and screened here → 61 screened. `_xday_1117.py` found no cross-day dups.
+- Admitted/rejected: 12 Nov 30/76, 13 Nov 16/63, 14 Nov 27/30, 15 Nov 4/15 (prior run), 16 Nov 15/46 (`_rej_1117_16.py`; 0 effects, 0 tier A, 3 metadata-only — no forest). DOI gate 0 FAIL all days; 0 overfull; contact sheets proofed. Geo "Multinational (review)" is unmapped — use "Global / multi-region".
+- W46 (`_wk_1117.py` + `_wk_1117_caps.py`, 45 pp): 157 records, measurement 39 %, 12 LCS, 35 estimates all with CI, 12/30 ratio without increment (40 %, regressed from 12 %), Egger 2.59 (SE 0.92), wildfire-mortality two-estimate I² 36 %. **`run_all.py --rollup` skips silently if the PDF exists** — a caption rebuild needs the PDF moved aside (to `build/trash/`) first.
+- Trial watch 12-17 Nov: CT.gov 3 previously uncarried (NCT07119333, NCT05230784, NCT07238608), Amass new NCT07931820 (BU low-cost monitor + messaging RCT) → `trials.json` 30 trials / 45 windows (`trials` counter corrected from a key count).
+- Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus, Amass literature not run. rm still blocked; .git locks moved to `.git/stale-*`.
+- Shipped 8030795; 5 dailies, W46, manifest, index 200 on Pages at +60 s.
+- Next: 17 Nov daily (≥22:00 CST 17 Nov); W47 (15-21 Nov) on Sat 21 Nov; November monthly on 30 Nov.
