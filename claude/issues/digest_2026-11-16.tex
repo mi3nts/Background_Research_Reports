@@ -1,0 +1,254 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{16 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-16\;\;\textcolor{Amber}{\textbar}\;\;Entry window 16 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;15 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{15}{RECORDS IN SCOPE\\(46 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Ethiopia's air-pollution burden is 139 deaths per 100\,000 (95\,\% UI 106--177) in GBD 2023, with Addis Ababa carrying the highest ambient-PM mortality (64 per 100\,000, 43--88) --- numbers that rest almost entirely on a modelled exposure surface.}\\[1.4mm]
+\footnotesize
+Adigrat and Bule Hora universities, \textit{Environmental Health Insights}; GBD 2023 national and subnational re-analysis, 1990--2023. DALYs 4557 per 100\,000 (3685--5397); YLDs dominated by household solid fuel (247 per 100\,000); Afar has the highest total mortality (185 per 100\,000). Mortality rates were flat over 33 years while DALY rates fell.
+\textbf{Where it is weak:} no new data --- every subnational contrast is an output of GBD's exposure model, which in Ethiopia is constrained by very few ground monitors, so the uncertainty intervals understate exposure-surface error.
+\textbf{Why it matters here:} this is the clearest case in today's set for what a distributed low-cost network buys: the ambient half of the burden is only as good as the PM$_{2.5}$ surface under it, and that surface is largely unobserved outside Addis Ababa.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Growth-factor calibration of a low-cost PM sensor.} \textit{Aerosol and Air Quality Research} (Kiss, Kiss, Veres) calibrates an optical LCS through the hygroscopic growth factor --- the physics-based alternative to empirical RH terms. Metadata only: no sensor model, R$^2$ or RMSE retrievable today.
+
+\item \textbf{The same humidity problem, upstream.} A large-aperture scintillometer retrieves path-averaged aerosol mass flux over open water in eastern China (\textit{AMT}); the optical-to-mass factor $R_{MN}$ had to be refit as a function of RH against PM$_{10}$ and visibility, falling consistently with humidity. Campaign-median flux magnitudes 0.091--0.399\,$\mu$g\,m$^{-2}$\,s$^{-1}$.
+
+\item \textbf{Pregnancy PM$_{2.5}$ and postpartum mood: null, then a BMI interaction.} ECHO, 6407 women at 18 US sites, satellite-hybrid PM$_{2.5}$: no main effect on EPDS; a thin-plate PM$_{2.5}\times$BMI interaction for anhedonia at p=0.06, strongest for first-trimester exposure. Hypothesis-generating.
+
+\item \textbf{County AQI and child bone density.} New Mexico, 597 paediatric decedents on postmortem CT: poorer gestational AQI in trimesters 2--3 associated with lower BMD; no effect sizes in the abstract, and AQI is a composite at county scale.
+
+\item \textbf{Exposure basis (x1).} No admitted record reports a PM effect estimate with a CI today, so there is no forest. The three health records with an exposure are a satellite-fused residential surface (ECHO), a regulatory-monitor composite (county AQI) and a burden model (GBD); the two low-cost-relevant records (growth-factor calibration, the COPD/IPF home-IAQ framework) are on the measurement and guidance side. \emph{No health estimate today rests on sensor-measured exposure.}
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 15 November issue closed the day before. This issue was built on the \textbf{17 November 05:06 UTC (23:06 CST 16 November) run}, which also completed the interrupted 16 November 05:40 UTC run: 12 and 14 November had been authored but not built (an unmapped design label stopped \texttt{plots.py}), 13 and 15 November were built but unshipped, and nothing had been pushed. After 22:00 CST the newest buildable day is today, so this run owes \textbf{12--16 November as five issues} plus the \textbf{W46 weekly (8--14 November)}; \textbf{16 November is covered in full}. Two PubMed records with entry date 15 November were found unassigned (the 15 November harvest had already closed) and screened here; one was admitted (New Mexico BMD), one rejected (ozone only). No \textsc{backfill} records today.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 15 records across seven of ten bands: occupational \& indoor 4, exposure assessment 3, sensing 2, respiratory 2, burden 2, neuro/mental health 1, reproductive 1. Mechanistic, cardiovascular/metabolic and other clinical are empty today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: reviews dominate (systematic, narrative and one bibliometric), three metadata-only records, one cohort, one cross-sectional and one case-control study, two modelling papers, a GBD burden analysis and one measurement campaign. Right --- endpoints are singletons apart from the metadata-only bar.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric as classified from the record fields. Right --- geography by record: single records from the United States, Ethiopia, China, India, France and Korea, with reviews filed as global / multi-region and three records with no stated geography.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. In utero: the ECHO pregnancy cohort and the New Mexico gestational-AQI study; childhood: the New Mexico BMD outcome (ages 0.5--21); working age: the COPD/IPF indoor-air guidance, the occupational arrhythmia review and the upper-airway review; older adults: the Ethiopia GBD analysis, where older adults carry the heaviest burden. Adolescence has no dedicated record.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Occupational \& indoor is all review or metadata-only work; exposure assessment splits between modelling and a metadata-only AOD record; sensing is one measurement campaign and one metadata-only calibration paper.}\end{minipage}
+
+\vspace{2mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}\textbf{No forest plot this issue.} No admitted record reports a PM effect estimate with a confidence interval. The ECHO analysis gives only an interaction p-value, the New Mexico BMD study no effect size, and the Ethiopia GBD figures are attributable burdens, not exposure--response estimates; the only ratio estimate harvested today (ozone and AMD in Korea) was rejected as gas-phase only.}
+
+\vspace{4mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{ECHO 18-site US pregnancy PM$_{2.5}$ postpartum EPDS anhedonia BMI effect modification DLM}
+{Exposure to Fine Particulate Matter During Pregnancy and Postpartum Psychological Functioning in the ECHO Cohort: Effect Modification by Body Mass Index.}
+{Environ Res}
+{6,407 pregnant women from 18 ECHO sites; residential PM$_{2.5}$ from a satellite-based hybrid model, EPDS completed within a year of delivery, analysed with GAMs, distributed lag models and trimester windows. Main-effect models found no overall PM$_{2.5}$-EPDS association. Thin-plate GAMs suggested a nonlinear PM$_{2.5}$ x pre-pregnancy BMI interaction for the anhedonia subscale (interaction p=0.06), with positive associations at higher BMI, strongest for first-trimester exposure; DLM cumulative estimates agreed. No effect sizes or CIs are given in the abstract. The headline is a borderline interaction from a two-dimensional smooth after a null main effect, with multiple windows and three outcomes, so it is hypothesis-generating at best. Relevance: indirect - modelled exposure with no measurement contribution; susceptibility-by-BMI framing could inform targeted personal monitoring.}
+{10.1016/j.envres.2026.126204}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{Lyon equine fibrosing ILD SEM/EDS lung mineral microparticles case-control geogenic anthropogenic steel}
+{Identification of mineral microparticles accumulated in equine lung tissue: Is there a link between the environment and the development of interstitial lung disease? A case-control study.}
+{Equine Vet J}
+{Case-control study of lung tissue from 21 equids with fibrosing interstitial lung disease and 10 healthy horses, particles counted and classified by SEM/EDS. Geogenic particles dominated all samples. Anthropogenic particle share was higher in idiopathic cases (median 20.2\%, IQR 4.9-66.7) than controls (2.3\%, 1.3-4.5; p=0.032); FeCrNi steel particles were more common in cases, and calcium compounds and iron oxide occurred only in idiopathic cases. Steel and iron-oxide proportions correlated with living indoors (R2 0.26 and 0.48). Questionnaire exposures did not differ. Ten controls, retrospective blocks, and no air measurements, so source attribution is inferential. Relevance: low - stable/barn particle exposure in a sentinel species; no sensing content.}
+{10.1002/evj.70362}
+
+\paperentry{UCSF MGB review ambient and wildfire air pollution chronic rhinosinusitis olfaction allergic rhinitis head and neck cancer}
+{The impact of ambient and wildfire-specific air pollution on upper airway disease.}
+{Curr Opin Allergy Clin Immunol}
+{Narrative review of ambient and wildfire-specific air pollution and upper airway disease. Recent biobank and claims studies strengthen ambient associations with allergic rhinitis and chronic rhinosinusitis incidence, with emerging evidence that pollution shapes inflammatory endotype and blunts symptom improvement after endoscopic sinus surgery; wildfire smoke shows a dose-dependent association with acute rhinosinusitis care and with head and neck cancer incidence. No new estimates; the abstract gives no effect sizes, and the cited wildfire metrics are mostly modelled smoke PM$_{2.5}$. Relevance: indirect - the call for prospective mechanistic studies would benefit from personal or home PM$_{2.5}$ during smoke events.}
+{10.1097/aci.0000000000001202}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{New Mexico 597 paediatric decedents postmortem CT bone mineral density gestational AQI trimester}
+{Poorer Air Quality During Trimesters 2 and 3 of Gestation Is Associated With Decreased Bone Mineral Density in Childhood and Adolescence.}
+{Am J Hum Biol}
+{Postmortem CT scans of 597 paediatric decedents (6 months to 20.9 years) in New Mexico, 2011-2023, linked to county-level AQI and temperature during the 9 months before birth. Lower BMD was associated with poorer AQI in trimesters 2 and 3, trimester 2 being the candidate sensitive window; AQI was unrelated to porous cranial lesions and temperature extremes to either outcome. No effect sizes in the abstract. AQI is a composite dominated by whichever pollutant is worst on a day, assigned at county level, and a decedent sample is not representative of living children. Relevance: indirect - county AQI is the coarsest exposure surrogate; a pollutant-specific, address-level PM$_{2.5}$ estimate is the obvious next step.}
+{10.1002/ajhb.70356}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 3 records}{Clay}
+
+\paperentry{Reunion Island September 2017 biomass-burning aerosol layers lidar AERONET FTIR CO CAMS FLEXPART}
+{Vertically stratified long-range transport of biomass-burning aerosol over Reunion Island during September 2017}
+{Atmospheric Chemistry and Physics}
+{Case study of a September 2017 biomass-burning aerosol episode over Reunion Island combining AERONET, ground lidar, FTIR CO, MODIS, CALIOP, CAMS EAC4 and FLEXPART. AOD at 550 nm reached 0.16-0.42. Lidar resolved one layer at 2.8-4.7 km on 19 September (Angstrom 355/532 = 1.32 +/- 0.23) and two on 25 September: 3.3-5 km (1.45 +/- 0.12) and a drier 5-9 km layer (1.60 +/- 0.06). FLEXPART, checked against smoothed FTIR CO, attributes both to southern Africa with a South American contribution to the lower layer. Two days in one month; layers sit in the free troposphere, so surface PM implications are not addressed. Relevance: low - column/vertical context only; a reminder that column AOD in satellite-fusion models can be decoupled from surface PM.}
+{10.5194/acp-26-16151-2026}
+
+\paperentry{BTHS July 2020 WRF-Chem double-high PM$_{2.5}$ O$_3$ NOx-VOC perturbation meteorological regimes aerosol feedback}
+{Meteorological conditions and aerosol-meteorology feedback drive divergent responses of co-occurring PM 2.5 and O 3 pollution to NO x -VOC perturbations in Beijing-Tianjin-Hebei-Shandong}
+{Atmospheric Chemistry and Physics}
+{WRF-Chem for July 2020 over Beijing-Tianjin-Hebei-Shandong, classifying co-occurring PM$_{2.5}$/O$_3$ 'double high' days into five regimes by boundary-layer height, temperature and humidity. PM$_{2.5}$ was highest under Stable and WarmHumid (\textasciitilde{}46 $\mu$g\,m$^{-3}$) and lowest under DryHot (\textasciitilde{}40); O$_3$ highest under DryHot and Moderate (\textasciitilde{}163 $\mu$g\,m$^{-3}$). At 50\%/50\% NOx/VOC cuts, PM$_{2.5}$ fell 20.6\% (Stable) and 20.9\% (WarmHumid) but only 15.2\% (DryHot); O$_3$ fell 25.2\% (WarmHumid) and 23.3\% (DryHot). Aerosol-meteorology feedback amplified PM$_{2.5}$ reductions in the Stable and WarmHumid regimes. One month, one model, no reported evaluation statistics in the abstract. Relevance: low-moderate - regime-dependent control efficacy is testable with dense sensor networks resolving boundary-layer-driven PM variability.}
+{10.5194/acp-26-16225-2026}
+
+\paperentry{India AOD long-term trends Koppen climate regions regional disparities}
+{Long-term spatiotemporal trends and regional disparities in aerosol optical depth across Koppen climatic regions of India}
+{Atmospheric Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable. The record (Atmospheric Research; Tiwari, Gupta, Singh) analyses long-term AOD trends and regional disparities across Koppen climatic regions of India. No finding is asserted here. Relevance: indirect - stratifying AOD by climate regime is relevant to how AOD-to-PM$_{2.5}$ conversion should vary in satellite-fusion models.}
+{10.1016/j.atmosres.2026.109450}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 2 records}{Amber}
+
+\paperentry{Eastern China lake and coastal bay large-aperture scintillometer aerosol mass flux RMN(RH) PM$_{10}$ calibration}
+{First observations of aerosol mass fluxes over open water using a large-aperture scintillometer}
+{Atmospheric Measurement Techniques}
+{First large-aperture scintillometer (LAS) retrieval of path-averaged aerosol mass flux over open water, four campaigns at an inland lake and a coastal bay in eastern China. The aerosol (imaginary) and thermodynamic (real) refractive-index contributions were separated from the log-intensity spectrum, and the constant mass-to-optical conversion factor was replaced by a campaign-specific RMN(RH) calibrated against PM$_{10}$, visibility and RH; RMN fell consistently with humidity. Campaign-median flux magnitudes were 0.091-0.399 ug m-2 s-1, with daytime enhancement; dense coastal fog was the main operational limit. Magnitudes only (no sign), validation is against calculated dry deposition rather than eddy covariance, and n=4 campaigns. Relevance: moderate - the RH-dependent optical-to-mass conversion is the same hygroscopic problem that biases optical low-cost PM sensors.}
+{10.5194/amt-19-7467-2026}
+
+\paperentry{Low-cost PM sensor calibration hygroscopic growth factor Hungary AAQR}
+{Calibration of a Low-Cost Particulate Matter Sensor Using the Growing Factor}
+{Aerosol and Air Quality Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from Crossref or the harvest legs. The title states a calibration of a low-cost particulate matter sensor using the hygroscopic growth factor (Aerosol and Air Quality Research; Kiss, Kiss, Veres). No finding, sensor model or error metric is asserted here. Relevance: high - kappa-Kohler/growth-factor humidity correction is the physics-based alternative to purely empirical RH terms in LCS calibration; worth pulling the full text for R2/RMSE and sensor model.}
+{10.1007/s44408-026-00179-2}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 4 records}{Amber}
+
+\paperentry{Toulouse systematic review occupational pollutants arrhythmia atrial fibrillation lead CS2 solvents inhalable particles}
+{Cardiac Rhythm Disorders and Chronic Occupational Exposure to Pollutants: A Systematic Review.}
+{Cardiovasc Toxicol}
+{Systematic review of 21 studies on chronic occupational exposure (metals, solvents, aldehydes, amines, cyanides, plastics, acids, gases, pesticides) and cardiac arrhythmia. Lead, carbon disulfide, certain solvents and inhalable particles were associated with arrhythmias, chiefly atrial fibrillation; oxidative stress, cytotoxicity and inflammation are proposed as mechanisms. No pooled estimate, risk-of-bias grading or particle size fraction is reported in the abstract, so the particle signal cannot be separated from co-exposures in the source workplaces. Metadata gives no search dates or databases beyond 'several'. Relevance: low - occupational particle exposure is mentioned but not quantified; wearable PM monitoring in factories is the obvious missing exposure layer.}
+{10.1007/s12012-026-10186-9}
+
+\paperentry{Korea narrative review indoor air quality management COPD IPF nine-parameter action references}
+{Indoor Air Quality Management for Patients with COPD and IPF: Practical Recommendations Based on Current Standards and Evidence.}
+{Tuberc Respir Dis (Seoul)}
+{Focused narrative review proposing residential indoor air quality management rules for patients with COPD and idiopathic pulmonary fibrosis. Nine parameters were selected (PM$_{2.5}$, PM$_{10}$, NO$_2$, CO$_2$, formaldehyde, TVOC, CO, O$_3$, relative humidity), each with an action reference and a maintenance target that keep the source standard's averaging time; ambient forecast categories are used only for outdoor-driven pollutants. Recommendations: source control, forecast-guided ventilation, particle filtration and cooking/combustion control. The thresholds are explicitly not disease-specific clinical cut-offs, and no new exposure-response evidence is presented. Relevance: moderate - the framework presumes a home monitor reporting PM$_{2.5}$ and PM$_{10}$ at standard averaging times, exactly the use case for consumer-grade sensors, whose bias at high humidity is not addressed.}
+{10.4046/trd.2026.0134}
+
+\paperentry{GCARE review 60 studies indoor green infrastructure IEQ monitoring modelling VOC PM removal}
+{Monitoring and modelling of indoor environmental quality to guide indoor greening applications.}
+{Eco-Environment \& Health}
+{Review of 60 studies of passive (potted plants, green walls, indoor trees) and active (hydroponics, biofilters) indoor greening and indoor environmental quality. Passive systems typically cut VOCs 10-30\% and buffer temperature and humidity; active systems removed VOCs and PM more efficiently. 59\% of studies were laboratory, 33\% in situ, many with 6-48 h chamber runs; controlled settings overstate removal relative to real buildings, and descriptors and ventilation data are not standardised. Passive configurations reduced cooling demand 22-27\%. No PM removal rate is quantified in the abstract, and the evidence is dominated by short chamber tests with few taxa. Relevance: moderate - the review's main ask, long in-situ IEQ monitoring with ventilation logging, is a direct job for indoor low-cost PM/CO$_2$ nodes.}
+{10.1016/j.eehl.2026.100289}
+
+\paperentry{Air-conditioner filter dust primordial radionuclides geo-environmental controls dose assessment}
+{Geo-environmental controls on primordial radionuclides in air-conditioner filter dust: Source appraisals and dose-based assessment}
+{Atmospheric Pollution Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from PubMed, Europe PMC or Crossref. The record (Atmospheric Pollution Research; Abedin, Rahman, Khan) uses air-conditioner filter dust to appraise primordial radionuclide sources and dose. No finding is asserted here. Relevance: indirect - HVAC filters as passive integrating particle samplers are a known complement to real-time indoor PM sensors.}
+{10.1016/j.apr.2026.103286}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{GBD 2023 Ethiopia national subnational air pollution deaths DALYs ambient PM household solid fuel 1990-2023}
+{Mortality and Health Losses From Diseases Attributable to Air Pollution in Ethiopia, From 1990 to 2023.}
+{Environmental health insights}
+{GBD 2023 secondary analysis for Ethiopia, national and subnational, 1990-2023. In 2023 air pollution was attributed 139 deaths per 100,000 (95\% UI 106-177), 4,286 YLLs (3,475-5,107) and 4,557 DALYs per 100,000 (3,685-5,397); YLDs were driven by household solid fuels (247 per 100,000, UI 152-344). Addis Ababa had the highest ambient PM mortality (64 per 100,000, UI 43-88) and the lowest household air pollution mortality; Afar had the highest overall mortality (185, UI 137-232). Mortality rates were flat across 33 years while DALY rates fell. Every number inherits GBD's exposure surface, which in Ethiopia rests on very few ground monitors; the subnational contrasts are model outputs, not observations. Relevance: high in principle - Ethiopia is a textbook case where a low-cost network would constrain the ambient surface the burden depends on.}
+{10.1177/11786302261493677}
+
+\paperentry{Scopus 2020-2025 scientometric air pollution and cancer 3056 documents collaboration networks}
+{Air Pollution and Cancer Research Worldwide: Citation Dynamics, Emerging Trends, and Collaborative Networks.}
+{Biomed Res Int}
+{Scientometric analysis of 3,056 Scopus documents (1,401 sources) on air pollution and cancer published 2020-2025, using SciVal and Bibliometrix: output growth (13.3\% per year), CiteScore, SNIP, h-index, Bradford core journals, collaboration life-cycle and thematic evolution. The abstract does not report the leading themes, countries or networks in quantitative form. Bibliometrics counts papers, not evidence; it says nothing about effect sizes or exposure quality. Relevance: low - no exposure or measurement content.}
+{10.1155/bmri/7261607}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{16 November 2026}, single day (Monday). Harvester legs: \textbf{PubMed} health \textbf{6}, sensing \textbf{0}; \textbf{Europe PMC} \textbf{4}; \textbf{Crossref by ISSN} \textbf{47}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 403 on the harvester leg. 57 raw, 55 unique, 0 already carried, 55 fresh. PubMed connector (EDAT 16 November, health and instrumentation axes) 13 PMIDs (\texttt{\_conn\_1117.py}): 11 bucketed to 16 November and 2 to 15 November (unassigned, screened here), 6 appended --- \textbf{61 screened}. Abstracts: efetch/Europe PMC filled 10; Crossref recovered none of the three metadata-only records tried.
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check not run. No Amass or Consensus backfill this run.
+\textbf{15 admitted}, \textbf{46 rejected} with logged reasons (\texttt{\_rej\_1117\_16.py}). \textbf{3 carried on metadata alone}. Affiliations from PubMed XML; blank or "not stated" where the record carries none. Trial watch: see W46 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

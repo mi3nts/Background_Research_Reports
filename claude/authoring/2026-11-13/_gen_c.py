@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+# Records for 13 Nov issue, part C.
+R = {
+59: dict(short="ERA5 same-day meteorology PM2.5 onset next-day 75 ug/m3 crossing 12+6 Chinese cities logistic average precision transfer",
+  sub="SENS", design="Machine-learning model", pm="City daily PM2.5; next-day crossing above 75 ug/m3 from non-exceeding days",
+  geo="China (18 cities)", endpoint="Average precision for PM2.5 onset prediction", tier="B", basis="Not stated",
+  affil="Yanbian University, China; Yanbian University, China",
+  n=("Additive logistic models predicting next-day PM2.5 crossings above 75 ug/m3 among non-exceeding days in 12 development cities, trained 2016-2021, "
+     "selected on 2022 and frozen for evaluation to 16 Sep 2026. In 2023-2024 (7,651 city-days, 268 onsets) adding same-day ERA5 surface meteorology raised "
+     "average precision from 0.307 to 0.358, paired increment 0.050 (95 % calendar-block interval 0.020-0.088); co-pollutant enrichment cut the gain to 0.029, "
+     "boundary-layer height added nothing, and transfer to six further cities was not established (21 onsets in 2026, opposite-signed increments). "
+     "Reanalysis is not issuance-time forecast data, so operational value is overstated. Relevance: a sober benchmark - onset prediction from persistence "
+     "plus local meteorology barely transfers across cities, which argues for local sensor-fed baselines.")),
+70: dict(short="GBD 204 countries 17 climatic indicators 34 cancers Granger causality lag 4-5 years PM2.5 NO2 ozone most frequent",
+  sub="BURD", design="Ecological panel", pm="GBD/climate-indicator PM2.5, NO2 and ozone among 17 indicators",
+  geo="Global (204 countries)", endpoint="Incidence of all neoplasms and 34 cancer subtypes 1990-2021", tier="C", basis="Model (CTM / LUR / ML)",
+  affil="West China Hospital, Sichuan University, China; West China Hospital, Sichuan University, China",
+  n=("Cross-correlation and Granger causality between 17 climate-related indicators and incidence of all neoplasms and 34 cancer subtypes across 204 "
+     "countries, 1990-2021, with meta-analytic pooling and multiple-testing correction. Of 595 indicator-cancer pairs, 105 were significant; air pollution "
+     "(NO2, PM2.5, ozone) was the most frequently implicated category, with a predominant lag of 4-5 years. No PM-specific magnitude is given in the abstract. "
+     "Granger causality on smooth national trends is temporal precedence, not causation; both exposure and incidence series are themselves GBD model outputs "
+     "with shared covariates, and a 4-5 year lag is implausibly short for most solid-tumour latency. Relevance: none for measurement; noted as an "
+     "example of ecological signal mining that should not be cited as PM-cancer evidence.")),
+71: dict(short="ELSA-Brasil Sao Paulo 2715 adults NDVI greenness PM2.5 PM10 mediation HOMA-IR insulin resistance 8 years low NSES",
+  sub="CVM", design="Prospective cohort", pm="Residential PM2.5 and PM10 as mediators of greenness (NDVI quartiles)", geo="Brazil (Sao Paulo)",
+  endpoint="Insulin resistance (HOMA-IR), three waves 2008-2019", tier="B", basis="Not stated",
+  affil="Fundacao Oswaldo Cruz, Brazil; Oswaldo Cruz Institute, Fundacao Oswaldo Cruz, Brazil",
+  n=("2,715 non-diabetic ELSA-Brasil participants in Sao Paulo, three waves over ~8 years; mediation of the NDVI-HOMA-IR association by PM10 and PM2.5 "
+     "with exposure-mediator interaction, stratified by neighbourhood SES. In low-SES areas the top versus bottom greenness quartile lowered HOMA-IR "
+     "(total effect beta -0.49, -0.91 to -0.05; natural direct -0.59, -1.06 to -0.09), but the natural indirect effect through PM10 or PM2.5 was null. "
+     "No estimate for PM itself is reported. The exposure source and spatial resolution of PM are not given; within one megacity, a coarse PM surface "
+     "has too little contrast to carry a mediation path, so a null indirect effect is weakly informative. Relevance: mediation by PM needs "
+     "neighbourhood-resolved exposure - a natural application for a dense sensor grid.")),
+72: dict(short="UK Biobank 398697 metabolomic signatures PM2.5 PM10 NO2 NOx LASSO incident cholecystitis HR 1.12-1.19 mediation",
+  sub="OTHR", design="Prospective cohort", pm="Modelled annual PM2.5, PM10, NO2, NOx at baseline residence", geo="United Kingdom",
+  endpoint="Incident cholecystitis", tier="B", basis="Model (CTM / LUR / ML)",
+  affil="Beijing Friendship Hospital, China; Beijing Friendship Hospital, China",
+  n=("398,697 UK Biobank participants with 251 NMR plasma metabolites; pollutant-specific metabolic signatures built by LASSO, Cox models for incident "
+     "cholecystitis. Higher PM2.5, PM10, NO2, NOx and a composite score were each associated with higher risk (estimates not given in the abstract); "
+     "the signatures gave HR 1.12-1.19 (all P<0.001; increment and CIs not stated), and mediation proportions ranged 6.05-24.72 %, through albumin, creatinine, "
+     "VLDL and HDL lipids and omega-3. The signature is trained to predict modelled 2010 exposure from the same blood draw, so it inherits lifestyle and "
+     "metabolic confounding of the pollutants and its 'mediation' is partly circular. Relevance: none for measurement; UK Biobank exposure is a single "
+     "LUR snapshot.")),
+}

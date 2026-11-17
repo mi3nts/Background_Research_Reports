@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 26,
+ "trials": 30,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -378,6 +378,15 @@
    "hits": 0,
    "kept": 0,
    "note": "CT.gov 0. Amass 6 returned: NCT07924839 and NCT07925229 already carried; 4 off topic (exposure therapy, methotrexate, MEOPA PTSD, PEAPOD). 0 new."
+  },
+  {
+   "window": "2026-11-12 -> 2026-11-17",
+   "queried": "2026-11-17T05Z",
+   "source": "ClinicalTrials.gov MCP connector, search_trials; Amass TrialCore minCreateDate",
+   "filter": "condition/intervention air pollution|particulate matter|PM2.5|wildfire smoke|air purifier|HEPA x AREA[LastUpdatePostDate]RANGE[2026-11-11,2026-11-17]; Amass minCreateDate 2026-11-10",
+   "hits": 5,
+   "kept": 4,
+   "note": "CT.gov 3 (classroom purifiers NIPH; UPRISE ultrafine fetal; NYU HF purifiers), none previously carried. Amass 20: NCT07931820 BU low-cost monitor + messaging RCT new; NCT07924839/NCT07925229 carried; rest off topic. analyze_endpoints not run. Covers 12-16 Nov dailies (the interrupted 16 Nov 05Z run logged no window)."
   }
  ],
  "NCT05867381": {
@@ -524,7 +533,7 @@
   "start_date": "2026-11-15",
   "last_update": "updated in 4-12 Oct window (start moved 2026-09-15 -> 2026-11-15)",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV₁ Z-score at 40 months"
+   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },
@@ -934,5 +943,75 @@
   ],
   "start_date": "2025-06-18",
   "primary_completion": "2026-10-31"
+ },
+ "NCT07931820": {
+  "first_seen": "2026-11-17",
+  "title": "Translating Indoor Air Quality Data Into Action",
+  "status": "NOT_YET_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Boston University",
+  "enrollment": 120,
+  "interventions": [
+   "LCM-R (monitor + generic reminders)",
+   "LCM-I (monitor + personalized insights)",
+   "LCM-O (monitor only)"
+  ],
+  "conditions": [
+   "Environmental Exposure"
+  ],
+  "start_date": "2027-02-28",
+  "primary_completion": ""
+ },
+ "NCT07119333": {
+  "first_seen": "2026-11-17",
+  "title": "Classroom Air Purifiers for Reducing School Absence: cluster-randomized group sequential superiority trial",
+  "status": "ACTIVE_NOT_RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "Norwegian Institute of Public Health",
+  "enrollment": 72,
+  "interventions": [
+   "Air purifiers",
+   "Sham air purifiers"
+  ],
+  "conditions": [
+   "Absenteeism"
+  ],
+  "start_date": "2026-01-05",
+  "primary_completion": "2027-03-19"
+ },
+ "NCT05230784": {
+  "first_seen": "2026-11-17",
+  "title": "Effectiveness of Indoor Air Purifiers on Heart Failure Outcomes",
+  "status": "RECRUITING",
+  "study_type": "INTERVENTIONAL",
+  "phase": "NA",
+  "sponsor": "NYU Langone Health",
+  "enrollment": 600,
+  "interventions": [
+   "AirOk Air Purifier",
+   "Placebo Air Filter"
+  ],
+  "conditions": [
+   "Heart Failure"
+  ],
+  "start_date": "2024-03-06",
+  "primary_completion": "2028-02-29"
+ },
+ "NCT07238608": {
+  "first_seen": "2026-11-17",
+  "title": "UPRISE: Unravelling Ultrafine Particulate Matter and Micro Nano Plastic's Mechanisms of Impact on Fetal Health",
+  "status": "RECRUITING",
+  "study_type": "OBSERVATIONAL",
+  "phase": "",
+  "sponsor": "Alba Ruiz Gaitan",
+  "enrollment": 1600,
+  "interventions": [],
+  "conditions": [
+   "Pregnant Women"
+  ],
+  "start_date": "2026-01-01",
+  "primary_completion": "2029-12-31"
  }
 }

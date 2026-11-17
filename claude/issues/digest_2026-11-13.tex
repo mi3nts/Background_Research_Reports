@@ -1,0 +1,269 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{13 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-13\;\;\textcolor{Amber}{\textbar}\;\;Entry window 13 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;16 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{16}{RECORDS IN SCOPE\\(63 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{10}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Same-day ERA5 meteorology adds only 0.050 (0.020--0.088) average precision to next-day PM$_{2.5}$ onset prediction in 12 Chinese cities (0.307 to 0.358, 268 onsets), shrinks to 0.029 once co-pollutants enter, and does not transfer to six further cities.}\\[1.4mm]
+\footnotesize
+Yanbian University, \textit{Atmosphere}; additive logistic models for next-day crossings above 75\,$\mu$g/m$^3$ among currently non-exceeding days, trained 2016--2021, selected on 2022 and frozen for evaluation to 16 September 2026 (7,651 city-days in 2023--2024). Boundary-layer height added nothing further; in the six transfer cities pooled and within-city increments had opposite signs on 21 onsets.
+\textbf{Where it is weak:} reanalysis is not what a forecaster has at issuance, so even the 0.05 gain is an upper bound; the transfer panel is a partial year with very few events.
+\textbf{Why it matters here:} the information in an onset forecast sits mostly in the local baseline, not in gridded meteorology --- an argument for locally validated, sensor-fed baselines rather than a single national model.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{No effect estimate with a CI today.} Sixteen records span all ten bands, but none reports a PM effect with an interval: KNHANES lipid shifts per IQR (TC +1.17, TG +4.99, HDL-C $-$1.72\,mg/dL) come without CIs, the UK Biobank cholecystitis signatures give HR 1.12--1.19 without increment or interval, and the Ghana cooking-fuel odds ratios are inverted (blood value predicting fuel). The forest plot is absent by design.
+
+\item \textbf{A haze season with no surface data.} A Jakarta preprint sets CAMS-modelled PM$_{2.5}$ (42.7 to 50.3\,$\mu$g/m$^3$, ``not station-confirmed'') beside national influenza A positivity (10.4\,\% to 60.8\,\%) and concludes, correctly, that nothing can be attributed to smoke.
+
+\item \textbf{Exposome breadth versus PM depth.} HELIX (586 mother--child pairs, $\sim$200 exposures, 11 outcomes) names indoor air pollution among the ``master regulators'' persisting into adolescence; no ambient PM estimate is reported. ELSA-Brasil finds greenness lowers HOMA-IR in low-SES S\~ao Paulo with no mediation through PM$_{2.5}$ or PM$_{10}$.
+
+\item \textbf{Ecology and GBD repackaging.} A US county GWR finds PM$_{2.5}$--lung cancer slopes that vary by county; two GBD 2021 secondary analyses attribute 14.92\,\% of youth ICH DALYs to ambient PM; a 204-country Granger analysis ranks air pollution as the indicator most often ``preceding'' cancer incidence. None adds exposure data.
+
+\item \textbf{Exposure basis (x1).} No record rests on a low-cost sensor; one (KNHANES) on regulatory monitors. Of the 10 health-side records with a recoverable basis, 30\,\% are measured (the KNHANES province averages and the two laboratory exposures), 60\,\% modelled or satellite-fused (UK Biobank, the county GWR, Jakarta CAMS, three GBD-derived analyses) and 10\,\% proxy (Ghana fuel type). \emph{Today's human health evidence is almost entirely modelled or proxied}.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 12 November issue closed the day before. This issue was built on the \textbf{16 November 05:40 UTC (23:40 CST 15 November) run}. After 22:00 CST the newest buildable day is the current day, so this run owes \textbf{12, 13, 14 and 15 November as four issues} plus the \textbf{W46 weekly (8--14 November)}; \textbf{13 November is covered in full}. Friday: no rollup is owed on this date. A cross-day pass assigned 11 records that resurfaced today to the 12 November issue. No \textsc{backfill} records today. OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session, and Scite was not run.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 16 records, all ten bands occupied: two each for cardiovascular/metabolic, reproductive, respiratory, occupational \& indoor, mechanistic and other clinical; one each for exposure assessment, sensing, burden and neuro/mental health.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: 5 ecological (county GWR, Jakarta, the 204-country Granger panel and two GBD secondary analyses), 3 cohorts, 2 cross-sectional, 2 experimental, and one each measurement campaign, metadata-only, modelling (the ERA5 onset model) and review. Right --- all 16 endpoints are singletons; two are measurement outcomes (indoor PM dose, onset-prediction skill) and one is the metadata-only source-apportionment record.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ and PM$_{10}$ jointly 6, PM$_{2.5}$ only 5, unspeciated PM or emissions 5. Right --- geography: global or multi-region 4 (Granger panel, review, two GBD analyses), Europe 3, East Asia outside China 3 (all Korea), Southeast Asia 2, and one each for China, North America, Latin America and sub-Saharan Africa.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. Preconception/in utero: HELIX prenatal exposures and the GBD neonatal encephalopathy analysis; childhood: HELIX at 6--11 years and the Lampang childcare centres (under-3s); adolescence: HELIX at 12--18 and the GBD youth ICH analysis (15--49); working age: KNHANES lipids, the Tamale cooking-fuel women, ELSA-Brasil and UK Biobank. No older-adult-specific record.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. The ecological column is the widest (respiratory 2, reproductive, burden and neuro one each); cohorts sit in cardiovascular/metabolic, reproductive and other clinical; both experimental records are mechanistic. Sensing and exposure assessment hold one record each, in modelling and metadata-only.}\end{minipage}
+
+\vspace{2mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}\textbf{No forest plot this issue.} No admitted abstract reports a PM effect estimate with a confidence interval: the KNHANES lipid changes per IQR carry no CI; the UK Biobank metabolic-signature hazard ratios (1.12--1.19) give neither increment nor interval; the Ghana adjusted odds ratios model fuel category as the outcome of blood counts; the ELSA-Brasil intervals belong to greenness, not PM. The f5 panel is absent by design, not by failure.}
+
+\vspace{4mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Neuro / mental health\hfill 1 record}{Deep}
+
+\paperentry{GBD 2021 intracerebral haemorrhage youth 15-49 attributable risks ambient PM 14.92 \% household solid fuel 14.64 \% DALYs}
+{Global, Regional, and National Burden of Intracerebral Hemorrhage and Its Attributable Risk Factors in Youth from 1990 to 2021: A Global Burden of Disease Study.}
+{Neuroepidemiology}
+{GBD 2021 secondary analysis of intracerebral haemorrhage in people aged 15-49: 610,000 cases, 260,000 deaths and 13.79 million DALYs in 2021, age-standardised rates falling since 1990 while counts rose. About 79.68 \% of age-standardised DALYs were attributable to listed risks; ambient particulate matter accounted for 14.92 \% and household solid-fuel air pollution 14.64 \%, behind systolic blood pressure (46.59 \%) and smoking (21.37 \%). Uncertainty intervals are not quoted in the abstract. Attributable fractions are not additive and are entirely determined by GBD's exposure surfaces and IER-type risk curves; repackaging them by age band adds no new data. Relevance: low - burden numbers rest on satellite-fused PM surfaces with thin ground truth in exactly the regions that dominate the youth ICH burden.}
+{10.1159/000549426}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Cardiovascular \& metabolic\hfill 2 records}{Teal}
+
+\paperentry{KNHANES 2016-2023 province-level annual PM$_{2.5}$ PM$_{10}$ blood lipids per IQR dyslipidemia effect modification Korea}
+{Ambient particulate matter and blood lipids: Effect modification by dyslipidemia.}
+{Arch Environ Occup Health}
+{Survey-weighted regression in nationally representative KNHANES adults (2016-2023; analytic n not given in the abstract). Per IQR PM$_{2.5}$ (5.00 $\mu$g\,m$^{-3}$): total cholesterol +1.17 mg/dL, triglycerides +4.99 mg/dL, non-HDL-C +2.89 mg/dL, HDL-C -1.72 mg/dL; PM$_{10}$ (IQR 9.00 $\mu$g\,m$^{-3}$) similar. Diagnosed dyslipidemia modified the association for TC, TG, non-HDL-C and LDL-C; results held after excluding Asian-dust days and extra cardiometabolic adjustment. No CIs are reported in the abstract. The decisive weakness is exposure contrast: one annual value per province-year gives at most a few dozen exposure levels, so between-province confounding (diet, statin use, survey wave) is indistinguishable from PM. Relevance: a lipid shift of this size cannot be resolved with province averages; it is the kind of association that dense sensor-derived residential exposure would sharpen or dissolve.}
+{10.1080/19338244.2026.2762764}
+
+\paperentry{ELSA-Brasil Sao Paulo 2715 adults NDVI greenness PM$_{2.5}$ PM$_{10}$ mediation HOMA-IR insulin resistance 8 years low NSES}
+{Greenness, Air Pollution, and Insulin Resistance in a Latin American Megacity: A Longitudinal Mediation Analysis of the ELSA-Brasil Cohort .}
+{J Urban Health}
+{2,715 non-diabetic ELSA-Brasil participants in Sao Paulo, three waves over \textasciitilde{}8 years; mediation of the NDVI-HOMA-IR association by PM$_{10}$ and PM$_{2.5}$ with exposure-mediator interaction, stratified by neighbourhood SES. In low-SES areas the top versus bottom greenness quartile lowered HOMA-IR (total effect beta -0.49, -0.91 to -0.05; natural direct -0.59, -1.06 to -0.09), but the natural indirect effect through PM$_{10}$ or PM$_{2.5}$ was null. No estimate for PM itself is reported. The exposure source and spatial resolution of PM are not given; within one megacity, a coarse PM surface has too little contrast to carry a mediation path, so a null indirect effect is weakly informative. Relevance: mediation by PM needs neighbourhood-resolved exposure - a natural application for a dense sensor grid.}
+{10.1007/s11524-026-01163-2}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{JNCI US county ecological GWR PM$_{2.5}$ 2005-2014 lung cancer incidence 2018-2022 spatial heterogeneity Getis-Ord}
+{Geographic Variation In Long-Term PM$_{2.5}$ Exposure and Lung Cancer Incidence in the United States.}
+{J Natl Cancer Inst}
+{County-level ecological analysis: CDC lung cancer incidence 2018-2022 against AHRF annual PM$_{2.5}$ for 2005-2009 and 2010-2014, adjusted for poverty, race, education and smoking prevalence. PM$_{2.5}$ was positively associated with incidence in both windows; geographically weighted regression fitted better than OLS (AICc 20,892 vs 21,810 and 20,883 vs 21,847) and the local PM$_{2.5}$ coefficients varied across counties. No coefficient magnitude or interval is reported in the abstract. County smoking prevalence cannot adjust for individual smoking history, the dominant lung cancer cause, and GWR local coefficients are notoriously unstable under collinearity; the authors themselves call the map exploratory. Relevance: spatially varying slopes are partly exposure-error artefacts of coarse county surfaces - a testable claim where sensor networks give within-county contrast.}
+{10.1093/jnci/djag442}
+
+\paperentry{Research Square Jakarta 2026 haze season CAMS PM$_{2.5}$ ECMWF weather influenza A positivity forecast beta-binomial}
+{Respiratory Illness, Weather and Air Pollution in Greater Jakarta During Indonesia's Fire and Haze Season: An Ecological Assessment With National Influenza Forecasting}
+{Research Square}
+{Preprint, single author. 92 days (16 Jul-16 Oct 2026) of ECMWF IFS weather and CAMS PM$_{2.5}$ for Jakarta set against 13 national influenza surveillance reports. Modelled PM$_{2.5}$ rose from 42.7 to 50.3 $\mu$g\,m$^{-3}$ between windows - explicitly not station-confirmed - while national influenza A positivity rose from 10.4 \% to 60.8 \%; a beta-binomial state model projected 72 \% (95 \% PI 49-89 \%) for the week ending 24 Oct. The author states the data cannot support a smoke-attributable burden; the surveillance denominator changed between reports, and national positivity is not Jakarta incidence. Weak inference throughout. Relevance: a fire-haze season analysed with no surface PM data at all - exactly the gap a dense low-cost network around Jakarta would close.}
+{10.21203/rs.3.rs-11400629/v1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 2 records}{Sage}
+
+\paperentry{HELIX 586 mother-child pairs \textasciitilde{}200 prenatal childhood exposures outcome-wide exposome indoor air pollution persisting adolescence}
+{The persistent multidomain health effects of the early-life exposome.}
+{Sci Adv}
+{HELIX European pediatric exposome: 586 mother-child pairs, nearly 200 prenatal and childhood exposures (air pollutants, chemicals, lifestyle, built environment) tested against 11 outcomes in four domains at 6-11 and 12-18 years by an outcome-wide, exposure-wide design. A small set of 'master regulator' exposures - maternal smoking, indoor air pollution, endocrine disruptors, diet and urban factors - affected several domains, with effects persisting into adolescence; results are released as an open interactive atlas. The abstract gives no PM-specific estimate, so ambient particulate matter is not shown to be among the persistent drivers. With 586 pairs and \textasciitilde{}2,200 exposure-outcome tests, power for any single PM association is low and false-discovery control dominates. Relevance: indoor air pollution emerging as a cross-domain driver argues for indoor sensing in child cohorts.}
+{10.1126/sciadv.aec2089}
+
+\paperentry{GBD 2021 neonatal encephalopathy birth asphyxia trauma 204 countries SDI EAPC attributable ambient PM rising household air falling}
+{Global, Regional, and National Burden of Neonatal Encephalopathy due to Birth Asphyxia and Trauma, Its Attributable Risk Factors, 1990-2021: Results from the Global Burden of Disease Study 2021.}
+{Neuroepidemiology}
+{GBD 2021 analysis of neonatal encephalopathy due to birth asphyxia and trauma: prevalent cases rose from 446,841 to 508,909 (1990-2021) while deaths fell 31.0 \% to 568,255; low-SDI regions gained 112.9 \% in cases and Western sub-Saharan Africa 151.7 \%. Low birth weight and short gestation led the attributable risks; the attributable share of household solid-fuel air pollution fell while that of ambient particulate matter rose, magnitudes not given in the abstract. PM enters only through GBD's LBW/short-gestation pathway, so it is a modelled risk channel, not an observed association. Relevance: low; records the shift from household to ambient PM in the neonatal burden, a shift driven by GBD's own exposure surfaces.}
+{10.1159/000548682}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 2 records}{Violet}
+
+\paperentry{Korean red ginseng mice 12-week PM$_{2.5}$ intestinal barrier TLR4 NF-kB gut microbiota SCFA protection}
+{Korean red ginseng (Panax ginseng Meyer) mitigates PM$_{2.5}$-induced intestinal damage through regulation of inflammatory signaling and gut microbiota.}
+{Food Sci Biotechnol}
+{Mice exposed to PM$_{2.5}$ for 12 weeks with or without oral Korean red ginseng extract (characterised by UPLC-Q-TOF/MS). PM$_{2.5}$ raised colonic malondialdehyde, depleted glutathione and SOD, reduced ZO-1, occludin and claudin-1, activated TLR-4/NF-kB and disrupted microbiota and faecal short-chain fatty acids; ginseng attenuated each. No PM dose, particle source, route or group size is given in the abstract, so the exposure cannot be placed against ambient levels, and the microbiota-barrier-inflammation links are correlational. A supplement-efficacy design tells little about PM toxicity beyond confirming the gut-barrier phenotype. Relevance: indirect - adds to the gut arm of PM toxicology; no measurement content.}
+{10.1007/s10068-026-02306-6}
+
+\paperentry{Human tonsil and nasal turbinate mesenchymal stem cells PM exposure mitochondrial respiration differentiation ToF-SIMS Fe Mg}
+{Mitochondrial Dysfunction Associated with Particulate Matter-Derived Iron and Magnesium Impairs the Regenerative Potential of Human Upper Airway Stem Cells.}
+{Tissue Eng Regen Med}
+{Human tonsil-derived and nasal-turbinate-derived mesenchymal stem cells exposed to PM: cytotoxicity, organelle abnormalities and impaired mitochondrial respiration in both, altered adipogenic, chondrogenic and osteogenic differentiation (TMSCs more susceptible; selective osteogenic suppression in NTSCs). ToF-SIMS located PM-associated Fe+ and Mg+ signals near the cell surface, coinciding with altered mitochondrial morphology; the authors state this does not establish metal-specific mediation. No PM type, concentration or replicate number is given in the abstract, so dose relevance is unknown. Relevance: indirect - upper-airway repair capacity as a PM target; composition (Fe) is what optical sensors cannot see.}
+{10.1007/s13770-026-00853-x}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 1 record}{Clay}
+
+\paperentry{Barcelona organic aerosol sources PM$_{2.5}$ PM$_{10}$ size fractions non-targeted molecular characterization metadata only}
+{Assessing Organic Aerosol Sources Across PM$_{2.5}$ and PM$_{10}$ Size Fractions in Barcelona via Non-Targeted Molecular Characterization}
+{Atmospheric Environment}
+{\textsc{metadata only.} Metadata only: Crossref deposit without abstract (Atmospheric Environment). The title indicates non-targeted molecular characterisation of organic aerosol in PM$_{2.5}$ and PM$_{10}$ in Barcelona to apportion sources by size fraction. No sample count, period, method or result is recoverable from the record, and no finding is asserted here. Carried because size-resolved organic source apportionment in a southern European city bears on how optical sensors, which respond differently to fine and coarse organic mass, should be corrected. Revisit when the abstract is deposited.}
+{10.1016/j.atmosenv.2026.122495}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 1 record}{Amber}
+
+\paperentry{ERA5 same-day meteorology PM$_{2.5}$ onset next-day 75 $\mu$g\,m$^{-3}$ crossing 12+6 Chinese cities logistic average precision transfer}
+{Added Value and Geographic Transferability of Same-Day ERA5 Reanalysis for PM$_{2.5}$ Onset Prediction Across Chinese Cities}
+{Atmosphere}
+{Additive logistic models predicting next-day PM$_{2.5}$ crossings above 75 $\mu$g\,m$^{-3}$ among non-exceeding days in 12 development cities, trained 2016-2021, selected on 2022 and frozen for evaluation to 16 Sep 2026. In 2023-2024 (7,651 city-days, 268 onsets) adding same-day ERA5 surface meteorology raised average precision from 0.307 to 0.358, paired increment 0.050 (95 \% calendar-block interval 0.020-0.088); co-pollutant enrichment cut the gain to 0.029, boundary-layer height added nothing, and transfer to six further cities was not established (21 onsets in 2026, opposite-signed increments). Reanalysis is not issuance-time forecast data, so operational value is overstated. Relevance: a sober benchmark - onset prediction from persistence plus local meteorology barely transfers across cities, which argues for local sensor-fed baselines.}
+{10.3390/atmos17111123}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Lampang Thailand early childhood centres indoor PM$_{2.5}$ PM$_{10}$ natural ventilation vs air-conditioning TWA5h dose under-3s}
+{Indoor air quality and particulate matter exposure in early childhood centres under natural ventilation and air-conditioned operation in Lampang, Thailand.}
+{Dialogues Health}
+{Eight comparison units in early childhood development centres, non-haze season, children under 3: morning natural ventilation versus afternoon air-conditioned operation, PM$_{2.5}$ and PM$_{10}$ converted to 5-h TWA, inhaled mass and weight-normalised dose. PM$_{2.5}$ was lower under air-conditioning in all eight units, PM$_{10}$ in seven; CO$_2$ was higher in all eight; PM$_{10}$ dose exceeded PM$_{2.5}$ dose everywhere. No concentrations, instrument or sample duration are given in the abstract. Ventilation mode is perfectly confounded with time of day and outdoor measurements were incomplete, as the authors state, so the contrast cannot be assigned to ventilation. Relevance: the classic indoor trade-off (particles down, CO$_2$ up) that combined low-cost PM/CO$_2$ monitors are built to manage in childcare settings.}
+{10.1016/j.dialog.2026.100369}
+
+\paperentry{Tamale Ghana 100 women cooking fuel LPG charcoal firewood thyroid TSH fT3 WBC neutrophils aOR cross-sectional}
+{Association of Domestic Cooking Fuel Use, Thyroid Function and Complete Blood Count Among Adult Women: A Cross-Sectional Study.}
+{FASEB bioAdvances}
+{100 adult women in two Tamale communities stratified by fuel (LPG/electricity 40, charcoal 27, firewood 33), single venous sample. Crude TSH and fT3 were lowest in firewood users (TSH median 1.15 vs 1.73 mIU/L in LPG; fT3 4.60 vs 5.25 pmol/L) but the thyroid associations vanished after adjustment; higher WBC (aOR 2.49, 1.04-5.96) and neutrophils (aOR 4.17, 1.05-16.57) remained associated with charcoal use. The model is inverted - blood values predict fuel category - so the odds ratios are not exposure effects, and with 27 charcoal users the intervals are wide. No PM was measured. Relevance: fuel type is a crude proxy; kitchen PM sensors would turn this into an exposure-response design.}
+{10.1096/fba.2026-00269}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{GBD 204 countries 17 climatic indicators 34 cancers Granger causality lag 4-5 years PM$_{2.5}$ NO$_2$ ozone most frequent}
+{Lagged associations between climate-related indicators and cancer incidence: a global spatiotemporal analysis.}
+{Int J Health Geogr}
+{Cross-correlation and Granger causality between 17 climate-related indicators and incidence of all neoplasms and 34 cancer subtypes across 204 countries, 1990-2021, with meta-analytic pooling and multiple-testing correction. Of 595 indicator-cancer pairs, 105 were significant; air pollution (NO$_2$, PM$_{2.5}$, ozone) was the most frequently implicated category, with a predominant lag of 4-5 years. No PM-specific magnitude is given in the abstract. Granger causality on smooth national trends is temporal precedence, not causation; both exposure and incidence series are themselves GBD model outputs with shared covariates, and a 4-5 year lag is implausibly short for most solid-tumour latency. Relevance: none for measurement; noted as an example of ecological signal mining that should not be cited as PM-cancer evidence.}
+{10.1186/s12942-026-00486-2}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Other clinical endpoints\hfill 2 records}{Slate}
+
+\paperentry{UK Biobank 398697 metabolomic signatures PM$_{2.5}$ PM$_{10}$ NO$_2$ NOx LASSO incident cholecystitis HR 1.12-1.19 mediation}
+{Association of metabolic signatures of air pollution with cholecystitis: a large prospective cohort study.}
+{Metabolomics}
+{398,697 UK Biobank participants with 251 NMR plasma metabolites; pollutant-specific metabolic signatures built by LASSO, Cox models for incident cholecystitis. Higher PM$_{2.5}$, PM$_{10}$, NO$_2$, NOx and a composite score were each associated with higher risk (estimates not given in the abstract); the signatures gave HR 1.12-1.19 (all P<0.001; increment and CIs not stated), and mediation proportions ranged 6.05-24.72 \%, through albumin, creatinine, VLDL and HDL lipids and omega-3. The signature is trained to predict modelled 2010 exposure from the same blood draw, so it inherits lifestyle and metabolic confounding of the pollutants and its 'mediation' is partly circular. Relevance: none for measurement; UK Biobank exposure is a single LUR snapshot.}
+{10.1007/s11306-026-02561-y}
+
+\paperentry{Narrative review pollution autoimmunity RA SLE systemic sclerosis vasculitis PM$_{2.5}$ NO$_2$ iBALT citrullination AhR Th17}
+{The ecology of autoimmunity: Influence of pollution on the development of polygenic autoimmune diseases.}
+{Semin Arthritis Rheum}
+{Narrative review of pollution and the onset of rheumatoid arthritis, JIA, SLE, systemic sclerosis, inflammatory myopathies, ANCA vasculitis and membranous nephropathy, adult and childhood onset separately. It highlights a nationwide Italian cohort in which PM$_{2.5}$ above 20 $\mu$g\,m$^{-3}$ carried 13 \% higher autoimmune risk and each 10 $\mu$g\,m$^{-3}$ PM$_{10}$ 7 \% (intervals not quoted in the abstract), and finds associations most consistent for PM$_{2.5}$ and NO$_2$ in adult RA and SLE; childhood evidence is thin. Mechanisms proposed: inducible bronchus-associated lymphoid tissue, citrullination, AhR-driven Th17 skew. Not systematic, so selection of cohorts is unaudited. Relevance: indirect - autoimmune onset is a long-latency outcome where exposure misclassification from coarse surfaces biases towards the null.}
+{10.1016/j.semarthrit.2026.153102}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{13 November 2026}, single day (Friday). Harvester legs: \textbf{PubMed} health \textbf{8}, sensing \textbf{0}; \textbf{Europe PMC} \textbf{26}; \textbf{Crossref by ISSN} \textbf{49}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 429 on the harvester leg. 83 raw, 82 unique, 0 already carried, 82 fresh. PubMed connector (EDAT 12--15 November, three axes) 53 PMIDs (\texttt{\_conn\_1116.py}), 14 bucketed to 13 November, 1 seen, 9 appended (91); cross-day pass removed 1 previously rejected or carried record and 11 already in the 12 November set --- \textbf{79 screened}. Abstracts: efetch filled 15 of 15 PMID records; Crossref/Semantic Scholar recovered none of the remaining Crossref records.
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check not run. No Amass or Consensus backfill this run.
+\textbf{16 admitted}, \textbf{63 rejected} with logged reasons (\texttt{\_rej\_1116\_13.py}). \textbf{1 carried on metadata alone}. Affiliations from PubMed XML and Crossref (OpenAlex unavailable); blank where neither carries one. Trial watch: see W46 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

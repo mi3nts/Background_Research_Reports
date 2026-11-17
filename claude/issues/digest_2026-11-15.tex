@@ -1,0 +1,174 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{15 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-15\;\;\textcolor{Amber}{\textbar}\;\;Entry window 15 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;4 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{RECORDS IN SCOPE\\(15 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{3}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}China's 2026 PM$_{2.5}$ standard (GB 3095-2026, 35 to 25\,$\mu$g/m$^3$ annual) would, at full compliance in 2024, avert 4.3 times the deaths that compliance with the old limit would, lifting PM$_{2.5}$-specific progress toward the WHO 2040 halving target from 66.2\,\% to 83.4\,\%.}\\[1.4mm]
+\footnotesize
+Peking University, \textit{Environmental Science and Ecotechnology}; comparative risk assessment on gridded PM$_{2.5}$ and population, 2013--2024, cause-specific exposure--response functions. Gains concentrate in COPD, stroke, lung cancer, lower respiratory infection and IHD; dementia and type 2 diabetes barely move.
+\textbf{Where it is weak:} a counterfactual, not an observed mortality change --- the 4.3$\times$ ratio is set by the shape of the exposure--response functions between 25 and 35\,$\mu$g/m$^3$, and the abstract gives neither absolute deaths nor uncertainty intervals.
+\textbf{Why it matters here:} enforcement at 25\,$\mu$g/m$^3$ moves the regulatory margin into the range where uncorrected low-cost sensor bias (humidity, composition) is a large fraction of the exceedance being judged.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Sunday floor.} Four records from 19 screened; 15 off topic (ozone climatology, heat, building physics, aquatic virology). Two of the four are Crossref deposits with no abstract.
+
+\item \textbf{Household fuel in East Africa.} GBD 2023 secondary analysis: stroke attributable to all risks 110,013 deaths in Eastern Sub-Saharan Africa in 2023; environmental risks 4,146 DALYs per 100,000 (2,621--5,668), household air pollution third among single risks, no significant decline since 1990. All model output; household and ambient PM are not separated in the abstract.
+
+\item \textbf{Particles mass sensors do not see.} Metadata-only deposits on airborne microplastics during northwest-China winter haze and on ultrafine particles in subway station offices under different ventilation modes --- both particle classes outside what Plantower-class optical mass sensors report.
+
+\item \textbf{Exposure basis (x1).} Both health-side records (the NAAQS risk assessment and the GBD stroke analysis) rest on modelled exposure; nothing today is measured and no record uses a low-cost sensor. No effect estimate with a CI was reported, so there is no forest plot.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 14 November issue closed the day before. This issue was built on the \textbf{16 November 05:40 UTC (23:40 CST 15 November) run}. After 22:00 CST the newest buildable day is today, so this run owes \textbf{12, 13, 14 and 15 November as four issues} plus the \textbf{W46 weekly (8--14 November, filed under Saturday 14 November)}; \textbf{15 November is covered in full}. Sunday: no rollup falls today; \textbf{W47 (15--21 November) is due on Saturday 21 November}. A cross-day pass assigned 12 records that resurfaced today to earlier issues. No \textsc{backfill} records today. OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session, and Scite was not run.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the four records across three bands: burden, policy \& mitigation 2 (China NAAQS risk assessment, East African stroke burden), exposure assessment 1 (microplastics in haze, metadata only), occupational \& indoor 1 (subway-office ultrafines, metadata only).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: two modelling records (the NAAQS comparative risk assessment and the GBD stroke analysis) and two metadata-only records. Right --- endpoints: the two metadata-only records, and one each for cause-specific attributable mortality and attributable stroke deaths and DALYs.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric as classified from the record fields: unspeciated PM 3 (the two metadata-only records and the GBD stroke analysis), PM$_{2.5}$ only 1 (the NAAQS assessment). Right --- geography: China 3 (one by author inference), sub-Saharan Africa 1.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows: working age carries the two burden analyses; older adults the stroke burden (55+ emphasis). No preconception, childhood or adolescent record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture: burden, policy \& mitigation holds both modelling records; the exposure and occupational \& indoor rows are one metadata-only record each. No cohort, trial or measurement campaign today.}\end{minipage}
+
+\vspace{2mm}
+
+
+
+\vspace{4mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Exposure assessment \& modelling\hfill 1 record}{Clay}
+
+\paperentry{Xiao Du northwest China megacity winter haze atmospheric microplastics long-range transport}
+{Pollution characteristics and long-range transport of atmospheric microplastics during winter haze episodes in a megacity of northwest China}
+{Atmospheric Pollution Research}
+{\textsc{metadata only.} Metadata only: no abstract in the Crossref deposit at issue time. Atmospheric Pollution Research paper on pollution characteristics and long-range transport of airborne microplastics during winter haze episodes in a northwest China megacity (first author Xiao, last author Du). No finding is asserted here. Relevance: indirect - microplastic fibres are a particle class optical PM sensors neither size nor count reliably; recheck for an abstract in the weekly sweep.}
+{10.1016/j.apr.2026.103273}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 1 record}{Amber}
+
+\paperentry{Guan Huang subway station offices environmental control system operation modes ultrafine particles field experiment}
+{Impacts of environmental control system operation modes on ultrafine particle pollution in subway station offices: A field experimental study}
+{Building and Environment}
+{\textsc{metadata only.} Metadata only: no abstract in the Crossref deposit at issue time. Building and Environment field experiment on how environmental control system operation modes affect ultrafine particle pollution in subway station offices (first author Guan, last author Huang). No finding is asserted here. Relevance: indirect - ultrafine number is invisible to Plantower-class mass sensors, so ventilation-mode effects of this kind are outside what distributed low-cost networks report; recheck in the weekly sweep.}
+{10.1016/j.buildenv.2026.115576}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{Peking University China GB 3095-2026 NAAQS 25 $\mu$g\,m$^{-3}$ halving target PM$_{2.5}$ attributable mortality comparative risk assessment 2013-2024}
+{Halving PM$_{2.5}$ mortality by 2040: China's tightened air quality standard and residual disease burdens.}
+{Environ Sci Ecotechnol}
+{Comparative risk assessment for mainland China, 2013-2024, combining gridded PM$_{2.5}$, gridded population and cause-specific exposure-response functions, scored against the WHO 2040 halving target and China's 2026 revision of the annual PM$_{2.5}$ standard (GB 3095-2026) from 35 to 25 $\mu$g\,m$^{-3}$. In 2024, full compliance with 25 $\mu$g\,m$^{-3}$ would avert 4.3 times as many deaths as compliance with 35 $\mu$g\,m$^{-3}$, and PM$_{2.5}$-specific progress toward halving rises from 66.2\% to 83.4\%. Gains concentrate in COPD, stroke, lung cancer, LRI and IHD; dementia and type 2 diabetes respond little, and the dementia function is weakly supported. The abstract gives no absolute deaths or uncertainty intervals; the result is a counterfactual inherited from the chosen exposure-response shapes, not observed mortality change. Relevance: compliance below 25 $\mu$g\,m$^{-3}$ is a range where low-cost sensor bias and humidity error become a large fraction of the margin being regulated.}
+{10.1016/j.ese.2026.100781}
+
+\paperentry{Arba Minch Bule Hora GBD 2023 Eastern Sub-Saharan Africa stroke attributable burden household air pollution 1990-2023}
+{Burden of stroke attributable to environmental, behavioral, and metabolic risk factors in Eastern Sub-Saharan Africa, from 1990 to 2023.}
+{J Med Access}
+{Secondary analysis of GBD 2023 for Eastern Sub-Saharan Africa. In 2023, stroke attributable to all risk factors accounted for 110,013 deaths (359 per 100,000; 95\% UI 275-449) and 7,702 DALYs per 100,000 (6,043-9,495). Environmental risks contributed 4,146 DALYs per 100,000 (2,621-5,668), behind metabolic (6,286) and ahead of behavioural (2,505); household air pollution ranked third among single risks after systolic blood pressure and diet. No significant annualised decline in any risk category from 1990 to 2023. The abstract does not separate household from ambient PM within the environmental category, and every number is a GBD model output with sparse local monitoring or cohort input for this region. Relevance: the household-fuel PM term in East Africa rests on fuel-use proxies; kitchen-level sensor data are what would calibrate it.}
+{10.1177/27550834261493111}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{15 November 2026}, single day (Sunday). Harvester legs: \textbf{PubMed} health \textbf{7}, sensing \textbf{1}; \textbf{Europe PMC} \textbf{16}; \textbf{Crossref by ISSN} \textbf{13}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 429 on the harvester leg. 37 raw, 31 unique, 1 already carried, 30 fresh. PubMed connector (EDAT 12--15 November, three axes) 53 PMIDs (\texttt{\_conn\_1116.py}), 2 bucketed to 15 November, 1 appended (31); cross-day dedupe moved 12 records to earlier issues --- \textbf{19 screened}. Abstracts: efetch filled 2 of 2 PMID records; Crossref/Semantic Scholar recovered none of the Crossref records tried.
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check not run. No Amass or Consensus backfill this run.
+\textbf{4 admitted}, \textbf{15 rejected} with logged reasons. \textbf{2 carried on metadata alone}. Affiliations from PubMed XML and Crossref (OpenAlex unavailable); blank where neither carries one. Trial watch: see W46 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

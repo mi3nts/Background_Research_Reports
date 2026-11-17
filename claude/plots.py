@@ -751,6 +751,41 @@ design_group.update({
     "Mixed methods (registry survey + interviews)": "Observational - cross-sectional",
 })
 
+design_group.update({
+    'Animal exposure study + in vitro': 'Experimental / toxicology',
+    'Cohort (cross-sectional analysis)': 'Observational - cross-sectional',
+    'Cross-sectional (machine learning)': 'Observational - cross-sectional',
+    'Cross-sectional post-occupancy evaluation': 'Measurement campaign',
+    'Data reconstruction (ML)': 'Modelling / inventory',
+    'Ecological cross-country analysis': 'Observational - ecological',
+    'Emissions scenario modelling': 'Modelling / inventory',
+    'Episode analysis (observations + CAMx)': 'Modelling / inventory',
+    'Exposure model (ML, satellite-fused)': 'Modelling / inventory',
+    'Field instrument evaluation': 'Sensor co-location',
+    'Field measurement + in vitro': 'Experimental / toxicology',
+    'Filter-free online composition + source apportionment': 'Measurement campaign',
+    'Laboratory filter development': 'Chamber / laboratory',
+    'Metadata only - no abstract available': 'Metadata only',
+    'Methods development (network QA)': 'Tool / software',
+    'Observational evaluation': 'Measurement campaign',
+    'Process modelling': 'Modelling / inventory',
+    'Randomized crossover measurement': 'Trial / intervention',
+    'Sensor evaluation (co-location)': 'Sensor co-location',
+    'Systematic review + network meta-analysis': 'Review / synthesis',
+    'Time series': 'Observational - acute',
+})  # 2026-11-17
+design_group.update({
+    'Animal inhalation experiment': 'Experimental / toxicology',
+    'Randomised controlled trial (follow-up)': 'Trial / intervention',
+    'Time-series (distributed lag non-linear)': 'Observational - acute',
+    'Time-series (generalised linear model)': 'Observational - acute',
+})  # 2026-11-17
+design_group.update({
+    'Burden of disease (GBD)': 'Modelling / inventory',
+    'Episode analysis (observations + model)': 'Modelling / inventory',
+    'Bibliometric analysis': 'Review / synthesis',
+    'Cross-sectional': 'Observational - cross-sectional',
+})  # 2026-11-17
 _design_unmapped = set()
 def dgrp(d):
     if d not in design_group:

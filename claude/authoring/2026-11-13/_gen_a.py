@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+# Records for 13 Nov issue, part A (authored 2026-11-16 run). DOI/PMID/journal/title injected from cache by _gen.py.
+R = {
+0: dict(short="KNHANES 2016-2023 province-level annual PM2.5 PM10 blood lipids per IQR dyslipidemia effect modification Korea",
+  sub="CVM", design="Cross-sectional survey", pm="Annual PM2.5 and PM10 assigned at province/metropolitan level by survey year",
+  geo="South Korea", endpoint="TC, HDL-C, TG, non-HDL-C, LDL-C", tier="B", basis="Reference / regulatory monitor",
+  affil="Workers Health Center, Gwangju, South Korea; Chonnam National University Medical School, South Korea",
+  n=("Survey-weighted regression in nationally representative KNHANES adults (2016-2023; analytic n not given in the abstract). Per IQR PM2.5 (5.00 ug/m3): "
+     "total cholesterol +1.17 mg/dL, triglycerides +4.99 mg/dL, non-HDL-C +2.89 mg/dL, HDL-C -1.72 mg/dL; PM10 (IQR 9.00 ug/m3) similar. Diagnosed dyslipidemia "
+     "modified the association for TC, TG, non-HDL-C and LDL-C; results held after excluding Asian-dust days and extra cardiometabolic adjustment. No CIs are "
+     "reported in the abstract. The decisive weakness is exposure contrast: one annual value per province-year gives at most a few dozen exposure levels, so "
+     "between-province confounding (diet, statin use, survey wave) is indistinguishable from PM. Relevance: a lipid shift of this size cannot be resolved with "
+     "province averages; it is the kind of association that dense sensor-derived residential exposure would sharpen or dissolve.")),
+1: dict(short="HELIX 586 mother-child pairs ~200 prenatal childhood exposures outcome-wide exposome indoor air pollution persisting adolescence",
+  sub="REPR", design="Prospective birth cohort", pm="Outdoor air pollutants and indoor air pollution among ~200 prenatal and childhood exposures; PM metrics not itemised in abstract",
+  geo="Europe (six HELIX cohorts)", endpoint="11 outcomes: mental health, cardiometabolic, respiratory, allergic, childhood (6-11) and adolescence (12-18)", tier="A",
+  basis="Not stated", affil="ISGlobal, Spain; University Grenoble Alpes, Inserm U1209, France",
+  n=("HELIX European pediatric exposome: 586 mother-child pairs, nearly 200 prenatal and childhood exposures (air pollutants, chemicals, lifestyle, built "
+     "environment) tested against 11 outcomes in four domains at 6-11 and 12-18 years by an outcome-wide, exposure-wide design. A small set of 'master "
+     "regulator' exposures - maternal smoking, indoor air pollution, endocrine disruptors, diet and urban factors - affected several domains, with effects "
+     "persisting into adolescence; results are released as an open interactive atlas. The abstract gives no PM-specific estimate, so ambient particulate "
+     "matter is not shown to be among the persistent drivers. With 586 pairs and ~2,200 exposure-outcome tests, power for any single PM association is low and "
+     "false-discovery control dominates. Relevance: indoor air pollution emerging as a cross-domain driver argues for indoor sensing in child cohorts.")),
+4: dict(short="JNCI US county ecological GWR PM2.5 2005-2014 lung cancer incidence 2018-2022 spatial heterogeneity Getis-Ord",
+  sub="RESP", design="Ecological / spatial", pm="County annual average PM2.5 2005-2009 and 2010-2014 (Area Health Resource File)",
+  geo="USA", endpoint="Lung cancer incidence 2018-2022", tier="B", basis="Model (CTM / LUR / ML)",
+  affil="Boston Medical Center / Boston University, USA; Brigham and Women's Hospital, USA",
+  n=("County-level ecological analysis: CDC lung cancer incidence 2018-2022 against AHRF annual PM2.5 for 2005-2009 and 2010-2014, adjusted for poverty, race, "
+     "education and smoking prevalence. PM2.5 was positively associated with incidence in both windows; geographically weighted regression fitted better than "
+     "OLS (AICc 20,892 vs 21,810 and 20,883 vs 21,847) and the local PM2.5 coefficients varied across counties. No coefficient magnitude or interval is "
+     "reported in the abstract. County smoking prevalence cannot adjust for individual smoking history, the dominant lung cancer cause, and GWR local "
+     "coefficients are notoriously unstable under collinearity; the authors themselves call the map exploratory. Relevance: spatially varying slopes are "
+     "partly exposure-error artefacts of coarse county surfaces - a testable claim where sensor networks give within-county contrast.")),
+5: dict(short="Lampang Thailand early childhood centres indoor PM2.5 PM10 natural ventilation vs air-conditioning TWA5h dose under-3s",
+  sub="OCC", design="Measurement campaign", pm="Indoor PM2.5 and PM10, 5-h time-weighted averages; inhaled mass and body-weight-normalised dose",
+  geo="Thailand (Lampang)", endpoint="Indoor PM concentration and estimated dose by ventilation mode", tier="C", basis="Not stated",
+  affil="Thammasat University, Thailand; Thammasat University, Thailand",
+  n=("Eight comparison units in early childhood development centres, non-haze season, children under 3: morning natural ventilation versus afternoon "
+     "air-conditioned operation, PM2.5 and PM10 converted to 5-h TWA, inhaled mass and weight-normalised dose. PM2.5 was lower under air-conditioning in all "
+     "eight units, PM10 in seven; CO2 was higher in all eight; PM10 dose exceeded PM2.5 dose everywhere. No concentrations, instrument or sample duration are "
+     "given in the abstract. Ventilation mode is perfectly confounded with time of day and outdoor measurements were incomplete, as the authors state, so "
+     "the contrast cannot be assigned to ventilation. Relevance: the classic indoor trade-off (particles down, CO2 up) that combined low-cost PM/CO2 monitors "
+     "are built to manage in childcare settings.")),
+}

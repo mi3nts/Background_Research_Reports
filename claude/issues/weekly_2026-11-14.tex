@@ -1,0 +1,318 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{14 November 2026}
+\newcommand{\PERIODSTART}{8 November 2026}
+\newcommand{\PERIODEND}{14 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Teal] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ WEEKLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Week in Review\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Week ending \DIGESTDATE}\;\;\textcolor{Teal}{\textbar}\;\;\mbox{\PERIODSTART{} to \PERIODEND}\;\;
+ \textcolor{Teal}{\textbar}\;\;\mbox{157 records pooled from 7 daily issues}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{157}{RECORDS POOLED\\(157 UNIQUE DOIs)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{39\%}{MEASUREMENT SIDE\\(62 RECORDS)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{12}{LOW-COST SENSOR\\RECORDS (8\%)}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{35}{POOLED EFFECT\\ESTIMATES (35 WITH A CI)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{25}{ABSTRACT-FREE\\(16\% OF WEEK)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- week in one box
+\section*{\sffamily\bfseries\color{Deep}The week in one paragraph}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Volume held at 157 and the measurement side at 39\,\%, but the sensing band
+changed its question: last week the low-cost sensor was a data stream to be used; this week the strongest sensing
+papers measured \emph{where it breaks} --- biomass smoke above 1000\,$\mu$g/m$^3$, sub-8\,$^\circ$C winters, mineral-dust
+PM$_{10}$, calibration transfer between units, and wildfire swings that look like faults. Eight of the 22 sensing
+records are tier A, the most in one week. The health side was dominated by smoke, all of it modelled: wildfire
+PM$_{2.5}$ and mortality pooled at RR 1.066 per 10\,$\mu$g/m$^3$, and a plume-plus-heat contrast in dialysis
+patients at RR 1.92. Increment reporting slipped back: 12 of 30 ratio estimates carry none.}\\[1.4mm]
+\footnotesize
+\textbf{Scale.} \textbf{157 records} over seven issues on daily totals of \textbf{5}, 17, 26, \textbf{36}, 30,
+16 and 27. Against recent rollups: 157 after 151, 135, 119, 123, 87 and 125. \textbf{All ten subtopics populated}
+for the eighth week running.
+
+\textbf{The measurement side held at 39\,\%} (62 records): \textit{Exposure assessment \& modelling} 40
+$\rightarrow$ \textbf{40}, \textit{Sensing} 21 $\rightarrow$ \textbf{22}. Share series 44, 39, 39, 37, 40,
+\textbf{39\,\%}.
+
+\textbf{Burden and cardiovascular grew; occupational and respiratory fell back.} \textit{Burden, policy \&
+mitigation} 12 $\rightarrow$ \textbf{18}, \textit{Cardiovascular} 9 $\rightarrow$ \textbf{12}, \textit{Mechanistic}
+14 $\rightarrow$ 16, \textit{Other clinical} 6 $\rightarrow$ 8, \textit{Reproductive} 6 $\rightarrow$ 7,
+\textit{Neuro} 7 $\rightarrow$ 7; \textit{Occupational \& indoor} 20 $\rightarrow$ \textbf{15} and
+\textit{Respiratory} 16 $\rightarrow$ \textbf{12}.
+
+\textbf{Estimates: 35, every one with an interval} (eighth complete week at 100\,\%), one per 4.5 records against
+one per 2.8 last week. 30 on ratio scales (RR 12, HR 11, OR 6, IRR 1) and 5 on difference scales (2 \% change,
+2 telomere T/S, 1 z-score).
+
+\textbf{Abstract gap 25 of 157 (16\,\%)}, unchanged. \textbf{Tier mix 18 A, 55 B, 84 C} --- tier A at
+\textbf{11\,\%}, from 13\,\%.
+\end{keybox}
+
+\clearpage
+
+% -------------------------------------------------------------- trend
+\section*{\sffamily\bfseries\color{Deep}Subtopic trend and inflection}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}, seven issues, daily totals 5,
+17, 26, 36, 30, 16 and 27. The Sunday (8 November) floor of 5 is the week's minimum and Wednesday 11 November's 36
+its maximum. 8 and 9 November were built on the 10 November recovery run, 10 and 11 November on the 12 November
+run, and \textbf{12--14 November and this rollup on the 17 November run}, which completed an interrupted
+16 November run that had authored 12--15 November but shipped nothing.}
+
+\footnotesize
+\textbf{Expanding.} \textit{Burden, policy \& mitigation} 12 $\rightarrow$ \textbf{18} is the largest gain:
+GBD secondary analyses, refinery-closure and health-impact models, and the CONUS wildfire-attribution preprint
+(wildfire smoke 20\,\% of PM$_{2.5}$-attributable deaths on the west coast in 2020, 30 times 2019).
+\textit{Cardiovascular} 9 $\rightarrow$ 12 carries the CHARLS stroke cohort (high vs low PM$_{2.5}$ HR 1.25,
+1.04--1.51; solid fuel 1.38, 1.18--1.62).
+
+\vspace{1.2mm}
+\textbf{Contracting.} \textit{Occupational \& indoor} 20 $\rightarrow$ 15 after last week's coal-miner cluster;
+\textit{Respiratory} 16 $\rightarrow$ 12.
+
+\vspace{1.2mm}
+\textbf{The inflection worth naming.} \textbf{The sensing band moved from deployment to failure modes.} Arba Minch
+(\textit{AMT}): SPS30 and SEN55 stayed stable through repeated biomass-smoke events above 1000\,$\mu$g/m$^3$, with
+in-use accuracy error $\le$22\,\% and outdoor expanded uncertainty $\le$15\,\% against gravimetry. Prague (CHMI,
+19 months): Sensirion PM$_{2.5}$ R$^2$ 0.87 raw, PM$_{10}$ only 0.50, and dust episodes invisible after correction.
+TU Delft: calibration learned on one unit lost its advantage over the \emph{uncalibrated} sensor for PM$_{10}$ when
+transferred. Strong Heart Air Study: offline PurpleAir logging recovered 100\,\% of data in Arizona but 10\,\% in
+South Dakota, failing at 4--8\,$^\circ$C. University of Washington: an entropy-based outlier detector for smoke
+events, when true swings mimic faults. And at the regulatory end, 43,576 reference-equivalent pairs at 45 US sites
+showed that 1-in-6 sampling leaves 63.8\,\% (53.0--73.8) of comparability verdicts indeterminate. \textbf{The
+weakness is shared}: most of these test failure on a handful of devices or simulated faults, and none carries the
+failure through to a health estimate.
+
+\vspace{1.2mm}
+\textbf{Last week's test} (a health estimate on calibrated network exposure with uncertainty carried through)
+\textbf{was not met}. The nearest record is the Haramaya HDSS kitchen survey --- 923 kitchens on PurpleAir II-SD,
+rural 473 vs urban 80\,$\mu$g/m$^3$ (difference 393, 370--416) --- which reports no correction or co-location and
+no health outcome.
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Study architecture over the pooled week. \textit{Measurement campaign} 26 leads, then \textit{Metadata only} and \textit{Modelling / inventory} 25 each, \textit{Experimental / toxicology} 16, \textit{Review / synthesis} 15, cohort 12, ecological 11, cross-sectional 10, acute 7. \textbf{Trial / intervention 4}, among them the Wuhan vitamin D RCT, the HAPIN Peru follow-up and the Frankfurt randomised route crossover; \textit{Chamber / laboratory} 3, \textit{Sensor co-location} 2 and \textit{Tool / software} 1 --- many co-location studies are filed under measurement campaign by their own design labels.}
+
+\clearpage
+% -------------------------------------------------------------- pooled analytics
+\section*{\sffamily\bfseries\color{Deep}Pooled analytics}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Pooled subtopic distribution, all ten bands populated: \textit{Exposure} 40 and \textit{Sensing} 22 put the measurement side at \textbf{62 of 157 (39\,\%)}. On the health side \textit{Burden} 18 leads, then \textit{Mechanistic toxicology} 16, \textit{Occupational \& indoor} 15, \textit{Cardiovascular} and \textit{Respiratory} 12 each, \textit{Other clinical} 8, \textit{Neuro} and \textit{Reproductive} 7 each. The endpoint chart (f2b) is omitted at rollup volume.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: PM$_{2.5}$ alone 56, unspeciated PM or emissions 51, PM$_{2.5}$ and PM$_{10}$ jointly 33, PM$_{10}$ alone 5, optical 5, ultrafine 4, size-resolved 2, bioaerosol/coarse 1. Right --- geography: \textit{Global / multi-region} 41, China 38, Europe 25, North America 19, East Asia ex-China 9, South Asia 7, sub-Saharan Africa 6, Southeast Asia 5, Latin America 4, Oceania 2, Middle East \& North Africa 1.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows across the pooled week; counts non-exclusive (7, 10, 7, 29, 13). Working age leads, carried by CHARLS, URBANOME, the wildfire-mortality meta-analysis and LMIC health-impact work; older adults by the CHARLS stroke cohort, the dementia GBD analysis and the dialysis cohort; in utero by the refinery-closure births, CHD greenness mediation and the HAPIN prenatal arm. Stage notes are truncated in the figure.}
+
+\clearpage
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, all 30 ratio estimates (OR, RR, HR, IRR), from 0.68 (term LBW after the Bakersfield refinery closure, 0.55--0.83) to 2.22 (REPRO\_PL indoor PM$_{10}$ and adolescent asthma, 0.88--5.57). Nested sets share samples and are not independent: CHARLS stroke (3), Song dialysis (4), Yadate wildfire meta-analysis (4), Chen glaucoma (3 windows), UK Biobank, Park, Verma, Beijing endometriosis and the Brigham MS cohort (2 each). Twelve carry no increment in the abstract; no pooling beyond the two-estimate wildfire check in the text.}
+
+\vspace{2mm}
+\IfFileExists{\FIGDIR/f5_forest_2.png}{\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{Difference scale, 5 estimates on four units: Hohhot CVD visits under high temperature (+30.96\,\%, 30.86--31.05 --- an interval implausibly narrow for a time series, as transcribed); rural Beijing TNF-$\alpha$ +1.9\,\% (0.2--3.6) per 10\,$\mu$g/m$^3$; Chiang Mai telomere length +0.050 and +0.079 T/S per window IQR, non-significant under the authors' cluster bootstrap; HAPIN Peru $f_{res}$ z $-$0.36 ($-$0.71 to $-$0.02), LPG vs biomass. No pooling.}}{}
+
+\vspace{2mm}
+\IfFileExists{\FIGDIR/f5_forest_3.png}{\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_3.png}
+\figcap{}}{}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ architecture, pooled. Exposure assessment is dominated by modelling and measurement campaigns; sensing splits between measurement/co-location work, models and metadata-only deposits; mechanistic toxicology is experimental; burden is modelling, ecological and review work; the four trials sit on the health side.}
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- exposure basis and funnel
+\par\vskip 0pt plus 14\baselineskip\penalty-200\vskip 0pt plus -14\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Exposure basis and the effect funnel}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Exposure basis (x1).} 12 of 157 records rest on a low-cost sensor or network (8\,\%), against 11 (7\,\%)
+last week and 15 of 523 (3\,\%) in October; 4 on a personal or wearable monitor. On the health side, where a basis
+is recoverable (n=60), \textbf{52\,\% measured, 43\,\% modelled or satellite-fused, 5\,\% proxy}, against 58/30/12
+last week and the October baseline of 36/42/22. The modelled share rose because the week's health evidence was
+dominated by wildfire smoke, which is always a model split of total PM$_{2.5}$. \emph{Not one of the 35 effect
+estimates rests on a low-cost sensor exposure}; the only measured-exposure estimates are the rural Beijing panel
+(TNF-$\alpha$ +1.9\,\%, 0.2--3.6, per 10\,$\mu$g/m$^3$ outdoor village monitor) and the HAPIN Peru randomised
+contrast.
+
+\vspace{1.5mm}
+\textbf{Increments and precision (x2).} Of the 30 ratio estimates, 10 are per 10\,$\mu$g/m$^3$, 7 categorical
+contrasts, 1 per IQR and \textbf{12 carry no recorded increment} --- 40\,\%, against 12\,\% last week and 51\,\% in
+October: last week's improvement did not hold. The 12 come from five sources (UK Biobank substance use, the
+Brigham MS cohort, the glaucoma surgery cohort, Beijing endometriosis and the Bangkok coarse-PM series) whose
+abstracts give no unit. The funnel is \textbf{not} a pooled estimate: increments differ and many estimates share a
+sample.
+
+\vspace{1.5mm}
+\textbf{Within-family heterogeneity.} One family qualifies: wildfire PM$_{2.5}$ and all-cause or dialysis mortality,
+RR per 10\,$\mu$g/m$^3$ --- the Yadate meta-analysis, 1.066 (1.014--1.121), and the Fresenius western-US dialysis
+cohort, 1.03 (1.02--1.06). Fixed-effect combination 1.035, Q = 1.57 on 1 df, \textbf{I$^2$ = 36\,\%}. Two
+estimates, one of them already a pooled estimate and the other in a susceptible population, so this is a
+consistency check, not a summary. Every other source this week stands alone on its metric, endpoint and increment.
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- venues + trials
+\par\vskip 0pt plus 14\baselineskip\penalty-200\vskip 0pt plus -14\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Venues, groups, trial watch, and what the pipeline did}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Venues.} \textit{Atmospheric Pollution Research} leads at \textbf{10} (indexed under two names), then
+Research Square \textbf{10}, \textit{Environ Pollut} 7, \textit{Sensors} 6, \textit{Environ Sci Technol} 5, and
+\textit{AMT} and \textit{J Environ Sci (China)} 4 each. \textit{AMT} carried three of the week's tier-A sensing papers
+(Arba Minch, the UW outlier detector, the Ghana 1-km product); Research Square again supplied sensing-relevant
+preprints (AirQo LOCATE, Haramaya kitchens, the Aurora evaluation).
+
+\vspace{1.5mm}
+\textbf{Recurring groups.} From the \texttt{affil} field (first- and last-author institutions, per mention): Sun
+Yat-sen University 8, then Peking University, the University of Washington and Chiang Mai University 4 each, and the
+Chinese Research Academy of Environmental Sciences 3. \textbf{Two clusters are coherent.} Sun Yat-sen produced two
+PM$_{2.5}$-constituent mixture analyses with quantile g-computation (Pearl River cohort respiratory mortality, HR
+1.29, 1.23--1.34, per quantile of the mixture; a national arthritis cohort) --- the same method on different
+endpoints. The University of Washington produced the sensor-network outlier detector and the CONUS 1-km wildfire
+PM$_{2.5}$ preprint: smoke measurement and smoke modelling from one institution. Chiang Mai's four mentions are two
+unrelated records (rural telomeres, a veterinary review). Scite citation counts were not retrieved; for records days
+old they would be uninformative.
+
+\vspace{1.5mm}
+\textbf{Trial watch.} ClinicalTrials.gov \texttt{LastUpdatePostDate} 11--17 November and Amass TrialCore
+(\texttt{minCreateDate} 10 November): \textbf{4 added} to the register. \textbf{NCT07931820} (Boston University;
+not yet recruiting, n=120 households, start February 2027) randomises households given an indoor air monitor to
+monitor-only, generic reminders or personalised insights --- after REACT (NCT07914010), the second registered trial
+in the set whose intervention is \emph{information from a low-cost monitor}. Three updated registrations were not
+previously carried: \textbf{NCT07119333} (Norwegian Institute of Public Health, cluster-randomised classroom
+purifiers vs sham, school absence, 72 classes), \textbf{NCT05230784} (NYU, purifier vs placebo filter in heart
+failure, n=600) and \textbf{NCT07238608} (UPRISE, observational, ultrafine PM and micro/nanoplastics in 1,600
+pregnancies). \texttt{trials.json} holds \textbf{30 trials} over 45 query windows; the 12--16 November window was
+logged once by this run, the interrupted 16 November run having logged none.
+
+\vspace{1.5mm}
+\textbf{What the harvesting legs did.} \textbf{Crossref-by-ISSN} supplied 3--71 records/day (Sunday 8 November
+the floor); \textbf{Europe PMC} returned zero on 9 November (indexing lag) and continued to re-surface records on
+consecutive days, caught by cross-day candidate sets on 10--11 and 12--15 November before authoring.
+\textbf{PubMed connector} appended 2--18/day. \textbf{OpenAlex}: the harvester's HTTP leg returned 429 all week and
+403 by 16 November; the connector was absent on every session. \textbf{arXiv} one in-window record (10 November).
+\textbf{Consensus}, \textbf{Amass} literature backfill and \textbf{Scite} were not run.
+
+\vspace{2mm}
+% -------------------------------------------------------------- gaps
+\section*{\sffamily\bfseries\color{Deep}Open gaps}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Sensor missingness is not at random.} Cold-weather logging failure (Strong Heart) and dust-blind
+PM$_{10}$ (Prague) both drop the dirtiest periods. An exposure series built on these sensors without a missingness
+model is biased toward the clean season.
+
+\item \textbf{PM$_{10}$ does not transfer.} Two independent groups (TU Delft, CHMI) found PM$_{10}$ the quantity that
+calibration cannot rescue on optical sensors; any network reporting PM$_{10}$ from Plantower or Sensirion units should
+say so.
+
+\item \textbf{Uncorrected sensors at extreme concentrations.} The largest household survey of the week (Haramaya,
+923 kitchens) reports no correction, while the Arba Minch evaluation shows correction is feasible at the same
+concentrations. The wet-season doubling it reports lies on exactly the humidity axis that biases uncorrected
+Plantower readings.
+
+\item \textbf{Smoke health evidence is entirely modelled.} The meta-analysis, the dialysis cohort and the CONUS
+attribution all split wildfire from total PM$_{2.5}$ by model; the UW group now has both the detector and the model
+needed to test that split against a network.
+
+\item \textbf{Increment reporting regressed to 40\,\% missing} among ratio estimates.
+
+\item \textbf{Pipeline defects carried forward}: the 16 November run authored 12--15 November but stopped when
+\texttt{plots.py} hard-failed on unmapped design labels, and shipped nothing for 23 h; overlapping or interrupted
+runs still have no run-level lock; OpenAlex unavailable on both legs; \texttt{.git} lock debris on the
+delete-restricted mount.
+\end{itemize}
+
+\vspace{1.5mm}
+\textbf{Research direction.} The sensing literature is now characterising its own failure envelope ---
+concentration, temperature, size fraction, unit-to-unit transfer --- which is the precondition for using networks in
+epidemiology. The health literature has not met it: its most consequential estimates this week concern wildfire
+smoke, the exposure most in need of dense measurement, and every one of them is modelled. \textbf{Test for W47}: a
+health or exposure-contrast estimate that either uses a corrected low-cost network as its exposure, or validates a
+wildfire PM$_{2.5}$ split against one.
+
+\clearpage
+
+% -------------------------------------------------------------- digest
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the week by subtopic}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Every record that appeared in a daily issue
+keeps that issue's critical summary verbatim; nothing here is re-written or re-assessed.
+Records surfaced without an abstract are shown as such. Ordered by subtopic, then by the
+date of the issue that first carried the record.\par}
+
+\input{digest_body}
+
+% -------------------------------------------------------------- register
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Period \textbf{8 -- 14 November 2026}, Sunday to Saturday, \textbf{seven daily issues},
+\textbf{157 records}, \textbf{157 unique DOIs}, no record without a DOI. This rollup is
+\textbf{aggregation only}: it re-reads \texttt{state/corpus/*.json}, \texttt{state/metrics.csv} and
+\texttt{state/trials.json} over the period and \textbf{queries no literature API}; every record was gated by
+\texttt{check\_dois.py} at daily-issue time. Tier mix \textbf{18 A, 55 B, 84 C}. The 8--9 November dailies were
+built on the 10 November run, 10--11 November on the 12 November run, and 12--14 November and this rollup on the
+\textbf{17 November run}. Effect estimates are transcribed verbatim from the daily issues on heterogeneous contrasts
+and are \textbf{not} meta-analysed; the single within-family I$^2$ above is a consistency check. Abstracts remain
+the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}
