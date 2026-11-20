@@ -396,6 +396,15 @@
    "hits": 3,
    "kept": 1,
    "note": "NCT07539987 AIRWISE (U Montana, real-time monitoring + PAC, older adults) new; NCT07540000 INTERLUNG and NCT07914010 REACT carried (updates). Amass not run."
+  },
+  {
+   "window": "2026-11-19 -> 2026-11-20",
+   "queried": "2026-11-20T15Z",
+   "source": "ClinicalTrials.gov MCP connector, search_trials; Amass TrialCore (minCreateDate 2026-11-19)",
+   "filter": "condition air pollution|particulate matter|PM2.5|wildfire smoke x AREA[LastUpdatePostDate]RANGE[2026-11-19,2026-11-20]",
+   "hits": 3,
+   "kept": 0,
+   "note": "CT.gov: NCT07914010 REACT (now recruiting, start 2026-11-17), NCT07539987 AIRWISE, NCT07540000 INTERLUNG - all carried (updates). Amass 20 newly ingested, 0 on topic (nearest: NCT07941635 formaldehyde, gas-phase)."
   }
  ],
  "NCT05867381": {
@@ -620,7 +629,7 @@
   ],
   "note": "Registered under condition Air Pollution Exposure but NO air-quality, PM or exposure outcome measure exists in the protocol -- every registered endpoint is a psychosocial scale (empowerment, social cohesion, climate hope). Second consecutive topical hit whose PM framing is not carried by any measured PM variable (cf. NCT07817836, 14 Sep). Surface in the W38 weekly with that caveat."
  },
- "windows_count": 46,
+ "windows_count": 47,
  "stored_records": 26,
  "counter_note": "RECONCILED 2026-09-16. d['trials'] was a running tally (28) that had drifted from the number of persisted NCT records because earlier runs incremented it without writing the record. Both keys are now set to the actual count of stored NCT objects (12) and must be derived, never incremented, from here on. The 17 lost records are not recoverable from this file; the 15 window entries in d['windows'] are the audit trail of what was queried, and their 'kept' fields are the authoritative per-window counts. AUDITED 2026-10-02: the 16-vs-24 gap flagged on 1 Oct is this same drift - the August monthly's 24 came from the pre-reconciliation tally. stored_records (13) and windows_count (23) had drifted again; all three counters re-derived from the file (16 NCT objects, 26 windows).",
  "NCT07793123": {

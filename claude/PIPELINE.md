@@ -3283,3 +3283,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus, Amass literature not run. rm still blocked.
 - Fork note: harvester User-Agent carries the account email; a privacy hook may block new device_bash calls sending it — consider a generic UA.
 - Next: 19 Nov daily (≥22:00 CST 19 Nov); 20 Nov; W47 weekly (15-21 Nov) + 21 Nov daily on Sat 21 Nov; November monthly on 30 Nov.
+
+## Run 2026-11-20 (15:00-15:3x UTC = 09:00 CST 20 Nov) — daily 19 Nov
+
+- 05:04 UTC slot fired 10 h late; before 22:00 → newest buildable 19 Nov (Thursday, no rollup). Harvest: PubMed 18/1, EPMC 17, Crossref 50, arXiv 0 in window, OpenAlex HTTP 403 → 79 fresh; connector EDAT 19 Nov three axes 27 PMIDs (`_conn_1120b.py`, generic UA): 22 bucketed 19 Nov + 5 with EDAT 18 Nov (entered after that harvest, none seen/rejected) folded into today's set → 3 merged, 8 appended → **87 screened**. Abstract fill 29/30; Crossref/S2 title lookup 0/6 (Elsevier/T&F/BMC).
+- **34 admitted / 53 rejected** (`_rej_1120b_19.py`): 7 effects (5 ratio, 2 % change), 3 tier A (Chongqing CRC survival J Hazard Mater; RoCAV cfPWV mediation EJPC; OP-AA 26-lab comparison AMT), 7 metadata-only, 3 Research Square preprints (2 Ghana IQAir LCS deployments). DOI gate 0 FAIL (1 warn: Gac Sanit Spanish title); 0 overfull; 16 pp proofed.
+- Defects caught in proof: (1) mixed ratio/difference effects make plots.py write `f5_forest.png` + `f5_forest_2.png`; a hand-written FOREST that includes only the first silently drops the difference panel — include both. (2) geo strings containing "America" (e.g. "South America (..., Chile)") bin to North America via the substring rule; write "Chile (...)". (3) Effects reported per 5 µg/m³ fall to "increment not recorded" in x2/incr() — consider a `per 5 µg/m³` class or a rescale rule.
+- `nohup ... &` on device_bash dies with the call's shell (bwrap --die-with-parent); run `run_all.py` in the foreground with `timeout 175`.
+- Trial watch 19-20 Nov: CT.gov 3 (REACT now recruiting, AIRWISE, INTERLUNG — all carried), Amass 20 new, 0 on topic → `trials.json` 31 trials / 47 windows.
+- Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus, Amass literature not run. rm still blocked.
+- Next: 20 Nov daily (≥22:00 CST 20 Nov); W47 weekly (15-21 Nov) + 21 Nov daily on Sat 21 Nov (≥22:00); November monthly on 30 Nov.
