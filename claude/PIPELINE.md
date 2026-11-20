@@ -3273,3 +3273,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus, Amass literature not run. rm still blocked; .git locks moved to `.git/stale-*`.
 - Shipped 8030795; 5 dailies, W46, manifest, index 200 on Pages at +60 s.
 - Next: 17 Nov daily (≥22:00 CST 17 Nov); W47 (15-21 Nov) on Sat 21 Nov; November monthly on 30 Nov.
+
+## Run 2026-11-20 (01:04-01:3x UTC = 19:04 CST 19 Nov) — dailies 17 + 18 Nov
+
+- Before 22:00 → newest buildable 18 Nov; owed 17 and 18 Nov (Tue/Wed, no rollup). Cross-day set via `_xday_1120.py` (9 18-Nov dups of 17 Nov removed; 2 rejected/seen on 17 Nov). 5 connector PMIDs with EDAT 16 Nov (entered after that harvest) were already in the 17 Nov set and screened there (3 admitted).
+- Harvest 17 Nov: PubMed 17/0, EPMC 14, Crossref 47, arXiv 0 in window, OpenAlex HTTP 403 → 68 fresh +9 connector → 75 screened. 18 Nov: PubMed 13/3, EPMC 14, Crossref 61 → 81 +4 → 76 screened. Connector EDAT 17-18 Nov three axes, 42 PMIDs (`_conn_1120.py`). efetch abstract fill 18/18 and 14/14; Crossref fill recovered 1 of ~17 Elsevier/T&F tries.
+- Admitted/rejected: 17 Nov 26/49 (2 effects, 2 tier A, 5 metadata-only); 18 Nov 22/54 (4 effects, 2 tier A, 7 metadata-only) (`_rej_1120_1{7,8}.py`). Two forks on disjoint days; builds/state serialised. No new plots.py labels needed. DOI gate 0 FAIL (1 warn 17 Nov: 10.1016/j.iac.2026.08.009 registers as 'The Air We Breathe'); 0 overfull; contact sheets proofed (13 + 13 pp).
+- Trial watch 17-19 Nov: CT.gov 3 hits, 1 new (NCT07539987 AIRWISE, U Montana real-time monitoring + PAC); Amass not run → `trials.json` 31 trials / 46 windows.
+- Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus, Amass literature not run. rm still blocked.
+- Fork note: harvester User-Agent carries the account email; a privacy hook may block new device_bash calls sending it — consider a generic UA.
+- Next: 19 Nov daily (≥22:00 CST 19 Nov); 20 Nov; W47 weekly (15-21 Nov) + 21 Nov daily on Sat 21 Nov; November monthly on 30 Nov.

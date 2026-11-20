@@ -1,0 +1,297 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{18 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-18\;\;\textcolor{Amber}{\textbar}\;\;Entry window 18 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;22 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{22}{RECORDS IN SCOPE\\(54 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{4}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}Per unit mass, brake- and tyre-wear PM$_{2.5}$ was 5--11 times more oxidatively and cytotoxically potent than exhaust PM$_{2.5}$ in dynamometer and in-vitro tests; weighted by that potency, non-exhaust sources already make up about eight times exhaust in China's 2023 on-road emissions and are projected to reach 96\,\% of the toxicity-adjusted total by 2050.}\\[1.4mm]
+\footnotesize
+Fudan University, \textit{Environmental Science \& Technology}. Potencies from dynamometer-generated brake, tyre and exhaust particles with chemical analysis and cell assays, applied to compiled national inventories; the non-exhaust share of toxicity-adjusted on-road emissions rises from 54\,\% (2014) to 96\,\% (2050) under electrification without dedicated controls; hotspots track dense traffic in developed regions.
+\textbf{Where it is weak:} the 5--11-fold ratio rests on a small set of pads, tyres and engines and on acellular/in-vitro endpoints, and is then scaled nationally with no uncertainty reported; toxicity-weighted emissions are not exposure or health outcomes.
+\textbf{Why it matters here:} a mass-calibrated optical sensor reads a microgram of tyre wear the same as a microgram of exhaust. If this ratio holds even roughly, roadside networks built on mass alone will understate the hazard trend precisely as fleets electrify --- the case for pairing PM$_{2.5}$ with an absorption, metals or oxidative-potential proxy near roads.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{How to read a sensor performance claim.} Diez, Gillott, Cowell and Malings (\textit{ACS ES\&T Air}) propose a four-layer framework for sensor performance evaluations --- who evaluated, which data product (raw, manufacturer-corrected, user-calibrated, cloud-processed), in what context, and what the metrics do and do not show. No new co-location data and no thresholds, but it names the reporting gap behind most published R$^2$ values.
+
+\item \textbf{Elemental carbon and inflammation in the California Teachers Study.} 1898 women, residential source/component PM: 12-month PM$_{2.5}$ EC per IQR with top-quartile IL-1$\beta$ OR 2.95 (1.94--4.48), sTNFR2 2.70 (1.73--4.21), sCD27 2.05 (1.34--3.13); PM$_{10}$ off-road diesel with IL-8 1.68 (1.23--2.30). One blood draw, many tests, modelled component surfaces.
+
+\item \textbf{Size decides what drives oxidative potential.} Nine-stage impactor PM (Nankai): fine-mode DTT OP from EC plus 9,10-phenanthrenequinone acting additively; coarse-mode OP from lung-fluid-bioaccessible Ni, Cu, As and Mn, amplified by ions. A methodological companion on OP extraction (Phuleria group) is metadata-only today.
+
+\item \textbf{A low-cost sensor in the wax room; subway platforms at 157\,$\mu$g\,m$^{-3}$.} A Utah pilot used an optical LCS to profile ski waxing (application stage PM$_{2.5}$ about 456--771\,$\mu$g\,m$^{-3}$; 8\,\% of 50 workers with dedicated exhaust); Philadelphia belowground stations ran 5.1$\times$ street PM$_{2.5}$ and 16.5$\times$ black carbon. Both are aerosols (wax, iron-rich dust) where an ambient-calibrated optical mass is least trustworthy.
+
+\item \textbf{Exposure basis (x1).} All four effect estimates in today's forest come from one study whose PM sources and components are modelled residential surfaces; the measured health-side records are a regulatory-style monitoring comparison in Mizoram (district symptoms, not individual exposure) and a subway risk quotient. Two records rest on a low-cost sensor --- the ski-waxing pilot and the evaluation framework --- and \emph{no health estimate today rests on sensor-measured exposure}.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 17 November issue closed the day before. This issue was built on the \textbf{20 November 01:04 UTC (19:04 CST 19 November) run}. Before 22:00 CST the newest buildable day is yesterday, so this run owes \textbf{17 and 18 November as two issues} (Tuesday and Wednesday; no rollup); \textbf{18 November is covered in full}. A cross-day pass assigned 9 records that resurfaced today to the 17 November issue (earliest day wins). No \textsc{backfill} records today. OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not used on this session, and Scite was not run.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 22 records across seven of ten bands: mechanistic 5, occupational \& indoor 5, sensing 4, exposure assessment 4, respiratory 2, burden 1, reproductive 1. Cardiovascular/metabolic, neuro/mental health and other clinical are empty today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: seven metadata-only records, four reviews (three narrative, one scoping), field and laboratory measurement work (two field campaigns, a pilot, a source apportionment and a size-resolved OP study), an emission inventory, a toxicity-weighted modelling study, a framework paper, one cross-sectional analysis within a cohort, one animal inhalation study and one satellite change analysis. Right --- endpoints are singletons apart from the metadata-only bar.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric as classified from the record fields. Right --- geography by record: China 4, United States 4, India 3, single records from Malaysia and the Middle East (Gaza), five reviews or frameworks filed as global / multi-region, three records with no stated geography and one laboratory-only animal study.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. Preconception / in utero: the heat and air-pollution female-reproduction review; adulthood: the California Teachers Study immune markers, the ski-waxing workers and the Mizoram symptom survey; older age: the California Teachers Study women at blood draw. Infancy, childhood and adolescence have no record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Mechanistic spans a cross-sectional cohort analysis, a laboratory OP study, an animal inhalation study, a review and a metadata-only record; occupational \& indoor splits between two measurement studies and three metadata-only records; sensing is a framework paper, a review and two metadata-only aerosol-instrument records.}\end{minipage}
+
+\vspace{2mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, four estimates from one study (California Teachers Study, 1898 women): odds of the highest versus lowest quartile of a circulating immune marker per IQR of 12-month residential PM$_{2.5}$ elemental carbon (IL-1$\beta$ 2.95, sTNFR2 2.70, sCD27 2.05) and PM$_{10}$ off-road diesel (IL-8 1.68). All exclude 1 after Bonferroni correction. Same cohort, correlated markers and different endpoints: no pooling and no I$^2$.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Respiratory \& allergic\hfill 2 records}{Sky}
+
+\paperentry{Mizoram (Aizawl, Lawngtlai) 2023-2024 fire period: PM$_{10}$ 74 vs 50 $\mu$g\,m$^{-3}$; breathing difficulty 44\% vs 12\% between districts}
+{Assessment of air quality and heavy metals in residential and commercial areas of Aizawl and Lawngtlai districts, Mizoram.}
+{J Environ Sci Health A Tox Hazard Subst Environ Eng}
+{Ambient monitoring at residential and commercial sites in Aizawl and Lawngtlai, Mizoram, 2023-2024, aggregated to site-month means, plus a symptom survey of 261 respondents. In the February-March fire period PM$_{10}$ was 74.20 vs 50.35 $\mu$g\,m$^{-3}$ (P=0.03) and SPM 131.25 vs 84.70 $\mu$g\,m$^{-3}$ (P=0.02); PM$_{2.5}$ 31.85 vs 26.69 $\mu$g\,m$^{-3}$ was method-sensitive (Welch P=0.08, Mann-Whitney P=0.02). Breathing difficulty in the fire period: 43.82\% in Aizawl vs 12.00\% in Lawngtlai. Weakness: few sites, monthly aggregates and no respondent-level exposure, so the symptom contrast is between districts, not exposures. Relevance: northeast India has almost no continuous monitoring; seasonal fire PM is the signal a low-cost network would resolve daily.}
+{10.1080/10934529.2026.2763440}
+
+\paperentry{Ohio State review of 27 studies: aerosolised algal and cyanobacterial toxins - microcystin up to 40 ng/m3, brevetoxin, BMAA}
+{Emerging inhalation risks: Global distribution of airborne algal and cyanobacterial toxins.}
+{Environ Res}
+{Review of 27 studies across North America, Europe, Asia and Oceania on aerosolised harmful algal and cyanobacterial bloom toxins. Fourteen toxins were detected in aerosol; microcystin appeared in 41\% of studies (marine and freshwater, maximum 40.0 ng/m3), brevetoxin in 37\% (all marine), BMAA in 11\%. Sampling (filters, cascade impactors, impingers) and analysis (ELISA, LC-MS/MS, LC-HRMS) differ widely; transport of kilometres to hundreds of kilometres inland is reported. Weakness: few studies with incomparable methods, no exposure-response data, and size distributions of toxin-bearing aerosol rarely reported. Relevance: a bioaerosol pathway invisible to mass-based PM monitoring; size-resolved sampling near bloom waters is the missing measurement layer.}
+{10.1016/j.envres.2026.126231}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 1 record}{Sage}
+
+\paperentry{Harbin narrative review: heat stress and air pollution in female reproductive health, ovarian reserve to placentation, oxidative stress mechanisms}
+{Heat stress and air pollution in female reproductive health: from pathological alterations to molecular mechanisms}
+{Annals of medicine}
+{Narrative review of epidemiological, pathological and mechanistic evidence on heat and air pollution in female reproduction. Epidemiology links both to diminished ovarian reserve, lower implantation and live-birth rates, pregnancy loss, preterm birth and hypertensive disorders; pathology to impaired folliculogenesis, defective spiral-artery remodelling and endometrial receptivity; mechanisms to oxidative stress, inflammation, epigenetic reprogramming, apoptosis and autophagy. The authors name heterogeneous exposure assessment and poorly defined susceptible windows as the main limits. Weakness: no search strategy or quantitative synthesis, and heat and PM evidence are merged, so no PM-specific dose-response can be extracted. Relevance: low - but the stated bottleneck, exposure in narrow windows such as peri-implantation, is what personal or residential sensing addresses.}
+{10.1080/07853890.2026.2757496}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 5 records}{Violet}
+
+\paperentry{California Teachers Study 1898 women: source/component PM0.1-PM$_{10}$ and 15 immune markers; 12-mo PM$_{2.5}$ EC with IL-1b, sCD27, sTNFR2}
+{Exposure to specific particulate matter (PM) sources and constituents are differentially associated with circulating immune biomarkers in women.}
+{Environ Res}
+{1,898 California Teachers Study women, blood drawn 2015; residential source- and component-resolved PM0.1, PM$_{2.5}$ and PM$_{10}$ at 1-, 3- and 12-month lags, multinomial models per IQR, Bonferroni-corrected. PM$_{2.5}$ elemental carbon was associated with top-quartile IL-1b (12-month OR 2.95, 95\% CI 1.94-4.48), sCD27 (2.05, 1.34-3.13) and sTNFR2 (2.70, 1.73-4.21) at every lag; PM$_{10}$ off-road diesel with IL-8 (OR 1.68, 1.23-2.30) and CCL2. PM$_{2.5}$ copper and PM0.1 biomass were inversely associated with sgp130, sTNFR2 and sCD27. Weakness: one blood draw, so cross-sectional; many source x marker x lag tests; modelled component surfaces with correlated errors. Relevance: EC, the component most tractable for low-cost absorption measurement, carries the strongest immune signal.}
+{10.1016/j.envres.2026.126221}
+
+\paperentry{Nankai nine-stage size-resolved PM oxidative potential: fine OP from EC + 9,10-PQ (additive), coarse OP from bioaccessible metals, ion-metal synergy}
+{Size-Divergent Contributors and Interactions to PM Oxidative Potential: EC-Organics Additivity and Ion-Metal Synergy.}
+{Environ Res}
+{Cascade-impactor PM in nine size fractions; \textasciitilde{}100 components measured as ambient and lung-fluid bioaccessible concentrations, with DTT oxidative potential. Fine-particle OP was driven by elemental carbon, 9,10-phenanthrenequinone and ions, with laboratory confirmation that EC and 9,10-PQ act additively; coarse OP was dominated by bioaccessible Ni, Cu, As and Mn, ions raising OP by increasing metal bioaccessibility. PMF plus XGBoost-SHAP ranked traffic, secondary aerosol and combustion below 2.1 um, traffic and dust at 3.3-10 um. The abstract gives no sampling period, site count or effect sizes. Weakness: DTT is one acellular assay with metal-organic interferences, and SHAP importance is not source causality. Relevance: mass-only sensing misranks coarse-mode hazard; size matters beyond PM$_{2.5}$.}
+{10.1016/j.envres.2026.126244}
+
+\paperentry{Nose-only 28-d rat inhalation of respirable polystyrene nanoplastic agglomerates: overload-type lung effects at 50 not 5 mg/m3}
+{In vivo inhalation toxicity of polystyrene nanoplastic particles: PSLT-like responses of apical endpoints and transcriptomic changes}
+{Particle and Fibre Toxicology}
+{Male Wistar rats exposed nose-only to respirable polystyrene agglomerates at 5 and 50 mg/m3 for 28 days, with about 5 and 13 weeks recovery. At 50 mg/m3: neutrophilic infiltration, type II pneumocyte and bronchiolo-alveolar hyperplasia, raised lung weight and persistent particle-associated changes - an overload profile typical of poorly soluble low-toxicity particles. At 5 mg/m3 no adverse apical effects, though lung transcripts in complement, coagulation and lipid pathways shifted; liver changes were minimal. Weakness: one polymer and particle form, male rats only, doses orders of magnitude above ambient airborne microplastic levels. Relevance: indirect - supports treating inhaled low-reactivity plastic particles within the PSLT mass-dose framework rather than as a unique hazard.}
+{10.1186/s12989-026-00709-1}
+
+\paperentry{Zhejiang Normal/RCEES review: dust storms as dynamic multipollutant exposure systems - transformation, toxicology, health}
+{Dust Storms as Dynamic Multipollutant Exposure Systems: Environmental Transformation, Toxicological Mechanisms, and Health Implications}
+{Environmental Science \& Technology}
+{Review reframing dust storms as dynamic multipollutant exposure systems: mineral particles acquire anthropogenic and secondary components during transport, so toxicity reflects coatings, metals and biological content rather than crustal mass alone. It integrates environmental chemistry, exposure science, toxicology and epidemiology to propose a basis for dust-specific health risk assessment. The abstract gives no search method, quantitative synthesis or effect estimates. Weakness: conceptual; the claim that transport-aged dust is more toxic per unit mass is plausible but not quantified here. Relevance: moderate - optical low-cost sensors undercount coarse dust and mass alone misses ageing, so dust events are where calibration and toxicity weighting fail together.}
+{10.1021/acs.est.6c11702}
+
+\paperentry{Oxidative potential of respirable and fine PM: temporal variation and solvent-chelation effects (Phuleria group)}
+{Oxidative Potential of Respirable and Fine Particulate Matter: Temporal Variations and Solvent-Chelation Effects}
+{Atmospheric Pollution Research}
+{\textsc{metadata only.} Metadata only: Atmospheric Pollution Research record (Dubey, Sam, Ailawar, Phuleria) with no abstract in Crossref, Europe PMC or Semantic Scholar at issue time. The title indicates temporal variation in oxidative potential of respirable and fine PM and the effect of extraction solvent and chelation on the assay. No site, assay, sample size or result can be stated, and no finding is asserted here. Relevance: methodological - extraction choices change measured OP, which bears on comparing OP across studies such as today's size-resolved DTT paper. Recheck in the weekly metadata sweep.}
+{10.1016/j.apr.2026.103260}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 4 records}{Clay}
+
+\paperentry{Nanjing Institute YRD industrial high-tech zone autumn-winter PM$_{2.5}$ PMF: industry 39.6\%, mobile 14.6\%, ammonium nitrate drives episodes}
+{Chemical Characterization and Source Apportionment of PM$_{2.5}$ During Autumn and Winter in an Industrial High-Tech Zone of the Yangtze River Delta, China}
+{Atmosphere}
+{Intensive PM$_{2.5}$ sampling in an industrial high-tech zone of the western Yangtze River Delta, November 2024-January 2025. Nitrate, sulfate and ammonium made up 62.8-91\% of water-soluble ions; mean SOR 0.365, NOR 0.207; NH4+ and NO$_3$- rose significantly from clean to polluted periods, implicating ammonium nitrate. PMF resolved seven factors; after reallocating secondary aerosol to primary sources via the local inventory, industry contributed 39.6\%, mobile 14.6\%, fugitive dust 11.9\%, cooking 11.9\%, coal 11.4\%. Weakness: one site, one season, and the reallocation step imports inventory assumptions, so the industrial share is partly model-defined. Relevance: nitrate-driven episodes are where hygroscopic-growth errors in optical sensors peak, so this composition context matters for any local network.}
+{10.3390/atmos17111144}
+
+\paperentry{NIT Raipur VIIRS FRP-based wheat-residue burning emissions, Madhya Pradesh 2019-2023: 130,766 fires, PM$_{2.5}$ peak 0.9 Gg (2022)}
+{Estimation of spatio-temporal air pollutant emissions from wheat residue burning in the Central Part of India.}
+{Environ Monit Assess}
+{VIIRS NOAA-20 active fires (130,766 detections after wheat and cropland masking) converted to fire-radiative-power emissions for Madhya Pradesh, 2019-2023. State CO$_2$ ranged 111-161 Gg per year; 2022 peaked with PM$_{2.5}$ 0.9 Gg, OC 0.3 Gg and EC 0.2 Gg; Hoshangabad, Raisen and Vidisha were persistent hotspots; burning concentrated in March-May; HYSPLIT traced transport pathways. Weakness: FRP emission coefficients are not locally validated, small and cloud-obscured fires are missed (the authors call totals lower bounds), and there is no comparison with ground PM. Relevance: indirect - a source inventory for post-harvest burning in central India, where ground monitoring is thin; a distributed sensor network would be the missing check on satellite-derived timing and magnitude.}
+{10.1007/s10661-026-16162-8}
+
+\paperentry{Mansoura/NIOF multi-sensor remote-sensing footprint of the Gaza conflict 2022-2025: aerosol loading up, land-use and water degraded}
+{Environmental footprint of armed conflict in the Gaza Strip: A remote sensing assessment of air, water, and land-use dynamic.}
+{Environ Monit Assess}
+{Multi-sensor satellite time series (Sentinel-1/2, Landsat 8/9, MODIS, VIIRS) for the Gaza Strip, 2022-2025, quantifying land-use change, vegetation loss, surface-water extent and quality proxies, infrastructure disruption, and atmospheric impact via aerosol loading and thermal anomalies. The abstract reports increased atmospheric pollution indicators during the conflict but gives no AOD magnitude, trend or uncertainty. Weakness: column AOD over a strip of about 365 km2 is dominated by regional dust and marine aerosol, so attribution to the conflict without a control region or meteorological adjustment is not established; no surface PM is estimated. Relevance: low-moderate - where in situ monitoring is impossible, this shows the limits of AOD-only inference and the case for rapidly deployable sensors in crises.}
+{10.1007/s10661-026-16047-w}
+
+\paperentry{Spatiotemporal PM$_{2.5}$-O$_3$ co-occurring pollution in Tongling, China}
+{Spatiotemporal characteristics of PM$_{2.5}$ and O$_3$ Co-occurring pollution in Tongling, China}
+{Atmospheric Environment}
+{\textsc{metadata only.} Metadata only: Atmospheric Environment record (Li, Qin, Wu, Lu) with no abstract deposited in Crossref at issue time. The title indicates an analysis of spatiotemporal characteristics of co-occurring PM$_{2.5}$ and ozone pollution in Tongling, Anhui. No data source, period, method or result can be stated, and no finding is asserted here. Relevance: compound PM$_{2.5}$-O$_3$ days are a growing exposure category in eastern China; if built on monitoring-network data this would give context for multi-pollutant sensor deployment. Recheck in the weekly Elsevier metadata sweep.}
+{10.1016/j.atmosenv.2026.122469}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 4 records}{Amber}
+
+\paperentry{Malings group four-layer framework for reading air-quality sensor performance evaluations (who, what product, what context, what metrics)}
+{What Does Sensor Performance Really Mean? A Four-Layer Framework for Interpreting Air Quality Sensor Performance Evaluations.}
+{ACS EST Air}
+{Conceptual framework for interpreting sensor performance evaluations (SPEs) of fixed outdoor air-quality sensors, built on four questions: who led the evaluation, which data product was evaluated (raw, manufacturer-corrected, user-calibrated, cloud-processed), in what context (site, season, concentration range, co-location length), and what the metrics do and do not convey. It yields guiding questions that separate missing from uncertain information instead of ranking devices on headline R2 or RMSE. It does not set fitness-for-purpose thresholds and adds no co-location data, so its value depends on uptake by evaluators. Relevance: direct - this is the reporting layer every low-cost PM calibration paper needs; 'which data product' is the question most often left implicit behind published R2 values.}
+{10.1021/acsestair.6c00166}
+
+\paperentry{North South University structured narrative review of 45 sources on IoT in environmental public health; PM$_{2.5}$ sensing most mature}
+{Internet of Things (IoT) in environmental public health: Monitoring environmental hazards and supporting public health action.}
+{J Public Health Res}
+{Structured narrative review of 45 sources (PubMed/PMC, IEEE Xplore, ScienceDirect, Google Scholar, citation tracking) grading IoT environmental-health evidence by maturity across technical validity, data quality, interoperability, security, privacy, equity, cost and public-health utility. Evidence is strongest for field-validated PM$_{2.5}$ sensing and exposure characterisation; ML calibration reduces drift when retrained across seasons or networks, but transfer is pollutant- and site-dependent; evidence that automated sensor alerts improve population health is scant. Weakness: single-author synthesis of a small, non-systematic source set with no risk-of-bias assessment, so maturity grades are judgement. Relevance: restates the gap this watch keeps finding - networks are validated as instruments, almost never as interventions with measured health or behavioural outcomes.}
+{10.1177/22799036261500249}
+
+\paperentry{Scanning lidar optical properties of lower-tropospheric aerosols over Delhi}
+{Scanning Lidar Measurements to Investigate Optical Properties of Lower Tropospheric Aerosols Over Delhi}
+{Aerosol and Air Quality Research}
+{\textsc{metadata only.} Metadata only: Aerosol and Air Quality Research record (Rathore, Radha, Singh, Mandal) with no abstract available in Crossref, Europe PMC or Semantic Scholar at issue time. The title indicates scanning lidar measurements of the optical properties of lower-tropospheric aerosols over Delhi. No instrument specification, campaign period, retrieval method or result can be stated, and no finding is asserted here. Relevance: potentially relevant to vertical-profile context for surface PM in Delhi, where boundary-layer structure governs how column and surface measurements relate; recheck in the weekly metadata sweep before drawing anything from it.}
+{10.1007/s44408-026-00170-x}
+
+\paperentry{Purdue thermally induced graphitization of organic aerosol particles}
+{Thermally induced graphitization of organic aerosol particles}
+{Aerosol Science and Technology}
+{\textsc{metadata only.} Metadata only: Aerosol Science and Technology record (Sharpe, Olayemi, Ese, Cheng; Purdue) with no abstract retrievable at issue time. The title concerns thermally induced graphitization of organic aerosol particles. No experimental design, temperature regime or result can be stated, and no finding is asserted here. Relevance: potentially relevant to measurement - charring of organic carbon during thermal-optical analysis is a known source of OC/EC split error, and graphitization would also alter light absorption that black-carbon and optical PM sensors rely on. Recheck in the weekly metadata sweep.}
+{10.1080/02786826.2026.2759833}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 5 records}{Amber}
+
+\paperentry{Utah ski-waxing pilot with low-cost optical PM sensor + PID: application stage PM$_{2.5}$ 456-771 $\mu$g\,m$^{-3}$; 8\% of 50 workers have dedicated exhaust}
+{Stage-resolved PM(2.5), PM(10), and VOC concentrations during field-simulated ski waxing and tuning: A pilot study with an exploratory worker survey.}
+{J Occup Environ Hyg}
+{Two-phase pilot: survey of 50 ski-industry workers (69.2\% of those knowing their wax used fluorocarbon wax; 8\% had effective dedicated exhaust) and field-simulated waxing and tuning with three block waxes over four stages, measured with a low-cost optical PM sensor and a PID. Wax application gave the highest run-level means, PM$_{2.5}$ about 456-771 $\mu$g\,m$^{-3}$ and PM$_{10}$ 602-1,045 $\mu$g\,m$^{-3}$; brushing and scraping were intermediate; ironing raised PM only for the fluorinated race wax at 160 C; tuning was far lower. Weakness: wax type and iron temperature are confounded, the sensor was not reported as gravimetrically corrected for wax aerosol, and runs are few. Relevance: a clean case of an LCS used for stage-resolved occupational profiling, where the uncorrected mass scale is the main threat.}
+{10.1080/15459624.2026.2737099}
+
+\paperentry{Villanova Philadelphia subway: belowground PM$_{2.5}$ 5.1x, BC 16.5x, UFP LDSA 1.9x street level; 15th St PM$_{2.5}$ 157 $\mu$g\,m$^{-3}$}
+{Exposure to particulate matter, black carbon, and ultrafine particles at Philadelphia subway stations.}
+{Atmos Environ (1994)}
+{Concurrent belowground and street-level measurements at three Philadelphia subway stations, summer 2023. Belowground means exceeded street level about 5.1x for PM$_{2.5}$, 16.5x for black carbon and 1.9x for UFP lung-deposited surface area; 15th Street was highest (PM$_{2.5}$ 156.8 +/- 25.3 $\mu$g\,m$^{-3}$; LDSA 56.7 +/- 21.2 um2/cm3). A PM$_{2.5}$ risk quotient below 1 was reported for commuters. Weakness: one season, three stations, no instrument models in the abstract; iron-rich subway PM makes optical mass ambient-calibrated instruments unreliable, and the low-risk conclusion rests on commuter-duration averaging and ignores workers. Relevance: subway platforms are a microenvironment where personal and low-cost monitors read high and need aerosol-specific correction.}
+{10.1016/j.atmosenv.2026.122035}
+
+\paperentry{Atmospheric microplastic deposition and inhalation risk at a tropical university campus, Malaysia}
+{Atmospheric microplastic deposition and inhalation health risk assessment at a tropical university campus in Malaysia}
+{Science of The Total Environment}
+{\textsc{metadata only.} Metadata only: Science of the Total Environment record (Zaffar, Lim, Sethupathi, Muhamad) with no abstract in Crossref at issue time. The title indicates sampling of atmospheric microplastic deposition with an inhalation health risk assessment on a tropical university campus in Malaysia. No sampling method, size range, flux or risk estimate can be stated, and no finding is asserted here. Relevance: deposition flux is not airborne concentration, so any inhalation estimate depends on a conversion worth checking; relates to today's polystyrene inhalation study. Recheck in the weekly Elsevier metadata sweep.}
+{10.1016/j.scitotenv.2026.182406}
+
+\paperentry{Moisture preconditioning and airborne particle generation from synthetic-fibre carpet tiles under friction}
+{Effect of moisture preconditioning on airborne particle generation from synthetic-fiber carpet tiles under friction}
+{Environmental Pollution}
+{\textsc{metadata only.} Metadata only: Environmental Pollution record (Lee, Yuk, Jo, Kim) with no abstract in Crossref at issue time. The title indicates a laboratory study of how moisture preconditioning changes airborne particle generation from synthetic-fibre carpet tiles under friction. No particle metric, instrument or result can be stated, and no finding is asserted here. Relevance: indoor resuspension and fibre shedding are a source low-cost indoor PM sensors capture poorly by size; relevant if the study reports size-resolved counts. Recheck in the weekly Elsevier metadata sweep.}
+{10.1016/j.envpol.2026.129574}
+
+\paperentry{Montana Tech NIOSH-like evaluation of filtration efficiency and breathing resistance for respirator filter media}
+{Systematic NIOSH-like evaluation of filtration efficiency and breathing resistance for respirator filter media}
+{Aerosol Science and Technology}
+{\textsc{metadata only.} Metadata only: Aerosol Science and Technology record (Suttey, Sudhakar, Moritz, Andriolo; Montana Tech) with no abstract retrievable at issue time. The title indicates a systematic, NIOSH-like test of filtration efficiency and breathing resistance across respirator filter media. No media types, challenge aerosol, flow rate or penetration values can be stated, and no finding is asserted here. Relevance: respirator performance is the personal-protection end of occupational and wildfire PM exposure; quantitative penetration data would let personal sensor readings be translated to inhaled dose. Recheck in the weekly metadata sweep.}
+{10.1080/02786826.2026.2747787}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Fudan non-exhaust (brake + tire) PM$_{2.5}$ 5-11x more toxic per mass than exhaust; toxicity-adjusted share 54\% (2014) to 96\% (2050) in China}
+{Toxicity-Weighted Assessment Reveals the Rising Dominance of Non-Exhaust PM$_{2.5}$ from On-Road Transportation in China}
+{Environmental Science \& Technology}
+{Dynamometer tests, chemical analysis and in vitro assays gave non-exhaust (brake and tyre wear) PM$_{2.5}$ oxidative-stress and cytotoxicity potencies 5- to 11-fold higher per unit mass than exhaust PM$_{2.5}$. Weighting Chinese on-road inventories by these potencies, toxicity-adjusted non-exhaust emissions in 2023 were about eight times exhaust; the non-exhaust share is projected to rise from 54\% (2014) to 96\% (2050) under electrification without dedicated controls. Weakness: the potency ratio comes from a small set of pads, tyres and engines under dynamometer conditions and in vitro endpoints, then is applied nationally with no reported uncertainty. Relevance: mass-based optical sensors cannot see this shift; a toxicity-weighted burden argues for composition or oxidative-potential proxies near roads.}
+{10.1021/acs.est.6c10664}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{18 November 2026}, single day (Wednesday). Harvester legs: \textbf{PubMed} health \textbf{13}, sensing \textbf{3}; \textbf{Europe PMC} \textbf{14}; \textbf{Crossref by ISSN} \textbf{61}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 403 on the harvester leg. 91 raw, 85 unique, 4 already carried, 81 fresh. PubMed connector (EDAT 17--18 November, health, instrumentation and MeSH axes) 42 PMIDs (\texttt{\_conn\_1120.py}): 15 bucketed to 18 November, 4 appended --- 85; the cross-day pass found 9 already in the 17 November set --- \textbf{76 screened}. Abstracts: efetch filled 14 of 14 PMID records; Crossref/Semantic Scholar recovered 1 of 10 tried (Annals of Medicine review).
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not used on this session; \textbf{Scite} retraction check not run. No Amass or Consensus backfill this run.
+\textbf{22 admitted}, \textbf{54 rejected} with logged reasons (\texttt{\_rej\_1120\_18.py}). \textbf{7 carried on metadata alone}. Affiliations from PubMed XML and Crossref; "not stated" where neither carries one. Trial watch: see W47 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}

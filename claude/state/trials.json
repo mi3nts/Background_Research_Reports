@@ -18,7 +18,7 @@
   "primary_completion_date": "2027-09",
   "note": "Sham-controlled PAC trial; BP endpoint. Only registration updated in the 2026-07-23..29 window."
  },
- "trials": 30,
+ "trials": 31,
  "windows": [
   {
    "window": "2026-07-31..2026-08-01",
@@ -50,7 +50,7 @@
    "queried": "2026-08-27",
    "registrations_or_updates": 2,
    "new_to_state": 2,
-   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) \u2014 only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
+   "note": "ClinicalTrials.gov API v2 queried directly with AREA[LastUpdatePostDate]RANGE[2026-08-22,MAX] after the MCP connector timed out (882 s) on the same advanced query. Condition axis returned 1 in-window record; intervention and free-text axes returned 21 and 4 but almost entirely false positives (respirator/air cleaner matching mechanical ventilation and airway anatomy) — only NCT05338242 survived screening. No new interventional registration, both records are status changes, so analyze_endpoints was not run. For the W35 weekly."
   },
   {
    "window": "2026-08-27..2026-08-31",
@@ -387,6 +387,15 @@
    "hits": 5,
    "kept": 4,
    "note": "CT.gov 3 (classroom purifiers NIPH; UPRISE ultrafine fetal; NYU HF purifiers), none previously carried. Amass 20: NCT07931820 BU low-cost monitor + messaging RCT new; NCT07924839/NCT07925229 carried; rest off topic. analyze_endpoints not run. Covers 12-16 Nov dailies (the interrupted 16 Nov 05Z run logged no window)."
+  },
+  {
+   "window": "2026-11-17 -> 2026-11-19",
+   "queried": "2026-11-20T01Z",
+   "source": "ClinicalTrials.gov MCP connector, search_trials",
+   "filter": "condition air pollution|particulate matter|PM2.5|wildfire smoke x AREA[LastUpdatePostDate]RANGE[2026-11-17,2026-11-19]",
+   "hits": 3,
+   "kept": 1,
+   "note": "NCT07539987 AIRWISE (U Montana, real-time monitoring + PAC, older adults) new; NCT07540000 INTERLUNG and NCT07914010 REACT carried (updates). Amass not run."
   }
  ],
  "NCT05867381": {
@@ -533,7 +542,7 @@
   "start_date": "2026-11-15",
   "last_update": "updated in 4-12 Oct window (start moved 2026-09-15 -> 2026-11-15)",
   "primary_outcomes": [
-   "Pre-bronchodilator FEV\u2081 Z-score at 40 months"
+   "Pre-bronchodilator FEV₁ Z-score at 40 months"
   ],
   "window": "2026-08-08..2026-08-22"
  },
@@ -611,7 +620,7 @@
   ],
   "note": "Registered under condition Air Pollution Exposure but NO air-quality, PM or exposure outcome measure exists in the protocol -- every registered endpoint is a psychosocial scale (empowerment, social cohesion, climate hope). Second consecutive topical hit whose PM framing is not carried by any measured PM variable (cf. NCT07817836, 14 Sep). Surface in the W38 weekly with that caveat."
  },
- "windows_count": 44,
+ "windows_count": 46,
  "stored_records": 26,
  "counter_note": "RECONCILED 2026-09-16. d['trials'] was a running tally (28) that had drifted from the number of persisted NCT records because earlier runs incremented it without writing the record. Both keys are now set to the actual count of stored NCT objects (12) and must be derived, never incremented, from here on. The 17 lost records are not recoverable from this file; the 15 window entries in d['windows'] are the audit trail of what was queried, and their 'kept' fields are the authoritative per-window counts. AUDITED 2026-10-02: the 16-vs-24 gap flagged on 1 Oct is this same drift - the August monthly's 24 came from the pre-reconciliation tally. stored_records (13) and windows_count (23) had drifted again; all three counters re-derived from the file (16 NCT objects, 26 windows).",
  "NCT07793123": {
@@ -1013,5 +1022,18 @@
   ],
   "start_date": "2026-01-01",
   "primary_completion": "2029-12-31"
+ },
+ "NCT07539987": {
+  "first_seen": "2026-11-20",
+  "title": "Evaluation of a Novel Indoor Air Pollution Intervention Among Older Adults (AIRWISE)",
+  "status": "NOT_YET_RECRUITING",
+  "sponsor": "University of Montana",
+  "enrollment": 154,
+  "study_type": "INTERVENTIONAL",
+  "interventions": [
+   "AIRWISE real-time monitoring + interactive education",
+   "Portable air cleaner control"
+  ],
+  "note": "real-time PM monitoring feedback arm vs PAC; BP, HbA1c, lipids; start 2027-04"
  }
 }
