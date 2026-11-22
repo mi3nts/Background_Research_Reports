@@ -1,0 +1,319 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{21 November 2026}
+\newcommand{\PERIODSTART}{15 November 2026}
+\newcommand{\PERIODEND}{21 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Teal] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ WEEKLY ROLLUP\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Week in Review\par}
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ \mbox{Week ending \DIGESTDATE}\;\;\textcolor{Teal}{\textbar}\;\;\mbox{\PERIODSTART{} to \PERIODEND}\;\;
+ \textcolor{Teal}{\textbar}\;\;\mbox{145 records pooled from 7 daily issues}\par}
+\vspace{18mm}
+
+% -------------------------------------------------------------- metric strip
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{145}{RECORDS POOLED\\(145 UNIQUE DOIs)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{38\%}{MEASUREMENT SIDE\\(55 RECORDS)}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{9}{LOW-COST SENSOR\\RECORDS (6\%)}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{25}{POOLED EFFECT\\ESTIMATES (25 WITH A CI)}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{40}{ABSTRACT-FREE\\(28\% OF WEEK)}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+% -------------------------------------------------------------- week in one box
+\section*{\sffamily\bfseries\color{Deep}The week in one paragraph}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}The week moved indoors and underground. \textit{Occupational \& indoor} rose
+from 15 to 22 records --- subway platforms, classrooms in wildfire smoke, nursing homes, ski-wax benches, milling
+markets, improved stoves --- and the strongest of them measured what the ambient network cannot: wildfire-day
+indoor PM$_{2.5}$ 2.72-fold higher in five New York schools (10.09 vs 3.71\,$\mu$g/m$^3$, infiltration factor
+0.69--0.95), and Philadelphia subway platforms at 5.1$\times$ street-level PM$_{2.5}$ and 16.5$\times$ black carbon.
+Sensing contracted (22 $\rightarrow$ 17) and turned to how evaluations are judged rather than to new failure modes.
+On the health side the week's largest analyses are model-exposure cohorts with small per-increment slopes; none of
+the 25 estimates rests on a low-cost sensor, for the second week running.}\\[1.4mm]
+\footnotesize
+\textbf{Scale.} \textbf{145 records} over seven issues on daily totals of \textbf{4}, 15, 26, 22, \textbf{34}, 33
+and 11. Against recent rollups: 145 after 157, 151, 135, 119, 123 and 87. \textbf{All ten subtopics populated}
+for the ninth week running.
+
+\textbf{The measurement side held at 38\,\%} (55 records): \textit{Exposure assessment \& modelling} 40
+$\rightarrow$ \textbf{38}, \textit{Sensing} 22 $\rightarrow$ \textbf{17}. Share series 39, 39, 37, 40, 39,
+\textbf{38\,\%}.
+
+\textbf{Indoor grew; burden, mechanistic and sensing fell back.} \textit{Occupational \& indoor} 15 $\rightarrow$
+\textbf{22}, \textit{Other clinical} 8 $\rightarrow$ 10, \textit{Cardiovascular} 12 $\rightarrow$ 12, \textit{Neuro}
+7 $\rightarrow$ 7; \textit{Burden, policy \& mitigation} 18 $\rightarrow$ \textbf{13}, \textit{Mechanistic} 16
+$\rightarrow$ \textbf{11}, \textit{Respiratory} 12 $\rightarrow$ 9, \textit{Reproductive} 7 $\rightarrow$ 6.
+
+\textbf{Estimates: 25, every one with an interval} (ninth complete week at 100\,\%), one per 5.8 records against
+one per 4.5 last week. 20 on ratio scales (HR 11, OR 4, RR 3, aOR 2) and 5 on difference scales (all \% change).
+
+\textbf{Abstract gap 40 of 145 (28\,\%)}, up from 16\,\% --- mostly Elsevier deposits on the Crossref-ISSN leg
+with no abstract. \textbf{Tier mix 12 A, 38 B, 95 C} --- tier A at \textbf{8\,\%}, from 11\,\%.
+\end{keybox}
+
+\clearpage
+
+% -------------------------------------------------------------- trend
+\section*{\sffamily\bfseries\color{Deep}Subtopic trend and inflection}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/w1_subtopic_trend.png}
+\figcap{Per-issue subtopic counts across the week from \texttt{state/metrics.csv}, seven issues, daily totals 4,
+15, 26, 22, 34, 33 and 11. Sunday 15 November's 4 is the week's minimum and
+Thursday 19 November's 34 its maximum. 15--16 November were built on the 17 November run (15 November recovered
+from the interrupted 16 November run), 17--18 November on the 20 November 01Z run, 19 November on the 20 November
+15Z run, and \textbf{20--21 November and this rollup on the 22 November run}.}
+
+\footnotesize
+\textbf{Expanding.} \textit{Occupational \& indoor} 15 $\rightarrow$ \textbf{22} is the only large gain (below).
+\textit{Other clinical} 8 $\rightarrow$ 10 carries the Chongqing post-resection colorectal-cancer cohort (HR 1.079,
+1.045--1.115, per 5\,$\mu$g/m$^3$ PM$_{2.5}$; organic matter HR 1.088, 1.028--1.152, per IQR) and the India NFHS-5
+under-five mortality preprint (aOR 1.07, 1.04--1.10, per 10\,$\mu$g/m$^3$).
+
+\vspace{1.2mm}
+\textbf{Contracting.} \textit{Burden} 18 $\rightarrow$ 13 (four GBD secondary analyses remain the bulk);
+\textit{Mechanistic toxicology} 16 $\rightarrow$ 11; \textit{Sensing} 22 $\rightarrow$ 17, with sensing tier A down
+from eight to two.
+
+\vspace{1.2mm}
+\textbf{The inflection worth naming.} \textbf{Microenvironments displaced the ambient network as the measured
+quantity.} Five New York K-12 schools with paired calibrated indoor/outdoor sensors (\textit{npj Clean Air}, tier A):
+wildfire-day indoor PM$_{2.5}$ 10.09 vs 3.71\,$\mu$g/m$^3$, infiltration factor 0.69--0.95, rising with outdoor
+temperature to a plateau near 20--25\,$^\circ$C and higher during instructional hours. Villanova, three Philadelphia
+subway stations: belowground PM$_{2.5}$ 5.1$\times$, black carbon 16.5$\times$ and UFP lung-deposited surface area
+1.9$\times$ street level (15th Street PM$_{2.5}$ 156.8\,$\pm$\,25.3\,$\mu$g/m$^3$). Utah ski-waxing on a low-cost
+optical sensor: application-stage PM$_{2.5}$ 456--771\,$\mu$g/m$^3$, with 8\,\% of 50 workers reporting dedicated
+exhaust. Cape Coast milling markets, ten months of IQAir monitors: PM$_{2.5}$ 27.0 and 28.9\,$\mu$g/m$^3$, WHO
+24-h guideline exceeded on 61\,\% and 92\,\% of days. Xuanwei gasifier stoves: PM$_{2.5}$-bound PAHs 31.5 to
+21.2\,ng/m$^3$. \textbf{The weakness is shared}: in each, an optical sensor calibrated on ambient aerosol meets an
+aerosol it was not calibrated for --- wax fume, organic mill dust, iron-rich subway particles --- and only the New York
+study reports a correction. And half of the band's 22 records (11) are metadata-only deposits: part of the
+gain is volume without content.
+
+\vspace{1.2mm}
+\textbf{Last week's test} (a health or exposure-contrast estimate on a corrected low-cost network, or a wildfire
+PM$_{2.5}$ split validated against one) \textbf{was met on the exposure side only.} The New York schools contrast
+uses calibrated sensors with satellite smoke classification --- an exposure contrast, not a health estimate.
+No health estimate this week used a sensor exposure, and no wildfire split was validated.
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f2a_architecture.png}
+\figcap{Study architecture, pooled. \textit{Metadata only} \textbf{40} now leads, then modelling 25, measurement campaign 23, review 13, cohort, cross-sectional and toxicology 9 each, acute and ecological 5 each, chamber 4, \textbf{trial / intervention 2} (Xuanwei stoves, Ibadan behavioural; both non-randomised), tool 1.}
+
+\clearpage
+% -------------------------------------------------------------- pooled analytics
+\section*{\sffamily\bfseries\color{Deep}Pooled analytics}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{3mm}
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Pooled subtopic distribution, all ten bands populated: \textit{Exposure} 38 and \textit{Sensing} 17 put the measurement side at \textbf{55 of 145 (38\,\%)}. On the health side \textit{Occupational \& indoor} 22 leads, then \textit{Burden} 13, \textit{Cardiovascular} 12, \textit{Mechanistic toxicology} 11, \textit{Other clinical} 10, \textit{Respiratory} 9, \textit{Neuro} 7 and \textit{Reproductive} 6. The endpoint chart (f2b) is omitted at rollup volume.}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric: unspeciated PM or emissions 53, PM$_{2.5}$ alone 45, PM$_{2.5}$ and PM$_{10}$ jointly 24, optical properties 10, size-resolved 5, composition 3, PM$_{10}$ alone 3, ultrafine 1, composite AQ index 1. Right --- geography: \textit{Global / multi-region} 36, China 33, North America 20, South Asia 14, Europe 12, sub-Saharan Africa 8, East Asia ex-China 7, Middle East \& North Africa 6, Southeast Asia 5, polar/remote marine 2, Latin America 2. South Asia doubled from 7 (Delhi-NCR, Dhaka, Kolkata--Howrah, India gridded-product and NFHS-5 work).}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows across the pooled week; counts non-exclusive (7, 7, 2, 19, 14). Working age leads, carried by the China NAAQS mortality analysis, the East African stroke burden and occupational campaigns; older adults by Generation Scotland, CHARLS cognition and FINRISK; in utero by ECHO, New Mexico and New Jersey; adolescence only by the NSCH pain survey and the New York schools. Stage notes are truncated in the figure.}
+
+\clearpage
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, all 20 ratio estimates (HR 11, OR 4, RR 3, aOR 2), from 0.95 (FINRISK traffic-exhaust PM$_{2.5}$ and dementia, 0.85--1.05, per 0.1\,$\mu$g/m$^3$) to 2.95 (California Teachers Study IL-1$\beta$ top quartile, PM$_{2.5}$ elemental carbon, 1.94--4.48). Nested sets share samples and are not independent: California Teachers Study (4), Shenzhen CKM (3), Chongqing CRC (3), Generation Scotland, India NFHS-5 and FINRISK (2 each). Eighteen of 20 exclude the null; no pooling.}
+
+\vspace{2mm}
+\IfFileExists{\FIGDIR/f5_forest_2.png}{\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_2.png}
+\figcap{Difference scale, 5 estimates, all \% change: Wuhan child carotid IMT after early-life PM$_{2.5}$ (internal carotid +8.49\,\%, 3.09--14.17; common carotid +2.87\,\%, 0.71--5.09; increment not stated) and the 14-cohort European exposome IHD analysis per quartile in administrative cohorts (PM$_{2.5}$ +1.4\,\%, 0.8--1.9; PM$_{10}$ +0.9\,\%, 0.1--1.7; air-pollution domain +2.5\,\%, 1.9--3.1). No pooling.}}{}
+
+\vspace{2mm}
+\IfFileExists{\FIGDIR/f5_forest_3.png}{\noindent\includegraphics[width=\linewidth]{\FIGDIR/f5_forest_3.png}
+\figcap{}}{}
+
+\vspace{2mm}
+\noindent\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ architecture, pooled. The largest cells are \textit{Metadata only} in exposure (12) and occupational \& indoor (11): half of the indoor band's 22 records carry no abstract. Exposure assessment otherwise splits between measurement campaigns (11) and modelling (9); burden is modelling (8); mechanistic toxicology experimental (6); neuro is cohort work (4).}
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- exposure basis and funnel
+\par\vskip 0pt plus 14\baselineskip\penalty-200\vskip 0pt plus -14\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Exposure basis and the effect funnel}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Exposure basis (x1).} 9 of 145 records rest on a low-cost sensor or network (6\,\%), against 12 (8\,\%)
+last week and 15 of 523 (3\,\%) in October; 3 on a personal or wearable monitor. On the health side, where a basis is
+recoverable (n=59), \textbf{59\,\% measured, 36\,\% modelled or satellite-fused, 5\,\% proxy}, against 52/43/5 last
+week and the October baseline of 36/42/22. The measured share rose because indoor and occupational campaigns moved
+into the health-side bands, and because chamber and toxicology work counts as laboratory measurement; it is not a
+shift in how cohorts assign exposure. \emph{None of the 25 effect estimates rests on a low-cost sensor exposure}: the
+cohorts use chemical-transport (EMEP4UK, CHAP/TAP), satellite-ML, EXPANSE or dispersion surfaces, and the only
+monitor-based estimate is the Bangkok AQHI series on regulatory stations.
+
+\vspace{1.5mm}
+\textbf{Increments and precision (x2).} Of the 20 ratio estimates, 8 are per IQR or SD, 4 per 10\,$\mu$g/m$^3$,
+4 categorical contrasts, 2 per 1\,$\mu$g/m$^3$ or unit, and \textbf{2 are classed ``increment not recorded''} ---
+10\,\%, against 40\,\% last week. Both are the Chongqing estimates, which \emph{are} reported per 5\,$\mu$g/m$^3$, a
+class the classifier does not have; in substance every ratio estimate this week carries an increment. The Egger
+intercept is \textbf{3.57 (SE 1.18, n=20)}, against 2.59 (SE 0.92, n=30) last week: imprecise estimates still sit
+on the harmful side. The 20 come from 10 sources with nested sets (California Teachers Study immune markers 4,
+Shenzhen CKM 3, Chongqing 3), so the intercept is descriptive. The funnel is \textbf{not} a pooled estimate:
+increments differ and many estimates share a sample.
+
+\vspace{1.5mm}
+\textbf{Within-family heterogeneity.} \textbf{No family qualifies this week, and no I$^2$ is reported.} The nearest
+pair --- dementia in Generation Scotland (above- vs below-mean PM$_{2.5}$, HR 1.48, 1.15--1.90) and FINRISK
+(source-specific PM$_{2.5}$ per 0.1\,$\mu$g/m$^3$: traffic exhaust HR 0.95, 0.85--1.05; wood combustion 1.23,
+0.79--1.92) --- differs in contrast, increment and exposure source. Shenzhen's three CKM-progression estimates (per
+IQR 5.0\,$\mu$g/m$^3$: overall 1.054, 1.030--1.078; early 1.073, 1.030--1.118; advanced 1.055, 1.027--1.085) share
+one cohort and are not independent.
+
+\vspace{4mm}
+
+% -------------------------------------------------------------- venues + trials
+\par\vskip 0pt plus 14\baselineskip\penalty-200\vskip 0pt plus -14\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Venues, groups, trial watch, and what the pipeline did}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\textbf{Venues.} Research Square leads at \textbf{10}, then \textit{Atmospheric Pollution Research} \textbf{9},
+\textit{Atmos Chem Phys} 7, \textit{Environ Res} 6, \textit{Environ Monit Assess} and \textit{Atmos Environ} 5
+each, \textit{Environ Pollut} and \textit{Environ Int} 4 each. Research Square again supplied the sensing-relevant
+preprints: the Ghana IQAir deployments, the Kampala AirQo forecasting test and the two Kolkata--Howrah network papers.
+
+\vspace{1.5mm}
+\textbf{Recurring groups.} The \texttt{affil} field is empty or ``not stated'' for 48 of 145 records (33\,\%), most of
+them metadata-only Crossref deposits; no institution reaches three mentions. \textbf{Four pairs are coherent.}
+\textbf{University of Cape Coast}: two IQAir deployments in Ghana (milling markets; a mining community vs background),
+both uncorrected optical sensors in coarse dust. \textbf{Bule Hora University}: two GBD 2023 secondary analyses
+(Ethiopian air-pollution deaths; East African stroke burden). \textbf{Nankai University}: size-resolved oxidative
+potential (fine OP tracking EC and 9,10-phenanthrenequinone) and WRF-GC/E-AIM winter aerosol pH 2.54--4.32 across
+six eastern Chinese regions. And one author's \textbf{Kolkata--Howrah} pair on the same 13 regulatory stations: random
+10-fold CV R$^2$ 0.84 vs 0.58 under spatial-block or leave-one-station-out validation (inflation 1.45$\times$), and
+persistent-homology network geometry with spatial correlation reaching random by about 7\,km (semivariogram range
+5.29\,km). Scite counts were not retrieved; for records days old they would be uninformative.
+
+\vspace{1.5mm}
+\textbf{Trial watch.} ClinicalTrials.gov \texttt{LastUpdatePostDate} windows 17--19 and 19--20 November
+(Amass TrialCore on the second): \textbf{1 added} to the register --- \textbf{NCT07539987} AIRWISE (University of
+Montana), real-time air-quality monitoring plus portable air cleaning in older adults, the third registered trial in
+the set whose intervention starts from \emph{a monitor reading} (after REACT, NCT07914010, now recruiting, and the
+Boston University monitor-plus-messaging trial NCT07931820). INTERLUNG (NCT07540000) and REACT were carried as updates;
+Amass returned 20 new registrations on 19--20 November, none on topic. The window queried on this run (\texttt{2026-11-20 to 2026-11-22}) returned 0 hits, 0 kept. \texttt{trials.json} holds \textbf{31 trials} over 48 query windows. \texttt{analyze\_endpoints} was not run.
+
+\vspace{1.5mm}
+\textbf{What the harvesting legs did.} \textbf{Crossref-by-ISSN} supplied 34--61 records/day (16--21 November) and most of the
+abstract gap; \textbf{Europe PMC} 4--47/day (16--21 November), with 17 of 21 November's records already in the 20 November set and
+removed by the cross-day candidate set; \textbf{PubMed E-utilities} health 2--18/day, sensing axis zero on most days;
+\textbf{PubMed connector} (EDAT) appended 1--9/day on 17--21 November and twice recovered records entered after their day's harvest.
+\textbf{OpenAlex}: HTTP leg 403 all week, connector absent. \textbf{arXiv} no in-window record. \textbf{Consensus},
+\textbf{Amass} literature backfill and \textbf{Scite} were not run. The 22 November run lost the device connection
+once mid-harvest and resumed from the cached legs.
+
+\vspace{2mm}
+% -------------------------------------------------------------- gaps
+\section*{\sffamily\bfseries\color{Deep}Open gaps}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+\item \textbf{Optical sensors in non-ambient aerosol.} Wax fume, organic mill dust and iron-rich subway PM all violate
+the ambient calibration that consumer optical sensors carry; of this week's microenvironment campaigns only the New York
+schools report a correction. Concentrations of 456--771\,$\mu$g/m$^3$ on an uncorrected sensor are an order-of-magnitude
+statement, not an exposure.
+
+\item \textbf{Validation that flatters.} Random cross-validation inflated a 13-station LUR R$^2$ by 1.45$\times$
+(Kolkata--Howrah); the India gridded-product evaluation validated against 249 monitors clustered in cities, leaving
+rural error uncharacterised; the Malings framework asks evaluators to separate missing from uncertain information.
+Network-based exposure surfaces need station-held-out validation as the default.
+
+\item \textbf{Mass is the wrong currency, again.} The 26-laboratory ascorbic-acid OP comparison found significant
+between-lab discrepancies (just over half satisfactory); Fudan put non-exhaust PM$_{2.5}$ at 5--11$\times$ the
+oxidative and cytotoxic potency of exhaust per unit mass; Chongqing's survival signal sat on organic matter. None of
+these is resolvable by an optical mass sensor.
+
+\item \textbf{Abstract gap 28\,\%} (40 of 145); 8 of 11 records on
+21 November are metadata only. The two low-cost-sensor records of 20 November (NIST wildland--urban-interface aerosol
+test, \textit{AS\&T}; northern Thailand microsensor smoke haze, \textit{AAQR}) are among them and need full text.
+
+\item \textbf{Pipeline defects carried forward}: per-5\,$\mu$g/m$^3$ increments fall to ``not recorded'' in x2;
+\texttt{AOR} (upper case) is not in the ratio-metric set and was silently dropped until rewritten as \texttt{aOR};
+OpenAlex unavailable on both legs; \texttt{.git} lock debris on the delete-restricted mount.
+\end{itemize}
+
+\vspace{1.5mm}
+\textbf{Research direction.} Last week the sensing literature characterised its own failure envelope; this week
+the measured literature moved into the places people spend their exposure --- classrooms, platforms, workbenches ---
+and carried the ambient calibration problem with it. The cohorts meanwhile grew larger and their slopes smaller
+(HR 1.05--1.08 per IQR or 5\,$\mu$g/m$^3$, +1.4\,\% per quartile in 29 million Europeans), exactly where exposure
+error, not sample size, limits inference. \textbf{Test for W48}: a microenvironment or health study that reports a
+reference or gravimetric co-location for its low-cost sensor in the aerosol actually measured, or a cohort estimate
+whose exposure surface is validated station-held-out.
+
+\clearpage
+
+% -------------------------------------------------------------- digest
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest --- the week by subtopic}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{1mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Every record that appeared in a daily issue
+keeps that issue's critical summary verbatim; nothing here is re-written or re-assessed.
+Records surfaced without an abstract are shown as such. Ordered by subtopic, then by the
+date of the issue that first carried the record.\par}
+
+\input{digest_body}
+
+% -------------------------------------------------------------- register
+\section*{\sffamily\bfseries\color{Deep}Pooled corpus register}
+\vspace{-1.5mm}{\color{Teal}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{4mm}
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Period \textbf{15 -- 21 November 2026}, Sunday to Saturday, \textbf{seven daily issues},
+\textbf{145 records}, \textbf{145 unique DOIs}, no record without a DOI. This rollup is
+\textbf{aggregation only}: it re-reads \texttt{state/corpus/*.json}, \texttt{state/metrics.csv} and
+\texttt{state/trials.json} over the period and \textbf{queries no literature API}; every record was gated by
+\texttt{check\_dois.py} at daily-issue time. Tier mix \textbf{12 A, 38 B, 95 C}. The 15--16 November dailies were
+built on the 17 November run, 17--18 November on the 20 November 01Z run, 19 November on the 20 November 15Z run,
+and 20--21 November and this rollup on the \textbf{22 November run}. Effect estimates are transcribed verbatim from
+the daily issues on heterogeneous contrasts and are \textbf{not} meta-analysed; no within-family I$^2$ qualified this
+week. Abstracts remain the copyright of their respective publishers.\par}
+\end{keybox}
+
+\end{document}

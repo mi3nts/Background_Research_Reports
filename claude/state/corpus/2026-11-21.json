@@ -1,0 +1,202 @@
+{
+ "date": "2026-11-21",
+ "entry_window": "2026-11-21 -> 2026-11-21",
+ "PAPERS": [
+  {
+   "pmid": "43065452",
+   "doi": "10.1038/s44407-026-00116-y",
+   "journal": "NPJ Clean Air",
+   "title": "Variability and controls of wildfire smoke infiltration in school buildings.",
+   "tier": "A",
+   "basis": "Low-cost sensor / network",
+   "short": "Five New York K-12 schools, paired calibrated indoor/outdoor sensors: wildfire-day indoor PM2.5 10.09 vs 3.71 ug/m3 (2.72-fold); infiltration factor 0.69-0.95",
+   "design": "Multi-site monitoring campaign",
+   "pm": "Hourly paired indoor and outdoor PM2.5 from calibrated sensors; satellite smoke and network PM2.5 to classify regimes; mass-balance infiltration factor Finf",
+   "geo": "USA (New York Capital Region)",
+   "endpoint": "Indoor PM2.5 and infiltration factor of outdoor wildfire PM2.5 in school buildings",
+   "n": "Paired indoor-outdoor PM2.5 from calibrated sensors at five K-12 schools in New York's Capital Region, September 2024 to December 2025; satellite smoke plus network PM2.5 classified regimes, and emission screening with a mass balance isolated outdoor-derived particles to estimate Finf. Mean indoor PM2.5 was 10.09 ug/m3 on wildfire days vs 3.71 on other days (2.72-fold), driven by outdoor PM2.5; Finf stayed high (0.69-0.95 across schools) and slightly above clean-background values (0.65-0.92). Outside smoke, Finf rose with outdoor temperature to a plateau near 20-25 C (0.77-0.78) and was higher on school days and in instructional hours. Weakness: five schools in one region, no CIs, and sensor calibration details and smoke-specific optical bias are not given in the abstract. Relevance: a direct template for school sensor networks - paired indoor/outdoor low-cost units yield building-specific Finf during smoke.",
+   "sub": "Occupational & indoor"
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-11793536/v1",
+   "journal": "Research Square",
+   "title": "Quantifying Spatial Cross-Validation Inflation in Satellite-Ground Air Quality Coupling: Mesoscale NDVI/LST Regimes and Land Use Regression Across an Urban Megacity",
+   "tier": "B",
+   "basis": "Satellite-fused",
+   "short": "Kolkata-Howrah, 13 regulatory stations: random 10-fold CV R2 0.84 vs spatial-block/LOSO R2 0.58 for PM2.5 (1.45x inflation)",
+   "design": "Spatial cross-validation, operational network",
+   "pm": "Station PM2.5 and PM10 (13 regulatory monitors, 2024-2025) modelled from Landsat-8/9 NDVI, NDBI and LST in 500-5000 m buffers (LUR)",
+   "geo": "India (Kolkata-Howrah)",
+   "endpoint": "Out-of-sample R2 of satellite-ground LUR under random vs spatial cross-validation",
+   "n": "Preprint, not peer reviewed. Land use regression of PM2.5 and PM10 at 13 regulatory stations in the Kolkata-Howrah conurbation (2024-2025) on 30 m Landsat-8/9 NDVI, NDBI and land surface temperature over 500-5000 m buffers. Random 10-fold cross-validation gave R2 0.84 for PM2.5; spatial block and leave-one-station-out validation gave 0.58, an inflation factor of 1.45. Dense vegetation (NDVI > 0.45) was associated with up to 24.3% lower PM2.5 than built-up surfaces (NDBI > 0.15); thermal and built-up drivers dominated at 500-1000 m, green space at 2000-5000 m. Weakness: 13 stations is too few for a stable LUR or a credible LOSO estimate, no uncertainty on R2, and the vegetation effect is cross-sectional. Relevance: quantifies why dense sensor networks matter - with 13 sites, honest spatial validation removes a third of apparent skill.",
+   "sub": "Exposure assessment & modelling"
+  },
+  {
+   "pmid": "",
+   "doi": "10.21203/rs.3.rs-11793674/v1",
+   "journal": "Research Square",
+   "title": "Topological Data Analysis of Urban Air Quality Monitoring Networks: Vietoris-Rips Simplicial Filtration, Persistent Homology, and Geostatistical Connectivity in a Bifurcated Riverine Airshed",
+   "tier": "C",
+   "basis": "Reference / regulatory monitor",
+   "short": "Persistent homology of 13 Hooghly-conurbation stations: network consolidates at 14.5 km; PM Moran I falls from +1.017 at 2 km to random by 7 km",
+   "design": "Spatial analysis / GIS",
+   "pm": "Station PM2.5, PM10 and NO2 from 13 regulatory monitors used to ground graph and topological filtrations",
+   "geo": "India (Kolkata-Howrah, Hooghly River)",
+   "endpoint": "Network geometry: persistent homology invariants, Moran I and semivariogram range",
+   "n": "Preprint, not peer reviewed; same author and 13-station Kolkata-Howrah network as the companion LUR preprint. Vietoris-Rips filtration and classical graphs (Delaunay, Gabriel, MST) describe network geometry: zero-dimensional homology shows hierarchical percolation with consolidation at 14.50 km, and the only one-dimensional cycle (trans-river) is shown to be a coordinate-discretisation artefact. Grounded in PM2.5, PM10 and NO2 data, Moran I moves from localised clustering (+1.017 at 2 km) to random expectation (-0.083) at 7 km, consistent with a 5.29 km semivariogram practical range. Weakness: a mathematical description of 13 points; no test of whether the topology improves interpolation or siting, and no uncertainty on Moran I. Relevance: the ~5-7 km decorrelation scale is a usable spacing target for densifying the network with low-cost sensors.",
+   "sub": "Sensing, forecasting & instrumentation"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosenv.2026.122503",
+   "journal": "Atmospheric Environment",
+   "title": "Urban Sprawl and Environmental Factors in Relation to Chronic Lung Disease Incidence: A Longitudinal Study in China",
+   "short": "Urban sprawl and environmental factors vs chronic lung disease incidence, longitudinal China",
+   "design": "Metadata only",
+   "pm": "Metadata only - urban sprawl and environmental factors; whether PM2.5 is among them is not stated in the record",
+   "geo": "China",
+   "endpoint": "Metadata only - incident chronic lung disease",
+   "tier": "C",
+   "basis": "Model (CTM / LUR / ML)",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Environment; Sun, Yang, Xie, Wang) relates urban sprawl and environmental factors to chronic lung disease incidence in a longitudinal Chinese study. No finding, exposure metric or effect size is asserted here. Relevance: indirect - urban form is a determinant of where dense PM monitoring is most informative; pull the full text to see whether PM2.5 enters as exposure or covariate.",
+   "sub": "Respiratory & allergic"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103295",
+   "journal": "Atmospheric Pollution Research",
+   "title": "Effects of drought on the evolution mechanism of PM2.5-O3 co-pollution and its influencing factors",
+   "short": "Drought and the evolution of PM2.5-O3 co-pollution and its drivers",
+   "design": "Metadata only",
+   "pm": "Metadata only - PM2.5 and O3 co-pollution under drought",
+   "geo": "Not stated",
+   "endpoint": "Metadata only - PM2.5-O3 co-pollution evolution and drivers",
+   "tier": "C",
+   "basis": "Reference / regulatory monitor",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; Zhang, Wu, Yi) examines how drought alters the evolution mechanism of PM2.5-O3 co-pollution and its influencing factors. No finding, region or data source is asserted here. Relevance: low-moderate - drought-driven co-pollution episodes are a regime where sensor drift and RH artefacts differ from normal conditions.",
+   "sub": "Exposure assessment & modelling"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103293",
+   "journal": "Atmospheric Pollution Research",
+   "title": "Seasonal drivers and nonlinear PM2.5 responses to emission reductions in Beijing using explainable machine learning",
+   "short": "Beijing: seasonal drivers and nonlinear PM2.5 responses to emission reductions, explainable ML",
+   "design": "Metadata only",
+   "pm": "Metadata only - PM2.5 response to emission reductions modelled with explainable machine learning",
+   "geo": "China (Beijing)",
+   "endpoint": "Metadata only - seasonal PM2.5 drivers and nonlinear emission-reduction response",
+   "tier": "C",
+   "basis": "Model (CTM / LUR / ML)",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; Liu, Lai, Xu, Xu) uses explainable machine learning to resolve seasonal drivers and nonlinear PM2.5 responses to emission reductions in Beijing. No finding, model skill or attribution is asserted here. Relevance: moderate - SHAP-type attribution of PM2.5 to meteorology vs emissions is the same machinery used to deweather low-cost network data.",
+   "sub": "Burden, policy & mitigation"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103294",
+   "journal": "Atmospheric Pollution Research",
+   "title": "Probabilistic aerosol regimes during extreme particulate pollution across the Middle East and North Africa",
+   "short": "Probabilistic aerosol regimes during extreme particulate pollution across the Middle East and North Africa",
+   "design": "Metadata only",
+   "pm": "Metadata only - aerosol regimes during extreme particulate pollution (dust-dominated region)",
+   "geo": "Middle East and North Africa (multi-country)",
+   "endpoint": "Metadata only - classification of aerosol regimes in extreme PM events",
+   "tier": "C",
+   "basis": "Satellite-fused",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; El Kenawy, Al-Hosan, Aldohan, Youssef) defines probabilistic aerosol regimes during extreme particulate pollution across the Middle East and North Africa. No finding or data source is asserted here. Relevance: moderate - dust-dominated regimes are where optical low-cost sensors under-read coarse mass most, so regime labels could condition calibration.",
+   "sub": "Exposure assessment & modelling"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.apr.2026.103292",
+   "journal": "Atmospheric Pollution Research",
+   "title": "Indoor Air Quality in a Higher Education Environment in Cyprus: A pre-post intervention study",
+   "short": "Indoor air quality in a higher-education environment in Cyprus, pre-post intervention",
+   "design": "Metadata only",
+   "pm": "Metadata only - indoor air quality; pollutants measured not stated in the record",
+   "geo": "Cyprus",
+   "endpoint": "Metadata only - indoor air quality before and after an intervention",
+   "tier": "C",
+   "basis": "Lab / research instrument",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; Roy, Mansouri, Kirzhbaum, Yamasaki) reports a pre-post intervention study of indoor air quality in a Cypriot higher-education building. No finding, pollutant list or intervention is asserted here. Relevance: moderate - classroom IAQ interventions are commonly evaluated with low-cost PM/CO2 monitors; check the instruments and whether PM is measured.",
+   "sub": "Occupational & indoor"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.scitotenv.2026.182412",
+   "journal": "Science of The Total Environment",
+   "title": "Multi-product evidence qualification for air quality hotspot screening under retrieval gaps and column–surface divergence",
+   "short": "Multi-product evidence qualification for air-quality hotspot screening under retrieval gaps and column-surface divergence",
+   "design": "Metadata only",
+   "pm": "Metadata only - multiple satellite products for hotspot screening; pollutant(s) not stated in the record",
+   "geo": "Not stated",
+   "endpoint": "Metadata only - reliability of satellite-based hotspot screening",
+   "tier": "C",
+   "basis": "Satellite-fused",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Science of The Total Environment; Baldwin, Yang, Ghahremanlou, Ghahremanlou) proposes qualifying evidence from multiple products for air-quality hotspot screening when satellite retrievals have gaps and column values diverge from surface concentrations. No finding is asserted, and whether PM (via AOD) or only trace gases are covered is unknown. Relevance: moderate - column-surface divergence is the core reason ground sensor networks are needed to anchor satellite PM.",
+   "sub": "Exposure assessment & modelling"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.atmosres.2026.109465",
+   "journal": "Atmospheric Research",
+   "title": "The double-boundary-layer temperature inversions in the Beijing megacity and their contrasting aerosol trapping capacities",
+   "short": "Beijing double-boundary-layer temperature inversions and their contrasting aerosol trapping capacities",
+   "design": "Metadata only",
+   "pm": "Metadata only - aerosol vertical trapping under double temperature inversions",
+   "geo": "China (Beijing)",
+   "endpoint": "Metadata only - aerosol accumulation under single vs double boundary-layer inversions",
+   "tier": "C",
+   "basis": "Lab / research instrument",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Research; Ma, Xin, Wang, Ren) characterises double-boundary-layer temperature inversions over Beijing and their contrasting capacity to trap aerosol. No finding or instrument is asserted here. Relevance: moderate - inversion structure governs how well surface sensors represent the column, and thus satellite-surface fusion error.",
+   "sub": "Exposure assessment & modelling"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1186/s12989-026-00719-z",
+   "journal": "Particle and Fibre Toxicology",
+   "title": "AhR/ROS-mediated nasal epithelial senescence drives PM2.5-exacerbated allergic rhinitis via alarmin release",
+   "short": "PM2.5 exacerbates allergic rhinitis via AhR/ROS-mediated nasal epithelial senescence and alarmin release",
+   "design": "Metadata only",
+   "pm": "Metadata only - PM2.5 exposure in an allergic rhinitis model",
+   "geo": "Not stated",
+   "endpoint": "Metadata only - nasal epithelial senescence, alarmins and allergic rhinitis severity",
+   "tier": "C",
+   "basis": "Lab / research instrument",
+   "affil": "not stated in record",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Particle and Fibre Toxicology; Yuan, Zhu, Liu, Zhu) proposes that PM2.5 aggravates allergic rhinitis through AhR/ROS-mediated senescence of nasal epithelium and alarmin release. No finding, dose or model system is asserted here. Relevance: low - mechanistic; AhR activation points to the PAH/organic fraction rather than mass, which optical sensors do not resolve.",
+   "sub": "Mechanistic toxicology"
+  }
+ ],
+ "EFFECTS": [],
+ "LIFECOURSE": [
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 1,
+   "note": "NY K-12 schools:\nwildfire smoke indoors"
+  },
+  {
+   "n": 1,
+   "note": "NY K-12 schools\n(high-school buildings)"
+  },
+  {
+   "n": 1,
+   "note": "Cyprus university\nIAQ (metadata only)"
+  },
+  {
+   "n": 0,
+   "note": ""
+  }
+ ]
+}

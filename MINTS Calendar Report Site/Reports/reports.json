@@ -1,6 +1,14 @@
 {
   "daily": [
     {
+      "file": "PM-Research-Watch_2026-11-21.pdf",
+      "title": "Daily digest \u2014 21 Nov 2026"
+    },
+    {
+      "file": "PM-Research-Watch_2026-11-20.pdf",
+      "title": "Daily digest \u2014 20 Nov 2026"
+    },
+    {
       "file": "PM-Research-Watch_2026-11-19.pdf",
       "title": "Daily digest \u2014 19 Nov 2026"
     },
@@ -466,6 +474,10 @@
     }
   ],
   "weekly": [
+    {
+      "file": "PM-Research-Watch-Weekly_2026-11-21.pdf",
+      "title": "Week 47 \u00b7 15 Nov \u2013 21 Nov 2026"
+    },
     {
       "file": "PM-Research-Watch-Weekly_2026-11-14.pdf",
       "title": "Week 46 \u00b7 8 Nov \u2013 14 Nov 2026"

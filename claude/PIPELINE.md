@@ -3293,3 +3293,14 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 19-20 Nov: CT.gov 3 (REACT now recruiting, AIRWISE, INTERLUNG — all carried), Amass 20 new, 0 on topic → `trials.json` 31 trials / 47 windows.
 - Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus, Amass literature not run. rm still blocked.
 - Next: 20 Nov daily (≥22:00 CST 20 Nov); W47 weekly (15-21 Nov) + 21 Nov daily on Sat 21 Nov (≥22:00); November monthly on 30 Nov.
+
+## Run 2026-11-22 (16:54-17:4x UTC = 10:54 CST 22 Nov) — dailies 20 + 21 Nov + W47 weekly (15-21 Nov)
+
+- 05:00 UTC slot fired ~12 h late; before 22:00 → newest buildable 21 Nov (Saturday) → owed 20, 21 Nov + W47. Device link dropped once mid-harvest (misc leg); recovered, no partial writes lost.
+- Harvest 20 Nov: PubMed 18/0, EPMC 47, Crossref 49, arXiv 0 in window, OpenAlex HTTP 403; 21 Nov: PubMed 2/0, EPMC 36 (3 AGR dropped), Crossref 34. Connector EDAT 20-21 Nov two axes 27 PMIDs (`_conn_1122.py`; 1 EDAT-19 Nov PMID folded into 20 Nov) → 20 Nov 94 → 88 screened (6 seen/rejected), 21 Nov 69 → 52 (17 earlier-day dups, `_xday_1122.py`).
+- Admitted/rejected: 20 Nov 33/55 (12 effects: 9 ratio + 3 % change, 4 tier A, 8 metadata-only); 21 Nov 11/41 (0 effects, 1 tier A, 8 metadata-only) (`_rej_1122_2{0,1}.py`). Forks authored days in parallel; builds/state serialised. DOI gate 0 FAIL; 0 overfull; 19 + 9 pp proofed.
+- Defects: (1) a literal `$` in a `short` ("$30.5-65 million") broke pdflatex in table_rows — write "USD"; consider escaping in mktable.py. (2) `metric="AOR"` is not in `_RATIO_METRICS` (plots.py/plots_extra.py) — silently dropped from forest/x2 until changed to `aOR`; add case variants. (3) "Ukraine (laboratory)" geo bins to Global.
+- W47 (`_wkstats_1122.py`, `_wk_1122.py`, `_wk_1122_caps.py`; 46 pp, 0 overfull): 145 records, measurement 38 %, 9 LCS, 25 estimates all with CI, 2/20 ratio without increment (both per-5 µg/m³ Chongqing — classifier gap), Egger 3.57 (SE 1.18), metadata-only 28 %; inflection = Occupational & indoor 15 → 22. No I² qualified.
+- Trial watch 20-22 Nov: CT.gov 0, Amass 7 new, 0 on topic → `trials.json` 31 trials / 48 windows.
+- Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus not run. rm still blocked.
+- Next: 22 Nov daily (≥22:00 CST 22 Nov); W48 (22-28 Nov) on Sat 28 Nov; November monthly on 30 Nov.

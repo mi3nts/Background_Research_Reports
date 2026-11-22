@@ -1,0 +1,225 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{21 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-21\;\;\textcolor{Amber}{\textbar}\;\;Entry window 21 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;11 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{11}{RECORDS IN SCOPE\\(41 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{6}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{0}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{8}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}On wildfire-smoke days, indoor PM$_{2.5}$ in five New York schools averaged 10.09\,$\mu$g\,m$^{-3}$ against 3.71 on other days (2.72-fold), because the buildings let 69--95\,\% of outdoor particles in --- measured with paired, calibrated indoor/outdoor sensors.}\\[1.4mm]
+\footnotesize
+\textit{npj Clean Air} (Guo, Qiu, Bari, Li). Five K-12 schools in the Capital Region, hourly paired PM$_{2.5}$, September 2024 to December 2025; satellite smoke products and network PM$_{2.5}$ assign each hour to a regime, and emission screening plus a mass balance isolates outdoor-derived particles to give the infiltration factor $F_{inf}$. $F_{inf}$ was 0.69--0.95 on smoke days versus 0.65--0.92 under clean background; outside smoke it rose with outdoor temperature to a plateau of 0.77--0.78 above 20--25\,$^\circ$C, and was higher on school days and in instructional hours. Mass-balance runs show more indoor removal would cut indoor PM$_{2.5}$, by building-specific amounts.
+\textbf{Where it is weak:} five buildings in one region; no confidence intervals on $F_{inf}$; sensor make, calibration against reference and the optical bias of smoke versus urban aerosol are not described in the abstract.
+\textbf{Why it matters here:} this is the use case a low-cost network is built for --- a paired indoor/outdoor unit per building turns ``stay indoors'' advice into a measured, building-specific protection factor during smoke events.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{Random cross-validation inflates satellite LUR skill by 1.45$\times$.} Kolkata--Howrah, 13 regulatory stations, Landsat NDVI/NDBI/LST buffers (Research Square preprint): PM$_{2.5}$ R$^2$ 0.84 under random 10-fold CV, 0.58 under spatial-block and leave-one-station-out. With 13 sites even the honest figure is fragile, but the gap is the argument for denser ground truth.
+
+\item \textbf{A 5--7\,km decorrelation scale for the same network.} The companion preprint applies persistent homology to the 13 stations: PM Moran's I falls from +1.017 at 2\,km to random by 7\,km, matching a 5.29\,km semivariogram range. A usable spacing target for sensor densification, though nothing is tested against interpolation error.
+
+\item \textbf{Eight Elsevier/BMC deposits on metadata alone.} Beijing explainable-ML PM$_{2.5}$ response to emission cuts; double-layer inversions and aerosol trapping over Beijing; MENA extreme-PM aerosol regimes; drought and PM$_{2.5}$--O$_3$ co-pollution; satellite hotspot screening under column--surface divergence; urban sprawl and chronic lung disease in China; a Cyprus university IAQ intervention; and AhR/ROS nasal senescence in PM$_{2.5}$-exacerbated allergic rhinitis. No finding is asserted for any of them.
+
+\item \textbf{Exposure basis (x1).} No admitted record reports a PM effect estimate with a CI, so there is no forest. The only health-side records are metadata-only (chronic lung disease, allergic rhinitis mechanism); the one measured exposure in the issue --- the school infiltration study --- \emph{is} a low-cost sensor deployment, and the remaining measurement-side work rests on regulatory monitors and satellite products.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 20 November issue closed the day before. This issue was built on the \textbf{22 November 16:55 UTC (10:55 CST) run} (the 05:00 UTC slot fired almost twelve hours late). Before 22:00 CST the newest buildable day is yesterday, so this run owes \textbf{20 and 21 November} as two issues plus the \textbf{W47 weekly (15--21 November)}, which falls due on Saturday 21 November; \textbf{21 November is covered in full}. A cross-day candidate set was built before authoring: 17 records surfacing again on 21 November were assigned to the 20 November issue (earliest day wins). No \textsc{backfill} records today. OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session, and Scite was not run.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 11 records across six of ten bands: exposure assessment 5, occupational \& indoor 2, and one each for sensing, respiratory, burden and mechanistic. Cardiovascular/metabolic, neuro, reproductive and other clinical are empty today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: eight of eleven records are metadata only; the three with abstracts are a multi-school monitoring campaign, a spatial cross-validation of satellite LUR on an operational network, and a spatial/topological analysis of the same network. Right --- endpoints are singletons apart from the metadata-only bar.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric as classified from the record fields. Right --- geography by record: China 3 (all Beijing or national), global / multi-region 3 (records with no stated site), South Asia 2 (Kolkata--Howrah), Middle East \& N.\ Africa 2 (MENA regimes, Cyprus) and North America 1 (New York schools).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. Childhood and adolescence: the New York K-12 schools, where wildfire smoke reached classrooms; young adulthood / working age: the Cyprus university IAQ study (metadata only). No in-utero or older-adult record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Exposure assessment is mostly metadata-only work plus the satellite LUR cross-validation; occupational \& indoor pairs the school campaign with a metadata-only intervention; the single sensing record is the network-topology analysis.}\end{minipage}
+
+\vspace{2mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}\textbf{No forest plot this issue.} No admitted record reports a PM effect estimate with a confidence interval. The school study reports mean concentrations and infiltration-factor ranges, the Kolkata preprints report R$^2$ and Moran's I without uncertainty, and the eight remaining records are metadata only.}
+
+\vspace{4mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Urban sprawl and environmental factors vs chronic lung disease incidence, longitudinal China}
+{Urban Sprawl and Environmental Factors in Relation to Chronic Lung Disease Incidence: A Longitudinal Study in China}
+{Atmospheric Environment}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Environment; Sun, Yang, Xie, Wang) relates urban sprawl and environmental factors to chronic lung disease incidence in a longitudinal Chinese study. No finding, exposure metric or effect size is asserted here. Relevance: indirect - urban form is a determinant of where dense PM monitoring is most informative; pull the full text to see whether PM$_{2.5}$ enters as exposure or covariate.}
+{10.1016/j.atmosenv.2026.122503}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{PM$_{2.5}$ exacerbates allergic rhinitis via AhR/ROS-mediated nasal epithelial senescence and alarmin release}
+{AhR/ROS-mediated nasal epithelial senescence drives PM$_{2.5}$-exacerbated allergic rhinitis via alarmin release}
+{Particle and Fibre Toxicology}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Particle and Fibre Toxicology; Yuan, Zhu, Liu, Zhu) proposes that PM$_{2.5}$ aggravates allergic rhinitis through AhR/ROS-mediated senescence of nasal epithelium and alarmin release. No finding, dose or model system is asserted here. Relevance: low - mechanistic; AhR activation points to the PAH/organic fraction rather than mass, which optical sensors do not resolve.}
+{10.1186/s12989-026-00719-z}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 5 records}{Clay}
+
+\paperentry{Kolkata-Howrah, 13 regulatory stations: random 10-fold CV R2 0.84 vs spatial-block/LOSO R2 0.58 for PM$_{2.5}$ (1.45x inflation)}
+{Quantifying Spatial Cross-Validation Inflation in Satellite-Ground Air Quality Coupling: Mesoscale NDVI/LST Regimes and Land Use Regression Across an Urban Megacity}
+{Research Square}
+{Preprint, not peer reviewed. Land use regression of PM$_{2.5}$ and PM$_{10}$ at 13 regulatory stations in the Kolkata-Howrah conurbation (2024-2025) on 30 m Landsat-8/9 NDVI, NDBI and land surface temperature over 500-5000 m buffers. Random 10-fold cross-validation gave R2 0.84 for PM$_{2.5}$; spatial block and leave-one-station-out validation gave 0.58, an inflation factor of 1.45. Dense vegetation (NDVI > 0.45) was associated with up to 24.3\% lower PM$_{2.5}$ than built-up surfaces (NDBI > 0.15); thermal and built-up drivers dominated at 500-1000 m, green space at 2000-5000 m. Weakness: 13 stations is too few for a stable LUR or a credible LOSO estimate, no uncertainty on R2, and the vegetation effect is cross-sectional. Relevance: quantifies why dense sensor networks matter - with 13 sites, honest spatial validation removes a third of apparent skill.}
+{10.21203/rs.3.rs-11793536/v1}
+
+\paperentry{Drought and the evolution of PM$_{2.5}$-O$_3$ co-pollution and its drivers}
+{Effects of drought on the evolution mechanism of PM$_{2.5}$-O$_3$ co-pollution and its influencing factors}
+{Atmospheric Pollution Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; Zhang, Wu, Yi) examines how drought alters the evolution mechanism of PM$_{2.5}$-O$_3$ co-pollution and its influencing factors. No finding, region or data source is asserted here. Relevance: low-moderate - drought-driven co-pollution episodes are a regime where sensor drift and RH artefacts differ from normal conditions.}
+{10.1016/j.apr.2026.103295}
+
+\paperentry{Probabilistic aerosol regimes during extreme particulate pollution across the Middle East and North Africa}
+{Probabilistic aerosol regimes during extreme particulate pollution across the Middle East and North Africa}
+{Atmospheric Pollution Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; El Kenawy, Al-Hosan, Aldohan, Youssef) defines probabilistic aerosol regimes during extreme particulate pollution across the Middle East and North Africa. No finding or data source is asserted here. Relevance: moderate - dust-dominated regimes are where optical low-cost sensors under-read coarse mass most, so regime labels could condition calibration.}
+{10.1016/j.apr.2026.103294}
+
+\paperentry{Multi-product evidence qualification for air-quality hotspot screening under retrieval gaps and column-surface divergence}
+{Multi-product evidence qualification for air quality hotspot screening under retrieval gaps and column–surface divergence}
+{Science of The Total Environment}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Science of The Total Environment; Baldwin, Yang, Ghahremanlou, Ghahremanlou) proposes qualifying evidence from multiple products for air-quality hotspot screening when satellite retrievals have gaps and column values diverge from surface concentrations. No finding is asserted, and whether PM (via AOD) or only trace gases are covered is unknown. Relevance: moderate - column-surface divergence is the core reason ground sensor networks are needed to anchor satellite PM.}
+{10.1016/j.scitotenv.2026.182412}
+
+\paperentry{Beijing double-boundary-layer temperature inversions and their contrasting aerosol trapping capacities}
+{The double-boundary-layer temperature inversions in the Beijing megacity and their contrasting aerosol trapping capacities}
+{Atmospheric Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Research; Ma, Xin, Wang, Ren) characterises double-boundary-layer temperature inversions over Beijing and their contrasting capacity to trap aerosol. No finding or instrument is asserted here. Relevance: moderate - inversion structure governs how well surface sensors represent the column, and thus satellite-surface fusion error.}
+{10.1016/j.atmosres.2026.109465}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 1 record}{Amber}
+
+\paperentry{Persistent homology of 13 Hooghly-conurbation stations: network consolidates at 14.5 km; PM Moran I falls from +1.017 at 2 km to random by 7 km}
+{Topological Data Analysis of Urban Air Quality Monitoring Networks: Vietoris-Rips Simplicial Filtration, Persistent Homology, and Geostatistical Connectivity in a Bifurcated Riverine Airshed}
+{Research Square}
+{Preprint, not peer reviewed; same author and 13-station Kolkata-Howrah network as the companion LUR preprint. Vietoris-Rips filtration and classical graphs (Delaunay, Gabriel, MST) describe network geometry: zero-dimensional homology shows hierarchical percolation with consolidation at 14.50 km, and the only one-dimensional cycle (trans-river) is shown to be a coordinate-discretisation artefact. Grounded in PM$_{2.5}$, PM$_{10}$ and NO$_2$ data, Moran I moves from localised clustering (+1.017 at 2 km) to random expectation (-0.083) at 7 km, consistent with a 5.29 km semivariogram practical range. Weakness: a mathematical description of 13 points; no test of whether the topology improves interpolation or siting, and no uncertainty on Moran I. Relevance: the \textasciitilde{}5-7 km decorrelation scale is a usable spacing target for densifying the network with low-cost sensors.}
+{10.21203/rs.3.rs-11793674/v1}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 2 records}{Amber}
+
+\paperentry{Five New York K-12 schools, paired calibrated indoor/outdoor sensors: wildfire-day indoor PM$_{2.5}$ 10.09 vs 3.71 $\mu$g\,m$^{-3}$ (2.72-fold); infiltration factor 0.69-0.95}
+{Variability and controls of wildfire smoke infiltration in school buildings.}
+{NPJ Clean Air}
+{Paired indoor-outdoor PM$_{2.5}$ from calibrated sensors at five K-12 schools in New York's Capital Region, September 2024 to December 2025; satellite smoke plus network PM$_{2.5}$ classified regimes, and emission screening with a mass balance isolated outdoor-derived particles to estimate Finf. Mean indoor PM$_{2.5}$ was 10.09 $\mu$g\,m$^{-3}$ on wildfire days vs 3.71 on other days (2.72-fold), driven by outdoor PM$_{2.5}$; Finf stayed high (0.69-0.95 across schools) and slightly above clean-background values (0.65-0.92). Outside smoke, Finf rose with outdoor temperature to a plateau near 20-25 C (0.77-0.78) and was higher on school days and in instructional hours. Weakness: five schools in one region, no CIs, and sensor calibration details and smoke-specific optical bias are not given in the abstract. Relevance: a direct template for school sensor networks - paired indoor/outdoor low-cost units yield building-specific Finf during smoke.}
+{10.1038/s44407-026-00116-y}
+
+\paperentry{Indoor air quality in a higher-education environment in Cyprus, pre-post intervention}
+{Indoor Air Quality in a Higher Education Environment in Cyprus: A pre-post intervention study}
+{Atmospheric Pollution Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; Roy, Mansouri, Kirzhbaum, Yamasaki) reports a pre-post intervention study of indoor air quality in a Cypriot higher-education building. No finding, pollutant list or intervention is asserted here. Relevance: moderate - classroom IAQ interventions are commonly evaluated with low-cost PM/CO$_2$ monitors; check the instruments and whether PM is measured.}
+{10.1016/j.apr.2026.103292}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 1 record}{Coral}
+
+\paperentry{Beijing: seasonal drivers and nonlinear PM$_{2.5}$ responses to emission reductions, explainable ML}
+{Seasonal drivers and nonlinear PM$_{2.5}$ responses to emission reductions in Beijing using explainable machine learning}
+{Atmospheric Pollution Research}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Atmospheric Pollution Research; Liu, Lai, Xu, Xu) uses explainable machine learning to resolve seasonal drivers and nonlinear PM$_{2.5}$ responses to emission reductions in Beijing. No finding, model skill or attribution is asserted here. Relevance: moderate - SHAP-type attribution of PM$_{2.5}$ to meteorology vs emissions is the same machinery used to deweather low-cost network data.}
+{10.1016/j.apr.2026.103293}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{21 November 2026}, single day (Saturday). Harvester legs: \textbf{PubMed} health \textbf{2}, sensing \textbf{0}; \textbf{Europe PMC} \textbf{36} (3 AGRICOLA retro-index records dropped); \textbf{Crossref by ISSN} \textbf{34}; \textbf{arXiv} no in-window entry; \textbf{OpenAlex} HTTP 403 on the harvester leg. 69 raw, 68 unique, 0 already carried. PubMed connector (EDAT 20--21 November, health and instrumentation axes) 3 PMIDs bucketed to 21 November (\texttt{\_conn\_1122.py}), 1 appended --- 69 candidates, of which 17 were already in the 20 November set (earliest day wins) --- \textbf{52 screened}. Abstracts: efetch filled 2 of 2; Crossref/Semantic Scholar recovered 0 of 8 Elsevier/BMC deposits.
+OpenAlex, alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check not run. No Amass or Consensus backfill this run.
+\textbf{11 admitted}, \textbf{41 rejected} with logged reasons (\texttt{\_rej\_1122\_21.py}). \textbf{8 carried on metadata alone}. Affiliations not retrieved this issue (blank or ``not stated''). Trial watch: see W47 weekly.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}
