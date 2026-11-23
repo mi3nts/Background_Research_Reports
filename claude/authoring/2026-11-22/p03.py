@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+P = [
+ dict(pmid='43067072', doi='10.1016/j.ecoenv.2026.121081', journal='Ecotoxicol Environ Saf',
+  title='Gestational co-exposure to PM(2.5) and heat impaired cardiac development in offspring.',
+  tier='B', basis='Lab / research instrument',
+  short='Pregnant mice, PM2.5 10 ug/m3 and/or 39 C, 2 h/d E6.5-E18.5: co-exposure thickened ventricular wall and impaired systolic function at P1, with lower myo-inositol, Ucp2 and ATP',
+  design='Animal exposure study',
+  pm='Whole-body PM2.5 at 10 ug/m3 and/or 39 C heat, 2 h/day from embryonic day 6.5 to 18.5; offspring hearts assessed on postnatal day 1',
+  geo='China (laboratory)',
+  endpoint='Neonatal cardiac structure and systolic function; cardiac transcriptome and metabolome',
+  n='Pregnant mice exposed to filtered air, PM2.5 (10 ug/m3), heat (39 C) or both. Co-exposure increased ventricular wall thickness and impaired systolic function on postnatal day 1, with inflammatory infiltration, oxidative damage and mitochondrial ultrastructural change. Paired transcriptomics and metabolomics implicated inositol phosphate and pantothenate/CoA metabolism; myo-inositol and Ucp2 fell, as did ATP, while DRP1 and FIS1 protein rose and cardiac development genes were downregulated. No effect sizes, CIs or litter-level n are given in the abstract. Weakness: a 2 h/day exposure at an ambient-like 10 ug/m3 producing structural cardiac change is a surprisingly large effect for the dose and invites a litter-clustering and multiplicity check; the 39 C arm is severe heat stress, so the "co-exposure" interaction may be heat-driven. Relevance: indirect - but the PM2.5-heat interaction is the case for co-locating temperature with PM on every sensor node.',
+  sub=corpus.REPR),
+ dict(pmid='43066389', doi='10.7717/peerj.21845', journal='PeerJ',
+  title='PM(2.5) modeling in Mexican cities using Aerosol optical depth and Meteorological reanalysis data.',
+  tier='A', basis='Satellite-fused',
+  short='Four Mexican metropolitan areas, 2004-2022: MAIAC AOD + ERA5 + OSM covariates in mixed-effects and GAM models give daily PM2.5 with LOOCV RMSE 3.67-9.91 ug/m3 in Mexico City',
+  design='Satellite-surface fusion, machine learning',
+  pm='Daily PM2.5 estimated from MAIAC AOD, ERA5 reanalysis meteorology, SINAICA ground monitors and OpenStreetMap covariates; PM10 used as a proxy where PM2.5 monitoring was insufficient',
+  geo='Mexico (four metropolitan areas)',
+  endpoint='Daily PM2.5 estimation accuracy (leave-one-out cross-validated RMSE)',
+  n='Hybrid framework combining linear mixed-effects and generalised additive models to produce spatially continuous daily PM2.5 for 2004-2022 in four Mexican metropolitan areas, including days and places without satellite retrievals. In the best region, the Mexico City Metropolitan Area, yearly leave-one-out RMSE ranged 3.67-9.91 ug/m3; station-based and reanalysis meteorological inputs were compared, and reanalysis inputs sustained estimates in cities usually excluded for sparse monitoring. Weakness: leave-one-out over a sparse monitor set is close to the random-CV inflation flagged on 21 November - no spatial-block or leave-one-station-out figure is reported - and PM10-derived proxy PM2.5 propagates an unquantified ratio assumption. Relevance: direct - this is the low-resource-setting gap-filling problem a low-cost network is meant to close, and the RMSE here is the bar such a network has to beat.',
+  sub=corpus.EXPO),
+]

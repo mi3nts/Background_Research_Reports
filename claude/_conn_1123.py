@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""PubMed connector PMIDs (EDAT 2026/11/22; 2026-11-23 13Z run) -> esummary,
+bucket by entrez date into cache/<day>/pubmed_connector_raw.json. Merge into _fresh with
+_connmerge_0929.py <day> after that day's screen."""
+import json, urllib.request, sys
+IDS = sys.argv[1].split(",")
+UA = {"User-Agent": "PM-Research-Watch/1.0 (research-digest bot)"}
+out = {}
+for i in range(0, len(IDS), 100):
+    u = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=" + ",".join(IDS[i:i+100])
+    j = json.loads(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read())
+    for uid in j["result"]["uids"]:
+        r = j["result"][uid]
+        ed = next((h["date"][:10].replace("/", "-") for h in r.get("history", []) if h["pubstatus"] == "entrez"), "")
+        out.setdefault(ed, []).append(r)
+for d, rs in sorted(out.items()):
+    print(d, len(rs))
+    if d == "2026-11-22":
+        rs = rs + out.get("2026-11-21", [])  # EDAT 21 Nov entered after that harvest; merge dedups vs seen
+        json.dump(rs, open("cache/%s/pubmed_connector_raw.json" % d, "w"), indent=1)

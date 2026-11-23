@@ -1,0 +1,212 @@
+{
+ "date": "2026-11-22",
+ "entry_window": "2026-11-22 -> 2026-11-22",
+ "PAPERS": [
+  {
+   "pmid": "43067074",
+   "doi": "10.1016/j.ecoenv.2026.121090",
+   "journal": "Ecotoxicol Environ Saf",
+   "title": "Prenatal ambient PM(2.5) exposure during pregnancy and postpartum depression: A prospective Birth Cohort study in China.",
+   "tier": "A",
+   "basis": "Model (CTM / LUR / ML)",
+   "short": "China Southwest Birth Cohort, n=10,568: whole-pregnancy PM2.5 OR 1.28 (1.06-1.54) per 10 ug/m3 for postpartum depression; 1.79 among tobacco-exposed; 9.7% mediated by antenatal symptoms",
+   "design": "Prospective cohort",
+   "pm": "Residential PM2.5 estimated for whole pregnancy and each trimester (estimation method not stated in abstract); two-stage residual inclusion with wind speed as instrument",
+   "geo": "China (Southwest, multicentre)",
+   "endpoint": "Postpartum depression (EPDS at 6 weeks)",
+   "n": "Multicentre China Southwest Birth Cohort, 10,568 women; PPD by EPDS at 6 weeks postpartum (22.1% prevalent), antenatal symptoms by EPDS in the second trimester. Each 10 ug/m3 of whole-pregnancy PM2.5 was associated with OR 1.28 (95% CI 1.06-1.54) for PPD after a two-stage residual-inclusion IV correction using wind speed; OR 1.79 (1.25-2.57) among tobacco-smoke-exposed women (P-heterogeneity 0.046); second trimester OR 1.18 (1.02-1.38), increment not restated. Antenatal symptoms mediated 9.7% of the second-trimester effect. Weakness: wind speed is a weak and probably invalid instrument - it moves heat, humidity and other pollutants that plausibly affect mood - and the exposure model is not described. Relevance: modest, but a large cohort where personal or home sensors would test whether the IV correction removes or adds bias.",
+   "sub": "Neuro / mental health"
+  },
+  {
+   "pmid": "43068907",
+   "doi": "10.1111/ppe.70211",
+   "journal": "Paediatr Perinat Epidemiol",
+   "title": "Ambient Air Pollution, Weather and Placental Abruption (APWA): Design, Data Linkage and Preliminary Findings.",
+   "tier": "B",
+   "basis": "Model (CTM / LUR / ML)",
+   "short": "APWA: 13.6 million linked deliveries in four US states (2000-2016), 144,930 abruptions; daily modelled PM2.5, NO2, O3 and weather from 90 days pre-LMP to 12 months postpartum",
+   "design": "Retrospective cohort",
+   "pm": "Daily modelled PM2.5, NO2 and O3 plus temperature, humidity and dew point at geocoded residence at delivery, from 90 days before LMP to 12 months after delivery",
+   "geo": "USA (California, Florida, Massachusetts, South Carolina)",
+   "endpoint": "Placental abruption (chronic vs acute), cohort design and linkage",
+   "n": "Cohort-profile paper. Vital records for live births and fetal deaths in California, Florida, Massachusetts and South Carolina (2000-2016) linked to delivery hospitalisations: 13,612,485 of 14,756,201 births (94%) linked to abruption diagnosis and to daily modelled pollutant and weather exposures. Abruption prevalence 1.0-1.4% by state (86,803 in California). Exposure distributions were similar for abruption and non-abruption births, with heterogeneity by state and season. No effect estimate yet. Weakness: residence at delivery only, so pre-conception and early-pregnancy windows - the paper's own chronic-abruption hypothesis - carry the largest misclassification; exposure model not named in the abstract. Relevance: the acute vs chronic window contrast will hinge on daily exposure accuracy, which is where dense networks add most over gridded models.",
+   "sub": "Reproductive & developmental"
+  },
+  {
+   "pmid": "43068586",
+   "doi": "10.1016/j.ecoenv.2026.120993",
+   "journal": "Ecotoxicol Environ Saf",
+   "title": "Different diameters of particulate matter exposure and health outcomes: An umbrella review.",
+   "tier": "B",
+   "basis": "Review / no primary exposure",
+   "short": "Umbrella review of PM1/PM2.5/PM10 meta-analyses with GRADE: PM1 RR 1.30 metabolic syndrome, 1.41 childhood obesity, 1.61 childhood hypertension, 1.59 NAFLD - higher than PM2.5/PM10",
+   "design": "Umbrella review / meta-analysis",
+   "pm": "PM1, PM2.5 and PM10 as reported in the pooled meta-analyses (harmonised effect estimates)",
+   "geo": "Global / multi-region",
+   "endpoint": "Multiple outcomes: metabolic syndrome, childhood obesity and hypertension, NAFLD, autism, asthma",
+   "n": "Umbrella review of observational meta-analyses, harmonising effect estimates by particle size and grading certainty with GRADE. PM1 carried the largest pooled relative risks: metabolic syndrome RR 1.30, childhood obesity 1.41, childhood hypertension 1.61 and NAFLD 1.59 (moderate certainty); similar size gradients were reported for autism and asthma. CIs, increments and the number of included meta-analyses are not given in the abstract, so these are not plotted. Weakness: PM1 meta-analyses draw on few, mostly Chinese cohorts with modelled PM1 highly collinear with PM2.5, and RRs per unspecified increments cannot be compared across fractions - the \"size effect\" may be an artefact of increment scaling. Relevance: direct - many optical low-cost sensors report PM1, but its health signal is only as good as its separation from PM2.5.",
+   "sub": "Cardiovascular & metabolic"
+  },
+  {
+   "pmid": "43068838",
+   "doi": "10.5620/eaht.2026012",
+   "journal": "Environ Anal Health Toxicol",
+   "title": "Indoor air pollution and health outcomes in women in developing Asian countries: a systematic review.",
+   "tier": "C",
+   "basis": "Review / no primary exposure",
+   "short": "Systematic review, 28 studies: household solid-fuel smoke in Asian women linked to respiratory symptoms (aOR 3.0), birth defects (aOR up to 7.09), stillbirth (aOR 1.34)",
+   "design": "Systematic review",
+   "pm": "Household air pollution from solid-fuel combustion; mostly fuel type as proxy, measurement not characterised in abstract",
+   "geo": "Asia (developing countries, multi-country)",
+   "endpoint": "Respiratory symptoms, lung function, birth defects, stillbirth, cardiometabolic disease, genotoxicity, cognition",
+   "n": "PRISMA review of five databases, 28 studies of women in developing Asian countries, quality appraised with NOS, AXIS and OHAT. Household air pollution, mainly solid-fuel combustion, was associated with respiratory symptoms (aOR 3.0), reduced lung function, birth defects (aOR up to 7.09), stillbirth (aOR 1.34), cardiometabolic risk, genotoxicity and cognitive decline. No pooling and no CIs in the abstract. Weakness: exposure is overwhelmingly fuel type rather than measured PM, the selected maxima (7.09) are cherry-picked single studies, and confounding by poverty is the obvious alternative. Relevance: household-energy studies are where cheap personal PM monitors would replace the fuel-type proxy.",
+   "sub": "Occupational & indoor"
+  },
+  {
+   "pmid": "43067838",
+   "doi": "10.64898/2026.05.18.725908",
+   "journal": "bioRxiv",
+   "title": "Occupationally Relevant Wildfire Smoke Inhalation Impairs Nitric Oxide Signaling and Promotes Progressive Aortic Stiffening in Hypercholesterolemic Mice.",
+   "tier": "B",
+   "basis": "Lab / research instrument",
+   "short": "Apoe-/- mice, Douglas-fir smoke 40 mg/m3, 2 h/d, 5 d/wk, 8 or 16 wk (dose matched to 7-14 y of wildland firefighting): eNOS uncoupling, endothelial dysfunction maximal by 8 wk, aortic stiffening still worsening at 16 wk",
+   "design": "Animal exposure study",
+   "pm": "Whole-body inhalation of Douglas fir smoke at a target 40 mg/m3 PM, 2 h/day, 5 days/week; cumulative deposited dose calibrated to wildland firefighter airway burden over 7-14 years of service",
+   "geo": "USA (laboratory)",
+   "endpoint": "Aortic stiffness, endothelium-dependent vasodilation, blood pressure, vascular inflammation and fibrosis",
+   "n": "Preprint, not peer reviewed. Male Apoe-/- mice inhaled Douglas fir smoke or filtered air at a 40 mg/m3 PM target for 8 or 16 weeks. Smoke raised circulating TNF-alpha, IL-1beta and IL-6 with diffuse aortic NF-kB activation, disrupted endothelial adherens junctions, raised ICAM-1, VCAM-1 and MCP-1 with monocyte recruitment, and increased NOX2, superoxide and eNOS uncoupling with lipid peroxidation and intimal apoptosis. A pro-fibrotic shift (TGF-beta1, myofibroblasts, medial and adventitial collagen) accompanied falling cyclic distensibility, attenuated NO-mediated vasodilation and higher systolic and diastolic pressure. Endothelial dysfunction plateaued by 8 weeks while stiffening progressed to 16 weeks. No effect sizes or CIs are reported in the abstract. Weakness: 40 mg/m3 is two to three orders above field firefighter PM2.5 and the dose match is by cumulative deposition, not concentration, so the rate-dependent biology may not transfer; Apoe-/- mice are already hyperlipidaemic. Relevance: supplies the mechanism that personal-monitor firefighter studies cannot, and sets the cumulative-dose metric those monitors would have to integrate.",
+   "sub": "Cardiovascular & metabolic"
+  },
+  {
+   "pmid": "43067244",
+   "doi": "10.1016/j.jhazmat.2026.144288",
+   "journal": "J Hazard Mater",
+   "title": "Modeling brake wear particle emissions under diverse driving conditions: A data-driven time-series approach.",
+   "tier": "A",
+   "basis": "Lab / research instrument",
+   "short": "Brake dynamometer, two pad materials: PM10 within the Euro 7 WLTP-Brake limit but exceeded under other cycles; Transformer predicts particle number from brake time series at R2 0.85 +/- 0.03",
+   "design": "Source-isolated emission test",
+   "pm": "Brake-wear PM10 mass and particle number on a brake dynamometer under the WLTP-Brake cycle and several other driving cycles; SHAP attribution on brake temperature, power and speed",
+   "geo": "China (laboratory)",
+   "endpoint": "Brake-wear PM10 and particle-number emissions, and their predictability from brake-event history",
+   "n": "Two pad materials from different vehicles tested on a brake dynamometer across multiple driving conditions. PM10 complied with the forthcoming Euro 7 limit under the WLTP-Brake cycle but exceeded it under other cycles, and particle-number emissions varied between cycles in a way that tracked preceding brake events, showing strong temporal dependence. With time-series inputs a Transformer predicted particle number best (R2 0.85 +/- 0.03), XGBoost acceptably; SHAP attributed high-emission tests to brake temperature and brake power, with speed positively related and amplified by power. Weakness: two pad formulations on one dynamometer, no on-road validation, and R2 on held-out cycles from the same rig overstates transferability; no PM1 or composition. Relevance: direct - non-exhaust PM is the growing urban source, and a temperature/power-driven emission model is what a roadside low-cost network would need to attribute its own spikes.",
+   "sub": "Sensing, forecasting & instrumentation"
+  },
+  {
+   "pmid": "43067072",
+   "doi": "10.1016/j.ecoenv.2026.121081",
+   "journal": "Ecotoxicol Environ Saf",
+   "title": "Gestational co-exposure to PM(2.5) and heat impaired cardiac development in offspring.",
+   "tier": "B",
+   "basis": "Lab / research instrument",
+   "short": "Pregnant mice, PM2.5 10 ug/m3 and/or 39 C, 2 h/d E6.5-E18.5: co-exposure thickened ventricular wall and impaired systolic function at P1, with lower myo-inositol, Ucp2 and ATP",
+   "design": "Animal exposure study",
+   "pm": "Whole-body PM2.5 at 10 ug/m3 and/or 39 C heat, 2 h/day from embryonic day 6.5 to 18.5; offspring hearts assessed on postnatal day 1",
+   "geo": "China (laboratory)",
+   "endpoint": "Neonatal cardiac structure and systolic function; cardiac transcriptome and metabolome",
+   "n": "Pregnant mice exposed to filtered air, PM2.5 (10 ug/m3), heat (39 C) or both. Co-exposure increased ventricular wall thickness and impaired systolic function on postnatal day 1, with inflammatory infiltration, oxidative damage and mitochondrial ultrastructural change. Paired transcriptomics and metabolomics implicated inositol phosphate and pantothenate/CoA metabolism; myo-inositol and Ucp2 fell, as did ATP, while DRP1 and FIS1 protein rose and cardiac development genes were downregulated. No effect sizes, CIs or litter-level n are given in the abstract. Weakness: a 2 h/day exposure at an ambient-like 10 ug/m3 producing structural cardiac change is a surprisingly large effect for the dose and invites a litter-clustering and multiplicity check; the 39 C arm is severe heat stress, so the \"co-exposure\" interaction may be heat-driven. Relevance: indirect - but the PM2.5-heat interaction is the case for co-locating temperature with PM on every sensor node.",
+   "sub": "Reproductive & developmental"
+  },
+  {
+   "pmid": "43066389",
+   "doi": "10.7717/peerj.21845",
+   "journal": "PeerJ",
+   "title": "PM(2.5) modeling in Mexican cities using Aerosol optical depth and Meteorological reanalysis data.",
+   "tier": "A",
+   "basis": "Satellite-fused",
+   "short": "Four Mexican metropolitan areas, 2004-2022: MAIAC AOD + ERA5 + OSM covariates in mixed-effects and GAM models give daily PM2.5 with LOOCV RMSE 3.67-9.91 ug/m3 in Mexico City",
+   "design": "Satellite-surface fusion, machine learning",
+   "pm": "Daily PM2.5 estimated from MAIAC AOD, ERA5 reanalysis meteorology, SINAICA ground monitors and OpenStreetMap covariates; PM10 used as a proxy where PM2.5 monitoring was insufficient",
+   "geo": "Mexico (four metropolitan areas)",
+   "endpoint": "Daily PM2.5 estimation accuracy (leave-one-out cross-validated RMSE)",
+   "n": "Hybrid framework combining linear mixed-effects and generalised additive models to produce spatially continuous daily PM2.5 for 2004-2022 in four Mexican metropolitan areas, including days and places without satellite retrievals. In the best region, the Mexico City Metropolitan Area, yearly leave-one-out RMSE ranged 3.67-9.91 ug/m3; station-based and reanalysis meteorological inputs were compared, and reanalysis inputs sustained estimates in cities usually excluded for sparse monitoring. Weakness: leave-one-out over a sparse monitor set is close to the random-CV inflation flagged on 21 November - no spatial-block or leave-one-station-out figure is reported - and PM10-derived proxy PM2.5 propagates an unquantified ratio assumption. Relevance: direct - this is the low-resource-setting gap-filling problem a low-cost network is meant to close, and the RMSE here is the bar such a network has to beat.",
+   "sub": "Exposure assessment & modelling"
+  },
+  {
+   "pmid": "",
+   "doi": "10.1016/j.envint.2026.110608",
+   "journal": "Environment International",
+   "title": "Association between lithium nickel manganese cobalt oxide exposure and lower pulmonary ventilation function indices: the indirect effects of blood cell-derived systemic inflammatory markers and transcriptomic profiles",
+   "short": "Occupational lithium NMC oxide exposure and lower ventilation function, with inflammatory and transcriptomic mediation",
+   "design": "Metadata only",
+   "basis": "Proxy / questionnaire",
+   "tier": "C",
+   "affil": "not stated in record",
+   "pm": "Metadata only - exposure to lithium nickel manganese cobalt oxide (battery cathode material); whether airborne particulate mass was measured is not stated in the record",
+   "geo": "China",
+   "endpoint": "Metadata only - pulmonary ventilation function indices, with inflammatory and transcriptomic mediators",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. The record (Environment International; Li, Liu, Hu, Fang) relates lithium nickel manganese cobalt oxide exposure to lower pulmonary ventilation function and examines mediation by blood-cell-derived inflammatory markers and transcriptomic profiles. No finding, exposure metric, cohort or effect size is asserted here. Relevance: moderate - battery-materials workplaces are an emerging source of metal-rich respirable particles that mass-only optical sensors cannot distinguish from background aerosol.",
+   "sub": "Occupational & indoor"
+  },
+  {
+   "pmid": "43068695",
+   "doi": "10.1002/resp.70342",
+   "journal": "Respirology",
+   "title": "Reply to 'Interpreting Differential Susceptibility to Prenatal PM(2.5) Exposure'.",
+   "short": "Authors reply on interpreting differential susceptibility to prenatal PM2.5 exposure",
+   "design": "Metadata only",
+   "basis": "Review / no primary exposure",
+   "tier": "C",
+   "affil": "not stated in record",
+   "pm": "Metadata only - correspondence on prenatal PM2.5 exposure; no exposure assessment of its own",
+   "geo": "Not stated",
+   "endpoint": "Metadata only - interpretation of differential susceptibility to prenatal PM2.5",
+   "n": "Metadata only: no abstract was retrievable from the harvest legs, Crossref or Semantic Scholar. Authors reply (Respirology; Huang, Pan, Yao) to a letter on interpreting differential susceptibility to prenatal PM2.5 exposure. No finding is asserted here, and the original study is not identified in the record. Relevance: low - carried because effect-modification disputes in prenatal PM2.5 work usually turn on exposure-model resolution, which is the question dense networks address.",
+   "sub": "Reproductive & developmental"
+  }
+ ],
+ "EFFECTS": [
+  {
+   "label": "Postpartum depression,\nwhole-pregnancy PM2.5",
+   "exposure": "Whole-pregnancy residential PM2.5 per 10 ug/m3; two-stage residual inclusion, wind-speed instrument, China Southwest Birth Cohort (n=10,568)",
+   "est": 1.28,
+   "lo": 1.06,
+   "hi": 1.54,
+   "metric": "OR",
+   "src": "China SW birth cohort",
+   "inc": "per 10 µg/m³"
+  },
+  {
+   "label": "Postpartum depression,\ntobacco-exposed women",
+   "exposure": "Whole-pregnancy PM2.5 per 10 ug/m3, women exposed to tobacco smoke (P-heterogeneity 0.046)",
+   "est": 1.79,
+   "lo": 1.25,
+   "hi": 2.57,
+   "metric": "OR",
+   "src": "China SW birth cohort",
+   "inc": "per 10 µg/m³"
+  },
+  {
+   "label": "Postpartum depression,\nsecond-trimester PM2.5",
+   "exposure": "Second-trimester residential PM2.5; increment not restated in the abstract",
+   "est": 1.18,
+   "lo": 1.02,
+   "hi": 1.38,
+   "metric": "OR",
+   "src": "China SW birth cohort",
+   "inc": "per 10 µg/m³"
+  }
+ ],
+ "LIFECOURSE": [
+  {
+   "n": 4,
+   "note": "China SW postpartum\ndepression; APWA placental\nabruption; gestational\nPM2.5 x heat (mouse);\nAsian household air\npollution review"
+  },
+  {
+   "n": 1,
+   "note": "PM1 umbrella review\n(childhood obesity,\nhypertension, asthma,\nautism)"
+  },
+  {
+   "n": 0,
+   "note": ""
+  },
+  {
+   "n": 2,
+   "note": "Wildfire-smoke firefighter\nmodel (mouse); battery-\nmaterials workers\n(metadata only)"
+  },
+  {
+   "n": 0,
+   "note": ""
+  }
+ ]
+}

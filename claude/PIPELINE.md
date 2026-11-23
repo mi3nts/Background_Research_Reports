@@ -3304,3 +3304,14 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 20-22 Nov: CT.gov 0, Amass 7 new, 0 on topic → `trials.json` 31 trials / 48 windows.
 - Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus not run. rm still blocked.
 - Next: 22 Nov daily (≥22:00 CST 22 Nov); W48 (22-28 Nov) on Sat 28 Nov; November monthly on 30 Nov.
+
+## Run 2026-11-23 (13:25-13:4x UTC = 07:25 CST) — daily 22 Nov
+
+- 05:05 UTC slot fired ~8 h late; before 22:00 CST → newest buildable 22 Nov (Sunday, no rollup owed). Only 22 Nov owed.
+- Harvest 22 Nov: PubMed 8/2, EPMC 5 (3 AGRICOLA dropped), Crossref 7, arXiv 0 in window, OpenAlex HTTP 403 → 17 fresh. Connector EDAT 22 Nov two axes, 15 PMIDs (`_conn_1123.py`, generic UA): 8 bucketed 22 Nov + 7 with EDAT 21 Nov (entered after that harvest) folded in → 1 seen, 1 merged, 6 appended → **23 screened**. Abstract fill 14/15. A one-day window with no weekend backlog: smallest candidate set since 16 Nov.
+- **10 admitted / 13 rejected** (`_rej_1123_22.py`): 3 effects (all ratio, all one cohort), 3 tier A (China SW postpartum-depression cohort; brake-wear dynamometer + Transformer, J Hazard Mater; MAIAC-AOD/ERA5 PM2.5 for four Mexican metros, PeerJ), 2 metadata-only, 1 bioRxiv preprint (firefighter wildfire-smoke mouse model). DOI gate 0 FAIL 0 warn; 0 overfull; 9 pp proofed (contact sheet + forest/figure page re-proofed after the FOREST block was switched from a text note to the rendered f5).
+- First draft of the FOREST block was a prose note; `plots.py` had written `f5_forest.png` for the 3 ratio estimates, so the figure would have been silently dropped (same class of defect as 19 Nov). Rule: if `fig/<date>/f5_forest*.png` exists, the hand-written FOREST must include every panel.
+- No low-cost-sensor record today (first gap since 21 Nov, when the single LCS record was the lead); x1 health side 40 % measured / 40 % modelled / 20 % proxy. Caption counts for f1 and f3 were corrected against the rendered figures before shipping (Asia multi-country and "Not stated" bin to Global / multi-region).
+- Trial watch 22-23 Nov: CT.gov 0 hits; Amass TrialCore 25 by last-update, all on-topic ones carried (REACT recruiting, AIRWISE, Leicester hospital environment, AQAS parents) → 0 new; `trials.json` 31 trials / 49 windows.
+- Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus not run. rm still blocked (`.git/packed-refs.lock` moved to `.git/stale-*`).
+- Next: 23 Nov daily (≥22:00 CST 23 Nov); W48 (22-28 Nov) on Sat 28 Nov; November monthly on 30 Nov.

@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+P = [
+ dict(pmid='43067838', doi='10.64898/2026.05.18.725908', journal='bioRxiv',
+  title='Occupationally Relevant Wildfire Smoke Inhalation Impairs Nitric Oxide Signaling and Promotes Progressive Aortic Stiffening in Hypercholesterolemic Mice.',
+  tier='B', basis='Lab / research instrument',
+  short='Apoe-/- mice, Douglas-fir smoke 40 mg/m3, 2 h/d, 5 d/wk, 8 or 16 wk (dose matched to 7-14 y of wildland firefighting): eNOS uncoupling, endothelial dysfunction maximal by 8 wk, aortic stiffening still worsening at 16 wk',
+  design='Animal exposure study',
+  pm='Whole-body inhalation of Douglas fir smoke at a target 40 mg/m3 PM, 2 h/day, 5 days/week; cumulative deposited dose calibrated to wildland firefighter airway burden over 7-14 years of service',
+  geo='USA (laboratory)',
+  endpoint='Aortic stiffness, endothelium-dependent vasodilation, blood pressure, vascular inflammation and fibrosis',
+  n='Preprint, not peer reviewed. Male Apoe-/- mice inhaled Douglas fir smoke or filtered air at a 40 mg/m3 PM target for 8 or 16 weeks. Smoke raised circulating TNF-alpha, IL-1beta and IL-6 with diffuse aortic NF-kB activation, disrupted endothelial adherens junctions, raised ICAM-1, VCAM-1 and MCP-1 with monocyte recruitment, and increased NOX2, superoxide and eNOS uncoupling with lipid peroxidation and intimal apoptosis. A pro-fibrotic shift (TGF-beta1, myofibroblasts, medial and adventitial collagen) accompanied falling cyclic distensibility, attenuated NO-mediated vasodilation and higher systolic and diastolic pressure. Endothelial dysfunction plateaued by 8 weeks while stiffening progressed to 16 weeks. No effect sizes or CIs are reported in the abstract. Weakness: 40 mg/m3 is two to three orders above field firefighter PM2.5 and the dose match is by cumulative deposition, not concentration, so the rate-dependent biology may not transfer; Apoe-/- mice are already hyperlipidaemic. Relevance: supplies the mechanism that personal-monitor firefighter studies cannot, and sets the cumulative-dose metric those monitors would have to integrate.',
+  sub=corpus.CVM),
+ dict(pmid='43067244', doi='10.1016/j.jhazmat.2026.144288', journal='J Hazard Mater',
+  title='Modeling brake wear particle emissions under diverse driving conditions: A data-driven time-series approach.',
+  tier='A', basis='Lab / research instrument',
+  short='Brake dynamometer, two pad materials: PM10 within the Euro 7 WLTP-Brake limit but exceeded under other cycles; Transformer predicts particle number from brake time series at R2 0.85 +/- 0.03',
+  design='Source-isolated emission test',
+  pm='Brake-wear PM10 mass and particle number on a brake dynamometer under the WLTP-Brake cycle and several other driving cycles; SHAP attribution on brake temperature, power and speed',
+  geo='China (laboratory)',
+  endpoint='Brake-wear PM10 and particle-number emissions, and their predictability from brake-event history',
+  n='Two pad materials from different vehicles tested on a brake dynamometer across multiple driving conditions. PM10 complied with the forthcoming Euro 7 limit under the WLTP-Brake cycle but exceeded it under other cycles, and particle-number emissions varied between cycles in a way that tracked preceding brake events, showing strong temporal dependence. With time-series inputs a Transformer predicted particle number best (R2 0.85 +/- 0.03), XGBoost acceptably; SHAP attributed high-emission tests to brake temperature and brake power, with speed positively related and amplified by power. Weakness: two pad formulations on one dynamometer, no on-road validation, and R2 on held-out cycles from the same rig overstates transferability; no PM1 or composition. Relevance: direct - non-exhaust PM is the growing urban source, and a temperature/power-driven emission model is what a roadside low-cost network would need to attribute its own spikes.',
+  sub=corpus.SENS),
+]
