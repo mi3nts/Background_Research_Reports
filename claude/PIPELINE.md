@@ -3315,3 +3315,13 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 22-23 Nov: CT.gov 0 hits; Amass TrialCore 25 by last-update, all on-topic ones carried (REACT recruiting, AIRWISE, Leicester hospital environment, AQAS parents) → 0 new; `trials.json` 31 trials / 49 windows.
 - Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus not run. rm still blocked (`.git/packed-refs.lock` moved to `.git/stale-*`).
 - Next: 23 Nov daily (≥22:00 CST 23 Nov); W48 (22-28 Nov) on Sat 28 Nov; November monthly on 30 Nov.
+
+## Run 2026-11-24 (08:29-09:1x UTC = 02:29 CST) — daily 23 Nov
+
+- 05:05 UTC slot fired ~3.5 h late; before 22:00 CST → newest buildable 23 Nov (Monday, no rollup). Only 23 Nov owed.
+- Harvest 23 Nov: PubMed 10/2, EPMC 15 (2 AGRICOLA dropped), Crossref 44, arXiv HTTP 429, OpenAlex HTTP 403 → 69 raw, 65 unique, 59 fresh. Connector EDAT 23 Nov two axes 14 PMIDs (`_conn_1124.py`; 1 EDAT-22 Nov folded in): 2 seen, 5 appended → **64 screened**. efetch fill 12/12; Crossref retry 0/5 Elsevier.
+- **19 admitted / 45 rejected** (`_rej_1124_23.py`): 1 effect (Ningbo PM1×walkability joint HR), 2 tier A (Delhi 49-site LCS network, PNAS — lead; Ningbo asthma cohort), 5 metadata-only. DOI gate 0 FAIL 0 warn; 0 overfull; 12 pp proofed. Authoring now pulls pmid/doi/title/journal from the cache via `authoring/<day>/_src.py` `R(idx, ...)` — no hand-typed DOIs.
+- x1: health side 4 measured / 4 modelled; first LCS record since 21 Nov. Mobile-bicycle record classified "Reference / regulatory monitor" by regex (it compares with stations) — set `basis` explicitly on mobile records.
+- Trial watch 23-24 Nov: CT.gov 0; Amass 25 by last-update → 1 new (NCT05198492 EP-PARTICLES, Bialystok) → `trials.json` 32 trials / 50 windows (counts derived from stored keys; stale `stored_records` 26 reconciled).
+- Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus not run. rm still blocked (`.git/REBASE_HEAD.lock`, `.git/index.lock` moved to `.git/stale-*`).
+- Next: 24 Nov daily (≥22:00 CST 24 Nov); W48 (22-28 Nov) on Sat 28 Nov; November monthly on 30 Nov.

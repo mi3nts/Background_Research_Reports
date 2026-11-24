@@ -1,0 +1,279 @@
+\documentclass[10pt]{article}
+\providecommand{\FIGDIR}{fig}
+\newcommand{\DIGESTDATE}{23 November 2026}
+\input{preamble}
+
+\begin{document}
+
+% ==================================================================== MASTHEAD
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \fill[Deep] (current page.north west) rectangle
+      ($(current page.north east)+(0,-67mm)$);
+  \fill[Amber] ($(current page.north west)+(0,-67mm)$) rectangle
+      ($(current page.north east)+(0,-68.4mm)$);
+  \foreach \x/\y/\r in {22/12/0.9, 41/26/1.5, 63/9/0.7, 88/31/1.1, 112/17/1.9,
+                        138/29/0.8, 159/13/1.3, 178/54/1.0, 196/21/1.6,
+                        30/44/0.6, 74/57/1.2, 125/48/0.9, 168/6/0.8, 191/59/0.7,
+                        52/18/1.0, 100/60/0.6, 148/20/1.1, 66/49/1.4, 205/45/0.8}
+    \fill[Sky, opacity=0.30] ($(current page.north west)+(\x mm,-\y mm)$) circle (\r mm);
+\end{tikzpicture}
+
+\vspace*{4mm}
+{\sffamily\fontsize{7.6}{9}\selectfont\color{Sky}%
+ AUTOMATED DAILY LITERATURE DIGEST\;\textbullet\;PhD RESEARCH WATCH\par}
+\vspace{2.2mm}
+{\sffamily\bfseries\fontsize{27}{29}\selectfont\color{white}%
+ Particulate Matter\par}
+{\sffamily\fontsize{27}{29}\selectfont\color{Sky}%
+ Monitoring \& Health Effects\par}
+
+\vspace{5.0mm}
+{\sffamily\fontsize{8.4}{10}\selectfont\color{white}%
+ Issue 2026-11-23\;\;\textcolor{Amber}{\textbar}\;\;Entry window 23 November 2026 (full day)\;\;%
+ \textcolor{Amber}{\textbar}\;\;19 records screened in scope\par}
+\vspace{18mm}
+
+\noindent
+\begin{minipage}[t]{0.190\linewidth}\metric{19}{RECORDS IN SCOPE\\(45 EXCLUDED)}{Deep}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{7}{OF 10 SUBTOPIC\\BANDS POPULATED}{Teal}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{1}{EFFECT ESTIMATES\\WITH A CI}{Sky}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{2}{TIER-A\\RECORDS}{Amber}\end{minipage}\hfill
+\begin{minipage}[t]{0.190\linewidth}\metric{5}{RECORDS CARRIED ON\\METADATA ALONE}{Clay}\end{minipage}
+
+\vspace{6mm}
+
+\section*{\sffamily\bfseries\color{Deep}Signal of the day}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\begin{keybox}
+{\sffamily\bfseries\small\color{Deep}A 49-site calibrated lower-cost PM$_{2.5}$ network across the Delhi megacity region found rural air about 20\,\% dirtier than urban air in every month from July to November 2024 --- and satellite products did not see it.}\\[1.4mm]
+\footnotesize
+\textit{PNAS} (Campmier, Rao, Singh, Singh). The network spans population densities of 300 to 30,000 people\,km$^{-2}$, with a 160\,km transect through the megacity plus stratified sites in villages, small towns and Delhi. Rural sites carried sharp 06:00--10:00 and 16:00--20:00 local-time peaks that urban sites lacked, which the authors attribute to solid-fuel cooking, heating and small-scale industry. The rural excess persisted from the monsoon minimum to the post-monsoon maximum.
+\textbf{Where it is weak:} the abstract does not describe the calibration --- reference co-location, humidity correction, or whether rural and urban units were corrected with one model. A 20\,\% gradient is within the range a composition- or RH-dependent optical bias can produce when rural aerosol (fresh biomass smoke) differs from urban aerosol, so the result stands or falls on site-stratified calibration.
+\textbf{Why it matters here:} this is the low-cost-network argument made in a general-science journal: a measurement that reverses the policy assumption (cities as hotspots) and documents a blind spot that satellite--surface fusion inherits from its sparse urban training monitors.\par
+\end{keybox}
+
+\vspace{3mm}
+
+\section*{\sffamily\bfseries\color{Deep}What changed today}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\footnotesize
+\begin{itemize}
+
+\item \textbf{PM$_1$ carries the interaction in a Chinese asthma cohort.} In 26,926 Yinzhou adults (1,032 incident cases, 152,748 person-years), satellite-derived PM$_1$, PM$_{2.5}$, PM$_{10}$ and the nitrate, ammonium and sulfate components gave HRs of 1.09--1.30 per IQR (\textit{Ecotox.\ Environ.\ Saf.}), and an IQR rise in PM$_1$ with an IQR fall in walkability gave a joint HR of 1.39 (1.22--1.58) with additive interaction. The abstract does not say which pollutant owns which HR, and walkability and satellite PM are both urban-form surrogates --- but it is the second consecutive issue in which PM$_1$ is singled out, after yesterday's umbrella review.
+
+\item \textbf{Two very large reproductive cohorts, no PM-specific number.} 1.33 million Sichuan pregnancies (\textit{J.\ Hazard.\ Mater.}) put the six-pollutant mixture at OR 1.53 (1.46--1.60) for hypertensive disorders over the 13 weeks before conception, with DLNM placing PM$_{2.5}$ signals in pre-pregnancy and early gestation; 19,358 assisted-conception cycles in Shandong find PM$_{2.5}$ and PM$_{10}$ associated with clinical-pregnancy failure but report only NO$_2$ numerically (aOR 1.41 per 10\,$\mu$g\,m$^{-3}$). Neither gives a PM estimate in the abstract, so neither reaches the forest plot; both rest on gridded models over windows that begin before conception, where residential mobility is largest.
+
+\item \textbf{Measurement methods for the humidity problem.} A shipborne campaign over the South China Sea (\textit{ACP}) shows Typhoon Chaba switching air to Indochina outflow and cutting bulk hygroscopicity $\kappa$ by about 60\,\% within days as organic aerosol rose from 14.6 to 44.9\,\% of NR-PM$_1$; a technical note (\textit{ACP}) replaces HTDMA inversion-plus-fitting with a physics-embedded network that maps instrument responses straight to growth-factor modes. Together they size the composition-driven swing that a fixed humidity correction on an optical sensor cannot absorb, and offer a faster way to measure it.
+
+\item \textbf{Background subtraction for mobile surveys.} Eleven bicycle runs through Incheon (\textit{Atmosphere}) separate background from local enhancement with a pseudo-wavelet baseline: 80--84\,\% of PM$_{2.5}$ is background under westerlies, 54--68\,\% under easterlies, and the local share is always larger for PM$_{10}$. The method transfers directly to low-cost mobile and sensor-network data.
+
+\item \textbf{Exposure basis (x1).} On the health side, four of eight records rest on measured PM (three occupational and indoor records --- personal breathing-zone sampling of foundry workers, hospital waiting-area monitoring, SMPS-verified ventilation tests --- and the in-vitro study) and four on modelled or satellite PM (the Sichuan, Shandong and Ningbo cohorts and the coking-sector simulation); no health record uses a low-cost sensor. On the measurement side, today's lead is the first low-cost-sensor record since 21 November.
+
+\end{itemize}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Window continuity}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+The 22 November issue closed the day before. This issue was built on the \textbf{24 November 08:29 UTC (02:29 CST) run} (the 05:05 UTC slot fired about 3.5 hours late). Before 22:00 CST the newest buildable day is yesterday, so this run owes \textbf{23 November} alone --- a Monday, no rollup due; \textbf{23 November is covered in full}. W48 (22--28 November) falls due on Saturday 28 November and the November monthly on 30 November. One PubMed connector PMID with entry date 22 November, deposited after that issue's harvest, was folded into today's candidate set. No \textsc{backfill} records today. OpenAlex returned HTTP 403 and arXiv HTTP 429 on the harvester legs; the alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session, and Scite and Consensus were not run.\par}
+\end{keybox}
+
+\vspace{3mm}
+\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<18\baselineskip\newpage\fi
+\section*{\sffamily\bfseries\color{Deep}Corpus analytics}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f1_subtopics.png}
+\figcap{Subtopic assignment of the 19 records across seven of ten bands: sensing \& instrumentation 5, occupational \& indoor 4, exposure assessment 4, reproductive \& developmental 2, burden \& policy 2, and one each for respiratory and mechanistic. Cardiovascular, neuro/mental health and other clinical are empty today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f2_design_endpoint.png}
+\figcap{Left --- architecture: a measurement-heavy day, with field and mobile campaigns, laboratory work and an ML retrieval outnumbering the three cohorts and one cross-sectional study; five records are metadata-only. Right --- endpoints are singletons apart from the metadata-only bar.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f3_metric_geography.png}
+\figcap{Left --- particle metric as classified from the record fields. Right --- geography by record: China 5, the Global / multi-region bucket 8 (seven records with no stated site, mostly laboratory and metadata-only, plus the wildfire-smoke review), South Asia 2 (Delhi network, Aizawl black carbon), Southeast Asia 2 (northern Thailand hospitals, South China Sea cruise), East Asia ex-China 1 (Incheon) and Latin America 1 (the LAC bibliometric review).}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f6_lifecourse.png}
+\figcap{Life-course windows. Preconception / in utero carries two records (Sichuan hypertensive disorders of pregnancy and the Shandong assisted-conception cohort); working-age adulthood two (the Ningbo adult asthma cohort and foundry workers). No infant, adolescent or older-adult record today.}\end{minipage}
+
+\vspace{2mm}
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f4_heatmap.png}
+\figcap{Subtopic $\times$ study architecture. Sensing pairs field and mobile campaigns with an ML retrieval and two metadata-only instrument records; occupational \& indoor spans a cross-sectional study, a field campaign, a laboratory test and a review; reproductive \& developmental is two retrospective cohorts.}\end{minipage}
+
+\vspace{2mm}
+
+\IfFileExists{\FIGDIR/extra_figs.tex}{\input{\FIGDIR/extra_figs.tex}}{}
+
+
+
+\noindent\begin{minipage}{\linewidth}\includegraphics[width=\linewidth]{\FIGDIR/f5_forest.png}
+\figcap{Ratio scale, a single estimate: the joint hazard ratio for incident adult asthma per IQR increase in satellite-derived PM$_1$ combined with an IQR decrease in walkability, Yinzhou cohort (n\,=\,26,926), HR 1.39 (1.22--1.58). It is a joint contrast of two exposures, not a PM-only effect. The other cohorts in this issue report PM associations without PM-specific estimates in their abstracts and are not plotted.}\end{minipage}
+
+\vspace{4mm}
+
+\par\vskip 0pt plus 24\baselineskip\penalty-200\vskip 0pt plus -24\baselineskip
+\section*{\sffamily\bfseries\color{Deep}Paper-level digest}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+{\fontsize{7.4}{9}\selectfont\color{Slate}Ordered by cluster. Each entry gives the
+methodological core and the finding that matters, not an abstract paraphrase. Records
+marked \textit{metadata only} carry no recoverable abstract and assert no finding.\par}
+
+\band{Respiratory \& allergic\hfill 1 record}{Sky}
+
+\paperentry{Yinzhou cohort, 26,926 adults, 1,032 incident asthma: PM$_{1}$/PM$_{2.5}$/PM$_{10}$ and nitrate/ammonium/sulfate HR 1.09-1.30 per IQR; PM$_{1}$ up + walkability down joint HR 1.39 (1.22-1.58), additive interaction}
+{Association of ambient particulate matter and neighborhood walkability with risk of asthma in Ningbo, China.}
+{Ecotoxicol Environ Saf}
+{26,926 adults of the Yinzhou Cohort followed 152,748 person-years; 1,032 incident asthma cases from the regional health information system. In single-exposure Cox models, PM$_{1}$, PM$_{2.5}$, PM$_{10}$ and the nitrate, ammonium and sulfate components gave HRs per IQR from 1.09 (95\% CI 1.00-1.20) to 1.30 (1.19-1.43); the abstract does not attribute each HR to a pollutant. An IQR rise in walkability gave HR 0.89 (0.82-0.96). Associations attenuated in two-exposure models. An IQR increase in PM$_{1}$ combined with an IQR decrease in walkability gave a joint HR of 1.39 (1.22-1.58), with additive interaction. Weakness: walkability and satellite PM are both urban-form surrogates and share confounding by traffic and socioeconomic position; registry-based asthma onset is prone to ascertainment differences by healthcare access. Relevance: PM$_{1}$ carries the interaction signal, a fraction optical low-cost sensors report but satellites estimate least well.}
+{10.1016/j.ecoenv.2026.121091}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Reproductive \& developmental\hfill 2 records}{Sage}
+
+\paperentry{1,330,109 singleton pregnancies, Sichuan 2013-2022: six-pollutant mixture OR 1.53 (1.46-1.60) for HDP in the 13 pre-pregnancy weeks; DLNM places PM$_{2.5}$ associations in pre-pregnancy and early gestation}
+{Ambient air pollution exposure before and during pregnancy and risk of hypertensive disorders of pregnancy: A large cohort study in Sichuan, China.}
+{J Hazard Mater}
+{Multicentre retrospective cohort of 1,330,109 singleton pregnancies (2013-2022) with gridded exposures from 13 weeks before pregnancy to gestational week 20. Ozone per IQR: OR 1.36 (1.29-1.42) pre-pregnancy and 1.30 (1.26-1.34) in weeks 1-4. The six-pollutant mixture by quantile g-computation: OR 1.53 (1.46-1.60) pre-pregnancy and 1.25 (1.21-1.30) in weeks 1-4. DLNMs showed pre-pregnancy weekly associations for all six pollutants and early-gestation associations for O$_3$, SO$_2$ and PM$_{2.5}$; no PM-specific estimate is given in the abstract, so nothing is plotted. Weakness: the gridded product is unnamed, residence is fixed across a window that starts before conception, and HDP ascertainment from hospital records varies by centre. Relevance: pre-conception windows are where residential mobility and model error dominate - personal or home monitoring would bound both.}
+{10.1016/j.jhazmat.2026.144240}
+
+\paperentry{19,358 assisted-conception cycles, 9,943 couples, Shandong: parental PM$_{2.5}$, PM$_{10}$, NO$_2$, SO$_2$ raise clinical-pregnancy failure; NO$_2$ strongest (aOR 1.41 per 10 $\mu$g\,m$^{-3}$); maternal days 180-86, paternal days 69-15 sensitive}
+{Preconceptional parental air pollution exposure and clinical pregnancy after assisted conception: Identifying parent-specific vulnerability windows and high-risk subpopulations.}
+{J Hazard Mater}
+{19,358 assisted-conception cycles from 9,943 couples (2014-2024) with 1-km daily exposure for each parent across gametogenesis; multilevel logistic models. Parental PM$_{2.5}$, PM$_{10}$, NO$_2$ and SO$_2$ were each associated with clinical-pregnancy failure; NO$_2$ was strongest (maternal aOR 1.410, 95\% CI 1.339-1.486 per 10 $\mu$g\,m$^{-3}$) and O$_3$ was inverse. PM-specific estimates are not in the abstract. Sensitive windows: maternal days 180-86 (preantral follicle) and paternal days 69-15 (late spermatogenesis) before treatment; susceptibility higher with IVF/ICSI, secondary infertility and age 35 or over. Weakness: the inverse O$_3$ association signals residual seasonal confounding of treatment timing, and couples share a residence, so maternal and paternal windows are separated by timing, not by independent exposure. Relevance: low-moderate - window-specific claims at 1 km rest on daily model accuracy that dense networks could test.}
+{10.1016/j.jhazmat.2026.144277}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Mechanistic toxicology\hfill 1 record}{Violet}
+
+\paperentry{HaCaT keratinocytes: 7,8-dihydroxyflavone blunts PM$_{2.5}$-induced ROS, lipid peroxidation, mitochondrial depolarisation and JNK-dependent apoptosis}
+{7,8-Dihydroxyflavone attenuates PM(2.5)-induced oxidative stress, mitochondrial dysfunction and apoptosis in human HaCaT keratinocytes.}
+{Toxicol Mech Methods}
+{In vitro study in human HaCaT keratinocytes. PM$_{2.5}$ raised intracellular ROS, lipid peroxidation and calcium, reduced mitochondrial membrane potential and ATP, and triggered cytochrome c release, caspase activation and apoptosis; 7,8-dihydroxyflavone pretreatment reversed these changes. JNK inhibition (SP600125) and JNK1/2 siRNA reduced PM$_{2.5}$-induced cytotoxicity, implicating JNK signalling. Weakness: particle source, dose in ug/cm2 and composition are not given in the abstract, so dosimetric relevance to skin deposition cannot be judged; a single immortalised line with a single protectant. Relevance: low - mechanistic support for dermal PM effects, no exposure-measurement content.}
+{10.1080/15376516.2026.2764311}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Exposure assessment \& modelling\hfill 4 records}{Clay}
+
+\paperentry{Shipborne AMS over the South China Sea: Typhoon Chaba switches air to Indochina outflow, NR-PM$_{1}$ rises, OA share 14.6\% to 44.9\%, kappa falls \textasciitilde{}60\%, CCN up to sixfold, droplet radius 11-37\% smaller}
+{Tropical cyclone amplifies anthropogenic influences on aerosol-cloud interactions over the South China Sea}
+{Atmospheric Chemistry and Physics}
+{Shipborne measurements over the South China Sea (22 June-5 July 2022) around Typhoon Chaba. The cyclone circulation shifted air from local marine to long-range Indochina transport, raising NR-PM$_{1}$; organic aerosol rose from 14.6\% to 44.9\% of NR-PM$_{1}$, mainly oxygenated OA from transport plus local heterogeneous oxidation. Bulk hygroscopicity kappa fell about 60\% while kappa of OA rose about 27\%; CCN increased up to sixfold. Parcel modelling with observations gave 11-37\% smaller droplet effective radius and 6-26\% larger autoconversion radius, confirmed by satellite. Weakness: a single two-week cruise and one cyclone; transport and in-situ oxidation are inferred from correlations with Ox and RH. Relevance: indirect - a 60\% swing in kappa within days is the size of composition-driven hygroscopic change that breaks fixed humidity corrections for optical PM sensors.}
+{10.5194/acp-26-16667-2026}
+
+\paperentry{Crop-residue burning timing, PM$_{2.5}$ and population exposure in Northeast China from Himawari-constrained CMAQ (per title)}
+{Impact of crop-residue burning timing on PM$_{2.5}$ pollution and population exposure in Northeast China: Insights from Himawari-constrained CMAQ simulations}
+{Atmospheric Environment}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs or Crossref at issue time. The record (Atmospheric Environment; Yang, Chen, Li, Li) uses Himawari-constrained CMAQ simulations to relate the timing of crop-residue burning to PM$_{2.5}$ and population exposure in Northeast China. No finding, emission estimate or exposure figure is asserted here. Relevance: moderate - geostationary fire constraints on a CTM are the satellite half of the satellite-surface fusion problem; seasonal burning is where sparse regulatory networks miss rural peaks.}
+{10.1016/j.atmosenv.2026.122508}
+
+\paperentry{Wintertime black-carbon variability and potential source regions at Aizawl, Northeast India (per title)}
+{Wintertime black carbon variability and potential source regions over Aizawl, Northeast India}
+{Science of The Total Environment}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs or Crossref at issue time. The record (Science of The Total Environment; Gurung, Hazarika, Ranjan, Gupta) reports wintertime black-carbon variability and potential source regions over Aizawl in Northeast India. No concentration, source apportionment or instrument is asserted here. Relevance: low-moderate - an under-monitored hill region where BC is likely transported from biomass burning upwind.}
+{10.1016/j.scitotenv.2026.182413}
+
+\paperentry{New particle formation and particle emission flux from a composting site (per title)}
+{Characterization of New Particle Formation and Emission Flux from a Composting Site}
+{Atmospheric Environment}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs or Crossref at issue time. The record (Atmospheric Environment; Han, Cai, Ivanova, Meskhidze) characterises new particle formation and particle emission flux at a composting site. No finding or flux value is asserted here. Relevance: low-moderate - composting is an unregistered ultrafine source that mass-based optical sensors would not register.}
+{10.1016/j.atmosenv.2026.122521}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Sensing, forecasting \& instrumentation\hfill 5 records}{Amber}
+
+\paperentry{49-site calibrated lower-cost PM$_{2.5}$ network across a 160 km Delhi urbanicity transect: rural PM$_{2.5}$ exceeds urban by \textasciitilde{}20\% in every month (Jul-Nov 2024); rural morning/evening solid-fuel peaks missed by satellite products}
+{Rural outdoor air pollution exceeds urban levels in the Delhi megacity region.}
+{Proc Natl Acad Sci U S A}
+{Five months (July-November 2024) of a 49-site lower-cost PM$_{2.5}$ network spanning population densities of 300 to 30,000 people/km2 inside and outside Delhi, including a 160 km transect. Rural sites exceeded urban sites by about 20\% in every month, from the monsoon minimum to the post-monsoon maximum. Rural diurnal cycles carried sharp 06:00-10:00 and 16:00-20:00 LT peaks absent at urban sites, attributed to solid-fuel cooking, heating and small industry. Satellite-derived PM$_{2.5}$ did not reproduce the rural enhancement. Weakness: calibration procedure, reference co-location and humidity correction are not described in the abstract, and a 20\% gradient is within the range a site-specific RH or aerosol-composition bias can generate if rural and urban sensors were corrected with one model. Relevance: direct - a network result that overturns the urban-hotspot assumption and documents a satellite blind spot that only ground sensors can see.}
+{10.1073/pnas.2526851123}
+
+\paperentry{Eleven bicycle surveys, 11 km Incheon route: pseudo-wavelet baseline puts 80-84\% of PM$_{2.5}$ in background under westerlies vs 54-68\% under easterlies; industrial TVOC 6.5-7.8x residential}
+{Bicycle-Based Multipollutant Monitoring in an Urban Industrial Area: A Case Study of Background Variability and Local Air Pollution Contrasts}
+{Atmosphere}
+{Eleven bicycle surveys on an \textasciitilde{}11 km route through four microenvironments (September-November 2025) measured PM$_{2.5}$, PM$_{10}$, eBC and a PID TVOC signal; a pseudo-wavelet baseline, tested on synthetic plume and trend cases, split background from local enhancement. Background share of PM$_{2.5}$ was 80.4-84.3\% under westerly winds and 54.0-68.4\% under easterlies; local fractions were consistently larger for PM$_{10}$ than PM$_{2.5}$. Industrial-zone local TVOC was 6.5-7.8 times residential; eBC enhancements followed roads. The estimated PM background tracked nearby roadside and urban monitors closely, port and national-background stations less so. Weakness: eleven runs cannot separate wind regime from season or weekday, and instrument types and their humidity handling are not stated. Relevance: direct - a reusable background-subtraction method for mobile and low-cost survey data.}
+{10.3390/atmos17121155}
+
+\paperentry{Deep-GF-PRM: physics-embedded neural network maps HTDMA responses directly to growth-factor PDF modal parameters; reproduces synthetic PDFs and matches nonparametric inversion on field data}
+{Technical note: Deep-GF-PRM – a deep learning framework for parameterizing aerosol hygroscopic growth factor probability density function}
+{Atmospheric Chemistry and Physics}
+{Technical note. A deep neural network embedding the HTDMA kernel function and physical constraints maps instrument responses directly to the modal parameters of the hygroscopic growth-factor PDF, replacing inversion followed by Gaussian fitting. Trained on synthetic responses spanning many GF-PDFs and noise levels, it reproduced synthetic PDFs with high fidelity, and on real measurements agreed closely with nonparametric inversion. No numerical error metrics in the abstract. Weakness: validation against nonparametric inversion tests consistency with an existing method, not truth, and performance outside the synthetic training envelope (e.g. multimodal externally mixed aerosol) is unreported. Relevance: indirect - faster, standardised growth-factor retrieval feeds the kappa inputs that physically based humidity corrections for low-cost optical sensors need.}
+{10.5194/acp-26-16653-2026}
+
+\paperentry{Bidimensional charge distribution of spherical and aggregate nanoparticles in a unipolar diffusion charger (per title)}
+{Bidimensional charge distribution of spherical and aggregate nanoparticles in a unipolar diffusion charger}
+{Journal of Aerosol Science}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs or Crossref at issue time. The record (Journal of Aerosol Science; Sapkota, Mehri, Corbin, Rogak) addresses the two-dimensional charge distribution of spherical and aggregate nanoparticles in a unipolar diffusion charger. No result is asserted here. Relevance: moderate - unipolar diffusion charging underlies compact electrical ultrafine and lung-deposited-surface-area sensors, whose response to soot aggregates depends on exactly this morphology dependence.}
+{10.1016/j.jaerosci.2026.106919}
+
+\paperentry{Collection efficiency and viability of airborne bacteria in high-velocity water-condensation sampling (per title)}
+{Collection and viability of airborne bacteria during high-velocity water condensation sampling}
+{Journal of Aerosol Science}
+{\textsc{metadata only.} Metadata only: no abstract was retrievable from the harvest legs or Crossref at issue time. The record (Journal of Aerosol Science; Jang, Jang) evaluates collection and viability of airborne bacteria during high-velocity water-condensation sampling. No efficiency or viability figure is asserted here. Relevance: low - bioaerosol sampler design, adjacent to rather than part of PM mass sensing.}
+{10.1016/j.jaerosci.2026.106918}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Occupational \& indoor\hfill 4 records}{Amber}
+
+\paperentry{320 foundry workers, 200 personal samples (NIOSH 7300, ICP-OES): Fe, Mn, Pb, Cd, Cu often above OELs; Pb/Cd/Cr/Ni inversely related to FEV1/FVC; As ELCR 4.1e-4}
+{Multidimensional Evaluation of Heavy Metal Exposure and Biochemical Alterations in Occupationally Exposed Foundry Workers.}
+{Biol Trace Elem Res}
+{Cross-sectional study of 320 workers across eight units of a metal-casting plant; 200 personal air samples analysed for metals by ICP-OES. Fe, Mn, Pb, Cd and Cu frequently exceeded occupational limits, highest in smelting/rolling and casting. Pb, Cd, Cr and Ni were inversely associated with FEV1 and FVC; ALT and AST were higher in the high-exposure group. HQ exceeded 1 for Fe, Mn, Cr, Cd and Pb in the high group; ELCR exceeded 1e-4 for As, Pb, Cd, Cr and Ni, As highest at 4.1e-4. No effect sizes per unit exposure in the abstract. Weakness: unit membership is the de facto exposure, so co-exposures (heat, silica, smoking) and healthy-worker selection go uncontrolled; particle size fraction is not reported. Relevance: low - metal-rich workplace aerosol is the case where mass-only optical sensors understate hazard.}
+{10.1007/s12011-026-05361-6}
+
+\paperentry{Five hospital waiting areas, northern Thailand, nine days: PM$_{10}$, temperature and culturable bacteria/fungi differ by area; no pairwise difference survives Holm; PM$_{10}$ does not predict bioaerosol counts}
+{An Exploratory Comparison of Indoor Air Quality and Culturable Airborne Microbial Concentrations Among Hospital Waiting Areas With Different Ventilation Conditions in Northern Thailand.}
+{Environ Health Insights}
+{Exploratory monitoring of five hospital waiting areas (one mechanically ventilated) over nine sampling days, summarised at room-day level. Overall differences were significant for PM$_{10}$ (p=0.0012), temperature, culturable bacteria and fungi, but not PM$_{2.5}$, RH, CO or CO$_2$; no pairwise contrast survived Holm adjustment. The mechanically ventilated room tended to have lower PM$_{10}$ and bioaerosol. Mixed-effects and fixed-effects models found no association between PM$_{10}$ and culturable bacteria or fungi (p 0.06-0.54). Weakness: ventilation type is confounded with room (n=1 mechanically ventilated) and the PM instrument and its calibration are not reported. Relevance: low - illustrates that indoor PM mass is not a proxy for viable bioaerosol, a limit on what PM sensors can stand in for in clinical spaces.}
+{10.1177/11786302261505567}
+
+\paperentry{Critical review of indoor wildfire-smoke PM$_{2.5}$: falling I/O ratio is not proof of intervention effect; portable-filtration effect sizes depend on design; calls for synchronised indoor-outdoor and personal measurement}
+{Indoor Exposure to Wildfire Smoke: A Critical Review of Infiltration, Assessment, and Removal}
+{Atmosphere}
+{Critical review of field measurements, intervention studies and building models of wildfire smoke indoors, focused on interpreting indoor PM$_{2.5}$. Indoor concentrations below outdoor can still be substantial exposure, and a lower indoor/outdoor ratio alone does not demonstrate intervention effect. Sensor networks show large between-building variation; portable filtration reduces particles, but short room tests, sequential household and concurrent controlled designs estimate different effects. Higher outdoor concentrations raise residual indoor PM without necessarily lowering fractional filtration effectiveness. Gas-phase and semi-volatile evidence is thin. Weakness: no systematic search or pooling is described, so coverage is the authors' selection. Relevance: direct - names synchronised indoor-outdoor and personal measurement, the low-cost-sensor use case, as the missing evidence.}
+{10.3390/atmos17121156}
+
+\paperentry{Residential mechanical ventilation with SMPS-verified artificial PM$_{2.5}$: 30T HEPA reaches 94.4-98.8\% removal; replacement interval \textasciitilde{}526 days (395-789) as an upper bound}
+{Effect of Filter Characteristics on Particulate Matter Reduction in Residential Ventilation Systems}
+{Indoor Air}
+{Laboratory tests of whole residential ventilation units rather than filters alone, using dust-collection filters of several types and thicknesses challenged with artificial PM$_{2.5}$ whose size distribution was verified by SMPS. A reduction-time model predicts the time to remove PM$_{2.5}$ given indoor generation. A 30T HEPA filter achieved 94.4-98.8\% PM$_{2.5}$ mass removal; accelerated ageing gave an estimated replacement interval of about 526 days (395-789) under the 2024 ambient PM$_{2.5}$ distribution, stated as an upper bound. Weakness: artificial aerosol and laboratory conditions omit real infiltration, occupant sources and humidity loading of filters. Relevance: moderate - ventilation-unit performance is what in-home low-cost sensors are increasingly used to verify in the field.}
+{10.1155/ina/6069251}
+
+\par\vskip 0pt plus 10\baselineskip\penalty-200\vskip 0pt plus -10\baselineskip
+\band{Burden, policy \& mitigation\hfill 2 records}{Coral}
+
+\paperentry{Plant-level 2023 inventory of China coking: 16.0 kt PM, 88.2 kt NOx, 129.3 kt VOC, 227.8 Mt CO$_2$; synergistic retrofit cuts PM 43\% and the sector PM$_{2.5}$ contribution 53.5\%}
+{Air quality benefits and carbon reduction potential of future ultra-low emission retrofits in the chinese coking industry.}
+{Journal of hazardous materials}
+{Nationwide plant- and process-level inventory of China's coking industry for 2023. Compliance with PM and SO$_2$ concentration limits exceeded 99.6\% at all stages; NOx compliance at the coke-oven stack was 86.5\%. Sector emissions: PM 16.01, SO$_2$ 26.55, NOx 88.16 and VOCs 129.33 kt/yr, CO$_2$ 227.80 Mt/yr. Under a synergistic pollutant-CO$_2$ scenario, PM falls 43.3\%, VOCs 77.9\% and CO$_2$ 54.7\%; modelled sector contributions to ambient PM$_{2.5}$, SO$_2$, NO$_2$ and O$_3$ fall 53.5\%, 20.7\%, 40.0\% and 15.8\%. Weakness: compliance rates come from reported stack concentrations, which may overstate real-world performance, and the absolute ambient PM$_{2.5}$ change is not given. Relevance: low-moderate - sets source expectations against which fence-line sensor networks near coking clusters could be checked.}
+{10.1016/j.jhazmat.2026.144266}
+
+\paperentry{Latin America and Caribbean air-pollution literature 2015-2025, 6,355 papers: attention scales sublinearly with burden (slope 0.72, 0.52-0.91); under-represented countries carry 30\% of burden with 5\% of attention}
+{Air Pollution Research in Latin America and the Caribbean, 2015–2025: Growth, Gaps, and Future Challenges}
+{Atmosphere}
+{Systematic Scopus and Web of Science search with regex plus LLM screening (94\% agreement with author labels; \textasciitilde{}80.5\% relevance among retained records) yielding 6,355 LAC air-pollution publications, 2015-2025. Annual publications rose 83\% (389 to 713); five countries held 82.7\% of country mentions. Research attention tracked burden sublinearly (log-log slope 0.72, 95\% CI 0.52-0.91, R2 0.64); under-represented countries carried 30\% of burden but 5\% of attention. Five themes centred on PM$_{2.5}$ and health. Intra-LAC collaboration (9.4\%) was about four times rarer than partnership with external, mostly high-income, institutions (38.0\%). Weakness: LLM screening with \textasciitilde{}20\% irrelevant retained records and Scopus/WoS coverage that under-indexes Spanish- and Portuguese-language venues. Relevance: identifies where low-cost networks would add the most evidence per dollar.}
+{10.3390/atmos17121159}
+
+\clearpage
+\section*{\sffamily\bfseries\color{Deep}Corpus register}
+\vspace{-1.5mm}{\color{Amber}\rule{\linewidth}{1.1pt}}\vspace{2.5mm}
+
+\input{table_rows}
+
+\vspace{2mm}
+
+\begin{keybox}
+{\sffamily\bfseries\footnotesize\color{Deep}Provenance and method}\\[1.2mm]
+{\fontsize{7.2}{8.8}\selectfont
+Entry window \textbf{23 November 2026}, single day (Monday). Harvester legs: \textbf{PubMed} health \textbf{10}, sensing \textbf{2}; \textbf{Europe PMC} \textbf{15} (2 AGRICOLA retro-index records dropped); \textbf{Crossref by ISSN} \textbf{44}; \textbf{arXiv} HTTP 429; \textbf{OpenAlex} HTTP 403 on the harvester leg. 69 raw, 65 unique after cross-source dedupe, 6 already carried, 59 fresh. PubMed connector (EDAT 23 November, health and instrumentation axes) 14 PMIDs (\texttt{\_conn\_1124.py}), including 1 with entry date 22 November deposited after that harvest: 2 already seen, the rest matched cached records or appended (5) --- \textbf{64 screened}. Abstracts: efetch filled 12 of 12; Crossref retry 0 of 5 Elsevier deposits, which are carried on metadata alone.
+alphaXiv, bioRxiv/medRxiv and Wiley Scholar Gateway connectors were not available on this session; \textbf{Scite} retraction check and Consensus not run. No Amass or Consensus literature backfill this run.
+\textbf{19 admitted}, \textbf{45 rejected} with logged reasons (\texttt{\_rej\_1124\_23.py}). Affiliations not retrieved this issue. Trial watch 23--24 November: ClinicalTrials.gov 0 hits in window; Amass TrialCore 25 records by last-update date --- \textbf{1 new}, NCT05198492 EP-PARTICLES (Medical University of Bia\l{}ystok, observational registry study of air pollution and cardiovascular and renal outcomes in eastern Poland, completion 2030); \texttt{trials.json} now 32 trials across 50 windows.
+Abstracts remain the copyright of their publishers.\par}
+\end{keybox}
+
+\end{document}
