@@ -97,3 +97,22 @@ The old Scholar Gateway connector (`semanticSearch`, failing since Sep with "Cou
 | Scite | retraction / correction notice check on tier-A records; citation counts for "most-cited" in rollups |
 | Amass TrialCore | WHO ICTRP (non-US) trials for the weekly trial watch |
 | Undermind / Elicit | monthly or yearly gap rebuild only (when dailies are missing) |
+
+## 2026-11-24 update — paper-search skills, new connectors, Google Scholar
+
+Full how-to: `claude/tools/scholar_mcp/SKILL.md` (skill `scholar-search`). Summary:
+
+| Leg | Tool | Status measured 2026-11-24 |
+|---|---|---|
+| **OpenAlex connector** | `search_works` (`raw_filter`, `preview`, OQL), `get_work`, `list_citations`, `resolve_references` | `from_created_date` → **403** ("daily sync" needs the Member+ plan). `from_publication_date:D,to_publication_date:D` **works**: 44 works for 23 Nov for "particulate matter sensor OR PM2.5", including MST, Research Square, EarthArXiv and Mendeley/Zenodo records no other leg saw. Run it as a Tier-1 *publication-date* leg (one query per axis, `limit` 50, `types` article/preprint/review), then dedupe against `seen.json`. `get_work` supplies `affil`. |
+| **bioRxiv/medRxiv connector** | `search_preprints` (date range + category, no keyword) | Present. Filter locally on title/abstract. |
+| **alphaXiv connector** | `full_text_papers_search`, `get_paper_content` | Present. arXiv sensing/ML only. |
+| **Wiley Scholar Gateway** | `search_wiley_fulltext`, `getUsageLimit` | Present. Wiley full text only. |
+| SciSpace, Valency, Elicit, AnswerThis, Paperguide, BioSkepsis | search / extract | Relevance indexes → Tier 2 only (cross-check, backfill, numbers). BioSkepsis runs take minutes and use quota: rollups only. |
+| Citeproof | `resolve_reference`, `check_citations` | DOI/reference validation; complements `check_dois.py`. |
+| **scholar_mcp** (ours, `claude/tools/scholar_mcp/scholar_mcp.py`) | CLI `search`/`cited-by`/`author`; MCP `serve` | Works on the device (Python 3.10, mcp 2.3) and in the cloud. Backends: `serpapi` (real Google Scholar, needs `SERPAPI_API_KEY`), `open` (OpenAlex + Semantic Scholar + Crossref merged; S2 often 429 without a key, which is reported and skipped). Relevance index → Tier 2. |
+| openags **paper-search** CLI | `uv tool install paper-search-mcp`; `paper-search search "<q>" -n 5 -s openalex,crossref,europepmc,pubmed,arxiv,biorxiv,medrxiv` | Installs and works on the device (per-session VM home, so reinstall each run). The `fast`/`fastest` presets are rejected by the installed build. `google_scholar` source → 0 (bot check). `read`/`download` give OA full text. Never `--use-scihub`. |
+| Smithery `google-scholar.search_papers` | — | **429: account out of searches.** Do not depend on it. |
+| Direct Google Scholar HTTP | — | Answered with a JS "Verifying..." page (sgsync). **Do not scrape or circumvent.** Use SerpApi, `scholar_mcp --backend open`, or a few by-hand checks through the user's own browser. |
+
+Free servers to install locally if wanted (not needed by the daily run): `uvx arxiv-mcp-server`, `zotero-mcp-server`, `uvx --from docling-mcp docling-mcp-server`, Microsoft `markitdown-mcp`, and K-Dense `scientific-agent-skills`.

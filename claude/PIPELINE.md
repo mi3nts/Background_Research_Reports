@@ -3325,3 +3325,5 @@ rejected, 10 effect estimates, 12 pp, 0 LaTeX errors, 0 overfull.
 - Trial watch 23-24 Nov: CT.gov 0; Amass 25 by last-update → 1 new (NCT05198492 EP-PARTICLES, Bialystok) → `trials.json` 32 trials / 50 windows (counts derived from stored keys; stale `stored_records` 26 reconciled).
 - Connectors: OpenAlex/alphaXiv/bioRxiv/Wiley absent; Scite, Consensus not run. rm still blocked (`.git/REBASE_HEAD.lock`, `.git/index.lock` moved to `.git/stale-*`).
 - Next: 24 Nov daily (≥22:00 CST 24 Nov); W48 (22-28 Nov) on Sat 28 Nov; November monthly on 30 Nov.
+
+- 2026-11-24 (interactive): added `claude/tools/scholar_mcp/` (scholar-search skill + Scholar-style CLI/MCP) and the CONNECTORS.md 2026-11-24 section; scheduled-task prompt bumped to v7. OpenAlex connector: publication-date window works (44 hits for 23 Nov), created-date 403.
